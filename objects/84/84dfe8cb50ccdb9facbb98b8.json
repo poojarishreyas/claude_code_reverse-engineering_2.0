@@ -1,0 +1,19 @@
+{
+  "id": "84dfe8cb50ccdb9facbb98b8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01EKSufPZBU6Krop9KrDcAzA",
+        "type": "tool_result",
+        "content": "/c/Users/shrey/AppData/Roaming/npm/node_modules/shrey-cli/package.json:3:  \"version\": \"1.1.0\",\n/c/Users/shrey/Desktop/ccproxy/package.json:3:  \"version\": \"1.1.0\",\n      id: s.id,\n      title: s.title,\n      source: s.source,\n      model: s.model,\n      credential: s.credential,\n      startedAt: new Date(s.startedAt).toISOString(),\n      updatedAt: new Date(s.updatedAt).toISOString(),\n      durationMs: s.updatedAt - s.startedAt,\n      requests: s.requests,\n      errors: s.errors,\n      events: s.seq,\n      usage: s.usage,\n      messageIds: s.messageIds\n    };\n    const file = path.join(s.dir, 'manifest.json');\n    fs.writeFileSync(file, JSON.stringify(manifest, null, 2) + '\\n');\n    this.dirty.add(file);\n  }\n\n  writeDerived(sessionId, name, text) {\n    const s = this.sessions.get(sessionId);\n    if (!s) return;\n    const file = path.join(s.dir, name);\n    fs.writeFileSync(file, text);\n    this.dirty.add(file);\n  }\n\n  writeRaw(sessionId, name, value) {\n    if (!this.cfg.capture.raw) return;\n    const s = this.sessions.get(sessionId);\n    if (!s) return;\n    const dir = path.join(s.dir, 'raw');\n    fs.mkdirSync(dir, { recursive: true });\n    const file = path.join(dir, name);\n    fs.writeFileSync(file, JSON.stringify(scrubDeep(value, this.redactOpts), null, 2) + '\\n');\n    this.dirty.add(file);\n  }\n\n  takeDirty() {\n    const files = [...this.dirty];\n    this.dirty.clear();\n    return files;\n  }\n\n  // ---------------------------------------------------------------- private\n\n  #ensureScaffold() {\n    const readme = path.join(this.root, 'README.md');\n    if (!fs.existsSync(readme)) {\n      fs.writeFileSync(readme, SCAFFOLD_README);\n      this.dirty.add(readme);\n    }\n    const gitignore = path.join(this.root, '.gitignore');\n    if (!fs.existsSync(gitignore)) {\n      fs.writeFileSync(gitignore, ['*.tmp', '*.partial', '.DS_Store', 'Thumbs.db', ''].join('\\n'));\n      this.dirty.add(gitignore);\n    }\n    const attrs = path.join(this.root, '.gitattributes');\n    if (!fs.existsSync(attrs)) {\n      fs.writeFileSync(attrs, ['*.jsonl -diff', 'objects/** -diff', ''].join('\\n'));\n      this.dirty.add(attrs);\n    }\n  }\n\n  /**\n   * Loads sessions from disk: prior runs, and sessions other shrey processes are\n   * writing right now into the same capture directory. Sessions this process owns\n   * are authoritative in memory and never overwritten from disk.\n   */\n  refreshFromDisk() {\n    if (!fs.existsSync(this.sessionsDir)) return;\n    const found = [];\n    for (const day of fs.readdirSync(this.sessionsDir)) {\n      const dayDir = path.join(this.sessionsDir, day);\n      if (!fs.statSync(dayDir).isDirectory()) continue;\n      for (const id of fs.readdirSync(dayDir)) {\n        const dir = path.join(dayDir, id);\n        const manifestPath = path.join(dir, 'manifest.json');\n        if (!fs.existsSync(manifestPath)) continue;\n        try {\n          const m = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));\n/c/Users/shrey/Desktop/ccproxy/src/proxy.js:194:      store.writeRaw(ctx.sessionId, ctx.requestId + '.response.json', payload);\n/c/Users/shrey/Desktop/ccproxy/src/proxy.js:241:  store.writeRaw(ctx.sessionId, ctx.requestId + '.response.json', result);\n/c/Users/shrey/Desktop/ccproxy/src/proxy.js:344:  if (body) store.writeRaw(session.id, requestId + '.request.json', body);\n/c/Users/shrey/Desktop/ccproxy/src/store.js:227:  writeRaw(sessionId, name, value) {",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

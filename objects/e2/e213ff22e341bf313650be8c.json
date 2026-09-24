@@ -1,0 +1,18 @@
+{
+  "id": "e213ff22e341bf313650be8c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PKdwWYzf9RTFZm7xiWpfW5",
+        "type": "tool_result",
+        "content": "ccproxy\\src\\args.js:18:  raw: false,\nccproxy\\src\\dashboard.js:115:        raw: !!cfg.capture.raw,\nccproxy\\src\\config.js:36:    raw: false,\nccproxy\\src\\assets.generated.js:4:[Omitted long matching line]\nccproxy\\src\\assets.generated.js:5:[Omitted long matching line]\nccproxy\\src\\assets.generated.js:6:[Omitted long matching line]\nccproxy\\src\\store.js:228:    if (!this.cfg.capture.raw) return;\nccproxy\\src\\store.js:231:    const dir = path.join(s.dir, 'raw');\nccproxy\\src\\index.js:30:  if (flags.raw) o.capture = { raw: true };\nccproxy\\src\\index.js:73:  '  --raw              also keep verbatim request/response JSON',\nccproxy\\src\\index.js:177:/** Sends proxy chatter to a log file so it can never draw over Claude Code's UI. */\nccproxy\\src\\github.js:17:  const raw = String(input ?? '').trim();\nccproxy\\src\\github.js:18:  if (!raw) return null;\nccproxy\\src\\github.js:27:    const m = raw.match(pattern);\nccproxy\\src\\github.js:32:    const ssh = raw.startsWith('git@') || raw.startsWith('ssh://');\nccproxy\\src\\redact.js:47:  for (const [rawKey, rawValue] of Object.entries(headers ?? {})) {\nccproxy\\src\\redact.js:48:    const key = rawKey.toLowerCase();\nccproxy\\src\\redact.js:50:    const value = Array.isArray(rawValue) ? rawValue.join(', ') : String(rawValue ?? '');\nccproxy\\src\\redact.js:58:  const raw = headers['x-api-key'] ?? headers.authorization ?? '';\nccproxy\\src\\redact.js:59:  if (!raw) return null;\nccproxy\\src\\redact.js:60:  return sha256(String(raw)).slice(0, 12);\nccproxy\\src\\sse.js:5: *   1. record the raw stream faithfully (packed, but never re-worded), and\nccproxy\\src\\sse.js:8: * The raw record outlives the interpretation: if assembly is ever wrong, the packed\nccproxy\\src\\sse.js:60:    const raw = dataLines.join('\\n');\nccproxy\\src\\sse.js:61:    if (raw === '[DONE]') return;\nccproxy\\src\\sse.js:65:      payload = JSON.parse(raw);\nccproxy\\src\\sse.js:68:      this.packed.push({ k: 'raw', name, t: now - this.startedAt, text: raw });\nccproxy\\src\\sse.js:77:  // ------------------------------------------------------------ raw recording",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

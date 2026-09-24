@@ -1,0 +1,23 @@
+{
+  "id": "2f9207dfe2a93fcc488ec81c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQShwcKEAgSGAI4AUIIdGhpbmtpbmcSDKfoY3ms8J5j8xv6rxoM+LyKSi8X/qHWrc00IjAXKQUcGWpMuUt5p+IQ9aSkxPZiEZihe07n+7qGHATh4vGgcNrA0Sk4rgY5QmszqK4qpAYSMfvh0eKglmLHQd5lhe8qBzv8bKfZ64+jiPLHt+D6iyB3cK3mpsoWml32WeHIvfXpp6ofUJ5ZOu80O5S8MIvH70QkhI9tzqsi0PsA07ZR/+HGejoB/JxixJkrOcsinjM+tnVegYbCtKd4hnMQBzFYOOD6QuuJwv81432Wjgm7QTjAKW5tyLUJbd+ZHxk0odSULH67I0GBsH3A7xVlEgeU2ZMVk3Vx2HG99jJ0RDtqHMCIBmDSoA6yp+PMjAN6wX42GntD5DxbGTvk3PTKAwqHABHQAOp/sSJ04FaFXr+8tfvufR7LpUQKaGJOqS33/jNCuyMifLZJ9hpBwtp7ZnTrZYfalx/B53U1D9gD18c/IJ0smdWMAQ+/nF3bFjLlwaH5YryEEl0tmERFK/++NvheknRd5kZGkrr5YsDo3IbafsLrh6LWH+7w12q2fVcJ5PRoxXdm+GQVTejuGP+tip4cS4pvUZonR4QzI6aO6aSsnln8rj5P8NZ4Gs2yOjRjLCM8NOVQ87ZpI9I4hdobeVNFKLRS/yQnRxFpQ9C0dEJhosQN6CsQVU0gzgq1jjuwXosS0WARh0Bh6ip37k2abTcDRflD9svzakzX5QbPKogI9zuZNm1gbzXBP8YuTddhH913Bd8600gkyA/3TAF9jbtcvs5HQH8FpcYeMBs5UOttz8EeqVqwL3ibySr2IqKaUhnA8QFYCmduvfcPpmoH8P2+OYnI+IJYB0dyW+sN240TwcnN+iL5kLszwCbB0mHgUNZfsnTYTg/8yo+YWuSpQQiRCbJoAFLB1JPA0ePBx/MTIsUlXfbF8PtbnpP76JIo2UFbaBD/ePPftR27ntCC8HhO8m5MMCeuV8rUSDSkpa+2E74gPVstz8T1YUgJV9AI0y+RolnSxuKRIK7sPGD12oyXXOI8TtwTKPZRIM6ddh+6jNMapsZlWkv6ca4IRd+08nL8hfQ93m7WNTNarkSZEhNe4zZynSyXGvY9XkZjpX8zPqwND4zwwJRtmLbT1QViopRCXvt8cROi5aCLyT7wdiQ2cl1zrbg6j4gufWxJE3BA3qMDZTEYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01EKSufPZBU6Krop9KrDcAzA",
+        "name": "Bash",
+        "input": {
+          "command": "G=/c/Users/shrey/AppData/Roaming/npm/node_modules/shrey-cli; D=/c/Users/shrey/Desktop/ccproxy; diff -rq $G/src $D/src; grep -n '\"version\"' $G/package.json $D/package.json; sed -n 200,280p $D/src/store.js; grep -n 'writeRaw\\|raw(' $D/src/*.js | grep -v generated",
+          "description": "Compare installed vs source and read raw capture code"
+        }
+      }
+    ]
+  }
+}

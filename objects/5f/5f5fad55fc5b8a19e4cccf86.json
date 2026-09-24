@@ -1,0 +1,17 @@
+{
+  "id": "5f5fad55fc5b8a19e4cccf86",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "in githun it should push raw request and response in propper structure",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

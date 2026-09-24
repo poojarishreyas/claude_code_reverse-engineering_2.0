@@ -1,0 +1,25 @@
+{
+  "id": "9326168b0e6a5856135b2544",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSrgYKEAgSGAI4AUIIdGhpbmtpbmcSDICAvztux4UgNir1uhoM8GEB25oNOTG+5ln3IjAFQX66lFBD1ygOCOWTRnrkfYgiuq8M6/+29AXrqjRHq3t01HtuFG1kT3STzrpl4mkqywXG0bdlFeVptlbGd/MHOt3kkYiLC4QBdQgwuc6AV+dsvGq2uIRPcdxpdZW5Gn47jVH+SA//6qKAAN1Zrt6n97GUCe6DfH+vmFN3m+x3Hektr2xoKnCRorl9ImKpIU+6nnH9v1wZ0D/0LpASYUdK9yAsRj8M/v5Wyx9lfQLvM5KSvE9o0KNY9X6mVtOZdQBe6+PHSM8oeVG4KpnCTbnbz62N1vh1o0O+j/gJ59H/zugaQFrAmXoJDvBaDZRJHFtHVPUZ6CYxM9q3mMD2nabWwcvux5YkH6aRLwFfUOh38E9imNqQ3SoAVrZLoCH+SSg8ZnK3rI7O4B5VPbUNZjOEhMYZY+8W0TArIcvc+sey7DupTEV7q2UsWyR4kIVOo6x/qi+C1sefglMUFojcuPLekWzjyRzeBnTGvmdE/l6Kntx1vOFPAnJdlkZ0RxtTdKuziEC2VmOV8eOfYACKNS91hAiQSsOsknzIwbgeLQ67Gi/fIRj8aDknawtCtr2pzgNixe+NAj/m74cvFwL9cg0gN2sS5oHtb5ZhTFoz2pBOhjAXBmtDPSUkjMIS154j60JixSLwNXA0VpAo31hHtyNBdwPMXpUsHkCfjtJKD+nJvV5a7MLxa3cPe+9G8z2/JR2MGSWqJ2g0yoOaK9EwHK2DkpagJKxRcA2nUjJ/Sjxw24c6hX07UeTHk3Wd8/zj+rckXwaT8tcJWBjJ5mksyHBznVrQBCU437nhIRkip6RigaZGxRh+RQc7n/YOObXlRCEeAApxqShZO6DTClwkSzmqMWsvRrj3K2aPqno807TUb3VE4bkJgDkmljzdd0k131daET/Q1/xMlkhhPVqP6ZIbuzId2UD6BAbnekXa3JlMEenXgWcFlIRafCAGPf8fPHf/kWc5W8xr1sYXON6c2jOUEaq3F1qNfhdxB4o65DGraXCgDuckmsQTrMY+Y3/nGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01PKdwWYzf9RTFZm7xiWpfW5",
+        "name": "Grep",
+        "input": {
+          "pattern": "raw",
+          "path": "C:\\Users\\shrey\\Desktop\\ccproxy\\src",
+          "output_mode": "content",
+          "-n": true
+        }
+      }
+    ]
+  }
+}

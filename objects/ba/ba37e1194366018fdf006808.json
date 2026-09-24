@@ -1,0 +1,13 @@
+{
+  "id": "ba37e1194366018fdf006808",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Auto push was already on, so I didn't change anything.\n\n- **Your config:** `\"autoPush\": true` is set in `C:\\Users\\shrey\\.ccproxy\\config.json`.\n- **The running proxy:** it was started without `--no-push`, the only flag that turns auto push off.\n\nOnce Claude Code sends a request through the proxy, ccproxy waits 15 seconds for activity to settle (`commitDebounceMs: 15000`). Then it commits the new captures and pushes them to `poojarishreyas/claude-code-trajectories` without you clicking Push. The Push button is only needed to force an immediate push.\n\nIf a push fails, the error appears in the dashboard's GitHub panel at http://127.0.0.1:8787/_ccproxy/."
+      }
+    ]
+  }
+}

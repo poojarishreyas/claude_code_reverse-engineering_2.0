@@ -1,0 +1,8 @@
+{
+  "id": "426aeec37348afac5634d8b7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "in githun it should push raw request and response in propper structure"
+  }
+}
