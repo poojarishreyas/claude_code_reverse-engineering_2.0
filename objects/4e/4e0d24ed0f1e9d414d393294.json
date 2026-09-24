@@ -1,0 +1,18 @@
+{
+  "id": "4e0d24ed0f1e9d414d393294",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Your questions have been answered: \"How should I clean the claude-code-trajectories repo? It currently holds the 2 junk sessions (the /api/hello check and the 429 quota check) and 2 commits.\"=\"Wipe history (Recommended)\". You can now continue with these answers in mind.",
+        "tool_use_id": "toolu_011AKP91DDscsZ4Q9SZsuuiu",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
