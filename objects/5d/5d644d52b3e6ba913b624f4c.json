@@ -1,0 +1,17 @@
+{
+  "id": "5d644d52b3e6ba913b624f4c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "are context also passed?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

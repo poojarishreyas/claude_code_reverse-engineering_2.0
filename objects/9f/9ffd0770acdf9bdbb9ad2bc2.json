@@ -1,0 +1,18 @@
+{
+  "id": "9ffd0770acdf9bdbb9ad2bc2",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS0wYKEAgSGAI4AUIIdGhpbmtpbmcSDJpHNgxVIkDs8tps/xoMxTO3dQKeCD6sgtJsIjBgtX6Q0mw8eUyag7Nb/H6Tp+5bbyZ1vAaNRcgkdwTWiEZyGa/84dy+CX60vWO83bYq8AW+EHkQtCA6/JVP2u011bhlD1ieJyDwXBx2g5NI31feivNLpJ9TCoQePcjkEMnqiVzxAWORzf//oyOrMvIoYk3VXt5IC6k/PrEhsYhAckr4ZBShXX57Ugidh/D3ZvAZPtZVVquFSGWPIc7/QQY//ZUqv3yE1O3RsgFfHwJl6QJgBcKfkee3OMVEk1Q7S/V7SAo0YYdeV04iRmxfgB4q/tN+mrylIDapAXUdJANWk00IvwMkfh4em6G7HrF93dQeuzVDbQjf1IcVMuPRAM/eIB/g0xJuKtylOWnWTTIL8h2LB7AY7bx2BuAN+FSIiYwwOljY20K4Kr/ngUMSlWq8Jp5GHQebl0XtfHTd5wTgMwFpKQOBcMOO22jHVtJ0jxYVx31MXyJxpcX2tHTun/Op87vSi6gwNJuSGG1hSO6OmwbLpDAajGGJtXSOSR9O4q5V4Yb1hf831zs2XETtNlGascpTGuKooFt4E8F6fcaUHcps2u6FP2iC5E1VFHkdIvJwQLCAp4pF1/6TtHl2S6ac8qrRAhfKn0sKqxZNd8/9R9CfYTdTkksQHRRgad70gk7lFInbPix2ize8oKYzXUu5KdnLlZLA09EzqxZdXgkK44GL5YpR5uRrguDL9NxyA677I2Ew3JhShCrs0w0n6bU6cz2iFGAV0wjg6zTFdE8EWyzJQnFzzxY3ZHEXBw2xp97poVFJt6UC8YP0/Nn2R9Od53tOCRKaChsSnPSQCK1OXSeNjceSBofwxtqV++gxbOWFXInf9mDTG+HhoNZQct5QGYlOFxxXKMv2KYf1xLwZaFLlt+GcOmS0KqbKZ3J+kb1ZHeqUejocn6ptPhi7FuM3D/5QBgz3lTazwhT2vFEEVeijknL6t2l0P3YJL6rDSbSnFpWXoYtQ2X6ZizK7/EC+lZKSx4WSsrHS3P1h1RLw95taUfIPcoerIOCoqwK4Tarx8QhvoTRQlFuAdqtIO4ULl9aaXvA53I8slPH1UOXYpe1hThgB"
+      },
+      {
+        "type": "text",
+        "text": "Raw capture is now turned on in your config. The proxy reads its config only when it starts, so you need to restart it before this takes effect. I didn't restart it myself because the running proxy has a Claude Code session running inside it, and stopping the proxy would close that session.\n\n**To apply it:** close that terminal's Claude Code session and run `shrey` again, or `shrey --raw` to force it on. Auto push is still on, so the raw files will reach GitHub about 15 seconds after each request.\n\n**Where the raw files go on GitHub**, next to the files you already have:\n```\nsessions/<date>/<session-id>/\n    raw/\n        req-0001.request.json    exact JSON body Claude Code sent (model, system, messages, tools, params)\n        req-0001.response.json   full response JSON (content, stop_reason, usage)\n        req-0002.request.json\n        req-0002.response.json\n        ...\n    session.jsonl\n    manifest.json\n    transcript.md\n```\nEach request and its response share the same number, so they're easy to pair up.\n\n**What these files do and don't contain:**\n- **Streamed replies are saved as the finished message, not the stream itself.** The individual stream chunks are still recorded in `session.jsonl`.\n- **Secrets are still removed** from these files, because `redactSecrets` is still on.\n- **Headers aren't in these files.** The request and response headers are still recorded (with credentials removed) in `session.jsonl`.\n- **Error responses get no raw response file.** For example, the 429 you hit earlier only appears in `session.jsonl` and `transcript.md`. If you want errors saved as `req-XXXX.response.json` too, I can add that, but you'd need to reinstall `shrey-cli` from your Desktop folder afterwards."
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "dc1dfc404950e2d4fcce9185",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "are context also passed?"
+  }
+}

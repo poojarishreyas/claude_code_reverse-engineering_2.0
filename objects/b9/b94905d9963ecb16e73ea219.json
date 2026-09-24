@@ -1,0 +1,15 @@
+{
+  "id": "b94905d9963ecb16e73ea219",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0156TzSk8H3JHMrzbRFsMHgz",
+        "type": "tool_result",
+        "content": "81:export function scrubDeep(value, opts = {}) {\n82-  if (!opts.redact) return value;\n83-  if (typeof value === 'string') return scrubText(value, opts);\n84:  if (Array.isArray(value)) return value.map((v) => scrubDeep(v, opts));\n85-  if (value && typeof value === 'object') {\n86-    const out = {};\n87:    for (const [k, v] of Object.entries(value)) out[k] = scrubDeep(v, opts);\n88-    return out;\n89-  }\n90-  return value;\n91-}\n/c/Users/shrey/Desktop/ccproxy/src/config.js:41:    maxInlineChars: 2_000_000\n  if (body) {\n    if (cfg.capture.storeSystemPrompt && body.system !== undefined) {\n      systemId = store.putObject(body.system, 'system');\n    }\n    if (Array.isArray(body.tools)) {\n      toolsId = store.putObject(body.tools, 'tools');\n    }\n    if (systemId !== session.lastSystemId || toolsId !== session.lastToolsId) {\n      store.append(session.id, 'request/context', {\n        requestId,\n        systemId,\n        toolsId,\n        toolNames: Array.isArray(body.tools) ? body.tools.map((t) => t?.name ?? '?') : [],\n        previousSystemId: session.lastSystemId ?? null,\n        previousToolsId: session.lastToolsId ?? null,\n        reason: session.lastSystemId === undefined ? 'initial' : 'change'\n      });\n      session.lastSystemId = systemId;\n      session.lastToolsId = toolsId;\n    }\n  }\n\n  // Only messages this session has not seen are stored; the rest are already objects.\n  const messages = Array.isArray(body?.messages) ? body.messages : [];\n  const messageRefs = [];\n  for (let i = 0; i < messages.length; i++) {\n    messageRefs.push(store.putObject(messages[i], 'message'));\n  }\n  store.noteMessages(session.id, match.ids);\n\n  const params = body\n    ? {\n        model: body.model ?? null,\n        max_tokens: body.max_tokens ?? null,\n        temperature: body.temperature ?? null,\n        top_p: body.top_p ?? null,\n        top_k: body.top_k ?? null,\n        stream: body.stream ?? false,\n        thinking: body.thinking ?? null,\n        tool_choice: body.tool_choice ?? null,\n        stop_sequences: body.stop_sequences ?? null,\n        metadata: body.metadata ?? null,\n        betas: req.headers['anthropic-beta'] ?? null\n      }\n    : null;\n\n  store.append(session.id, 'request/start', {\n    requestId,\n    method: req.method,\n    path: url.pathname,\n    query: url.search || null,",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "00be60638a08bd0c01cbfdec",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS9AYKEAgSGAI4AUIIdGhpbmtpbmcSDKfZ3mj1BF6ViX11NhoMCnQh37yuJzlaq0vwIjA3bdcRH5cImJfdt42cuH/bpo8PqO26p5nIG58ROk7DRqaWoyrwAEpesvyHcO7RGwkqkQY9i0XDr1+bXPcQpLbmWjfmvc2wVsbtKJbIMuHki9BN71knQrgazFNQrs2QcREjDwD75m002/aeffPUczO4IwAaQRld49Zhqjatg27EbJzhQ04MG0iHksH1pd6sdjLiI/jTMl2gqUGQs6isdmQC35RR/hAmrQRTOpHUTw5k6EwZXEyMJIHYZfzZRB1WliFVgaya/nlXX3dOhOm0k/XfOhx7gH02dLqa+H1FdZywI6gIQePhsKup+GoMqNIuFQgZT5vj+SwmAkRwriKSC+E6QVJ1kBjLD7HIXFIqu1wQ6ySMhAMJgVm47bEqw09IV4wrXhUFhBvriOVAxNGpB1cbFwiEvpnSWPZgmmjrZjgi1KB3Z6G2OXM4sD6E6ANV75LgwAho7W7lHiqvJSTqSwzaFpl4r0pPFDLvgYA8BMTq1x9nt9WV3vndlf5Z71M6gp5743fwv1oewnU9k9hxkxZY0ft6z16Q00MaBUYkRJJE9iqBSSWfsB7oqxjAsWO942ww207Fh3a3ejxo0sUdBsttaBpB5UfI/rr2TS6qxtoMIZPRfHpFQ9XVd5Px+t7clnRpzXEIpK1cHvIt3lO+Q7pzDSOGcmjfRJYNFNcwPoAkNDhTO7yHUYrwLaszjYmk5A1ntAZXijc875UC5vw9xd6RwIwlj72iINnKqdFwKdNl9wl9W+2/m04iL/Al+bsbHHHkcRiw/LZFzLbdqctg4cJsHSiu7Ef4+3Sf3R/TFeUSSH2fKL+3LEh+CKOm1TT5gb605tBmGDvnmrNksSvMTLFbT7ANC5VlzMkQGTuZfIeXiHqbJKnYKJvnbryB0sPY4ryLWPIyj6P+UxLYlWAoQFO+PglydmPu6LYIZrgMMxmrmLOf2LvLvjT5wk8QgcsCY2HJqn26ZNFLod4zXVkCMnNUjIj/p5mjIon066kL+ukR0hZ+D/CXIpVMcaqzasnueTVQXlJZ2i0an9y2AY3n06CyX13LSGrsyu0UqcrjFc+LFPI+CC4Pfdk+ZckftYqBawojCPVG/IoL6Ritt2D8Dpd+VJ4/gBgB"
+      },
+      {
+        "type": "text",
+        "text": "Yes. Each `raw/req-XXXX.request.json` is the complete request body Claude Code sent, not cut short or summarized. It includes:\n\n- **`system`:** the full system prompt, including CLAUDE.md, environment info and memory.\n- **`messages`:** the entire conversation up to that point, including every user message, assistant reply, tool call and tool result.\n- **`tools`:** the full tool list with descriptions and input schemas.\n- **Settings:** `model`, `max_tokens`, `thinking`, `temperature`, `tool_choice`, `metadata` and so on.\n\nEach request file repeats the whole conversation so far, so `req-0010.request.json` also contains everything from requests 1 to 9. Each file shows exactly what the model saw at that step. The downside is that raw files grow quickly in long sessions, which makes the GitHub repo grow fast. The `objects/` folder avoids this by storing each message only once.\n\nThe only thing changed before saving is that secrets matching known patterns (`sk-ant-…`, `ghp_…`, AWS keys, private-key blocks) are replaced with a redacted marker. Everything else is kept as it was.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
