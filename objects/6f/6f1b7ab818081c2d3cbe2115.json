@@ -1,0 +1,23 @@
+{
+  "id": "6f1b7ab818081c2d3cbe2115",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS0QgKEAgSGAI4AUIIdGhpbmtpbmcSDGyOHahU4UgjB5omghoMpOjiMuZudt5Hs4GfIjCGcTjH5kTYEjjxWPnYbQYMX9s8/s140sxiw8tKsoe+Th6d3vjlw+CKypjf4laywZUq7ge6gKbxi6u6Lgykuya1S/9bJgrr2jQLGGRRaScU5X/+ReKjmm5jYQrD4SHlx8WooTN8w9ZHpLxfv8wmFnQJudPwCRLwx2vlCPvKgBTqIPy/rwwcVoZvU6lWb2pfrfcG9CdZ5Jw4hEMltyn8bZohne9vqax/FJowPyiZdYB398hYll+Ygd/tZfEg36D15r+H8CtRLHmkYJYAGDvNKG11N8MApJdaN81WasoH1d6PB/0XqXo3QJXMBOY7mjNYdJgewKy5/Mc5bYPnrzYLTOusObR7uSzqmaPv/ETrJa5e6aH806lCetKxvE3d8azl2JEKSsKjKZ80jXYr39slxGsnGrKLuDyu0w+nvHFUeEHRdEgMDDYRzUzQeKbyo5ub5qT6uECx1HYF71tmLUok+W/XaqoZkSAWmEoOVtk5SswR9TunVjQNCDg/BCHKyG3hTK3QrQJ6hoV/8qOAPyXtLCZe3anlXv9o8TFCoUZc9mtBOqdn07tdOIHJQRapCdPf40NeUbvXM3JT+X7QiiOOkEmi6nGjbcwPLTb39vfzhl8V9nkUDuDHvGPLRWEztasBJj6/lohLqymXX+7FvJH0354VLbncgMU6BZmvRrdMSVsMAYY0kWgDAGNx7o7hYqMGHICngLLf/Agh69SxSXQUWMcJItaPH0FAOCEK2Swd6hTUlJFLFIkH+KudxuCebsMe9C/NgeReGzXiNBFI2rq7/dlLFRyEcCtg4kb3fu5ef6frTSu2cWmowo001R6vK6DN6X4ThM+6lqMQmEfw+PCx4/kGGbCAMJzDRBoN141T5xhfHZryzMqwOnvbBZCKnBYAys8Nc9+fX+vTR1D19n7RNccav+SZCsFWoJNhBHvsFQYvq7uyr3aQSwc4gw1PtjdCs7mQ8YQtLXe852eItS6rjfGsYD0Xgd5kWChb3q0FhWTRM/lTKFmGP6KnImqX0pTTx+ucA68S+5yavDFCkDKNeYcian+KNi1fR/bDFGBQ5X13Fa6Bvqs0jzW4tcuFIqDQv3ahuInpq8m7f5TMmN1uYrVC3OiSBwv/uaI698BO7jgk80JoSjUUTN1F8OLokLhZtqY5oeZZZMr8o5xzeKkdrpGh9noRk54HjLT+HwO148cy/FZDODy+plvEYv1+93L1V3/VkCmtRDOdArRDiKja0qB1M4nYSXU952AUEpCBKE4Oefv/7s6u8aF3pDEWq0K2+1e/71DvFRB/5kbE7tfgfBlDhykSs/mmMK0aGIGgt8wO7TMY7zEZp1s585jRvn4i/jE0yarsw+y0gddjYMrABkgbjn3VLtKeaiAtZeZYzQSQWm6DtaJVXZGtS5E7Xw/NpVznGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_014kkj9JD4Vn6wMqo21kaY3r",
+        "name": "Bash",
+        "input": {
+          "command": "F=/c/Users/shrey/.ccproxy/config.json; sed -i 's/\"raw\": false/\"raw\": true/' $F && grep -n '\"raw\"' $F",
+          "description": "Turn on raw request/response capture in config"
+        }
+      }
+    ]
+  }
+}

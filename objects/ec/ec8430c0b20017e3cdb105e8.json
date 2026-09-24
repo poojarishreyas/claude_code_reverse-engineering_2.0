@@ -1,0 +1,19 @@
+{
+  "id": "ec8430c0b20017e3cdb105e8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019fBonnZVuBFXYCGCRKucL4",
+        "type": "tool_result",
+        "content": "BASE_URL=http://127.0.0.1:56536\r\n10816 powershell.exe C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\n\r\nProcessId Name    CommandLine                                                                           \r\n--------- ----    -----------                                                                           \r\n    11440 cmd.exe C:\\WINDOWS\\system32\\cmd.exe /d /s /c \"\"C:\\Users\\shrey\\AppData\\Roaming\\npm\\claude.cmd\"\"",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "e03d70020ddd5a13e8258623",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "The user hasn't heard from you in a while — say in a few words what you're doing, then continue.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

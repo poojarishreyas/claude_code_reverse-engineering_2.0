@@ -5,8 +5,8 @@
 | session | `s-322de84dd9f6d591` |
 | model | `claude-opus-5-5` |
 | started | 2026-09-24T16:54:01.499Z |
-| requests | 21 |
-| tokens | in 1,748 · out 4,630 · cache read 1,298,897 · cache write 76,541 |
+| requests | 23 |
+| tokens | in 1,752 · out 5,481 · cache read 1,453,928 · cache write 79,243 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -1569,4 +1569,197 @@ function recordAssembled({ store, ctx, capture, startedAt }) {
         host: cfg.host,
 ... [1,016 more characters in session.jsonl]
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `PowerShell` _(toolu_019fBonnZVuBFXYCGCRKucL4)_
+
+```json
+{
+  "command": "\"BASE_URL=$env:ANTHROPIC_BASE_URL\"; $p = Get-CimInstance Win32_Process -Filter \"ProcessId=20996\"; $par = Get-CimInstance Win32_Process -Filter \"ProcessId=$($p.ParentProcessId)\"; \"$($par.ProcessId) $($par.Name) $($par.CommandLine)\"; Get-CimInstance Win32_Process | Where-Object { $_.ParentProcessId -eq 20996 } | Select-Object ProcessId,Name,CommandLine",
+  "description": "Check how the proxy was launched and what depends on it"
+}
+```
+
+_stop `tool_use` · 9.19s (ttft 6.23s) · in 2 · out 584 · cache r76,541/w1,949_
+
+---
+
+## req-0022 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 34 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01CdeWknmnF2gJAz8wXDJkp3)_
+
+```
+      payload = null;
+    }
+    if (upstream.ok && payload) {
+      store.append(ctx.sessionId, 'response/message', {
+        requestId: ctx.requestId,
+        stream: false,
+        messageId: payload.id ?? null,
+        model: payload.model ?? null,
+        content: payload.content ?? null,
+        stopReason: payload.stop_reason ?? null,
+        usage: payload.usage ?? {},
+        timings: { totalMs: Date.now() - startedAt, ttftMs: null, decodeMs: null }
+      });
+      store.addUsage(ctx.sessionId, payload.usage);
+      store.writeRaw(ctx.sessionId, ctx.requestId + '.response.json', payload);
+    } else if (!upstream.ok) {
+      store.append(ctx.sessionId, 'response/error', {
+        requestId: ctx.requestId,
+        stage: 'http',
+        status: upstream.status,
+        body: payload ?? text.slice(0, 20000),
+        durationMs: Date.now() - startedAt
+      });
+      const s = store.getSession(ctx.sessionId);
+      if (s) s.errors++;
+    }
+    finishCapture({ store, ctx, onActivity });
+  });
+}
+
+function recordAssembled({ store, ctx, capture, startedAt }) {
+  if (capture.packed.length) {
+    store.append(ctx.sessionId, 'response/chunks', {
+      requestId: ctx.requestId,
+      count: capture.eventCount,
+      rows: capture.packed
+    });
+  }
+  const result = capture.result();
+  if (result.errors.length) {
+    store.append(ctx.sessionId, 'response/error', {
+      requestId: ctx.requestId,
+      stage: 'sse',
+      errors: result.errors,
+      durationMs: Date.now() - startedAt
+    });
+    const s = store.getSession(ctx.sessionId);
+    if (s) s.errors++;
+  }
+  store.append(ctx.sessionId, 'response/message', {
+    requestId: ctx.requestId,
+    stream: true,
+    messageId: result.id,
+    model: result.model,
+    content: result.content,
+    stopReason: result.stop_reason,
+    usage: result.usage,
+    timings: result.timings,
+    sseEvents: result.sseEvents
+  });
+  store.addUsage(ctx.sessionId, result.usage);
+  store.writeRaw(ctx.sessionId, ctx.requestId + '.response.json', result);
+}
+
+// ---------------------------------------------------------------- request capture
+
+    query: url.search || null,
+    endpoint: MESSAGES_PATH.test(url.pathname) ? 'messages' : url.pathname,
+    headers: redactHeaders(req.headers, redactOpts),
+    params,
+    messageCount: messages.length,
+    messageRefs,
+    newMessageRefs: match.newIds,
+    systemId,
+    toolsId,
+    bodyBytes: bodyBuf.length,
+    bodyId: body ? null : contentId(bodyBuf.toString('base64')),
+    correlation: { matchScore: match.matchScore, isNewSession: match.isNew }
+  });
+
+  if (body) store.writeRaw(session.id, requestId + '.request.json', body);
+
+  return { sessionId: session.id, requestId, startedAt };
+        'x-frame-options': 'DENY',
+        'referrer-policy': 'no-referrer'
+      });
+    }
+
+    // ---- api ------------------------------------------------------------
+    if (route === '/api/status') {
+      return json(res, 200, {
+        version: cfg.version ?? null,
+        host: cfg.host,
+... [1,016 more characters in session.jsonl]
+```
+
+#### USER
+
+**<- tool_result** _(toolu_019fBonnZVuBFXYCGCRKucL4)_
+
+```
+BASE_URL=http://127.0.0.1:56536
+10816 powershell.exe C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+
+ProcessId Name    CommandLine                                                                           
+--------- ----    -----------                                                                           
+    11440 cmd.exe C:\WINDOWS\system32\cmd.exe /d /s /c ""C:\Users\shrey\AppData\Roaming\npm\claude.cmd""
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_014kkj9JD4Vn6wMqo21kaY3r)_
+
+```json
+{
+  "command": "F=/c/Users/shrey/.ccproxy/config.json; sed -i 's/\"raw\": false/\"raw\": true/' $F && grep -n '\"raw\"' $F",
+  "description": "Turn on raw request/response capture in config"
+}
+```
+
+_stop `tool_use` · 5.07s (ttft 3.18s) · in 2 · out 267 · cache r78,490/w753_
+
+---
+
+## req-0023 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 37 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_019fBonnZVuBFXYCGCRKucL4)_
+
+```
+BASE_URL=http://127.0.0.1:56536
+10816 powershell.exe C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+
+ProcessId Name    CommandLine                                                                           
+--------- ----    -----------                                                                           
+    11440 cmd.exe C:\WINDOWS\system32\cmd.exe /d /s /c ""C:\Users\shrey\AppData\Roaming\npm\claude.cmd""
+```
+
+#### USER
+
+**<- tool_result** _(toolu_014kkj9JD4Vn6wMqo21kaY3r)_
+
+```
+15:    "raw": true,
+```
+
+#### SYSTEM
+
+The user hasn't heard from you in a while — say in a few words what you're doing, then continue.
 
