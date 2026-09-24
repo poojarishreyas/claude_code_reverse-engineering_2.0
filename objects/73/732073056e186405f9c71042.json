@@ -1,0 +1,15 @@
+{
+  "id": "732073056e186405f9c71042",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RE9ULqrbTsKJPJLc1ZKWNs",
+        "type": "tool_result",
+        "content": "                      └──▶  live trajectory dashboard\r\n…or from **Settings** in the dashboard.\r\n| `shrey dashboard` | open the live trajectory view of a running shrey |\r\n| `shrey serve` | proxy and dashboard only, for other tools to point at |\r\n`--no-github` (no git at all), `--open` (open the dashboard), `--port <n>`,\r\n## The dashboard\r\nPrinted on launch (`http://127.0.0.1:8787/_ccproxy/` unless that port is taken).\r\na `/compact` starts a new one.\r\n| `session/start` | first request of a conversation |\r\n| `request/start` | a model request left Claude Code |\r\n- The proxy listens on `127.0.0.1` only. The dashboard rejects requests whose Host is\r\n  not local, and every change (settings, push) requires a token only the dashboard page\r\n- The dashboard loads its fonts from Google Fonts when online; offline it uses system\r\nnpm test             # proxy, capture, live feed, CLI, archival, dashboard security\r\n\r\nLocalAddress LocalPort OwningProcess\r\n------------ --------- -------------\r\n127.0.0.1         8787         20996",
+        "is_error": false
+      }
+    ]
+  }
+}

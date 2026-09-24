@@ -1,0 +1,17 @@
+{
+  "id": "6411c83a86ec7478c570baeb",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The ccproxy dashboard is at:\n\n**http://127.0.0.1:8787/_ccproxy/**\n\nThe proxy is running on port 8787 right now, so the link should open. It only works on this computer, because the proxy listens on localhost only. If the page doesn't load, run `shrey dashboard` to open it.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
