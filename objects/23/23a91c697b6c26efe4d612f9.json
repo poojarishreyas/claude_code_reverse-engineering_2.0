@@ -1,0 +1,22 @@
+{
+  "id": "23a91c697b6c26efe4d612f9",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSvAYKEAgSGAI4AUIIdGhpbmtpbmcSDNlgvgFWG4uAvQNAJBoMotpkEEUwEB8ZGJGTIjD9UaHrhT+qeDszn1pbQ7cQNDzrQvswXz77awbksg2/DvuCqsUFwGxLsUlNnQRHXbsq2QXeRwqByK6AI/cEVQYCfQN8QxWbr1/Knt1e9XFL9gJ3ATvpyCBxgousIuzhO1bxwC7w1wETPug/2acFC5dw+O0HR++IxVcmNFeyQGGUWF+yVyAzkkpu9xw+1Hhwd+D6d8xHQASUA7GHSBymY8JNOsTIKWigl+wEla0a9/T5kIXreA8a7pxlQB9nwr9pkMmeuMFIoys+5QnP08j7D68aZhLMGg5hQEf+FX2HxvOXekScl0JxyX/gPinP0hZQY8OSk8PoDujJo6vF7olsobvt5CP1ZL9IulNxO7sgH9+7JIYhrQpCFroxJnneVAM2rmHPpQVfwpIEf6bJxTjnRDGpQ0iRhcVNgR5RPu7uTubYJNVlgOAhCKu3lEs5pxYUUouNklheWkBfn3Je4jHWsJjyuDxaLOmr0CC4LG8v+8/7km8kPPw3FpTCcnLfnLmLHSsNJCSAiCYgg9rLnmIQyaBTACMUvtDc1BQNd147rRbyqv7eVp9rtw+r+V/Cj45wrke0n5rcUpc9RmimwAfr/HgdPGGwG20z6LDKdCzUj9yUji+cQuvIkVpA5ZnoM9JbxhmzIxPKdcrN0Zt5kQDAEBH0HsAPBq34Hqg9sJkft+JoK2CGQaoZv9hTNqj+dRaHE12k0LTMqRrpwgTbUYHFu+A3pC848COEk86WXXju1IW7/5vVPL9vD0c9A8sq79h6T3K3/iQdEH9nZPpNuwqn7qOxRxYjrnAhG9OkpekZAjR05s/8QTOgvBmn/tyIFedQxsJ9JhKvx/km8z41EKJ6nuVrlLSqkddiENsLPloC4ah2GlkJ0hsqqJkCYq+yByl9OvjHsoijEkcKiZ03/j8BKtgoh7djrgK8LKz3GHzjITmsukWNyt6UIuqeG7991vH+czb8ExGgrJuEuPWsq28BoThHUaoNe51zpHZvSwhZQiO5roSCHAUXwjhTUDaDBFaBVnna0gm2u8yBnWB2TpcYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "The `claude-code-trajectories` repo is now clean, on your computer and on GitHub.\n\n- **Removed:** both junk sessions, the `objects/` folder and `INDEX.md`.\n- **Kept:** `README.md`, `.gitignore` and `.gitattributes`.\n- **History:** it is now a single commit, `abae676 Reset trajectory archive`, and the two old commits are gone from GitHub.\n\n**Next step:** restart the proxy: close the Claude Code session running under the current `shrey` process, then run `shrey` again. Do it soon, because the running copy still has the two old sessions in memory. If anything triggers its auto push before the restart, it could write a new `INDEX.md` that still lists them. The restart also turns on the raw request/response capture.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

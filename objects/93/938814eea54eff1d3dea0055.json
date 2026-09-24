@@ -1,0 +1,23 @@
+{
+  "id": "938814eea54eff1d3dea0055",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS4QkKEAgSGAI4AUIIdGhpbmtpbmcSDG+zxF7WpbxMJif40RoM776CC2CbY71030NaIjBxDhrirgis380O+yQcusVDulML6/f9sEKR6il87ZEVSKzlbUZlgJ6KRh1Zf0asvQgq/ghVJLbAk5ra21yCTGlYvA5UeVkPpTMy9KQTWHBgEM57nob4CLyuCinv+QkHk6IHCobiGDmLb4A1honpl7/nSSfeaIXGZ+ZRWw40CylyRqcN17HhGUeNVI7k81FST45Oi+YDFOl3IYGtJrAa+W5yY325pTZksHMLbu31yENZPMCp/Z+8fJ9n6wgpHpNRuD4363IAtorpyys7ALaD+lrKLTjX5f+kpcdxvuQwr41D7WRk6NnMVyJzZsvc9a1fHM2njXpV8VisLTmm5Y0gD8czxL6xQcdmcHHYejpl+3rCEjDWGxPuCnD+x9wmz9ATwlmvlKCi9FimiXZcZ5UrZ9E1ura91T0PT5+6jNXxbDqq7Uf05DfuLHslTJQZwBF2g2N9zhstu69eZW6BuiV/AbEBlfQLlK/ZZ2O6oqw7ngiNi+rOg2Dsm7ylrxrBkJC7bySxjB5y8BIMbI9J43erTUYfKVJ1NGueUWo+pCfaJYU3kkCyz8WKgUABV9XxWCIJyu6lH5SIxY5RL+WTqszIk82xK/Ed8cYMuvZn2zlr9HwrE344p9aKNSSXHmaKqd5pR4T1xp5DINLF9XouOlyrYgteMGSJQH7M0jqHqLwRExEN9f0ABRPF906WjLExsscIzBITvEhk9De/qT/mFnqc/W5HelOoNOuwXsTfI22hcyQx3p6jcwD0fHfbZSVYDR4B3hM6siBU1iSMw1979kAERdd7UlAxLXs4RW8oztB0kU1GdTnXpsgfaw7BE3csfApVKstpumbzrwD5U1Srs4x02cFBp3Det+FBE4iZZEm0ZVhjHS0njyLv0IaEt/dUb1Cfvsv/gBYFxqVSINenFZHzrepPN4AFMP0GKdubYO3+GZef6n2c682OZxe8GgCjdgMvM+FoWsAxFKaxcyFTz9gKC1JO9ET/87iWM+RLL7ZWVMMa7BA2zlccs6tfXw9p4nnX/HNNxFD0sayyRKmPm8buumyy3AmaOfkNR/jPw0MXh/Ym1TWTZWSplLe3oVZ2bv4H5i408JSbTlcU+ZterPQ7GfPcAhK2Bw/D3K/LhkZhQX2pj7Kv8Atw8w4tS2L9Z4u5qoSzNBkrcdicYtS0FHEIeyACLbdJeASyxEXQptOw0/vIksU1+414y6Dzji01Kt7q30hwKSVnUdHHQxFhqDaXCNl+QzkOZZZQgF41AuVRHI9abVoVuSerC68cNPBwvJpbj1g4KioHqOpaS41X4Jr3BJdGWsUwFJN+ZmHhrz1xw5aKggcUonWze2LYD0M5k4G71ZeRBS7kcelbqJzX0ZPazDiJfzIeaV6lCIOm9jVjaHxMuMrAWsvvUR7O+cT4TBkIWLR8RbW2qPLSx+SYSEwCD3Nr/fEBjqea+M78+miueBKG0FL/bHId5yamjiQXdF0LkGcvMjhyC3dm4dOvo2I/t5ddbR5NyT2DlxIPzYs1XwwDl7x4A7Yzln+tZVn8ccHhb1vIf+THWpCdezu7fbdAHCyZ/ccd5bm8F6txfiaDZ7WPhzmBiG0b3zSNY2NEH2Qo20MdGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01RXmnBSd8NiDVPjczCUYye4",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/.ccproxy/captures && git rm -rq --cached . && rm -rf sessions objects INDEX.md && git checkout -q --orphan fresh && git add README.md .gitignore .gitattributes && git commit -qm \"Reset trajectory archive\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\" && git branch -D main -q && git branch -m main && git push -f -u origin main 2>&1 | tail -3 && git log --oneline && ls -A && git status -sb",
+          "description": "Wipe captures, recreate single commit, force-push to GitHub"
+        }
+      }
+    ]
+  }
+}

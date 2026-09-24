@@ -1,0 +1,17 @@
+{
+  "id": "879161a9a808fa3c55261f28",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "and also deploy the webpage in vercel",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
