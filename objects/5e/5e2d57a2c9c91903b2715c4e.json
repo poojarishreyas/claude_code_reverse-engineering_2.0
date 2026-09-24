@@ -1,0 +1,8 @@
+{
+  "id": "5e2d57a2c9c91903b2715c4e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "[SUGGESTION MODE: Suggest what the user might naturally type next into Claude Code.]\n\nFIRST: Look at the user's recent messages and original request.\n\nYour job is to predict what THEY would type - not what you think they should do.\n\nTHE TEST: Would they think \"I was just about to type that\"?\n\nEXAMPLES:\nUser asked \"fix the bug and run tests\", bug is fixed → \"run the tests\"\nAfter code written → \"try it out\"\nClaude offers options → suggest the one the user would likely pick, based on conversation\nClaude asks to continue → \"yes\" or \"go ahead\"\nTask complete, obvious follow-up → \"commit this\" or \"push it\"\nAfter error or misunderstanding → silence (let them assess/correct)\n\nBe specific: \"run the tests\" beats \"continue\".\n\nNEVER SUGGEST:\n- Evaluative (\"looks good\", \"thanks\")\n- Questions (\"what about...?\")\n- Claude-voice (\"Let me...\", \"I'll...\", \"Here's...\")\n- New ideas they didn't ask about\n- Multiple sentences\n\nStay silent if the next step isn't obvious from what the user said.\n\nStay silent if a suggestion could be unsafe or inappropriate — including any sensitive topic (security incidents, credentials, harm, private data). Even when the user is doing legitimate security or cybersecurity work, do not predict potentially unsafe actions.\n\nFormat: 2-12 words, match the user's style. Or nothing.\n\nReply with ONLY the suggestion, no quotes or explanation."
+  }
+}

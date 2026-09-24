@@ -1,0 +1,23 @@
+{
+  "id": "850d286975fd692296c2a1d1",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSugUKEAgSGAI4AUIIdGhpbmtpbmcSDKpuXo5LGkIbUBzECBoMyWLrkucnrEPAKu9HIjBjWmpkCcEvrOeg36FXaQjP8QJV7Apt9G8IPSuymIyrajxoNAXKDqPnVlCXvT8+M/Aq1wTRIU2s4kuWS5stLvaFDwD9shlMgZxdP0TBiHJIJSI3PqrLqQBtup4Jifg8v0nNSVPtVO/eDxx+25U/L3a/C86PQKeKEBpg8C+WmvIuzhK0mRWdf3CCtQrzPGML65kGYqrjbVIyDrgHFKfyrDsLe6y5IJS6+r4LAdSLQ74/o2xd1VlamREXtbB1jd0nbtkEKPkgjHpzje/6+Ve7GJllalirVzFdnawL0eAQxmOYB+7NKKobCNgBud3H2Q3unM33UwxyqCcpPYDRbNZ9g9Kmz2WfCG6OZuBk4wz6sLrk8GamXjJKE13QXVT7CRRISqxxASoZRV0BzreMoTlRVMjc8QNfvXEgNtC+fykeRZyFDyEgZIvhHxAz62GSxJZOZM23qILRc6BYnwQ92qdls3Zw+Cia2T5i/YhHD2jPiZ6pnyVgwJO40N+G+l0v9L+YhvOEyGj1Cg1zzVN9a8sjsFLAkLu4yIufY+Jv6v351QyeeHdecb1MN+ll0w6VNBeQDrzpzKLVKS8lx7buFVxaUzBh1ncvwXCR0s0zc+LMPQrYMKBC/KLqyO6dwbKmFlJ4HoEEFoj1j1fi1qh2oxoP7jIr1wWIA/ZjiilNQFpbqVZa45oeGgAxKUtyKaiX5at8UUFCh2Alb6rOQ0ip1xQBTUmKDQwawpJrUm+FZBlgb53Q54LSrHC0GpU1G95KBpx0dQ4rLJh7a7ZNTwtCwd7jmg2yLATcojQF+9YiXsSAPbwUBfHk9WHfVAqQzaGtG9RoqnvDG1ZkLk0HvE/mnJR0Nw1badnJ9EYGOAmg9BgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01ApwjUdJuWuTPAKaSjxYmRj",
+        "name": "Artifact",
+        "input": {
+          "action": "list",
+          "limit": 10
+        }
+      }
+    ]
+  }
+}

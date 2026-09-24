@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "s-322de84dd9f6d591",
+  "title": "url to acess wbpge",
+  "source": "claude-cli/2.1.281 (external, cli)",
+  "model": "claude-opus-5-5",
+  "credential": "3c06de3852aa",
+  "startedAt": "2026-09-24T16:54:01.499Z",
+  "updatedAt": "2026-09-24T16:54:11.484Z",
+  "durationMs": 9985,
+  "requests": 3,
+  "errors": 0,
+  "events": 14,
+  "usage": {
+    "input": 510,
+    "output": 397,
+    "cacheRead": 127046,
+    "cacheCreation": 63965
+  },
+  "messageIds": [
+    "322de84dd9f6d591b737331d",
+    "db6d7b0d41f9fafe02a38f1b",
+    "fb087af9eba6c505fce5edce",
+    "850d286975fd692296c2a1d1",
+    "e60f1c129f985ee1131f8d1c",
+    "be285b9f7cd4bd77b27bce49",
+    "955627438e5ad6d4f0fe37d1",
+    "5e2d57a2c9c91903b2715c4e"
+  ]
+}

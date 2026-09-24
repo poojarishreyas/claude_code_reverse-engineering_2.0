@@ -1,0 +1,13 @@
+{
+  "id": "b8e7b2ce4410210f9f78c847",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "<session>\nurl to acess wbpge\n</session>\n\nWrite the title in the predominant language of the session — a stray word or code token in another language doesn't change it, and neither does the English of these instructions."
+      }
+    ]
+  }
+}
