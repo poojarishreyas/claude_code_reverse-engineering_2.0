@@ -5,8 +5,8 @@
 | session | `s-322de84dd9f6d591` |
 | model | `claude-opus-5-5` |
 | started | 2026-09-24T16:54:01.499Z |
-| requests | 11 |
-| tokens | in 1,126 · out 1,755 · cache read 583,055 · cache write 66,166 |
+| requests | 12 |
+| tokens | in 1,128 · out 2,115 · cache read 649,221 · cache write 67,139 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -583,4 +583,173 @@ origin	https://github.com/poojarishreyas/claude-code-trajectories.git (push)
 11
 Shell cwd was reset to C:\Users\shrey\Desktop
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01ENGdLhRQiFBLHKRF4gPqoQ)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/.ccproxy/captures && cat INDEX.md README.md .gitignore && for d in sessions/2026-09-24/*/; do echo \"=== $d\"; cat \"$d/manifest.json\"; echo; echo \"--- transcript (head)\"; head -c 2500 \"$d/transcript.md\"; echo; echo \"--- jsonl\"; wc -c \"$d/session.jsonl\"; head -c 1500 \"$d/session.jsonl\"; echo; done; echo \"=== obj\"; head -c 800 objects/27/*.json; echo; git show --stat d597466 | head; git fetch -q && git status -sb | head -2",
+  "description": "Read captured session files and last commit"
+}
+```
+
+_stop `tool_use` · 9.70s (ttft 5.48s) · in 2 · out 360 · cache r66,166/w973_
+
+---
+
+## req-0012 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 18 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01UmQF4cHHE6L9aR6edAQ3En)_
+
+```
+total 15
+drwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 .
+drwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 ..
+drwxr-xr-x 1 shrey 197609    0 Sep 24 21:31 .git
+-rw-r--r-- 1 shrey 197609   31 Sep 24 20:44 .gitattributes
+-rw-r--r-- 1 shrey 197609   36 Sep 24 20:44 .gitignore
+-rw-r--r-- 1 shrey 197609  555 Sep 24 21:31 INDEX.md
+-rw-r--r-- 1 shrey 197609 1473 Sep 24 20:44 README.md
+drwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 objects
+drwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 sessions
+---GIT
+## main...origin/main
+d597466 capture: 0 sessions, 0 requests
+ee24444 capture: 2 sessions, 2 requests
+origin	https://github.com/poojarishreyas/claude-code-trajectories.git (fetch)
+origin	https://github.com/poojarishreyas/claude-code-trajectories.git (push)
+---TREE
+./.gitattributes
+./.gitignore
+./INDEX.md
+./objects/27/277d9545ac40f58b826388f6.json
+./README.md
+./sessions/2026-09-24/misc-2026-09-24/manifest.json
+./sessions/2026-09-24/misc-2026-09-24/session.jsonl
+./sessions/2026-09-24/misc-2026-09-24/transcript.md
+./sessions/2026-09-24/s-277d9545ac40f58b/manifest.json
+./sessions/2026-09-24/s-277d9545ac40f58b/session.jsonl
+./sessions/2026-09-24/s-277d9545ac40f58b/transcript.md
+11
+Shell cwd was reset to C:\Users\shrey\Desktop
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01ENGdLhRQiFBLHKRF4gPqoQ)_
+
+````
+# Session index
+
+_2 captured sessions, newest first. Updated 2026-09-24T16:01:34.333Z._
+
+| updated | session | model | reqs | in | out | cache read | title |
+| --- | --- | --- | ---: | ---: | ---: | ---: | --- |
+| 2026-09-24 15:14 | [`s-277d9545ac40f58b`](sessions/2026-09-24/s-277d9545ac40f58b/transcript.md) | claude-sonnet-5 | 1 | 0 | 0 | 0 | quota |
+| 2026-09-24 15:14 | [`misc-2026-09-24`](sessions/2026-09-24/misc-2026-09-24/transcript.md) | - | 1 | 0 | 0 | 0 | Ancillary requests |
+
+**Totals** — 2 requests · 0 input · 0 output · 0 cache read
+# Claude Code trajectories
+
+Captured by **ccproxy** - a local proxy sitting between the Claude Code CLI and the
+Anthropic API. Every request and response is recorded, then committed here.
+
+## Layout
+
+```
+sessions/<YYYY-MM-DD>/<session-id>/
+    session.jsonl    append-only event log - the source of truth
+    manifest.json    summary: model, request count, token usage, timings
+    transcript.md    human-readable rendering of the same log
+objects/<xx>/<id>.json
+    content-addressed payloads (messages, system prompts, tool catalogues),
+    each stored exactly once and referenced by id from the logs
+INDEX.md             table of every captured session, newest first
+```
+
+## Event vocabulary
+
+| type | meaning |
+| --- | --- |
+| `session/start` | first request of a conversation observed |
+| `request/context` | effective system prompt / tool catalogue changed |
+| `request/start` | one model request left the CLI |
+| `response/open` | upstream responded; status and headers recorded |
+| `response/chunks` | streamed SSE deltas, packed into runs |
+| `response/message` | assembled reply, stop reason, usage, timings |
+| `response/error` | upstream returned a non-2xx status, or the hop failed |
+
+## Secrets
+
+Credentials are fingerprinted, never stored: `x-api-key` and `authorization` become a
+stable `redacted` digest, so sessions stay distinguishable by key without exposing it.
+Known credential shapes (`sk-ant-`, `ghp_`, `AKIA`, PEM blocks) are scrubbed from bodies.
+*.tmp
+*.partial
+.DS_Store
+Thumbs.db
+=== sessions/2026-09-24/misc-2026-09-24/
+{
+  "schemaVersion": 1,
+  "id": "misc-2026-09-24",
+  "title": "Ancillary requests",
+  "source": "Bun/1.4.1",
+  "model": null,
+  "credential": null,
+  "startedAt": "2026-09-24T15:14:53.762Z",
+  "updatedAt": "2026-09-24T15:14:54.403Z",
+  "durationMs": 641,
+  "requests": 1,
+  "errors": 0,
+  "events": 3,
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": []
+}
+
+--- transcript (head)
+# Ancillary requests
+
+| | |
+| --- | --- |
+| session | `misc-2026-09-24` |
+| model | `unknown` |
+| started | 2026-09-24T15:14:53.762Z |
+| requests | 1 |
+| tokens | in 0 · out 0 · cache read 0 · cache write 0 |
+
+> Generated from `session.jsonl`. Delete this file and it regenerates.
+
+---
+
+## req-0001 — unknown
+
+_buffered · 0 messages_
+
+_[no new input since the previous request]_
+
+
+--- jsonl
+820 sessions/2026-09-24/misc-2026-09-24//session.jsonl
+{"seq":0,"time
+... [3,944 more characters in session.jsonl]
+````
 

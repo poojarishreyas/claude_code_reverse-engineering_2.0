@@ -1,0 +1,15 @@
+{
+  "id": "b596bb3a1e65ac8974985744",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UmQF4cHHE6L9aR6edAQ3En",
+        "type": "tool_result",
+        "content": "total 15\ndrwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 .\ndrwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 ..\ndrwxr-xr-x 1 shrey 197609    0 Sep 24 21:31 .git\n-rw-r--r-- 1 shrey 197609   31 Sep 24 20:44 .gitattributes\n-rw-r--r-- 1 shrey 197609   36 Sep 24 20:44 .gitignore\n-rw-r--r-- 1 shrey 197609  555 Sep 24 21:31 INDEX.md\n-rw-r--r-- 1 shrey 197609 1473 Sep 24 20:44 README.md\ndrwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 objects\ndrwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 sessions\n---GIT\n## main...origin/main\nd597466 capture: 0 sessions, 0 requests\nee24444 capture: 2 sessions, 2 requests\norigin\thttps://github.com/poojarishreyas/claude-code-trajectories.git (fetch)\norigin\thttps://github.com/poojarishreyas/claude-code-trajectories.git (push)\n---TREE\n./.gitattributes\n./.gitignore\n./INDEX.md\n./objects/27/277d9545ac40f58b826388f6.json\n./README.md\n./sessions/2026-09-24/misc-2026-09-24/manifest.json\n./sessions/2026-09-24/misc-2026-09-24/session.jsonl\n./sessions/2026-09-24/misc-2026-09-24/transcript.md\n./sessions/2026-09-24/s-277d9545ac40f58b/manifest.json\n./sessions/2026-09-24/s-277d9545ac40f58b/session.jsonl\n./sessions/2026-09-24/s-277d9545ac40f58b/transcript.md\n11\nShell cwd was reset to C:\\Users\\shrey\\Desktop",
+        "is_error": false
+      }
+    ]
+  }
+}
