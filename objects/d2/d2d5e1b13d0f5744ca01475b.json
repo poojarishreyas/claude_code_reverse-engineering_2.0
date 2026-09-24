@@ -1,0 +1,17 @@
+{
+  "id": "d2d5e1b13d0f5744ca01475b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "of ccproxy",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

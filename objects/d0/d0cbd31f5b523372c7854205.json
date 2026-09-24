@@ -1,0 +1,19 @@
+{
+  "id": "d0cbd31f5b523372c7854205",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012Dv7HbGQgxyLLAm5oUmjad",
+        "type": "tool_result",
+        "content": "FullName                                                      \r\n--------                                                      \r\nC:\\Users\\shrey\\.ccproxy                                       \r\nC:\\Users\\shrey\\.claude\\projects\\C--Users-shrey-desktop-ccproxy\r\nC:\\Users\\shrey\\Desktop\\ccproxy",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

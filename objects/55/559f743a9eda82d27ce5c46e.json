@@ -1,0 +1,19 @@
+{
+  "id": "559f743a9eda82d27ce5c46e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WPaFj8urbdM5z8e4wJf5Sq",
+        "type": "tool_result",
+        "content": "FullName                                          \r\n--------                                          \r\nC:\\Users\\shrey\\.ccproxy\\captures                  \r\nC:\\Users\\shrey\\.ccproxy\\config.json               \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\dist               \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\node_modules       \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\scripts            \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\src                \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\web                \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\.gitignore         \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\build.mjs          \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\LICENSE            \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\package-lock.json  \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\package.json       \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\README.md          \r\nC:\\Users\\shrey\\Desktop\\ccproxy\\shrey-cli-1.1.0.tgz\r\n== config.json\r\n{\r\n  \"host\": \"127.0.0.1\",\r\n  \"port\": 8787,\r\n  \"upstream\": \"https://api.anthropic.com\",\r\n  \"captureDir\": \"C:\\\\Users\\\\shrey\\\\.ccproxy\\\\captures\",\r\n  \"github\": {\r\n    \"enabled\": true,\r\n    \"repo\": \"claude-code-trajectories\",\r\n    \"visibility\": \"private\",\r\n    \"remote\": \"https://github.com/poojarishreyas/claude-code-trajectories.git\",\r\n    \"commitDebounceMs\": 15000,\r\n    \"autoPush\": true\r\n  },\r\n  \"capture\": {\r\n    \"raw\": false,\r\n    \"redactSecrets\": true,\r\n    \"storeSystemPrompt\": true,\r\n    \"maxInlineChars\": 2000000\r\n  },\r\n  \"dashboard\": {\r\n    \"enabled\": true,\r\n    \"openOnStart\": false\r\n  }\r\n}",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
