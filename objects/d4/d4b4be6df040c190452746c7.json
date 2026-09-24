@@ -1,0 +1,15 @@
+{
+  "id": "d4b4be6df040c190452746c7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RHvWhQejnVMZ5DoB1yDDaX",
+        "type": "tool_result",
+        "content": "app.js\nindex.html\nstyles.css\n{\n  \"name\": \"shrey-cli\",\n  \"version\": \"1.1.0\",\n  \"description\": \"Run Claude Code through a local capturing proxy: every request and response is recorded, shown in a live trajectory dashboard, and pushed to your own GitHub repository.\",\n  \"type\": \"module\",\n  \"bin\": {\n    \"shrey\": \"src/index.js\"\n  },\n  \"files\": [\n    \"src/\",\n    \"web/\",\n    \"README.md\",\n    \"LICENSE\"\n  ],\n  \"engines\": {\n    \"node\": \">=20\"\n  },\n  \"scripts\": {\n    \"start\": \"node src/index.js\",\n    \"test\": \"node scripts/test-e2e.mjs && node scripts/test-cli.mjs\",\n    \"build\": \"node build.mjs\",\n    \"prepublishOnly\": \"node scripts/genassets.mjs && npm test\"\n  },\n  \"keywords\": [\n    \"claude\",\n    \"claude-code\",\n    \"anthropic\",\n    \"proxy\",\n    \"trajectory\",\n    \"observability\",\n    \"llm\",\n    \"tracing\",\n    \"research\"\n  ],\n  \"author\": \"Shreyas Ananda Poojary\",\n  \"license\": \"MIT\",\n  \"devDependencies\": {\n    \"esbuild\": \"^0.28.2\",\n    \"postject\": \"^1.0.0-alpha.6\"\n  }\n}\nweb/app.js:11:    const res = await fetch(url, {\nweb/app.js:117:    const res = await fetch(url, { headers: { accept: 'application/json' } });\n/c/Users/shrey/AppData/Roaming/npm/vercel\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\npoojarishreyas",
+        "is_error": false
+      }
+    ]
+  }
+}

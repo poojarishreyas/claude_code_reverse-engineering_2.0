@@ -1,0 +1,17 @@
+{
+  "id": "563445bdcbaea5a37edcbe71",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\Desktop\\ccproxy (was C:\\Users\\shrey\\Desktop)",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
