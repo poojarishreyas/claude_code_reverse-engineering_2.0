@@ -5,8 +5,8 @@
 | session | `s-322de84dd9f6d591` |
 | model | `claude-opus-5-5` |
 | started | 2026-09-24T16:54:01.499Z |
-| requests | 9 |
-| tokens | in 1,122 · out 1,493 · cache read 516,933 · cache write 66,122 |
+| requests | 11 |
+| tokens | in 1,126 · out 1,755 · cache read 583,055 · cache write 66,166 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -505,4 +505,82 @@ The user stepped away and is coming back. Recap in under 40 words, 1-2 plain sen
 You asked for the link to your ccproxy dashboard, and it's http://127.0.0.1:8787/_ccproxy/, where the proxy is running now. Next, open that link in your browser, or run `shrey dashboard` if it doesn't load.
 
 _stop `end_turn` · 3.07s (ttft 2.00s) · in 96 · out 83 · cache r66,122/w0_
+
+---
+
+## req-0010 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+#### USER
+
+are captured thing is correctly formated and structured and pushed to github when clicked on push s,currectly formated such that helpful for understanding
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01UmQF4cHHE6L9aR6edAQ3En)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/.ccproxy/captures && ls -la | head -30 && echo \"---GIT\" && git status -sb 2>&1 | head -10 && git log --oneline -8 2>&1 && git remote -v 2>&1 && echo \"---TREE\" && find . -path ./.git -prune -o -type f -print | head -40 && find . -path ./.git -prune -o -type f -print | wc -l",
+  "description": "Inspect captures folder, git state, and file layout"
+}
+```
+
+_stop `tool_use` · 5.44s (ttft 2.43s) · in 4 · out 262 · cache r66,122/w44_
+
+---
+
+## req-0011 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 16 messages_
+
+#### USER
+
+are captured thing is correctly formated and structured and pushed to github when clicked on push s,currectly formated such that helpful for understanding
+
+#### USER
+
+**<- tool_result** _(toolu_01UmQF4cHHE6L9aR6edAQ3En)_
+
+```
+total 15
+drwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 .
+drwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 ..
+drwxr-xr-x 1 shrey 197609    0 Sep 24 21:31 .git
+-rw-r--r-- 1 shrey 197609   31 Sep 24 20:44 .gitattributes
+-rw-r--r-- 1 shrey 197609   36 Sep 24 20:44 .gitignore
+-rw-r--r-- 1 shrey 197609  555 Sep 24 21:31 INDEX.md
+-rw-r--r-- 1 shrey 197609 1473 Sep 24 20:44 README.md
+drwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 objects
+drwxr-xr-x 1 shrey 197609    0 Sep 24 20:44 sessions
+---GIT
+## main...origin/main
+d597466 capture: 0 sessions, 0 requests
+ee24444 capture: 2 sessions, 2 requests
+origin	https://github.com/poojarishreyas/claude-code-trajectories.git (fetch)
+origin	https://github.com/poojarishreyas/claude-code-trajectories.git (push)
+---TREE
+./.gitattributes
+./.gitignore
+./INDEX.md
+./objects/27/277d9545ac40f58b826388f6.json
+./README.md
+./sessions/2026-09-24/misc-2026-09-24/manifest.json
+./sessions/2026-09-24/misc-2026-09-24/session.jsonl
+./sessions/2026-09-24/misc-2026-09-24/transcript.md
+./sessions/2026-09-24/s-277d9545ac40f58b/manifest.json
+./sessions/2026-09-24/s-277d9545ac40f58b/session.jsonl
+./sessions/2026-09-24/s-277d9545ac40f58b/transcript.md
+11
+Shell cwd was reset to C:\Users\shrey\Desktop
+```
 

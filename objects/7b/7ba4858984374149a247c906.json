@@ -1,0 +1,17 @@
+{
+  "id": "7ba4858984374149a247c906",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "are captured thing is correctly formated and structured and pushed to github when clicked on push s,currectly formated such that helpful for understanding",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
