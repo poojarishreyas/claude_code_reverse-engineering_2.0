@@ -1,0 +1,19 @@
+{
+  "id": "c485f35ebbd2ab4f0f393797",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WwjrzcMsogF1DZYdzKbxXT",
+        "type": "tool_result",
+        "content": "\"C:\\Program Files\\nodejs\\node.exe\" C:\\Users\\shrey\\AppData\\Roaming\\npm/node_modules/shrey-cli/src/index.js",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

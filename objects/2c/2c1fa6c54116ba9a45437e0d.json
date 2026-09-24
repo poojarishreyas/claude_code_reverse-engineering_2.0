@@ -1,0 +1,14 @@
+{
+  "id": "2c1fa6c54116ba9a45437e0d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CYfDJfRmacW1kZVxXNrkaD",
+        "type": "tool_result",
+        "content": "ccproxy\\src\\config.js-28-    autoCreate: false,\nccproxy\\src\\config.js-29-    // debounce window before a commit is cut, and the push that follows\nccproxy\\src\\config.js-30-    commitDebounceMs: 15000,\nccproxy\\src\\config.js:31:    autoPush: true\nccproxy\\src\\config.js-32-  },\nccproxy\\src\\config.js-33-  // Capture policy\nccproxy\\src\\config.js-34-  capture: {\n--\nccproxy\\src\\git.js-196-      this.pendingPush = true;\nccproxy\\src\\git.js-197-    }\nccproxy\\src\\git.js-198-\nccproxy\\src\\git.js:199:    if (!this.pendingPush || !this.cfg.github.autoPush || !this.remote) return;\nccproxy\\src\\git.js-200-\nccproxy\\src\\git.js-201-    let push = await this.git(['push', '-u', 'origin', 'HEAD']);\nccproxy\\src\\git.js-202-    if (!push.ok && /fetch first|non-fast-forward|rejected/i.test(push.stderr)) {\n--\nccproxy\\src\\git.js-246-      ready: this.ready,\nccproxy\\src\\git.js-247-      remote: this.remote,\nccproxy\\src\\git.js-248-      web: this.web,\nccproxy\\src\\git.js:249:      autoPush: this.cfg.github.autoPush !== false,\nccproxy\\src\\git.js-250-      pendingPush: this.pendingPush,\nccproxy\\src\\git.js-251-      lastError: this.lastError,\nccproxy\\src\\git.js-252-      lastPushAt: this.lastPushAt,\n--\nccproxy\\src\\dashboard.js-149-        github: {\nccproxy\\src\\dashboard.js-150-          remote: archiver?.status().web ?? cfg.github.remote ?? null,\nccproxy\\src\\dashboard.js-151-          repo: cfg.github.repo,\nccproxy\\src\\dashboard.js:152:          autoPush: cfg.github.autoPush !== false,\nccproxy\\src\\dashboard.js-153-          disabled: !archiver\nccproxy\\src\\dashboard.js-154-        },\nccproxy\\src\\dashboard.js-155-        ghAuthenticated: await ghAuthenticated(),\n--\nccproxy\\src\\index.js-24-  if (flags.dir) o.captureDir = path.resolve(String(flags.dir));\nccproxy\\src\\index.js-25-  const github = {};\nccproxy\\src\\index.js-26-  if (flags['no-github']) github.enabled = false;\nccproxy\\src\\index.js:27:  if (flags['no-push']) github.autoPush = false;\nccproxy\\src\\index.js-28-  if (flags.repo) github.repo = String(flags.repo);\nccproxy\\src\\index.js-29-  if (Object.keys(github).length) o.github = github;\nccproxy\\src\\index.js-30-  if (flags.raw) o.capture = { raw: true };"
+      }
+    ]
+  }
+}

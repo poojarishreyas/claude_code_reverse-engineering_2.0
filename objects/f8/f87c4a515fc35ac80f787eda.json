@@ -1,0 +1,8 @@
+{
+  "id": "f87c4a515fc35ac80f787eda",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "enable auto push"
+  }
+}

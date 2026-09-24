@@ -1,0 +1,23 @@
+{
+  "id": "768874d64ef88c4e0148edc0",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSgAcKEAgSGAI4AUIIdGhpbmtpbmcSDHw0TFILfuHqhsimxxoMJjSura/lfv5Ou5gQIjAswVWRp4qaR0nIPdWeiYUUjt4+gSYzrk1+3Nq734b3hDAA7ZEb5hWCwUlY9uQny80qnQaaX01SgnTW7R82S0/n/Qzfhm+njEzycOS2cAXJEI2n+n75MDM2pqDT1cPXSMjpbfsAyMfiimYdRYns4cxpLP/0EvlI5Iy5u3gNCRK58Jn8uVAkzKXZ0PznELGLzwYW+pJfyXethRsmBMctvEmkajUwq/7PX/Oo3fGKMmA76UNJhq1NC/9sN9M4YTVmP79F3Fliyk+a2hs24CNhFkDQkBEdJwLOVJzKbtFKLKgij3G00y6pL7vXIRoofXuONHmeDqVSk/ohTeYWaU2lGUV1wAkOhyDlZfF8fibiqqUCMZF0MblKp9iqi1IfV4weJW3amVFU+RUqYS7lx1KeZCpSP2mfrJy1OkY/0KQefClxn/B49p2wBQjqub7rdSLNoBYivYfeI++zYztNoRcmp/khtX0Yw+AunyAkHGFZYyxK9BryX8iWinpUrbm4fGUoA47bVp21a3J+HQBXqykZ1F3qaziLk04zRnmfaTAbb+Tw2/zbOEp2/pRJYawsUR7vNl0ZFqkLXMNF9SJ5DmjUps0f2jLQ34YGx900lfN+Bm3gqtSo12L960fbeRXHgYfvj7F3/Bz9cSETGGxcQbVL3wJBF8lFKcA+iB0hkGL6ZZw3wvajHiOs6+l2gQGqX2sF9Ps2tENF2QQreJxCORMrWrzoYYS3cS527voXXNosXM5nAz/+GDMAezox/Ajh0yJDXC8j62zdwNV7wP9n6KJC1aZY90sou9h+pdZUK+rKegGpDQR/ps40/MYevJtMnlpeGPaaZDBAm2xzCvh06Yge5ewTKfkPRIWc9BSlfKbHQyEq8Ir5yaN2ppIjwtT2NhjspY9y2jdkLrepjA8buNMUulHkaESLBs5iaG6QskCGg80tNxfa3LkZQTJdYwfvUPoWLZ5dmywGoVotxwoFgQgfQrHhkhGeCBoLNI6j7nsx2V3BFKFZmX+/DJyCaSITBb7CvUD3VKl5ze3AhoiJKcaY07atPdgU2jCudGNd6hr40MvocsVPgYctVzeFqAGqXCTzhlolGfBmJyAUCYQdw2bMeF5gFx9doDByRYRFcEFJtRFeNxgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01WwjrzcMsogF1DZYdzKbxXT",
+        "name": "PowerShell",
+        "input": {
+          "command": "(Get-CimInstance Win32_Process -Filter \"ProcessId=20996\").CommandLine",
+          "description": "Check the running proxy's launch flags"
+        }
+      }
+    ]
+  }
+}

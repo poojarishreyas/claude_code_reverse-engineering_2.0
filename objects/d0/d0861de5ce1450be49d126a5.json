@@ -1,0 +1,25 @@
+{
+  "id": "d0861de5ce1450be49d126a5",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjgcKEAgSGAI4AUIIdGhpbmtpbmcSDBdhHbrA3phXLxNFVBoMEsuvVI2g17b1PA8KIjD7dJRSQtPSH1sLexU4qmNaH3GBR7UCaXxkXJYnnGFcSsZqf3dkW/6H5vi/ZaKADpoqqwba00gU5pdefwKTJOpZiG2IbPWYmPZG1BN3k6dZ2a4NsebdA82Y11nX5YKwEvBif3RAz8o7QbsygpjgrU8IPAoayGBFDLZ+rQqVUAK8aqzbjF6tDWzdgkItbJALf68pqD1LjJbbvCtpShW4IVE0xzPYawcT+R6/r8MUBPHT2W8Ww7zt4KX7E+q07iGr5Pfco8ynRqzgBLXFfXlRm9Qn12LRHJY1NpZ5P5MHFacRP7aIdAC2U/rQVFpz4W1mS6t2AUGI0LXOAMUu1y88tPlNeH8Sl0XquA0N9h7biK7uKacSmpxaBFYBl35EtFyIP8dlPR/ErvzO/Pe6vcIpcNTf6zlCRfsNHjMqQ82/OCR96VPYV8CWHn2DdIrVDCOyn64bpmu22xMuBrmsfJwEufaK8polwt/vJL1qseW+CaZ6GLdqhMMoL07f7Wo8/XEdElvz193KDnMjYmJlwPH8SAwKO6B0uDme2fmjHMCXcMcv1FOPJnE6yd33CwQnNKVaYsMzDGQktnIeotGk76KUWe69oDQaRv3daeZ0aJn/gFkeQenoS2HbXRIRkFTERpyPh/iLh4Jo5Pj+/LEbqhA0T9WqXsncU4bM0ttdzls9Ha7qL2q88aOEPLOSM4h9Dg/f/GdyRAGM2Sr5q6suzLh+ZgKjpd5o8DZ1j6fSWzqMlZUFXNQ4Yz5TyymcP5jtZIYx/f+mGHX2KoFktQDBptAw67aBxX28VQOMKT43w3X/ScNfyaafEpdRAh4Yt6x5/9McyvnRZy8M4hP5io0Ec5pVKPCA0t6hQATMRBKsaLQXCJs2Sl+x183GUXNdNQyluPaM7rRanr13D/0z5+rab03Hbkjr5sd4k0U6qW4PPnYA+SZARzYpiOOJfXG9uOV/9Q8m00Axh5Qw2j8WJ5Iv/wiwEVrSUDBG820h5kcrAzEBncYpdks/gPGgNQzt9nkVZZwPK51iLlg6LKi6avKmu8+5dbFarDtNhdsRNI3hsWwiCxFoqxNa0ZVPFFshU3Jb/UyIzvhouiizUzVQB0QFNMApjWiiwCaiMwlbv5nWjFO/+gS81ia8wslfQrKqpMu/6MeWGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01CYfDJfRmacW1kZVxXNrkaD",
+        "name": "Grep",
+        "input": {
+          "pattern": "autoPush",
+          "path": "C:\\Users\\shrey\\Desktop\\ccproxy\\src",
+          "output_mode": "content",
+          "-C": 3
+        }
+      }
+    ]
+  }
+}
