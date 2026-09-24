@@ -5,8 +5,8 @@
 | session | `s-322de84dd9f6d591` |
 | model | `claude-opus-5-5` |
 | started | 2026-09-24T16:54:01.499Z |
-| requests | 23 |
-| tokens | in 1,754 · out 6,098 · cache read 1,533,171 · cache write 79,555 |
+| requests | 24 |
+| tokens | in 1,850 · out 6,165 · cache read 1,612,726 · cache write 80,172 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -1799,4 +1799,20 @@ Each request and its response share the same number, so they're easy to pair up.
 - **Error responses get no raw response file.** For example, the 429 you hit earlier only appears in `session.jsonl` and `transcript.md`. If you want errors saved as `req-XXXX.response.json` too, I can add that, but you'd need to reinstall `shrey-cli` from your Desktop folder afterwards.
 
 _stop `end_turn` · 6.86s (ttft 6.86s) · in 2 · out 617 · cache r79,243/w312_
+
+---
+
+## req-0024 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 39 messages_
+
+#### SYSTEM
+
+The user hasn't heard from you in a while — say in a few words what you're doing, then continue.
+
+#### ASSISTANT
+
+You're setting up ccproxy to push raw requests and responses to GitHub, and raw capture is now on in the config. Next, restart the proxy by closing that Claude Code session and running `shrey` again.
+
+_stop `end_turn` · 4.62s (ttft 3.55s) · in 96 · out 67 · cache r79,555/w617_
 

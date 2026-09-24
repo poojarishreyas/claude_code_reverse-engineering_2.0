@@ -1,0 +1,8 @@
+{
+  "id": "a6067a0951ec35c44a97aedb",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": "The user hasn't heard from you in a while — say in a few words what you're doing, then continue."
+  }
+}
