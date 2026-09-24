@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-09-24T16:54:01.499Z |
 | requests | 23 |
-| tokens | in 1,752 · out 5,481 · cache read 1,453,928 · cache write 79,243 |
+| tokens | in 1,754 · out 6,098 · cache read 1,533,171 · cache write 79,555 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -1762,4 +1762,41 @@ ProcessId Name    CommandLine
 #### SYSTEM
 
 The user hasn't heard from you in a while — say in a few words what you're doing, then continue.
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Raw capture is now turned on in your config. The proxy reads its config only when it starts, so you need to restart it before this takes effect. I didn't restart it myself because the running proxy has a Claude Code session running inside it, and stopping the proxy would close that session.
+
+**To apply it:** close that terminal's Claude Code session and run `shrey` again, or `shrey --raw` to force it on. Auto push is still on, so the raw files will reach GitHub about 15 seconds after each request.
+
+**Where the raw files go on GitHub**, next to the files you already have:
+```
+sessions/<date>/<session-id>/
+    raw/
+        req-0001.request.json    exact JSON body Claude Code sent (model, system, messages, tools, params)
+        req-0001.response.json   full response JSON (content, stop_reason, usage)
+        req-0002.request.json
+        req-0002.response.json
+        ...
+    session.jsonl
+    manifest.json
+    transcript.md
+```
+Each request and its response share the same number, so they're easy to pair up.
+
+**What these files do and don't contain:**
+- **Streamed replies are saved as the finished message, not the stream itself.** The individual stream chunks are still recorded in `session.jsonl`.
+- **Secrets are still removed** from these files, because `redactSecrets` is still on.
+- **Headers aren't in these files.** The request and response headers are still recorded (with credentials removed) in `session.jsonl`.
+- **Error responses get no raw response file.** For example, the 429 you hit earlier only appears in `session.jsonl` and `transcript.md`. If you want errors saved as `req-XXXX.response.json` too, I can add that, but you'd need to reinstall `shrey-cli` from your Desktop folder afterwards.
+
+_stop `end_turn` · 6.86s (ttft 6.86s) · in 2 · out 617 · cache r79,243/w312_
 
