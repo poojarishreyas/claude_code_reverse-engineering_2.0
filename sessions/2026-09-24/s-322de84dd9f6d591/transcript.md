@@ -5,7 +5,7 @@
 | session | `s-322de84dd9f6d591` |
 | model | `claude-opus-5-5` |
 | started | 2026-09-24T16:54:01.499Z |
-| requests | 35 (2 errored) |
+| requests | 39 (6 errored) |
 | tokens | in 2,882 · out 8,894 · cache read 2,350,471 · cache write 84,314 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
@@ -2364,4 +2364,44 @@ _max_tokens 128,000 · streaming · 49 messages_
 _[no new input since the previous request]_
 
 > **Error** (http 401) — {"type":"error","error":{"type":"authentication_error","message":"OAuth access token has expired. Re-authenticate to continue."},"request_id":null}
+
+---
+
+## req-0036 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 49 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0037 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 49 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0038 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 49 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0039 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 49 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
 
