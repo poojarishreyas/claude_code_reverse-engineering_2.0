@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "s-d23c8823fe7c3971",
+  "title": "Reply with exactly the word PONG and nothing else.",
+  "source": "claude-cli/2.1.282 (external, sdk-cli)",
+  "model": "claude-opus-5-5",
+  "credential": "94df337b4e1d",
+  "startedAt": "2026-09-28T18:01:34.168Z",
+  "updatedAt": "2026-09-28T18:01:36.737Z",
+  "durationMs": 2569,
+  "requests": 1,
+  "errors": 0,
+  "events": 6,
+  "usage": {
+    "input": 2,
+    "output": 5,
+    "cacheRead": 0,
+    "cacheCreation": 36872
+  },
+  "messageIds": [
+    "d23c8823fe7c3971f16b07e0",
+    "0fd1b672e6018c03b71bd8b5"
+  ]
+}
