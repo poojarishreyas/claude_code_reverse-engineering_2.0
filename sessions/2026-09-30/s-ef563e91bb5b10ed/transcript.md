@@ -5,8 +5,8 @@
 | session | `s-ef563e91bb5b10ed` |
 | model | `claude-sonnet-5` |
 | started | 2026-09-30T06:27:06.650Z |
-| requests | 11 |
-| tokens | in 114 · out 2,252 · cache read 791,625 · cache write 82,217 |
+| requests | 13 |
+| tokens | in 116 · out 2,253 · cache read 873,842 · cache write 82,229 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -933,4 +933,41 @@ The user stepped away and is coming back. Recap in under 40 words, 1-2 plain sen
 You asked what "passphrase" means in ccproxy: it's the access gate for viewing the admin dashboard (shrey-web), separate from the weak built-in cloud reporting key. No further action pending unless you want to look at how it's set in shrey-web's deployment config.
 
 _stop `end_turn` · 5.08s (ttft 3.61s) · in 94 · out 89 · cache r81,776/w441_
+
+---
+
+## req-0012 — claude-sonnet-5
+
+_max_tokens 64,000 · streaming · 22 messages_
+
+#### USER
+
+wghat is passphrase ?
+
+#### ASSISTANT
+
+The passphrase is the login credential for viewing the **admin dashboard** — the hosted web page (built with Next.js on Vercel + Supabase) that shows captured Claude Code traffic from every installation of this tool.
+
+How it fits in, per `README.md:142-151`:
+
+- Every install of `shrey-cli` reports activity to that dashboard by default, using a key baked into the source (`BUILTIN_CLOUD_KEY` in `src/config.js:14`). That key is **not
+
+_stop `null` · 5.08s (ttft 3.18s) · in 2 · out 1 · cache r82,217/w12_
+
+---
+
+## req-0013 — claude-sonnet-5
+
+_max_tokens 64,000 · streaming · 24 messages_
+
+#### USER
+
+wghat is passphrase ?
+
+#### USER
+
+[Request interrupted by user]
+
+
+what is my passphrase
 

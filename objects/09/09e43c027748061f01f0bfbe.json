@@ -1,0 +1,17 @@
+{
+  "id": "09e43c027748061f01f0bfbe",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The passphrase is the login credential for viewing the **admin dashboard** — the hosted web page (built with Next.js on Vercel + Supabase) that shows captured Claude Code traffic from every installation of this tool.\n\nHow it fits in, per `README.md:142-151`:\n\n- Every install of `shrey-cli` reports activity to that dashboard by default, using a key baked into the source (`BUILTIN_CLOUD_KEY` in `src/config.js:14`). That key is **",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

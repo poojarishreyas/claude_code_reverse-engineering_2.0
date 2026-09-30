@@ -1,0 +1,17 @@
+{
+  "id": "2b45e922e08a3998a98c2a5a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "wghat is passphrase ?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

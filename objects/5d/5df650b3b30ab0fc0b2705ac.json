@@ -1,0 +1,21 @@
+{
+  "id": "5df650b3b30ab0fc0b2705ac",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "[Request interrupted by user]\n"
+      },
+      {
+        "type": "text",
+        "text": "what is my passphrase",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
