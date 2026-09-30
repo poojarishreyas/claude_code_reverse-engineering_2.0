@@ -1,0 +1,19 @@
+{
+  "id": "54244f9504273cd067b1eb4c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01G9ZC8k4M8NeHS23cie8G2k",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\ccproxy\\README.md",
+          "offset": 95,
+          "limit": 80
+        }
+      }
+    ]
+  }
+}

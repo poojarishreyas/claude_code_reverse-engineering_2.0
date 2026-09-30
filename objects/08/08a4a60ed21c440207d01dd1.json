@@ -1,0 +1,18 @@
+{
+  "id": "08a4a60ed21c440207d01dd1",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01CiNTPuqSYKdiHBA6c4A2LK",
+        "name": "Bash",
+        "input": {
+          "command": "cat ~/.shrey/config.json 2>/dev/null || echo \"NOT FOUND\"",
+          "description": "Check local shrey config for stored passphrase/settings"
+        }
+      }
+    ]
+  }
+}

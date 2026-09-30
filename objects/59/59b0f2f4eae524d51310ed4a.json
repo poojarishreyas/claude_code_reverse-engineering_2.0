@@ -1,0 +1,17 @@
+{
+  "id": "59b0f2f4eae524d51310ed4a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01LZAzekSFEFoVhYrKd7UdNn",
+        "name": "Glob",
+        "input": {
+          "pattern": "shrey-web/**"
+        }
+      }
+    ]
+  }
+}

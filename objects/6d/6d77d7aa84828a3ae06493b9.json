@@ -1,0 +1,20 @@
+{
+  "id": "6d77d7aa84828a3ae06493b9",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_015LXTEnHAgC4f84WQTFYaaD",
+        "name": "Grep",
+        "input": {
+          "pattern": "passphrase",
+          "output_mode": "content",
+          "-i": true,
+          "-C": 2
+        }
+      }
+    ]
+  }
+}

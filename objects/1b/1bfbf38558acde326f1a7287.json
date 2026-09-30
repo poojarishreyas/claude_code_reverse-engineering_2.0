@@ -1,0 +1,19 @@
+{
+  "id": "1bfbf38558acde326f1a7287",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_016taMCEJNZGocPcxXxZGPGG",
+        "name": "Grep",
+        "input": {
+          "pattern": "passphrase|ADMIN_PASS|dashboard.*token|DASHBOARD",
+          "output_mode": "files_with_matches",
+          "-i": true
+        }
+      }
+    ]
+  }
+}

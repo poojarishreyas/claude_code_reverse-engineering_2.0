@@ -1,0 +1,21 @@
+{
+  "id": "a123782ae7a677399500826b",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_019veLNMveRvMJeHuskzfPdB",
+        "name": "Grep",
+        "input": {
+          "pattern": "password|passphrase|PASSPHRASE|PASSWORD",
+          "path": "src\\dashboard.js",
+          "output_mode": "content",
+          "-i": true,
+          "-C": 2
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2c60222e692dfb743fa7aa69",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01N8crgsNECCWK5R2pfjmtQR",
+        "name": "Grep",
+        "input": {
+          "pattern": "passphrase|admin",
+          "path": "README.md",
+          "output_mode": "content",
+          "-i": true,
+          "-n": true
+        }
+      }
+    ]
+  }
+}
