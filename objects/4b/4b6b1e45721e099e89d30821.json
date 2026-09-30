@@ -1,0 +1,22 @@
+{
+  "id": "4b6b1e45721e099e89d30821",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSlwcKEAgSGAI4AUIIdGhpbmtpbmcSDEjyBw7vUe+8Ykj+cRoMiw2CJnqHg1qLQ0/vIjAyIkzz4Q0vA5ojPwANh4fXj+f9rumHG5Wz1Pim1u2lgOkrGPZrFEcx4EPJX/dMD70qtAY81S2el27xpdnyTDwmoszLnJmwXRqWyexDet7hYVGNRBLseBgFKpOGLyNrWi5/Y/vEKMesewvg/6GT0pGLaqokVHldcftikZR+4S+1VZDID6uWdKqmsMSR/8LJcgmSpgv0HpMlnzUZEyU7PzXQ5jigkLMJMYC6TKUWpH/UbuFm5QeK5tF99UxUlalB+N3oGcNXGBKbfbtiTdfYcjRuLP0adMc1IXWHSNt0wCOiEZ0bEscqaLdxRUe6WKOpIUwbui2af9OdqAP+AY5IEbUr7khIwXeQo2OztBdHsDup0cGRw3943CDLZTpoVVKNUd/ZWKL/um+K8J117NkcjW8zqR9x9PJvJKmFaLWsXsJ3pK7tVBrV+Mlw+Tgb2SftZzSchzz0pGhDJkeNDaEKX3Ky7GWn8JTALTPDhDPP0bsOkVEksTkmAezMWVzyJZHbpOkbiTATxiRW7JoScUAeagoDums52ZDPKTDjU/tD0F/wcgIrseii+PG7o88EGxA5YWPt4c75+EKcW133bvafqO/QBOM3QYYg4FgyQU63p09ldtXyAj+ls7LtmPrFhlmqzYMYTSV0DwzbTe/zE1QioC4C1yk7j3ykLdLxN8+7/rYO6a0ZdtRlPfJ81+xgXeXLv+10qFogSQoHPrLzZ3hxTxvg+6xme/9soAmP5K8WO4wMKI23INQYTRTQ/14Y8JZ192p+hVnpa+L9lcSPGssjiYBx3mUFWSO+7iQNWZFtARFQHUkL8u3QZZcU3Hte/eCXg+JzUlmmfJUuBwI5pZX22yQklOR1mL9DIUAKRhtRfNYNz6WzUtoiemZTDjCi4iq8vYXq67Ld77ddnScIAqqzGR9I5hdT3Z6GJKvxIY4R8n5iiwin9oHT7TF+JsIOzr6ptoG80KC0gczH59jAwGDNxIxf4Ol6ysf/rVgU2jpFWv+RKJSyfdl0yyR3HOD4jWDM/HCvM/VnPG+GS5aWWQ4jaL6YQp8BLNhLey1rcuUJKEeVWpudFLVjhCfLPOb7ez3PxbdvamJ6tdgBzjAVxrN9A8X4vjIj0QPUJkfSuwFIBA9gXcYxg0g5yHv2pjMFaK2YrfHv/cIZ0KhUGAE="
+      },
+      {
+        "type": "text",
+        "text": "I couldn't run anything, because there's no project here to run.\n\n`C:\\Users\\shrey\\Desktop\\OmniRoute` contains only a broken `.git` folder. It has empty `objects/` and `refs/` subfolders and no `HEAD` or `config`, so git doesn't recognize it as a repository. There's no source code, no `package.json` and no other files. It looks like a clone that stopped partway.\n\n\"Run this\" may also have been meant to go with a command or file that didn't come through. If so, paste it and I'll run it.\n\nIf you meant the OmniRoute app, I can delete this broken folder, clone the repo again and launch it. Send me the repo URL, or tell me which one it is.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

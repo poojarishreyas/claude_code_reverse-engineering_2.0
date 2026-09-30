@@ -1,0 +1,23 @@
+{
+  "id": "eaab85e05b923620aa77e616",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSoAYKEAgSGAI4AUIIdGhpbmtpbmcSDNduUZiMw+QFF3zVkxoMZBTx/hZsuxeyQqd9IjAJDlOYBoFnUC3msxNek4qgVf/e/TuA7JSOQree5MqGORyEMn9RPs8EZ7PAkHRsvqwqvQVcs2UXfrIKA6qf16mqxh4DYdC79sY8htWy1bWzPPxYRqU8SIWkySTGH1ms62OvJtEeSqdvYbb1fnH8oyQU8Zb72EQj+w/y9K3HQNjRnBi5V66Wo+AYlwADG5plCtC7C+cpFWKRHeBcBOiMhbbw/o4Cy37e9/EOn1W2lUmWqBCJRz6/BHjYR68Xpg4L9iqI/GfEYQAPxiR203Sljj9EqWWm+ZB7wKvmgg7iAHq20WPZvl9c/MTZLngTGZ+rf0jfbRMYxmucrB/SnJPJ9YEDVtwYX35AO/NqJ+hqdwY6V2uRsxuLqvTI3NLRTwZNne3oM7B2s3V1kaXLBRLk5IjiSDSvq/Ju7dzLBtvVW9Vw3IyVtYi9ZOAhM3QxAC9zeMr9uimsEmSBAv7aiQbbiS3RP4gTsliSS7CLRZEgFDHYGCAayKbZkdXSpuAM4hkGQio3pso7wWJwKINMqQQBmMlEqtGsZ17IooLKke3xGPU6uPCNS8e9a9IJQipkzRvRFBZDB/tflMPtYvS+IebYx6NC88bBuclzQzCHkPGr3p+9zSCdjsRHIJtjBbIbiwBSSKFOiK4hZBe2FmWmV4YMdjvKV1Xbc44one2BshZLvvIomPwerAJ2CaHJ24mJaSwRhTUOaGrSsrN6/5yJYlCcL27hcK2cRP7FKLu2B4Tg/jJ+cP6GL3pa/JhB6x3U7eyRqpYk9n5A+1dnT+asAzpbDCbnP6D/Ty62TmGHJ7LC/cZQFr6aSSvB5+HRzoPPTf0QvAvxqetEAQtGpOF5ehrpi6MxYnMGW+UtXsF9iZPXx921JuV4124y/1fbl/9RLURqo7XPByGK4GpExCQkUpQzCp2l+VTuuSRYMU9l0//Vd/r5ey+FuX7K41d6DUtu1olbxCVKb9Dzk+DHACpaFjfd4GzaxF2CsA4t0/nW1cOtEBafohgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Ug4q2yf2SdHZV8USsrE3sV",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/OmniRoute && ls -la .git",
+          "description": "Inspect the .git directory contents"
+        }
+      }
+    ]
+  }
+}
