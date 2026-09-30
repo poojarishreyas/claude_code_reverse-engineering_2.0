@@ -6,7 +6,7 @@
 | model | `claude-sonnet-5` |
 | started | 2026-09-30T06:27:06.650Z |
 | requests | 10 |
-| tokens | in 18 · out 1,722 · cache read 629,694 · cache write 80,155 |
+| tokens | in 20 · out 2,163 · cache read 709,849 · cache write 81,776 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -828,4 +828,18 @@ No files found
 149	  hold — it filters casual/acc
 ... [1,073 more characters in session.jsonl]
 ````
+
+#### ASSISTANT
+
+In this project (ccproxy / `shrey-cli`), the "passphrase" is the login credential for the **admin dashboard** — the hosted web view (`shrey-web`, a Next.js app on Vercel with Supabase behind it) where every installation's captured traffic gets reported.
+
+Key points from `README.md:105-151`:
+
+- Every install reports to a hosted admin dashboard by default. There's no per-user login — install identity is just the name each machine chose.
+- The cloud-reporting *key* baked into the published source (`src/config.js:14`, `BUILTIN_CLOUD_KEY`) is **not** a real secret — it's just a filter for casual/accidental traffic, since it ships in the open-source package.
+- The real access boundary is **viewing** the dashboard, and that's gated by a separate **passphrase**, set by whoever deploys that dashboard instance (the built-in one, or a self-hosted one per `shrey-web/README.md`).
+
+So: the cloud key controls who can *write* to it (weak, public), the passphrase controls who can *read* it (the actual gate). It's not set anywhere in this repo — `shrey-web/` is a separate Next.js project not checked out here, so the passphrase is configured wherever that dashboard is deployed (env var on Vercel, presumably), not in `ccproxy` itself.
+
+_stop `end_turn` · 8.50s (ttft 3.63s) · in 2 · out 441 · cache r80,155/w1,621_
 
