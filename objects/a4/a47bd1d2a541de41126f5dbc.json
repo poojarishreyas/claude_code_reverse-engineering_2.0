@@ -1,0 +1,26 @@
+{
+  "id": "a47bd1d2a541de41126f5dbc",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSuAUKEAgSGAI4AUIIdGhpbmtpbmcSDA/fsaQ5UuTVRLACsRoMZVh49uu3IBk3743kIjBK/wWt9NPt4XOy3BmADzJS963afYyp4GMYKNWtvkvS8uGroUHnQqamBAZEfTn+rHQq1QSse1YuWkhxpEcccGBUjNrW5rPzZDwpxF4jnNy4LT3reZDQQmJvf7vPatxrHBbJbxCsH/+SgbIGM4XvxGopvBMFxwP35G7/4zYGBENzwMonCe7e8CbTCOF+diwGgJRjuTCUDNfNNaqpyM1Bkf/3xZqh2sJs8ZtP7nXDRdH9GsEmMEkAeuimZrMdAbi+yxINJ8iZ3EvEIG2KpxIxYuwDh4A5rSvZD7OGP90PMabwV0JPO4MKJQ6S6yrtB6VDYF+Yj0VpQDgwO1ZNZPK4/ktwU5DMOaeg6KXNyIzOtfHRTBPD1ZHgpZEMHtlhwGDSAxXG55KMteoQFVznBVB5TnZ6At9offHiWTlaDP7FHNQOKcr7miEV4pRFPqghL7lvF8eITM3aQL5lxcd1CotENYduw0+d03iEz97VLZgWAnu9CB7rwLdFABoOYAKInbmLRX8MA4QDLSHUDhkB55xMWElxEM3J8yHHgYvfzoOqyCA5r7occarudq/VVNnMSQy2+YnTYYQRFfSvsNPgQslyrt94zs5XMVa7t0H6lnOTgzmsNUJ2trHjPXBam+X6iboghZiWImM1kfBse9TDlsuUnxK5rvpgt6QrsCU3MoNAtIwe2+4cvmlP8Bdq0Pbql+0JUmA4aCHaJda5k7llywtG859m+XfQE5e1zdO9+T5hhVUpRSvFFhxRPipQyhBgpoSWQEXxYf0TafGc0cjq4XEa8OkczOyqK9Bh1NtB8yqiqOM7Gnrv6IznvWyD4HatcnPrqvygyZfrNnfDZ6DIkHlrC7DNoYKIkdHzwroYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01DtQRJeErEwffA6n7MK2hYE",
+        "name": "Skill",
+        "input": {
+          "skill": "run"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
