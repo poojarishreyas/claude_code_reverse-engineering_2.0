@@ -1,0 +1,17 @@
+{
+  "id": "e3715d264aa3a92792de096f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "[Request interrupted by user]\n"
+      },
+      {
+        "type": "text",
+        "text": "what is my passphrase"
+      }
+    ]
+  }
+}

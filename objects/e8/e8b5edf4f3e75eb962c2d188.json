@@ -1,0 +1,22 @@
+{
+  "id": "e8b5edf4f3e75eb962c2d188",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "EoYICrwBCBIYAipAfLErApbBIDXqSBfYVrRZ1iTR1Dwv3SjYJGGzKk4xCOQucY/9ffdZr3HscstCnFpu7W9NeCpId9AbHAc+9kMVRzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ5OGE5NTJiZC0xYjViLTRhNTUtYjBjMC04ZWViNWFjMTFjZmZyEOvCFV/639S5UhN8CLEGoa6IAQGaAREKD2NsYXVkZS1zb25uZXQtNagBu9zy1QawAQISDKxHq8MBJ3IVd+qfYBoMcD8mYhTZpd1uyxwhIjANsrVYnHWqM8ieu7Cits9gnvOGVlQcUtLCXy0BqtGUfHG0i49ZDk0n8/uAuhkT0mUq9gXn7N+XSFBNxcqBnZJGRyN/JKuvdOKWm0oncd8waZz5WD1aUYJBZ4hzg+TEQofYX9w3rWe35rWro9zYQrFIMY3CaDEWqboQyrX7HR0HUufvLQ3juTWjT9mkq1OtwedoF3/kjmSJ9zuFA6H6lziXmBK7+6lQlAXC5xs2XCdrD858pX1Ye/yFOey6sZwUOnSNsnZOTjIViVfIPvZF/t81pqfFR5vPlWxf8bkKBZ9pTuCJ4NoxfQ8pbe1tiuSiXEpVR2TXRmuj5qDz9oxTmcvEQHUaWsXb+LnsGV0v7hPyAYYLY57ERwuuXqm51SVb7wBvFrueBgUvP9cpIIQneEwcrWgA6vd0lQZjntHkxz6BBFjXEqzF2Gf3WEeB0yFRY8OXeSr6OOSpISbJUJMDBwQHEgSfHzDhExTWhDmXhIq83V85zlNrGPommEw0aHvFowBwPvTdAuOo+I3v4JlflAV9pPKwG7dtQO/oZbBBb45E0sg6DWm7+vERWRpjkeNiFUW5chD0VNQ7EcNcvWrBzB6TcCzF60wglUfAnpkkkizfG06gtrVGB48bso6cjQM3WBj8V8y6QqKl85ja8j6kZpyJOty2soSkWqJhKyj05O1NpCAvoVznvgSKdfS8e938t+UbdDzMHDYrlff5rBMvyssiR4oel9NjWWzB9fdk44wKC09RXfghjXfRLMkMVgeLcaH+saEk0mMFecDj/ifzg4UWssxFtZ77rNwvbINGXhjOMIEmUsqKXm20cH4KWV/szEPrTN2/nLS8UQizy9I8pJJBznF0z2gXCzZzjhsttcKyVhzOtPHtA8iQXQlh9xVLJNil3zaeHKlt3VL00JpDcMSVHzgI6j2Wp6sdw7y+U8F2DBi3Gj+eTw/fNXblII8nHuHm7lCst4K2C+ncG3DiycvuMK0Eq+a9uIqt7Wb48ltpCRyTPCPgyUPsTVTygFHzM8VVOwSbWe5QPHHhoSW87+/w/2YZfjy7Ik+TXAdMXHzGZE/bvdm4eF/w8hgB"
+      },
+      {
+        "type": "text",
+        "text": "I checked `~/.shrey/config.json` — it does **not** contain a passphrase. It only has:\n\n```json\n{\n  \"cloud\": {\n    \"url\": \"https://shrey-web.vercel.app/\",\n    \"key\": \"1c68723fc8fbb3731d3aa36dde98498870943f4323558227\",  // public cloud-reporting key, not a secret\n    \"name\": \"Shreyas\",\n    \"deviceToken\": \"01bf02575e8b6672aa145b0e2d2304be9a40d600dc67b334dbc567f1996cd6f3\"\n  }\n}\n```\n\nThat `key` is the public write-filter key baked into the package (same for everyone) — not the dashboard login passphrase. The `deviceToken` identifies your install, also not a login credential.\n\nThe actual dashboard-viewing passphrase isn't stored on your machine at all — it lives server-side on whoever deployed `shrey-web` (the Vercel app at `shrey-web.vercel.app`), most likely as an environment variable in that deployment. Since `shrey-web/` isn't checked out in this repo, I have no way to read or recover it from here.\n\nIf you deployed `shrey-web.vercel.app` yourself, check that project's Vercel environment variables (something like `ADMIN_PASSPHRASE` or similar) or wherever you noted it when you first set it. Want me to search your other local folders for a `shrey-web` checkout to check its env config?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

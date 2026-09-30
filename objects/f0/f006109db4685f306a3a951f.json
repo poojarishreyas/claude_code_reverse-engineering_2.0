@@ -1,0 +1,27 @@
+{
+  "id": "f006109db4685f306a3a951f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "Ep0ECrwBCBIYAipAflqy4J03YYHZNDdR3DdbivYL3dbIu2le5xrPHDX1gZFZF6qzdqscJbsWiNxKTQvL0Z+SmMM1TP7WdHy/9p+PFzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ5OGE5NTJiZC0xYjViLTRhNTUtYjBjMC04ZWViNWFjMTFjZmZyEOvCFV/639S5UhN8CLEGoa6IAQGaAREKD2NsYXVkZS1zb25uZXQtNagBs9zy1QawAQISDAj23nOPKXUWja6kCBoMsazWjARIsw4JS1DiIjACI1uvCDPGUnht7rPSkmGCoZsD2CUiMERYrotn1zQYQ9Aaq559aORDr17fKHevsRAqjQKH4vQvqEkbx9oktnEiKgnouvKsYM+M4lePAnrvNPokvzb6yo5SwZw7rwiBYujG3iz3wpygm+Lf3AP8ElxNo4Fc27pcu2SH7K/+10JeOwK0sgmbvtb2JwbKl7HxHRwYBb5zIAFw9artcL36m5u/uvnqSRUY12bfoBQTUaX62LVuvwLz4FyCFIex4eGkiPMe95hA3+BvX5qBpDa1XXKL+koen2a0bsIoSCwiDy+BkdDKM5irU+KLIKsauU12upTb9rzR/1x1Nx71+/UL80RY98CzzR0cxVn5AH69lmw18bJmBAI6d0UL080f/sYqH33mIPA8jZY44kdjw5vhrVU6UHhrlMNoq/IBBy9N4mFq7BgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01CiNTPuqSYKdiHBA6c4A2LK",
+        "name": "Bash",
+        "input": {
+          "command": "cat ~/.shrey/config.json 2>/dev/null || echo \"NOT FOUND\"",
+          "description": "Check local shrey config for stored passphrase/settings"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

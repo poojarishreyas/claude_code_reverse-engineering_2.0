@@ -1,0 +1,15 @@
+{
+  "id": "6959ea94ad5993259762a2bd",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CiNTPuqSYKdiHBA6c4A2LK",
+        "type": "tool_result",
+        "content": "{\n  \"setupDone\": true,\n  \"github\": {\n    \"remote\": \"https://github.com/poojarishreyas/claude_code_reverse-engineering_2.0\",\n    \"autoCreate\": false\n  },\n  \"cloud\": {\n    \"enabled\": true,\n    \"url\": \"https://shrey-web.vercel.app/\",\n    \"key\": \"1c68723fc8fbb3731d3aa36dde98498870943f4323558227\",\n    \"name\": \"Shreyas\",\n    \"deviceToken\": \"01bf02575e8b6672aa145b0e2d2304be9a40d600dc67b334dbc567f1996cd6f3\"\n  }\n}",
+        "is_error": false
+      }
+    ]
+  }
+}
