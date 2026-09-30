@@ -1,0 +1,24 @@
+{
+  "id": "e4e35dfea001785daae514df",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "EtEDCrwBCBIYAipAL6aDL5G09sSD07i8IAx6H//JEH+f3WsoxQuEhFb0YHbyUqEBQLbgKgcNA2ix/PSZ6UMo9XxUO0xbcsd81MpQcjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ5OGE5NTJiZC0xYjViLTRhNTUtYjBjMC04ZWViNWFjMTFjZmZyEOvCFV/639S5UhN8CLEGoa6IAQGaAREKD2NsYXVkZS1zb25uZXQtNagBwtfy1QawAQISDHurGr5LJBsClC9UKRoM934dk9mVgL+u6iP5IjCpfA3QovSYpZKAFKZ4fWibHSNqYKCqoMDk/ig136u6W244wfiH3QbdIyXXjtZswzQqwQHhya0X0Iqh9akA2xmswEWokWv1k6byIxyvihoRq5iv6voWRuBQW3+9golEG0a9GdSGBVtWmk+ZIhpii4Bese7l/zxqWA1kLprj4Ms6c25j2+TDtaGf0HeHxF4vh+r6RRPMoqgVBL0guHKggkFD/McaKlsrFx743Q5IHhCCxebfrtz571PFSIFJuqttiTVgXEsRDkz7yERnc2HNVQx7Br3e3usljjAj3H/oTDdL26a1kIncS1d4O0n2tY3cWKdYlwErGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_016taMCEJNZGocPcxXxZGPGG",
+        "name": "Grep",
+        "input": {
+          "pattern": "passphrase|ADMIN_PASS|dashboard.*token|DASHBOARD",
+          "output_mode": "files_with_matches",
+          "-i": true
+        }
+      }
+    ]
+  }
+}

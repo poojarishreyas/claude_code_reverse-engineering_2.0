@@ -1,0 +1,25 @@
+{
+  "id": "2c1145dc60b88e00851650c2",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01716juLFVNgwpYScMBtjTBC",
+        "name": "Grep",
+        "input": {
+          "pattern": "passphrase",
+          "path": "src",
+          "output_mode": "content",
+          "-i": true,
+          "-C": 3
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

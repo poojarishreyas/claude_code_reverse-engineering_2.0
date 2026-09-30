@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "s-5297b01870ce4d35",
+  "title": "what is passphrase? Write the title in the predominant language of the session — a stray word or code token in anothe...",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-sonnet-5",
+  "credential": "fc3d61c36033",
+  "startedAt": "2026-09-30T06:27:06.311Z",
+  "updatedAt": "2026-09-30T06:27:07.701Z",
+  "durationMs": 1390,
+  "requests": 1,
+  "errors": 0,
+  "events": 6,
+  "usage": {
+    "input": 1165,
+    "output": 16,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": [
+    "5297b01870ce4d35ee9e9a6a"
+  ]
+}

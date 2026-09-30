@@ -1,0 +1,14 @@
+{
+  "id": "4ba0db5a6277ac81db4d3217",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_015LXTEnHAgC4f84WQTFYaaD",
+        "type": "tool_result",
+        "content": "README.md-149-  hold — it filters casual/accidental traffic, not a determined installer reading the\nREADME.md-150-  source. Who can *view* the admin dashboard is the real boundary, gated by its own\nREADME.md:151:  separate passphrase (set by whoever deploys it).\nREADME.md-152-- The local proxy listens on `127.0.0.1` only. Its dashboard rejects requests whose Host\nREADME.md-153-  is not local, and every change (settings, push) requires a token only that dashboard\n--\nsrc\\config.js-10-// (it ships in this published package's source), just a filter against casual,\nsrc\\config.js-11-// accidental traffic. Who can *view* the dashboard is the real boundary, gated\nsrc\\config.js:12:// separately by its own passphrase.\nsrc\\config.js-13-const BUILTIN_CLOUD_URL = 'https://shrey-web.vercel.app';\nsrc\\config.js-14-const BUILTIN_CLOUD_KEY = '1c68723fc8fbb3731d3aa36dde98498870943f4323558227';"
+      }
+    ]
+  }
+}

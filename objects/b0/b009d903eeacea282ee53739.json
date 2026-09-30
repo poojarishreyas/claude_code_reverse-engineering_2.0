@@ -1,0 +1,18 @@
+{
+  "id": "b009d903eeacea282ee53739",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016taMCEJNZGocPcxXxZGPGG",
+        "type": "tool_result",
+        "content": "Found 18 files\nsrc\\assets.generated.js\nREADME.md\nscripts\\test-cli.mjs\nsrc\\index.js\nsrc\\config.js\npackage.json\nscripts\\test-cloud.mjs\nsrc\\args.js\nsrc\\server.js\nsrc\\dashboard.js\nsrc\\cloud.js\nscripts\\test-e2e.mjs\nscripts\\test-exe.mjs\nbuild.mjs\nweb\\app.js\nsrc\\proxy.js\nsrc\\sse.js\nscripts\\genassets.mjs",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
