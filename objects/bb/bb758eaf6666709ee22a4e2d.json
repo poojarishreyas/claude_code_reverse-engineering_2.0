@@ -1,0 +1,15 @@
+{
+  "id": "bb758eaf6666709ee22a4e2d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0135c7UePyAxfxkm92gcpEPy",
+        "type": "tool_result",
+        "content": "FullName                        \r\n--------                        \r\nC:\\Users\\shrey\\Desktop\\shrey-web\r\nC:\\Users\\shrey\\.kimi-webbridge  \r\nC:\\Users\\shrey\\.shrey",
+        "is_error": false
+      }
+    ]
+  }
+}

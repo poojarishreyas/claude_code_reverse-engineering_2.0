@@ -1,0 +1,22 @@
+{
+  "id": "71778ad491c8486ff9eac1b8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_0135c7UePyAxfxkm92gcpEPy",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-ChildItem -Directory C:\\Users\\shrey\\Desktop, C:\\Users\\shrey\\Documents, C:\\Users\\shrey -ErrorAction SilentlyContinue | Where-Object { $_.Name -like '*shrey*' -or $_.Name -like '*web*' } | Select-Object FullName",
+          "description": "List candidate shrey-web folders"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

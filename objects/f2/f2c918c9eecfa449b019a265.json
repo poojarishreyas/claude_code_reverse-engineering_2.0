@@ -1,0 +1,15 @@
+{
+  "id": "f2c918c9eecfa449b019a265",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01FRApDKASQ7KABXghzuc3LD",
+        "type": "tool_result",
+        "content": "Command did not complete within its 120s timeout and was moved to the background (ID: bs144c8a1). Output is being written to: C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-ccproxy\\e74d1957-6146-409e-b116-84e41babfc4e\\tasks\\bs144c8a1.output. You will be notified when it completes. To check interim output, use Read on that file path.",
+        "is_error": false
+      }
+    ]
+  }
+}

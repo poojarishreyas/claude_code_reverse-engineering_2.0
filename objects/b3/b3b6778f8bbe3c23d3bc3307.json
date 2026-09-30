@@ -1,0 +1,15 @@
+{
+  "id": "b3b6778f8bbe3c23d3bc3307",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Ripgrep search timed out after 20 seconds. The search may have matched files but did not complete in time. Try searching a more specific path or pattern.",
+        "is_error": true,
+        "tool_use_id": "toolu_01W6E2oEHwonbKoEETw6auc1"
+      }
+    ]
+  }
+}

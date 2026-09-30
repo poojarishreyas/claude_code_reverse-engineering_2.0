@@ -1,0 +1,18 @@
+{
+  "id": "3b4dfc777aef2af4711be3c6",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01NmrEBSDFK1HikoV3rzR3jn",
+        "type": "tool_result",
+        "content": "C:\\Users\\shrey\\Desktop\\shrey-web\\app\\gate\\page.jsx:25:        setErr(data.error || 'Wrong passphrase.');\nC:\\Users\\shrey\\Desktop\\shrey-web\\app\\gate\\page.jsx:42:        <p>Live Claude Code activity from every machine running shrey. Enter the passphrase to continue.</p>\nC:\\Users\\shrey\\Desktop\\shrey-web\\app\\gate\\page.jsx:43:        <input type=\"password\" autoFocus placeholder=\"Passphrase\" value={key} onChange={(e) => setKey(e.target.value)} />\nC:\\Users\\shrey\\Desktop\\shrey-web\\app\\api\\gate\\route.js:11:    return NextResponse.json({ ok: false, error: 'Wrong passphrase.' }, { status: 401 });\nC:\\Users\\shrey\\Desktop\\shrey-web\\middleware.js:12: * Gates the dashboard behind one shared passphrase, when the deployment sets one.\nC:\\Users\\shrey\\Desktop\\shrey-web\\README.md:9:whoever deploys and holds the passphrase can watch activity across every machine\nC:\\Users\\shrey\\Desktop\\shrey-web\\README.md:31:   | `SHREY_VIEW_KEY` | optional; a passphrase gating who can *view* the dashboard |\nC:\\Users\\shrey\\Desktop\\shrey-web\\README.md:44:could query Supabase directly, bypassing the passphrase entirely.\nC:\\Users\\shrey\\Desktop\\shrey-web\\README.md:48:passphrase themselves (see `middleware.js`). No Supabase credential of any kind\nC:\\Users\\shrey\\Desktop\\shrey-web\\README.md:51:through a route that actually checks the passphrase.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

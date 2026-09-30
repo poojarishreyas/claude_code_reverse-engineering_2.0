@@ -1,0 +1,18 @@
+{
+  "id": "78c3284a1519658acc393e71",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01EvS5hkQk4a7y5rr7D9w6za",
+        "type": "tool_result",
+        "content": "1\timport { NextResponse } from 'next/server';\n2\t\n3\texport const config = {\n4\t  // Everything except static assets and the gate itself (both the page and the\n5\t  // route that issues its cookie — gating /api/gate would make it impossible to\n6\t  // ever pass the gate). /api/ingest is excluded too: the CLI authenticates with\n7\t  // its own bearer token, not the view cookie.\n8\t  matcher: ['/((?!_next/static|_next/image|favicon.ico|gate|api/gate|api/ingest).*)']\n9\t};\n10\t\n11\t/**\n12\t * Gates the dashboard behind one shared passphrase, when the deployment sets one.\n13\t * This is a screen-lock for a team dashboard, not a per-user login — deliberately,\n14\t * per how this project's identity model works (a display name, not an account).\n15\t * With no SHREY_VIEW_KEY configured, nothing here does anything: fully open.\n16\t */\n17\texport function middleware(req) {\n18\t  const viewKey = process.env.SHREY_VIEW_KEY;\n19\t  if (!viewKey) return NextResponse.next();\n20\t\n21\t  const cookie = req.cookies.get('shrey_view')?.value;\n22\t  if (cookie === viewKey) return NextResponse.next();\n23\t\n24\t  if (req.nextUrl.pathname.startsWith('/api/')) {\n25\t    return NextResponse.json({ error: 'locked' }, { status: 401 });\n26\t  }\n27\t  const url = req.nextUrl.clone();\n28\t  url.pathname = '/gate';\n29\t  url.searchParams.set('next', req.nextUrl.pathname);\n30\t  return NextResponse.redirect(url);\n31\t}\n32\t",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

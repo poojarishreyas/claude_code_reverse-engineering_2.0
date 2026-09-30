@@ -1,0 +1,22 @@
+{
+  "id": "3c8c53ee9fa1ddbe1af43738",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01W6E2oEHwonbKoEETw6auc1",
+        "name": "Glob",
+        "input": {
+          "pattern": "*/shrey-web/package.json",
+          "path": "C:\\Users\\shrey\\Desktop"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

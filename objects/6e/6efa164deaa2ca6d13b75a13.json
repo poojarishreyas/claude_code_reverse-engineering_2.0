@@ -1,0 +1,26 @@
+{
+  "id": "6efa164deaa2ca6d13b75a13",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01NmrEBSDFK1HikoV3rzR3jn",
+        "name": "Grep",
+        "input": {
+          "pattern": "passphrase",
+          "path": "C:\\Users\\shrey\\Desktop\\shrey-web",
+          "glob": "!node_modules/**",
+          "-i": true,
+          "output_mode": "content",
+          "-n": true
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

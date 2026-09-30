@@ -1,0 +1,22 @@
+{
+  "id": "21ddc9e4b375a3c7014c6dae",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01NmrEBSDFK1HikoV3rzR3jn",
+        "name": "Grep",
+        "input": {
+          "pattern": "passphrase",
+          "path": "C:\\Users\\shrey\\Desktop\\shrey-web",
+          "glob": "!node_modules/**",
+          "-i": true,
+          "output_mode": "content",
+          "-n": true
+        }
+      }
+    ]
+  }
+}
