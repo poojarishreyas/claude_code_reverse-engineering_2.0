@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "misc-2026-09-30",
+  "title": "Ancillary requests",
+  "source": "Bun/1.4.3",
+  "model": null,
+  "credential": null,
+  "startedAt": "2026-09-30T06:26:39.757Z",
+  "updatedAt": "2026-09-30T06:26:40.159Z",
+  "durationMs": 402,
+  "requests": 1,
+  "errors": 0,
+  "events": 3,
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": []
+}
