@@ -1,0 +1,24 @@
+{
+  "id": "d2fa188b00093a58e63794ec",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "EoYDCrwBCBIYAipAyqsQaoGYw6ctpZO3ljyLbrgTW2/yK6JVmNVykHb7ZC+vItojkJN+UdGkUr1oc3hcoQL5i6NE0qhm3sNPnjJk+TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ5OGE5NTJiZC0xYjViLTRhNTUtYjBjMC04ZWViNWFjMTFjZmZyEOvCFV/639S5UhN8CLEGoa6IAQGaAREKD2NsYXVkZS1zb25uZXQtNagB6dfy1QawAQISDGDACQRl+Q7FMcx6YhoM+/d36owC+GUIfucZIjA+b43/0THZctWwNt1wv7FDOIw/hUq6W7sFiC5gMicAk4p9H5Lh6t4VoQ5aFcJqSLMqdzTup5ZwdgDIjDwaFzFsdKPPjHwX3a1H9MU5AJTZFffklJgPX71CY4/BEdIuMecLxNHHVXg/rKjq+9WBkaBMEgN1eh1vua8kQ1rhKmJxm/XlO/AGtHsYJG9r02EJQAlKWhRiqeZ9vbLgRuitF32UKqKnGUK/ndTLGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01G9ZC8k4M8NeHS23cie8G2k",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\ccproxy\\README.md",
+          "offset": 95,
+          "limit": 80
+        }
+      }
+    ]
+  }
+}

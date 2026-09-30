@@ -5,8 +5,8 @@
 | session | `s-ef563e91bb5b10ed` |
 | model | `claude-sonnet-5` |
 | started | 2026-09-30T06:27:06.650Z |
-| requests | 10 |
-| tokens | in 20 · out 2,163 · cache read 709,849 · cache write 81,776 |
+| requests | 11 |
+| tokens | in 114 · out 2,252 · cache read 791,625 · cache write 82,217 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -842,4 +842,95 @@ Key points from `README.md:105-151`:
 So: the cloud key controls who can *write* to it (weak, public), the passphrase controls who can *read* it (the actual gate). It's not set anywhere in this repo — `shrey-web/` is a separate Next.js project not checked out here, so the passphrase is configured wherever that dashboard is deployed (env var on Vercel, presumably), not in `ccproxy` itself.
 
 _stop `end_turn` · 8.50s (ttft 3.63s) · in 2 · out 441 · cache r80,155/w1,621_
+
+---
+
+## req-0011 — claude-sonnet-5
+
+_max_tokens 64,000 · streaming · 22 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01G9ZC8k4M8NeHS23cie8G2k)_
+
+````
+95	- **Timeline** — each model call split into waiting and generating; a second lane
+96	  shows time spent running tools between calls. Drag to focus, right-click to clear.
+97	- **Ledger** — the conversation as a turn-aware event list, each message once, tool
+98	  calls nested under the turn that made them, the live reply streaming in.
+99	- **Inspector** — any row's content, raw JSON, the underlying event, and the request:
+100	  parameters, headers, usage, timings, the system prompt on demand.
+101	- **Settings** — set or change the GitHub repository.
+102	
+103	Keys: `j`/`k` move, `/` search, `f` follow, `Esc` close.
+104	
+105	**Admin** — a hosted, multi-user view (Next.js on Vercel, Supabase behind it) built into
+106	`shrey-cli` by default: every installation reports there under the name it was given,
+107	so whoever runs the dashboard can watch activity across every machine at once, live.
+108	There is no per-user login — identity is just the name each install chose. See
+109	`shrey-web/README.md` for deploying your own instead of the built-in one.
+110	
+111	---
+112	
+113	## What's in the GitHub repository
+114	
+115	```
+116	INDEX.md                          every session, newest first, with token totals
+117	sessions/<date>/<session-id>/
+118	    transcript.md                 readable conversation
+119	    session.jsonl                 append-only event log — the source of truth
+120	    manifest.json                 model, requests, usage, timings
+121	objects/<xx>/<id>.json            messages, system prompts and tool lists, stored once
+122	```
+123	
+124	Every request re-sends the whole conversation, so storing requests verbatim would grow
+125	quadratically. Instead each message is stored once under its content hash and requests
+126	refer to it by id — lossless, and the repository stays small.
+127	
+128	Sessions are reconstructed from the traffic (the API carries no session id): a request
+129	joins the session whose messages it continues. Subagents appear as their own sessions;
+130	a `/compact` starts a new one.
+131	
+132	| event | meaning |
+133	| --- | --- |
+134	| `session/start` | first request of a conversation |
+135	| `request/context` | system prompt or tool list changed |
+136	| `request/start` | a model request left Claude Code |
+137	| `response/open` | the API answered: status, headers, latency |
+138	| `response/chunks` | the raw stream, packed |
+139	| `response/message` | the assembled reply, stop reason, usage, timings |
+140	| `response/error` | an HTTP error, a dropped connection, or an error in the stream |
+141	
+142	## Privacy and security
+143	
+144	- `x-api-key` and `authorization` are replaced with a fingerprint before anything is
+145	  written, locally or to the admin dashboard. Known key shapes (`sk-ant-`, `ghp_`, AWS
+146	  keys, private key blocks) are scrubbed from bodies too. This is a safety net, not a
+147	  guarantee.
+148	- Cloud reporting uses a key built into this published package, not a secret only you
+149	  hold — it filters casual/acc
+... [1,073 more characters in session.jsonl]
+````
+
+#### ASSISTANT
+
+In this project (ccproxy / `shrey-cli`), the "passphrase" is the login credential for the **admin dashboard** — the hosted web view (`shrey-web`, a Next.js app on Vercel with Supabase behind it) where every installation's captured traffic gets reported.
+
+Key points from `README.md:105-151`:
+
+- Every install reports to a hosted admin dashboard by default. There's no per-user login — install identity is just the name each machine chose.
+- The cloud-reporting *key* baked into the published source (`src/config.js:14`, `BUILTIN_CLOUD_KEY`) is **not** a real secret — it's just a filter for casual/accidental traffic, since it ships in the open-source package.
+- The real access boundary is **viewing** the dashboard, and that's gated by a separate **passphrase**, set by whoever deploys that dashboard instance (the built-in one, or a self-hosted one per `shrey-web/README.md`).
+
+So: the cloud key controls who can *write* to it (weak, public), the passphrase controls who can *read* it (the actual gate). It's not set anywhere in this repo — `shrey-web/` is a separate Next.js project not checked out here, so the passphrase is configured wherever that dashboard is deployed (env var on Vercel, presumably), not in `ccproxy` itself.
+
+#### USER
+
+The user stepped away and is coming back. Recap in under 40 words, 1-2 plain sentences, no markdown. Lead with the overall goal and current task, then the one next action. Skip root-cause narrative, fix internals, secondary to-dos, and em-dash tangents.
+
+#### ASSISTANT
+
+You asked what "passphrase" means in ccproxy: it's the access gate for viewing the admin dashboard (shrey-web), separate from the weak built-in cloud reporting key. No further action pending unless you want to look at how it's set in shrey-web's deployment config.
+
+_stop `end_turn` · 5.08s (ttft 3.61s) · in 94 · out 89 · cache r81,776/w441_
 
