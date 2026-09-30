@@ -1,0 +1,17 @@
+{
+  "id": "e47ada1fa3646ccf7768ae03",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01EvS5hkQk4a7y5rr7D9w6za",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\shrey-web\\middleware.js"
+        }
+      }
+    ]
+  }
+}
