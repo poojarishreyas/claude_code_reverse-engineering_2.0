@@ -1,0 +1,26 @@
+{
+  "id": "ec295e23e08e8a28e5b21bb4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "EqYECrwBCBIYAipAEhPiDCAWCRMkDhDmMC1g25iEh+wDBrk5S8/Gkmxc4kvIIdRweT1Lnn6e0qh1NOfGWr7Gbx9KQl4igp2VUvWz1TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ5OGE5NTJiZC0xYjViLTRhNTUtYjBjMC04ZWViNWFjMTFjZmZyEOvCFV/639S5UhN8CLEGoa6IAQGaAREKD2NsYXVkZS1zb25uZXQtNagB0Nfy1QawAQISDIPpLhsbGtRJaxoZ0hoMhe7eSbKrkZrqLG39IjBpwgq6Xw1hszBiYaaXtX0klmja4FkZB9uHT0YwXuKyOlTK9fnK/Y53HzZWcmRqgNwqlgKrmY91jcLOHyCvzFMF95CnYcpxd39kF9yK8bH2Hii1NjOQ9p4URER2RxWBTgGRwNSjuDBY3DuRKFuhe6aw7jTYzMEGN1spiwhM3bq/Atq28R2bZV0vh4VGETe91xSA+KZ42nEUnjnq94D/xi27e1t38eTuk4ZE33FgtVIxOaT0rFw5DfqDojEadoM4KnzCLpLFwVxwcwtr54fFCPwkgRxmtsD0vrtYtTi5ZASF09t/8q0sg5ieAU0ELLXivYwJvNOfrj7Xs4FM51tCCoQ6QB1O00WP1GV7tZWOH/085/iB7DTdJGp8sDS4YAtvFrAadZG3mcGvGmKrKBysS33q833Opspwan2sfgtAoXPkMXTtf8bEqokRGhgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_019veLNMveRvMJeHuskzfPdB",
+        "name": "Grep",
+        "input": {
+          "pattern": "password|passphrase|PASSPHRASE|PASSWORD",
+          "path": "src\\dashboard.js",
+          "output_mode": "content",
+          "-i": true,
+          "-C": 2
+        }
+      }
+    ]
+  }
+}

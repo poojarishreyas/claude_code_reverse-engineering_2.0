@@ -1,0 +1,25 @@
+{
+  "id": "f3bb7b011b019a9b2a47377e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_014wjdFhTXd3qzXPLui9GXsP",
+        "name": "Grep",
+        "input": {
+          "pattern": "passphrase|password",
+          "path": "README.md",
+          "output_mode": "content",
+          "-i": true,
+          "-C": 4
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "5203dc2ba4a22597f5c62044",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01716juLFVNgwpYScMBtjTBC",
+        "type": "tool_result",
+        "content": "src\\config.js-9-// self-hosted deployment instead; it is not a secret worth protecting server-side\nsrc\\config.js-10-// (it ships in this published package's source), just a filter against casual,\nsrc\\config.js-11-// accidental traffic. Who can *view* the dashboard is the real boundary, gated\nsrc\\config.js:12:// separately by its own passphrase.\nsrc\\config.js-13-const BUILTIN_CLOUD_URL = 'https://shrey-web.vercel.app';\nsrc\\config.js-14-const BUILTIN_CLOUD_KEY = '1c68723fc8fbb3731d3aa36dde98498870943f4323558227';\nsrc\\config.js-15-"
+      }
+    ]
+  }
+}

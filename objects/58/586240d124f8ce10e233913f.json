@@ -1,0 +1,21 @@
+{
+  "id": "586240d124f8ce10e233913f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01716juLFVNgwpYScMBtjTBC",
+        "name": "Grep",
+        "input": {
+          "pattern": "passphrase",
+          "path": "src",
+          "output_mode": "content",
+          "-i": true,
+          "-C": 3
+        }
+      }
+    ]
+  }
+}
