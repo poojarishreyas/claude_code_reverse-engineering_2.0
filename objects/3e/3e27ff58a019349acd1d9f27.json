@@ -1,0 +1,22 @@
+{
+  "id": "3e27ff58a019349acd1d9f27",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "EoUECrwBCBIYAipAUwFtzC6okVwWzILhM2lUgxIZDUVuJBJ9Y3+Dz7LlMSnee3VYUbRUbUigEUyEgMF8WD9/bROwRnqP/i3VtzGM0jIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ5OGE5NTJiZC0xYjViLTRhNTUtYjBjMC04ZWViNWFjMTFjZmZyEOvCFV/639S5UhN8CLEGoa6IAQGaAREKD2NsYXVkZS1zb25uZXQtNagB5Nfy1QawAQISDCBR5NCE+muiv4zMehoMZetlA0y1xCAzcxdzIjDTVwG7TExBD2GAZL8VaNPKKs5qoE32oukc7/FEw8SS/DisEShU35ceMdLxWFf+5yIq9QG/1tb6GyMjK/0r9KM4cNLjSKmfD85SWXEzKbBSynxCkBBk6YqvakeFmJQOK0jsw5YEZbzDW4j/lJSGV0TXYSrII/qUbjgub57Wsh/65nf50wRSztaW9fDwvKPk1Cgg/uqYeyNE/7mpVW02qyDgiwSOAlcZvWZvSYDobB08h8cNODS71fwa77dF6h5VbUL+7AOg5NfwDuFrDYIbZIYQEuLt2J9G3dSk2Hc8X4oddbPi6fUW39ZSoVJdHRuN/J6nD4sQZOqllE7IoE0t4QcVYzxndmYKn/w9r9OdTIb4tF6jQxPmnnk8gDVnbJ+LJ4Rs4f4NtQ/qBxgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01LZAzekSFEFoVhYrKd7UdNn",
+        "name": "Glob",
+        "input": {
+          "pattern": "shrey-web/**"
+        }
+      }
+    ]
+  }
+}

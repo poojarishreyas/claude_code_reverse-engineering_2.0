@@ -1,0 +1,18 @@
+{
+  "id": "82fa8dbaaa91fa9b63e38e61",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01N8crgsNECCWK5R2pfjmtQR",
+        "type": "tool_result",
+        "content": "4:trajectory, pushed to your own GitHub repository, and reported to a built-in admin\n20:                      ├──▶  admin dashboard (built in, or self-hosted)\n45:GitHub archival is opt-in (nothing is pushed until you answer). Reporting to the admin\n105:**Admin** — a hosted, multi-user view (Next.js on Vercel, Supabase behind it) built into\n145:  written, locally or to the admin dashboard. Known key shapes (`sk-ant-`, `ghp_`, AWS\n150:  source. Who can *view* the admin dashboard is the real boundary, gated by its own\n151:  separate passphrase (set by whoever deploys it).\n171:`shrey-web/` is the admin dashboard's own source (separate Next.js project, own README).",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

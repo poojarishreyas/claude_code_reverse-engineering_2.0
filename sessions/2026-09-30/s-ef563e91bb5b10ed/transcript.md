@@ -5,8 +5,8 @@
 | session | `s-ef563e91bb5b10ed` |
 | model | `claude-sonnet-5` |
 | started | 2026-09-30T06:27:06.650Z |
-| requests | 6 |
-| tokens | in 10 · out 965 · cache read 312,047 · cache write 78,879 |
+| requests | 10 |
+| tokens | in 18 · out 1,722 · cache read 629,694 · cache write 80,155 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -491,4 +491,341 @@ No matches found
 154-  page holds — another website cannot re-point your captures.
 155-- Both dashboards load fonts from Google Fonts when online; offline they use system
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Grep` _(toolu_01EsnEc3Mpcwe9yeQuTtXqEX)_
+
+```json
+{
+  "pattern": "passphrase",
+  "path": "web",
+  "output_mode": "content",
+  "-i": true,
+  "-C": 3
+}
+```
+
+_stop `tool_use` · 5.39s (ttft 4.68s) · in 2 · out 227 · cache r78,879/w380_
+
+---
+
+## req-0007 — claude-sonnet-5
+
+_max_tokens 64,000 · streaming · 14 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_014wjdFhTXd3qzXPLui9GXsP)_
+
+```
+147-  guarantee.
+148-- Cloud reporting uses a key built into this published package, not a secret only you
+149-  hold — it filters casual/accidental traffic, not a determined installer reading the
+150-  source. Who can *view* the admin dashboard is the real boundary, gated by its own
+151:  separate passphrase (set by whoever deploys it).
+152-- The local proxy listens on `127.0.0.1` only. Its dashboard rejects requests whose Host
+153-  is not local, and every change (settings, push) requires a token only that dashboard
+154-  page holds — another website cannot re-point your captures.
+155-- Both dashboards load fonts from Google Fonts when online; offline they use system
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Grep` _(toolu_01EsnEc3Mpcwe9yeQuTtXqEX)_
+
+```json
+{
+  "pattern": "passphrase",
+  "path": "web",
+  "output_mode": "content",
+  "-i": true,
+  "-C": 3
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01EsnEc3Mpcwe9yeQuTtXqEX)_
+
+```
+No matches found
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Grep` _(toolu_01N8crgsNECCWK5R2pfjmtQR)_
+
+```json
+{
+  "pattern": "passphrase|admin",
+  "path": "README.md",
+  "output_mode": "content",
+  "-i": true,
+  "-n": true
+}
+```
+
+_stop `tool_use` · 4.90s (ttft 4.27s) · in 2 · out 251 · cache r79,259/w236_
+
+---
+
+## req-0008 — claude-sonnet-5
+
+_max_tokens 64,000 · streaming · 16 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01EsnEc3Mpcwe9yeQuTtXqEX)_
+
+```
+No matches found
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Grep` _(toolu_01N8crgsNECCWK5R2pfjmtQR)_
+
+```json
+{
+  "pattern": "passphrase|admin",
+  "path": "README.md",
+  "output_mode": "content",
+  "-i": true,
+  "-n": true
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01N8crgsNECCWK5R2pfjmtQR)_
+
+```
+4:trajectory, pushed to your own GitHub repository, and reported to a built-in admin
+20:                      ├──▶  admin dashboard (built in, or self-hosted)
+45:GitHub archival is opt-in (nothing is pushed until you answer). Reporting to the admin
+105:**Admin** — a hosted, multi-user view (Next.js on Vercel, Supabase behind it) built into
+145:  written, locally or to the admin dashboard. Known key shapes (`sk-ant-`, `ghp_`, AWS
+150:  source. Who can *view* the admin dashboard is the real boundary, gated by its own
+151:  separate passphrase (set by whoever deploys it).
+171:`shrey-web/` is the admin dashboard's own source (separate Next.js project, own README).
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Glob` _(toolu_01LZAzekSFEFoVhYrKd7UdNn)_
+
+```json
+{
+  "pattern": "shrey-web/**"
+}
+```
+
+_stop `tool_use` · 3.87s (ttft 3.44s) · in 2 · out 133 · cache r79,495/w519_
+
+---
+
+## req-0009 — claude-sonnet-5
+
+_max_tokens 64,000 · streaming · 18 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01N8crgsNECCWK5R2pfjmtQR)_
+
+```
+4:trajectory, pushed to your own GitHub repository, and reported to a built-in admin
+20:                      ├──▶  admin dashboard (built in, or self-hosted)
+45:GitHub archival is opt-in (nothing is pushed until you answer). Reporting to the admin
+105:**Admin** — a hosted, multi-user view (Next.js on Vercel, Supabase behind it) built into
+145:  written, locally or to the admin dashboard. Known key shapes (`sk-ant-`, `ghp_`, AWS
+150:  source. Who can *view* the admin dashboard is the real boundary, gated by its own
+151:  separate passphrase (set by whoever deploys it).
+171:`shrey-web/` is the admin dashboard's own source (separate Next.js project, own README).
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Glob` _(toolu_01LZAzekSFEFoVhYrKd7UdNn)_
+
+```json
+{
+  "pattern": "shrey-web/**"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01LZAzekSFEFoVhYrKd7UdNn)_
+
+```
+No files found
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Read` _(toolu_01G9ZC8k4M8NeHS23cie8G2k)_
+
+```json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\ccproxy\\README.md",
+  "offset": 95,
+  "limit": 80
+}
+```
+
+_stop `tool_use` · 4.75s (ttft 4.23s) · in 2 · out 146 · cache r80,014/w141_
+
+---
+
+## req-0010 — claude-sonnet-5
+
+_max_tokens 64,000 · streaming · 20 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01LZAzekSFEFoVhYrKd7UdNn)_
+
+```
+No files found
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Read` _(toolu_01G9ZC8k4M8NeHS23cie8G2k)_
+
+```json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\ccproxy\\README.md",
+  "offset": 95,
+  "limit": 80
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01G9ZC8k4M8NeHS23cie8G2k)_
+
+````
+95	- **Timeline** — each model call split into waiting and generating; a second lane
+96	  shows time spent running tools between calls. Drag to focus, right-click to clear.
+97	- **Ledger** — the conversation as a turn-aware event list, each message once, tool
+98	  calls nested under the turn that made them, the live reply streaming in.
+99	- **Inspector** — any row's content, raw JSON, the underlying event, and the request:
+100	  parameters, headers, usage, timings, the system prompt on demand.
+101	- **Settings** — set or change the GitHub repository.
+102	
+103	Keys: `j`/`k` move, `/` search, `f` follow, `Esc` close.
+104	
+105	**Admin** — a hosted, multi-user view (Next.js on Vercel, Supabase behind it) built into
+106	`shrey-cli` by default: every installation reports there under the name it was given,
+107	so whoever runs the dashboard can watch activity across every machine at once, live.
+108	There is no per-user login — identity is just the name each install chose. See
+109	`shrey-web/README.md` for deploying your own instead of the built-in one.
+110	
+111	---
+112	
+113	## What's in the GitHub repository
+114	
+115	```
+116	INDEX.md                          every session, newest first, with token totals
+117	sessions/<date>/<session-id>/
+118	    transcript.md                 readable conversation
+119	    session.jsonl                 append-only event log — the source of truth
+120	    manifest.json                 model, requests, usage, timings
+121	objects/<xx>/<id>.json            messages, system prompts and tool lists, stored once
+122	```
+123	
+124	Every request re-sends the whole conversation, so storing requests verbatim would grow
+125	quadratically. Instead each message is stored once under its content hash and requests
+126	refer to it by id — lossless, and the repository stays small.
+127	
+128	Sessions are reconstructed from the traffic (the API carries no session id): a request
+129	joins the session whose messages it continues. Subagents appear as their own sessions;
+130	a `/compact` starts a new one.
+131	
+132	| event | meaning |
+133	| --- | --- |
+134	| `session/start` | first request of a conversation |
+135	| `request/context` | system prompt or tool list changed |
+136	| `request/start` | a model request left Claude Code |
+137	| `response/open` | the API answered: status, headers, latency |
+138	| `response/chunks` | the raw stream, packed |
+139	| `response/message` | the assembled reply, stop reason, usage, timings |
+140	| `response/error` | an HTTP error, a dropped connection, or an error in the stream |
+141	
+142	## Privacy and security
+143	
+144	- `x-api-key` and `authorization` are replaced with a fingerprint before anything is
+145	  written, locally or to the admin dashboard. Known key shapes (`sk-ant-`, `ghp_`, AWS
+146	  keys, private key blocks) are scrubbed from bodies too. This is a safety net, not a
+147	  guarantee.
+148	- Cloud reporting uses a key built into this published package, not a secret only you
+149	  hold — it filters casual/acc
+... [1,073 more characters in session.jsonl]
+````
 

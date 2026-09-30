@@ -1,0 +1,18 @@
+{
+  "id": "a6ee8831f5e313874e9b9945",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LZAzekSFEFoVhYrKd7UdNn",
+        "type": "tool_result",
+        "content": "No files found",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

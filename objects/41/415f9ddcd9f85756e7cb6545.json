@@ -1,0 +1,14 @@
+{
+  "id": "415f9ddcd9f85756e7cb6545",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LZAzekSFEFoVhYrKd7UdNn",
+        "type": "tool_result",
+        "content": "No files found"
+      }
+    ]
+  }
+}
