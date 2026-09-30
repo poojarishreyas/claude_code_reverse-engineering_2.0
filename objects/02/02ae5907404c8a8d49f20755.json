@@ -1,0 +1,22 @@
+{
+  "id": "02ae5907404c8a8d49f20755",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_018hHKykVZy6hZ63nsxqyFek",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/OmniRoute && pwd && ls -la && git log --oneline -3; git status",
+          "description": "List directory contents and git state"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

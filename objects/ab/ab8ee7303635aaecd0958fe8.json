@@ -1,0 +1,22 @@
+{
+  "id": "ab8ee7303635aaecd0958fe8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01SxX4ofeswsvJX4pRw6hajN",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/OmniRoute; ls -a .claude/skills 2>/dev/null; ls; cat package.json 2>/dev/null | head -50",
+          "description": "Inspect project layout and package scripts"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

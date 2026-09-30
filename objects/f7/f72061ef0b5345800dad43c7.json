@@ -1,0 +1,19 @@
+{
+  "id": "f72061ef0b5345800dad43c7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Ug4q2yf2SdHZV8USsrE3sV",
+        "type": "tool_result",
+        "content": "total 4\ndrwxr-xr-x 1 shrey 197609 0 Sep 22 20:34 .\ndrwxr-xr-x 1 shrey 197609 0 Sep 22 20:28 ..\ndrwxr-xr-x 1 shrey 197609 0 Sep 22 20:34 objects\ndrwxr-xr-x 1 shrey 197609 0 Sep 22 20:28 refs",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

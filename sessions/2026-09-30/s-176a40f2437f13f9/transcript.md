@@ -5,8 +5,8 @@
 | session | `s-176a40f2437f13f9` |
 | model | `claude-opus-5-5` |
 | started | 2026-09-30T17:52:03.129Z |
-| requests | 2 |
-| tokens | in 2 · out 81 · cache read 0 · cache write 63,538 |
+| requests | 5 |
+| tokens | in 10 · out 479 · cache read 193,484 · cache write 65,358 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -220,4 +220,246 @@ install packages, set env vars, patch config, or write a driver -
 recommend `/run-skill-generator` in your report so that work gets
 captured as a project skill. If it just worked, don't.
 
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01SxX4ofeswsvJX4pRw6hajN)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/OmniRoute; ls -a .claude/skills 2>/dev/null; ls; cat package.json 2>/dev/null | head -50",
+  "description": "Inspect project layout and package scripts"
+}
+```
+
+_stop `tool_use` · 4.46s (ttft 3.45s) · in 4 · out 141 · cache r63,538/w1,356_
+
+---
+
+## req-0003 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 6 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01DtQRJeErEwffA6n7MK2hYE)_
+
+```
+Launching skill: run
+```
+
+Base directory for this skill: C:\Users\shrey\AppData\Local\Temp\claude\bundled-skills\2.1.282\fc98c6c792e33331cff1ab13b56b2ed5\run
+
+**Running means launching the actual app and interacting with it** -
+not the test suite, not an `import` of an internal function and a
+`console.log`. The app as a user (human or programmatic) would meet
+it: the CLI at its command, the server at its socket, the GUI at its
+window.
+
+## First: does a project skill already cover this?
+
+A project skill that launches this app is the repo's verified path -
+its author already cold-started from a Linux container and committed
+what worked: the exact `apt-get` line, the env vars, the patches, the
+driver. Use it instead of rediscovering.
+
+```bash
+d=$PWD; while :; do
+  grep -Hm1 '^description:' "$d"/.claude/skills/*/SKILL.md 2>/dev/null
+  [ -e "$d/.git" ] || [ "$d" = / ] && break
+  d=$(dirname "$d")
+done
+```
+
+- **One describes launching/driving this app** -> read that SKILL.md
+  and follow it verbatim. Don't paraphrase; don't skip the patches.
+- **Mega-repo, several plausible, no clear match** -> ask the user
+  which unit to run.
+- **Stale** (fails on mechanics unrelated to your task) -> tell the
+  user; offer to refresh it via `/run-skill-generator`.
+- **Nothing about running** -> fall back to the patterns below.
+
+## Otherwise: match the shape, use the pattern
+
+Pick the row closest to your project. Each example walks through
+launch + first interaction; ignore any trailing "write the skill"
+section - you're using the recipe, not authoring one.
+
+| Project type | Handle | Example |
+|---|---|---|
+| CLI tool | direct invocation, exit code, stdin/stdout | [examples/cli.md](examples/cli.md) |
+| Web server / API | background launch + `curl` smoke | [examples/server.md](examples/server.md) |
+| TUI / interactive terminal | tmux `send-keys` / `capture-pane` | [examples/tui.md](examples/tui.md) |
+| Electron / desktop GUI | Playwright `_electron` REPL under xvfb | [examples/electron.md](examples/electron.md) |
+| Browser-driven | dev server + `chromium-cli` script | [examples/playwright.md](examples/playwright.md) |
+| Library / SDK | import-and-call smoke script at the package boundary | [examples/library.md](examples/library.md) |
+
+If nothing fits, start from the closest match and adapt. For a web
+app, [examples/playwright.md](examples/playwright.md) - drive it with
+`chromium-cli`, no custom driver needed. For a desktop app,
+[examples/electron.md](examples/electron.md) - it has the `_electron`
+REPL driver skeleton and the tmux wrapping.
+
+## Drive it, don't just launch it
+
+Launching with no interaction proves the entrypoint resolves. That's
+not running the app - it's typechecking with extra steps. Drive it to
+a point where a user would see something:
+
+- CLI -> type a representative command, check the exit code and output.
+- Server -> hit the route the diff touches with `curl`, read the body.
+- TUI -> `send-keys` a navigation, `capture-pane` the result.
+- GUI -> click the button, screenshot the window. **Look at the
+  screenshot.** A blank frame is a failure to launch.
+
+If the fallback pattern didn't work out of the box - you had to
+install packages, set env vars, patch config, or write a driver -
+recommend `/run-skill-generator` in your report so that work gets
+captured as a project skill. If it just worked, don't.
+
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01SxX4ofeswsvJX4pRw6hajN)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/OmniRoute; ls -a .claude/skills 2>/dev/null; ls; cat package.json 2>/dev/null | head -50",
+  "description": "Inspect project layout and package scripts"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01SxX4ofeswsvJX4pRw6hajN)_
+
+```
+(Bash completed with no output)
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_018hHKykVZy6hZ63nsxqyFek)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/OmniRoute && pwd && ls -la && git log --oneline -3; git status",
+  "description": "List directory contents and git state"
+}
+```
+
+_stop `tool_use` · 3.84s (ttft 2.67s) · in 2 · out 118 · cache r64,894/w158_
+
+---
+
+## req-0004 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 8 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01SxX4ofeswsvJX4pRw6hajN)_
+
+```
+(Bash completed with no output)
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_018hHKykVZy6hZ63nsxqyFek)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/OmniRoute && pwd && ls -la && git log --oneline -3; git status",
+  "description": "List directory contents and git state"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_018hHKykVZy6hZ63nsxqyFek)_ **error**
+
+```
+Exit code 128
+/c/Users/shrey/Desktop/OmniRoute
+total 16
+drwxr-xr-x 1 shrey 197609 0 Sep 22 20:28 .
+drwxr-xr-x 1 shrey 197609 0 Sep 29 14:22 ..
+drwxr-xr-x 1 shrey 197609 0 Sep 22 20:34 .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01Ug4q2yf2SdHZV8USsrE3sV)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/OmniRoute && ls -la .git",
+  "description": "Inspect the .git directory contents"
+}
+```
+
+_stop `tool_use` · 4.42s (ttft 2.93s) · in 2 · out 139 · cache r65,052/w306_
+
+---
+
+## req-0005 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 10 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_018hHKykVZy6hZ63nsxqyFek)_ **error**
+
+```
+Exit code 128
+/c/Users/shrey/Desktop/OmniRoute
+total 16
+drwxr-xr-x 1 shrey 197609 0 Sep 22 20:28 .
+drwxr-xr-x 1 shrey 197609 0 Sep 29 14:22 ..
+drwxr-xr-x 1 shrey 197609 0 Sep 22 20:34 .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01Ug4q2yf2SdHZV8USsrE3sV)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/OmniRoute && ls -la .git",
+  "description": "Inspect the .git directory contents"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01Ug4q2yf2SdHZV8USsrE3sV)_
+
+```
+total 4
+drwxr-xr-x 1 shrey 197609 0 Sep 22 20:34 .
+drwxr-xr-x 1 shrey 197609 0 Sep 22 20:28 ..
+drwxr-xr-x 1 shrey 197609 0 Sep 22 20:34 objects
+drwxr-xr-x 1 shrey 197609 0 Sep 22 20:28 refs
+```
 
