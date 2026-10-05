@@ -1,0 +1,19 @@
+{
+  "id": "0acc70defbfda22cf19853e0",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Exit code 128\nfatal: cannot create directory at 'packages/experimental/webworker-runtime/tests/fixtures/vfs-example/home/sessions/--dsh-workspace--/preview-architecture-review': Filename too long\nwarning: Clone succeeded, but checkout failed.\nYou can inspect what was checked out with 'git status'\nand retry with 'git restore --source=HEAD :/'",
+        "is_error": true,
+        "tool_use_id": "toolu_01KjTRR8sawSiTjCSQ8kTq8L",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
