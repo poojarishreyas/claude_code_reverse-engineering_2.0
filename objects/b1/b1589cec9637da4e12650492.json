@@ -1,0 +1,19 @@
+{
+  "id": "b1589cec9637da4e12650492",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019KW2TXB4eUkZAqnh79NFVv",
+        "type": "tool_result",
+        "content": "import { execFile } from 'node:child_process'\nimport { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'\nimport { tmpdir } from 'node:os'\nimport { join } from 'node:path'\nimport { promisify } from 'node:util'\nimport { afterEach, describe, expect, it } from 'vitest'\nimport { classifyCommit, mineTasks, parseGitLog, prepareWorkspace, removeWorkspace, taskPrompt } from './tasks.ts'\n\nconst git = promisify(execFile)\nlet root: string | undefined\n\nafterEach(async () => {\n    expect(await text(spec)).toBe('test\\n')\n    await removeWorkspace(repo, workspace)\n    await expect(readFile(join(workspace, src), 'utf8')).rejects.toThrow()\n  })\n})",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
