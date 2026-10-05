@@ -1,0 +1,18 @@
+{
+  "id": "ef8075e11100642cf4561afc",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_014apX3U39y676kNeMjz3npk",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 60,110p scripts/eval/tasks.spec.ts",
+          "description": "Show the existing workspace test"
+        }
+      }
+    ]
+  }
+}
