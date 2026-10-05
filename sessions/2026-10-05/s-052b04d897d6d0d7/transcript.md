@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:16:12.253Z |
 | requests | 43 (33 errored) |
-| tokens | in 850 · out 2,944 · cache read 573,735 · cache write 167,375 |
+| tokens | in 852 · out 4,146 · cache read 658,555 · cache write 167,895 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -1264,4 +1264,39 @@ packages/fs/tool-str-replace-editor/src/index.ts:104:  command: 'view' | 'str_re
 packages/fs/tool-str-replace-editor/src/index.ts:289:  const oldValue = requiredForCommand(oldStr, 'old_str', 'str_replace', false)
 packages/fs/tool-str-replace-editor/src/index.ts:291:  const info = await statExisting(ctx, target, 'str_replace', exec)
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+I ran the baseline on one task through OmniRoute.
+
+**Task `3c17f569da`** (a fix to the settings page's Creator entry): the real fix changed `AgentPresetSection.tsx`, `index.ts` and `locales.ts` in `packages/client/ui-agent-preset/src/client/`.
+
+| Metric | Result |
+|---|---|
+| Tests pass after the agent's change | **no** |
+| Edited a file the real fix changed | **no** |
+| First step that read a file the real fix changed | step 1 |
+| Steps / tool calls | 30 / 29 (10 reads, 5 greps, 4 globs, 4 shell) |
+| Tokens | 1.24M input, 1.8k output |
+| Edited the test file | **yes**, which the task forbids |
+
+**What happened:** finding the file was not the problem. The agent read one of the files the real fix changed at step 1, and it even noted that `index.ts` injects `useDeveloperTools`. It then "fixed" the failure by changing the test to pass that prop, instead of changing the source so the Creator entry no longer depends on it. That is a reasoning failure, not a navigation failure, and symbol tools or a code graph would not have changed it.
+
+**Caveats:**
+- **One task proves nothing.** It's an early signal only.
+- **The model wasn't fixed.** OmniRoute switched between models during the run; my two probes came back from Fable and from `qwen3-coder-next`. A baseline should use one fixed model, so set OmniRoute to a single model rather than a combo before running more.
+- **One call may not be counted correctly.** The agent made one `str_replace` call, which isn't a name the metric counts as an edit. I believe the call failed (the harness only registers `str_replace_editor`), but the workspace was cleaned up, so I can't confirm that.
+- **It's expensive.** 1.24M input tokens for a single task, so a 10-task run is about 12M tokens.
+
+**Next step:** pin OmniRoute to one model, then run about 5 more tasks with `--limit 5`. I haven't started that because it uses your credits. If the pattern holds (the right file found early, then the wrong fix), the better investment is prompt and verification changes, such as rejecting edits to test files, not a graph.
+
+_stop `end_turn` · 13.07s (ttft 12.83s) · in 2 · out 1,202 · cache r84,820/w520_
 
