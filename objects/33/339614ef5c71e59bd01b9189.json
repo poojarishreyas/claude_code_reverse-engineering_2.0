@@ -1,0 +1,8 @@
+{
+  "id": "339614ef5c71e59bd01b9189",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "\n\n<pasted_content id=\"ca8e\">\n#    Paper    Year / Venue    Main idea\n1    AIRCoder: Adaptive Integration of Multi-dimensional Retrieval for Repository-level Code Completion    ACL 2026    Combines textual similarity + dependencies + code structure; adaptive retrieval\n2    Repoformer: Selective Retrieval for Repository-Level Code Completion    ICML 2024    Decides whether retrieval is needed; reported up to 70% inference-speedup\n3    RepoGraph: Enhancing AI Software Engineering with Repository-level Code Graph    ICLR 2025    Represents repository relationships as a code graph\n4    CodeRAG: Finding Relevant and Necessary Knowledge for Retrieval-Augmented Repository-Level Code Completion    EMNLP 2025    Multi-path retrieval + query construction + reranking\n5    RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation    EMNLP 2023    Iteratively retrieves context and generates code\n6    CodePlan: Repository-Level Coding using LLMs and Planning    ICSE / Microsoft Research    Uses planning and dependency analysis for multi-file changes\n</pasted_content id=\"ca8e\">\n\n these are the research paper that may help us  among these design best retrieval  engine taht should be beter than claude code and cost efficient alnong with speed"
+  }
+}
