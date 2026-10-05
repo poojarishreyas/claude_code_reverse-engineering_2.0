@@ -1,0 +1,8 @@
+{
+  "id": "cce162edfea9782401bfdf03",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "what is our goal for testing"
+  }
+}

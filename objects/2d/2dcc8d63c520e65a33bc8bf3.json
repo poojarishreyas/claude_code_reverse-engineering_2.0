@@ -1,0 +1,17 @@
+{
+  "id": "2dcc8d63c520e65a33bc8bf3",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "what is our goal for testing",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

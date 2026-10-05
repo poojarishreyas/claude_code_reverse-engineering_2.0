@@ -5,8 +5,8 @@
 | session | `s-052b04d897d6d0d7` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:16:12.253Z |
-| requests | 44 (33 errored) |
-| tokens | in 948 · out 4,264 · cache read 743,895 · cache write 169,097 |
+| requests | 46 (33 errored) |
+| tokens | in 1,458 · out 4,847 · cache read 916,989 · cache write 169,680 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -1367,4 +1367,97 @@ I ran the baseline on one task through OmniRoute.
 We're measuring whether the agent struggles to find the right file before building symbol tools or a code graph. One OmniRoute task ran: the agent read a right file at step one but edited the test instead. Next, pin OmniRoute to one model and run about five more tasks.
 
 _stop `end_turn` · 3.00s (ttft 2.28s) · in 96 · out 118 · cache r85,340/w1,202_
+
+---
+
+## req-0045 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 22 messages_
+
+#### USER
+
+what is our goal for testing
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+The goal is to decide, with evidence, whether symbol tools or a code graph are worth building. You said to build them only if they would make the harness better than Claude Code and Nemotron, so we're measuring before writing any of that code.
+
+**The question we're testing:** when the agent gets a bug, does it struggle to find the right file?
+- **If yes** (it searches a lot, reads the wrong files, or edits the wrong place), navigation is the bottleneck, and symbol tools or a graph could help.
+- **If no** (it finds the right file quickly but still fails), navigation isn't the problem. The graph would add complexity without improving results, and we should work on whatever actually fails.
+
+**How we test it:**
+1. Take real bugs that were already fixed in the upstream repo's history.
+2. Undo the fix so its tests fail again.
+3. Give the agent only the failing test output, like a CI failure report.
+4. Record whether it finds the right file and how quickly (which step it first sees or reads it), whether it fixes the bug, and the cost in steps and tokens.
+
+**How we use the numbers:**
+1. Run the current harness on about 10–20 tasks to get a baseline.
+2. If navigation turns out to be the weak spot, build the smallest feature that targets it (for example, symbol tools).
+3. Run the same tasks again with that feature.
+4. Keep the feature only if the numbers clearly improve.
+
+**What we have so far:** one task. The agent read a file the real fix changed at step 1, then went wrong by editing the test instead of the source. That hints the weak spot isn't file-finding, but one task is too few to conclude anything. Pinning OmniRoute to one model and running about 5 more tasks will show whether that pattern holds.
+
+_stop `end_turn` · 7.52s (ttft 1.96s) · in 4 · out 571 · cache r86,542/w10_
+
+---
+
+## req-0046 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 24 messages_
+
+#### USER
+
+what is our goal for testing
+
+#### USER
+
+[SUGGESTION MODE: Suggest what the user might naturally type next into Claude Code.]
+
+FIRST: Look at the user's recent messages and original request.
+
+Your job is to predict what THEY would type - not what you think they should do.
+
+THE TEST: Would they think "I was just about to type that"?
+
+EXAMPLES:
+User asked "fix the bug and run tests", bug is fixed → "run the tests"
+After code written → "try it out"
+Claude offers options → suggest the one the user would likely pick, based on conversation
+Claude asks to continue → "yes" or "go ahead"
+Task complete, obvious follow-up → "commit this" or "push it"
+After error or misunderstanding → silence (let them assess/correct)
+
+Be specific: "run the tests" beats "continue".
+
+NEVER SUGGEST:
+- Evaluative ("looks good", "thanks")
+- Questions ("what about...?")
+- Claude-voice ("Let me...", "I'll...", "Here's...")
+- New ideas they didn't ask about
+- Multiple sentences
+
+Stay silent if the next step isn't obvious from what the user said.
+
+Stay silent if a suggestion could be unsafe or inappropriate — including any sensitive topic (security incidents, credentials, harm, private data). Even when the user is doing legitimate security or cybersecurity work, do not predict potentially unsafe actions.
+
+Format: 2-12 words, match the user's style. Or nothing.
+
+Reply with ONLY the suggestion, no quotes or explanation.
+
+#### ASSISTANT
+
+ok run 5 more tasks
+
+_stop `end_turn` · 1.90s (ttft 1.50s) · in 506 · out 12 · cache r86,552/w573_
 
