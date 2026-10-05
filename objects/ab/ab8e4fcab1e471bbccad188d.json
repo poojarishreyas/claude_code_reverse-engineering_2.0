@@ -1,0 +1,19 @@
+{
+  "id": "ab8e4fcab1e471bbccad188d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01J5SCMYmmsfPsJmMiANLHKr",
+        "type": "tool_result",
+        "content": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 37, in <module>\r\n  File \"<stdin>\", line 5, in rep\r\nAssertionError:     process.stdout.write(`eval: ${task.id} ${task.subject}\r\n`)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

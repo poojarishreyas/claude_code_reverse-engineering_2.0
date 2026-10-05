@@ -1,0 +1,15 @@
+{
+  "id": "9886f7bb92517c1ce4c80f28",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0153ZJx2rm7RHfnauTQR8fB9",
+        "type": "tool_result",
+        "content": "126:const IMPORT_SPECIFIER = /(?:from\\s+|import\\s*\\(\\s*|vi\\.mock\\(\\s*)['\"]([^'\"]+)['\"]/g\n131:  const stem = (parts.at(-1) ?? '').replace(/\\.(ts|tsx)$/, '')",
+        "is_error": false
+      }
+    ]
+  }
+}
