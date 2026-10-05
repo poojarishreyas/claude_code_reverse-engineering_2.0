@@ -1,0 +1,17 @@
+{
+  "id": "8a1631eaca0ba47eb02ab2bb",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "but mine has 16 gb ram rigth where are this getting wasted",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
