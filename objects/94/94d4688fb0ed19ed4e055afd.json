@@ -1,0 +1,18 @@
+{
+  "id": "94d4688fb0ed19ed4e055afd",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_013t59QZ6KiiboDgSBAT6Rf7",
+        "name": "PowerShell",
+        "input": {
+          "command": "$os = Get-CimInstance Win32_OperatingSystem\n\"Total: {0:N1} GB   Used: {1:N1} GB   Free: {2:N1} GB\" -f ($os.TotalVisibleMemorySize/1MB), (($os.TotalVisibleMemorySize-$os.FreePhysicalMemory)/1MB), ($os.FreePhysicalMemory/1MB)\n\"\"\nGet-Process | Group-Object ProcessName | ForEach-Object { [pscustomobject]@{ App = $_.Name; Count = $_.Count; 'RAM (MB)' = [int](($_.Group | Measure-Object WorkingSet64 -Sum).Sum/1MB) } } | Sort-Object 'RAM (MB)' -Descending | Select-Object -First 20 | Format-Table -AutoSize",
+          "description": "Show RAM usage grouped by app"
+        }
+      }
+    ]
+  }
+}
