@@ -1,0 +1,8 @@
+{
+  "id": "4703a180d3a67e2e9c836720",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "done i have set it to only one model now go on i need test that actually tests where things may fail i man propper edge case test"
+  }
+}

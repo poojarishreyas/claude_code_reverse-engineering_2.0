@@ -1,0 +1,17 @@
+{
+  "id": "0963abdb2c07a0b537c9c597",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "done i have set it to only one model now go on i need test that actually tests where things may fail i man propper edge case test",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
