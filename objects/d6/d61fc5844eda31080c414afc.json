@@ -1,0 +1,32 @@
+{
+  "id": "d61fc5844eda31080c414afc",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Updating the `spill-policy` README for `previewBytes`."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01PeF38Heatig1R6Qxraicoz",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\README.md",
+          "old_string": "```yaml\n- name: '@deepseek-ai/dsh-spill-local'\n- name: '@deepseek-ai/dsh-spill-policy'\n  config:\n    maxInlineBytes: 50000\n```\n\n| Field | Default | Meaning |\n|---|---|---|\n| `maxInlineBytes` | omitted | Model-facing context cap for a plain-text result, in UTF-8 bytes; omitted disables the policy entirely |\n\nThe generated [configuration catalog](../../../docs/config-catalog.md#deepseek-aidsh-spill-policy) is the exhaustive source for every accepted field. A negative or fractional cap fails plugin load rather than corrupting per-call behavior.\n\n### What the model sees\n\nAn oversized plain-text result is replaced by a preview plus a notice inside the same budget, so the whole replacement never exceeds `maxInlineBytes`:",
+          "new_string": "```yaml\n- name: '@deepseek-ai/dsh-spill-local'\n- name: '@deepseek-ai/dsh-spill-policy'\n  config:\n    maxInlineBytes: 50000\n    previewBytes: 2000\n```\n\n| Field | Default | Meaning |\n|---|---|---|\n| `maxInlineBytes` | omitted | Spill a plain-text result larger than this many UTF-8 bytes; omitted disables the policy entirely |\n| `previewBytes` | `maxInlineBytes` | UTF-8 size of the replacement — preview plus notice — for a spilled result; at most `maxInlineBytes` |\n\n`dsh-base` ships `maxInlineBytes: 50000` and `previewBytes: 2000`, matching Claude Code's 50,000-character cap and 2,000-character preview: a result over 50 KB costs about 500 tokens in context instead of about 12,500, and the model reads the file for anything the preview does not show. A patch that replaces this row's config without `previewBytes` returns to a full-budget preview.\n\nThe generated [configuration catalog](../../../docs/config-catalog.md#deepseek-aidsh-spill-policy) is the exhaustive source for every accepted field. A negative or fractional value, or a `previewBytes` above `maxInlineBytes`, fails plugin load rather than corrupting per-call behavior.\n\n### What the model sees\n\nAn oversized plain-text result is replaced by a preview plus a notice inside the same budget, so the whole replacement never exceeds `previewBytes`:"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01DfgKzTBxJMiTNhxUbEFRft",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && sed -n '80,100p;120,135p;150,165p' packages/spill/spill-policy/README.md",
+          "description": "Read the remaining README sections that mention the cap"
+        }
+      }
+    ]
+  }
+}

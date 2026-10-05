@@ -1,0 +1,15 @@
+{
+  "id": "d22092c8abb6e3a713b398ca",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016eMXVYTwVt4nEHc3daELEc",
+        "type": "tool_result",
+        "content": "compaction.ts\ncontext-epoch.ts\nerror.ts\nevent.ts\nexecution\nexecution.ts\nhistory.ts\ninfo.ts\ninput.ts\nmessage-updater.ts\nmessage.ts\nprojector.ts\nprompt.ts\nrevert.ts\nrun-coordinator.ts\nrunner\nschema.ts\nsql.ts\nstore.ts\ntodo.ts\n---\npackages/opencode/src/session/prompt.ts:1092:          let msgs = yield* MessageV2.filterCompactedEffect(sessionID).pipe(\npackages/opencode/src/session/prompt.ts:1164:            (yield* compaction.isOverflow({ tokens: lastFinished.tokens, model }))\npackages/opencode/src/session/prompt.ts:1338:        yield* compaction.prune({ sessionID }).pipe(Effect.ignore, Effect.forkIn(scope))\npackages/opencode/src/session/message-v2.ts:297:            const outputText = part.state.time.compacted\npackages/opencode/src/session/message-v2.ts:298:              ? \"[Old tool result content cleared]\"\npackages/opencode/src/session/message-v2.ts:300:            const attachments = part.state.time.compacted || options?.stripMedia ? [] : (part.state.attachments ?? [])\npackages/opencode/src/session/message-v2.ts:525:export function filterCompacted(msgs: Iterable<WithParts>) {\npackages/opencode/src/session/message-v2.ts:538:      if (!part.tail_start_id) break\npackages/opencode/src/session/message-v2.ts:539:      retain = part.tail_start_id\npackages/opencode/src/session/message-v2.ts:552:      msg.parts.some((item): item is CompactionPart => item.type === \"compaction\" && item.tail_start_id !== undefined),\npackages/opencode/src/session/message-v2.ts:556:    (item): item is CompactionPart => item.type === \"compaction\" && item.tail_start_id !== undefined,\npackages/opencode/src/session/message-v2.ts:567:  const tailIndex = part?.tail_start_id ? result.findIndex((msg) => msg.info.id === part.tail_start_id) : -1\npackages/opencode/src/session/message-v2.ts:578:export const filterCompactedEffect = Effect.fnUntraced(function* (sessionID: SessionID) {\npackages/opencode/src/session/message-v2.ts:579:  return filterCompacted(yield* stream(sessionID))\npackages/opencode/src/session/message-v2.ts:582:// filterCompacted reorders messages for model consumption\npackages/opencode/src/session/processor.ts:493:              isOverflow({ cfg: yield* config.get(), tokens: usage.tokens, model: ctx.model })",
+        "is_error": false
+      }
+    ]
+  }
+}

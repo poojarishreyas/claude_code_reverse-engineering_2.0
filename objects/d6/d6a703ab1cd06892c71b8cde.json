@@ -1,0 +1,14 @@
+{
+  "id": "d6a703ab1cd06892c71b8cde",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0152D6BgbWTSF5j27Jjg41DN",
+        "type": "tool_result",
+        "content": "packages\\compaction\\compaction-basic\\src\\index.ts:10:import type { CompactionResult, CompactionTrigger } from '@deepseek-ai/dsh-compaction'\npackages\\compaction\\compaction-basic\\src\\index.ts:261:    trigger: CompactionTrigger,\npackages\\compaction\\compaction\\src\\index.ts:25:export type CompactionTrigger = 'pressure' | 'context-overflow'\npackages\\compaction\\compaction\\src\\index.ts:115:    trigger: CompactionTrigger,\npackages\\extensions\\tool-cordis\\src\\api-catalog.ts:654:        signature: 'abstract compactIfNeeded( agent: CompactionAgentContext, trigger: CompactionTrigger, signal: AbortSignal, ): Promise<CompactionResult | null>',\npackages\\extensions\\tool-cordis\\src\\api-catalog.ts:3655:    name: 'CompactionTrigger',\npackages\\extensions\\tool-cordis\\src\\api-catalog.ts:3656:    declaration: 'export type CompactionTrigger = \\'pressure\\' | \\'context-overflow\\';',"
+      }
+    ]
+  }
+}

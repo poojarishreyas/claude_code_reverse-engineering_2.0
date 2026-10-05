@@ -1,0 +1,28 @@
+{
+  "id": "6425045dcbe044501c7bec22",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSngYKEAgSGAI4AUIIdGhpbmtpbmcSDBrqLmZAfoKXz4Ei0RoMhKVAOwHLgS5xXCSiIjCOJM7HLcnHHHIkFKx24NhKhpEM9TZ/tYGZugpJu1xZGLnAAkkkdQHve6n7eeRZGJ0quwWvYapJOJR6o9BzPcZ7AcBD+fEnuMssnGmVrhdVyAVGoVZfcVxQnB+1JFX29hTqIYfW/hiAKepTcKehqFWiciUQWuBe6Mt8pz7rwTj672rn24GFX2kj7tkx6yof/uc5rhzBxQXpJnd59UKcNzkjYWREoZde6FOd+Wp5ukGqkaDtfpsVrEMaIoIoXqbeekO7VQxKHa1ATtD2S1xP1RFmG55FFqAKyfK+YnHVgpXWDETBfHxBcu4lstrDLNZ8YwduavBjv0z16AK47RORPVeY1Tk5XnzQFkMRdwh/4hCPwFYXG8v37aUtveSHkkHO6v6rJ2NGGE8eZ3DFxCVoJxnK2LAGsdeolBE/mr/o6JOYc8Dm1yhQa9UY0shkjuJTukEjtYyRa267FCAnr7eYNH57V6c8u2UpFzkTgiIkumouql7AhpmWzdGEtqJ01N9497dvZqZC54M3vSlwvwCtOCHP/TzXUcfDvI8QvaWom1XCmDWAf2Urno5AwL8ViAjswgPbKp0Wf31bjnmJjLV+o3GPidN1kMV0M6YNlgdevYSIyUx7XrRetCsU80PwAgOrOCiong9x7nHxNiz2LwbcDaqbtN681gglKAJaoe5KTOH727KfS7eZ8SYlI3Do9EJU1zVFthhbiZdU1nvGEkGz0Kv0WBLO6xkqiXLw1UZczDBl4MQrTCbzs2zepqL/y90416sQKxKyOp6LPlf0a71eDZC6u4Q09dtSOjTATKH48h1ZZmwt5M6Y6dfRlhItKB8k8ARaGDR5WwOCk5QHkjeuk0LXLm88GdXyZCLUEBc9/IeRGJc/f5UVDqM4cuM9rbHQI53xECo1hm6XrsJwJmSVGhBm3+O00l2666vYGS+gKH2kA6VPxFvqx/YxnhizkDglURlOsuutNfmZNxeMPcR/aNE3QcxFzRb5IC90jP/c2LkYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "The one uncovered branch is saving a result that mixes text and non-text blocks. I'll add a test for it; only the text should be saved."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_015RECzYhRwmwUymcWwiRbGt",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\tests\\tool-result-pruner.spec.ts",
+          "old_string": "  it('names the tool generically when the call event is absent', async () => {",
+          "new_string": "  it('stores only the text of a result that mixes in non-text blocks', async () => {\n    const { store, prune } = storeAndService()\n    const session = Session.create(SessionId('stored-mixed'))\n    const reasoning: ContentBlock = { type: 'reasoning', text: 'kept in place, not stored' }\n    appendToolStep(session, 1, 'mixed', [\n      { type: 'text', text: 'a'.repeat(300) },\n      reasoning,\n      { type: 'text', text: 'b'.repeat(300) },\n    ])\n    session.append('turn/start', { turn: 2 })\n\n    const entry = (await prune.pruneSession(session, 'pressure')).pruned[0]!\n    expect(store.saves[0]!.content).toBe(`${'a'.repeat(300)}${'b'.repeat(300)}`)\n    const replacement = session.events[entry.replacementSeq]\n    if (replacement?.type !== 'tool/result') throw new Error('replacement is not a tool/result')\n    expect(replacement.data.message.content[0].content).toContainEqual(reasoning)\n  })\n\n  it('names the tool generically when the call event is absent', async () => {"
+        }
+      }
+    ]
+  }
+}

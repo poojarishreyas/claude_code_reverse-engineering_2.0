@@ -1,0 +1,15 @@
+{
+  "id": "2bb1fbfc9b51fd6b89b509f1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Hy1Ex5uH4pEUDEHrwMp3fi",
+        "type": "tool_result",
+        "content": "Use ${lt} to view${zPn}`}async function P(e,n,o,s){let d=Zf(e),r=await n3r(e,n,{keepRecent:S,persist:(R,A)=>H(R,A,o),agentId:s}),u=r?r.messages:e,a=Zf(u);return t(`[CONTEXT_HINT_REJECT] mc=${!!r} tokensSaved=${r?.tokensSaved??0}`),{messages:u,clearedId\n_use_id,m??f)}let p=i_t(e,s,u);if(o!==void 0&&$s(o)===\"main\")r2(\"tool_result_clear\");if(i(\"tengu_time_based_microcompact\",{toolsCleared:s.size,toolsKept:r.size,keepRecent:n.keepRecent,tokensSaved:a,trigger:b(\"context_hint\")}),y(\"compact_micro_keep_recent\"),t(`[KEEP-RECENT MC] context_hint trigger, cleared ${s.size} tool results (~${a} tokens\n----\n,vG=2\n,vG=200000\n----\n,evo=400000\n----\n----\n,tvo=1073741824\n----\n----\n.timestamp).slice(0,r),z=(await Promise.all(U.map((_e)=>Nkt(_e.filename,{...n,fileReadingLimits:{maxTokens:Ixe}},\"tengu_post_compact_file_restore_success\",\"tengu_post_compact_file_restore_error\",\"compact\")))).map((_e)=>_e?on(_e):null),ge=0;return z.filter((_e)=>{if(_e===null)return!1;let ke=fu(S(_e.attachment));if(ge+ke<=dco)return ge+\n�\u0000 from settings for marketplace: \u0016\u0000\u0000��%?\u0000claude-plugin-session-\u0000\u0000 \u0000\u0000��\u00195\u0000Created session plugin cache at '\u0000\u0000�_��\u0000tengu_post_compact_file_restore_success\u0000%\u0000\u0000��Z�\u0000tengu_post_compact_file_restore_error\u0000\u0000\u0000e\u0000\u0000�k��\u0000). To use a different source, ask your admin to update the seed, or use a different marketplace name.\u0000\u0000\u0000,\u0000\u0000\u0000a\u0006�\u0000'\u0000 \u0000e\u0000x\u0000i\u0000s\u0000t\u0000s\n----\n----",
+        "is_error": false
+      }
+    ]
+  }
+}

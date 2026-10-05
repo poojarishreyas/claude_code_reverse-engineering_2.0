@@ -1,0 +1,15 @@
+{
+  "id": "ff9be61e62dbbf4934f8a9d2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016uwdRtWZ4Tc5grpcQMtSG4",
+        "type": "tool_result",
+        "content": "DSH_HOME=unset\n.\n..\n.anonymous-user-id\n.credentials.yaml\nprofiles\nsessions\nsettings.yaml\nstorages\n/c/Users/shrey/.dsh/settings.yaml",
+        "is_error": false
+      }
+    ]
+  }
+}

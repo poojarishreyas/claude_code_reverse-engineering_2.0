@@ -1,0 +1,15 @@
+{
+  "id": "c3f3ded4f6087254c675ed9e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01N6XULpeQuKGMBM1k5vEdkz",
+        "type": "tool_result",
+        "content": "26:import { renderToolsSdk } from './ts-types.ts'\n27:import type { ToolSdkSchema } from './ts-types.ts'\n28:import { renderToolsSdkPy } from './py-types.ts'\n94:export type { PtcDispatchEventData, PtcDispatchStartEventData } from './types.ts'\n97:export { jsonSchemaToTs, renderToolsSdk } from './ts-types.ts'\n25:    \"./types\": {\n31:export type {",
+        "is_error": false
+      }
+    ]
+  }
+}

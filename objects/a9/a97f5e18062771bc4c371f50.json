@@ -1,0 +1,15 @@
+{
+  "id": "a97f5e18062771bc4c371f50",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01TyWPvnKF9Fy1urFTDHwGuE",
+        "type": "tool_result",
+        "content": "tsconfig.base.client.json\ntsconfig.base.json\ntsconfig.client.json\ntsconfig.host.json\ntsconfig.json\ntsconfig.client.json\ntsconfig.host.json",
+        "is_error": false
+      }
+    ]
+  }
+}

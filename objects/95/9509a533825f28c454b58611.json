@@ -1,0 +1,15 @@
+{
+  "id": "9509a533825f28c454b58611",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01J18nWHK7zRnHrmwgjZqGgm",
+        "type": "tool_result",
+        "content": "81b67fb25fb5befe3b31deffcf94e3713248b55c\trefs/heads/compaction-phase2\nf2b0952960d1f2d5f5c424832589e0d2d19ead33\trefs/tags/compaction-v2",
+        "is_error": false
+      }
+    ]
+  }
+}

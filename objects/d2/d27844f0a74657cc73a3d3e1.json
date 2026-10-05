@@ -1,0 +1,24 @@
+{
+  "id": "d27844f0a74657cc73a3d3e1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XXs1ix11u2Cs3vkhNit1e7",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\src\\index.ts has been updated successfully. (file state is current in your context — no need to Read it back)"
+      },
+      {
+        "tool_use_id": "toolu_01MtLie75XQvEFXc9MresCuo",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\src\\index.ts has been updated successfully. (file state is current in your context — no need to Read it back)"
+      },
+      {
+        "tool_use_id": "toolu_01JtDHqRN6B3FLqTWxPpza1r",
+        "type": "tool_result",
+        "content": "134\t    /* v8 ignore next -- config validation fixes the emitted head + marker + tail budget. */\n135\t    if (charsAfter > this.config.thresholdChars || charsAfter >= totalChars) {\n136\t      throw new Error('tool-result prune: replacement must be smaller and within threshold')\n137\t    }\n138\t    return pruned\n139\t  }\n140\t\n141\t  /**\n142\t   * Prune every over-budget tool result from one stable current-surface snapshot.\n143\t   * Each replacement preserves the complete event data except for `content`,\n144\t   * cites the shadowed node so replay can recover the replacement input, and is\n145\t   * immediately preceded by a `compaction/prune` shadow-price event pricing the\n146\t   * shadowed node through the injected token meter, so pure consumers can\n147\t   * subtract it without per-node state.\n148\t   * @param session - session whose current surface is rewritten.\n149\t   * @returns landed replacements and aggregate Unicode-code-point savings.\n150\t   * @throws when the session rejects a replacement; replacements committed\n151\t   * earlier in the pass remain durable.\n152\t   */\n153\t  pruneSession(session: Session): PruneResult {\n154\t    const candidates: SnapshotCandidate[] = []\n155\t    for (const seq of [...session.surface.nodes]) {\n156\t      const event = session.events[seq]\n157\t      /* v8 ignore next -- surface seqs are validated contiguous log references. */\n158\t      if (event?.type === 'tool/result') candidates.push({ seq, event })\n159\t    }\n160\t\n161\t    const pruned: PrunedEntry[] = []\n162\t    let charsRemoved = 0\n163\t    for (const { seq, event } of candidates) {\n164\t      const result = event.data.message.content[0]\n165\t      const content = this.pruneContent(result.content)\n166\t      if (content === null) continue\n167\t      const charsBefore = this.measureContent(result.content)\n168\t      const charsAfter = this.measureContent(content)\n169\t      const message = freezeMessage<ToolResultMessage>({\n170\t        ...event.data.message,\n171\t        content: [{\n172\t          ...result,\n173\t          content,\n174\t        }] as [typeof result],\n175\t      })\n176\t      // Shadow-price protocol: the metering event and its replacement are\n177\t      // appended synchronously adjacent, so pure consumers subtract the\n178\t      // shadowed node's heuristic price without retaining per-node state.\n179\t      session.append('compaction/prune', {\n180\t        shadowedRange: { start: seq, end: seq },\n181\t        shadowedSeqs: [seq],\n182\t        shadowedTokenCount: this.ctx.tokenMeter.estimateMessage(event.data.message),\n183\t      })\n184\t      const replacement = session.append('tool/result', {\n185\t        ...event.data,\n186\t        message,\n187\t      }, {\n188\t        surfaceOp: { op: 'replace', start: seq, end: seq },\n189\t        sourceEventSeqs: [seq],\n190\t      })\n191\t      pruned.push({\n192\t        originalSeq: seq,\n193\t        replacementSeq: replacement.seq,\n194\t        callId: event.data.message.source.callId,\n195\t        charsBefore,\n196\t        charsAfter,\n197\t      })\n198\t      charsRemoved += charsBefore - charsAfter\n199\t    }\n200\t    return { pruned, charsRemoved }\n201\t  }\n202\t}\n203\t\n204\texport default ToolResultPruner\n205\t"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "0aecebf180db22ecf76dffcf",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HmEf99SrmNuDnnVqV5tAzy",
+        "type": "tool_result",
+        "content": " ❯ packages/compaction/compaction-tool-result-pruner/tests/tool-result-pruner.spec.ts:401:18\n    399|     expect(marker).toBe(`\\n\\n[... tool result middle pruned. Full resu…\n    400|     const text = textOfResult(session, entry.replacementSeq)\n    401|     expect(text).toBe(`${original.slice(0, 20)}${marker}${original.sli…\n       |                  ^\n    402|     expect(text).not.toContain('MIDDLE')\n    403|     expect(entry.charsAfter).toBeLessThanOrEqual(400)\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯\n\n FAIL  |thread-safe| packages/compaction/compaction-tool-result-pruner/tests/tool-result-pruner.spec.ts > ToolResultPruner stored originals > prunes with the plain marker and warns when saving fails\nAssertionError: expected 'yyyy\\n\\n[... tool result middle prune…' to be 'yyyyyyyyyyyyyyyyyyyy\\n\\n[... tool res…' // Object.is equality\n\n- Expected\n+ Received\n\n- yyyyyyyyyyyyyyyyyyyy\n+ yyyy\n\n  [... tool result middle pruned ...]\n\n- yyyyyyyyyy\n+ yyy\n\n ❯ packages/compaction/compaction-tool-result-pruner/tests/tool-result-pruner.spec.ts:427:57\n    425|     const entry = (await prune.pruneSession(session, 'pressure')).prun…\n    426|     expect(entry.spillLocator).toBeUndefined()\n    427|     expect(textOfResult(session, entry.replacementSeq)).toBe(`${'y'.re…\n       |                                                         ^\n    428|     expect(warnings).toContainEqual(expect.stringMatching(/saving bash…\n    429|   })\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯\n\n\n Test Files  1 failed | 1 passed (2)\n      Tests  2 failed | 18 passed (20)\n   Start at  14:21:15\n   Duration  6.62s (transform 4.04s, setup 2.15s, import 7.66s, tests 620ms, environment 0ms)",
+        "is_error": false
+      }
+    ]
+  }
+}

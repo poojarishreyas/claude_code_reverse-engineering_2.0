@@ -1,0 +1,15 @@
+{
+  "id": "689265b918c9df177d0d8a10",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XeFdioLH63rCLqJPzaUBdg",
+        "type": "tool_result",
+        "content": "./.agents/notes/implemented/architecture/2026-07-08-tool-output-spill-files.md\n./packages/core/tools/tests/ptc.spec.ts\n./packages/spill/spill-policy/README.md\n./packages/spill/spill-policy/src/index.ts\n./packages/spill/spill-policy/tests/spill-policy.spec.ts\n./packages/test-support/session-snapshot/tests/normalize.spec.ts\n./packages/test-support/session-snapshot/tests/suite.spec.ts\n./packages/web/tool-web/tests/spill.spec.ts\n./snapshots/session/bash-spill/session.jsonl\n./snapshots/session/session-query-spill/session.jsonl\nspill-policy.spec.ts",
+        "is_error": false
+      }
+    ]
+  }
+}

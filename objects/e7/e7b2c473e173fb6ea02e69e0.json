@@ -1,0 +1,24 @@
+{
+  "id": "e7b2c473e173fb6ea02e69e0",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSkQYKEAgSGAI4AUIIdGhpbmtpbmcSDA9H6Uf3o1/jGr9u+xoMFeK1Y8L4pJ42pSyIIjCoN2biz4FbLGo0COgrYVoqiiqptTaqoSaulgNgwSPtS6P/Swpiyvbtq0HPNJPLqR4qrgUwS6Yss+qGnI0GQUHYMGL3jwKLOtoEY/LLPIX96o/qXnHJIqIGrPe4Ocd9DQNd3AhSW89J3u2Dk5rhf+uYM3D7U2HQJj8WgQCM4wMx4lvl3tq3jDNc9wP4KVYKpCCjaghU64Bc6rKOTkWQNzOak1feKBNYJ2SX8y6SG4Rhnfut+2OaeOuMkAovGTzM7OIDEBfti5bJuaTIrU4oVQg5foB3nOenacLZdeI2iHUjNWb4veTyS1Oiy9Le1Ut9ix1aU0J+L3gBKRvreA+OP/40EvPsExyHuf/KIbhOwPIm0ivLFUwPE7yybpkABI7ku6SwRuytUYjcy0jmdQgKTQXSQp/tVB86nE7Ec9dUlTAoH1nmC7Oex3lIzXhc6fuKebTQP2fD8ZgzrY0mZE1LIbSpDEwttYaB84XdvG+ARGtA7KCf28IlL97zkKgQ4iF7EEIvsLsWgbe+Krv7rgfrUmMp/9zO5+NiY7diOfliSjvgUff2ndbCAvAYDCETDwgkb3uGyhqhKBlPlYf7DS/cW6XPqjPTsuigIZ4J0eFLGOd+b4yCY04zOsFbbloas9RcufeNg4pftuTdcq2Rrt5tGpfIpGnRulO+Muiduf+g3RKQryVQIveCq+e0YSnao3bAcIwhRSH6axCa6h3m8N5nRMtbOUUAlRBmL815TI87jJo4ck0IbnYlPhX4L7NmqxrKoVF579jrJBqsypfXxMgmJMiob4shMqxtcsem1Fv3g1+WJ+E5YZ/WXoltPvodlD3EQDZXNFMU9D0ZWZJJWupQMmBsuyEBLSwpf3WOVGhNfKnHNo6OP/DHD50vfnva5mcCIFZiNA+Ir7I68mLVtNpFLaCMY0sD2W+zypS1HbwPBmMLtENi/snWfhX3dv3NLTl21M5ayGnWL8k/5SpeSGDAqLCW1xgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_017WQM1DXZ2tE7uU8vYpYahc",
+        "name": "Grep",
+        "input": {
+          "pattern": "import .*assertNever",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\index.ts",
+          "output_mode": "content"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "be069903e6f487b17d38e347",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Y3zn9pqfPpquFkMdqTpuva",
+        "type": "tool_result",
+        "content": "46:const baseDriver = join(repoRoot, 'packages/test-support/loader-smoke/tests/fixtures/base-driver.ts')\n47:const tsconfigPath = join(repoRoot, 'tsconfig.json')\nbaseDriver = joi",
+        "is_error": false
+      }
+    ]
+  }
+}

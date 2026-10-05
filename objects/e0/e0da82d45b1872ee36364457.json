@@ -1,0 +1,14 @@
+{
+  "id": "e0da82d45b1872ee36364457",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01M6B2Viq6infxHHaB2Mapse",
+        "type": "tool_result",
+        "content": "packages\\llm\\token-meter\\src\\estimate.ts:42:      case 'reasoning':\npackages\\llm\\llm\\src\\types.ts:61:  type: 'reasoning'\npackages\\llm\\llm\\src\\types.ts:101:  'reasoning': ReasoningBlock\npackages\\llm\\llm\\src\\invariant.ts:55:        validateDelta(open, chunk.index, 'reasoning', fail)\npackages\\llm\\llm\\src\\assembler.ts:64:        const partial = this.ensure(chunk.index, chunk.type === 'text-delta' ? 'text' : 'reasoning')\npackages\\llm\\llm\\src\\assembler.ts:112:      case 'reasoning': return { type: 'reasoning', text: partial.text }\npackages\\llm\\llm\\src\\assembler.ts:174:        if (type !== 'text' && type !== 'reasoning') return undefined\npackages\\llm\\llm\\src\\assembler.ts:178:        (block?.type === 'text' || block?.type === 'reasoning') && block.text.trim() !== '')\npackages\\llm\\llm-pi-ai\\src\\adapter.ts:190:): Pick<LlmResolvedModelInfo, 'reasoning'> | Record<string, never> {\npackages\\llm\\llm-pi-ai\\src\\stream.ts:164:        yield { type: 'block-start', index: event.contentIndex, blockType: 'reasoning' }\npackages\\llm\\llm-pi-ai\\src\\stream.ts:170:        yield { type: 'block-end', index: event.contentIndex, block: { type: 'reasoning', text: event.content } }\npackages\\llm\\llm-pi-ai\\src\\replay.ts:18:  | { type: 'reasoning'; thinkingSignature?: string; redacted?: boolean }\n\n[Showing results with pagination = limit: 12]"
+      }
+    ]
+  }
+}

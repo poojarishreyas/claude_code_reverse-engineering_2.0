@@ -1,0 +1,21 @@
+{
+  "id": "b2c994d4c4d88cba8bd286c5",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01XCur4SeQ4ZvDPiRB7cTEG5",
+        "name": "Grep",
+        "input": {
+          "pattern": "(?i)(same id|matching id|by id).{0,200}|patch.{0,40}(replac|merg)",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\docs",
+          "glob": "*.md",
+          "output_mode": "content",
+          "head_limit": 12
+        }
+      }
+    ]
+  }
+}

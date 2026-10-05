@@ -1,0 +1,39 @@
+{
+  "id": "45b5a5bcd18d271deb7689e2",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "thinking",
+        "thinking": "I'll create an overlay for the evaluation with sandboxed workspace writes and approvals set to \"never\" since there's no human to approve actions. First, I'll check which session events carry token usage data for the metrics.\n\n",
+        "signature": "CAQSpgYKEQgSGAI4AUIJbmFycmF0aW9uEgyDo5wM9jFQMEFjOJMaDOtf+LhQg2LgLXaSAiIw2eD2VYjvgIDCAxCjqGJn+uZY3MxUNhPtLT74jowaZvp712FLb+U1dOSutdEwI11iKsIF1xnxjKpJ2SGxZ0sqtJ7O8AVNFV4pZGGFq0699PDkHqLl1TM59XGVK3Fu5vNCDC59TKLeJltWJoGq8FzthmYpSuVKR6EJSRtwXgCZvugmRxKRRuMxHIJKgcMfb5r7jlmaW92zlEkPPz02ej9Q1tlKMybcVEdQSo5ZyvRIHTdPMQy9ZsBLobx52/wi0S4fF/Fj1zb537KxJcZiYpSTh54RPWNXjVUp5kSWbw23UH9V8LNjP93JhC9Wxo/KUTuC6KpZ4gHpXo7zUcJnnJAHeRQrcXseuqhz7Yim5h2l5CY4DgQ5JCuC9c8hgMgMEOjIqutCUNgPd8BmdYtfI8fIv8s3XCCZFA7xjhK7CWL+agm+Yr9IF+7y50Wx36FFh0spKNzG9aOWyn6kbo6pw3tT8dI3ErArOtvHOBY5ISDW2/4XVRezS2THhgrr8PBbMSr+DYc1dICRbV8m/Fcd1yZ+vg+IVBf0KikQJu/GucYeOKAScd8O5iZvTyPscjgNZPlh7GLn0G9AJHGcKgtQPQ/IjK4t/IBasAV26Nl7wbeQCP5upaY42LKOtE+TrntCj9FXHRTfbjGlE3HFXdg44IrhzBYZfw6pmyozC44n+Ycd10FN45og+7SfttgfhQ86/gl9QRW1A9rVpnipm26S7QjzC/tB+8bQT2XG9Wj1kPdjN5ZD7QLY4YB5tR/mMZvlTQTRSFmiA5CY4m1Z8TWI52UTAepJZ6X2tbFCZF9jYBznvxbdbTuGXXClviOyy/m+Hj3lXjY1OJKufEXlBGfrssxjT/Lp7CB9Rakv+eTqa43nrSw0kLdfeNLEq9daE4jxrabn8wXH6AEO6T/midB4nLKecXTb70DHvWSUzKvMigBXJcSJnQxJn78dv96/UWIoB1jKU8cxbour2qXIPqY17JbHn7F43NzUA2HvhdYAp0REBJ2vYmWrtRgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01DGvEHgSvJiC18izSv4Nn7G",
+        "name": "Grep",
+        "input": {
+          "pattern": "usage\\??:|'assistant/message':|'step/start':|'tool/call':|'turn/end':",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\core\\session\\src\\types.ts",
+          "output_mode": "content",
+          "-B": 1,
+          "-A": 2
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_018zJY2MuESwNqPUaNDtKfYz",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\test-support\\loader-smoke\\src\\agent-turn.ts"
+        }
+      }
+    ]
+  }
+}

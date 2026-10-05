@@ -1,0 +1,29 @@
+{
+  "id": "e21bb57bfdc055603174b2e4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS/wUKEAgSGAI4AUIIdGhpbmtpbmcSDG724fsu8B1yCA2gWBoMDnyIGIF2mM4F4tRHIjD68/UKm+E9WDz278f6isddgfw1id8YIb6OZS/EUmLLhj1sA9+bKyue5HzqLQ3B0sQqnAXV3n2bTvYUJETdo/b5ubvm+D1s9P5K/o9ooOHZnR5pMw/QAkC/MHowxtN+leUBrDnHqJ1vUETMRMtEsqpqHOcR7Z1do4PciyDzgaMVuqQ3lutTseypbM6rCx11bAVfJNQv/p5Ie7EbJJCqRhr7FaO+Nh7lwC7knTqhlANG3Q6N0Fq8jgG0oDNImscZANj9cPlxcfR94o3nNYfdk6iOuu/54Y10BHGulNISE6cQlaE0ddTr/jzp+V9LTZ0OrPa+Th+6bae66ghx9munWJHW56G5guq5DUUTdpqJz+6lmPe+nhZKixXUm/OXXuq2vYHfRR9wImQIECGftyjI18z2JAl/eA4YRZeEWmTMxDUOh9thLyxEJZWZT+mmqQKWtM22gdXGG2833Zf5edNlPcIwwetTe6g5Fw3s/zoPyaxgMdPqvjIi0g4aVfgrXPVJ1PY/vDSVugnvyRIzU8WvSJmlQSGT6YoYgHQXT/pajv4oZYndPhd44Rgg7l5vmz68lUoAzckHFh9Gks/OePkru6JiaEQcAXuBzVXE9xi8UlRHdiCXjpkIGVrNbfufiSWZ0IewuxAy7/cS1hpLNTgBK4O0QhFkByE/SLesaxvG5dO/l3ZPHxYNk6t/++b5EdfZ+FQC8XnGdJlMXn7eekti3Kw301XlDgdiWjwLpUqT4nZkJhgmw61DzjcdAVVElOo72B0PM5tXj1egTxnO7pYoZzHGakSDsJeK7EEefalxQSmmlWzixAsoKdyxAp91FCTqmpT+lnE7uBEBpCEpbd7tuEPQM8jwyX+G+sIZvGsuU8It6ExfUf9PSvdkDW6CGwDSJmMcjcoxTcvAcc6GNr90JPPCRMm76+zdO29YuNMW+jJY2atFGstNByPTSTi5O83ZJxgB"
+      },
+      {
+        "type": "text",
+        "text": "I'll find NVIDIA's open-source Nemotron harness repo on GitHub, then read its compaction code directly."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_013fsZVhBBmHyxSp1VoSVC47",
+        "name": "WebSearch",
+        "input": {
+          "query": "NVIDIA Nemotron agent harness github open source compaction",
+          "allowed_domains": [
+            "github.com"
+          ]
+        }
+      }
+    ]
+  }
+}

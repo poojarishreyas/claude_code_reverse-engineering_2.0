@@ -1,0 +1,18 @@
+{
+  "id": "dac2a5b99736cf63e6cb8749",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS9wUKEAgSGAI4AUIIdGhpbmtpbmcSDDaI7gUvwtYetRGiCBoMyQTmU6pi+/h/CITJIjDqbBq3ZQz+H9SZLC7G7dEeVA3jJ/RERnZ2HA5MjtIKpLz+Dt5YPGsSxuj6Qepk+qwqlAXy1BOkOWXSgXLKO6Pz+i0nhUY0z1ydAqn1wp3Jgn0Ejl+f2XMA5vOi23KuwSaeaui/pWm9Or20NTNWd4sM15efzUPdFAali9q9tvOVeVNqkhN4qy+Us0n8WqrKTZCASlowNUHbn4jikCheyN60Y8hxeA/fdyBTDhIM9ZQUXOz5ybIlKmtqGuUbsk0v06bD/hJFUMq+0hdL8CXDz1vZyrtQpdvBsuVGyjte3AZzmIPFwu+WQGIEbT8KIm1lCI3zE1hdlCCoAI4fdv0j9CrIZ7/IPplJwzCvDCzMdAvALfMoF6Tv5ORh4jzUl+d3igAgweRveU+PzrdAhky04/8KEnJQmZsDhmxPkqjtUlDMlStzVrS2Y9ggtw71v10YYMTZLhnDRD/59kRQzl79AMesX168AZ7C88EpS1YtkYIpvQpOp+9QbpjpoZyemER9onBpTUCh0SSHX4AJu3kH2Xqk+V11SsSf8Mt/j1klLu7EcVAFCzlieYyVbkJvPISXKzsWRCXyLZql22NceS2cTZyHgS9AgmJ5b5KPepTg9MZMw3AHyaLneomA+GeuGBEyo7TyDUbVdb0x2RcIoMAMEKiFbnaLtXIW7uuGoOfndFjC7X3Vr3AES+A9ny0C93SevuElBkcBqEFE29tSrJSE6RXG06DeT9qVyrI/7i+Xj6hM/Ei/MLaYZxSHWewGdiNWVOaCe12oYhpzYxrvRLrANqNoR/uykgr0LvX98uawxs5+LkdsXDGIkLQOW7R/JnZrHvEsSGyEYIN6rGwRTZSjQH3lkO/I6GWgvgmLKoRR+NaoqM9VavULUTYCGSKOsXBhqc89IBqLGKesnGJ/5KAU6IGF2K5qJ+Qrci/17pXAIK+GFwpQyhkl3LEYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Broadly yes: all of them let the model search the code itself. None builds a semantic (embedding) index to pick files. They differ in how smart their search tools are.\n\n| | Our harness | Claude Code | NVIDIA NOOA | Nemotron |\n|---|---|---|---|---|\n| How it finds files | `grep`, `glob`, `read` (ripgrep) | Same idea: Grep, Glob, Read, Bash | Code search plus **symbol tools**: `symbols()` (definitions via tree-sitter), `refs()` (usages), a **repo map** of files with their top-level functions and classes | Not a harness; depends on which one runs it |\n| Code index / map | None | None by default; optional **code-intelligence plugins** (language servers) add go-to-definition and type errors | Repo map and symbol lists computed on demand, not a stored embedding index | Its guide uses OpenCode, OpenHands, Kilo Code, OpenClaw |\n| Read before edit | Yes (`fs-observation-policy`) | Yes (Edit fails unless the file was read) | Not checked | Depends on the harness |\n| Project instructions | `AGENTS.md`/`CLAUDE.md` | `CLAUDE.md` | Not checked | Depends on the harness |\n| Help for big searches | Subagents, plan mode | Explore subagent, plan mode | Model writes Python to search and filter | Depends on the harness |\n\n**Sources for this table:**\n- **Claude Code:** its docs say the language-server plugins give \"precise symbol navigation instead of text-based search,\" and one go-to-definition call can replace a grep plus several reads. The Grep, Glob, Read and read-before-edit behavior are the tools I use in this session.\n- **NOOA:** from `packages/nooa-cli/src/nooa_cli/tools/repo_tools.py` in NVIDIA's repo (`symbols`, `refs`, `_repo_map`, tree-sitter with a regex fallback).\n- **Nemotron:** only a model. Which file it edits depends entirely on the harness around it.\n\n**Where ours stands:** it relies only on text search. The other two add symbol-aware navigation (definitions, references, a file-and-function map), which helps in big codebases where the right file doesn't contain your keywords.\n\n**If you want the same:** a symbol tool or repo map would be the matching feature, either tree-sitter based like NOOA or language-server based like Claude Code's plugins. It would be a new tool plugin, not a change to the agent loop."
+      }
+    ]
+  }
+}

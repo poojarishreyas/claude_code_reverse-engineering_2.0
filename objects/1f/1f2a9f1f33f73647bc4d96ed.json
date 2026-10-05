@@ -1,0 +1,20 @@
+{
+  "id": "1f2a9f1f33f73647bc4d96ed",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01QgW4UTwwNfP15fzHtxBrux",
+        "name": "Grep",
+        "input": {
+          "pattern": "interface PtcDispatchEventData",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\core\\tools\\src",
+          "output_mode": "content",
+          "-A": 30
+        }
+      }
+    ]
+  }
+}

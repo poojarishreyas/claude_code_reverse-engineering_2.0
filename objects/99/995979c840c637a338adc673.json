@@ -1,0 +1,19 @@
+{
+  "id": "995979c840c637a338adc673",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01BkRExLpXGkwLsS4xo3Fca5",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\region.ts",
+          "offset": 150,
+          "limit": 340
+        }
+      }
+    ]
+  }
+}

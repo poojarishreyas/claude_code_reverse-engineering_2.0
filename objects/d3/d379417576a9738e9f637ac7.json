@@ -1,0 +1,28 @@
+{
+  "id": "d379417576a9738e9f637ac7",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSvQcKEAgSGAI4AUIIdGhpbmtpbmcSDECVqOURb7JeyNs2mxoMN/5rLN9BmYnRXvshIjAuJuO5gf3nAUun34wAw7WPHy2Oq6DO/fCJdu5VFycT39SdUKFOHJjt7GDItigdykYq2gaV0S5qjOhVbGMxWW3pawVo23eZmN1EoQMdQwjDTgrAak3kHBlNKT6dEOgfxkvXzf3FoNBCoSR1gBX2kLgoYv97Gb/aXIgsdgLbQlp2ej99t/EH4dC6LrI6DGgLNPn+ZIM0WeJeYBFiPNuU/Gbgfaw9Y6DTbWnKIIuNVd3hCshPLMpZuxOPJHWSKknU++UOVJHN28B7iUVxNZLW8Ph6ehHllVjZ5CxQzPGNePmivGVwHesR4C4m0ovKr2sPrR0BapKMBBvTXgHxPDMjRdBHJ9D7/q9E+it+wKrrfnNWbbjBlAz8UG3nvKvCIKUQKM7fdSyE2IWK+HaDiaAyyLhKFvKqaOzDV8VRmjELkPZNJH8LyPJYsKFvc4xyJXDPTSYt+HNJ9Werf4qprtzWZfnenxldhBVyjGrqvm62BPtf/MuL1c/LDl5Nanm+vuk8ydarWMNDFp9UT4Rgkca5L6r5rJ4j+3sJga78Gkk929wc5TXpC/7x/KdXun+kLE7VIZa/Bri0rJmCf83LjDESW8A+on8TxQPTd/97FjZbB2F4RlVadGXfmIp0fXvJypEu3gREQwZ72fKGhxnivDy9mWU2VcHqFR9Hi9OpBfFHhVddOfN/ZlRCheLu1QfRbpqqKIqKSUkblymF0ifa/WkxiRxsCB0pDYjGuvrInwIugQu/WsLADfs9zPsL4qroQGr4Zm6eqV5C5olWcrTR/nqfq5if8jROmksbTrSP3++bG2Mez55HuKXMM5/0WohJaCVQyNtwqCeofCo+bCGDx5t/H2j6hQMo78Cnae0s3edb0v3OuF8BSVrJ3VN3OCCNRZY+jx79Jo95ODVdMO+r58JcZ2YSKD72sJF4OJw/ss8jssKLVmXOvjRX9ZpJ9uIalP/ju4pf88SV7/w2s/J8GVHnbJq4fiZ2HYOC2Xfgpcn5WRV41Pxv/zZSmnTDVAVBIDLmKNYgy9trdMVC3qBNR9ExPI/Gz2OSvGncakNJUnvjpL3h3Vy66b+DIM05u8a7CZ8KlutDQx3oMkjoRSrb4phnNwGiiz05hKoJ3wxOpTRX2K3BXYcTFOXIiDH9g6w/mN3h9LenK1rXWjlxjgT22IySuRQHmIjhk+Autmbxe3JJxJxwzaDcrdE5QW4DTINKNP0YAQ=="
+      },
+      {
+        "type": "thinking",
+        "thinking": "NOOA keeps original events archived rather than deleted, and each summary tells the model how to search and expand them since it's a CodeAct harness with Python access to `self.events`. Next I'll look at overflow recovery and the interactive agent's defaults.\n\n",
+        "signature": "CAQSqwcKEQgSGAI4AUIJbmFycmF0aW9uEgzmidDaadDoJjC50uUaDGFroqAtAZ0vCT7mDiIwavcZi0b08ToHDVNwBTcwOtcCraPyNXe/XU9yvKIu0evHXe9rbU3GnhVez1/JEVTUKscGRDdUNcix/AjEefxpR5Xqbo6niKkg+BTqu3OuQztrqnTuH+n7ZMoZROJ+AehcZCbzMIpHzidUG6mbn+VVaqCBvaRofHt9MSKDbxLbJ8hT51qdeEbqNa/Nf7Pa/kOzhc09G1exTAAn4G3NIpyrzjhCE10B5PWldIVumE/AMrQSyQ3TYvGe1eQ67/ZpJO8hpGdanoNZOzIcFvkcDar55xUx98DQl8nAvWR0iIgbJhJKJjFqHYPGXKBHeI0chxZxH1ygmZ9+rtCQXaHJ0wJKWiSmjLDP2mF8G7q3V9LPtFcuP8LineTMV8O+zshHRy37r1kJDSDNuniLX4cSROX1P5UPQnnbCxHWSesp2eFoHQB+rCp4UpsZIWGVVvuKLmun99R81c5ViSLC0U5KhYU8nViFK+tRs1MSQXalER1wLLAbYFVwdbcCv1wfSUPk5HkeHAXaDUIQ2sWoawEyKnMQ5/HuGENkZtR3k/utlwAzOcccgRF1gj8/B1Po0BRxOKK16DVLfb9Z0GLZ9dlFjTgSbyrmNF17flTtYspVW6ADvJmGOaarwrNorRX6ZdVdJX1iJWxYh519gfvcrmbWXqeAYRpRYhCoWGgTP7SJSxWAuhwhlvMISBHz6lolLbcl5dL7xMlsaCbcDi0R9Gsi5d74RfgieFoZ+VuPiRNB5oloauHDe2MVmnS5omcdBpsRcQYzG/IO5UJWuBHxXpSttsvSteSGUwH68RLCZxrOeUvCE2Bwbqo+fEoc9MdAzuzMf8GvaeXW3oOXdP3gqv3GtGO24rmAabMatrJ9A/CCV5vKk6ugeSN1+4JDx2/0c0DhdUzvgJMrNCOZOrQq3iODBZgiJQDXAex/XRLZp46OA9bdq+h3SpF/feaOZACEvnCqadppCeUgr7molwlCt/EEu44WqZaHTCJG628BCgQrbMUJ+8AgzKLJY/8UgltmMozhGPvup5Kl3NxlCjtCygHfgn6KI+SoRwlvdbyLX4N06NRLot/SzZwh4XPbmK1V2DoqjEk5nKzdQ/C5Vlt3V8VVql5MJYnPm5rz/jmWxJK1kc+f8a/QCzPIFx2wE+/2rfT6uh56KBYHNMEd8JcJ2K+ljBGFR54MztS9KqfyyVIYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01LyNhby4LmGj8EVHfpfsptv",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/nv/labs-OO-Agents\" && grep -n \"TokenBudgetSummarizer\" -B3 -A14 src/nooa/interactive.py | head -40; echo =====; sed -n '660,760p' src/nooa/runtime/actor.py",
+          "description": "Read interactive defaults and overflow recovery"
+        }
+      }
+    ]
+  }
+}

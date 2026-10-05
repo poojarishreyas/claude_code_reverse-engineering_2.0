@@ -1,0 +1,24 @@
+{
+  "id": "a7ecd2b79c6cda869107e303",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019Tq1nqinN9jcZo4SvP8afb",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\index.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01A1XvqSjC3UdVknnwNyhNYs",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\index.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01S8xfK9NKCuhrC37PC8TfLw",
+        "type": "tool_result",
+        "content": "1\t{\n2\t  \"extends\": \"../../../tsconfig.base.json\",\n3\t  \"compilerOptions\": {\n4\t    \"rootDir\": \"src\",\n5\t    \"outDir\": \"lib/types\"\n6\t  },\n7\t  \"include\": [\n8\t    \"src\"\n9\t  ],\n10\t  \"references\": [\n11\t    {\n12\t      \"path\": \"../../../vendor/cosmokit\"\n13\t    },\n14\t    {\n15\t      \"path\": \"../../../vendor/cordis\"\n16\t    },\n17\t    {\n18\t      \"path\": \"../../../vendor/schemastery\"\n19\t    },\n20\t    {\n21\t      \"path\": \"../../llm/llm\"\n22\t    },\n23\t    {\n24\t      \"path\": \"../../llm/token-meter\"\n25\t    },\n26\t    {\n27\t      \"path\": \"../../core/session\"\n28\t    },\n29\t    {\n30\t      \"path\": \"../compaction\"\n31\t    },\n32\t    {\n33\t      \"path\": \"../../spill/spill\"\n34\t    },\n35\t    {\n36\t      \"path\": \"../../runtime-diagnostics/invariants\"\n37\t    }\n38\t  ]\n39\t}\n40\t"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "44613069560fc54db440c573",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": "<total_tokens>15000000 tokens left</total_tokens>\n\nThe date has changed. Today's date is now 2026-09-28. No need to announce the new date — the user's own clock shows it."
+  }
+}

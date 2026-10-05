@@ -1,0 +1,15 @@
+{
+  "id": "fa650c7359295e7f0a286a83",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01BGUykZfgdFHR3RkmMWidGm",
+        "type": "tool_result",
+        "content": "packages/fs:\nREADME.md\nfs\nfs-local\nfs-observation-policy\nfs-sandbox\ntool-fs\ntool-fs-search\ntool-str-replace-editor\n\npackages/session:\nREADME.md\nsession-checkpoint-policy\nsession-log-deepseek\nsession-persistence\nsession-persistence-jsonl\nsession-projection\nsession-projection-cache\nsession-stats\nsession-telemetry\nsession-telemetry-otel\nsession-title\nsession-title-first-prompt-llm\nsession-title-llm\nsession-turn-outline\n## Summary\n\n`dsh-fs-observation-policy` adds the read-before-edit policy to the `ctx.fs` filesystem contract ([`dsh-fs`](../fs/README.md)): it records which files the calling session has observed, and guards every write and edit with that record — an unseen file can only be created, an observed file can only be replaced at the version last seen, and editing requires a prior read. It participates through the `fs/*` events only, so it registers no service and has no public methods; removing it leaves the bare provider's unconditional mutation behavior instead of breaking the tools. Loading it alongside a backend (`fs-local`, `fs-sandbox`) and the tools (`tool-fs`) makes model file edits fail with a clear remedy until the file has been read. Choose it for deployments that want agents to read before they mutate files.\n\n## Table of Contents",
+        "is_error": false
+      }
+    ]
+  }
+}

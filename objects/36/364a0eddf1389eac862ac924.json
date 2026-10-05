@@ -1,0 +1,14 @@
+{
+  "id": "364a0eddf1389eac862ac924",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01MJvBetUt2Nz634bxPA4T2w",
+        "type": "tool_result",
+        "content": "174\t    }\n175\t\n176\t    // Reserve the notice's byte cost INSIDE maxInlineBytes so the replacement\n177\t    // (preview + blank line + notice) never exceeds the documented cap — a naive\n178\t    // preview that spent the whole budget then appended the notice could be\n179\t    // larger than the cap, and for a marginally-over result even larger than the\n180\t    // original. The reservation uses a notice priced at the worst-case omission\n181\t    // count (the full byte total): its digit count bounds the real count's, so\n182\t    // the reserved size is a safe upper bound and the final notice is never\n183\t    // longer than what we reserved. `\\n\\n` is the 2-byte join.\n184\t    const reserve = Buffer.byteLength(spillNotice({ kind: 'exact', count: totalBytes }, ref), 'utf8') + 2\n185\t    const previewBudget = Math.max(0, cap - reserve)\n186\t    const { text: previewText, omitted } = preview(text, previewBudget)\n187\t    const notice = spillNotice(omitted, ref)\n188\t    const replacedText = previewText.length > 0 ? `${previewText}\\n\\n${notice}` : notice\n189\t    // Invariant: the policy NEVER emits a replacement larger than the cap. When\n190\t    // the notice alone exceeds maxInlineBytes (a tiny cap or a long spill root),\n191\t    // there is no within-cap replacement, so keep the inline content — spilling\n192\t    // would break the advertised cap. (A within-cap replacement is always\n193\t    // smaller than the original, which is > cap by the entry condition, so this\n194\t    // one check subsumes \"not smaller than the original\" too. The spill file\n195\t    // already written is a harmless orphan; cleanup is deferred.)\n196\t    if (Buffer.byteLength(replacedText, 'utf8') > cap) {\n197\t      ctx.logger.warn(`spill-policy: spill notice for ${toolName} exceeds maxInlineBytes; keeping the inline content`)\n198\t      return undefined\n199\t    }"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "20b8a878fae50147099a06ad",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "simple java code for this"
+  }
+}

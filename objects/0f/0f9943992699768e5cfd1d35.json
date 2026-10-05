@@ -1,0 +1,27 @@
+{
+  "id": "0f9943992699768e5cfd1d35",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjQkKEAgSGAI4AUIIdGhpbmtpbmcSDHi24bu3Q/m9U+zKpRoM8Vgnu6QQIL7ZEUJIIjB8ZPZp/v4c9ZW7cOSC4Jzz7U/7ZdgO6LMJ9jpeK9t13uoCtAsCP6PvUtqhQ3e71rIqqggnbBi24iIfhJPgc86a7pZ+Dbfvw9BhXyx2QMPRtSWn3aMljZp4REg3FQUzNLPXCTgCpc5zUdstvhBe8m8FSgDRjZYqNh2cqZFqhQwP54+KdzrH4dncl/ym2CqCVdNIXyMeRclHNqDQsNmlZOUBUYdaeHMoGTvC7xCub/aYmgKpKCxpxGqW8OmjMit21ak5LFivaJzExSYmD6jcYVyqzdnWI5cMz6UR5MBFThENqhT/Pq0A3PfWpL7Tq/D7+TVnwoiXbiDAnJv2eOSeJHKzq5NleD/BAzdhzduoDH71FARETD0zL9Kha1CTO97qaZAvulSndrxNyxscLCPRj8LOOTgYC0xtZoq6pVKeU8Ki+r3nZB6OquFSZMu7+Vz8GcFlVbx04ba37fTdGCGg/1+ZhBuJ9El6CKJwuMeCrPDyT5gWx8jjAxNUs6LtXRxAUoDei8eJpFEtjAs23z5e3h/YGjLPeRvsQysZjI2fQ5uwbk6ETcefUbXw0ln7o9zhUkfpEGzzkTMpDSzconrHVK6vaHYTBTjoarkRda6myKTLOh6Z79nN3LKC66RXNiP0rMY5WKztzKUVVlPl5dM1ZxCZAnB+4jxsJjTwXrj6mNVnkzvhlMOSi1xi9ZMd5PPl+pYozQiBgW4cOTTkWZFU+zoQUpW1fZzQME86NaTrT5Uiz3Z3VXZ3aN4SYjaO1eSW1xX3GwXsZymRRkPJBtF+OXzhT6llJLSsovUUiNDUCdxv9Thr8MqyRPGmR4sWfmHnXm/V7yEd5iUWL94wBhx9+nz9gKd98UA4hVaKnN42UO5gakeP5ujY6x223T9HH4x2vKOp2sjEkbewsvPm6EKcIIHRWWZUwJunQKFoP4nysN8KrV7JJUcde/dAsoxC8IjRq9xaBm3wGJP4RFEW8KTxgZ5s5xiUAwZK4CE5xVdwxxkdzuSo28UXA0kja+aa1LAEObOYvWZLXlQrKen10G83UdL2UH8qEk30GsobM57MxLMkHE64JIeMbnLE06cpd9l2VgeYZnVLQqj3GE3YbXMmNfwdkzYCMfnxS6fsyXuYSefMGwkWdiD5ala1Sg5748mxDNQi9VnF33T+/CaLm+Nafc8dD4ceUXpZmtfvqCuVNA8jbPASFfN7yS+ufOVqdjF5aOxhE0jI4ZRgKwE61D9Uxzl3/MHSkgueiaTtJ8K9a34KxLgrvItn/mUp6Ke7BlyhoDDdTYrkOBsGm0JoW3FbEfu5vribJ7ZfGNNiM6Z7suH9ug7+Ko6jCnm60ZRdGpp23ahO8roNG5sfik4BkbB7S8C+fDnPmB3PxRi3fLXkGqryrIbxISOvCLy0p+wLcieGNKkUNogPamSKwDzxuL1Fa2e7o2XcWVVNuTyBQCX0Fl/JIhBEqqSjjjD7nulOkL8wQ/AMJt4fbSFh8R2nndJ7GAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01GkErH5A72scUDBA7UFWcJh",
+        "name": "Grep",
+        "input": {
+          "pattern": "TurnEndReason =|kind: 'blocked'",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\core",
+          "glob": "**/src/**/*.ts",
+          "output_mode": "content",
+          "-A": 10,
+          "head_limit": 30
+        }
+      }
+    ]
+  }
+}

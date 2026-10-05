@@ -1,0 +1,15 @@
+{
+  "id": "2340112b2635dda0d483b569",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RHb8JuQ9oboc8aNU3ry416",
+        "type": "tool_result",
+        "content": "177:      recoverOverflow?: typeof compaction.compactAfterOverflow,\n222:      if (yield* compaction.compactIfNeeded({ sessionID: session.id, entries, model, request }))\n377:      return yield* runTurnAttempt(sessionID, promotion, step, compaction.compactAfterOverflow).pipe(\n==\npackages/opencode/src/session/prompt.ts:19:import { MAX_STEPS_PROMPT } from \"@opencode-ai/core/session/runner/max-steps\"",
+        "is_error": false
+      }
+    ]
+  }
+}

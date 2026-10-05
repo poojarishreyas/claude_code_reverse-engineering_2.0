@@ -1,0 +1,15 @@
+{
+  "id": "502bcfd8758bb0d74810dc0a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016aYtLex2m5NYCb71RLgycH",
+        "type": "tool_result",
+        "content": "[killed]\n3825706a15.json\n3c17f569da.json\nsummary.json\nsummary.md\n--- 3825706a15 invalid\n Test Files  1 passed (1)\n      Tests  42 passed (42)\n--- 3c17f569da valid\n\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream 639ed01539 [master]\nC:/Users/shrey/AppData/Local/Temp/dsh-eval-05c0687372                                                                                      05c0687372 (detached HEAD)",
+        "is_error": false
+      }
+    ]
+  }
+}

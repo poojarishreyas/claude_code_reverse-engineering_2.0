@@ -1,0 +1,17 @@
+{
+  "id": "489446ee74bfe19b40f6f2b3",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01P3RVxNrfyYaoxgxff9UCZu",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\src\\index.ts"
+        }
+      }
+    ]
+  }
+}

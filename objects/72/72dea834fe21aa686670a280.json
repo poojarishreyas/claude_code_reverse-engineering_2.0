@@ -1,0 +1,14 @@
+{
+  "id": "72dea834fe21aa686670a280",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HzrLyfWNJF5LHcsTUXpScS",
+        "type": "tool_result",
+        "content": "extensions\\tool-cordis\\src\\api-catalog.ts:1966:[Omitted long matching line]\nextensions\\tool-cordis\\src\\api-catalog.ts:2053:[Omitted long matching line]\nextensions\\tool-cordis\\src\\api-catalog.ts:2241:[Omitted long matching line]\nextensions\\tool-cordis\\src\\api-catalog.ts:5132:    declaration: 'export interface ShellProcessRead {\\n    delta: string;\\n    lossy: boolean;\\n    stdoutSpillPath?: string;\\n    stderrSpillPath?: string;\\n}',\nextensions\\tool-cordis\\src\\api-catalog.ts:5364:    declaration: 'export interface SubprocessOutputRead {\\n    text: string;\\n    nextOffset: number;\\n    lossy: boolean;\\n    spillPath?: string;\\n}',\nfs\\tool-fs-search\\src\\search-core.ts:15: * `rawOutputMaxBytes`, and never read spill files. The model-facing recovery\nfs\\tool-fs-search\\src\\search-core.ts:47: * diagnostic excerpt only (the tool never reads a stderr spill path, and the\nfs\\tool-fs-search\\src\\search-core.ts:195: * seam's diagnostic-tail shape (no spill files): the tools never read a raw\nfs\\tool-fs-search\\src\\search-core.ts:364: * result. `spillStore` is read with `ctx.get()` (not static inject) because\nspill\\spill-policy\\src\\index.ts:16: * untouched; UIs and replay read the full text through the spill artifact).\n\n[Showing results with pagination = limit: 10]"
+      }
+    ]
+  }
+}

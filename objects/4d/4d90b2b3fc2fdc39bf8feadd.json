@@ -1,0 +1,19 @@
+{
+  "id": "4d90b2b3fc2fdc39bf8feadd",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_017as9Cf31VzMmdgGMMqaj7g",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\continuation.spec.ts",
+          "offset": 258,
+          "limit": 4
+        }
+      }
+    ]
+  }
+}

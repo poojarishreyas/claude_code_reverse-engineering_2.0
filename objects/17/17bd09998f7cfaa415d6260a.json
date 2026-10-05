@@ -1,0 +1,42 @@
+{
+  "id": "17bd09998f7cfaa415d6260a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1gYKEAgSGAI4AUIIdGhpbmtpbmcSDNq5MB3J6ySaeHgenRoMplCTrWGeaHsCYKhYIjAtonv7C8g/l5pKdPBszfyKa5cbuvICegONkFEF7M4idr9K9gXdCrS7LpSMq+hbYdIq8wUWdtQX+j9gSTTgqqmSoJAchAwgl8Mb9oeaj5qZjjgwfiEGXBVfxiExuWxRN3dhH7vzwgLCPhkDbTvIf5ew4rt2gh7yZbyTBaQ7GbEfPIIjPMrTzOb4nJ4FGIhMtl/hoqApOc/qF5jduvmIAxoIit5YQdoRGLwTXKMQAjUpLU6Baua3HZsB5+NsI92A36jn3y/T7VpfQuLzwxFdJ3RtwFCMMVCuweMcpq+Xnd4LqjrSQyabvLudcIIIWcUhxPa+fPZ57aG4ItpRd/LJ4vb72kjeraPkOmHtz3lAqli2mAj4/4vsuhNHEZcr5g7rbKACKIfpDCw/NV/w5MW7ecTt8iEXl6Z/SPYfmpwC313yWVBQ9/vtIh1jjLe2lQ43vVAXUGQhJuJCpdppxCOg69w7Kacj0AmZax2+pLX+jNrFVlhCS+BKa9ftbH4zDImMZ0vnGxvZwAA6pxGKRJcbo2i08wH+xW1aGoH+cHgCC0qJzNvbTpoDGZZX/6baOAD6w38d79+qrnzQCrFykeMJfbH6vU8j+jtIQ3HVKFmZOrXZ/tyZO/kNc12uzr69gzmgHcWFV0AmD5sjbG0FkoFIBN75gBgqHEJrbimJnQ6fXstNy0QftoJa9vY9Y4meTFc2J1b2Eh9olEk37FtxZPhLykuZxruvJdVKLJMNBbbWqTvJ7q9ZX8gnYuAR8wU6txigwDFWTEzS/0e3urQAlDDnCXxDQsaJb/147tpOtl7HOpbFk6UI/q5d5YPRzpQKrD5KLhDlZtTQ5H5JKLualxjl7ke10ijbOHC/Pu5K+i9CM4R1pIZfqNXOCfO7N1Qf2VIgilppmYh8P4dA60VNn1pHMDbElFwZINnXk06mfN1414rXA4rvWxrX8VOEweKV1pTIP/CaCAbsFAgvKRmU65EzRQ9zBn/+/bgTw5dGQrCDxEShx/qXS3QUXOLysaSXd4aVxLiTqI1sGkB7UzdCr4fhLfvJ87Vns1vdBqIKSeUEOtif+t58UuOW8BgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_019Tq1nqinN9jcZo4SvP8afb",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\index.ts",
+          "old_string": "      if (prune !== undefined) {\n        prune.pruneSession(agent.session)\n        measurement = meter.measure(agent.session)\n      }\n      const range = selectCompactableRange(agent.session, measurement, 0)",
+          "new_string": "      if (prune !== undefined) {\n        await prune.pruneSession(agent.session, trigger)\n        measurement = meter.measure(agent.session)\n      }\n      const range = selectCompactableRange(agent.session, measurement, 0)"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01A1XvqSjC3UdVknnwNyhNYs",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\index.ts",
+          "old_string": "    if (prune !== undefined) {\n      prune.pruneSession(agent.session)\n      measurement = meter.measure(agent.session)\n    }\n    if (measurement.totalTokens < spec.thresholdTokens) return null",
+          "new_string": "    if (prune !== undefined) {\n      await prune.pruneSession(agent.session, trigger)\n      measurement = meter.measure(agent.session)\n    }\n    if (measurement.totalTokens < spec.thresholdTokens) return null"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01S8xfK9NKCuhrC37PC8TfLw",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\tsconfig.json"
+        }
+      }
+    ]
+  }
+}

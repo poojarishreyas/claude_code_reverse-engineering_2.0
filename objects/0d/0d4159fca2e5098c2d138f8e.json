@@ -1,0 +1,25 @@
+{
+  "id": "0d4159fca2e5098c2d138f8e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PwD9GQRfgRWLAQoxGVxC16",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\continuation.spec.ts has been updated successfully. (file state is current in your context — no need to Read it back)"
+      },
+      {
+        "tool_use_id": "toolu_017bGxtGuBVoePANh3LWMpEW",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\continuation.spec.ts has been updated successfully. (file state is current in your context — no need to Read it back)"
+      },
+      {
+        "tool_use_id": "toolu_01HcJPXKjSxSneAdpayZrsAm",
+        "type": "tool_result",
+        "content": "tsc=0\n      Tests  137 passed (137)\n region.ts       |     100 |    99.13 |     100 |     100 | 406               \nERROR: Coverage for branches (99.13%) does not meet global threshold (100%) for packages/compaction/compaction-basic/src/region.ts",
+        "is_error": false
+      }
+    ]
+  }
+}

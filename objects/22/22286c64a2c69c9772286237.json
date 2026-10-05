@@ -1,0 +1,26 @@
+{
+  "id": "22286c64a2c69c9772286237",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSxAcKEAgSGAI4AUIIdGhpbmtpbmcSDH154xUhCToAYKUdFBoMAdAKvZY5savKBJ+iIjBxBc5EZyJekTxXmYc7sg5VPJ/IajvNQ2CvFmCgaVh4cUORv074XG11NkecODRV9ikq4QYgOmr0LmxiVm9pC/939fgCcL8At9l8QZKx+bHGWRXC1PavkLZGw0j7PJqYWiaej4w+Bc9I+gPozt+UN+q8IVVfHofJEndQp5q8bHtxbDYYSBrR2W7XIuafnsNp0ScFEsbNuEXexRJJaQeTjHDXEa3BUxtN+/ubeyu4TXTuA9soXN9dawKetfqdvN74KXWRN2cu26Ka2ZuZHPVYLJnxD13L/vYj+8ypZUuyK8aZ07XCq6s+UFbP4G67Q9yfhepNuwJ+1QXlGcJP5t35Tb/hJOofa0/BPJCJ1DHZ5jjYJlmgYtwnJVdUOT6atlV/6RjZyc/pR8CjhrD27JnsSQoHr0OVtT82yOLBKiH+tkTJCwpXhgff0lRNESeU8wp6U8sgt2i5OPkz7Ll4vYeNTAk5lgXUAA9L6M/d0gnm+WWXCg5LKsZ30C5AYb5S0q0+ejsetIB+ewOV3QzQYzph2Ua8HanZhcmYj+YCpQ2riZ51JHAmZ6ILxusDAerR9X++7UePQSfIoJH5gwDyM8e0ueTl2KS3x2IY0MXqIxoqCVA7MZ3f45p7ogdr81VsCydZ+9gxIxgI6uQhkOMaqafSgj9yNgnCHpQhvrKoPE92t3JbHHy/Yzx2l9cKG33XYvDCR0z7gcccn5P0xeObDDffNuukwS67Cpp1S8ksZcIZvUA89B3k8TpofLYvKVT8DQX7gOjNp9U+KdLXPfCtyjKYjl347PnUD2QY4SFmQqlowa7a+VE4lgPmgVkHYJLLIQBg1GSTk30BEU5DFE74mfuFq1D2tVSl01pwp7JjDBk3HheJe/PLI7OuVZBq+WG0oK7nnKTOY0rwxRlubXucRCSIVgvJeIDjCfcdtArUBCDjndWSAwQu+H5LPqUZxB7k0Z3fopbYfpi7aGijIdNI4bzCUyWKehzjBV7SHVSrhBw2jOz4se3GvKOe1x3J62NPss8tflp5czsw08bZlNQkKMdlmmeAwrvLxhwJGEISUC/apQP60XCsQFIvIv8hnju/pHvEvdL+G6OoVu/JhxgsCGsZB8FYMhsqD7klg55dF7qqRI0ustOaj/iK0EyDGlhmca9EpaqJPMIhnYW/B0Z23+fXtdxVyXGhIRQemOHI9ITJbIPQpxTbEefi1ms0+6Q3Cb/tuOWQ98MKGAE="
+      },
+      {
+        "type": "text",
+        "text": "I'll look this up instead of guessing. Nemotron is NVIDIA's model family, so first I need to find whether NVIDIA publishes an actual context-compaction strategy for it, and where."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01MofFji6dy2wkL9PnJZ7Nzv",
+        "name": "WebSearch",
+        "input": {
+          "query": "NVIDIA Nemotron context compaction long context agent summarization"
+        }
+      }
+    ]
+  }
+}

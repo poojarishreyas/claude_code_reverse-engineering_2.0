@@ -1,0 +1,15 @@
+{
+  "id": "dbee21e029f0a58ef5ee05c8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UP9Go5gtb7YVCV7kBZQtaH",
+        "type": "tool_result",
+        "content": "Primary Request and Intent                 12\ndetailed summary of the conversation       2\nThis session is being continued            4\npersisted-output                           6\nkeepRecent                                 3\nOutput too large                           4\ncontext collapse                           1\nreactive                                   28\n323 C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/cc/prompt.txt",
+        "is_error": false
+      }
+    ]
+  }
+}

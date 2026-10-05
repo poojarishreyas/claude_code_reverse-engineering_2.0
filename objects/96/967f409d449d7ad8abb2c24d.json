@@ -1,0 +1,15 @@
+{
+  "id": "967f409d449d7ad8abb2c24d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RwjbEEXzejBZ83njXJ7xq7",
+        "type": "tool_result",
+        "content": "# Filesystem-scenario overlay: the sandboxed filesystem stack already lives in\n# `dsh-base`, so this patch changes only the local tool-result spill\n# storage those scenarios exercise.\n\n- id: spill-local\n  name: '@deepseek-ai/dsh-spill-local'\n  config:\n    root: !!js process.env.DSH_SNAPSHOT_SPILL_ROOT ?? './.spill'\n\n- id: spill-policy\n  name: '@deepseek-ai/dsh-spill-policy'\n  config:\n    maxInlineBytes: !!js process.env.DSH_SNAPSHOT && 800 || 50000\n----\n# Keyless filesystem snapshots combine spill settings with replay. The\n# sandboxed filesystem stack already lives in `dsh-base`; the ACP row re-pins\n# `deepseek-v4-flash` for the recorded corpus.\n- id: llm-deepseek\n  name: '@deepseek-ai/dsh-llm-deepseek'\n  disabled: true\n\n- id: agent-default-model\n  name: '@deepseek-ai/dsh-agent-default-model'\n  config:\n    provider: deepseek-official\n    model: deepseek-v4-flash\n\n- id: session-persistence-jsonl\n  name: '@deepseek-ai/dsh-session-persistence-jsonl'\n  config:\n    root: !!js dshHomePath('sessions')\n    compression: none\n\n- id: agent-instructions\n  name: '@deepseek-ai/dsh-agent-instructions'\n  config:\n    maxBytes: 65536\n\n- id: system-prompt\n  name: '@deepseek-ai/dsh-system-prompt'\n  config:\n    persona: |\n      You are a coding assistant powered by the {{model}} model. Your working directory is {{cwd}}. Your bash tool runs under a file sandbox — a `[sandbox: file access denied …]` result is policy, not a command bug.",
+        "is_error": false
+      }
+    ]
+  }
+}

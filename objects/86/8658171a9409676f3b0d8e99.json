@@ -1,0 +1,15 @@
+{
+  "id": "8658171a9409676f3b0d8e99",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011HSojJZsVyPwpuSSZFzaTB",
+        "type": "tool_result",
+        "content": "\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n Test Files  6 passed (6)\n-------------------|---------|----------|---------|---------|-------------------\nFile               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s \n-------------------|---------|----------|---------|---------|-------------------\nAll files          |     100 |    99.76 |     100 |     100 |                   \n  index.ts         |     100 |       98 |     100 |     100 | 283               \n-------------------|---------|----------|---------|---------|-------------------\nERROR: Coverage for branches (98%) does not meet global threshold (100%) for packages/compaction/compaction-tool-result-pruner/src/index.ts",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "e530989ce3c6143a13dfc1c9",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQStQkKEAgSGAI4AUIIdGhpbmtpbmcSDPJ1w9RdTS23dyCJWRoMxESXIE4sAtF+TGzyIjC4b0sn06q68vq+cQrcxNIOH6b4guYfhfBY+FMwA1QG30AT5IcfOzTzYZ3JqyiHkQoq0givKgpuCiaHAxwvr9BOYfHIm9lowGQb2HACRGDrbGDG8PkOgM9OetJSuQvbBVYygYr5FtKg0KggMzuhn4CP3FCF8KSX96RBL/I6M++pQXRV9fZUqloBbGSvCtaXgpdUV0DRx5UFDvPVDaa4S5rB722LwmSO6IIFjT1h3KcssLx3L2NIDFGb3V+Rm9PSGrcwERD9+WaosmHjnne5HmvHl0iqtEGHfdlCpJ/P6GiKC2seMhQz88aBueum23gt6lX4V09IHxn3BNY6ObhbqHw5h4AfLuD8iZS9c9MNyFdiCng+diSbVxZQXnp7RF9ynSnhCchwwmXd77j8u8NmAjlkL5QqhWftZQXLz5yJMvmEEUhoZl1nHQRB8CD0Dc/FHLo1ZorzM61HtVMlR/RSEVViGACBm5NCAuwzGKVibdXgLXa6vkIgaFnzr+3xy+1fHcavNUKg3EcwMowO5hZqwTIW+ksF/zN0QUcpel5azXzpKG+faNAFbhFJHniKu6uHrdIm94rfBeWBAwSWry5MbzCXYxaV2hiV3kQR5THZDn2R4GdEa4jRaS/GX8GJdmAhedc+vA64IZL70yKeapI2sUledj4LsX1hFPGhUuprRTbEVNo3Tja+QVLTdHTmj69ef3scHW5t41wlqtFVgVT3vai+s/FLS7yP7QAEppdYDZueDATV2yzow5u0uS3xr8IeMz0jcDXuAzeTVFpWzChmMrNwNSiBE7gE4flK39wiMlUyDds5qsXw7RRdUYw3tuH/NQQIPpW6WIag6RDeTU0Jiwzr5Nm1OuIVWtlsI8fnl7RTkzWqr6LFMHBaqr/XAnr9wSoPH3lO0kzbGPYkgaXR10ek85NhsKo0mxqYAx++pyquSrcS44ziZjhpqKrB320VnCBuKPSYShjs0PwiesdmLsvy5Li15kh3sn/V90ODAg2A+GvVUGIQor15q6VbA5NoH9MxS6zSVKxry3hWDf9NkbETk0gFK6ztbwvnBag5pSlkiHcLVzMJN0JxkCwa2kuyUJbQwcH8H2Tes4kN7edQXRoaQKs7cyMMZ7hhqO4nERPYAkb5UYLlL6Pj5mazWZ29jXBtVCE/0nLJeHUJcp42yCMEfcCj1p+VsZBQeIsFs6jO7vWDAIwRTlvCylihyaZGclZt0ikYqRpPO0lC3EqQYrFnGuJSw9xj4xu52f4FiKA6dgUK1ryDLV11H1YIRKz2LKwvXXw1Mx02DWbcEfoyoFaAsBhCJ1IeVm9Pm37E1TbCkS5pR1g7eQsjav1Otglvn6OrceYvB4I8fEjmFPNDEUv7L5Ts2BPRcYmT/hPCrFYkkrgkMqXGJ5KcR6vJDCJi9Qb1gaKdgCaA4HVdEknlRbmm7EnNhY9/3WA5/ZnpERtx5WCDIKS9+OYPWzgYKLzOBRatAxc4XN4wW8HL0pQSeaF7mbIT3Wc2QG3mYmYTq+c9Wu1e2BdQPvXzdVATNeefxTkfd6wDSRgB"
+      },
+      {
+        "type": "text",
+        "text": "Here is the wording the existing spill notice uses, since a new marker would follow the same pattern."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01DPfGAHb6XVUUKtZuvoZPwn",
+        "name": "Grep",
+        "input": {
+          "pattern": "(?i)(grep|read).{0,120}(spill|file|path)|retrieval",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill",
+          "glob": "*/src/*.ts",
+          "output_mode": "content",
+          "head_limit": 15
+        }
+      }
+    ]
+  }
+}

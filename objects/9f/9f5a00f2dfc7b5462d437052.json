@@ -1,0 +1,15 @@
+{
+  "id": "9f5a00f2dfc7b5462d437052",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011ozj83obBND7tkTu22GgdD",
+        "type": "tool_result",
+        "content": "1507:  function preStep(ctx: Context, owner: Agent, signal = SIGNAL) {\n1541:    await preStep(ctx, agent(pressured, 'unconfigured-agent-fallback'))\n1545:    await preStep(ctx, agent(small, MODEL))\n1559:    await expect(preStep(ctx, agent(pressured, MODEL), AbortSignal.abort('step aborted')))\n1577:    await expect(preStep(ctx, agent(session, MODEL))).resolves.toEqual({ kind: 'enter', messages: [] })\n    owner: Agent,\n    error: Error & { code?: string },\n    signal = SIGNAL,\n    next: () => Promise<RequestErrorAction> = () => Promise.resolve(undefined),\n  ): Promise<boolean> {\n    const failure: LlmFailure = { message: error.message, code: error.code ?? 'UNKNOWN' }\n    const turn = owner.session.events.findLast(event => event.type === 'turn/start')?.data.turn ?? 1\n    return agentEvents(ctx, owner).waterfall(\n      'agent/request-error',\n      { turn, step: 1, provider: 'test', failure, retryPolicy: undefined, signal },\n      next,\n    ).then(action => action?.kind === 'retry')\n  }\n\n  function overflow(message = 'provider overflow'): Error & { code: string } {\n    return Object.assign(new Error(message), { code: CONTEXT_WINDOW_EXCEEDED_CODE })\n  }\n\n  it('compacts before a step above threshold using the durable routed model and remains idle below it', async () => {\n    const ctx = createContext()\n    const compact = new TestCompactionEngine(ctx, {\n      thresholdRatio: 0.5,\n      retainTokens: 180,\n    })\n    const pressured = conversation(4)\n    await preStep(ctx, agent(pressured, 'unconfigured-agent-fallback'))\n    expect(pressured.events.some(event => event.type === 'compaction/summary')).toBe(true)\n\n    const small = conversation(1)\n    await preStep(ctx, agent(small, MODEL))\n    expect(small.events.some(event => event.type === 'compaction/start')).toBe(false)\n    expect(compact.calls).toHaveLength(1)\n  })\n\n  it('skips pre-step pressure when the step signal is already aborted', async () => {\n    const ctx = createContext()\n    const compact = new TestCompactionEngine(ctx, {\n      thresholdRatio: 0.5,",
+        "is_error": false
+      }
+    ]
+  }
+}

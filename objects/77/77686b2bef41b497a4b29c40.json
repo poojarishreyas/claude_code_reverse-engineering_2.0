@@ -1,0 +1,20 @@
+{
+  "id": "77686b2bef41b497a4b29c40",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Vjpz9Qj5vRDZY22HCeVHpE",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\bundle\\base\\cordis.patch.yml has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01EHr8BgoFr89BJULBhXFW9f",
+        "type": "tool_result",
+        "content": "40:    \"test:snapshot\": \"vitest run --config vitest.snapshot.config.ts\",\n41:    \"test:snapshot:record\": \"DSH_SNAPSHOT=record vitest run --config vitest.snapshot.config.ts --update\",\n42:    \"test:snapshot:refresh\": \"DSH_SNAPSHOT=refresh vitest run --config vitest.snapshot.config.ts\",\n52:Every non-trivial model-, protocol-, or user-visible change adds or updates a keyless recorded-session scenario in the same PR. Web recordings live under `snapshots/web/`; core agent and tool recordings under `snapshots/session/` use the internal `test-base` driver. Expected output that is not driven by a recorded session stays with its owning app, package, or script under `tests/expected/`. [`dsh-session-snapshot`](../packages/test-support/session-snapshot/README.md) owns shared storage rules. Agent-loop, session-lifecycle, and `SessionEventMap` changes cover the backend events and durable state consumed by the browser.",
+        "is_error": false
+      }
+    ]
+  }
+}

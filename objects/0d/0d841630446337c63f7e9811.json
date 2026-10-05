@@ -1,0 +1,18 @@
+{
+  "id": "0d841630446337c63f7e9811",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSxQYKEAgSGAI4AUIIdGhpbmtpbmcSDDw/xCUbjQtW8jGmThoMKqx3EkzERlqQQ9JCIjDVVUlWCOb7V7Hem/1xpJ83ZTQSOP4hMgI8XBIIiFCis4mJ1Ff+mwR3Ple+MBR4wWoq4gWh+TuIEoozkkNTqkUS6b7AOvRiHDbdH5mINYQu4RNrs0C/7/BIya3C/bsY77xZv/fgbzJFz1XE4HT+PoWndRrGUwliTfCNSr8T3ms5nkvMQ93AxeYAbrSQLM4x9WOB3fyyJEeVYgquEz0KJJ+6TVK+PYwJC5J5uGYlScR/eAK/PIIXV2HKv1JRR7Vf5RDNfImPM0+SsxUEM0mL5VtLUOvvgeAyLXWIFBnmvr5vk+wb2u5Nz1212IUbjUxubD1mkta+ZvySWOqh60B93eu4fhtehwz+d5S5EcpKE1NqXsVBK/eKNKu/dcvvJEgOuoKT4XIyfscFj/C8+NVxUkgnESx6u79x5quZmkzIpFZdvn4eyWO1zLVb68lttwGHb0wYbVh091oux/7GMYpY1NP7UclujlR9NzaN38RzPQbspwG96iDE0ZmPaDhBNgBAf7w4dWNxzb9whG1Uv65zuQLB5g2kap9CUoWw1damXlzC5yo1aXSu+06sGOyqzVr4egTseL9L9mLag+b08DWLajHb0bTjbSonaPEBr7dTOElrOzrDfNXS77s+gxD/N8OJ3mWg8aL/j4jKJzqXnv/5eN/jbIl5j4luO5lvzXabNObvaJyx7BfJbfHgSGLEaqPuGpWo0GetABDwuDaJm5sBzlfSYY3qwN541GKqFV7j1vVfHgdWbEe5GuFUAxrS3ebawfaJycyqozWDpv0wMmpFkwL5DmXqF9Vm2f+nwFcKYJdAeAPW2vPGtKpiUO5VGnOY1018HJD6D8j/mQuamLGVHrom1+z/sczSLd7naC4WbQCKXlLWR5Gkfroy0TVEIV5kRCi/kS7dCAneXKoxaUvz/tZna9jLiGo1wau8XsNN+A9rPhuqSYjgaQWe1YNa9mR5tDuPS7jLvm1lJOqwYdpUOzOj2PnsaFc8xOnl1BAietjzWJLSzOzm62dU3VcG5IjrndKbjBUVrq7LpBa8v5q1f8DIXSCzQbsYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Yes, but it's a single agent, not a separate \"reasoning agent\" and \"action agent\". The main agent loop in `packages/core/agent-loop` follows the ReAct pattern (reason, act, observe, repeat). Its README sums it up as \"call the model, run the tools, repeat.\"\n\n**How one turn works:**\n1. **Reason:** the model thinks before answering. The harness doesn't add a special reasoning step or prompt. It uses the model's built-in thinking (DeepSeek's reasoning output). That thinking is captured as `reasoning` blocks (`packages/llm/llm/src/assembler.ts:112`) and saved to the session log. You can set how hard it thinks with `reasoningEffort` in the config or UI.\n2. **Act:** the model calls tools such as `read`, `grep`, `bash` and `edit`. In the default web setup it writes a small program that calls them through a single `run_code` tool. Calls that are safe to run together run in parallel, up to `maxParallelToolCalls: 10`.\n3. **Observe:** each tool result is added back to the conversation and the session log.\n4. **Repeat:** the loop calls the model again with those results. It stops when the model replies without calling any tools.\n\n**What it doesn't have:**\n- No separate planner that hands a plan to a separate executor. Reasoning and actions come from the same model in the same loop.\n- No hand-written \"Thought / Action / Observation\" prompt like the original ReAct paper used. Native tool calling and the model's thinking cover that.\n- No reflection or critic agent that reviews answers. The code comment in the `ralph` tool says it plainly: completion \"is a worker report, not independent evaluation.\"\n\n**Optional extras on top of the same loop:**\n- **Plan mode:** you switch it on yourself. The same agent plans first, then presents the plan with `exit_plan_mode` for your approval.\n- **Subagents and workflows:** the main agent can start child agents. Each child runs the same loop in its own context.\n- **Goals:** these keep the loop going across several rounds toward one objective."
+      }
+    ]
+  }
+}

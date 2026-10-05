@@ -1,0 +1,13 @@
+{
+  "id": "91e69ad78a5d9be82e574430",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The live measurement is running. I'll share the numbers when it finishes."
+      }
+    ]
+  }
+}

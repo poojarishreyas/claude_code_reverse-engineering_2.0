@@ -1,0 +1,14 @@
+{
+  "id": "de36bd1496c3cba07d164895",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017as9Cf31VzMmdgGMMqaj7g",
+        "type": "tool_result",
+        "content": "258\t    const truncated = await buildContinuation(ctx, meter, { ...LIMITS, restoreFileTokens: 50 }, input(session))\n259\t    expect(fileCount(truncated)).toBe(3)\n260\t    expect(texts(truncated)[0]).toMatch(/<file path=\"\\/three.txt\">\\nthree line 0\\n[^<]*\\n\\[\\.\\.\\. truncated; read the file for the rest \\.\\.\\.\\]\\n<\\/file>/)\n261\t"
+      }
+    ]
+  }
+}

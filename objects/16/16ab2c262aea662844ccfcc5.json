@@ -1,0 +1,15 @@
+{
+  "id": "16ab2c262aea662844ccfcc5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016CF3P6cTXiJd1BYFTBRFwV",
+        "type": "tool_result",
+        "content": "10:  <value present, masked>\n---structure (keys only):\nversion: <masked>\nrecords:\n  client-connection/browser-session:\n    kind: <masked>\n    payload:\n      version: <masked>\n      secret: <masked>\nrefs:\n  DEEPSEEK_API_KEY: <masked>\n  MYLYNX_API_KEY: <masked>",
+        "is_error": false
+      }
+    ]
+  }
+}

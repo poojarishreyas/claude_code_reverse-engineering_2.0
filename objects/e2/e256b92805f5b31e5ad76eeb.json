@@ -1,0 +1,15 @@
+{
+  "id": "e256b92805f5b31e5ad76eeb",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017FDr7wr39DHjR6mpqrk9w7",
+        "type": "tool_result",
+        "content": "apiKeyEnv variable name: MYLYNX_API_KEY\nset in this shell: no\nset in Windows user env: no\r\nOmniRoute /v1/models HTTP 401",
+        "is_error": false
+      }
+    ]
+  }
+}

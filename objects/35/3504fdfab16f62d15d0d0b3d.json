@@ -1,0 +1,15 @@
+{
+  "id": "3504fdfab16f62d15d0d0b3d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PVACD2bKuxBLbH1ZLf3en7",
+        "type": "tool_result",
+        "content": "480:  static create(id: SessionId, seed?: readonly SessionEvent[], header?: SessionHeader): Session {\n481-    return new Session(id, seed, header)\n482-  }\n483-\n484-  /**\n485-   * Restore a detached session by taking ownership of fresh persistence values.\n486-   * The storage format, event envelopes, sequence continuity, surface transitions,\n28:  FsTargetKey,",
+        "is_error": false
+      }
+    ]
+  }
+}

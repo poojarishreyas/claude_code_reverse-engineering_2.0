@@ -1,0 +1,13 @@
+{
+  "id": "ed0512223e820d69b3ef2ac9",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The workspace is prepared and dependencies are installing. The agent starts after the tests are confirmed to fail."
+      }
+    ]
+  }
+}

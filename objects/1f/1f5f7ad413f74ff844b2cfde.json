@@ -1,0 +1,25 @@
+{
+  "id": "1f5f7ad413f74ff844b2cfde",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Vx2oRj1wZMgAt1HzxA1Kej",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01Jma6cYicdZLj6q2swKGBe1",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_016XAnbW4w5X18nBf5cj8Zm1",
+        "type": "tool_result",
+        "content": "     × names the stored transcript of the condensed span in the checkpoint 61ms\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n FAIL  |thread-safe| packages/compaction/compaction-basic/tests/compaction-basic.spec.ts > optional model-free tool-result pruning > names the stored transcript of the condensed span in the checkpoint\nError: compaction still above threshold after 2 compaction attempts (1557 estimated tokens >= threshold 1000)\n      Tests  1 failed | 218 passed (219)",
+        "is_error": false
+      }
+    ]
+  }
+}

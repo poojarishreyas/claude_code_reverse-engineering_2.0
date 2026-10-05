@@ -1,0 +1,27 @@
+{
+  "id": "8db6496fab7499f6bcba61cd",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "text",
+        "text": "I'll update the defaults test, then write tests for the new module. For those I need a fake filesystem, so first I'll check how other tests provide one."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01CiLCGQbZz6PxvXvTfWauXH",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && grep -rln \"ctx.set('fs'\\|extends FileSystem\\|provide('fs'\" packages --include=*.spec.ts | head -5; grep -rn \"ctx.set('fs'\\|\\.set('fs'\" packages --include=*.spec.ts | head -3",
+          "description": "Find how tests fake the fs service"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "e782c1df0297aab8413361c6",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01GGAE4V6ZyXmQ669TDkuUeZ",
+        "type": "tool_result",
+        "content": "packages/context/agent-instructions/tests/agent-instructions.e2e.ts\npackages/core/agent-loop/tests/request-cache.e2e.ts\napps/server/tests/github-webhook-real.e2e.ts\napps/server/tests/web-browser-open.expected.e2e.ts\napps/web/tests/hmr-live.e2e.ts\napps/web/tests/onboarding-deepseek-config.e2e.ts\napps/web/tests/onboarding-usable-provider.e2e.ts\napps/web/tests/smoke-real.e2e.ts\n---\n---\ndescription: \"The test-support group map: keyless test harnesses, LLM mock and replay servers, and Loader smoke helpers for developers writing repository tests.\"\nkind: \"package-group\"\n---\n\n# packages/test-support\n\n## Summary\n\nThe test-support group gives repository tests deterministic, keyless ways to exercise the real product. It includes Loader application harnesses, session-log snapshot adapters, a replay LLM plugin, and a scriptable OpenAI-compatible fault server. Each package is support-tier infrastructure; a packag\n\n## Table of Contents\n\n- [Packages](#packages)\n- [Related documentation](#related-documentation)\n- [Dev Note](#dev-note)\n\n-----\n\n<a id=\"packages\"></a>\n## Packages\n\n| Package | Role |\n|---|---|\n| [`session-snapshot`](session-snapshot/README.md) | Provides session-log snapshot support and protocol adapters for profile-driven tests |\n| [`agent-loop-testkit`](agent-loop-testkit/README.md) | Provides the shared prerequisite services for tests that exercise the concrete AgentLoop |\n| [`client-runtime`](client-runtime/README.md) | Provides the jsdom slot test bench for browser feature specs |\n| [`loader-smoke`](loader-smoke/README.md) | Boots Loader-composed applications and drives fixture turns for smoke tests |\n| [`llm-mock-server`](llm-mock-server/README.md) | Provides a scriptable OpenAI-compatible fault server for recovery tests |\n| [`llm-replay`](llm-replay/README.md) | Replays recorded model streams for keyless tests and demos |",
+        "is_error": false
+      }
+    ]
+  }
+}

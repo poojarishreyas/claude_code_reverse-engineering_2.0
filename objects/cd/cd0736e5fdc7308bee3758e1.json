@@ -1,0 +1,25 @@
+{
+  "id": "cd0736e5fdc7308bee3758e1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_015BkXWFEQkRSuiMG1AkjwXF",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\README.md has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01QWZTgGG3iG47Vsn6poRmer",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\README.md has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_013vHModiycWWY47fNYfgPib",
+        "type": "tool_result",
+        "content": "### Failure modes\n\nBest-effort degradation applies to both arms: no session owner, no backend, a save rejection, or no within-cap replacement logs a warning and keeps the original content. Load-time validation rejects a negative or fractional `maxInlineBytes` so a bad config fails the deployment, not every oversized call.\n\n</details>\n\n-----",
+        "is_error": false
+      }
+    ]
+  }
+}

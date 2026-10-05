@@ -1,0 +1,8 @@
+{
+  "id": "7e5fbb61c4063d74c65b7845",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": "<total_tokens>14880908 tokens left</total_tokens>"
+  }
+}

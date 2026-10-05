@@ -1,0 +1,8 @@
+{
+  "id": "f9a0f516f65128d3c5288198",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\desktop\\Elemental_harness\\packages (was C:\\Users\\shrey\\desktop\\Elemental_harness)\n\n<total_tokens>14998961 tokens left</total_tokens>"
+  }
+}

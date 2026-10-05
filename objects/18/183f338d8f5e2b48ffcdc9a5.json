@@ -1,0 +1,15 @@
+{
+  "id": "183f338d8f5e2b48ffcdc9a5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016Mqk1w6z3pm6V4j1E8TwKv",
+        "type": "tool_result",
+        "content": "The local backend ([dsh-spill-local](../../packages/spill/spill-local)) writes under `<root>/session-<hash>/<random>-<safeName>` — a configured or lazily-created private (0700) root, a `sha256(sessionId)` session subdir, and an exclusive owner-only (`open(path, 'wx', 0o600)`) write so a planted symlink cannot redirect it. Its `locator` is the local path and its `retrievalHint` tells the model to use `read` or `grep` on that path. The policy consumer ([dsh-spill-policy](../../packages/spill/spill-policy)) replaces an over-`maxInlineBytes` plain-text final result with a retention-library head/tail preview plus the spill reference, best-effort: a save failure keeps the original inline result rather than turning a successful call into an `isError`.\n\nThe `spill/` group keeps oversized tool output out of the model's context without losing it: when a tool result exceeds a deployment's byte cap, the full text is saved to a spill artifact and the model sees a bounded preview plus a locator it can read or search later. The family splits into three packages — the storage service in `spill/`, the local filesystem backend in `spill-local/`, and the result policy in `spill-policy/` that decides when a final tool result is too large. Spilling is opt-in and best-effort: the policy acts only when `maxInlineBytes` is configured, and a storage failure leaves the original result visible. The group owns storage and result replacement only; preview mechanics live in `dsh-output-retention`, and provider resource caps remain separate.",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "7cfab0fc923c1517bed39cb1",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01F5DTwK2y9dyYzWTbPeeX9H",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\nv\\labs-OO-Agents\\src\\nooa\\agents\\summarization.py",
+          "offset": 420,
+          "limit": 430
+        }
+      }
+    ]
+  }
+}

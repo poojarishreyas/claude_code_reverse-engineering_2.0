@@ -1,0 +1,15 @@
+{
+  "id": "e5cf75384e1f2a8ed188a5b9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017RgMiSu3gzEcKEcQAkkanz",
+        "type": "tool_result",
+        "content": "{\r\n  \"name\": \"@anthropic-ai/claude-code\",\r\n  \"version\": \"2.1.282\",\r\n  \"bin\": {\r\n    \"claude\": \"bin/claude.exe\"\r\n  },\r\n  \"scripts\": {\r\n    \"postinstall\": \"node install.cjs\",\r\n\r\n2.1.281 (Claude Code)\nName            Length\r\n----            ------\r\nbin                   \r\nnode_modules          \r\ncli-wrapper.cjs 4997  \r\ninstall.cjs     7196  \r\nLICENSE.md      147   \r\npackage.json    1476  \r\nREADME.md       2037  \r\nsdk-tools.d.ts  168252\r\n--- exe version\nShell cwd was reset to C:\\Users\\shrey\\desktop\\Elemental_harness",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "37555957dc913322b624c0a0",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UkWgFmR2ybEjhTdu91sVqF",
+        "type": "tool_result",
+        "content": "3:\"\"\"RepoTools — code navigation that returns ShellTools Match anchors.\n31:class FileMapResult:\n44:    def text(self) -> str:\n50:    def __str__(self) -> str:\n55:class RepoMapResult:\n66:    def text(self) -> str:\n69:    def __str__(self) -> str:\n74:class SymbolSearchResult:\n85:    def text(self) -> str:\n95:    def __str__(self) -> str:\n100:class ReferenceSearchResult:\n111:    def text(self) -> str:\n121:    def __str__(self) -> str:\n126:class RepoResult:\n137:    def text(self) -> str:\n148:    def __str__(self) -> str:\n151:    def __len__(self) -> int:\n154:    def __bool__(self) -> bool:\n157:    def __iter__(self) -> Iterator[Match]:\n160:    def __getitem__(self, index: int) -> Match:\n352:    \"\"\"Extract symbol definitions from a file using tree-sitter AST (with regex fallback).\"\"\"\n397:class RepoTools(Skill):\n398:    \"\"\"Find code locations as ShellTools ``Match`` anchors.\n411:    def __init__(\n426:    def __repr__(self) -> str:\n432:    def root(self) -> Path:\n433:        \"\"\"Repository root this tool is scoped to.\"\"\"\n438:    def session(self) -> BashSession | None:\n439:        \"\"\"The shared bash session, if one was wired in (else None).\"\"\"\n442:    async def symbols(\n448:        \"\"\"Find definitions under a file or directory.\n492:    async def refs(\n498:        \"\"\"Find references/usages of a symbol, excluding definitions.\n512:    async def _check_rg(self) -> bool:\n513:        \"\"\"Check if rg (ripgrep) is available, caching the result.\"\"\"\n527:    async def _filemap(self, path: str, max_symbols: int = 200) -> FileMapResult:\n528:        \"\"\"Show the structure of a file: function and class definitions with line numbers.\n571:    async def _repo_map(\n578:        \"\"\"Generate a repository map showing key files and their top-level symbols.\n672:    async def _search_symbol(\n160:    def __getitem__(self, index: int) -> Match:\n161:        return self.matches[index]\n404:    Results print like search output and index/iterate as editable matches::",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "8c133713b4d5e6475db0bc3c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "tool_use_id": "toolu_018nC1VmLtzPb7pbw71doPXu",
+        "content": [
+          {
+            "type": "text",
+            "text": "[Tool references removed - tool search not enabled]"
+          }
+        ]
+      }
+    ]
+  }
+}

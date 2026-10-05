@@ -1,0 +1,8 @@
+{
+  "id": "55319adde90f13a4832c2e7a",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": "The user hasn't heard from you in a while — say in a few words what you're doing, then continue.\n\n<total_tokens>14978438 tokens left</total_tokens>"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "2cd40ed6988e1fc6e2a32fdc",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01W9XUd7PEKwwtUH14qgiWTR",
+        "type": "tool_result",
+        "content": "autoCompact                              49\nmicrocompact                             9\nCompact summary                          2\ncontext window                           50\nsummarize the conversation               0\nCLAUDE_AUTOCOMPACT_PCT_OVERRIDE          6\nDISABLE_AUTOCOMPACT                      0\nDISABLE_MICROCOMPACT                     0\nOld tool result                          4\ntool_result_cleared                      0\nclear_tool_uses                          0\ncontext_management                       17\ncompact_boundary                         35",
+        "is_error": false
+      }
+    ]
+  }
+}

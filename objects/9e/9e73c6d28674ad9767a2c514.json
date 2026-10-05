@@ -1,0 +1,15 @@
+{
+  "id": "9e73c6d28674ad9767a2c514",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01QEAMFnrbyc9tseBXg963aP",
+        "type": "tool_result",
+        "content": "  let kept = text\n  while (kept.length > 0 && estimateText(meter, `${kept}${TRUNCATED_NOTE}`) > maxTokens) {\n    const cut = Math.floor(kept.length * 0.8)\n    const lineEnd = kept.lastIndexOf('\\n', cut)\n    kept = kept.slice(0, lineEnd > cut / 2 ? lineEnd : cut)\n  }\n  return `${kept}${TRUNCATED_NOTE}`\n    throw new Error(\n      `summary is not smaller than the shadowed content (${framedSummaryTokenCount} estimated framed tokens >= ${prepared.shadowedRouteTokenCount})`,\n    )\n  }\n  const extra = dependencies.continuation === undefined\n    ? []\n    : await dependencies.continuation({\n      session,\n      messages: prepared.input.messages,\n      endSeq: prepared.end,\n      compactionId,\n      budgetTokens: prepared.shadowedRouteTokenCount - framedSummaryTokenCount - 1,\n      ...signal === undefined ? {} : { signal },\n    })\n  const extended = createUserMessage({ content: [...framed, ...extra], source })\n  // Block estimates are summed separately, so recheck the whole message and\n  // fall back to the bare summary if the combined price no longer shrinks.\n  const checkpointMessage = extra.length > 0\n    && dependencies.meter.estimateMessage(extended) < prepared.shadowedRouteTokenCount\n    ? extended\n    : baseMessage",
+        "is_error": false
+      }
+    ]
+  }
+}

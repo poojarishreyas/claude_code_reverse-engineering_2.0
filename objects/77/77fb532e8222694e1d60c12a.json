@@ -1,0 +1,28 @@
+{
+  "id": "77fb532e8222694e1d60c12a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSwQUKEAgSGAI4AUIIdGhpbmtpbmcSDEQqoojuwgROULVAxxoMMyxJedRdi8Hm+WM2IjDKzgxDXxw6fDA+x8qXzGAJbNWKROhA+SiWnHQ1uWfVirPUW/9G9/pPecmcHJgd4wgq3gQbfMz/wlak8Om7CfQt2QMTLufpyfeKa2aXoVO3/uLtQrXRDalPpwggS8hdkPvf1SxwyT0hokeyPCyDThmNzPakrYW8Y+qis6Sfk/d1j7gCN2ctGTM+q4xw50lxyAPGMHfBl0xE2nezPkRfNasydfr9oY4wIEAMdGM7VZOY0Inlu1lv3nK4KZHmK+h0mwneYG1I3RWe+cEqbKtLPNK6Hac/R6B9H/1Bh4HCISxiRlIKFBxVYnm/rspSggK7iLLF3K38+NsMfOMuukMsF1fL8OejFYOTiBStjlQEbRlcBgAol/Gtg34tkE2s75+D7yscoLIegFP07IEaoioimI8z350Uex+h2kdiK8+vkf1Yhu27bD3ECBFjCik5ZqsR6UcktPtNe2yMtVH48vIXdgyOFJKK46loit2u3keYAbwr6QAyUfsBbkzz0ZtBzlgstwjlfBSAKOoYrJbPCEZg+J3JF5gqcwODEfwI0HGfxZepQQIOY4kXHXiBc7b4CJzuHeV5seAvz99yCBKDjVn/w3fcB0fG8VkmGgD85hudBgB01XC3EocRvFCvvFQYt5oTW6R8tiP1a6gs3UNNW3nD5Nyd/5cLkYK+ayuuY4jOvvzWQSkGbfAGXIcBPTsDWk2KmsXfLa1oTRtsnTVM9wcidYHp/Ycyi8jeDSi6L+DVDYEjFYEJczfTjvYQlSidJ5D6Yo/HVqNzVgvUAd/t/IX1HzjM6WLsNZiZAvGv7OU1MwQOm1YaK+u6h13zFs4sSmhdA57IrgHZoxjXWEzvxGJOTmNHs0vWJqfmRF/t44eSdS/n3osYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Rather than rely on a web summary, I'll pull opencode's source straight from GitHub so I can quote the exact code."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01RocePVbe1U5r3VMYQh8MsM",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"$TEMP\" 2>/dev/null; D=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/opencode\"; rm -rf \"$D\"; git clone --depth 1 --filter=blob:none --sparse https://github.com/sst/opencode \"$D\" 2>&1 | tail -2; cd \"$D\" && git sparse-checkout set packages/opencode/src/session packages/opencode/src/agent 2>&1 | tail -2; git log -1 --format='%H %cd %s'; git remote get-url origin; ls packages/opencode/src/session packages/opencode/src/agent packages/opencode/src/session/prompt 2>/dev/null",
+          "description": "Sparse-clone opencode session and agent source",
+          "timeout": 180000
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "1ed1b4f073e5d8309aec40ce",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01D9ocX6RW7rQJraJx7bWPUp",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\src\\index.ts has been updated successfully. (file state is current in your context — no need to Read it back)"
+      },
+      {
+        "tool_use_id": "toolu_012CttzmYcHwqzb7F5PecwTH",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\src\\index.ts has been updated successfully. (file state is current in your context — no need to Read it back)"
+      },
+      {
+        "tool_use_id": "toolu_01CXfebUfzrCccifVeenjVwk",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\src\\index.ts has been updated successfully. (file state is current in your context — no need to Read it back)"
+      },
+      {
+        "tool_use_id": "toolu_01S7f8mpdSXkTGuNxaV32vR4",
+        "type": "tool_result",
+        "content": "4: * result's UTF-8 size exceeds `maxInlineBytes`, it saves the FULL text to a\n13: * A second arm applies the SAME cap to the durable log: the\n20: * - Omitted `maxInlineBytes` ⇒ the plugin registers nothing (a true no-op).\n62:   * The model-facing context cap for a plain-text tool result, in UTF-8 bytes.\n66:  maxInlineBytes?: number\n69:   * the storage notice — in UTF-8 bytes. Must not exceed `maxInlineBytes`.\n70:   * Omitted spends the whole `maxInlineBytes` on the replacement.\n82:  maxInlineBytes: z.number(),\n118:  const maxInlineBytes = config.maxInlineBytes\n120:  if (maxInlineBytes === undefined) return\n121:  // Validate at LOAD, not per call: a negative/fractional cap would reach\n124:  if (!Number.isInteger(maxInlineBytes) || maxInlineBytes < 0) {\n125:    throw new Error(`spill-policy: maxInlineBytes must be a non-negative integer (got ${maxInlineBytes})`)\n127:  const previewBytes = config.previewBytes ?? maxInlineBytes\n128:  if (!Number.isInteger(previewBytes) || previewBytes < 0 || previewBytes > maxInlineBytes) {\n130:      `spill-policy: previewBytes must be a non-negative integer no larger than maxInlineBytes (got ${previewBytes})`,\n134:  const cap: number = previewBytes\n139:   * owner, no backend, storage failure, or no within-cap replacement).\n176:    // Reserve the notice's byte cost INSIDE maxInlineBytes so the replacement\n177:    // (preview + blank line + notice) never exceeds the documented cap — a naive\n179:    // larger than the cap, and for a marginally-over result even larger than the\n185:    const previewBudget = Math.max(0, cap - reserve)\n189:    // Invariant: the policy NEVER emits a replacement larger than the cap. When\n190:    // the notice alone exceeds maxInlineBytes (a tiny cap or a long spill root),\n191:    // there is no within-cap replacement, so keep the inline content — spilling\n192:    // would break the advertised cap. (A within-cap replacement is always\n193:    // smaller than the original, which is > cap by the entry condition, so this\n196:    if (Buffer.byteLength(replacedText, 'utf8') > cap) {\n197:      ctx.logger.warn(`spill-policy: spill notice for ${toolName} exceeds maxInlineBytes; keeping the inline content`)\n216:    if (totalBytes <= maxInlineBytes) return decision\n238:    if (totalBytes <= maxInlineBytes) return content",
+        "is_error": false
+      }
+    ]
+  }
+}

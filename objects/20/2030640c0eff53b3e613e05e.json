@@ -1,0 +1,28 @@
+{
+  "id": "2030640c0eff53b3e613e05e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSvwcKEAgSGAI4AUIIdGhpbmtpbmcSDGiJYS1YVNZYLszHmRoMUMMTIKqSYMikmy9TIjDaL+PlPi0GygsU1fb1T+q2kYZgvmfZS3fjbf0zY1qMye7E0WeJ1DMa9/A6G1g481Eq3AaKNF7YTpWPQXpkv0TL/uDwF4tkIneeXlmAVZlPoxxxa54vH9OrMo+7+iz6Przpmk0+zTvEq9PjSb8VzFceb0qyDWo9FYv671hvmoxBDrUuRVgXc3GPBt+mxwO6Y92pj1ACZehpx++sYFAxn79VZ1FfHLhuzYPGoeulvEw0MoGKP8PcJVx9LbOnJP36yCkOb0Kc13jRfcrPzfsFULPIEumwhwdD+94kAbOdwcYMD7oB82+NE9y+d7TP5XPbujb68VrwwqN646guaNXgDgDyAdXgJ3Mtw8P700Zm8ZN6K1zwacE5f0QCcedWoJOwOZyxCJL2N3s0kNHno2afkdoR4Ss1pKyvu03i0lo7Yq7r51V7bRH6ie9gt4b6E/UROBzgHrdRakZshkn5m9N/D51MlJpixpNbOPyMsDBgEbhn07c5tflLbNA3/l2u1RwTjT7PqhuuLtqqfzmgniPm/3D3J0XUjoQxeo9niH2uqIA2IsqMAqlJxZgpi1t67kEYLB7vm6Phjdn1YZ4q4CUEyX4ag4D+bYRK/qppEBGEikrDMwMwDbdrbV7Aoa/NG8lbrfUqPNccoAwYbVGJj/SEW7ong+vOz+/5dhYmvuocxdJhsLV35WjNPi+1u6IFAnSAf3tbJvESgqzrpAgG2CJ9nqPyAvg9KI9ggagTsZ5yvkgFE17hbhrlW128nnWywYiDFiSgSrp/yMfZvtQOEWDjhVs0jTmlKNNxWzChoze/PmuKAJ8aZeEOU9Kub3InIdyVbYM32rsF2IEhZeuAIQPMEkz/yaBv0VdL6Ek4orHE4I/X9VbW2ZUlDXqSGiyNcupctSynt2glZ6sMCVVqCQIlA7SoARp99AGFYH/UU99s7uc//rh1kFdzloEueFKa1ITcmRY2Gl8Qk+LygFqaIpeJkcuhLf9O8N7nyndhiae7h9RLcQDwn+bHH8j0amS0nhk++Cw/BL1VV8U9F03wZy05+HW5MgtGDzx4IeKNSyRA8+7IvZ5XBSsGIsDWQCqKxaClAda0O7E/VrG/LDcdxdpDEM1zysDABisJHK2y8vEJIkaFI5MEPitF+lS07PlCD6w5nCnt63yiTU3rViKKe5yWMqv0l2tudh5OJYvFEHuByDjaUXSeOdcmfUwVoPhGVTxiIxgB"
+      },
+      {
+        "type": "text",
+        "text": "The summary prompt is built in a separate `core` package. I'll fetch that, and also check where prune and the overflow check are called."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_016eMXVYTwVt4nEHc3daELEc",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/opencode\" && git sparse-checkout add packages/core/src/session packages/core/src/v1/config 2>&1 | tail -1; ls packages/core/src/session | head -30; echo ---; grep -rn \"compaction.prune\\|\\.prune(\\|isOverflow(\\|compacted\\b\\|Old tool result\\|filterCompacted\\|tail_start_id\" packages/opencode/src/session/prompt.ts packages/opencode/src/session/message-v2.ts packages/opencode/src/session/processor.ts 2>/dev/null | head -40",
+          "description": "Fetch core compaction source and find call sites",
+          "timeout": 120000
+        }
+      }
+    ]
+  }
+}

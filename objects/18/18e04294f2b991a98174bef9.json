@@ -1,0 +1,15 @@
+{
+  "id": "18e04294f2b991a98174bef9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012cAjR2LgRtBbn8AmE8s8B2",
+        "type": "tool_result",
+        "content": "packages/compaction/compaction-basic/README.md:10:`dsh-compaction-basic` keeps long agent conversations working near the model's context limit. As token pressure builds, it automatically condenses the oldest part of the \npackages/compaction/compaction-basic/README.md:90:- **Stored transcript** — with a `ctx.spillStore` backend such as `dsh-spill-local`, the condensed span is saved as a plain-text transcript, and the checkpoint names th\npackages/compaction/compaction-basic/README.md:93:Both are best-effort and bounded: the checkpoint must still cost fewer tokens than the span it replaces, so pieces that would break that are left out, transcript first in\npackages/compaction/compaction-basic/README.md:151:| [`src/continuation.ts`](src/continuation.ts) | Checkpoint recovery context: stored transcript, recently read files, budget pricing |\npackages/compaction/compaction-basic/README.md:181:After a successful step crosses the threshold, oversized tool results are first rewritten when the optional pruner is loaded and its pressure safeguards allow it. If sum\npackages/compaction/compaction-basic/README.md:191:Model-free pruning can avoid the auxiliary call entirely; otherwise it reduces that call's transcript before the summary replaces an older range. The replacement reduces\npackages/compaction/compaction-basic/README.md:271:- **Stored transcripts are not tied to commit** — the transcript is saved before the checkpoint commits, so a compaction that later fails or is cancelled leaves an orp\n.agents/notes/implemented/feature/2026-09-29-checkpoint-transcript-and-restored-files.md:1:# Agent Note: Compaction checkpoints point to a stored transcript and re-attach recently read files\n.agents/notes/implemented/feature/2026-09-29-checkpoint-transcript-and-restored-files.md:9:Claude Code (v2.1.281, read from the installed binary) handles both: its continuation message says \"If you need specific details \n.agents/notes/implemented/feature/2026-09-29-checkpoint-transcript-and-restored-files.md:15:- **Stored transcript.** With a `ctx.spillStore` backend, the condensed span's messages are rendered as a labeled plain-text tra\n.agents/notes/implemented/feature/2026-09-29-checkpoint-transcript-and-restored-files.md:17:- **Shrink guarantee.** The bare framed summary must still price below the span it replaces. The continuation then receives the \n.agents/notes/implemented/feature/2026-09-29-checkpoint-transcript-and-restored-files.md:23:**Point the model at the session log instead of storing a transcript.** Rejected: logs are compressed by default and in every sh\n.agents/notes/implemented/feature/2026-09-29-checkpoint-transcript-and-restored-files.md:25:**A `history_read` tool over the log.** This is the [recallable compaction proposal](../../proposed/feature/2026-07-06-recallabl",
+        "is_error": false
+      }
+    ]
+  }
+}

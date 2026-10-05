@@ -1,0 +1,15 @@
+{
+  "id": "a13cf470fb6522206a79990f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WxcEZPiBVmN8ZAx3ER9GbT",
+        "type": "tool_result",
+        "content": "201:_ARCHIVE_TARGET_UTILIZATION = 0.60\nsrc/nooa/config/summarizer_config.py:19:    preserve_recent: int = 10\nsrc/nooa/config/summarizer_config.py:20:    target_chars: int = 1000\nsrc/nooa/config/summarizer_config.py:42:    target_chars: int = 1000\nsrc/nooa/interactive.py:174:    ``max_tokens=None`` uses ``threshold_fraction`` of the usable input window\nsrc/nooa/interactive.py:181:    threshold_fraction: float = Field(default=0.75, gt=0, lt=1)\nsrc/nooa/interactive.py:182:    preserve_recent: int = 10\nsrc/nooa/interactive.py:183:    target_chars: int = 4000\nsrc/nooa/interactive.py:212:    threshold_fraction: float = _SUMMARIZER_BUDGET_PCT,\nsrc/nooa/interactive.py:221:    return context_budget(llm, threshold_fraction, fallback_reserve=fallback_reserve)\nsrc/nooa/interactive.py:237:            threshold_fraction=summarizer._automatic_context_budget_percent,\nsrc/nooa/interactive.py:262:            threshold_fraction=config.threshold_fraction,\nsrc/nooa/interactive.py:270:            preserve_recent=config.preserve_recent,\n====\n42:class CaptureConfig(BaseModel):\n104:class MediaCaptureConfig(BaseModel):\n141:class FormatConfig(BaseModel):\n177:class TruncationConfig(BaseModel):",
+        "is_error": false
+      }
+    ]
+  }
+}

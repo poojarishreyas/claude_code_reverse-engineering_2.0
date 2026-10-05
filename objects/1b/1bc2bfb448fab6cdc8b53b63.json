@@ -1,0 +1,15 @@
+{
+  "id": "1bc2bfb448fab6cdc8b53b63",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01AVL15KbMSEXXwCJerV27AH",
+        "type": "tool_result",
+        "content": "file:///C:/Users/shrey/Desktop/Elemental_harness/node_modules/.pnpm/tsx@4.22.4/node_modules/tsx/dist/loader.mjs\nexit=0\n{\"type\":\"request/header\",\"config\":{\"provider\":\"mylynx\",\"model\":\"lynx harness\"}}\n{\"type\":\"turn/end\",\"data\":{\"turn\":1,\"reason\":{\"kind\":\"error\",\"error\":{\"message\":\"oc/big-pickle: auth — [403]: Error from provider (Console): OpenCode's free tier can only be used from within OpenCode (HTTP 403); oc/muse-spark-1.2-contributor-free: auth — [403]: Error from provider (Console): OpenCode's free tier can only be used from within OpenCode (HTTP 403); oc/mimo-v2.5-free: auth — [403]: Error from provider (Console): OpenCode's free tier can only be used from within OpenCode (HTTP 403); openrouter/anthropic/claude-fable-5: model — [402]: This request requires more credits, or fewer max_tokens. You requested up to 32768 tokens, but can only afford 170. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account (HTTP 402)\",\"code\":\"AUTH\"}}}}\nRESULT {\"type\":\"result\",\"sessionId\":\"session-6a858d9b-59c0-476a-9320-211b3630093d\",\"output\":\"\",\"usage\":{\"inputTokens\":0,\"outputTokens\":0}}",
+        "is_error": false
+      }
+    ]
+  }
+}

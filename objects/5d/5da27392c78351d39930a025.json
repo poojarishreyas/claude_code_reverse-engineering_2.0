@@ -1,0 +1,18 @@
+{
+  "id": "5da27392c78351d39930a025",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSwAQKEAgSGAI4AUIIdGhpbmtpbmcSDFGzcrcowlXbMy9liRoMUHnacIeSLPnH6+pVIjBP4IaEqKqqewA9hKVDVMimv9H7fnzu2ryAT9EmJQgASrU6Fta5j3lPRQBP24tuZAYq3QN/r8sWDjNuCqp1ExYMZE1c5hI29X6jOdFdfKOsEe9NZB9BFaNz6Ov/kIJoaYZVpzIVlzCjRqSkTmcZWOw3v2xZMKk/tb9Brv3oFqvuKw0RLc2vzErBBFLa9xA7/bWVxYm6zT4zUMZaaiuW8wWpiPrcIrRpdgVwCqG5GBscc9/I6M4UIBniZPbkmzbfyL1FEtPjW2kDJ/hxsiJwjkXWQlOOt6uQHZf8ST7zWfuAykpNj6IuUV3eOIEe2oZSh9A1qOZDksq2fwLiKBEGV86z1n35B88eykxgL6uqsbMseoA2Xtc9GaeMziXSB+TOc00x67EULokc5xXjGme1dTu5kAwSp3lz8Gej9lC5nAIbsM8HtipjGx/8gsOX26d8jZFylKGtWT4Fl3yl7quK9NabrTr4KOzLnceFkZM+5vpxo1MnhozKUvVgfIC8ACVhiU5ipTxtZAYO4lrow8vPmshKU4lnVR8p2byon2uhBEmYRmQL4+wsemEQPd0dVCbvZDTjbPyUFUZIs0V3Kh7ftSoi+yIgNmRjConawQgdbhfMY0ToFZMcEJGcWd03bHx4gG/CHafm1uNFjeZZkN7SAYl0Nx17/wJv7pMySNlFp4IhRnPzeemvxPHqEz7xUOkDp/IYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "The surface stores only two things, both numbers. It holds no text or message content. Its type is `SessionSurface` in `packages/core/session/src/surface.ts:137-142`:\n\n```ts\ninterface SessionSurface {\n  readonly nodes: readonly number[]      // seq numbers of the events the model sees, in order\n  readonly replaceGeneration: number     // how many replacements (compactions/prunes) have happened\n}\n```\n\n**1. `nodes`: a list of event numbers.**\n- Each number is a `seq`, an event's position in the event log, for example `[20, 12, 15]`.\n- The order is the order the model sees the messages.\n- To get the actual content, the code looks up `session.events[seq]`. The surface only points, it never copies.\n\n**2. `replaceGeneration`: a counter.**\n- It goes up by 1 each time a range on the surface is replaced (a compaction summary or a pruned tool result).\n- It tells other code \"the visible conversation was rewritten\":\n  - `deriveMessages()` keeps a cache of built messages and rebuilds it only when this number changes (`session/src/index.ts:727-731`);\n  - overflow recovery retries only if this number went up, which proves something was actually shrunk.\n\n**Only three event types can be on the surface** (`surface.ts:15-19`): `user/message`, `assistant/message` and `tool/result`. Everything else (turn markers, `tool/call`, request headers, compaction bookkeeping, spill info) lives only in the log and is never on the surface.\n\n**Example:**\n```\nevents log:  0 turn/start, 1 user, 2 step/start, 3 assistant, 4 tool/call, 5 tool/result, ... 20 summary\nsurface:     nodes = [20, 12, 15], replaceGeneration = 1\n```\n\nThat means the model sees event 20 (the summary), then events 12 and 15, and one replacement has happened so far."
+      }
+    ]
+  }
+}

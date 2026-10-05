@@ -1,0 +1,18 @@
+{
+  "id": "4c5b1811f6ed76c39ff95dfe",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_017RgMiSu3gzEcKEcQAkkanz",
+        "name": "PowerShell",
+        "input": {
+          "command": "$p=\"$env:APPDATA\\npm\\node_modules\\@anthropic-ai\\claude-code\"; if (Test-Path $p) { Get-Content \"$p\\package.json\" -TotalCount 8; Get-ChildItem $p | Select-Object Name,Length } else { \"no npm package dir\" }; \"--- exe version\"; & \"$env:USERPROFILE\\.local\\bin\\claude.exe\" --version",
+          "description": "Inspect the npm package and exe version"
+        }
+      }
+    ]
+  }
+}

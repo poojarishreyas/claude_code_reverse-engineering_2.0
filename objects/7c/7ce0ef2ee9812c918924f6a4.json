@@ -1,0 +1,21 @@
+{
+  "id": "7ce0ef2ee9812c918924f6a4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01Wdu1oYmQYUbhV1FSpyUBJF",
+        "name": "Grep",
+        "input": {
+          "pattern": "(?i)guidance|full output|saved",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill",
+          "glob": "*/src/**/*.ts",
+          "output_mode": "content",
+          "head_limit": 15
+        }
+      }
+    ]
+  }
+}

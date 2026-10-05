@@ -1,0 +1,8 @@
+{
+  "id": "a2cbea0e91897cf8f39aeeb3",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "ok what if we summarise the tool call and add filepath?"
+  }
+}

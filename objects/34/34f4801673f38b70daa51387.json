@@ -1,0 +1,45 @@
+{
+  "id": "34f4801673f38b70daa51387",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WxPSr1kkLjG4tC4L5c5BMX",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01DjuN2Yt1chpvyZwNUz4PEc",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_0144irKAkZpoAtJ4TyZ4EsP6",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01VfcoXtnHmagW3khZsDoKf4",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01FsAY8JRpYVw8fvQUzvPoYR",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_014d8PvyGJwgCuZRcmxigggR",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01Gq3RkjpWbdmF8f91YeEcbH",
+        "type": "tool_result",
+        "content": "10:`dsh-compaction-basic` keeps long agent conversations working near the model's context limit. As token pressure builds, it automatically condenses the oldest part of the conversation into a summary and keeps the recent part intact; after a context-overflow error it condenses and retries. You can also condense on demand with `/compact` from `dsh-command-compact`, and mount `dsh-compaction-tool-result-pruner` to trim oversized tool outputs first. Condensation costs one extra model request that reads the selected history and writes the summary; only the summary text is kept. It condenses derived history only — it cannot shrink the system prompt, tools, or session prefix, and one indivisible unit such as a single huge tool call cannot be split.\n115:- **One measurement service prices every decision.** The singleton `ctx.tokenMeter` measures the latest canonical logged envelope and current surface at one consumed-log revision. When the routed adapter declares request-image pricing, the meter applies it to image history. Pressure, recent-tail retention, range selection, and shrink validation use the same route-priced node figures; logged replacement shadow prices stay on the route-independent heuristic so pure projection folds remain consistent.\n118:- **`summarize()` is the sole subclass hook.** A template- or remote-summarizer subclass can override it while pressure, retention, cited source events, shrink validation, and shadowed-token accounting stay on the token meter.\n132:The transaction validates the surface span and the durable lock, appends `compaction/start`, summarizes through the hook, rejects a bare framed summary that does not shrink its source, appends recovery context within the remaining token budget, revalidates stability (whole-surface for automatic calls, selected-span for manual calls), appends `compaction/summary` plus the replacement `user/message`, and makes exactly one `compaction/end` attempt. A live unmatched start is the durable lock: an unmatched marker before a newer `session/end-seed` is stale evidence from a prior lifecycle and does not block; one after that boundary reports `busy`. A failed close deliberately leaves a blocking orphan. Cancellation remains authoritative after cleanup and durability.\n261:- **Some indivisible-unit and envelope-only overflow remains outside surface compaction** — recovery cannot shrink system/tools/prefix, split an indivisible non-tool node, or repair a tool unit whose non-prunable remainder still exceeds the window. The optional pruner can shrink text-bearing tool-result bulk inside an otherwise indivisible pair.\n#### Token effect\n\nModel-free pruning can avoid the auxiliary call entirely; otherwise it reduces that call's transcript before the summary replaces an older range. The replacement reduces future input history rather than appending a second copy. A summary remains until a later compaction replaces it, while an indivisible non-tool unit can still exceed the budget.\n\n#### KV Cache effect\n#### Token effect",
+        "is_error": false
+      }
+    ]
+  }
+}

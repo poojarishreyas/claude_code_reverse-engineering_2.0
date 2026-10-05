@@ -1,0 +1,27 @@
+{
+  "id": "f212c8c9d49825575359e7f8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSygUKEAgSGAI4AUIIdGhpbmtpbmcSDLgxzMap+rCfuTaXRxoMasuiNG6BlZuM7pLfIjBW2BknS/gjXXoghFKpP0a1+ae5WoWvA3Qua2v3QrvLFMok98QA56Cyg/nzRkY3ZRwq5wRSNpKSbuylK74aAazW3WJC8RaTsiBMbBHlTVZiRFK80d992DsVBbYxgNAdnDhXW0sPpgxMma1/A+gkkcVMInhCgFEfXdDaOa3ShvNp6pbD2cU64knWIZXUnWWko8NwaHpXWQppJpGSnWdYvfnywHdzoQLhcQBVUUk3k4Kct3jaDxuqZ8wgaLPWT/FG10bnczSmKVVCaX4GJvJsYf1bt4mqQ53h9WpY10keThaWTlZqiJphmRgUEso/CwmrIwnu8K5IZbsYPrwGcI0pr6enhXwwwsK6iRuc1BgprNIvbnphpgHzzYRnmcc83xBfwjXc3WohK2Zkq0GZXZYiv2Th1FazeS25OsXsET5nKI0b0rhzLTOJHf7/GGeYAKTM6v/Jd14HsuyI88j87vRrRfQz2FfT6FxrzTmjQEinac0CnFynX/r3/jcz1RMTvOvYO+DK6+j40kq4dT6aRhgYNLEyS2A7eH7Hnh0hT/Hn5qRZhng+gntkqTjCb5kLe2I41vWy1tGhYWsQPul7AFOSE0Zzdl03/r9SBbNGxp1RBOjsLM8qPodBMLkAlq7XrskBe/cZpMe2m0QarJY/5ipMN8L6rs3HdEJi667JQwK/6/Y+3BAXQytJZoiyQvM92x+n59PUoeBBB2FE5eq65Oe59L/REvKp/jAulHrE457kyMeqtV1pxnI5gS6Me3c4eNk1jG/I7MHRKG1vT2X/tYAnj67rXUL5kfNpIjytfNwekY+kzzJTDjCEDdaw7yT01mH0+77x3t9ZcwUOgJtiCi+Xz0EJcSFMe/lsZ4Wdivqo380uM6oZ9wDYPrJiw8sYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Now new tests for each new behavior, appended at the end of the file."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01SqZPVfr2EokCFvMP9Sc3Rn",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness/packages/compaction/compaction-tool-result-pruner/tests\" && tail -5 tool-result-pruner.spec.ts",
+          "description": "Show the end of the spec file"
+        }
+      }
+    ]
+  }
+}

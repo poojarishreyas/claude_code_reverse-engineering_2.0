@@ -1,0 +1,15 @@
+{
+  "id": "d08db971c3a3571d00f684f2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UFe2n7hKojVNsMWAusNgaH",
+        "type": "tool_result",
+        "content": "packages/fs/fs/src/index.ts:86:export abstract class FileSystem extends Service {\npackages/fs/fs/src/index.ts:116:  abstract resolve(path: string, opts?: { cwd?: string; signal?: AbortSignal }): Promise<FsTarget>\npackages/fs/fs/src/index.ts:126:  abstract processPath(target: FsTarget): string\npackages/fs/fs/src/index.ts:148:  abstract fileUrl(target: FsTarget): string\npackages/fs/fs/src/index.ts:157:  abstract contains(parent: FsTarget, child: FsTarget): boolean\npackages/fs/fs/src/index.ts:165:  abstract stat(target: FsTarget, signal?: AbortSignal): Promise<FsInfo | undefined>\npackages/fs/fs/src/index.ts:181:  abstract lstat(path: string, opts?: { cwd?: string }, signal?: AbortSignal): Promise<FsPathInfo | undefined>\npackages/fs/fs/src/index.ts:189:  abstract readText(target: FsTarget, signal?: AbortSignal): Promise<string>\npackages/fs/fs/src/index.ts:193:   * semantics as {@link readText}, for large files). The backend owns\npackages/fs/fs/src/index.ts:198:   * @returns the chunk iterable, decoded and validated like {@link readText}.\npackages/fs/fs/src/index.ts:200:  abstract streamText(target: FsTarget, signal?: AbortSignal): Promise<AsyncIterable<string>>\npackages/fs/fs/src/index.ts:212:  abstract readBytes(target: FsTarget, signal: AbortSignal | undefined, maxBytes: number): Promise<Uint8Array>\npackages/fs/fs/src/index.ts:221:  abstract listDir(target: FsTarget, signal?: AbortSignal): Promise<FsDirEntry[]>\npackages/fs/fs/src/index.ts:235:  abstract writeText(\npackages/fs/fs/src/index.ts:256:  abstract editText(\npackages/fs/fs/src/types.ts:60:export interface FsTarget {\npackages/fs/fs/src/types.ts:73: * `readText` vs `streamText` from `size` without probing by failure. `version`\npackages/fs/fs/src/types.ts:76:export interface FsInfo {\npackages/fs/fs/src/types.ts:91:export interface FsPathInfo {\npackages/fs/fs/src/types.ts:104:export interface FsDirEntry {\npackages/fs/fs/src/types.ts:128:export interface FsWriteOutcome {\npackages/fs/fs/src/types.ts:147:export interface FsEditRequest {\npackages/fs/fs/src/types.ts:157:export interface FsEditOutcome {",
+        "is_error": false
+      }
+    ]
+  }
+}

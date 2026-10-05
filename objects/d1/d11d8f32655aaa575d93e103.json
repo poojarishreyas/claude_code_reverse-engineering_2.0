@@ -1,0 +1,15 @@
+{
+  "id": "d11d8f32655aaa575d93e103",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_018P7UkRFqGrS3V2t58PQ7ND",
+        "type": "tool_result",
+        "content": "56:export interface SessionHeader {\n57-  /**\n58-   * On-disk format version, stamped from {@link SESSION_FORMAT_VERSION} when the\n59-   * session is created. A persistence backend rejects any other version on load\n60-   * (no migration — see the constant).\n61-   */\n62-  readonly version: number\n63-  /** The session's id (mirrors the {@link Session}'s id). */\n64-  readonly id: SessionId\n65-  /** Non-negative safe-integer Unix epoch milliseconds when the session was created. */\n66-  readonly createdAt: number\n67-  /** Absolute working directory the session was created in (if any). */\n68-  readonly cwd?: string",
+        "is_error": false
+      }
+    ]
+  }
+}

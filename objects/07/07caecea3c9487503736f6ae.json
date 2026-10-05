@@ -1,0 +1,15 @@
+{
+  "id": "07caecea3c9487503736f6ae",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012q6U27yZRDHjXaZbvPTwgq",
+        "type": "tool_result",
+        "content": "(Bash completed with no output)",
+        "is_error": false
+      }
+    ]
+  }
+}

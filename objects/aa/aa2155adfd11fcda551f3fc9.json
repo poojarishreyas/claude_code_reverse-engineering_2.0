@@ -1,0 +1,19 @@
+{
+  "id": "aa2155adfd11fcda551f3fc9",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_017yg9a3ciEBskHkSusqTqGs",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\bundle\\base\\cordis.patch.yml",
+          "offset": 384,
+          "limit": 14
+        }
+      }
+    ]
+  }
+}

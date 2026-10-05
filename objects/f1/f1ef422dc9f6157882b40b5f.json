@@ -1,0 +1,40 @@
+{
+  "id": "f1ef422dc9f6157882b40b5f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQShgUKEAgSGAI4AUIIdGhpbmtpbmcSDHPdDkg/9q1ykekSSxoMp7YnUEDweGiqWlfqIjCykfClz1yJpOl3GRjqnmKY6oyd92XiMNey0Hz8EVbCN9eoow5GYKpC8C2pnoT44GMqowQC2DK//YIyaBB4oKr4JNI4oHwQqC+GjA4VP13phL/9+qG7Va2e2+fR/tCIvrBjKamOzfiSvpt6yUS9vlIRsU4b69wpoAWTZY4zbfpg/D9+WSfDx5bkcTBaNT1EwaMFxUc/qsiSbtEuDUbJ34tUWYD12HQxwBg5qXWnM+tLfJq7H2b4z4PEGvLtxItL3Co2RG9xDv/rHnaJAX70hQuGkF4Ujg0OUh+//VgXmDYUiyT+q45XjcTHWjkTT8ZFPizJiaRFSe8s0SEHKludcN8ms2wpk3Vt9vg1g/JG8gOe/8xvXUI7wfo8HeXQSqef+Lg1VPqZkdLC0djOsmj3ble9zZ/Y6zF8VbmfbdQmQEiZPm7oCehMg8KM5213glUlL5y2GhkUS1W2UOyIbnUaZj0Yv9mgpVAzaZtzBqDApRZSipqhdIWDyx6Y1huJb7cj8DSDD+uPUbnS4nbeYsEBP7c/MdmT/7ldtzYzWFB6lHx5MttANDL282oQB2Bmxg0hC+E3gFVxA0hEHgUnkC6I5aqOIG+U3RiYkOmUaRKIwEgeq0xA57Tp5cmrEOo0QHGb67D2zSBMvYDQumCF6NYQrzyas+HCGP+0Hoylo82UbqZr1H7Lk3vQ7fSY4Vwjud55KGX90JZGE0ue0M3AzUOah34wFfcDQvD60+lgnQtyEQPM2FOn7NVJluMbISmuLoH7XXmyd29D8oYIt0znMFskBQUw4hfdrGvzGAE="
+      },
+      {
+        "type": "text",
+        "text": "Now the marker text, and where `compaction-basic` calls the pruner and decides whether to skip the summary."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_015CrHdY3FMfaqwYX5ZExXhd",
+        "name": "Grep",
+        "input": {
+          "pattern": "PRUNE_MARKER =|thresholdChars:|headChars:|tailChars:",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\src\\config.ts",
+          "output_mode": "content",
+          "-A": 2
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01QiXhuKRCWQoynoT6dqcxKk",
+        "name": "Grep",
+        "input": {
+          "pattern": "toolResultPruner|pruneSession",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src",
+          "output_mode": "content",
+          "-C": 12
+        }
+      }
+    ]
+  }
+}

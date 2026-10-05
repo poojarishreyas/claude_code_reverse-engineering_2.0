@@ -1,0 +1,14 @@
+{
+  "id": "5600e49d47bd2ffcfd2b42d9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01JGS6junGttbxVSQroCPkYm",
+        "type": "tool_result",
+        "content": "212:  private throwError(error: unknown): never {\n213-    const turn = this.phase.kind === 'running' ? this.phase.turn : this.phase.lastTurn\n214-    const step = this.phase.kind === 'running' ? this.phase.step : 0\n215-    this.dispatch.emit('agent/error', { turn, step, error })\n216-    throw error\n217-  }\n218-\n219-  private async kick(): Promise<void> {\n220-    try {\n221-      while (await this.turn()) {}\n222-    } catch (_error) {\n223-      // Reported failures and cancellation are contained at the driver boundary.\n224-    } finally {\n225-      /* v8 ignore next -- kick owns a running phase until this driver boundary */\n226-      if (this.phase.kind === 'running') {"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "4c758f5346b8ecb57a40b86f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0179v8vvKiDvaKEgynmQscvz",
+        "type": "tool_result",
+        "content": "     × passes the pressure trigger so default safeguards keep recent output out of pruning 38ms\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n FAIL  |thread-safe| packages/compaction/compaction-basic/tests/compaction-basic.spec.ts > optional model-free tool-result pruning > passes the pressure trigger so default safeguards keep recent output out of pruning\n Test Files  1 failed | 11 passed (12)\n      Tests  1 failed | 205 passed (206)",
+        "is_error": false
+      }
+    ]
+  }
+}

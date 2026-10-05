@@ -1,0 +1,15 @@
+{
+  "id": "c07e503b1b7aab155ff2b9b7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01C93F5w66N3Z7oTEqDDzxHp",
+        "type": "tool_result",
+        "content": "7-llm-pi-ai:\n8-  providers:\n9-    mylynx:\n10:      displayName: omniroute\n11-      apiKeyEnv: <masked>\n12-      api: openai-completions\n13-      baseURL: http://localhost:20128/v1\n14-      models:\n15-        - id: lynx harness\n16-          name: harness\n17-llm-deepseek:\n18-  models: []\n19-agent-default-model:\n20-  provider: mylynx\n21-  model: lynx harness\n22-ui-chat:\n23-  transcriptView: compact\n====",
+        "is_error": false
+      }
+    ]
+  }
+}

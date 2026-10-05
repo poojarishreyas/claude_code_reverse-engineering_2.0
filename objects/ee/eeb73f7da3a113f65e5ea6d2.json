@@ -1,0 +1,15 @@
+{
+  "id": "eeb73f7da3a113f65e5ea6d2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01GmZgVh3RWLbaapq6c3mY32",
+        "type": "tool_result",
+        "content": "     × skips a symlink INSIDE a session dir and non-session siblings 16ms\n     × does NOT follow a symlinked session directory (no deletion in the target) 3ms\n     × returns only real dsh-spill-* directories, excluding symlinks and non-matches 19ms\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯\n FAIL  |thread-safe| packages/spill/spill-local/tests/spill-local.spec.ts > startup cleanup sweep > skips a symlink INSIDE a session dir and non-session siblings\nError: EPERM: operation not permitted, symlink 'C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-spill-test-SLCPIB\\target.txt' -> 'C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-spill-test-SLCPIB\\session-abe633f3a47a\\link.txt'\n FAIL  |thread-safe| packages/spill/spill-local/tests/spill-local.spec.ts > startup cleanup sweep > does NOT follow a symlinked session directory (no deletion in the target)\nError: EPERM: operation not permitted, symlink 'C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-spill-test-LvUWaA\\victim' -> 'C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-spill-test-LvUWaA\\session-aaaaaaaaaaaa'\n FAIL  |thread-safe| packages/spill/spill-local/tests/spill-local.spec.ts > discoverDefaultRoots > returns only real dsh-spill-* directories, excluding symlinks and non-matches\nError: EPERM: operation not permitted, symlink 'C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-disc-T4AmoD\\dsh-spill-KQlcP9' -> 'C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-disc-T4AmoD\\dsh-spill-link01'\n Test Files  1 failed | 15 passed (16)\n      Tests  3 failed | 273 passed (276)",
+        "is_error": false
+      }
+    ]
+  }
+}

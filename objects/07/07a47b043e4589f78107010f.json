@@ -1,0 +1,15 @@
+{
+  "id": "07a47b043e4589f78107010f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CtwYQkwcQ3PcsX2A52rXPU",
+        "type": "tool_result",
+        "content": "diff --git a/packages/compaction/compaction-tool-result-pruner/package.json b/packages/compaction/compaction-tool-result-pruner/package.json\nindex 6a0dda7..6280421 100644\n--- a/packages/compaction/compaction-tool-result-pruner/package.json\n+++ b/packages/compaction/compaction-tool-result-pruner/package.json\n@@ -37,6 +37,7 @@\n     \"@deepseek-ai/dsh-invariants\": \"workspace:^\",\n     \"@deepseek-ai/dsh-llm\": \"workspace:^\",\n     \"@deepseek-ai/dsh-session\": \"workspace:^\",\n+    \"@deepseek-ai/dsh-spill\": \"workspace:^\",\n     \"@deepseek-ai/dsh-token-meter\": \"workspace:^\"\n   },\n   \"dependencies\": {\n@@ -52,6 +53,7 @@\n     \"@deepseek-ai/dsh-llm\": \"workspace:^\",\n     \"@deepseek-ai/dsh-session\": \"workspace:^\",\n     \"@deepseek-ai/dsh-session-projection\": \"workspace:^\",\n+    \"@deepseek-ai/dsh-spill\": \"workspace:^\",\n     \"@deepseek-ai/dsh-token-meter\": \"workspace:^\"\n   }\n }\ndiff --git a/packages/compaction/compaction-tool-result-pruner/tsconfig.json b/packages/compaction/compaction-tool-result-pruner/tsconfig.json\nindex 82cd02d..0afb32e 100644\n--- a/packages/compaction/compaction-tool-result-pruner/tsconfig.json\n+++ b/packages/compaction/compaction-tool-result-pruner/tsconfig.json\n@@ -4,15 +4,36 @@\n     \"rootDir\": \"src\",\n     \"outDir\": \"lib/types\"\n   },\n-  \"include\": [\"src\"],\n+  \"include\": [\n+    \"src\"\n+  ],\n   \"references\": [\n-    { \"path\": \"../../../vendor/cosmokit\" },\n-    { \"path\": \"../../../vendor/cordis\" },\n-    { \"path\": \"../../../vendor/schemastery\" },\n-    { \"path\": \"../../llm/llm\" },\n-    { \"path\": \"../../llm/token-meter\" },\n-    { \"path\": \"../../core/session\" },\n-    { \"path\": \"../compaction\" },\n-    { \"path\": \"../../runtime-diagnostics/invariants\" }\n+    {\n+      \"path\": \"../../../vendor/cosmokit\"\n+    },\n+    {\n+      \"path\": \"../../../vendor/cordis\"\n+    },\n+    {\n+      \"path\": \"../../../vendor/schemastery\"\n+    },\n+    {\n+      \"path\": \"../../llm/llm\"\n+    },\n+    {\n+      \"path\": \"../../llm/token-meter\"\n+    },\n+    {\n+      \"path\": \"../../core/session\"\n+    },\n+    {\n+      \"path\": \"../compaction\"\n+    },\n+    {\n+      \"path\": \"../../spill/spill\"\n+    },\n+    {\n+      \"path\": \"../../runtime-diagnostics/invariants\"\n+    }\n   ]\n }",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "6b4736493a2599b6a2c09844",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSnAUKEAgSGAI4AUIIdGhpbmtpbmcSDLe6fVZq81cC09kBchoM3YTKxFPdmNcyE/ZRIjAp455Yez4B3YM6iy+zl+oztBn1dPxkZ7sV/lIWZof8nEelo0iZATwBTj0yF83993YquQSfjITvLa9pm3iyQXVCw+3cpjii+sNeOxYT5KxgZ58t2+ts3tjU4/Q2y6ZnExY8jE8w9KALMqLAUU/y1H94Ws4FvXl7iTP3AkRmOEcdv0g7xkFGzUSsPKwC1c8UyiZpJRGjBloH//YVjXOU/L6/B1G/Pmdr1AaNuH8FyK+Fw0QTyElTfaJACptkqTcn3jKrHGnsSz1sC7SIzKbrtd4J/3gOvnB3UW8usXgV0paG7wIqRfp0GdemPqdAZZ1HQJBpV4dmPfjhZtOZEr0wM3v+FAUf5g5PkIQIiUrm+bAtHFdy1W22boOfDiTJ2vsDbiHv53P/VgDd9O9t7C4g0v+sXsu+hFRVvagLn2nbO1sTlt307DSKPZxAHeiNe9sq2ruaTQiPl602/8L4lvX14p34kTobd3p+gVMpe/VIboYxjZLXGwZ2meKmKMr44EHjIU0j3ypj3WtPbj8P11H06DDYcAQIVoYprRpafVkXk4VJLdCketOKBG8E5atYjr24bJdlnuklgVyJrLtnfEvrAl/OEK/XW5ix4yplTIXfrcRJ6roSWYKipJCtCo7hjsYicy/LChV8ROEGgrfEAUCqQLJBdec9G725SwDhUdFKm+0PMIXcjdRjZYRqTn4VgLBGmrZZQaSycBfDNll3XiptVIbiMqP09VEdo59pcmNF1d4Fx+b5TfFvWP2vw9c/24vZIZO7gAF9ryZyvPixODdB0bEYkkbbKiUTZdoE21en/8hVQQ+tu+wrAFGegib90hgB"
+      },
+      {
+        "type": "text",
+        "text": "No. This harness does **no indexing of the codebase**: no embeddings, no vector store, no repo map, no startup file scan. A folder with a codebase and an empty folder are handled the same way. The only difference is what the agent finds when it looks.\n\n**What reaches the model on the first request (both cases):**\n- **The system prompt** (`snapshots/web/ptc-round/system-prompt.expected.md`). It gives the working directory as a plain path and describes the tools. It includes no file listing or code summary.\n- **Instruction files**, via `packages/context/agent-instructions`. It loads `$DSH_HOME/AGENTS.md` plus any `AGENTS.md`/`CLAUDE.md` found from the project root (marked by `.git`) down to the working directory, up to 64 KB (`maxBytes: 65536`). In an empty folder there are none, so nothing is added. This is the only codebase-specific content injected automatically, and it is file loading, not indexing.\n\n**How the agent learns the codebase: on demand, one query at a time.**\n- `glob` and `grep` (`packages/fs/tool-fs-search`) run a bundled ripgrep against the live filesystem on every call. Nothing is precomputed or cached.\n- `read`, `bash`, and subagents are the other ways it explores. In an empty folder these return nothing, and the agent just starts creating files.\n- When a `read`/`write`/`edit` reaches a deeper directory, any nested `AGENTS.md` there gets added to later requests. That is still lazy, not a scan.\n\n**Two things that look like indexing but aren't codebase indexing:**\n- `dsh-workspace` keeps a \"header index\" of **sessions**: which chat sessions ran in which project folder, for the sidebar. It reads session headers only. It never reads your code, and its README says the model never sees any of it.\n- `session-query-sqlite` is full-text search over **past session logs**, not code. It also ships turned off (`openAt: never` in both `packages/bundle/base/cordis.patch.yml` and `packages/bundle/web-app/cordis.patch.yml`).\n\nIf you want real codebase indexing (a repo map or semantic search), it would go in as a new context or tool plugin rather than a change to `agent-loop`, per the \"Plugins, not loop changes\" rule in AGENTS.md."
+      }
+    ]
+  }
+}

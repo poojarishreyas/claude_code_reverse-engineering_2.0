@@ -1,0 +1,15 @@
+{
+  "id": "5fa77ab61ed71374341be9b3",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_018A5ZGc9C7t7zEKKcRKnJkC",
+        "type": "tool_result",
+        "content": "      Tests  146 passed (146)",
+        "is_error": false
+      }
+    ]
+  }
+}

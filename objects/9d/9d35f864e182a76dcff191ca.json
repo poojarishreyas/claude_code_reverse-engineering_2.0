@@ -1,0 +1,14 @@
+{
+  "id": "9d35f864e182a76dcff191ca",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XCur4SeQ4ZvDPiRB7cTEG5",
+        "type": "tool_result",
+        "content": "docs\\api-gateway.md:121:[Omitted long matching line]\ndocs\\cordis-primer.md:3:Cordis is the vendored plugin framework underneath DeepSeek Harness. This primer teaches the Cordis ideas a harness plugin author needs before reading the generated service/event reference on the [subsystem pages](subsystems/core.md); the [Cordis tutorial](cordis-tutorial/index.md) walks the same ideas hands-on. The vendored source and sync procedure live in [vendor/README.md](../vendor/README.md).\ndocs\\config-catalog.md:108:   * duplicate id. The default survives a whole-`config` patch replacement;\ndocs\\config-catalog.md:878:   * unset fields from the installed model of the same id.\ndocs\\architecture.md:19:Each bundle declares `dsh.bundle.patch` in its package manifest. Layers apply to an empty entry list in this order: the profile's bundles, the profile patch, the home-level patch, and ordered `--patch` overlays. A patch targets a row by id and replaces its whole config or inserts rows. The Web profile supports live patch reload.\ndocs\\cookbook\\extension-cookbook.md:112:| Tool deadline / retry / metrics | wrap core dispatch with `tools/execute`; a wrapper may replace `exec.signal`, delegate, and inspect the normalized result in one lexical lifetime |\ndocs\\engine-book\\16-the-execution-pipeline.md:122:**Cancellation during dispatch** replaces a successful result with the aborted-after-start outcome (`:1509-1516`) — code `TOOL_ABORTED`, distinct from `ABORTED_BEFORE_DISPATCH`, because the body *did* run and may have had effects.\ndocs\\engine-book\\18-approval-and-escalation.md:106:**It logs both halves.** `approval/asked` before deciding (`:232-237`), `approval/decided` with the same id after (`:239`). Both are durable and **log-only** — they never enter the model transcript ([Ch 6](06-the-surface.md): they are not surface-eligible types). The model does not see that a human was asked; it sees only the result.\ndocs\\subsystems\\core.md:213:Pre-step decisions use the same identified `UserMessage` type as durable user-role input. The entered batch is authoritative and preserves every message's `id` and `source`. Hook bridges map their native decision fields onto this typed result.\ndocs\\subsystems\\core.md:431: * Resolve one preset by id.\ndocs\\subsystems\\core.md:463: * the same prompt sections. Re-resolving the parent's preset by id instead\ndocs\\subsystems\\core.md:517: * seam: the source is named by id and its directory is copied as it stands,\n\n[Showing results with pagination = limit: 12]"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "b2abd468163be25a9b4336fc",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LigbpEy7pTPHWBdYb9FAfp",
+        "type": "tool_result",
+        "content": "Command running in background with ID: byuh5ms3h. Output is being written to: C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\tasks\\byuh5ms3h.output. You will be notified when it completes. To check interim output, use Read on that file path.\nSession cwd remains C:\\Users\\shrey\\desktop\\Elemental_harness; directory changes made by the backgrounded command do not apply to subsequent commands.",
+        "is_error": false
+      }
+    ]
+  }
+}

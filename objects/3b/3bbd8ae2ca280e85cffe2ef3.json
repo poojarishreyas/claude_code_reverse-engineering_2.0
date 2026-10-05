@@ -1,0 +1,19 @@
+{
+  "id": "3bbd8ae2ca280e85cffe2ef3",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01BFq2QjXYqQukWeNgAi8twE",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md",
+          "offset": 58,
+          "limit": 82
+        }
+      }
+    ]
+  }
+}

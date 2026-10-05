@@ -1,0 +1,18 @@
+{
+  "id": "e980437b6e01882c0b9a6b3c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01SjyTKhczHA2GDg6cPNjrMw",
+        "type": "tool_result",
+        "content": "29:  return BLOCK_OVERHEAD + Math.ceil(JSON.stringify(block).length / CHARS_PER_TOKEN)\n30-}\n31-\n32-/**\n33- * Price content blocks recursively under the fixed density heuristic.\n34- * @param blocks - content blocks to price without mutation.\n35- * @returns heuristic tokens including per-block structural overhead.\n36- */\n37:export function estimateContent(blocks: readonly ContentBlock[]): number {\n38-  let tokens = 0\n39-  for (const block of blocks) {\n40-    switch (block.type) {\n41-      case 'text':\n42-      case 'reasoning':\n43:        tokens += Math.ceil(block.text.length / CHARS_PER_TOKEN) + BLOCK_OVERHEAD\n44-        break\n45-      case 'tool-call':\n46:        tokens += Math.ceil(block.name.length / CHARS_PER_TOKEN)\n47:          + Math.ceil(block.arguments.length / CHARS_PER_TOKEN)\n48-          + BLOCK_OVERHEAD\n49-        break\n50-      case 'tool-result':\n51-        tokens += estimateContent(block.content) + BLOCK_OVERHEAD\n52-        break\n53-      default:\n54-        // ContentBlockMap is merge-extensible; unknown blocks (and image\n55-        // references, whose request price is route-owned) retain a\n--\n68:export function estimateMessage(message: Message): number {\n69-  return estimateContent(message.content) + ROLE_OVERHEAD\n70-}\n71-\n72-/**\n73- * Price the system-prompt part of a canonical request envelope.\n74- * @param header - canonical envelope, or undefined before any request.\n75- * @returns heuristic system-prompt tokens; 0 when absent.\n76- */\n--\n79:  return Math.ceil(header.system.length / CHARS_PER_TOKEN) + ROLE_OVERHEAD\n80-}\n81-\n82-/**\n83- * Price the tool-schema part of a canonical request envelope.\n84- * @param header - canonical envelope, or undefined before any request.\n85- * @returns heuristic tool-schema tokens; 0 when absent or empty.\n86- */\n87-export function estimateToolsTokens(header: EpochHeader | undefined): number {\n--\n89:  return Math.ceil(JSON.stringify(header.tools).length / CHARS_PER_TOKEN) + BLOCK_OVERHEAD\n90-}\n91-\n92-/**\n93- * Price the complete non-surface request envelope.\n94- * @param header - canonical envelope, or undefined before any request.\n95- * @returns heuristic system plus tool tokens.\n96- */\n97-export function estimateHeader(header: EpochHeader | undefined): number {"
+      },
+      {
+        "type": "text",
+        "text": "<system-reminder>\n[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>bf7qxo70z</task-id>\n<tool-use-id>toolu_01R5FW9xWHDrX6jtN8hsVTKS</tool-use-id>\n<output-file>C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\tasks\\bf7qxo70z.output</output-file>\n<status>completed</status>\n<summary>Background command \"Branch and find where the prompt text is pinned\" completed (exit code 0)</summary>\n</task-notification>\n</system-reminder>"
+      }
+    ]
+  }
+}

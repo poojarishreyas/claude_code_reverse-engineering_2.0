@@ -1,0 +1,20 @@
+{
+  "id": "3f41dea99b6d7324e7ff630a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LiMgvM3B6giNeRKsZfQFug",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_012DNcA2wbxvk5C4tpigQTe6",
+        "type": "tool_result",
+        "content": "     × names the stored transcript of the condensed span in the checkpoint 63ms\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n FAIL  |thread-safe| packages/compaction/compaction-basic/tests/compaction-basic.spec.ts > optional model-free tool-result pruning > names the stored transcript of the condensed span in the checkpoint\nAssertionError: expected 'result 1 result 1 result 1 result 1 r…' to contain '[User]: request 1 '\n      Tests  1 failed | 218 passed (219)",
+        "is_error": false
+      }
+    ]
+  }
+}

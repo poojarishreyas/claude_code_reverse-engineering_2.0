@@ -1,0 +1,14 @@
+{
+  "id": "f84675067a9f3afd2621f49e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_015RECzYhRwmwUymcWwiRbGt",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\tests\\tool-result-pruner.spec.ts has been updated successfully."
+      }
+    ]
+  }
+}

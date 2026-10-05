@@ -1,0 +1,15 @@
+{
+  "id": "36f507b3b194a656e802f5fc",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Uwk9WA7rzGFeePpjiMYPzy",
+        "type": "tool_result",
+        "content": "62:class RecordingFileSystem extends FileSystem {\n63-  entries = new Map<string, { type: FsInfo['type']; content?: string; version?: FsVersion }>()\n64-  throwOnStat = new Set<string>()\n65-  throwOnRead = new Set<string>()\n66-  omitSizes = new Set<string>()\n67-  readTargets: string[] = []\n68-  readTextTargets: string[] = []\n69-  signals: AbortSignal[] = []\n70-\n71-  override async resolve(path: string, opts?: { cwd?: string; signal?: AbortSignal }): Promise<FsTarget> {\n72-    if (opts?.signal !== undefined) this.signals.push(opts.signal)\n73-    opts?.signal?.throwIfAborted()\n74-    // resolve(), not join(): entries are seeded with host join() keys, and on\n75-    // Windows a joined '/'-rooted prefix would not match a resolved drive path.\n76-    const absolute = resolve(opts?.cwd ?? '/', path)\n77-    return { targetKey: FsTargetKey(absolute), displayPath: absolute }\n78-  }\n79-\n80-  override processPath(target: FsTarget): string { return String(target.targetKey) }\n81-\n82-  override fileUrl(target: FsTarget): string { return `file://${target.targetKey}` }\n83-\n84-  override contains(parent: FsTarget, child: FsTarget): boolean {\n85-    const descendant = relative(String(parent.targetKey), String(child.targetKey))\n86-    return descendant === '' || (!descendant.startsWith('..') && !isAbsolute(descendant))\n87-  }\n88-\n89-  override async stat(target: FsTarget, signal?: AbortSignal): Promise<FsInfo | undefined> {\n90-    if (signal !== undefined) this.signals.push(signal)\n91-    signal?.throwIfAborted()\n92-    if (this.throwOnStat.has(target.targetKey)) throw new Error(`stat failed: ${target.displayPath}`)",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "92bd2b6c9b255e86b46d733e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01R5FW9xWHDrX6jtN8hsVTKS",
+        "type": "tool_result",
+        "content": "Command did not complete within its 120s timeout and was moved to the background (ID: bf7qxo70z). Output is being written to: C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\tasks\\bf7qxo70z.output. You will be notified when it completes. To check interim output, use Read on that file path.\nSession cwd remains C:\\Users\\shrey\\desktop\\Elemental_harness; directory changes made by the backgrounded command do not apply to subsequent commands.",
+        "is_error": false
+      }
+    ]
+  }
+}

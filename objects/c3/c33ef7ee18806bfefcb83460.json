@@ -1,0 +1,15 @@
+{
+  "id": "c33ef7ee18806bfefcb83460",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CSxe92JzE4YF8oAYR77wox",
+        "type": "tool_result",
+        "content": "639:    def collapse(self, start_tag: str, end_tag: str, summary_text: str | None = None) -> str:\n640-        \"\"\"Archive a range of events and create a Summary marker.\n641-\n642-        This is the primary method for both truncation and summarization:\n643-        - collapse(\"2\", \"40\") → truncation (summary_text=None)\n644-        - collapse(\"2\", \"40\", summary_text=\"...\") → summarization\n645-\n646-        After collapse, the range is replaced with a single tag \"start..end\":\n647-        - keys() changes from [\"1\", \"2\", ..., \"40\", \"41\"] to [\"1\", \"2..40\", \"41\"]\n648-        - manager[\"5\"] still returns the original event (stable access)\n649-        - manager[\"2..40\"] returns the new Summary\n650-\n651-        Args:\n652-            start_tag: First tag to collapse (inclusive), e.g., \"2\"\n653-            end_tag: Last tag to collapse (inclusive), e.g., \"40\"\n654-            summary_text: Optional LLM-generated summary. None = truncation.\n655-\n656-        Returns:\n657-            The tag of the newly created Summary (e.g., \"2..40\").\n658-        \"\"\"\n659-        # Parse tag numbers for range calculation\n660-        start_num = self._parse_tag_start(start_tag)\n661-        end_num = self._parse_tag_end(end_tag)\n662-\n663-        # Find events/tags to collapse\n664-        tags_to_collapse: list[str] = []\n665-        for tag in self._backend.active_tags():\n666-            tag_start = self._parse_tag_start(tag)\n667-            tag_end = self._parse_tag_end(tag)\n668-            # Include if ranges overlap\n669-            if tag_start <= end_num and tag_end >= start_num:\n670-                tags_to_collapse.append(tag)\n671-\n672-        if not tags_to_collapse:\n673-            raise ValueError(f\"No active events in range '{start_tag}'..'{end_tag}'\")\n674-\n675-        # Archive the events and remove from active list\n676-        for tag in tags_to_collapse:\n677-            self._backend.set_status(tag, EventStatus.ARCHIVED)\n678-            self._backend.remove_active_tag(tag)\n679-\n680-        # Calculate the full range for the new summary (flatten nested summaries)\n681-        actual_start = min(self._parse_tag_start(t) for t in tags_to_collapse)\n682-        actual_end = max(self._parse_tag_end(t) for t in tags_to_collapse)\n683-\n684-        # Create the summary tag (flattened range)\n====\n12:from nooa.agents import TokenBudgetSummarizer\n150:        automatic = bool(getattr(summarizer, \"_automatic_context_budget\", False))\n156:            if isinstance(summarizer, TokenBudgetSummarizer)\n171:                getattr(summarizer, \"_automatic_context_budget_percent\", None)",
+        "is_error": false
+      }
+    ]
+  }
+}

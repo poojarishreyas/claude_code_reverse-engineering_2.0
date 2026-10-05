@@ -1,0 +1,19 @@
+{
+  "id": "577ac502bb53d6f3afe8c3eb",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01EvkggYEGQdt8NUkNTYVcHo",
+        "type": "tool_result",
+        "content": "No matches found"
+      },
+      {
+        "tool_use_id": "toolu_016WX1nUAYM6fwkCFEr1pvoG",
+        "type": "tool_result",
+        "content": "230\t   * prompt, tools, and messages so the provider's KV cache is not invalidated.\n231\t   * Override this sole hook for a template or remote summarizer.\n232\t   * @param input - replayed conversation prefix (system, tools, and leading messages) to condense.\n233\t   * @param agent - supplies routed-model history, fallback model, and session id.\n234\t   * @param signal - optional cancellation forwarded to the adapter.\n235\t   * @returns safe text summary blocks and the exact auxiliary call envelope and output.\n236\t   */\n237\t  protected async summarize(\n238\t    input: SummarizationInput,\n239\t    agent: Agent,\n240\t    signal?: AbortSignal,\n241\t  ): Promise<SummaryResult> {\n242\t    const target = conversationTarget(agent)\n243\t    const config = target === undefined\n244\t      ? this.config\n245\t      : resolveTargetPolicy(this.config, target)\n246\t    return summarizeWithLlm(this.ctx, config, input, agent, signal)\n247\t  }\n248\t\n249\t  /**\n250\t   * Compact for replayed step-boundary pressure or one provider-confirmed context\n251\t   * overflow. Both triggers price the latest durable routed request envelope;\n252\t   * overflow bypasses the normal threshold and retained-tail policy so it can\n253\t   * force one useful balanced reduction.\n254\t   * @param agent - agent whose latest durable routed request is measured.\n255\t   * @param trigger - normal step-boundary pressure or context-overflow recovery.\n256\t   * @param signal - live turn cancellation signal forwarded to summarization.\n257\t   * @returns the latest summary compaction result, or `null` when no summary ran.\n258\t   */\n259\t  override async compactIfNeeded(\n260\t    agent: Agent,\n261\t    trigger: CompactionTrigger,\n262\t    signal: AbortSignal,\n263\t  ): Promise<CompactionResult | null> {\n264\t    const target = routedTarget(agent.session)\n265\t    if (target === undefined) return null\n266\t    const policy = resolveTargetPolicy(this.config, target)\n267\t    const meter = this.ctx.tokenMeter\n268\t    let measurement = meter.measure(agent.session)\n269\t    switch (trigger) {\n270\t      case 'context-overflow':\n271\t        break\n272\t      case 'pressure':\n273\t        break\n274\t      /* v8 ignore next -- closed-union exhaustiveness guard */\n275\t      default:\n276\t        assertNever(trigger, 'compaction trigger')\n277\t    }\n278\t\n279\t    // Pruning is optional so compaction-basic remains independently composable.\n280\t    // Overflow always qualifies; pressure first resolves the routed model's\n281\t    // capacity and checks its target-specific threshold.\n282\t    const prune = this.ctx.get('toolResultPruner')\n283\t\n284\t    if (trigger === 'context-overflow') {\n285\t      if (prune !== undefined) {\n286\t        prune.pruneSession(agent.session)\n287\t        measurement = meter.measure(agent.session)\n288\t      }\n289\t      const range = selectCompactableRange(agent.session, measurement, 0)"
+      }
+    ]
+  }
+}

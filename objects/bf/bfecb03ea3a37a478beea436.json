@@ -1,0 +1,15 @@
+{
+  "id": "bfecb03ea3a37a478beea436",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01KbdHPHYXomT4XFnVLdTYUo",
+        "type": "tool_result",
+        "content": "tsc=0\n     × uses low-friction service-wide defaults 42ms\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n FAIL  |thread-safe| packages/compaction/compaction-basic/tests/compaction-basic.spec.ts > compact configuration and defaults > uses low-friction service-wide defaults\nAssertionError: expected { thresholdRatio: 0.8, …(11) } to deeply equal { thresholdRatio: 0.8, …(8) }\n      Tests  1 failed | 206 passed (207)",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "07aa16abcc7627f439319a05",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Ugui7k5mvD7iBJH1B6RD5N",
+        "type": "tool_result",
+        "content": ". postinstall: Done\npackages/subprocess/subprocess-local postinstall$ node scripts/ensure-spawn-helper.mjs\npackages/subprocess/subprocess-local postinstall: Done\n\nDone in 35.8s using pnpm v11.7.0\ncordis cordis-plugin-include cordis-plugin-loader dsh-compaction dsh-invariants dsh-llm dsh-session dsh-session-projection dsh-spill dsh-token-meter dsh-util-values schemastery",
+        "is_error": false
+      }
+    ]
+  }
+}

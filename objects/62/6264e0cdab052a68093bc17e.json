@@ -1,0 +1,18 @@
+{
+  "id": "6264e0cdab052a68093bc17e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS7AQKEAgSGAI4AUIIdGhpbmtpbmcSDF9z+BAX0d6IJuLh/xoMsxtSo/2CR/ynBDhlIjBWZbmLp90xRvwskQlQYQgDOBcFJlQtkVy/2hNA9231DVSI2TCXuDrIWTYMAjWNDCUqiQTlDt+q2WIaCi0lH/uCbPO5hl4gj8OpfXRnyL3UqVVeKtSN1KarkHDOojc4oQ6yH4Z+e2d568Im2WHbR2dgrZTUj6M0sLOHu34XmnkasQFS23MtmK1xP7qdOjDz7/lYsvleQBSlFTW1Inrjs5NQNOiU+FGVuWAbLtObMRP73ko4+lL4p/FXdkot4uJQFAJdQEinwHeB9pLXyyoZ37YEkSM/SeeUN5p4keN4IByMCNiWdWow+SulJcIBPFgnNWTguKQL8aBjqenVBFsThl3Xv9tak4wWXPO+wKwFBUQnYpRXJzx4ekubh2SpTupbE/jlAgN2gv2aJcmqiHx3DYtO3LdwtzOJEHFBUDSLFI4ScNUju+ddWH3q47zV8uNaoT+c/qV73cianOkGzwwffYghHvlN4iv9g80N0E8GIVNs3e6x4brcQKUNPvtZzUsZwKYQ95il/8XgfhyY+5xJBY6J3dkHeQJRHIeZfablDrEg8tOvLbCdmQ4SShpyra8Oo34ZnmQLhARU00mDjazMa3AVmU6svpH1k5cbk6Q6BdSaVvonehgryonM08tqwWdgvc6i9ipAnbWAX43YFcQHtZtHBI+OvlCMFX1DkDh6uR/jijf6JKyxAo5mT9aub0JljuEVq2pv7K35n/T2tuQwqDWQklzjgZrhnW306lNkDTEB4qajtQokMrzRnUF2NBgB"
+      },
+      {
+        "type": "text",
+        "text": "No. The model's context has no indexing and no automatic retrieval. There is no RAG step that searches anything and adds relevant pieces to the prompt. Everything in context is either loaded by fixed rules or fetched by the model itself through tools.\n\n**How context is built for each request:**\n\n| Part of context | How it gets there | Indexed or retrieved? |\n|---|---|---|\n| System prompt and tool descriptions | Fixed text | No |\n| `AGENTS.md` / `CLAUDE.md` | Found by walking folders; nested ones are added when the model touches that folder | No, just loading files |\n| Conversation history | The session log, in order | No |\n| `@file` mentions | You pick a path and the text `@path` goes in your message; the model still has to `read` it | Only the autocomplete path list, which the model never sees |\n| `@session` mentions (`session-reference`) | A limited, read-only snapshot of another chat you name. The README says it \"needs no SQLite FTS\" | Fetched because you named it, not by search |\n| Skills | A list of skill names sits in the prompt; the full text loads when the model calls `skill(name)` | Looked up by exact name, not by search |\n\n**When the context gets full:**\n- **Compaction** (`compaction-basic`) summarizes the oldest part of the conversation into one message. The originals stay in the session log, but **the model can't get them back**. It only sees the summary.\n- **Oversized tool results** are trimmed to a start and end (`compaction-tool-result-pruner`). Alternatively, `spill-policy` saves the full output to a file and gives the model the path, which it can then `read` or `grep`. That's the model retrieving with its tools, not an index.\n\n**The closest thing is only proposed, not built.** `.agents/notes/proposed/feature/2026-07-06-recallable-compaction.md` (status: **proposed**) describes adding exactly this:\n- short \"index stubs\" with keyword lines for each compacted chunk;\n- a `history_read` tool so the model can pull summarized history back into context.\n\nIts opening line states the current state plainly: \"Compaction is irreversible from the model's current context.\"\n\n**Summary:** context comes from fixed loading rules, the model's own tool calls, and summarization when space runs out. There's no index to search and no automatic retrieval. The one full-text index (past chat search) is switched off and not wired into context."
+      }
+    ]
+  }
+}

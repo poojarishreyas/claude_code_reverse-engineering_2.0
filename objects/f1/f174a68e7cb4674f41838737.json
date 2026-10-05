@@ -1,0 +1,19 @@
+{
+  "id": "f174a68e7cb4674f41838737",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01Yao5KGWqBET1Fkb2ybEGwJ",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\tests\\spill-policy.spec.ts",
+          "offset": 20,
+          "limit": 150
+        }
+      }
+    ]
+  }
+}

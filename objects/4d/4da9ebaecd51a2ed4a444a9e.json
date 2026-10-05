@@ -1,0 +1,29 @@
+{
+  "id": "4da9ebaecd51a2ed4a444a9e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS8wUKEAgSGAI4AUIIdGhpbmtpbmcSDOPalRpxKhAehid11xoM+JwzpXx0AGbNLAMfIjDE5VDuN0e/d6KP8Qob7uiyPBT8h4PqtlwQfKxHH4wH81YZH2C1fTZgcCVE9AqFM0UqkAWnAIJqUVPpEqPXlL3rup5avowCBcQTv9FxJ7mVyqMOGabohP/yFtMTW+oXiVekMjn3ku3tw58JevC34blwQyWpnqFM9khKniob4qmd93aaSyQUahmX43sUSjx9t8+U3KOgiEf5S/m7gdzkSM0Fe4jlreHjc5qJerVkZCCBBZLtNgfiqgUSiq6h4Tti4nYWeZ7N+KK/e5zd14Vf78ENeeO/JMa3ifwILt+y0ZHfjhdfsZyMbsgahAQTHtCo4NfX2+dLYyXZTbKsGhx52LfXvJTtvn0F/UTsKPlF+67JrZNPZNOxqOpMm9zlvSG1qjHzhPlSPlooMBgZ7sTa6vg7Y6bz+/q1iukRuWRpVsGHyUBWn18Uidz9mwMFSzQOMXkIQGO71Rkj00+dBwFwRXZPhr3VDthANtvsfe9ICbtpOguOCoOyDS2ZvFPgfNw8OFo9E9rTiUsPZMcZm+ySwQDJoCVVNF9Qiv6crM391SnEZzP2tuvhznFHpMC0DbTDoe2sismwvhGf4N3RyCAdaqtdMsoKiCH8AlCjzGYiHCeJ+xP//wxXHrwmwKiMAtuzpW0QfPWyAIIOH5O6N95Mea1rifP0uERA0YtpJM/no0OK6SJWdN827TVXuVJ1QeF0r4dc4irV5afKcX+I1pZDucpxQyzYxgqzHIwulYpxxv25eidfucBq6rJmkOLGlrFJ09TN7+G4N0hLvQW4m53dCxLS65o/S74BcqVoFZk/PQEX26DyN2hRIzLVNTTHrn/fzF2y5WX7248cTvpGiPP0pUXgc8Ex3kiPG2caoNvedc0CcpqxuxbRZMAerZJaGvLWN14HWwn8jPsDL3Yl63Nm1yis3Cjhuc8nbCwX3TKmKEf+10gDaBgB"
+      },
+      {
+        "type": "text",
+        "text": "The shipped config sets `openAt: never`. I'll check what that means and who uses this search."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01WSGh98MRgKZJiEapgM8yJz",
+        "name": "Grep",
+        "input": {
+          "pattern": "openAt|never|lazy|first query",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\session-query\\session-query-sqlite\\README.md",
+          "output_mode": "content",
+          "head_limit": 15
+        }
+      }
+    ]
+  }
+}

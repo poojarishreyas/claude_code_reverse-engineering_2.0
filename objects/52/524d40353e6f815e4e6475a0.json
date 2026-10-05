@@ -1,0 +1,27 @@
+{
+  "id": "524d40353e6f815e4e6475a0",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS3gUKEAgSGAI4AUIIdGhpbmtpbmcSDP2pw7nQq7rckIgxHxoMFN09BC1C29YFDSQ9IjA+MAxoL2kSob8nm7fEhRSMawDjC2YPFsnCe0m38WDRTss3KOVyYYXIxh4iqMS6+zUq+wRELDuV91b6lNfeqUceiVc74DxKN76HRf2y8ylfjy9vmkO5EA64eAGdEuztpyX9u1N64qTgvICRYVlIpS0ENks5WwwI33Q6oA0PtUymDenuK6Fu1c+CrcwUtJ/w7o+vHGJPPK1LG66fi7nVizQXlKDvN+3wttgFXr6JAM0kUW0lK8vdVrcFu2m6IE0Rzk9BQ10vp1gGlC+WwBVSvHs5r+yF4uaLkV3UE7Ws+LG0E1sDaelWJUsHb7pZ6PJnzAT6NTkFukYML70uhj/4lWDk6ldLhSFXn/HpvJZjI8n3RS98huAIeyiVI2Ve19xFyl5iKMt3wfk+S6iPsAcxaB9Rtr7mne0eiD2ktBdMXgviUGG9+WE4SROOg2NinmdyMJ/9Bo/6UQlGDc3GIlzR8gmdHJjcTq9CYNgE1UXvDymFYTSj0BP1sGI1cH/l29vrHiryUobr1yrYN6H6dQXYG1Gxf/FRmTxDVtSJruOi4GZJXH4DlQYmyL7P1kIQogAMu81ybZGXY4awJ0k4uG33vbORjoMoytCf2PZRXYtx3/6WhwQsVMsb/fGAhVJPf33rANcQw4BZyunxLfXW1dsetsBQRGTPuNsVwAABhwXAhC0kBr7jgH2rblpC8vzTd7LMcHRONzZsIRO7/W2rKPSDqQYn60vqNfrLXtkhHttwdHvqgwo+0XxZ23/vVb/wKFywrcc5OQSaALyitS1hmjpqIVGxzBL6BX7OQnQIUdm1au8T/j2op5xFsdS69irihl4drw8nv0ZR1G+XGOecfvUATZjcbrWzGFTlwjRvd8sW1RHibVHjCIppXp20bkcUlPldx1Sd3I8nZiyLZkhlXdzTlhgB"
+      },
+      {
+        "type": "text",
+        "text": "OmniRoute is configured in `~/.dsh/settings.yaml`, and keys likely live separately in `.credentials.yaml`. I'll show the OmniRoute part of the settings with anything key-like masked."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01C93F5w66N3Z7oTEqDDzxHp",
+        "name": "Bash",
+        "input": {
+          "command": "sed -E 's/((api[_-]?key|token|secret|authorization)[^:]*:[[:space:]]*).+/\\1<masked>/I; s/(sk-|eyJ)[A-Za-z0-9._-]{8,}/<masked>/g' ~/.dsh/settings.yaml | grep -n -i -B3 -A25 \"omniroute\" | head -80; echo ====; grep -n -i \"omniroute\" ~/.dsh/.credentials.yaml | sed -E 's/:[[:space:]]*[^[:space:]].*$/: <present, masked>/' | head",
+          "description": "Show OmniRoute settings with secrets masked"
+        }
+      }
+    ]
+  }
+}

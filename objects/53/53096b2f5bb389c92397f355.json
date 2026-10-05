@@ -1,0 +1,19 @@
+{
+  "id": "53096b2f5bb389c92397f355",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01WNt5S85WvXd1BVNrEmrU1c",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\context\\file-reference-local\\src\\search.ts",
+          "offset": 85,
+          "limit": 90
+        }
+      }
+    ]
+  }
+}

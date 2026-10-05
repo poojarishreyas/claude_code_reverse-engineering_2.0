@@ -1,0 +1,15 @@
+{
+  "id": "6e9578363b088dabd4ffcf40",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01SqZPVfr2EokCFvMP9Sc3Rn",
+        "type": "tool_result",
+        "content": "      turn: 2,\n    })\n    await expect(prune.pruneSession(session, 'pressure')).resolves.toMatchObject({ pruned: [expect.anything()] })\n  })\n})",
+        "is_error": false
+      }
+    ]
+  }
+}

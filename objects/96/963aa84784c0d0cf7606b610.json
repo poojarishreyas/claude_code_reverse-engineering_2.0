@@ -1,0 +1,14 @@
+{
+  "id": "963aa84784c0d0cf7606b610",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019g2xz3QMVrHGhpukqzgsuV",
+        "type": "tool_result",
+        "content": "28\t### Minimal configuration\n29\t\n30\tLoad the policy with a `maxInlineBytes` budget, in UTF-8 bytes, and a spill backend:\n31\t\n32\t```yaml\n33\t- name: '@deepseek-ai/dsh-spill-local'\n34\t- name: '@deepseek-ai/dsh-spill-policy'\n35\t  config:\n36\t    maxInlineBytes: 50000\n37\t```\n38\t\n39\t| Field | Default | Meaning |\n40\t|---|---|---|\n41\t| `maxInlineBytes` | omitted | Model-facing context cap for a plain-text result, in UTF-8 bytes; omitted disables the policy entirely |\n42\t\n43\tThe generated [configuration catalog](../../../docs/config-catalog.md#deepseek-aidsh-spill-policy) is the exhaustive source for every accepted field. A negative or fractional cap fails plugin load rather than corrupting per-call behavior.\n44\t\n45\t### What the model sees\n46\t\n47\tAn oversized plain-text result is replaced by a preview plus a notice inside the same budget, so the whole replacement never exceeds `maxInlineBytes`:\n48\t\n49\t```text\n50\t<retained head/tail preview>\n51\t\n52\t(Omitted N bytes. Full formatted result stored at: /…/session-…/…-web_fetch.txt. Use read with offset/limit, or grep this path to search within it.)\n53\t```\n54\t\n55\tWhen the notice alone fills the budget (a tiny cap or a long locator), the preview is empty and only the notice is returned; if even that would exceed the cap, the policy keeps the original inline result — a within-cap replacement is always smaller than the original. The full text stays available in the spill file, and a successful replacement changes only the model-facing copy, never the canonical programmatic result.\n56\t\n57\t### Which results are affected"
+      }
+    ]
+  }
+}

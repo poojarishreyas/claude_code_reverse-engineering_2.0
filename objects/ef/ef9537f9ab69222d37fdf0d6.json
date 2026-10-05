@@ -1,0 +1,15 @@
+{
+  "id": "ef9537f9ab69222d37fdf0d6",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LDLg6wVRBYaQScj43hh9xA",
+        "type": "tool_result",
+        "content": "compaction-phase2\npackages/compaction/compaction-basic/tests/compaction-basic.spec.ts:1230:    expect(instruction?.type === 'text' ? instruction.text : '').toContain('## Primary Request and Intent')\npackages/compaction/compaction-basic/tests/compaction-basic.spec.ts:1266:    expect(lastText).toContain('## Primary Request and Intent')\npackages/compaction/compaction-basic/README.md:187:You are now acting as a compaction engine for this AI coding assistant. Condense the conversation ABOVE into a structured checkpoint that lets another model resume the work with no loss of essential context.\npackages/compaction/compaction-basic/README.md:191:## Primary Request and Intent\npackages/compaction/compaction-basic/README.md:212:## Critical Context\npackages/compaction/compaction-basic/README.md:220:- If the conversation already contains a <compacted-summary> block, it is a PRIOR checkpoint. Do not copy it forward verbatim: preserve still-true facts, drop stale ones, and merge newer information into a single consolidated summary under the same structure.",
+        "is_error": false
+      }
+    ]
+  }
+}

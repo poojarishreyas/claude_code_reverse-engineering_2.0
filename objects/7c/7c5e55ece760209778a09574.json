@@ -1,0 +1,15 @@
+{
+  "id": "7c5e55ece760209778a09574",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Qv66omjhJ18fvxobAkooSh",
+        "type": "tool_result",
+        "content": "- **Stored transcript** — with a `ctx.spillStore` backend such as `dsh-spill-local`, the condensed span is saved as a plain-text transcript, and the checkpoint names the file with the backend's retrieval guidance. The model can read or search it for exact details the summary dropped.\n---\nAfter a successful step crosses the threshold, oversized tool results are first rewritten when the optional pruner is loaded and its pressure safeguards allow it. If summarization remains necessary, the next request receives the checkpoint preamble below, a blank line, `<compacted-summary>`, the data-dependent summary, and `</compacted-summary>`. When the recovery services are mounted and the budget allows, the same message then carries `The full text of the conversation this checkpoint condenses is stored at: <locator>. <retrieval guidance> Read it when you need exact details from before this checkpoint.` and a block headed `Files read before this checkpoint, re-read from disk now (current content; it may differ from what was read earlier):` followed by one `<file path=\"…\">` element per re-attached file. Overflow recovery rebuilds the immediate retry from whatever replacement advanced the surface. A checkpoint replaces the selected older range and is followed by the retained recent units.\n---\n- **Stored transcript.** With a `ctx.spillStore` backend, the condensed span's messages are rendered as a labeled plain-text transcript (`[User]:`, `[Assistant]:`, `[Tool call <id>]:`, `[Tool result <id>]:` …), saved, and named in one line with the backend's retrieval guidance. The spill source uses tool name `compaction` and the call id `compaction:<compactionId>` as descriptive labels, since a transcript belongs to no tool call.",
+        "is_error": false
+      }
+    ]
+  }
+}

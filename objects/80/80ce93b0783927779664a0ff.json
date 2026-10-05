@@ -1,0 +1,15 @@
+{
+  "id": "80ce93b0783927779664a0ff",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CiLCGQbZz6PxvXvTfWauXH",
+        "type": "tool_result",
+        "content": "packages/context/agent-instructions/tests/agent-instructions.spec.ts\npackages/fs/fs/tests/service.spec.ts\npackages/fs/tool-fs/tests/tools.spec.ts\npackages/skill/skill-filesystem/tests/skill-filesystem.spec.ts",
+        "is_error": false
+      }
+    ]
+  }
+}

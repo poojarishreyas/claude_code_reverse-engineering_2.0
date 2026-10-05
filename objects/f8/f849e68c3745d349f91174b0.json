@@ -1,0 +1,8 @@
+{
+  "id": "f849e68c3745d349f91174b0",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "now tell me in simple english how our compaction startegy is designed"
+  }
+}

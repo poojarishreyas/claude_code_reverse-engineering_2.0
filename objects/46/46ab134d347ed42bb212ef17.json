@@ -1,0 +1,15 @@
+{
+  "id": "46ab134d347ed42bb212ef17",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_013d3yhoSGSkNVMfzCTQfS58",
+        "type": "tool_result",
+        "content": "`dsh-session-persistence-jsonl` stores each session in its own append-only JSONL log — checksummed Zstandard frames by default, raw newline-delimited lines when compression is disabled. It serves the same logical `SessionEvent` stream as any persistence backend, so choosing it changes nothing for the agent loop, the model, or replay; compression, packing, and crash recovery are storage-internal details. Choose it when consumers need a per-session artifact on disk: `locate(meta)` returns the transcript path, and the logs are readable as plain lines when `compression: 'none'` is selected. A root directory is the one required configuration; durability, lazy materialization, and interrupted-turn recovery come with the backend.\n\n37:  root?: string\n43:   * left untouched. On POSIX, cleanup skips roots and session directories that\n52:type ResolvedConfig = Required<Omit<Config, 'root'>> & Pick<Config, 'root'>\n55: * Local-filesystem spill backend. Files land under `<root>/session-<hash>/…`\n57: * (0700) root — a spilled tool result must not be readable by other local users\n67:    root: z.string(),\n71:  /** Resolved absolute spill root (config `root`, else the private default), fixed at construction. */\n72:  readonly root: string",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "4a3a3f922525424d46da9ae3",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS2QUKEAgSGAI4AUIIdGhpbmtpbmcSDAHG7YglJYFfd8VVOxoMC1VeZ8RQna3ZyNTiIjBVm+UFVUwfkrQMsPzKWQ3w4Op6eB+HTxSG63nqhwW4Hx79QTcwkrg/ldTM3HGDMewq9gR4o72uTdddZgrzWKu6c5mOJcC6i8Q38HspqMUhbLtWRJXi8ZeqMHW8A+LQkL17doJYtSdqvRXomr7kM9t/itkTjO5173TTfUOFDbqLjKUL5NTShjBtpcYhInHlc3SQ0/GGbuwByrBWu6rXevMA36JKaDZoMd8DHtfehTwvDAGivA8U9NqIs9sbL4Fz4mdmlW9jOirzSidJSFuBEmi5Kt79VDitg+KxRyNXPMDlw/x8sBz0rXEIHiJla66ezY4tgnWGSn7TvBFxPrwVCvAYsojMl8wSO63Oex48eK9YozXkJJtZniuIlVEP19WSwMpcRvS2/WaLucjtGUWrsBtMN++f7spqz5Hgn6XMg3kxzNxpwAAioyDoBZ8C6sv2RUWlOLpn4GSHXsPL0FDgvhkvKiogzp4cFFfDbm5nYGLQoR6c17WfDUb5+SFRZUDmuDnBOKW2H2uDcFsyvyCz61cbj//WTKkc0vldBBNobM/UV15tdnPUofYoRKx2jjKetK6v/KjdFfHROcpqcBUQwzGAfD9WJ/VB4Hh4leWWne2vYPnqk2L3uqqzR7Znj4uOdCsvKKMLFfRjISzLJsbjJcCYnA7MGbEZyHHqNm+Ldem8dgVHQeeQj0CLcN80Fe2O5LLgdjhqN3nyeBTp1qVeDqFRq2+fb+fR9ZtM08uNjvXj6uYHMW1821OLNqVEW9m6eATf8fp3wRK2lsN+fhrz001KMV0I64G/Neq7M0Lk/IRSTVkyJu0YkzA6lCvlcWAGjC/jMyKmDqEyRcFm3qbfiBXzZC4VeJPZ8DVVOpMUnGJQ6nIii58RWgdJFqVUpW6dO0HHaJx8SsAbLPQYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01SDQpS9runEJMoczcBD2yVX",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md",
+          "offset": 158,
+          "limit": 75
+        }
+      }
+    ]
+  }
+}

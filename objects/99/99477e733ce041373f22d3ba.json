@@ -1,0 +1,19 @@
+{
+  "id": "99477e733ce041373f22d3ba",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01JHBZrhb7ytQiq7fHe4FReF",
+        "name": "Bash",
+        "input": {
+          "command": "EXE=\"C:/Users/shrey/.local/bin/claude.exe\"; S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/cc\"; dd if=\"$EXE\" bs=1 skip=$((102238113-1500)) count=14000 2>/dev/null | LC_ALL=C tr -c '[:print:]\\n\\t' '?' > \"$S/compact_prompt.txt\"; dd if=\"$EXE\" bs=1 skip=$((102503792-2500)) count=6000 2>/dev/null | LC_ALL=C tr -c '[:print:]\\n\\t' '?' > \"$S/continued.txt\"; wc -c \"$S\"/compact_prompt.txt \"$S\"/continued.txt",
+          "description": "Dump the summary prompt regions to text files",
+          "timeout": 300000
+        }
+      }
+    ]
+  }
+}

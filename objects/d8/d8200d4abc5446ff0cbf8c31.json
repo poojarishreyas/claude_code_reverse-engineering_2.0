@@ -1,0 +1,14 @@
+{
+  "id": "d8200d4abc5446ff0cbf8c31",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WcRT4QkfqFAC8GtVU6bQf5",
+        "type": "tool_result",
+        "content": "1\t/**\n2\t * Durable Tool event vocabulary shared with type-only consumers.\n3\t *\n4\t * @module @deepseek-ai/dsh-tools/types\n5\t */\n6\t\n7\timport type { ToolCallId } from '@deepseek-ai/dsh-llm/brand'\n8\timport type { ContentBlock } from '@deepseek-ai/dsh-llm/types'\n9\t\n10\t/** Payload recorded when one nested PTC mode Tool dispatch starts. */\n11\texport interface PtcDispatchStartEventData {\n12\t  rootCallId: ToolCallId\n13\t  parentCallId: ToolCallId\n14\t  subCallId: ToolCallId\n15\t  name: string\n16\t  arguments: unknown\n17\t}\n18\t\n19\t/** Payload recorded when one nested PTC mode Tool dispatch settles. */\n20\texport interface PtcDispatchEventData extends PtcDispatchStartEventData {"
+      }
+    ]
+  }
+}

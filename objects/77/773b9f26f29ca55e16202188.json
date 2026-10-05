@@ -1,0 +1,15 @@
+{
+  "id": "773b9f26f29ca55e16202188",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01J3f97b51wjLQHi7aCG51r8",
+        "type": "tool_result",
+        "content": "packages/llm/llm/src/types.ts:54:export interface TextBlock {\npackages/llm/llm/src/types.ts:55:  type: 'text'\npackages/llm/llm/src/types.ts:60:export interface ReasoningBlock {\npackages/llm/llm/src/types.ts:61:  type: 'reasoning'\npackages/llm/llm/src/types.ts:71:export interface ImageBlock {\npackages/llm/llm/src/types.ts:72:  type: 'image'\npackages/llm/llm/src/types.ts:78:export interface ToolCallBlock {\npackages/llm/llm/src/types.ts:79:  type: 'tool-call'\npackages/llm/llm/src/types.ts:88:export interface ToolResultBlock {\npackages/llm/llm/src/types.ts:89:  type: 'tool-result'\npackages/llm/llm/src/types.ts:108:export type ContentBlockType = keyof ContentBlockMap\npackages/llm/llm/src/types.ts:110:export type ContentBlock = ContentBlockMap[ContentBlockType]\npackages/llm/llm/src/message.ts:131:export interface Message {\npackages/llm/llm/src/message.ts:135:  readonly role: 'system' | 'user' | 'assistant'\npackages/llm/llm/src/message.ts:143:export interface UserMessage extends Message {\npackages/llm/llm/src/message.ts:144:  readonly role: 'user'\npackages/llm/llm/src/message.ts:148:export interface AssistantMessage extends Message {\npackages/llm/llm/src/message.ts:149:  readonly role: 'assistant'\npackages/llm/llm/src/message.ts:154:export interface ToolResultMessage extends Message {\npackages/llm/llm/src/message.ts:155:  readonly role: 'user'\npackages/llm/llm/src/message.ts:199:    role: 'user',\npackages/llm/llm/src/message.ts:212:    role: 'assistant',\npackages/llm/llm/src/message.ts:237:      type: 'tool-result',",
+        "is_error": false
+      }
+    ]
+  }
+}

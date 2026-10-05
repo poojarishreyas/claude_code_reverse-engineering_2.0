@@ -1,0 +1,15 @@
+{
+  "id": "da224bb7adcda912f0a09b9e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Tfki6QgDvNM3X42jADqFPj",
+        "type": "tool_result",
+        "content": "0\nconstraints baseline exit=1\nverify-node-next-types baseline exit=1\nverify-client-ui-i18n baseline exit=1\n16",
+        "is_error": false
+      }
+    ]
+  }
+}

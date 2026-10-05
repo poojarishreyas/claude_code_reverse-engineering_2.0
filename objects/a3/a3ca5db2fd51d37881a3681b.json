@@ -1,0 +1,20 @@
+{
+  "id": "a3ca5db2fd51d37881a3681b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LCS1FrjjD69RYN5Fq2JEr5",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01D94B8FmaNNVm58aGRyMYeZ",
+        "type": "tool_result",
+        "content": "1:import { describe, expect, expectTypeOf, it, vi } from 'vitest'\n2:import { Context } from '@deepseek-ai/cordis'\n3:import { AttachmentId } from '@deepseek-ai/dsh-attachment'\n4:import BasicCompactionEngine from '@deepseek-ai/dsh-compaction-basic'\n5:import type { BasicCompactionConfig } from '@deepseek-ai/dsh-compaction-basic'\n6:import { selectCompactableRange } from '@deepseek-ai/dsh-compaction-basic/src/region.ts'\n7:import { frameSummary } from '@deepseek-ai/dsh-compaction-basic/src/summarizer.ts'\n8:import type { SummarizationInput, SummaryResult } from '@deepseek-ai/dsh-compaction-basic/src/summarizer.ts'\n9:import { CompactionId, toolPairingBalancedAfter, toolPairingBalancedBefore } from '@deepseek-ai/dsh-compaction'\n10:import {\n15:import type { CompactionResult } from '@deepseek-ai/dsh-compaction'\n16:import LlmRuntime, { createUserMessage, ToolCallId, CONTEXT_WINDOW_EXCEEDED_CODE, createToolResultMessage, LlmAdapter , createMessage } from '@deepseek-ai/dsh-llm'\n17:import type {\n26:import SessionStore, { Session, SessionId } from '@deepseek-ai/dsh-session'\n27:import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'\n28:import TokenMeter from '@deepseek-ai/dsh-token-meter'\n29:import { agentEvents, type Agent, type RequestErrorAction } from '@deepseek-ai/dsh-agent'\n30:import ToolResultPruner from '@deepseek-ai/dsh-compaction-tool-result-pruner'",
+        "is_error": false
+      }
+    ]
+  }
+}

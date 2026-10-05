@@ -1,0 +1,13 @@
+{
+  "id": "5a996cb7c91a1c10bccacbe8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The chain is gone: every checkpoint now lists every stored transcript path, oldest first. After several compactions the model sees one list instead of following files one after another.\n\nThe checkpoint now looks like this:\n\n```\nThe full text of the conversation condensed so far is stored in these files, oldest first. Read them when you need exact details from before this checkpoint. Use read with offset/limit, or grep this path to search within it.\n- /…/compacted-conversation-1.txt\n- /…/compacted-conversation-2.txt\n- /…/compacted-conversation-3.txt\n```\n\n- **Carrying paths forward:** when a new checkpoint absorbs the old one, the old one's list is copied over and the new transcript is added at the end.\n- **Only real checkpoints are read.** A user message that copies the heading, say with `/etc/passwd`, is ignored, and there's a test for exactly that case.\n- **A failed save doesn't drop history:** if saving the new transcript fails, the earlier paths are still listed.\n- **Cost:** each path adds one short line per compaction.\n\nAll 225 compaction tests pass with full coverage, and lint and the pre-push typecheck pass. The README and the Phase 3 Agent Note describe the new format. It's pushed as branch `compaction-phase7`, tagged `compaction-v7`, on top of the earlier phases; `main` still isn't merged."
+      }
+    ]
+  }
+}

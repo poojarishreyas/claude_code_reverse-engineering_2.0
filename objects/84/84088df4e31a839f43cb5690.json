@@ -1,0 +1,15 @@
+{
+  "id": "84088df4e31a839f43cb5690",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017JEgitWLvXBDR9LnBB8gGS",
+        "type": "tool_result",
+        "content": " docs/config-catalog.md                             | 14 ++++++++++++--\n docs/subsystems/compaction.md                      | 19 ++++++++++++++++---\n packages/extensions/tool-cordis/src/api-catalog.ts | 12 ++++++------\n pnpm-lock.yaml                                     |  3 +++\n 4 files changed, 37 insertions(+), 11 deletions(-)\ndiff --git a/docs/config-catalog.md b/docs/config-catalog.md\nindex b5b36a4..f453512 100644\n--- a/docs/config-catalog.md\n+++ b/docs/config-catalog.md\n@@ -422,7 +422,7 @@ Source: [`packages/compaction/compaction-basic/src/types.ts:38`](../packages/com\n Requires: `tokenMeter`\n \n ```ts config-catalog\n-/** Character-budget policy for deterministic tool-result pruning. */\n+/** Budget and selection policy for deterministic tool-result pruning. */\n export interface ToolResultPruneConfig {\n   /** Prune when total text exceeds this many Unicode code points. Defaults to `8192`. */\n   thresholdChars?: number\n@@ -430,10 +430,20 @@ export interface ToolResultPruneConfig {\n   headChars?: number\n   /** Maximum trailing Unicode code points retained. Defaults to `1024`. */\n   tailChars?: number\n+  /**\n+   * Newest tool results a pressure pass never prunes, counted over every current\n+   * tool result regardless of size. Overflow recovery ignores it. Defaults to `5`.\n+   */\n+  protectRecentResults?: number\n+  /**\n+   * Minimum estimated tokens a pressure pass must remove, or it prunes nothing.\n+   * Overflow recovery ignores it. Defaults to `20000`.\n+   */\n+  minTokensSaved?: number\n }\n ```\n \n-Source: [`packages/compaction/compaction-tool-result-pruner/src/types.ts:4`](../packages/compaction/compaction-tool-result-pruner/src/types.ts)\n+Source: [`packages/compaction/compaction-tool-result-pruner/src/types.ts:5`](../packages/compaction/compaction-tool-result-pruner/src/types.ts)\n \n <a id=\"deepseek-aidsh-cordis-host-runner\"></a>\n \ndiff --git a/pnpm-lock.yaml b/pnpm-lock.yaml\nindex 9efd84f..d8fa3b2 100644\n--- a/pnpm-lock.yaml\n+++ b/pnpm-lock.yaml\n@@ -3869,6 +3869,9 @@ importers:\n       '@deepseek-ai/dsh-session-projection':\n         specifier: workspace:^\n         version: link:../../session/session-projection\n+      '@deepseek-ai/dsh-spill':\n+        specifier: workspace:^\n+        version: link:../../spill/spill\n       '@deepseek-ai/dsh-token-meter':\n         specifier: workspace:^\n         version: link:../../llm/token-meter",
+        "is_error": false
+      }
+    ]
+  }
+}

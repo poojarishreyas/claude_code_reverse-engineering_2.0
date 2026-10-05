@@ -1,0 +1,8 @@
+{
+  "id": "a2239b83e63a690dec4e54e4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "<system-reminder>\n[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>bg0jlaf0m</task-id>\n<summary>Monitor event: \"live eval rerun for task 3c17f569da\"</summary>\n<event>phase: preparing/installing/testing</event>\n</task-notification>\n</system-reminder>"
+  }
+}

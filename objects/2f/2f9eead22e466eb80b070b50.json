@@ -1,0 +1,19 @@
+{
+  "id": "2f9eead22e466eb80b070b50",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01FyoRrV27A4qQ5Tw9DpqMWQ",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\docs\\subsystems\\compaction.md",
+          "old_string": "The optional tool-result pruning service reports each durable content replacement and the aggregate Unicode-code-point reduction. Its public result types live in [`compaction-tool-result-pruner/src/types.ts`](../../packages/compaction/compaction-tool-result-pruner/src/types.ts).\n\n```ts type-equiv\n/** Cited source event and size accounting for one landed surface replacement. */\ninterface PrunedEntry {\n  /** Full-fidelity tool-result event shadowed by the replacement. */\n  readonly originalSeq: number\n  /** Newly appended pruned tool-result event. */\n  readonly replacementSeq: number\n  /** Tool call shared by the original and replacement. */\n  readonly callId: ToolCallId\n  /** Original text size in Unicode code points. */\n  readonly charsBefore: number\n  /** Replacement text size in Unicode code points. */\n  readonly charsAfter: number\n}\n```",
+          "new_string": "The optional tool-result pruning service reports each durable content replacement, where its original text was stored when a spill store accepted it, and the aggregate Unicode-code-point reduction. Its public result types live in [`compaction-tool-result-pruner/src/types.ts`](../../packages/compaction/compaction-tool-result-pruner/src/types.ts).\n\n```ts type-equiv\n/** Cited source event and size accounting for one landed surface replacement. */\ninterface PrunedEntry {\n  /** Full-fidelity tool-result event shadowed by the replacement. */\n  readonly originalSeq: number\n  /** Newly appended pruned tool-result event. */\n  readonly replacementSeq: number\n  /** Tool call shared by the original and replacement. */\n  readonly callId: ToolCallId\n  /** Original text size in Unicode code points. */\n  readonly charsBefore: number\n  /** Replacement text size in Unicode code points. */\n  readonly charsAfter: number\n  /** Where the original text was saved, when a spill store accepted it and its marker fit the budget. */\n  readonly spillLocator?: SpillLocator\n}\n```"
+        }
+      }
+    ]
+  }
+}

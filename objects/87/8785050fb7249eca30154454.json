@@ -1,0 +1,18 @@
+{
+  "id": "8785050fb7249eca30154454",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01QEAMFnrbyc9tseBXg963aP",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && sed -n '222,228p' packages/compaction/compaction-basic/src/continuation.ts; sed -n '392,412p' packages/compaction/compaction-basic/src/region.ts",
+          "description": "Show uncovered branches"
+        }
+      }
+    ]
+  }
+}

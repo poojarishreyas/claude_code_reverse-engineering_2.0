@@ -1,0 +1,15 @@
+{
+  "id": "75c5373bfb2cced3d33a40b9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019wcHvd93WC6UwhAVRvzWbL",
+        "type": "tool_result",
+        "content": ",Ixe=5000\n,dco=50000\n---\n(Rt)):St,hookResults:st}}async function yco(e,n,r,s=[],g=!1){let h=Tco(s),_=g?new Set((await VJe(n.session)).map((_e)=>Qe(_e))):new Set,w=Cc\n,_=!1){let w=vs(n.agentContext),D=await yco(e,n,Mxe,r,h),U=w?[]:await bco(n),H=w?[]:wco(n),z=vco(g,r),ge=n.agentId,_e=await _co(ge,n.sto\n---",
+        "is_error": false
+      }
+    ]
+  }
+}

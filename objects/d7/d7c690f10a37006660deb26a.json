@@ -1,0 +1,19 @@
+{
+  "id": "d7c690f10a37006660deb26a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01U6CDf1No3tq8NokGXDukqA",
+        "type": "tool_result",
+        "content": "36\t\n37\t/** Basic compaction configuration with an optional exact-target policy table. */\n38\texport interface BasicCompactionConfig extends CompactionPolicyConfig {\n39\t  /** Exact provider/model overrides; duplicate targets fail plugin load. */\n40\t  modelPolicies?: ModelCompactPolicyConfig[]\n41\t  /** Enable automatic step-boundary pressure and overflow-recovery listeners. Defaults to `true`. */\n42\t  auto?: boolean\n43\t}\n44\t\n45\t/** Exactly one validated retention form. */\n46\texport type ResolvedRetention =\n47\t  | { readonly retainRatio: number; readonly retainTokens?: never }\n48\t  | { readonly retainRatio?: never; readonly retainTokens: number }\n49\t\n50\t/** Validated policy fields shared before and after exact-target matching. */\n51\tinterface ResolvedPolicyFields {\n52\t  readonly thresholdRatio: number\n53\t  readonly summarizationProvider: string\n54\t  readonly summarizationModel: string\n55\t  readonly maxTokens: number\n56\t  readonly compactionRetries: number\n57\t  readonly maxOverflowRetries: number\n58\t}\n59\t\n60\t/** Validated immutable config whose target-specific defaults remain unresolved. */\n61\texport type ResolvedConfig = ResolvedPolicyFields & ResolvedRetention & {\n62\t  readonly modelPolicies: readonly Readonly<ModelCompactPolicyConfig>[]\n63\t  readonly auto: boolean\n64\t}\n65\t\n66\t/** Fully merged policy for one routed conversation target, before capacity scaling. */\n67\texport type ResolvedTargetPolicy = ResolvedPolicyFields & ResolvedRetention & {\n68\t  readonly target: Pick<LlmCallConfig, 'provider' | 'model'>\n69\t}\n70\t"
+      },
+      {
+        "tool_use_id": "toolu_01VfvQ6e2rAP6wXQj7hrM7pA",
+        "type": "tool_result",
+        "content": "100\t * `summarize()` is the sole subclass customization hook; the replay and durable\n101\t * mutation strategy stays fixed so every pricing decision uses the singleton\n102\t * token meter.\n103\t */\n104\texport class BasicCompactionEngine extends CompactionEngine {\n105\t  static inject = ['llm', 'tokenMeter', 'sessions']\n106\t\n107\t  static Config: z<BasicCompactionConfig> = z.object({\n108\t    thresholdRatio: thresholdRatioSchema,\n109\t    retainRatio: retainRatioSchema,\n110\t    retainTokens: retainTokensSchema,\n111\t    summarizationProvider: summarizationProviderSchema,\n112\t    summarizationModel: summarizationModelSchema,\n113\t    maxTokens: maxTokensSchema,\n114\t    compactionRetries: compactionRetriesSchema,\n115\t    maxOverflowRetries: maxOverflowRetriesSchema,\n116\t    modelPolicies: z.array(modelPolicy),\n117\t    auto: z.boolean(),\n118\t  })\n119\t\n120\t  /** Resolved and validated compaction configuration. */\n121\t  readonly config: ResolvedConfig\n122\t\n123\t  private readonly warnedPressureConfigTargets = new Set<string>()\n124\t  private readonly overflowRetries = new WeakMap<Agent, number>()\n125\t  private readonly overflowAgents = new WeakMap<Session, Agent>()\n126\t\n127\t  constructor(ctx: Context, config: BasicCompactionConfig = {}) {\n128\t    super(ctx)\n129\t    this.config = resolveConfig(config)"
+      }
+    ]
+  }
+}

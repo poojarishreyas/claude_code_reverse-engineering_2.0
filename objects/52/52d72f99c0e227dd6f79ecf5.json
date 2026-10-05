@@ -1,0 +1,15 @@
+{
+  "id": "52d72f99c0e227dd6f79ecf5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017b9JBvuMkoesGRBUC2xAQu",
+        "type": "tool_result",
+        "content": "Switched to a new branch 'compaction-phase1'\npackages/compaction/compaction-tool-result-pruner:\nREADME.md\nlib\nnode_modules\npackage.json\nsrc\ntests\ntsconfig.json\n\npackages/compaction/compaction-tool-result-pruner/tests:\nloader-composition.spec.ts\ntool-result-pruner.spec.ts\n\npackages/spill/spill/src:\nindex.ts\ninvariant.ts\ntypes.ts\n{\n  \"name\": \"@deepseek-ai/dsh-compaction-tool-result-pruner\",\n  \"description\": \"Replay-safe model-free head/middle/tail pruning for tool-result surface nodes\",\n  \"version\": \"0.1.2-alpha.3\",\n  \"publishConfig\": {\n    \"access\": \"public\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/deepseek-ai/deepseek-harness.git\",\n    \"directory\": \"packages/compaction/compaction-tool-result-pruner\"\n  },\n  \"type\": \"module\",\n  \"main\": \"lib/index.js\",\n  \"types\": \"lib/types/index.d.ts\",\n  \"exports\": {\n    \".\": {\n      \"types\": \"./lib/types/index.d.ts\",\n      \"default\": \"./lib/index.js\"\n    },\n    \"./invariant\": {\n      \"types\": \"./lib/types/invariant.d.ts\",\n      \"default\": \"./lib/invariant.js\"\n    },\n    \"./src/*\": \"./src/*\",\n    \"./package.json\": \"./package.json\"\n  },\n  \"files\": [\n    \"lib/index.js\",\n    \"lib/invariant.js\",\n    \"lib/types/**/*.d.ts\"\n  ],\n  \"license\": \"MIT\",\n  \"peerDependencies\": {\n    \"@deepseek-ai/cordis\": \"workspace:^\",\n    \"@deepseek-ai/dsh-compaction\": \"workspace:^\",\n    \"@deepseek-ai/dsh-invariants\": \"workspace:^\",\n    \"@deepseek-ai/dsh-llm\": \"workspace:^\",\n    \"@deepseek-ai/dsh-session\": \"workspace:^\",\n    \"@deepseek-ai/dsh-token-meter\": \"workspace:^\"\n  },\n  \"dependencies\": {\n    \"@deepseek-ai/dsh-util-values\": \"workspace:^\",\n    \"@deepseek-ai/schemastery\": \"workspace:^\"\n  },\n  \"devDependencies\": {\n    \"@deepseek-ai/cordis\": \"workspace:^\",\n    \"@deepseek-ai/cordis-plugin-include\": \"workspace:^\",\n    \"@deepseek-ai/cordis-plugin-loader\": \"workspace:^\",\n    \"@deepseek-ai/dsh-compaction\": \"workspace:^\",\n    \"@deepseek-ai/dsh-invariants\": \"workspace:^\",\n    \"@deepseek-ai/dsh-llm\": \"workspace:^\",\n    \"@deepseek-ai/dsh-session\": \"workspace:^\",\n    \"@deepseek-ai/dsh-session-projection\": \"workspace:^\",\n    \"@deepseek-ai/dsh-token-meter\": \"workspace:^\"\n  }\n}",
+        "is_error": false
+      }
+    ]
+  }
+}

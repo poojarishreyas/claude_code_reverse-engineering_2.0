@@ -1,0 +1,15 @@
+{
+  "id": "950f676791db13e7885921b1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01ASD9oBaQFDV35qDvAMPBSi",
+        "type": "tool_result",
+        "content": "6:# @deepseek-ai/dsh-compaction-basic\n8:## Summary\n12:## Table of Contents\n24:## Use this package\n28:### What you get\n32:### Smallest working composition\n58:### Tuning when condensation starts\n62:| Field | Default | Meaning |\n73:| `auto` | `true` | Enable automatic condensation and overflow recovery; set `false` for manual-only operation. |\n77:### What happens when condensation runs\n81:### On-demand condensation with /compact\n85:### Trimming oversized tool outputs\n92:## Understand the implementation\n99:### Design philosophy\n108:### Automatic triggers and overflow recovery\n114:### Summarization mechanics\n118:### The region transaction\n122:### Config resolution\n126:### Source map\n142:## Further Exploration\n156:## Model Experience\n158:### Conversation history\n160:#### What the model sees\n164:##### Conversation checkpoint preamble\n170:#### Token effect\n174:#### KV Cache effect\n178:### Auxiliary summarizer request\n180:#### What the model sees\n184:##### Compaction instruction (final user message)\n191:## Primary Request and Intent\n194:## User Messages\n197:## Key Technical Concepts\n200:## Files and Code\n203:## Errors and Fixes\n206:## Pending Jobs\n209:## Current Work\n212:## Next Step\n215:## Critical Context\n231:#### Token effect\n235:#### KV Cache effect",
+        "is_error": false
+      }
+    ]
+  }
+}

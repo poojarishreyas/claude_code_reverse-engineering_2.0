@@ -1,0 +1,15 @@
+{
+  "id": "b5bb3fbf8e289659f47dc6cf",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01EX3u7HzjZja8psb8PHUpWi",
+        "type": "tool_result",
+        "content": "class FormatConfig(BaseModel):\n    \"\"\"Recursive bounds for ``pformat``-based rendering.\n    \"\"\"\n    max_string: Annotated[\n    max_length: Annotated[\n    max_depth: Annotated[int | None, Field(description=\"Max nesting depth\")] = 4\nclass TruncationConfig(BaseModel):\n    \"\"\"Controls output size at render time.\n    \"\"\"\n    max_context_tokens: Annotated[int | None, Field(description=\"Total context token budget\")] = (\n    max_event_tokens: Annotated[\n    min_preserved_events: Annotated[\n    response_reserve_tokens: Annotated[\n    capture: CaptureConfig = CaptureConfig()\n    media_capture: MediaCaptureConfig = MediaCaptureConfig()\n    event_format: FormatConfig = FormatConfig(max_string=10_000, max_length=200, max_depth=5)\n    prefill_format: FormatConfig = FormatConfig(max_string=2_000, max_length=25, max_depth=4)\n    context_block_format: FormatConfig = FormatConfig(",
+        "is_error": false
+      }
+    ]
+  }
+}

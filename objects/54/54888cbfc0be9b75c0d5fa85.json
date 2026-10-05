@@ -1,0 +1,18 @@
+{
+  "id": "54888cbfc0be9b75c0d5fa85",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSoAcKEAgSGAI4AUIIdGhpbmtpbmcSDIyfOok4IJv8hc7eOhoMo0DirdiNhRjkJ76PIjB/KCWpDHItlSs033GYoVk3oaDMFTok8Bxi+s8JTsQZl54PCcGgjda8VZiMaYoiiJIqvQag7AmvgP7x+jyQiiXecoVODfzXg9/cToRrgQWG9sCPtLROCI/JwKZ7EpbwrvQ0zkKANLOoJ4+eOgt2qnJYnq9BWvag9etmgeLUr/D1YCQVpHeWK7xWxd+gP/BooBCmOjU223lQeZ44+3jKZtwfBl7MWTDqp1GNrsH8OA3K9LoAfNnYob5wC+3+OZWqoezvi70YY5VFlpxR1Hk0YO4Hws1vnE3d75/IR/Uafgqn37sVIk5BPzKqaGazwjYZPcbI5bnDaRp4s6/izpUltAblCGaHdEpAx9aslvlN7t+HNm7o77NuLYVklJNlcWdB9cFu0Yd5sPq8S/2QfowJrYSIKOehrtV/qGVqX855YDwQEqx3zZMW9/2LWMk5XmX3yBgbbZMUNQOlhq0eQclyjtGKQeBBFTEVZHNs6Mi2Up9fiJ3GbUz3+3u7oB3FeaIlcvkOO3gHFRanZh32zN3XQjmFo1CeaXIakemIK1omdDo4lCX6Ao6g2Kmu1wOaZOzCsx/Ua4QT6NQiCh9iBljqAiyKfgcnwQ8a1eCXptdA/vZHi3cNwodk4rQvomlG7BuDOv/COby2wwzh6z7pKKxn1L8Q5ujeYZ/1btdn/ZqDBn1RYCx2Nj1Kkdf+Y/CdIub5HOaow3gV67kHEo3eovB7P8UB+UKFehF/FuwQ/F82qoQI0M64yY+9I3kNjzvZ43ngJEJ/ND22tx+sCXishM0WfYObhmrOW0TYdN+G7jdVkSJghIXRNrPrilg4VGVLGCeksPQ/Dg1fT1yFESk01msqz22B8b1K4qOfXGaAGBiplvZsvi9eUi6Ir3bLMaMgIdEjCkTexBnQqKqv4hZNNTFGVh8brywZbezjHnRRczluS6JmKLg70e5bIyr1mTBrcfznguR00cSOrg3+8A4qhvR0fR9/DZ3rXv2iq8AyxQdr0O3y99FF5+7ZCqLwpKb9qa3PdLz9SjBzwcY9+IHpGnvsHY27RwNsA9qu3rgsOXpcmYDn8mJENzyd6q4zipaUC/rDx/IRxGCdpFxwoaV5vjHF34EA5luR6th2llJscrh3LzHbgFAWIqKzjhXlZFWo/G5XNDPO4KqPzjam1MeVcD9vuFjSGAE="
+      },
+      {
+        "type": "text",
+        "text": "No. The harness does no graph, semantic or lexical indexing of the user's codebase. The only lexical index is for past chat sessions, and it ships switched off. The only graphs are build-time tools for the harness's own source.\n\n**Semantic: none.** No embeddings, vector store or similarity search exists anywhere in the source. The only \"embeddings\" mention is Exa's web search provider, which searches the web, not your code.\n\n**Lexical: one index, and it covers chats, not code.**\n- **What it is:** `packages/session-query/session-query-sqlite` builds a SQLite full-text (FTS5) index (`src/schema.ts:127`).\n- **What it covers:** the text of past sessions (messages and events), plus details like working directory and creation date. It never reads your source files.\n- **Shipped off:** both default profiles set `openAt: never`, and the README says `never` \"disables full-text search\". Enabling it is a config change to `openAt: startup` or `first-search`.\n- **The `@file` path list** from my earlier answer is also lexical in a loose sense. It fuzzy-matches file *names* for the autocomplete dropdown. It's built only when you use `@`, and the model never sees it.\n- **Code search:** `grep`/`glob` run ripgrep live on every call and store nothing between calls.\n\n**Graph: nothing at runtime.**\n- `packages/typert` has a type-graph generator. It analyzes the **harness's own** TypeScript types at build time to generate its RPC layer, and never looks at your project.\n- `scripts/package-graph.ts`, `gen-module-graph.ts` and `gen-doc-graphs.ts` draw dependency diagrams of this repo for its docs. They are developer tooling, not part of the running app.\n\nI confirmed this by searching the package, app and script source for FTS, BM25, TF-IDF, vector databases (FAISS, HNSW, sqlite-vec, LanceDB, Chroma), cosine similarity, graph libraries and call or dependency graphs. Every hit was one of the items above. The agent learns your codebase only by reading and grepping it live during each turn."
+      }
+    ]
+  }
+}

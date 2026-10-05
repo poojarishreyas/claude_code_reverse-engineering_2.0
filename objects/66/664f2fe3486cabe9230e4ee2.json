@@ -1,0 +1,14 @@
+{
+  "id": "664f2fe3486cabe9230e4ee2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CWBs4mYzu6UebTGSMyjrgr",
+        "type": "tool_result",
+        "content": "240:class TestCompactionEngine extends BasicCompactionEngine {\n241-  summary: ContentBlock[] = [{ type: 'text', text: 'small checkpoint' }]\n242-  rawOutput: ContentBlock[] | undefined\n243-  usage: TokenUsage | undefined\n244-  summaryProvider = 'summary-provider'\n245-  summaryModel = 'summary-model'\n246-  error: unknown\n247-  mutateDuringSummary: (() => void) | undefined\n248-  calls: Array<{ input: SummarizationInput; signal: AbortSignal | undefined }> = []\n249-\n250-  override async summarize(\n251-    input: SummarizationInput,\n252-    _agent: Agent,\n253-    signal?: AbortSignal,\n254-  ): Promise<{\n255-    summary: ContentBlock[]\n256-    rawOutput?: ContentBlock[]\n257-    provider: string\n258-    model: string\n259-    maxTokens?: number\n260-    usage?: TokenUsage\n261-  }> {\n262-    this.calls.push({ input, signal })\n263-    this.mutateDuringSummary?.()\n264-    if (this.error !== undefined) throw this.error\n265-    return {\n266-      summary: this.summary,\n267-      ...this.rawOutput === undefined ? {} : { rawOutput: this.rawOutput },\n268-      provider: this.summaryProvider,\n269-      model: this.summaryModel,\n270-      maxTokens: 123,\n271-      ...this.usage === undefined ? {} : { usage: this.usage },\n272-    }\n273-  }\n274-}\n275-\n276-function service(\n277-  config: BasicCompactionConfig = { auto: false },\n278-  ctx = createContext(),\n279-): TestCompactionEngine {\n280-  return new TestCompactionEngine(ctx, config)"
+      }
+    ]
+  }
+}

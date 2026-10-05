@@ -1,0 +1,14 @@
+{
+  "id": "19dff5b235c7bf9003d172b4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CD9RfpoUBxwcRtp3SL9iaP",
+        "type": "tool_result",
+        "content": "185\t\n186\t  /**\n187\t   * Heuristically price one model-visible message (instance face of the pure\n188\t   * `estimateMessage` export from `estimate.ts`).\n189\t   * @param message - message to price without mutation.\n190\t   * @returns content and role-framing tokens under the fixed service heuristic.\n191\t   */\n192\t  estimateMessage(message: Message): number {\n193\t    return estimateMessage(message)\n194\t  }\n195\t\n196\t  /** Catch one session's fold up to the current durable tail. */\n197\t  private _sync(session: Session): ReplayState {\n198\t    let state = this.states.get(session)\n199\t    if (state === undefined) {\n200\t      state = {\n201\t        consumedEvents: 0,\n202\t        header: undefined,\n203\t        surface: [],\n204\t        stepStart: undefined,\n205\t        anchor: undefined,\n206\t      }\n207\t      this.states.set(session, state)\n208\t    }\n209\t\n210\t    while (state.consumedEvents < session.events.length) {\n211\t      // oxlint-disable-next-line typescript/no-non-null-assertion -- contiguous session seqs index the durable log\n212\t      const event = session.events[state.consumedEvents]!\n213\t      this._foldEvent(session, state, event)\n214\t      state.consumedEvents += 1"
+      }
+    ]
+  }
+}

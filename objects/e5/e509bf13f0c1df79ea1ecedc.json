@@ -1,0 +1,29 @@
+{
+  "id": "e509bf13f0c1df79ea1ecedc",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "text",
+        "text": "The new test hit the test engine's check that a summary must be smaller than what it replaces. I'll look at how the test engine builds its fake summary."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01CWBs4mYzu6UebTGSMyjrgr",
+        "name": "Grep",
+        "input": {
+          "pattern": "class TestCompactionEngine",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts",
+          "output_mode": "content",
+          "-A": 40
+        }
+      }
+    ]
+  }
+}

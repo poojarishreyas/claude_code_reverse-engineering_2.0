@@ -1,0 +1,15 @@
+{
+  "id": "dac42de08f7eb808f019a299",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RfirVrnJ1WaEizaYsiXbPD",
+        "type": "tool_result",
+        "content": "94 docs/cache-sharing-summaries.md\n<div align=\"center\">\r\n\r\n<br />\r\n\r\n<!-- Absolute URLs, not repo-relative paths: this README is also the PyPI\r\n./packages/nooa-acp/src/nooa_acp/event_bridge.py\n./packages/nooa-bench/src/nooa_bench/bench_agent.py\n./packages/nooa-cli/src/nooa_cli/coding/activity.py\n./packages/nooa-cli/src/nooa_cli/coding/agent.py\n./packages/nooa-cli/src/nooa_cli/coding/instructions.py\n./packages/nooa-cli/src/nooa_cli/commands/config.py\n./packages/nooa-cli/src/nooa_cli/commands/connect.py\n./packages/nooa-cli/src/nooa_cli/commands/traces.py\n./packages/nooa-cli/src/nooa_cli/commands/_connect_stages.py\n./packages/nooa-cli/src/nooa_cli/commands/_connect_view.py\n./packages/nooa-cli/src/nooa_cli/commands/_connect_wizard.py\n./packages/nooa-cli/src/nooa_cli/sessions/store.py\n./packages/nooa-cli/src/nooa_cli/tools/pyp/sources.py\n./packages/nooa-cli/src/nooa_cli/tools/pyp/stream.py\n./packages/nooa-cli/src/nooa_cli/tools/repo_tools.py\n./packages/nooa-memory/src/nooa_memory/config.py\n./packages/nooa-memory/src/nooa_memory/generative.py\n./packages/nooa-memory/src/nooa_memory/manager.py\n./packages/nooa-memory/src/nooa_memory/monitoring.py\n./packages/nooa-memory/src/nooa_memory/reflection.py",
+        "is_error": false
+      }
+    ]
+  }
+}

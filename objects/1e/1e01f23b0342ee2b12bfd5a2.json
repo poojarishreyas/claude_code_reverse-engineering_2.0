@@ -1,0 +1,8 @@
+{
+  "id": "1e01f23b0342ee2b12bfd5a2",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\desktop\\Elemental_harness (was C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\tests)\n\n<total_tokens>14916888 tokens left</total_tokens>"
+  }
+}

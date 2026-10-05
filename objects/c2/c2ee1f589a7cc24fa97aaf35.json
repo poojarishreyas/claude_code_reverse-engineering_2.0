@@ -1,0 +1,8 @@
+{
+  "id": "c2ee1f589a7cc24fa97aaf35",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "if we add that file path in midlle when pruned the model will take that if it is necessary or always ti will ask?"
+  }
+}

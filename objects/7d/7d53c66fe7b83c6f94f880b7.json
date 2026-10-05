@@ -1,0 +1,38 @@
+{
+  "id": "7d53c66fe7b83c6f94f880b7",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_015BkXWFEQkRSuiMG1AkjwXF",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\README.md",
+          "old_string": "Two invariants shape the code: the model-facing replacement never exceeds `maxInlineBytes` (the notice's byte cost is reserved out of the budget first), and a spill failure never changes the tool call's outcome.",
+          "new_string": "Two invariants shape the code: the model-facing replacement never exceeds `previewBytes` (the notice's byte cost is reserved out of the budget first), and a spill failure never changes the tool call's outcome. Because `previewBytes` is at most `maxInlineBytes` and only larger results spill, a replacement is always smaller than the original."
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01QWZTgGG3iG47Vsn6poRmer",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\README.md",
+          "old_string": "A successful replacement is at most `maxInlineBytes` UTF-8 bytes and remains in history until compaction; the full spill text is not resent to the model.",
+          "new_string": "A successful replacement is at most `previewBytes` UTF-8 bytes (2,000 in `dsh-base`, roughly 500 tokens) and remains in history until compaction; the full spill text is not resent to the model. Reading the spill file back costs whatever the model reads."
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_013vHModiycWWY47fNYfgPib",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && sed -n '/### Failure modes/,/^<a id=\"further/p' packages/spill/spill-policy/README.md | head -8",
+          "description": "Read the failure modes section"
+        }
+      }
+    ]
+  }
+}

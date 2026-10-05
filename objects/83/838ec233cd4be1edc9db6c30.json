@@ -1,0 +1,14 @@
+{
+  "id": "838ec233cd4be1edc9db6c30",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016CgsWLUM1ZNJsWgXH1X8wK",
+        "type": "tool_result",
+        "content": "276\t    ...event.data.message,\n277\t    content: [{ ...result, content }] as [typeof result],\n278\t  })\n279\t}\n280\t\n281\t/** Concatenated text of every text block; other blocks stay in the replacement itself. */\n282\tfunction textOf(blocks: readonly ContentBlock[]): string {\n283\t  return blocks.flatMap(block => block.type === 'text' ? [block.text] : []).join('')\n284\t}\n285\t\n286\t/** Name of the tool whose call produced `callId`, searching back from the result at `seq`. */\n287\tfunction toolNameFor(session: Session, seq: number, callId: ToolCallId): string {"
+      }
+    ]
+  }
+}

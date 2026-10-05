@@ -1,0 +1,37 @@
+{
+  "id": "67224f3e01b6f3deb4bf760e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS5wUKEAgSGAI4AUIIdGhpbmtpbmcSDJS2J2t+tgGcb3aDbxoMOaCbWEzhuuvL2h98IjDtMWIKiHFj0EVMCm2XQialXOFV5b75vVtXrlm+fRsE6arSGJzBLYBRq0vmXEExjLEqhAVpG/aNSpPz3e4qPQztJzapgoP221X/J4Um/YfhgypEl4m8eSrlNnBgqQaYQx3Wkx9mW9H1Og4zpo6U5zChAsq5EQzlIueWYmuJxCcd6VlTOThmafZLq2bW8UghmWhPZ+5Y/8CI5qtIH2Eb+g/7/HeRvFf1fwvG1neNQ+aIb3LRBXXBx0v13x5L6rvfrWXoDAaN9Qr/MW/vPWSLg4vQQGPwFsQ18xAJI8kZyDwff/IO4mkZxA9R4hjiK23jf2C7lWW/GPhn7lIsZcykhde1kSi2vF2nDqlVHF/LJNbgPL0pwe6PPNI8q+iuXDw1mZhq63yua+pLIVfHk8feNMOwxIUtIUhnJ0j5Hld0TEK98aKcdNkHUywRLBUOMhvNldNPAUqRecaqumY+7ir3iRVJAYzgHlI+PL0R4HzaJCR+tQrc9IMml8GRKksaUY7jKAPdyiYjj7lscNoWB0fbvOxR6ObkROS9X+MDTddCILK8LfYoo3p99GO72zzicltsZFGCq5RfjixjzuSKYeaUn51YXAoWH1LVAWTjj71mctqyg/Mi7/ELjPmV7WYxiS5qdQ6YjK+DfbG1oq8aK4X3XQP0BpDT+l2C+A+qp7IL9K93S3fgq3rrPuvIc7egd9R+UhE6SYFm7rWjW9TLQgoos/r4wZfcPnVj8W0dTSwIsw5fM8mLCA/TPfkdrblSLWeT5EcBB1GJAx3Q91rRgsq+QFzGIPcbzIvI5Xxjln0ys3jgYznEEzClbHRJyylP342ayAfVOtTNfwqwSPoAaX7w/1s06/8xIv7VyLnPanxxHc2HI52+Rcr4HC7CN5JUMmVzmWZm4ZKWbLoow1PI9R2wLwrwlpSTv8gaKRgB"
+      },
+      {
+        "type": "text",
+        "text": "The existing spill note owns the seam. The preview-size choice is a new decision, so I'll give it its own note, recording why the threshold stays at 50 KB and why the preview shrinks."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01EG5VtvTaVhtjj7nRvFEVrP",
+        "name": "Write",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\.agents\\notes\\implemented\\feature\\2026-09-29-spill-preview-size.md",
+          "content": "# Agent Note: Spilled tool results keep a 2 KB preview instead of a full-budget one\n\nStatus: implemented\n\n## Problem\n\n`dsh-spill-policy` used one number for two jobs: `maxInlineBytes` decided when a result spills to a file, and it was also the size of the preview left in context. With the shipped `maxInlineBytes: 50000`, a 60 KB tool output was saved to a file and then replaced by roughly 50 KB of preview — about 12,500 tokens staying in context for an output the model could now read from disk on demand. Spilling saved almost nothing for outputs just over the threshold.\n\nThe compaction work in this series started by asking whether the spill threshold itself should be lower. Claude Code (v2.1.281, read from the installed binary) clamps each tool's persistence threshold to 50,000 characters (`FU = 50000`; most tools declare 100,000 and are clamped), so our 50,000-byte threshold already matches it. The difference is the preview: Claude Code replaces a persisted result with its first 2,000 characters plus the file path.\n\n## Decision\n\n`dsh-spill-policy` gains `previewBytes`: the UTF-8 size of the replacement — head/tail preview plus the storage notice — for a spilled result. `maxInlineBytes` still decides when to spill. `previewBytes` must be a non-negative integer no larger than `maxInlineBytes`, checked at load; omitted, it equals `maxInlineBytes`, which is the previous behavior. The notice is reserved out of `previewBytes` first, and if the notice alone does not fit, the original result stays inline, as before.\n\n`dsh-base` ships `maxInlineBytes: 50000` and `previewBytes: 2000`. The preview stays head-plus-tail rather than Claude Code's head-only, so a log's final status or error remains visible.\n\n## Alternatives considered\n\n**Lower `maxInlineBytes`.** Rejected: the threshold already matches Claude Code's cap, and without usage data there is no evidence for a different number. A lower threshold with the old full-budget preview would also still keep that many bytes in context.\n\n**Head-only preview, as Claude Code does.** Rejected: build and test output puts the verdict at the end, and `dsh-output-retention` already provides head/tail retention; the tail costs part of the same 2,000 bytes.\n\n**Make the small preview the package default instead of a `dsh-base` setting.** Rejected: the package has no default for `maxInlineBytes` either, and every existing composition that sets only `maxInlineBytes`, including the snapshot overlays, keeps its behavior.\n\n## Consequences\n\n- A spilled result costs about 500 tokens in context instead of up to about 12,500, and the model reads the file for the middle when it needs it; that trade costs extra `read` or `grep` calls when the preview is not enough.\n- Results between 2 KB and 50 KB are unaffected: they are below the spill threshold and stay inline.\n- A patch that replaces the `spill-policy` row's config without `previewBytes` returns to a full-budget preview, because patches replace a row's whole config.\n- The durable `run_code` sub-call log copy uses the same replacement, so it shrinks too.\n\n## Related\n\n- [Tool output spill files](../architecture/2026-07-08-tool-output-spill-files.md) — the spill seam and policy this setting extends.\n- [Tool-result pruner keeps recent results, skips small gains, and stores originals](2026-09-29-pruner-recency-gain-and-stored-originals.md) — phase 1; the same recover-from-file approach for trimmed results.\n"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_016TW9FXqU99kJonp2W6kdZo",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && pnpm run -s gen-config-catalog 2>&1 | tail -1; pnpm run -s gen-cordis-catalog 2>&1 | tail -1; for g in verify-agent-note-format verify-type-equiv verify-package-readme-limitations verify-export-jsdoc verify-cordis-config; do pnpm run -s $g 2>&1 | tail -1; done; npx tsx scripts/run-oxlint.ts packages/spill packages/compaction; echo lint=$?; npx tsc -b packages/spill/spill-policy; echo tsc=$?; git status --short",
+          "description": "Regenerate docs, run gates, lint, typecheck",
+          "timeout": 600000
+        }
+      }
+    ]
+  }
+}

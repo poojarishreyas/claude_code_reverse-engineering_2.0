@@ -1,0 +1,18 @@
+{
+  "id": "3419a0c9d0ab2e18393af274",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS2wcKEAgSGAI4AUIIdGhpbmtpbmcSDFmx4qveM338t5H8ARoMkh3AuhVdDVpyswNbIjCKJCZI0JmT67yaeZn37sbPfX5nXLZtjihfGAE4eqUd3AUv42QuHMxMp93lLWEGbMcq+Ab/kmy6OhQQ/IUzlfCNmISGN92e+7mQjwPKd4EM7Eme2ZWV/bRCj3VoF7/bWaLxVdXN1P48W6OFQ/try75PprJhYfgoziMKBUuOx0xMOPE2KEKCwLQDEs1lHXWXaiLa1LDOhh7qL9nsBsOGg/R1Z0bIrejPvSn27e6yso222q1Hp5edZNWD8snJg/g8Io96RCuMrBbbNYbZHrgceFpoeZKsDsI+R087uBwh8kzenagB01VllBede54i4j5EwTYUx8MCe1JntuqLiI+TPmNVoQ3eaggPBrKq6l7Cx3+YRzmURMUzRzOOh//CYJ8d4V5TnHjI90qwy9l1iDpNoOCIjZF1tVnfTwvJK/PuHZ47f4YHroAqqGdZuaEMOk1k9d4UVWj1PUbvW/GCYiQwKfL2dqmQ4V2eHN8EF2egI/CsBZHw7GqdOvBGm8KTZ1fgwtozkgAoj+OwIo42Lk/S0TkSwx7gfNaCkwkaQKzpCIQ8cS4YuDfWan19C8SPWTTWF0jxm9fLtm1y0EHFabnSE2vkvk6L3K067bKl1BcKJwyQv/+GoUqQONKLjy1BTVusB5FmuhoH8ygqs5fcoBtJypOvt3NU9Z3KD1oDn7MeIMdXD/MHBDs+zZD/h+agcDSzWoCBLZq32PEjIP5FT8MvxqMsbpEovu1OffKUaXTbZ3vZF//8JErickwCQYP6Mx2omLLBwgIZPamlogaHwXYyaesKoOHTFfGlqENE2Qjki7c0QVk0Ai8ldtNRbblXz3F6Cg6cTOv0/rd1hp1za92xxrGJ780gY+G4SM/P5f053o+eTUHgo6lfXtsywCZ6So03M8IcxHjXoTlkPpyVuImwWcr2FW6EwNg8xI/BQL705f0i4JDgnQT2BO3L+EO+0iNtIYOT8SDi+dlllLleYxrDZ9ZmF0/sWJNM9qcjJuwOMT28GRN9ks5s6Ck6iigaTWxvRUSK1IaUiMNXpxJRFAfrok8FZblwgUzqHzNLTaeRxpHOnsn4aS2Qg54sVi4LMEIWRvgmRmKhYGVhQtsl4P26I7ay0LLuGc+m11txFeTlCe4k2bQMmMnsRq8xVcK+HaeH5Qaj5sFFUFddD4omEisNrLyyI9KDqOtdAYGynxnq6TTjPLThRc9eKnvN7m0UQLt9bCdd36nLdwB45whTpumVOEzMD2GcZ7ZJMnHqcVIYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Yes for recent output, mostly no for old output. The tool result is the \"observe\" step of the loop. Without it the model can't see what `grep` found or why a test failed, and it would guess. Once the model has acted on an output, the full text rarely matters again, and that's exactly the case the pruner targets.\n\nThere's a real gap, though. Spill is on by default (`spill-policy`, `maxInlineBytes: 50000` in `packages/bundle/base/cordis.patch.yml:396`), so outputs over about 50 KB are saved to a file the model can reread. Outputs between 8 KB and 50 KB aren't spilled, so when the pruner cuts their middle it's gone for the model, even though it's still in the log.\n\nMy recommendation is to have the pruner save the dropped middle through the existing spill store and put the file path in the `[... tool result middle pruned ...]` marker. Trimming would then be recoverable at almost no cost. The tradeoff is more small spill files on disk, and it's a small change within the pruner plugin. Want me to implement it?"
+      }
+    ]
+  }
+}

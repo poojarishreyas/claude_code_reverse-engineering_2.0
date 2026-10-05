@@ -1,0 +1,18 @@
+{
+  "id": "99f284e413106af96e652a5d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSqAYKEAgSGAI4AUIIdGhpbmtpbmcSDIGMpeM7BLSg6sg8rxoMak+vScvrFWUs8CwQIjCOP0mrRMLCVxgN/iUT4zlCa2W2/aWsin3Idw4Y6rv4AZIOKPI10U9F6EbOFFe0jWYqxQWOb2VkcfB+pK3WD5f4nLzcx6p01BYaRR1rRjlk6TkwdZCcuPl6PXH6f7cn41y9mnam+SVHBuWMnP4gNWFgfHzzeij/8MYd0ZHjkG4y5q9h+EHh9I1Pc4kEY2p1DQ8evKa1iZkpYmxluJ9TdpoXY9pdHDgxICjEWWC0bht9wXag5ntLsia9Tdc5VJzCX5D9KDo8VOcOJW8JfcHPI6q6Slolv2c+pih0zk7QcbCoCK51CuMvz0XEi2Vq2+eVu/cjDcut+9oFXuvROENBwTyHB+Matc21c/55VhkgWkj74ZUfqKl32V7l9J69T++oT+D5baYdZMCNXj4zglbkKQmONKwlC8gl66bdXKLkAYuxxQVRzDWOe8g2nmBTrT3U/mcawg0f1ybTfYJqPQIkhylhHzDH0uQxVdEvsBx1IXk9gmVcvq15xzoo6lnkDc3dnACijZZF+i5FCjDYA/T3zRi4NkZffQhKZOEYr+Mt/4z7XNNWwDHiSPAsm+/f8k4xw+kj1R6b7o0jdk++lvWy0h3cohj8kIW6rfJqsCQvMNJOUJnK3qTnDSZsgLfEWPSZsH49D76Gdxvf+hOR07elYc9FVFG8Xv7h7UPCpCpLavmkWgMCIcRU73z8AQ+pQEmlZDAiz7CKjw28YZrbEmsS650XiQYRP/c1KvrCddoZ6pM7EVeHgoXGj8rbMqNS5UZr2TBQiyD30eo1brk+BoMS7B0DVmK34nVQwGINdRK5TL8DxYdscy1RIMR6J6vZQ1MXmxjbeDn3CMR7qkEKivhVW5Z3W9y3EICKKzOY8DVp4Jjz7asWobWXpyigRTpJnOSiSBZ1Pv1jUaoEOX54DKI0Hmkq2iPYJp7uMvee0ujZ3CKXXT2glSSjrDUu+0Tqtd/9C+2MiM9JCKIyXUvgPjojSae2rL929cWSIWwV4ED82JiJRszY6hdLYEDyGAE="
+      },
+      {
+        "type": "text",
+        "text": "No, and my first answer had a mistake. There **is** one index I missed, but it isn't the kind you probably mean.\n\n**The correction: an `@file` autocomplete index.** `packages/context/file-reference-local` ships in the default web profile (`packages/bundle/web-app/cordis.patch.yml:72`). It builds a list of file and directory paths in the working directory:\n- It stores **paths only**, not file contents. It holds up to 50,000 entries and skips `.git`, `node_modules`, `dist`, `build` and similar folders.\n- **It is built lazily.** Nothing is scanned when a session starts or when you send a query. The traversal runs the first time you type `@` plus a bare name in the chat box (`search.ts:159-161`).\n- After any tool call it is marked stale and rebuilt in the background the next time you use `@`.\n- **The model never sees it.** It only powers the autocomplete dropdown. The only thing it adds to the model's context is one fixed sentence in the system prompt explaining what `@path` means.\n\n**So for your two cases:**\n- **Folder with a codebase:** nothing is indexed when a query arrives. The model gets the system prompt, plus any `AGENTS.md`/`CLAUDE.md` files. It then explores with `glob`/`grep`/`read`, which run live ripgrep searches each time. If you use `@` autocomplete, a path list gets built for the dropdown.\n- **Empty folder:** the same pipeline runs. No instruction files are found, and the path list, if built, is empty.\n\n**How sure I am now.** I searched the source of every package and app for embeddings, vector stores, tree-sitter, ctags, repo maps, file watchers and recursive directory walks. Apart from the `@file` path list, nothing indexes your code:\n- The three file watchers I found watch only the credentials file, the settings file and skill folders.\n- The only \"embeddings\" mention is Exa's web search provider, which works on the web, not your code.\n\nI haven't traced every plugin at runtime, so I won't say 100%. But from the source I read, the model gets no semantic, symbol or content index of your code."
+      }
+    ]
+  }
+}

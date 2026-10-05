@@ -1,0 +1,15 @@
+{
+  "id": "69e2dcbfbcedc6ee8f27fba1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0154o74Vzwz5fEBMGkp2mnGn",
+        "type": "tool_result",
+        "content": "108128169 206850959\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/cc/restore.txt:24:return{attachments:gt?St.map((Rt)=>gt(Rt)):St,hookResults:st}}async function yco(e,n,r,s=[],g=!1){let h=Tco(s),_=g?new Set((await VJe(n.session)).map((_e)=>Qe(_e))):new Set,w=Cco(),D=!0,U=Object.entries(e).map(([_e,ke])=>({filename:_e,...ke})).filter((_e)=>!xco(_e.filename,w,_,n.agentId)&&!h.has(Qe(_e.filename))&&!Tuo(Qe(_e.filename))).sort((_e,ke)=>ke.timestamp-_e.timestamp).slice(0,r),z=(await Promise.all(U.map((_e)=>Nkt(_e.filename,{...n,fileReadingLimits:{maxTokens:Ixe}},\"tengu_post_compact_file_restore_success\",\"tengu_post_compact_file_restore_error\",\"compact\")))).map((_e)=>_e?on(_e):null),ge=0;",
+        "is_error": false
+      }
+    ]
+  }
+}

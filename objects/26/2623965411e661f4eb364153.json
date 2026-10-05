@@ -1,0 +1,14 @@
+{
+  "id": "2623965411e661f4eb364153",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017yg9a3ciEBskHkSusqTqGs",
+        "type": "tool_result",
+        "content": "384\t    - id: tool-workflow\n385\t      name: '@deepseek-ai/dsh-tool-workflow'\n386\t\n387\t    - id: timeout-policy\n388\t      name: '@deepseek-ai/dsh-tool-call-timeout-policy'\n389\t\n390\t    - id: spill-local\n391\t      name: '@deepseek-ai/dsh-spill-local'\n392\t\n393\t    - id: spill-policy\n394\t      name: '@deepseek-ai/dsh-spill-policy'\n395\t      config:\n396\t        maxInlineBytes: 50000\n397\t"
+      }
+    ]
+  }
+}

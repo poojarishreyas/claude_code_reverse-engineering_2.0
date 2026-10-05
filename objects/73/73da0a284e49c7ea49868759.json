@@ -1,0 +1,28 @@
+{
+  "id": "73da0a284e49c7ea49868759",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSlggKEAgSGAI4AUIIdGhpbmtpbmcSDN1rK9TlPx+aCqZYMxoMe7zIkomfREURBSjUIjD9ttUhYZSRL8r77XiwgXtG+pZ3sJbkLaa+mnPhdd+nPYMaHM4cm3XIIk9GLr6HwKIqswcvmSxvxHVunt2nKTlKryXivovj54b6WSpA9iAXmmicRUVBJeMefe0NLfHd7dJ3Dz5rPW7FpmGHchaCaEXrH8Tfg4sm46fZ8+7Q4DU3poYL4mrwq5X0lGa19QtdJ8ffwgi2xBluUb3VbEPF82QsgNBknFpfzcaur0sJL642iYel3LzrJshO2LsOrGViMW7jILd0OgeKuuXZpjIMSs+2ToXb+Q4HgSDlLkstayUp/oZ/wU29Tgla0sqolqvq4s5f3gO5R9y/ME1QtXDhzBNx5j3umU9XH9JpgI4EUHMItGNUxv3+td856WuPRNKJMLlVNkR8Av40qaZFV5Wm9o6BYLE74RfbFeRC5dDOf1cQOON2fEHl32JlBgxf5HHeqe7se9vn/bS789wDRJtImoLzs5MGhJAOBc7R4ih3AkpYbV1bxNUdLS0uMVzurjSUwqsv/vX8ALcC2C4Ksjci1KXWUg4g7H3hRPDgNgDpx4Zgtf/MDnI4ILsces9xJhgFcfsO1UJGEVIXmsoD6wL25m3sE9Tr5bVWn1C5CivN4/JzmQZrlUTk0JwCZ58bcZKaZbhAfTKzzgzVDYwYiSMw30Kmu57JPGPqBELQeG8WMtECUyQwYuf/upUs87lN5Vh0z+0zVxUd5ulFEDX0EFaXZOCj3cvxgKBgaxj86HsNrGWEVOK4EltHhr5m4KUGQR0cLPbepod7ciGPDN6dC9hjj2sasFjzOT3eXacNcUgoBQ0jmX3mQEvXEoWMU0RZR/N/sRAFiSsRK8ypgLTpZ6vhRLWRZtLHVWVFC4Wu8Or4SWcDxjfzkkkB8F3/IacYmAOFWnSXG0nYFd6W42oPvabxd6WjHWHtOknVAHT3pWlhU8GVmmJcB7BnPFSGMuRQSiLLweKNEpkdKo3jEj04RgWLOUn8qEidJTXWKI9CbHuapFZ14i6vsSTo7KdX3nNeRDe1b5UtlqFKqpVY0yATV6oc0LGCkHj407Zn2tlNRt/3dXmG+OLt4CtC5MS1PUkB+mftW2YDTCuZet5NUAZdKvBnwc7JPNkQUYEmoM5dh9iRPcM+FKnKw6JK/TJMsMRx/asHkw1G41hmjh8JWBPeWKxUR/MILL0P9fqfQdkBTnNHqkCdoD6dozQapdIPJH9qQYMMvU7l09z7x6+8CeamSycSl2FMKuc+bnxVU0jLq3Jf64DT2thk66pOucYcXGdPWBP2ucVSttq7vECO0T83GqneHqEN7o79hEGURoWsy+vIYx/jIqv7mIfimxgB"
+      },
+      {
+        "type": "text",
+        "text": "I'll check for each of the three kinds. First, full-text (FTS), BM25 and graph structures across the source."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Y1iRFdMVm6U4ksdjjedesw",
+        "name": "Grep",
+        "input": {
+          "pattern": "(?i)(fts5|fts4|bm25|tf-?idf|inverted|MATCH \\?|knowledge ?graph|call ?graph|dependency ?graph|type ?graph|graphology|neo4j|cosine|faiss|hnsw|sqlite-vec|lancedb|chroma)",
+          "glob": "{packages,apps,scripts}/**/*.ts",
+          "output_mode": "count"
+        }
+      }
+    ]
+  }
+}

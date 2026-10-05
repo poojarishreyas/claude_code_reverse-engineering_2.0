@@ -1,0 +1,14 @@
+{
+  "id": "47888a461bc9825188f245e5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XWR576KUy9ySbNy89kEc4N",
+        "type": "tool_result",
+        "content": "compaction\\compaction-tool-result-pruner\\src\\config.ts\ncompaction\\compaction-tool-result-pruner\\src\\index.ts\ncompaction\\compaction-tool-result-pruner\\src\\invariant.ts\ncompaction\\compaction-tool-result-pruner\\src\\types.ts"
+      }
+    ]
+  }
+}

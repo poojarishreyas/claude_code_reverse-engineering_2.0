@@ -1,0 +1,20 @@
+{
+  "id": "30bc79f95a9e54b32806ce2d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01SjyTKhczHA2GDg6cPNjrMw",
+        "name": "Grep",
+        "input": {
+          "pattern": "export function estimateMessage|function estimateContent|function estimateText|Math.ceil",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\llm\\token-meter\\src\\estimate.ts",
+          "output_mode": "content",
+          "-A": 8
+        }
+      }
+    ]
+  }
+}

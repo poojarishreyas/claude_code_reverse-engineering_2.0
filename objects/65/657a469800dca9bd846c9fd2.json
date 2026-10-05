@@ -1,0 +1,15 @@
+{
+  "id": "657a469800dca9bd846c9fd2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Ro1VBQiyWmxuevZipejSgs",
+        "type": "tool_result",
+        "content": "133:  measure(session: Session, requestHeader?: EpochHeader): TokenMeasurement {\n192:  estimateMessage(message: Message): number {\n  \"peerDependencies\": {\n    \"@deepseek-ai/cordis\": \"workspace:^\",\n    \"@deepseek-ai/dsh-agent\": \"workspace:^\",\n    \"@deepseek-ai/dsh-commands\": \"workspace:^\",\n    \"@deepseek-ai/dsh-compaction\": \"workspace:^\",\n    \"@deepseek-ai/dsh-compaction-tool-result-pruner\": \"workspace:^\",\n    \"@deepseek-ai/dsh-invariants\": \"workspace:^\",\n    \"@deepseek-ai/dsh-llm\": \"workspace:^\",\n    \"@deepseek-ai/dsh-session\": \"workspace:^\",\n    \"@deepseek-ai/dsh-token-meter\": \"workspace:^\"\n  },\n{\n  \"extends\": \"../../../tsconfig.base.json\",\n  \"compilerOptions\": {\n    \"rootDir\": \"src\",\n    \"outDir\": \"lib/types\"\n  },\n  \"include\": [\"src\"],\n  \"references\": [\n    {\n      \"path\": \"../../../vendor/cosmokit\"\n    },\n    {\n      \"path\": \"../../../vendor/cordis\"\n    },\n    {\n      \"path\": \"../../../vendor/schemastery\"\n    },\n    {\n      \"path\": \"../../llm/llm\"\n    },\n    {\n      \"path\": \"../../llm/token-meter\"\n    },\n    {\n      \"path\": \"../../core/session\"\n    },\n    {\n      \"path\": \"../../core/agent\"\n    },\n    {\n      \"path\": \"../../interaction/commands\"\n    },\n    {\n      \"path\": \"../compaction\"\n    },\n    {\n      \"path\": \"../../runtime-diagnostics/invariants\"\n    },\n    {\n      \"path\": \"../compaction-tool-result-pruner\"\n    }\n  ]\n}",
+        "is_error": false
+      }
+    ]
+  }
+}

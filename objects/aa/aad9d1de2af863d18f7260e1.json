@@ -1,0 +1,14 @@
+{
+  "id": "aad9d1de2af863d18f7260e1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WSGh98MRgKZJiEapgM8yJz",
+        "type": "tool_result",
+        "content": "10:[Omitted long matching line]\n44:| `openAt` | `startup` | `startup` opens at activation; `first-search` defers the SQLite module until the first search; `never` disables full-text search while inherited reads stay available |\n56:[Omitted long matching line]\n64:[Omitted long matching line]\n84:- **Derived index, never the source store.** The FTS rows live in a dedicated disposable database; the session-persistence database is never opened here.\n95:| [`src/index.ts`](src/index.ts) | Service: config, openAt lifecycle, serialized reconciliation, query execution, cursors |\n106:[Omitted long matching line]"
+      }
+    ]
+  }
+}

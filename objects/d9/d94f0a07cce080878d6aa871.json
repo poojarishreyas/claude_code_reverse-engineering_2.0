@@ -1,0 +1,44 @@
+{
+  "id": "d94f0a07cce080878d6aa871",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSiAcKEAgSGAI4AUIIdGhpbmtpbmcSDM6KpEevUsGAIR8jpBoMQ/K0C29wU5M5Rm61IjDTbf2pfk5rmHTQwHTqy7VGMuXc0IPPMZJJerS8ZYAqmGixSCHzv8MWacmy970AUaUqpQa7t4Sz5ERjeHGT/e+0thx22ZnSoDz9lbezT2rtqPmPkhJWVdt1AE0bg6+ggNzQONeQNCUs+IaZTrWaRB5Zts2m7vSJ0Wmh7d9rVEA4Jv0tSQeYnVSvgsUD/jfrEchWFzjREqIeJz/hNDZr/0i76M5Ll5yIr11kthtei3+JNFJBHr5L0ElWjMim+Vg0NE6ypGieDtG+sA1sG2TfDCiWHJa89quL87QCezNzxoXNXNf5QHCv7EffsQ+bqlTqNMZfyzKwG1ZtlLIMR1VGuHn5OVeBJgTUuniE2Z3u2Ltopk5eMjg4J2kuvcAoj7LrFAGl9idhi2X/7x448iNDEHhliYtGSMXGeze6JuQlzLb6c1zn/cvoLZ6/rk0+t7jp98YlyWjN7yk7bJ+a1oezBVfEWQ0l1x+2mZlQighp751Xz+9aN09SOWoQlLDr0a3F1VIUKpGS5P6FMlArAQdzqxtAImfdgi2zsEGkHHQMzjGPiITsiBNUvgr5SdD1Jm0527ZfnNf87LpJ+hmDNf7znIBi0t9jFXswuLK/zPyM5PaQCPr94bA0oSoJbzwLel29RwsdjlTVAfZKN6rPsBQjN9eF6CPlL8DyhhEI8a5c9PVrwUSRub0cV8bq+yZbc8+TY315JAuzSbNamfJpgKwes3S0Jtdnh1RT0LEcHjSDgDEtCFLl0bsiq8FqIrz+/MDhoaFrq19O2KKXHU4HuLWHCjQAlmqyKm4JPH+ujPucOAmDv1rIy6MpQ6I6a4AEZzH8pbUh7pM7hr9Gts5UR6usCRuYpkW0rzqaaM+2D8JuEK8oM53B2TCAvtE1i45sDsdVBHQ8IHSU13Ik4DcqWTuUBdV9b8eoWfd/0Vqh9Vfqv0Y9NTMxyD1EPNt1F1N5F9K/DprQpkqC8n7B4lMxg3iZIOwQI8MchaYILQiuLz+xQHoZpbeT//yizsyUrun57ZjEWKtLFrMw6VekdlHwn3qATbjOz6yK/joTg+08CqLGKfNdVkA84J3YZKabYAqm5a1dVPoaH+JjQ1QhJJ+E+aBbkGrkXbSc6KtPcOGbAN4zgoNjMht201r/z6HWGAE="
+      },
+      {
+        "type": "text",
+        "text": "Workspace registry is host-only. Now let me check what actually gets put into the model's context when a query arrives."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_0139VB2FtNpv25pmg2meqbRh",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\snapshots\\web\\ptc-round\\system-prompt.expected.md"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_012xejCqpTFoHqiSxCqkfr7x",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\context\\agent-instructions\\README.md",
+          "limit": 40
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01MxDgpb8Xh4CUDHheFdfzVj",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\fs\\tool-fs-search\\README.md",
+          "limit": 40
+        }
+      }
+    ]
+  }
+}

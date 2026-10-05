@@ -1,0 +1,15 @@
+{
+  "id": "bdaac354cea20dc908ef2bff",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XEEHy86Rw7s2uv9wbd3cdJ",
+        "type": "tool_result",
+        "content": "     × skips LLM summarization when pruning alone clears pressure 46ms\n     × summarizes the pruned surface when pruning is insufficient 25ms\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯\n FAIL  |thread-safe| packages/compaction/compaction-basic/tests/compaction-basic.spec.ts > optional model-free tool-result pruning > skips LLM summarization when pruning alone clears pressure\nAssertionError: expected 772 to be less than 500\n FAIL  |thread-safe| packages/compaction/compaction-basic/tests/compaction-basic.spec.ts > optional model-free tool-result pruning > summarizes the pruned surface when pruning is insufficient\n Test Files  1 failed | 3 passed (4)\n      Tests  2 failed | 123 passed (125)",
+        "is_error": false
+      }
+    ]
+  }
+}

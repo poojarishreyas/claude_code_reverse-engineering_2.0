@@ -1,0 +1,13 @@
+{
+  "id": "7f2fab026f40eec4655e9185",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Preparing the workspace and installing dependencies again. The agent starts next."
+      }
+    ]
+  }
+}

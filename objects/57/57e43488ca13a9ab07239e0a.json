@@ -1,0 +1,14 @@
+{
+  "id": "57e43488ca13a9ab07239e0a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Lo41QD83zygPfzu7yGGBNd",
+        "type": "tool_result",
+        "content": "packages\\core\\agent\\src\\runtime-types.ts:56:export type PreStepDecision =\npackages\\core\\agent\\src\\runtime-types.ts-57-  | { kind: 'reject' }\npackages\\core\\agent\\src\\runtime-types.ts-58-  | {\npackages\\core\\agent\\src\\runtime-types.ts-59-    kind: 'enter'\npackages\\core\\agent\\src\\runtime-types.ts-60-    messages: UserMessage[]\npackages\\core\\agent\\src\\runtime-types.ts-61-    /** Start a distinct model-message series before this step's admitted messages. */\npackages\\core\\agent\\src\\runtime-types.ts-62-    startsRequestSeries?: true\npackages\\core\\agent\\src\\runtime-types.ts-63-  }\npackages\\core\\agent\\src\\runtime-types.ts-64-\npackages\\core\\agent\\src\\runtime-types.ts-65-/** Action returned by a listener that owns model-request recovery. */\npackages\\core\\agent\\src\\runtime-types.ts-66-export type RequestErrorAction = { kind: 'retry' } | undefined\npackages\\core\\agent\\src\\runtime-types.ts-67-\npackages\\core\\agent\\src\\runtime-types.ts-68-/** Why a session lifecycle began; seeded creates are `startup`, while persisted loads are `resume`. */"
+      }
+    ]
+  }
+}

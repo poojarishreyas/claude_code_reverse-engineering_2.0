@@ -1,0 +1,15 @@
+{
+  "id": "e8977f042259b50c5c76a5d5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0181pnoJJLY1cmLzGNy2mGeL",
+        "type": "tool_result",
+        "content": "'session/agent-busy':\n'session/attachment-invalid':\n'session/conflict':\n'session/end-seed':\n'session/fork-unavailable':\n'session/invalid-time-zone':\n'session/model-unavailable':\n'session/not-found':\n'session/queue-item-not-found':\n'session/steer-unavailable':\n'session/title-invalid':\n'session/workspace-attach-failed':\n'turn/end':\n'turn/start':",
+        "is_error": false
+      }
+    ]
+  }
+}

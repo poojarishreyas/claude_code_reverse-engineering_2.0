@@ -1,0 +1,15 @@
+{
+  "id": "bc8d0d0d1f0b868f6ad08f2f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0188J4vk6NKvgRrZzg8ncV6Y",
+        "type": "tool_result",
+        "content": "session.jsonl\nsnapshot.yml\nsnapshots/session/session-query-spill/cordis.snapshot.yml-46-    root: !!js process.env.DSH_SNAPSHOT_SPILL_ROOT ?? './.spill'\nsnapshots/session/session-query-spill/cordis.snapshot.yml-47-\nsnapshots/session/session-query-spill/cordis.snapshot.yml:48:- id: spill-policy\nsnapshots/session/session-query-spill/cordis.snapshot.yml:49:  name: '@deepseek-ai/dsh-spill-policy'\nsnapshots/session/session-query-spill/cordis.snapshot.yml-50-  config:\nsnapshots/session/session-query-spill/cordis.snapshot.yml:51:    maxInlineBytes: 800\nsnapshots/session/session-query-spill/cordis.snapshot.yml-52-\nsnapshots/session/session-query-spill/cordis.snapshot.yml-53-# Keyless counterpart to session-query.cordis.yml: the nested snapshot overlay\nsnapshots/session/session-query-spill/cordis.snapshot.yml-54-# supplies replay plus deterministic private spill storage and its byte limit.\nsnapshots/session/session-query-spill/cordis.snapshot.yml-55-- insert:\n--\nsnapshots/session/session-query-spill/cordis.yml-8-    root: !!js process.env.DSH_SNAPSHOT_SPILL_ROOT ?? './.spill'\nsnapshots/session/session-query-spill/cordis.yml-9-\nsnapshots/session/session-query-spill/cordis.yml:10:- id: spill-policy\nsnapshots/session/session-query-spill/cordis.yml:11:  name: '@deepseek-ai/dsh-spill-policy'\nsnapshots/session/session-query-spill/cordis.yml-12-  config:\nsnapshots/session/session-query-spill/cordis.yml:13:    maxInlineBytes: !!js process.env.DSH_SNAPSHOT && 800 || 50000\nsnapshots/session/session-query-spill/cordis.yml-14-\nsnapshots/session/session-query-spill/cordis.yml-15-# Explicit session-query tool opt-in for the dedicated spill scenario. The\nsnapshots/session/session-query-spill/cordis.yml-16-# nested filesystem overlay supplies private spill storage and its byte limit.\nsnapshots/session/session-query-spill/cordis.yml-17-- insert:",
+        "is_error": false
+      }
+    ]
+  }
+}

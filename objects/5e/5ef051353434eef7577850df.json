@@ -1,0 +1,29 @@
+{
+  "id": "5ef051353434eef7577850df",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSrAUKEAgSGAI4AUIIdGhpbmtpbmcSDO4zqZ9ijsTD9pVLHBoMAC9fSKh9zz42guLxIjCTTqi6olA1oIxhpzEDnVVuN7owG5NwzurV/Dtg3wck4Vdx+y1Iv0WTtCy+QYYudIwqyQS7hblGG4K0XN1GUliDf2oCzQ7hNTotRRc8fLhbRai3npUx4YNjLmvszEqps4uQA3Cz+b5mEZJfe/ywv71W9Xt3U4ipEkrm+8rCkpyS7hCyX3GZBWGIydk25qJ4nJIiOJhI2aACM0jEB4HRUk4u/iCI/WNDbsG3Gq2vsuxFX//fDDFB8SbKem31bBO/8A3DALZv/oq7VttQZu5LXz4EDQbbltn6U0WWYp/F3mwFPRvu1t/CY/eVdi6qb+AmNU+W2jBaaTcMmrSfSQYnmqxthQlfY1YSm7ncA+zEzM34Zqc57v1I47Gudh4lRERnX5mIaBaIjoPC6b5JdXq5UhZ702kokVLR9jWH4rC5NwDGOU/FYSzTJjf1fvqHTWlxkReM7pb5CacBov8H0pGVyoJHQWS2FNmkcvIeVdGIXyTMddIyLiofCr/D2UPjDl4pRngEmOq6jEsxsP/5/FXhCWCjOOSj/AkJmibH+McCg87WvqCKAXqcrfKE1shLr23Bouzxv2k4/pobnIfySTwxygTuqkMya1S5x01NDJvXnosuIjydKFHZKhIduLVXg8ki2El3zhakdX45bxuTN+FiiXZm1ptbv1yMmgmqTKh9OOetT2I/kUNkdmrCEI+Uw6N2e3YGpwk4zwf52hcDmW8CcJy6gvA6SLVigvdwBp44iNeOOVw6h2Kz8b+bwbuYARmpyMpNWE5bvFyq/S5dPPGFEgbzFnm6ZyFVK5PkG9wap3HjSaUar0Ek99HtJmxQMCBR8H2Fy3PfR9z+5I2aksUYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "The loop matches ReAct. One more check: whether the model's own reasoning text is captured and kept."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01M6B2Viq6infxHHaB2Mapse",
+        "name": "Grep",
+        "input": {
+          "pattern": "reasoning_content|reasoningContent|'reasoning'",
+          "glob": "packages/{llm,core}/**/src/**/*.ts",
+          "output_mode": "content",
+          "head_limit": 12
+        }
+      }
+    ]
+  }
+}

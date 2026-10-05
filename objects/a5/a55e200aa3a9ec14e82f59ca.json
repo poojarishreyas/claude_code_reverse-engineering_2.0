@@ -1,0 +1,15 @@
+{
+  "id": "a55e200aa3a9ec14e82f59ca",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_015YqEJkC17ay5EjaxLTyZEa",
+        "type": "tool_result",
+        "content": "58:function c(){return x(\"tengu_hazel_osprey\",!1)}var b=75000;\n59:function m(){return x(\"tengu_hazel_osprey_floor\",b)}function p(e){return e instanceof vt&&(e.status===422||e.status===424)}function g(e){if(!(e instanceof vt))return!1;\n65:return}function C(e){i(\"tengu_context_hint_reject\",{requestId:be(e.requestId),preCompactTokenEstimate:e.preCompactTokenEstimate,postCompactTokenEstimate:e.postCompactTokenEstimate,tokensSaved:e.tokensSaved,mcApplied:e.mcApplied,mcTokensSaved:e.mcTokensSaved})}function l(e,n){i(\"tengu_context_hint_busy_fallback\",{requestId:be(e),status:n})}var S=5,_=new Set,I=new Map;",
+        "is_error": false
+      }
+    ]
+  }
+}

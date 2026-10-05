@@ -1,0 +1,18 @@
+{
+  "id": "f68c2b332b2f8f4191d39283",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSkAUKEAgSGAI4AUIIdGhpbmtpbmcSDOVaui9aCYg7eJRIHBoMzkIKMoZgnIfxSgPOIjBuXhI67eqZc6/IYq++VmAh4gz5myBJHq3bXLtbu93vr6a9v+y8muAZdJW0axGuwLEqrQS2XgeT6YaQpJV+/hhQLkYc9b5UTRwdo2wE/yqlGBmnsQ04ydO0pFekWeoQdb7Bf8OZg25XMlOGh8fintmsgMcrTmcnpvPKDMwAXcFOBQpDNN8c+Ub4iStqrkoFoB0c6Un+ws2lRhbx/R8GThU8G+pYrWXrKCGg3syOGTnhXPjx1RZBuoNw5wAOYfPUQlewRVsB9JdmspfXP0bxogaLnRqJTTOuby1ofcj432eGoaS6OR0bAPJRG4KRMp9/URibcjTrc7UwOgsBWHr8GULE1i8C4YTtebuCtLJ10JGHv/Yu5LdVD/3yMV6KrkR8p+y09C+eSZyfdplj5zlkleQiRHyN17cyEULdUp1HVKu2aZEnLDBIS+ifJqvK+DeDS4PZp+Sy/1CTay+wsCi1Dqb/Wje2VgQBd4JDVKiRigYVwx3Z+hfJDbuiUYcxaW9c+k99gHeOUNb0xVfPQDsCh7Ai6JqMJZk+AJxE8OtqjnitfstyKV0NbbeJEfIpyAa8R/AIwdwpAHevwpcmgC+IWLgFgoLPPNcpvH6sf+okpZ2fSJvDwQikwtHbMoE29epogARbERw7P9hVthfSSkekQzRJ7Rk+2f7IVclrHdukehzLoJjp7p5dWvKT3q70vzphIhPF7HSMGKZoeOwaXK1aH0qY7t3H//gStcDaeqkvTdRVIkL0swR0A5SkgvcB11K+IqcGf5sE5Ca7lIHbu3IVVr4mcG64PDgmMmRyG5fBqKopNxgB"
+      },
+      {
+        "type": "text",
+        "text": "Nothing is written yet, because the output only appears once the run finishes. I'll wait for the monitor."
+      }
+    ]
+  }
+}

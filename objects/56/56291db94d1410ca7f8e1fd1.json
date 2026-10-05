@@ -1,0 +1,14 @@
+{
+  "id": "56291db94d1410ca7f8e1fd1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0146MmcV2LhzY82bhLXCkWxU",
+        "type": "tool_result",
+        "content": "Found 1 file\npackages\\compaction\\compaction-basic\\src\\summarizer.ts"
+      }
+    ]
+  }
+}

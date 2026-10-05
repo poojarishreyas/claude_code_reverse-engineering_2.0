@@ -1,0 +1,25 @@
+{
+  "id": "49254b455721841f12d82e61",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PEnnKfWn9kVf1yozcFWdBi",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\src\\index.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_016QFgZK3Q1DYr5wPec8JYq1",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\src\\index.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_017iEcqPVozLHuJqQLShdLUF",
+        "type": "tool_result",
+        "content": "91:describe('disabled mode', () => {\n92:  it('registers no post-execute listener when maxInlineBytes is omitted', async () => {\n102:describe('loader export shape', () => {\n103:  it('has no default export and keeps name/inject/Config through unwrapExports', () => {\n116:describe('config validation', () => {\n117:  it('rejects a negative maxInlineBytes at load', async () => {\n121:  it('rejects a fractional maxInlineBytes at load', async () => {\n127:describe('oversized plain-text replacement', () => {\n128:  it('spills the full text and replaces the result with a preview + locator within the cap', async () => {\n153:  it('keeps the inline result when the notice-only replacement would exceed the cap', async () => {\n165:  it('leaves a small plain-text result unchanged', async () => {\n173:  it('leaves a result with a non-text block unchanged', async () => {\n189:describe('outer PTC mode failure capture', () => {\n190:  it('spills the bounded output-limit diagnostic through the ordinary outer-result policy', async () => {\n227:describe('read skip', () => {\n228:  it('never spills the read tool result (avoids a read → spill → read loop)', async () => {\n237:describe('the durable dispatch-log arm', () => {\n266:  it('bounds the tool/code-dispatch copy of an oversized sub-result while the program value stays whole', async () => {\n289:  it('leaves a non-text sub-result log unchanged (flatten declines)', async () => {\n304:  it('leaves a within-cap sub-result log untouched and saves nothing for it', async () => {\n313:  it('a slow spill backend never delays the program value or a later dispatch slot', async () => {\n373:  it('a sustained slow backend backpressures the run instead of accumulating unbounded log tasks', async () => {\n430:  it('a saveText failure keeps the complete content in the durable log (best-effort)', async () => {\n461:describe('nested-call skip', () => {\n462:  it('leaves nested composite results complete and spillable only through their outer call', async () => {\n476:describe('best-effort fallback', () => {\n477:  it('keeps the original result when saveText fails', async () => {\n488:  it('keeps the original result when no spill backend is loaded', async () => {\n497:  it('keeps the original result when the call has no session owner', async () => {\n508:describe('composition', () => {\n509:  it('wraps an earlier tool-owned projection before applying the generic cap', async () => {\n529:  it('bounds content a downstream post-execute listener replaced', async () => {\n541:  it('preserves downstream accept-decision contexts when spilling', async () => {\n555:  it('passes a downstream value replacement through for registry rendering', async () => {\n571:describe('cap invariant', () => {\n572:  it('keeps the inline result when the notice alone exceeds the cap, even for a large original', async () => {\n586:describe('disposal (HMR safety)', () => {\n587:  it('stops transforming oversized results after the plugin fiber is disposed', async () => {",
+        "is_error": false
+      }
+    ]
+  }
+}

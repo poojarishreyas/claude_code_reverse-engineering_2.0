@@ -1,0 +1,8 @@
+{
+  "id": "d3f923b980d0c597ac218b41",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "complete all the phases"
+  }
+}

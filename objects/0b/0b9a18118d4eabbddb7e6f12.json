@@ -1,0 +1,14 @@
+{
+  "id": "0b9a18118d4eabbddb7e6f12",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Y1iRFdMVm6U4ksdjjedesw",
+        "type": "tool_result",
+        "content": "scripts\\gen-client-catalog.ts:1\nscripts\\gen-module-graph.ts:1\nscripts\\gen-doc-graphs.ts:1\nscripts\\oxlint-contract.spec.ts:3\npackages\\boot\\app-boot\\src\\profile.ts:2\npackages\\attachment\\attachment-local\\tests\\request-image-verification.spec.ts:1\npackages\\attachment\\attachment-local\\tests\\normalization-verification.spec.ts:1\nscripts\\package-graph.ts:1\nscripts\\package-graph.spec.ts:1\nscripts\\run-gates.ts:1\npackages\\extensions\\tool-cordis\\src\\api-catalog.ts:1\npackages\\api\\gateway\\tests\\journal-stream.client.spec.ts:3\npackages\\client\\ui-tool\\src\\client\\tool\\models\\terminal-card-model.ts:1\npackages\\api\\gateway\\src\\client\\journal-stream.ts:1\npackages\\bundle\\base\\tests\\base.spec.ts:1\npackages\\client\\connection\\src\\client\\fixture.ts:1\npackages\\extensions\\cordis-client-runner\\src\\client\\slot-catalog.ts:1\npackages\\client\\ui-commands\\src\\client\\service.ts:1\npackages\\session-query\\session-query-sqlite\\tests\\sqlite.spec.ts:3\npackages\\client\\ui-settings\\src\\client\\contract\\slots.ts:1\npackages\\session-query\\session-query-sqlite\\tests\\query.spec.ts:4\npackages\\session-query\\session-query-sqlite\\src\\schema.ts:2\npackages\\typert\\registry\\src\\service.ts:1\npackages\\session-query\\session-query-sqlite\\src\\query.ts:14\npackages\\session-query\\session-query-sqlite\\src\\index.ts:6\npackages\\typert\\generator\\tests\\type-model.spec.ts:5\npackages\\typert\\generator\\tests\\renderer.spec.ts:8\npackages\\typert\\generator\\src\\renderer.ts:14\npackages\\typert\\generator\\src\\model.ts:2\npackages\\typert\\generator\\src\\index.ts:1\npackages\\typert\\generator\\src\\emitter.ts:5\npackages\\preset\\agent-presets\\src\\mount.ts:1\npackages\\typert\\generator\\src\\cordis-catalog.ts:5\npackages\\typert\\generator\\src\\analyzer.ts:1\npackages\\compaction\\compaction\\tests\\tool-pairing.spec.ts:8\npackages\\compaction\\compaction\\src\\tool-pairing.ts:1\npackages\\compaction\\compaction\\src\\index.ts:2\npackages\\compaction\\compaction-basic\\tests\\compaction-loop-repro.spec.ts:2\npackages\\compaction\\compaction-basic\\src\\region.ts:3\npackages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts:2\n\nFound 114 total occurrences across 40 files."
+      }
+    ]
+  }
+}

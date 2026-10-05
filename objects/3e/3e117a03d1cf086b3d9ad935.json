@@ -1,0 +1,27 @@
+{
+  "id": "3e117a03d1cf086b3d9ad935",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSuQoKEAgSGAI4AUIIdGhpbmtpbmcSDIBi0yd4QUtdTdmwMRoMfWunesNxn3oRAMi1IjCpMlfDr9HAp+aKf10exNl5fgBXJ85114rhkEtRkq62863EQukqh9OrkCFdIuhHWQIq1gm57zQICg0MlMagB2bWPuCrOQgDvXFm+2Te2I8QgF/45ZJ3viFtSaHyAz0CLOX3u8EcMGdJ/P1uVOdFh7e+QG/mjl7d11Z5WxGkXp6j9VAxFatKHOrEMVf2d9P1CYD85JP1cZvqyuw2cYWEOqnB/fswsR3+1FSNmF6h+mVl7YnHOCyyPzqoUseX1VlmWwlF+Y4ihEZmIoUM6U9WhC8hD8UJIb7FzrDi4l6X3XRqwBBiYbKxFmmKyWnYVUoEzjBFHKNPjK+3iMLSNncvy2Yxn8QgeUh+tJT5YE/gC3UvC9Bkp+toDSqq/g8uCQPta0lD54agSjHX2i8mCeA8FtO4Q5FGjPVuA+DDs6vN+IUKAbZJF3LYrLZcXDQ/InvctuTldfgyFhvs5+Pit9ywRgrcrxP0lNSX7v4CCLlULGV41XVeeyVsJ6GvhH8cRV3OP46gRTMpH49gsa1+rlnnpNH2wUCiZQUkZ+JcFzGLAz4MZYLGbclG6t7rBuLqGoUCbCiyH0oL0M7GgGvCpCbE2JtIPmS1BCYsNg1pSTS/zQNEuVJpUqhShHKOBiT7tUwUAyouuSqYtzysEYh+moe+UUKkPk7oaV3vScbEkLNPVWcSRl7l8yEdcQFCi9PZ1egz4nPkiiXlW7LpfXuFpw4lzGtbPUuI6leGo9T5HPhZ/cG+LNmPidkQPhSq3wJ7M2jE8tDosRgnEvDDZ/QJjca0IKwbAQ+eXnGt/4qupfBvVsufJRxhRqzEDqoi//O25H8eZHs5DzS4uz4yZ9+Za38mZtVYiXyySCtTVZn7WjtqQ7WBALKeBOeQKqKU1ZzJN8NZUlqm1Vg3P0/ZtGKluTcCEFRPU9lGmqnqWiKZDaTzXlLTt2PPU3iYhqFGGz/Lsq9aZH7w+2D/BmM12mpllqv6DUFVXPLXPmLw70fYY7VZ8kTVChOU3KvwTTdTVH5AzAKerTgMcKlGVqVkm+OMHo+LEOt1yc2EAZHAoCilCooyVF3r9ing4f8jU6uXTigMgDmbd4n+K25CA+c92U7RiI1Lit8S+oBz2zl+SDd/m6c6YqBElfJSBvYPBtVAnS6193SZIDnp4euFx83hDCJaM2qyHscJIIoC9NZ0p6tZUIUFtGTY0xY+XXJaoGJqygqZNHh6fMOXH1IEgP27dP4+xIysmFWVln2/glpcyz9F0nJS2w127PFSl1NY+QsBsPPU96XXHOGW3BoWto+HMrMby5xJgfwroOCd+RuA6KQpMA2mNqmiZUkNZoVkFE9daieKdzsLPXe4HtYgqVQ1vQCQwCAegsXxKkOr64aCssRrncDE5s7yWLgXGPUJxeERqv17l4LdJ07NpsdDYuyDPSzTPX1V1SeBXpP5phkE35j0YJlGl8uLY7n2xbk6GLnz48zlOPZllMfp+xvqhFPPKxnCU/kpMt4o6FMZnUGbBAwthiFf7U6FcyPLiff9rtHrdVlWDvu45nxrsXjUFvu/CgVgERYjo590k01TXsFrrBFgwPbP9l/+bJ4LMnFHyLd3iVGL6h9rKS9Z1ZCrjpynSsmkOw6GZIo3NcwTRTwumZKl2EZEd3z46lKLnqKz3Bf0HBj69M/nOjMFJqhxmMYrP4Oxg3U7FeTduAFdez+BtGO1GMDm4xSoa8CFIc0YXD7aYRgB"
+      },
+      {
+        "type": "text",
+        "text": "The binary settles the internals. I'll also check Anthropic's docs for the user-facing side, so both sources are covered."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01H1dFoS4jn5oxuKyiaLn4Hr",
+        "name": "WebFetch",
+        "input": {
+          "url": "https://code.claude.com/docs/en/costs",
+          "prompt": "Quote exactly what this page says about context management: auto-compact (when it triggers), /compact and custom compact instructions, /clear, /context, CLAUDE.md, subagents and context, tool output, MCP output limits, prompt caching. Give verbatim sentences only."
+        }
+      }
+    ]
+  }
+}

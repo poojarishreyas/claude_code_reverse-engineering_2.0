@@ -1,0 +1,8 @@
+{
+  "id": "bf710c93c57f9bd72341a20c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "2. Trim oversized tool outputs first (code, no LLM). compaction-tool-result-pruner cuts any tool result over 8,192 characters down to its first 4,096 and last 1,024 characters, with a \"middle pruned\" marker between. If that brings usage back under the limit, the summary step is skipped. can u explain the approach in english ho this is done?"
+  }
+}

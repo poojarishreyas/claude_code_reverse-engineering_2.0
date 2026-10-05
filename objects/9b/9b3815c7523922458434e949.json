@@ -1,0 +1,18 @@
+{
+  "id": "9b3815c7523922458434e949",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSigYKEAgSGAI4AUIIdGhpbmtpbmcSDNAYSUVyddDicHMPvxoM6EcQHh7fpGyVP5X3IjDSLkSwIC+XJjU1TGLSSzz4Q5YuD4WZJXLeA2sd8rE1qXWFWs2Y+vD8xBn0NskUGJwqpwVgrJBPAwxMjbe1vA6EV4QJy5ba9hxodb8lZGXx6ysXuCr9LCU5xZEPBcCZt47JG7IO8+GakRitV3QYbb6iTw8/Nty0B1YzXrA9l0QaB+pohJbrj76kT1nTeRvgdpl3R7uFbVx9MwRh/zpkQ9qYQMzxUTRTM+U+IcVeN7U+Fku20Q9akwFgTqlXpfOk0Y+SCwtiSgY49FdYG7QmjN/FeRUPaPkFw935pK8S4KC7gGNA164yBOHPfxbodAxEmNpMuroX7DgTke95oiOyCj3o/E92MQZJq4kbJy7QroBKw7Bd4CgSxA3PPia54vr5a1rqcsB6uu0I5U6fSyAnRC6hkASTKhy9DIfwMGbODA7WOBHiMAmi19Gg3QFRH/+58OAF/JczfZmrEBhFGdkHxNTeeN132SxaEASELCGY5hObOYTlhUJ24JTiaH6Iic0H+brXYiDQHlqnp1xa45iaZvWbUfxRcw4kYQ+RGUSwKjXZfpaKgErX+yq44Q/luRQcX/I1Ck6LW8EmqOIJ1xwtyq9QQU8I6AyJ/iNQfaQDWiZvWAQNUk3+jUZO1Q4fq+S9W79+UgUmuRkmMU9V/XOpmijgGO9OWUJFOYZMrx7M2tU8gXIkEZr8ysDBPBy525yXY1hp9sJKdcNi8L8IevzMO16e2jELyn66ZN5DstotEQ1upX94tJ0oPvHoDHuwxQewgsh6pR3HG+rjvTr0n7HMr42IXUxK1xB/8WalXT8fjCD1VuT1srGz9T1KrOLGQMa+x5crV4+gnHaG3GQDt1Dl4v89vTCDGHP5orp9QqzXCoGxdk/BL+3umBZw6fl95u4J8F2tSwPcowm/3mJrdOfFRys7BQ+eaxfZvRz+ZO5wr9VjhHdGa6p17/oZ7wOIw0vT6IBz7xH4AEvJg5b3GAE="
+      },
+      {
+        "type": "text",
+        "text": "A symbol tool lets the agent search code by names that have meaning, like functions, classes and variables, instead of by raw text.\n\n**What a \"symbol\" is.** In code, a symbol is any named thing:\n```ts\nclass SessionStore { ... }          // symbol: SessionStore (class)\nfunction compactIfNeeded() { ... }  // symbol: compactIfNeeded (function)\nconst MAX_TOKENS = 8192             // symbol: MAX_TOKENS (constant)\n```\n\n**Text search vs. symbol search.** Say you ask \"where is `compactIfNeeded` defined?\"\n- **Text search (grep):** finds every line containing that word, including calls, comments, docs and tests. The model then has to read several files to find the real definition.\n- **Symbol tool:** understands the code's structure and answers directly: \"defined in `compaction-basic/src/index.ts`, line 259, a method of `BasicCompactionEngine`.\"\n\n**The usual symbol tools:**\n\n| Tool | Answers |\n|---|---|\n| Go to definition | Where is this function or class defined? |\n| Find references | Where is this function called or used? |\n| File outline | Which functions and classes are in this file, and on which lines? |\n| Repo map | A short overview of the main files and the functions and classes in each |\n| Type info / errors | What type is this, and did my edit break anything? |\n\n**How they work.** They parse the code instead of treating it as plain text:\n- **tree-sitter** (what NOVA's NOOA uses) is a fast parser that turns code into a syntax tree, so the tool knows \"this is a function definition\" versus \"this is a call.\"\n- **Language servers (LSP)** (what Claude Code's plugins use) are the same engines that power \"Go to Definition\" in VS Code, so the answers are even more precise and include types.\n\n**Why it matters for an agent:**\n- **Fewer wasted reads:** one \"go to definition\" can replace a grep plus opening several files.\n- **Finds the right file when your words aren't in it:** \"fix how sessions are saved\" leads the agent to `SessionStore.save()` through references, even if no file contains the word \"saved.\"\n- **Safer edits:** \"find references\" shows every caller that a change could break.\n\n**Our harness today** has only text search (`grep`, `glob`, `read`), so the model does this work by hand. Adding symbol tools would mean a new tool plugin, for example tree-sitter-based `symbols`, `refs` and a repo map."
+      }
+    ]
+  }
+}

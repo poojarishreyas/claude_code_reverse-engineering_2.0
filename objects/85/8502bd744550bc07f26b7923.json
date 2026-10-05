@@ -1,0 +1,19 @@
+{
+  "id": "8502bd744550bc07f26b7923",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01QRfp8F6Va4cteJEbAm3j9U",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && npx vitest run scripts/eval/metrics.spec.ts 2>&1 | sed -n '/Expected/,/❯/p' | head -60",
+          "description": "Show the metrics test diff blocks",
+          "timeout": 300000
+        }
+      }
+    ]
+  }
+}

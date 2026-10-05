@@ -1,0 +1,27 @@
+{
+  "id": "299437a78d60543deaa05635",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "text",
+        "text": "`reject` ends the turn as `blocked`, but carries no reason for the user. I'll check whether there's an existing session event for showing the user a notice, so the guard can say why it stopped."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_0181pnoJJLY1cmLzGNy2mGeL",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && grep -rhoE \"'(notice|system|session|turn)/[a-z-]+'\\s*:\" packages/core/session/src/types.ts packages/*/*/src/types.ts 2>/dev/null | sort -u | head -40",
+          "description": "List session event names that could carry a notice"
+        }
+      }
+    ]
+  }
+}

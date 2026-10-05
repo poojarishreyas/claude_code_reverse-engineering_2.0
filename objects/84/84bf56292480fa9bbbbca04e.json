@@ -1,0 +1,23 @@
+{
+  "id": "84bf56292480fa9bbbbca04e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSogYKEAgSGAI4AUIIdGhpbmtpbmcSDJo+JkZI8ImVCb0HIxoMPAOVcVPio7YKKag1IjAwAXQ1A3sxm+BTEYMyACAMR9ieCI1CAbpMEw/L8RFhUXoabZOpNTOMLoz0IG0SXrYqvwXgfTZE55w+fM5SA/SXKj6TIIurtx9p7AWz2om5wWqGpbUt5crrKgO06OK/IETgfxlU3bFeXLbAli8thxkeSXcusEa215LVuXKDMXE78g32V8gzD4qBtItHXA355yvKfVvFeL296GDLsaITL9/k96+jYgW7EJjINcznEn3OrhxhKMtf7WLsgR9sJBJB4Di/8xjYErAZPPTLfd8/aad6WwBOn4H+vOCYcteOvmw1xquNtivJ3vuGxSycCBMQMVuCur09ohwEmreOjNfM7LqO548IWMkhIQSxSU07LFW4gEJ3cYRF5wTeftwN4WPSvpy7Nkpd8wj8HViSp02wx1zez9m1K3SuUWr68GrlEcexAYN6mO7Sc3LLSgn1sjAGg7EiD2IzXSzICdX2S1Vc7Yeg8p8OGd4+KIIuUP7nCoIVtMKq6+i54tUAPO4CERCYLPwPj4qdeo3yJoUkkVzSOaK1pjJFq+lDa11DsYWJMF2bcckSve3+ztMKtXt73bMvSRuiaJuvBcGSJ9cytqdc7eaTkigM5Eln6mPwHpbimLx4bBxXFXw2UKronP3gxwNV1sgwWZqdUfNfEb2jU/lj4fYIBT9fj370ZGC9Xqav2kvBr52UrKotgJesqD47IRsBaLInfdrkr+jYz1Vmsj9QDhRZORit90ARmT9F2XJIsclBlN0tyhsU7Qq86h83WoLXIaiJBcDdO1acs0bShyc5Vfo0rRAxCaI9YsBo6XYB49N5/7fzPHF7OWAWS2/QSHwxtxwcc2dkMMmrjHs7OIOALvnxx0jSxY2gmfL6xeey4y+176tzC9Vx/pbFi80v4huWExbu0GdB2LJhK4MWLQ6J+w2yLAP9V70bfdxX5clK0Vots+kEIT9cIx5g8YHOMHsOfdrEN9OFQsat29qG07+AxZqisM4BbEu68NydzN42hXn7os9nGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01RU2G3xKzHPauvHnKH86WNh",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && cat snapshots/session/bash-spill/snapshot.yml | head -30",
+          "description": "Inspect bash-spill snapshot config"
+        }
+      }
+    ]
+  }
+}

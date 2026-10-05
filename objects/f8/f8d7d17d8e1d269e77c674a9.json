@@ -1,0 +1,31 @@
+{
+  "id": "f8d7d17d8e1d269e77c674a9",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQStwUKEAgSGAI4AUIIdGhpbmtpbmcSDLUy65mcflKWSyOeARoMTyuskJi23KwBfDMjIjCMC4W3c0xaRktha94wJiFIm78aloNmFC0Ah2wxhMAW7bZV1GaPlwk5pN4uurJHthEq1ASw6ENH6o+LHx3Zf9GQK0XD+UCW1g9UrBhCbGtQ0YRJIvOKniDO6qQ4i6N3rA5F30TxbK935tOftFyTkCmB5l3VjnPJ/QjxuZFJeEPfltODTKrslK91mc2V1CvGGooYfz8mQndK8hI+gIj4U4aa0I8H9mfewbIyL86q/MsSN5LYB2+JSSrZJkYfjteduo4JytKpF/BwYIfJEKKpdYaMgLo54wR8b0cdH1ztjCWP//PceAlAlkDZChFU0wxt+YykkbSp88RBvxVN6W+QowAgToAx5fKdB6STy9XQwdzBqNiHZhinx+VXvU/ciEouGqFtfvZLo4zkCLuJN60eq6Q//8WDZXyb+KBKzNq7rzEYtvSE94SUIBSRVWis4S15pqv/IJY5WRC/BgrgkSTgo/MoW0xzI39uHLjNENmnUCVTyjNj4sFsrUJtGxd+ZBt5us2erVldaVqNKsc80sLdlGPxJ60g65vwcTU9RbRqR/4wlrAu9Hs/OynMArgv90ndMysz58GHmxEaOqshyXqXDH6fw9jgBS/PbCz3LIx3hM1Rlcqku2wUkA0kuuNvrrBVhqxXhUp6FvLIcLLZ7nZSDHr/P+0AnDfU08MFW36hoxwKJve34VhKLyKXcfABxdNbbKGInjYR1fVqRIKWm36x3QG1uRUdQdz44ej2F9zv80CWFats4ZLsc9r2DYHGZ0U0uRO1MxTJboodYZEigJhJ0D6Q/C8ZP9IBg9QyDhLG6jtbBe4YRZOT3kOugL1mhZ/iQ+/EpjZpzC/YUv8dqDI1aIDkNdGnICtV5RgB"
+      },
+      {
+        "type": "text",
+        "text": "All 30 `spill-policy` tests pass with full coverage. Now I'll find every place that ships `spill-policy`, so each one gets the 2,000-byte preview."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01QQYRbkDgyEikhLfr4p6YKd",
+        "name": "Grep",
+        "input": {
+          "pattern": "dsh-spill-policy|maxInlineBytes",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages",
+          "glob": "**/*.yml",
+          "output_mode": "content",
+          "-B": 2,
+          "-A": 3
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "2326b027a18b523e2db40e83",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01JBv5Xg9UudZ5V9iDki95Bg",
+        "type": "tool_result",
+        "content": "packages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts-1507-  function preStep(ctx: Context, owner: Agent, signal = SIGNAL) {\npackages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts-1508-    return agentEvents(ctx, owner).waterfall(\npackages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts:1509:      'agent/pre-step', { messages: [], turn: 1, step: 1, signal },\npackages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts-1510-      () => Promise.resolve({ kind: 'enter' as const, messages: [] }),\npackages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts-1511-    )\npackages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts-1512-  }\npackages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts-1513-\npackages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts-1514-  function recover(\npackages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts-1515-    ctx: Context,"
+      }
+    ]
+  }
+}

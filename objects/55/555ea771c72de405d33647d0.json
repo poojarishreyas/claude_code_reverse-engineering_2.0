@@ -1,0 +1,15 @@
+{
+  "id": "555ea771c72de405d33647d0",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01S15VQeoRbHT9LsxqSA66sM",
+        "type": "tool_result",
+        "content": "?? docs/engine-book/\n--- remote\norigin\thttps://github.com/poojarishreyas/Elemental_harness.git (fetch)\norigin\thttps://github.com/poojarishreyas/Elemental_harness.git (push)\n--- branch\n* main 634053c [origin/main] Update LICENSE\n--- ahead/behind origin/main\n0\t0\n--- untracked size\n12M\tdocs/engine-book\ndocs/engine-book/01-the-core-idea.md\ndocs/engine-book/02-just-enough-architecture.md\ndocs/engine-book/03-core-data-structures.md\ndocs/engine-book/04-the-engine-in-100-lines.md\ndocs/engine-book/05-the-append-only-log.md\ndocs/engine-book/06-the-surface.md\ndocs/engine-book/07-from-log-to-request.md\ndocs/engine-book/08-projections.md\ndocs/engine-book/09-the-turn-and-step-loops.md\ndocs/engine-book/10-building-the-request.md\ndocs/engine-book/11-the-reconstruction-invariant.md\ndocs/engine-book/12-the-inbox.md\ndocs/engine-book/13-phases-cancellation-quiescence.md\ndocs/engine-book/14-agent-lifecycle.md\ndocs/engine-book/15-the-tool-registry.md\ndocs/engine-book/16-the-execution-pipeline.md\ndocs/engine-book/17-scheduling-tool-calls.md\ndocs/engine-book/18-approval-and-escalation.md\ndocs/engine-book/19-prompt-assembly.md\ndocs/engine-book/20-variable-interpolation.md\ndocs/engine-book/21-runtime-context-injection.md\ndocs/engine-book/22-extension-points.md\ndocs/engine-book/23-adapters-and-preparecall.md\ndocs/engine-book/24-streaming-and-assembly.md\ndocs/engine-book/25-failures-and-retry.md\ndocs/engine-book/26-measuring-and-spilling.md\ndocs/engine-book/27-pruning-and-compaction.md\ndocs/engine-book/28-subagents.md\ndocs/engine-book/29-persistence.md\ndocs/engine-book/30-crash-repair-and-chunk-packing.md\ndocs/engine-book/31-one-real-turn.md\ndocs/engine-book/32-when-things-go-wrong.md\ndocs/engine-book/33-adding-a-tool.md\ndocs/engine-book/34-composition-in-full.md\ndocs/engine-book/35-limits-and-fragile-areas.md\ndocs/engine-book/36-design-decisions.md\ndocs/engine-book/37-rebuild-it.md\ndocs/engine-book/appendix-a-glossary.md\ndocs/engine-book/appendix-b-data-structures.md\ndocs/engine-book/appendix-c-configuration.md\ndocs/engine-book/appendix-d-mechanism-index.md\ndocs/engine-book/How-the-Engine-Works-Digest.pdf\ndocs/engine-book/How-the-Engine-Works.pdf\ndocs/engine-book/OUTLINE.md\ndocs/engine-book/README.md\ndocs/engine-book/_condensed/00-preface.md\ndocs/engine-book/_condensed/01-front.md\ndocs/engine-book/_condensed/02-log.md\ndocs/engine-book/_condensed/03-loop.md\ndocs/engine-book/_condensed/04-tools-prompt.md\n66",
+        "is_error": false
+      }
+    ]
+  }
+}

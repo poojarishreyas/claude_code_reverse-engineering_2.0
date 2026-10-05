@@ -1,0 +1,14 @@
+{
+  "id": "5a3405f887c9ab80a135069c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01KoQEjHyeXa6YckvxmDHBkm",
+        "type": "tool_result",
+        "content": "packages\\client\\ui-chat\\src\\client\\model\\tool-call-tree.ts:76:    if (event.type !== 'tool/code-dispatch') return false\npackages\\client\\ui-chat\\src\\client\\conversation-nodes\\tool.ts:142:  if (event.type !== 'tool/code-dispatch-start' && event.type !== 'tool/code-dispatch') return state\npackages\\client\\ui-chat\\src\\client\\conversation-nodes\\tool.ts:239:    if (event.type === 'tool/code-dispatch-start' || event.type === 'tool/code-dispatch') {\npackages\\client\\connection\\src\\client\\fixture.ts:786:        type: 'tool/code-dispatch',\npackages\\client\\connection\\src\\client\\fixture.ts:1121:      case 'tool/call':\npackages\\client\\ui-trajectory\\src\\client\\trajectory-tool-definition.ts:135:  if (event.type !== 'tool/code-dispatch-start' && event.type !== 'tool/code-dispatch') return state\npackages\\client\\ui-trajectory\\src\\client\\trajectory-tool-definition.ts:222:    if (event.type === 'tool/code-dispatch-start' || event.type === 'tool/code-dispatch') {\npackages\\session-query\\session-query\\src\\extraction.ts:21:    case 'tool/call':\npackages\\core\\tools\\src\\types.ts:56:    'tool/code-dispatch': PtcDispatchEventData\npackages\\core\\tools\\src\\ptc.ts:509:              agent.session.append('tool/code-dispatch', {\npackages\\core\\tools\\src\\invariant.ts:38:    if (event.type !== 'tool/code-dispatch-start' && event.type !== 'tool/code-dispatch') return\npackages\\core\\tools\\src\\invariant.ts:54:    if (event.type !== 'tool/code-dispatch-start' && event.type !== 'tool/code-dispatch') return\npackages\\core\\tools\\src\\invariant.ts:66:      else if ((event.type === 'tool/code-dispatch-start' || event.type === 'tool/code-dispatch')\npackages\\core\\tools\\src\\invariant.ts:88:      if ((event.type === 'tool/code-dispatch-start' || event.type === 'tool/code-dispatch')\npackages\\core\\session\\src\\types.ts:263:  'tool/call': { turn: number; step: number; callId: ToolCallId; name: string; arguments: string }\n\n[Showing results with pagination = limit: 15]"
+      }
+    ]
+  }
+}

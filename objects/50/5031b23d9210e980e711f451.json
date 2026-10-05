@@ -1,0 +1,20 @@
+{
+  "id": "5031b23d9210e980e711f451",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "<tool_use_error>File has been modified since read, either by the user or by a linter. Read it again before attempting to write it.</tool_use_error>",
+        "is_error": true,
+        "tool_use_id": "toolu_01PG3VeweTAt1B8GiwTgHfrg"
+      },
+      {
+        "tool_use_id": "toolu_013fAQfBozrJdv2G6JXDBWBV",
+        "type": "tool_result",
+        "content": "279\t    // Pruning is optional so compaction-basic remains independently composable.\n280\t    // Overflow always qualifies; pressure first resolves the routed model's\n281\t    // capacity and checks its target-specific threshold.\n282\t    const prune = this.ctx.get('toolResultPruner')\n283\t\n284\t    if (trigger === 'context-overflow') {\n285\t      if (prune !== undefined) {\n286\t        prune.pruneSession(agent.session)\n287\t        measurement = meter.measure(agent.session)\n288\t      }\n289\t      const range = selectCompactableRange(agent.session, measurement, 0)\n290\t      if (range === null) return null\n291\t      return this.compactRegion(range.start, range.end, agent, signal)\n292\t    }\n293\t\n294\t    const context = (await this.ctx.llm.resolveModelInfo(target.provider, target.model, signal)).context\n295\t    assertNoActiveCompaction(agent.session, 'automatic pressure compaction')\n296\t    const targetKey = `${target.provider}/${target.model}`\n297\t    if (context === undefined) {\n298\t      throw new TargetPressureConfigError(\n299\t        targetKey,\n300\t        `compaction-basic: no context capacity for ${targetKey}; `\n301\t        + 'configure contextWindow on that adapter model',\n302\t      )\n303\t    }\n304\t    const spec = resolveCompactSpec(policy, context.contextWindow)\n305\t    if (measurement.totalTokens < spec.thresholdTokens) return null\n306\t\n307\t    // Once pressure qualifies, land the model-free pass before choosing a\n308\t    // summary range, then remeasure through the singleton replay fold.\n309\t    if (prune !== undefined) {\n310\t      prune.pruneSession(agent.session)\n311\t      measurement = meter.measure(agent.session)\n312\t    }\n313\t    if (measurement.totalTokens < spec.thresholdTokens) return null\n314\t"
+      }
+    ]
+  }
+}

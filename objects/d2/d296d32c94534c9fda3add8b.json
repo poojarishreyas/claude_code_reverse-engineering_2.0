@@ -1,0 +1,18 @@
+{
+  "id": "d296d32c94534c9fda3add8b",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_014v11vsBgKYw6UcajSfSqih",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && grep -n \"spill\\|bundle/base\\|cordis.patch\\|maxInline\\|composition\" snapshots/session/base.snapshot.ts | head -30",
+          "description": "See how base.snapshot.ts composes spill"
+        }
+      }
+    ]
+  }
+}

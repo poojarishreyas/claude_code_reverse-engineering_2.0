@@ -1,0 +1,47 @@
+{
+  "id": "eb2b947aea57ef2ed12f3e58",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01X7PZyzNA5Wksjuy6qDGaGD",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\opencode\\packages\\core\\src\\session\\compaction.ts"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_014wGnemCHESMH6twLTQGgQo",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\opencode\\packages\\opencode\\src\\session\\message-v2.ts",
+          "offset": 520,
+          "limit": 70
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01FUM51hbgxbt7DhhMtsmYHf",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\opencode\\packages\\opencode\\src\\session\\prompt.ts",
+          "offset": 1150,
+          "limit": 40
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Ec3mnTibKnfHwVBcqMFtXE",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\opencode\\packages\\opencode\\src\\session\\prompt.ts",
+          "offset": 1325,
+          "limit": 20
+        }
+      }
+    ]
+  }
+}

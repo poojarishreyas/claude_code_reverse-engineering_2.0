@@ -1,0 +1,15 @@
+{
+  "id": "322bd13935b60f39371da748",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01A1yticP5VVVZXfX8TxTrm5",
+        "type": "tool_result",
+        "content": "eval-step0\nenv key: not set\n.env: absent\nREADME.md\nagent-loop-testkit\nclient-runtime\nllm-mock-server\nllm-replay\nloader-smoke\nsession-snapshot\n37:    \"test:e2e\": \"vitest run --config vitest.e2e.config.ts\",",
+        "is_error": false
+      }
+    ]
+  }
+}

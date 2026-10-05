@@ -1,0 +1,13 @@
+{
+  "id": "8a53f3bda558d819b52edf9b",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The dry run is in progress. It checks out the upstream worktree and installs the upstream dependencies, which can take several minutes. I'll report the result when it finishes."
+      }
+    ]
+  }
+}

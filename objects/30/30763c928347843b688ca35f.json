@@ -1,0 +1,18 @@
+{
+  "id": "30763c928347843b688ca35f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_011ozj83obBND7tkTu22GgdD",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && grep -n \"preStep(ctx\" packages/compaction/compaction-basic/tests/compaction-basic.spec.ts | head -5; n=$(grep -n \"preStep(ctx\" packages/compaction/compaction-basic/tests/compaction-basic.spec.ts | sed -n 2p | cut -d: -f1); sed -n \"$((n-25)),$((n+12))p\" packages/compaction/compaction-basic/tests/compaction-basic.spec.ts",
+          "description": "View a test that drives the pressure listener"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "b7139b5073564eb20eb77877",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017WQM1DXZ2tE7uU8vYpYahc",
+        "type": "tool_result",
+        "content": "15:import { assertNever } from '@deepseek-ai/dsh-util-values'"
+      }
+    ]
+  }
+}

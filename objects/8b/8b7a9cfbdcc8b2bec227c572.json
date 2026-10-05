@@ -1,0 +1,15 @@
+{
+  "id": "8b7a9cfbdcc8b2bec227c572",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XaDroimxRHYw6KRQfw9D9z",
+        "type": "tool_result",
+        "content": "     × replays bash-spill through the internal base driver 11611ms\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n FAIL  snapshots/session/base.snapshot.ts > base recorded-session snapshots > replays bash-spill through the internal base driver\nAssertionError: bash-spill: session 0: expected '{\"type\":\"session\",\"version\":0,\"id\":\"{…' to be '{\"type\":\"session\",\"version\":0,\"id\":\"{…' // Object.is equality\n- {\"type\":\"tool/result\",\"data\":{\"turn\":1,\"step\":1,\"message\":{\"source\":{\"kind\":\"tool\",\"callId\":\"call_spill\"},\"content\":[{\"type\":\"tool-result\",\"toolCallId\":\"call_spill\",\"content\":[{\"type\":\"text\",\"text\":\"SPILL_START-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-SPILL_END\\n\\n(Omitted 1417 bytes. Full formatted result stored at: {{spillLocator:bash.txt}}. Use read with offset/limit, or grep this path to search within it.)\"}],\"isError\":false}],\"role\":\"user\",\"id\":\"{{message:4}}\"}},\"sourceEventSeqs\":[18],\"surfaceOp\":\"append\"}\n+ {\"type\":\"tool/result\",\"data\":{\"turn\":1,\"step\":1,\"message\":{\"source\":{\"kind\":\"tool\",\"callId\":\"call_spill\"},\"content\":[{\"type\":\"tool-result\",\"toolCallId\":\"call_spill\",\"content\":[{\"type\":\"text\",\"text\":\"Error: unknown tool \\\"bash\\\"\"}],\"isError\":true}],\"role\":\"user\",\"id\":\"{{message:4}}\"},\"error\":{\"name\":\"ToolNotFoundError\",\"code\":\"UNKNOWN_TOOL\"}},\"sourceEventSeqs\":[18],\"surfaceOp\":\"append\"}\n    647|       const expectedSnapshots = normalizeSessionSnapshots(fixtures, fi…\n    648|       for (const [index, actual] of actualSnapshots.entries()) {\n      Tests  1 failed | 81 skipped (82)",
+        "is_error": false
+      }
+    ]
+  }
+}

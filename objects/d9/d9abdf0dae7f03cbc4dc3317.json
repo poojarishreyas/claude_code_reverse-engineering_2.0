@@ -1,0 +1,18 @@
+{
+  "id": "d9abdf0dae7f03cbc4dc3317",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjggKEAgSGAI4AUIIdGhpbmtpbmcSDO4c+OljSS1u1oTJYhoM7lhrcRNKhKMy9UsxIjB7FhD98/287uKSQuzR7aV64hdV2oeFkZQZyYe9mUkGk9QUSn45eMtcWkczWntxhCoqqwc801bNAcxq77iEIgbYo9jlMotbu3z0akLTDWoHeiUV0rexvdeWtDYxsYpc3tW7w2pliGN0zDp+JLxAKKL5ojal8DHKR7UEv5bZC+W5LjOSBlaf3mEZX2kWlsxv7RFTEQ55/tX201k3aasXR5ZunxAnVi8k+y+KJcLLsVvl6HDqCZls/ioehSrszgoOSVot25IY90O3aAhRt9qyXDwoAb4YfSqW5pQToEt4eIuDNp5iPZ7RkbVS3b+8Z/APzcFKKhHlw1aaQIMz2q0rrWz7yEx1BGw65oBztAOUF/wPorSbdWpBLfghOS4Bm4wmOjEJ2mdqnOntnByLxU2wbdOergqI2SkgnHsQbbWrMa6waIbySdvBG6f+IRraEfvW3EHN/LBnY2/ikbXnfqNSwMkCwLoxICuVqmr6BjDM5iMu7Ct5lOKVF+LFZW2gcDVFdHt9/rkDdPl3nN/KXZNXtMglAjVMDqLaIBG1Jwgp/89qgoUtQer/tClH78j7VVl57cJW9p372BPGzPJSQtNm2JRl4Bc/QWSYBEAT7SwfIEcj22wELK0pEBHE410xu+NCVO4moQ7cS0i0jnSglHPv1LcWpyV0YkTiU6E3LuyMdlwXqg8a20MhWESAQlF9zlILZIwIAbU8Vn0PfkyK828SXNpBxtL+L6IgTbTHtnepuyCrvqyjOmVejQp84bbxZujJQycAQBru/68cmYIOUFmQevJ8Lb6nWxRgIvmxiFVpx2xp26zuRjx5K2MioxQQKqd1Yaiz8DKr0Qu0TodZkW2HJSaPoDsF2FNFY0OBimjN2Xmd4kMlqHEHGCAlZKBKgsz5pZI5KDGjZgtMNER5qNjXpgROwtWB/8vraFS/1w+0iF2Gq/yepLQOn/Fs/c+hKAruPHjfAGGlxCUbyJhpMqX7x3xdBSDGw/wOVsT6Orljr+S2QAp/IyQ5LqY64XSJxlxKIgywYBMfaVu62mlkeLEiOIgwHB92hVKqg7E6Q2OTjOunvCAnfCIuHZCOJS2RC0ke7rOZTZCF3N5BFEQB0EPExMupoLUsSeV/03A+wNIMysRp1h7UpxIjHAPfwCwA87EHHAoUaPKkGXZomVye2QckD/TjnhRksmG+f5nqSW32rie2EUUJOlN1Kcp2hU3Tciu/8nYWGnAzwlxpfjgBXOBMqFgiWwkjDwoNfWYPO8pGKWTftNVTNAhi90jKdAhVjKQLRgoKpAhEmr+dIrBJ+W+LyB2oyp6afFuDPdfqf5JiHUgYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "The harness itself doesn't choose a file. The model finds the right file by searching, the way a developer would. There's no index or code map picking files for it.\n\n**What the model starts with:**\n- your request, such as \"fix the login timeout bug\";\n- the system prompt, which gives the working directory and tool descriptions;\n- the repo's `AGENTS.md`/`CLAUDE.md`, if present, which often say where things live;\n- any file you named with `@path`.\n\n**How it searches:**\n1. **Guess keywords** from your request, like `timeout`, `login` or an error message.\n2. **`grep`** the code for them (live ripgrep over the workspace).\n3. **`glob`** for likely file names, like `**/auth/**` or `*login*.ts`.\n4. **`read`** the promising files to confirm.\n5. **Follow the code:** imports, function names, tests and error traces lead it to the actual spot.\n6. **Edit** that file.\n\nIn the default web setup the model does this inside `run_code` programs, so it can run several greps and reads in one step.\n\n**Guardrails that shape this:**\n- **Read before edit:** `fs-observation-policy` blocks editing a file the model hasn't read, and blocks writing over a file that changed since it was read. It can't edit a file blindly.\n- **Instruction files:** reading a file in a new folder can pull in that folder's `AGENTS.md`, which adds more local rules.\n- **Plan mode (optional):** the model explores first and shows you a plan naming the files before editing.\n- **Subagents (optional):** for big searches it can send a helper agent to explore and report back, which keeps its own context clean.\n\n**What this means in practice:**\n- It works best when your request contains searchable words (function names, error text, file paths), or when you point at files with `@path`.\n- It's weaker on vague requests in huge repos, because nothing ranks files for it; it depends on its own search choices.\n- Good `AGENTS.md` files and specific requests help the most."
+      }
+    ]
+  }
+}

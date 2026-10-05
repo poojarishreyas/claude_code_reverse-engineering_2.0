@@ -1,0 +1,14 @@
+{
+  "id": "c2a843c5b4474c11fd882fba",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01NwMqg8VpUMmNvVbtXM3z9H",
+        "type": "tool_result",
+        "content": "packages\\context\\file-reference-local\\src\\search.ts:55:  /** Directory basenames never traversed or offered. */\npackages\\context\\file-reference-local\\src\\search.ts:88:  /** Monotonic invalidation counter; a settled index below it is stale. */\npackages\\context\\file-reference-local\\src\\search.ts:92:  constructor(\npackages\\context\\file-reference-local\\src\\search.ts:133:   * Mark the index stale so a later bare query observes a fresh tree.\npackages\\context\\file-reference-local\\src\\search.ts:135:   * The stale entries are kept and keep answering: a rebuild costs one\npackages\\context\\file-reference-local\\src\\search.ts:154:   * waits for a traversal; afterwards a stale index answers immediately and\npackages\\context\\file-reference-local\\src\\search.ts:164:        // A background refresh failure is not this caller's error: the stale\npackages\\context\\file-reference-local\\src\\index.ts:39:  /** Directory basenames never traversed or offered. */\npackages\\context\\file-reference-local\\src\\index.ts:57:  constructor(ctx: Context, config: Config = {}) {"
+      }
+    ]
+  }
+}

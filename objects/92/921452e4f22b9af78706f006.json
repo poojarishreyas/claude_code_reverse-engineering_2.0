@@ -1,0 +1,18 @@
+{
+  "id": "921452e4f22b9af78706f006",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_018P7UkRFqGrS3V2t58PQ7ND",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && grep -n \"export interface SessionHeader\" -A12 packages/core/session/src/types.ts | head -16",
+          "description": "Inspect SessionHeader required fields"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "8206611d54c6199add60f721",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019YQVhiy5ypZ7H2c8kUbnh9",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\types.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01LbDjfHnqib9tURLX5kca66",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\types.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01XSyeLATMUU9ghJZXvMW7ue",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\index.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01PBgkN6DCnWCpGnDNTWZEua",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\index.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01VwAbGM59b6WpKTxS5DX5Mn",
+        "type": "tool_result",
+        "content": "7:import { Context } from '@deepseek-ai/cordis'\n8:import z from '@deepseek-ai/schemastery'\n9:import { CompactionEngine, ManualCompactionError } from '@deepseek-ai/dsh-compaction'\n10:import type { CompactionResult, CompactionTrigger } from '@deepseek-ai/dsh-compaction'\n11:import type { TokenMeter } from '@deepseek-ai/dsh-token-meter'\n12:import type { Session } from '@deepseek-ai/dsh-session'\n13:import { CONTEXT_WINDOW_EXCEEDED_CODE } from '@deepseek-ai/dsh-llm'\n14:import type { LlmCallConfig } from '@deepseek-ai/dsh-llm'\n15:import { assertNever } from '@deepseek-ai/dsh-util-values'\n16:import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'\n17:import type { CommandId } from '@deepseek-ai/dsh-commands/brand'\n19:import type {} from '@deepseek-ai/dsh-compaction-tool-result-pruner'\n20:import {\n26:import {\n31:import { summarizeWithLlm } from './summarizer.ts'\n32:import type { SummarizationInput, SummaryResult } from './summarizer.ts'\n33:import type {\n39:export type {",
+        "is_error": false
+      }
+    ]
+  }
+}

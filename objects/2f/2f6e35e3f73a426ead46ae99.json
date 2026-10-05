@@ -1,0 +1,8 @@
+{
+  "id": "2f6e35e3f73a426ead46ae99",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "how opencode summarises the context ,do not assume"
+  }
+}

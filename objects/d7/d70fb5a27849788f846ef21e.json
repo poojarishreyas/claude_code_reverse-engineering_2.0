@@ -1,0 +1,15 @@
+{
+  "id": "d70fb5a27849788f846ef21e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017x6reK9vjcx1sSzYVTfFaA",
+        "type": "tool_result",
+        "content": "10:export interface CompactionPolicyConfig {\n26:  maxOverflowRetries?: number\n30:export interface ModelCompactPolicyConfig extends CompactionPolicyConfig {\n38:export interface BasicCompactionConfig extends CompactionPolicyConfig {\n41:  /** Enable automatic step-boundary pressure and overflow-recovery listeners. Defaults to `true`. */\n42:  auto?: boolean\n51:interface ResolvedPolicyFields {\n57:  readonly maxOverflowRetries: number\n63:  readonly auto: boolean\n81:const maxOverflowRetriesSchema = z.number().step(1).min(0)\n83:const modelPolicy: z<ModelCompactPolicyConfig> = z.object({\n93:  maxOverflowRetries: maxOverflowRetriesSchema,\n107:  static Config: z<BasicCompactionConfig> = z.object({\n115:    maxOverflowRetries: maxOverflowRetriesSchema,\n116:    modelPolicies: z.array(modelPolicy),\n117:    auto: z.boolean(),\n190:      if (retries >= policy.maxOverflowRetries) return next()",
+        "is_error": false
+      }
+    ]
+  }
+}

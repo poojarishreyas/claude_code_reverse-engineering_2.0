@@ -1,0 +1,15 @@
+{
+  "id": "0cd87df2fdff33d104203d17",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01A2oxH58ArWaeznFLKPY4Mn",
+        "type": "tool_result",
+        "content": "packages/compaction/compaction-basic/src/summarizer.ts:73:  '  - Do not copy the prior checkpoint forward verbatim.',\npackages/compaction/compaction-basic/README.md:247:  - Do not copy the prior checkpoint forward verbatim.",
+        "is_error": false
+      }
+    ]
+  }
+}

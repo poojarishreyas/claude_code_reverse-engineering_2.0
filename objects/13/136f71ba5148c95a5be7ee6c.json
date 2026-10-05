@@ -1,0 +1,15 @@
+{
+  "id": "136f71ba5148c95a5be7ee6c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Hm4aTuqFWa8HxNzfXKsgZU",
+        "type": "tool_result",
+        "content": "102238113:detailed summary of the conversation\n206768222:detailed summary of the conversation\n102503792:This session is being continued\n103005528:This session is being continued\n206778380:This session is being continued\n207944579:This session is being continued",
+        "is_error": false
+      }
+    ]
+  }
+}

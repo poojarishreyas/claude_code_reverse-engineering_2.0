@@ -1,0 +1,15 @@
+{
+  "id": "ff4be413e75f1e0d66ab5fba",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01VAd1fbuWU4bPzibGG33DWF",
+        "type": "tool_result",
+        "content": "99:    \"scripts/**/*.ts\"\n112:    \"scripts/*.client.spec.ts\",\n113:    \"scripts/client-bundle-css.spec.ts\",\n115:    \"scripts/client-bundle-purity.spec.ts\"",
+        "is_error": false
+      }
+    ]
+  }
+}

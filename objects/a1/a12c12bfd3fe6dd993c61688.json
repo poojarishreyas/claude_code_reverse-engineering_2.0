@@ -1,0 +1,15 @@
+{
+  "id": "a12c12bfd3fe6dd993c61688",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011VzrtaSesjMzpBZ7bMdUgY",
+        "type": "tool_result",
+        "content": "17\nC:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\mine-check.ts:2:14: ERROR: Top-level await is currently not supported with the \"cjs\" output format\r\n    at failureErrorWithLog (C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.pnpm\\esbuild@0.28.1\\node_modules\\esbuild\\lib\\main.js:1748:15)\r\n    at C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.pnpm\\esbuild@0.28.1\\node_modules\\esbuild\\lib\\main.js:1017:50\r\n    at responseCallbacks.<computed> (C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.pnpm\\esbuild@0.28.1\\node_modules\\esbuild\\lib\\main.js:884:9)\r\n    at handleIncomingPacket (C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.pnpm\\esbuild@0.28.1\\node_modules\\esbuild\\lib\\main.js:939:12)\r\n    at Socket.readFromStdout (C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.pnpm\\esbuild@0.28.1\\node_modules\\esbuild\\lib\\main.js:862:7)\r\n    at Socket.emit (node:events:509:28)\r\n    at addChunk (node:internal/streams/readable:563:12)\r\n    at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)\r\n    at Readable.push (node:internal/streams/readable:394:5)\r\n    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {\r\n  name: 'TransformError'\r\n}\r\n\r\nNode.js v24.19.0",
+        "is_error": false
+      }
+    ]
+  }
+}

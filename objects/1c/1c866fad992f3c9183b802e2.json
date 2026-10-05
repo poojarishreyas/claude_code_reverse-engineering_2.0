@@ -1,0 +1,29 @@
+{
+  "id": "1c866fad992f3c9183b802e2",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01U6CDf1No3tq8NokGXDukqA",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\types.ts",
+          "offset": 36,
+          "limit": 35
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01VfvQ6e2rAP6wXQj7hrM7pA",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\index.ts",
+          "offset": 100,
+          "limit": 30
+        }
+      }
+    ]
+  }
+}

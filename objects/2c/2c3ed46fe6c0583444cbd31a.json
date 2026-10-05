@@ -1,0 +1,18 @@
+{
+  "id": "2c3ed46fe6c0583444cbd31a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_012RSfebXMvYBY1TsUkXfuh2",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\context\\agent-instructions\\tests\\agent-instructions.e2e.ts",
+          "limit": 120
+        }
+      }
+    ]
+  }
+}

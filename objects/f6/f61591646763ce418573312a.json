@@ -1,0 +1,15 @@
+{
+  "id": "f61591646763ce418573312a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Ti8cah4rkFxnCLZyLh3oDt",
+        "type": "tool_result",
+        "content": "30:    \"lint:contracts-ready\": \"tsx scripts/run-oxlint.ts .\",\n31:    \"lint:fix\": \"npm run build:lib:host && npm run lint:fix:contracts-ready\",\n32:    \"lint:fix:contracts-ready\": \"tsx scripts/run-oxlint.ts --config .oxlintrc.staged.json packages/typert/generator/tests/fixtures/type-model --fix && tsx scripts/run-oxlint.ts . --fix\",",
+        "is_error": false
+      }
+    ]
+  }
+}

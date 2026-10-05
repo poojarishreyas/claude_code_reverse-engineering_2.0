@@ -1,0 +1,24 @@
+{
+  "id": "e11bae882aac7f0c29bf9a76",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HnwZfFvDisspga5LCKhvuE",
+        "type": "tool_result",
+        "content": "8:## Summary\n9-\n10:[Omitted long matching line]\n11-\n12-## Table of Contents"
+      },
+      {
+        "tool_use_id": "toolu_017rP59uujYrHQeYjspY84Cg",
+        "type": "tool_result",
+        "content": "1\t/**\n2\t * Agent-scoped model selection shared by runtime entry points.\n3\t * @module @deepseek-ai/dsh-agent/model-selection\n4\t */\n5\t\n6\timport type { Context } from '@deepseek-ai/cordis'\n7\timport type { LlmCallConfig, ReasoningEffortId } from '@deepseek-ai/dsh-llm'\n8\t\n9\t/** Complete provider, model, and optional reasoning effort selected for one live Agent. */\n10\texport interface ModelSelection {\n11\t  /** Registered provider route. */\n12\t  provider: string\n13\t  /** Provider-owned model id. */\n14\t  model: string\n15\t  /** Adapter-owned reasoning effort, or provider/default behavior when absent. */\n16\t  reasoningEffort?: ReasoningEffortId\n17\t}\n18\t\n19\t/** Mutable model selection plus the value captured for the current step. */\n20\texport interface ModelSelectionRef {\n21\t  /** Model selected for the next step that enters prompt assembly. */\n22\t  current: ModelSelection | undefined\n23\t  /** Selection captured when the current step entered prompt assembly. */\n24\t  assembled: ModelSelection | undefined\n25\t}\n26\t\n27\t/**\n28\t * Couple one mutable selection to Agent-scoped prompt assembly and request routing.\n29\t * Prompt assembly snapshots the selected model before delegating, then applies\n30\t * its provider/model pair and effort to request config so a\n31\t * concurrent switch takes effect on a later step instead of splitting the two\n32\t * surfaces. An absent selected effort clears any inherited effort, restoring\n33\t * the selected model's provider/default behavior.\n34\t *\n35\t * @param agentCtx - The selected Agent's scoped context.\n36\t * @param selection - Mutable selection owned by the calling entry point.\n37\t * @returns Disposer for both scoped waterfall listeners.\n38\t */\n39\texport function installModelSelection(agentCtx: Context, selection: ModelSelectionRef): () => void {\n40\t  const disposeAssembly = agentCtx.on('system-prompt/assemble', async (_assembly, _context, next) => {"
+      },
+      {
+        "tool_use_id": "toolu_012Gn4P7qgcLGtJJD6sHTTGh",
+        "type": "tool_result",
+        "content": "72\t   * How many leading events were inherited through a seed. Persisting this\n73\t   * boundary lets resume and replay distinguish parent history from child work.\n74\t   */\n75\t  readonly seedLength?: number\n76\t  /**\n77\t   * Coarse product classification for a session created as a subagent child.\n78\t   * This is presentation metadata, not proof that the child is continuable.\n79\t   */\n80\t  readonly origin?: 'subagent'\n81\t  /**\n82\t   * Delegation depth: absent (zero) for a top-level session, parent depth + 1\n83\t   * for a subagent child. Persisted so a recursion budget survives restart and"
+      }
+    ]
+  }
+}

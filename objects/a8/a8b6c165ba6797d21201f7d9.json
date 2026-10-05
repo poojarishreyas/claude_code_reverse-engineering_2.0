@@ -1,0 +1,25 @@
+{
+  "id": "a8b6c165ba6797d21201f7d9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_013KcnWonjheYqmhPytGeqbo",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\continuation.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01MJeR3Vbfd6WvxB5SXWrQEo",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\src\\continuation.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01MGdKndaRgBzMAwTjb6mz3V",
+        "type": "tool_result",
+        "content": "49:export function isCompactCheckpointSource(source: MessageSource): boolean {\n50-  return source.kind === 'plugin' && source.plugin === COMPACT_CHECKPOINT_MARKER.plugin\n51-}\ntsc=0",
+        "is_error": false
+      }
+    ]
+  }
+}

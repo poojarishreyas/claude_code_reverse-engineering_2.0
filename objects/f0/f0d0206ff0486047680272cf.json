@@ -1,0 +1,8 @@
+{
+  "id": "f0d0206ff0486047680272cf",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "how the context isi summarised is there any llm or ther is a pipeline written for summarising/"
+  }
+}

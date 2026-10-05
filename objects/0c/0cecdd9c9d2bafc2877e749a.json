@@ -1,0 +1,13 @@
+{
+  "id": "0cecdd9c9d2bafc2877e749a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The three-task dry run takes longer than 10 minutes (each task installs the upstream dependencies from scratch), so it's continuing in the background. I'll check the results when it finishes."
+      }
+    ]
+  }
+}

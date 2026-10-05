@@ -1,0 +1,15 @@
+{
+  "id": "8ca671af195db87e4f18468d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01QMrjuGqYZDdkPQ4HU2tazQ",
+        "type": "tool_result",
+        "content": "exit=1\n    at node:internal/modules/esm/loader:632:32 {\r\n  code: 'ERR_MODULE_NOT_FOUND'\r\n}\r\n\r\nNode.js v24.19.0",
+        "is_error": false
+      }
+    ]
+  }
+}

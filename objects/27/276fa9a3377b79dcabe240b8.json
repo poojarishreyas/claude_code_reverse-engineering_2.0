@@ -1,0 +1,37 @@
+{
+  "id": "276fa9a3377b79dcabe240b8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjAoKEAgSGAI4AUIIdGhpbmtpbmcSDDLEVhvrBezosJ+GghoMj6NAdLCxBC0d7s8wIjCZK+kGuIlJsEHv+6KQGKX9rTdFPj00OM2sM9guW3tguDfkFZQaE0IeDUhKN8k78DMqqQkvFfydjONDEE0ET5nGodBXhKZsRjpsvcqimxV8Y3GRtU96pvbtTgBzSxEhYTTfkaWMxfg/sdyc2+0bN71vZLqvFufmBSY9CCa+SB/36FJDs8jA30sLt6GxIH+1bYYbTl5GHJQb1faExPM9esT+16/tywIr41XAo1aBy/f9IS6FRive94NGgRQQtGTQD3uU887y+m0NNi8Ho58jilzuBMuovC1Q9y1ZkbZWThArDLWzncyR/n5raaR5wXNIon8kKE3kr2JAvSgUka/rj/y0xdtJOjWupzM/OWmkzRLN94uhzv5SKlYXb42U2Ac25jCRkdjZcdU63h1x81dFzeYI1pHS3UJCl/uCv3zB5Ci/4cNGBI6QjjoEamd5KpAxTYzVmjPH3e1TwvG/B/mY8E04k9HZ+YvgciDuYqiEw0VJJpmzm2VRtIGsWDSjMwqTIwmio8c2Vptt7HlWUo80T0Is5jGarPlH17Caljr/1JCN45mubsQ+wmSE40WoEp4Bgf3I5NnHiFb8E0rRvJMas1loaALwkHeE+ZXVSFHhVsMdptenQJxBraI3hWEJLdLzgkx203bEm4VDEN0IaFV4Blomkkh5fHJGZnK4jnvSszaQxcI2iRHprvPTGD8dMAiOolBbIKxoFoJM5d3HIkkpBgeLQqtbTe8ZkneCr0Havm5rNcrSVVPQPxSHrAGpqhpUyYSBnndsPfT5+VsWY1gWGYmQfC/q6zAnezvWdlBYbwHLqJefP4fo5JvA0HQ8BU/wzsw7xRi1oAw9JdKhEkUpCLNx1dGqOiIdbfhSba+26HKLavsEB41iCP2RwM2Onzb2XYi5/QrX66iijaS+Fz6mCrZX3A4AiKU39ieHJeS4GiiJFlTBtmf/uLFjKjC652FtdgqnBtyRZ0bC8mjWfsBjepcaUDCrnPE5c3W8/GaAdVIbbtCPHH9wHxOGBig3EK7U/ldRcMPIiH3+5P8PAQMGXtM7ld/UWgkZE7nQL9e4htQyNUvkkA4OAT7djAnnnkr/dXfbK+IOqwPx0pQrT5U+Wrw71HMlrJuYmp6Xm34T1vylbaBkrq3E2B1AhxvsjbN9RtfCa30PDqRU98ulRQdueW7NIrMbLtAvac6YORsdhOfHvEQ3OLCa4OV5ELTFA6WjIPrRtB4bFC7KgcoEYrR5gfP3KIQDxb0PSFOUqLtV/7FO9GC+jyQv++ph3CPean+V55k5n6FPPUQ0NqtoWF6s7P6rOnro/eMg7nhp3fUnc0Bpfczm/y7lTOV5Vc3AYhYmE3cRph1zNs1dszjshl3QiCmv37pveGM/xPbSUVFjDLldNE297EhGcp6+4KK8EV8S7zM5TBiFazTDx+ywiz3FlwYaJPWrMMIzXZUvWwcmkHNkKdgQskklEcD5PiqUWB0856oppBhq6a2yrHIdgZjYMFM4M6fUUQeXtepYaVVl0E9h66QEe/1I2Rt6Yk/NeS0cjgKHD24pr2S8DXpSNKz1G/o8qWOTaOI3TtuOTZdHZgrt6KLVkZ4y7q0/K9y3fZRpSuJokEBTyi/PvNyVyQnGG/vdjvlrrTnPvb/v5nXda4m6iwaZvCri3Y2cARZythgB"
+      },
+      {
+        "type": "thinking",
+        "thinking": "Pruning isn't tracked in snapshots, keeping things simpler, though `pruneSession` is still used in compaction-basic (twice), its tests, and two API docs. I'll now check the compaction-basic pruning tests and the pruner's README.\n\n",
+        "signature": "CAQSkwcKEQgSGAI4AUIJbmFycmF0aW9uEgyJO2wDTUi2uDwmW5YaDEcQ4ZMRrPcZTU/WJiIwbCuQS1+FfIKaVVDpsw2+k6+L3huA54cNtnf8ZQmrNOkUu3pfLSe7iEMzoV+dThw0Kq8GSnviW9yIdCKMKaVbOiih/sXZMXKpLv42aID8AZXemgRCr0/ws0vRWEWt0kK4McD8kcy+uM0eDAjZ2m1c8rUHFVyjioadbGpn3TExSluCT85VVsoXm0SClPJ2bKDLZ44vI6xWKcatxWHQl7MqBnuZ+g4xqQQby554TgR7RJ4bgQRrNeARe0D/skoXu/rNL48F/jcnaUPQhUVDj6GVrv+VmlZzfazFHCHvuPBvm6kYrxe+5+OSvTyViKggU3W3C0c6P1NWeANjnsY4JP4hCtfka5s2agmoi8dzU19xT27M+02q1kDOX9PBEgNA3fJ2n4/jsTjQRIQtj9TpN7wsOdtU5sQb8nvtsN+aymVQiSygAX6QQxQKeXyTrayuLqzq2/02A+mbmoM5hH2aByTEA5ECfftACANpyDjRuTYvRS1MGyhwMF+dq0+Sau/NiHrTJngRJhsZMB2ajcyMu4qMcbBsyG94UW8ZxC2Fv4USKvNb5X1+8j6HKbsp0F+3UKgsdNrHbT3vzDxyG54pCh2XkEHNrzR3EvIajmvbQ3FQck+kRVs4aMQMCX42a6vVQMlZY44kWet/P2DP3Nxo52cXsFc2Z+l1+hIA6uJc5mFFYP9AO3k+3cL9Kbg8ZIRSsxwVbJ0q9x3RX8WQZcJXb0gTEjS7Qxl6bvUizECgHdYkPSoUdgoYjga72Sl1BCWu5jCJFpTyHXI+xDe+GQ7HO76cyOtRvsPeGfCL4k080boIJIYe9MiYjJ26k2sx5JixuFN2yrVhh4KMV6prcJ5anzXrA4CnhI9ZKrT68BRD28tAe5SchrlWlzzPaF5UKpj0gxP7zzSwGH4zVJ+RiJ6gDVrgVYZieMLYSAPHwSiDDhQr6bSke7Ri51bEmMMJCHjjGEREG3Tn2sbldhi3s//GSN8GJAPgPx6dV+ORZPcwiHAX1Qmm0F09HsTk4GmPdG7VQ6xL/Je5RpWubbJr/PbNmESuPGAqa4+Q4KHJEfkeceLlJ97rKM3E/Fh9Aii0gjYti5tz7dn7SkpJUYbM+APies7q1ATQd6F+A8rTBbjGSCbAG+edKgMChyTpI1esBasv5fRl6poYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01JR4i6Hk25BQAv6Bd3YVjpX",
+        "name": "Grep",
+        "input": {
+          "pattern": "ToolResultPruner|prune|Prune",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests",
+          "output_mode": "content"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01XP459A8PrNvhJAbECuFsac",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\README.md"
+        }
+      }
+    ]
+  }
+}

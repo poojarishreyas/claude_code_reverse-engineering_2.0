@@ -1,0 +1,30 @@
+{
+  "id": "4e1f0978668c729c7e0457e5",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1QgKEAgSGAI4AUIIdGhpbmtpbmcSDD72w7W0iAJqT1C7JRoMQcbUdK2zBr78ht23IjDbiJLxQyf3S6wXXCeSJ4si8dAduGjE5YEzgDqFonNbScG9sx4t3bxgr2xgPScQsb4q8gdtPTfx6oHPihDt/bXfAqaKLvXaZkuY0oqe5kR0dp4w2do+Ax8dFz7rnb67/5TtzNVJq0B3b7V5GvDqFgw4tNzLQ7GxOg2ghpNvv1al7SvXEfuJQSanXxIAUb3LJKXrRl7Elnp1bB8RO4OcIf2mvDRHjLwQ9Vw4akpDLwXJTFj7/e8Au16MIOVGm57+SIDjRJviearoq+vIyo7MwafD53uxvB2XaIgFxicM44XXOhYfhJH5u/faqwyzsmStbBFsqVYQc2NNKdPKmYnYJU3nqPOczTkCxc+fNWgUUsa1BsrZAxwgLr0k1gDIMPdThY2d9tN8NZ/hbjd5P36JPcEbd4UuEzE3qU9ZjqxnzYQeuumVZwHInly5qjsWGsRJl7ROnJ4LbUyZen1DCF1b+uKoCAUjoBC8hvTu4qOpmVRmrfBtgOWDLmMZH+dzkDt+KhTGhIALG3ZTLchSiIJIC4kBfrCYx4WaL2K5eKt1qcELDYCH5BRs6kBelS86rQJnk5OwkIRWv6VB7pHOVN1yYx1vTA1DEAlwrFwmqPxEELG4QJIZ2UK1g/vCWvS0jrXj6lrHmyIQ5qDIF5ERLXCuCg+1wA+FalWPeGPM5hHF+XFvneaAo1pzylNUAbwbMGwQVAf3OJ1HZxCVWTqGeCsPkojj3uay3GPZeCdVhwv8bLwO5lqL9xHlozkB6hSiM8wcVlfRgXjkJNnyZx/khjxgN0f6WerzuHPGWIze8tXBbG2rZ4Nv9b7lJ7vP6M11sVw+/eNOqZQatZLyrAa6QYqNlk8VeIskQ21X4EukEBRh3m28uUSTDm1ffjDIWC9xYCjIuE10NIiJvpEJRVQs64QR7eTVc2kz95WtFjLg20YZG7/fLu2mNS7b+THPQBefK01LmOvQpht62bSPPrkeTslQ+NZEPTzIet3BU5jIO3LfuB3bBn7AX2EsYZIaov4pNChKXnP5SV8VlLS23Piy6xVwtrZIUZTJNHM5Tlg5iMcRBhosl2F5ffOXHoeY/om+dYwOnm4TR+eV3qY8LweC25I0WpCg1XasPabwCxTraGgEG1jv5WOsl1SnOUrtuxnHt7cjWK6FZuA5bm6JhdBsZ9075rlN3JUnJroSekC4xZhx+tG9zTNQQ/DysxkgQfbyw4K2Q0xi++dNxs9mpagN87E7vJ4KLnilbd5jkBDm69FKKTi0+5OzJqqSJanVhiM2Y+UmbYJPa1EIQVdCZC57zJ4LqrhFnxZT4jVGqIa5tvdBw3h48UaisS2x80f1HgGUJipVahWZc4Yn/7uxRc5OMfZ2j2bufDXZPBbLJJ16r6C6dhjBeDOT0hn2tcrUYaXqCMacM5358TFtUhgB"
+      },
+      {
+        "type": "text",
+        "text": "Before answering I'll check whether the spill feature (save full output to a file the model can reread) is switched on in the shipped presets."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01K9rnR6vtGP73BcYXtTCxxu",
+        "name": "Grep",
+        "input": {
+          "pattern": "spill-policy|maxInlineBytes",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages",
+          "glob": "*.yml",
+          "output_mode": "content",
+          "-A": 3
+        }
+      }
+    ]
+  }
+}

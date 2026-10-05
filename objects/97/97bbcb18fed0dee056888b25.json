@@ -1,0 +1,15 @@
+{
+  "id": "97bbcb18fed0dee056888b25",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01QRfp8F6Va4cteJEbAm3j9U",
+        "type": "tool_result",
+        "content": "- Expected\n+ Received\n\n@@ -1,10 +1,10 @@\n  {\n    \"editedExpected\": true,\n    \"editedFiles\": [\n-     \"packages/core/session/src/index.ts\",\n      \"notes.txt\",\n+     \"packages/core/session/src/index.ts\",\n    ],\n    \"editedTests\": false,\n    \"extraEdits\": [\n      \"notes.txt\",\n    ],\n\n ❯ scripts/eval/metrics.spec.ts:49:21\n- Expected\n+ Received\n\n  {\n    \"editedExpected\": false,\n    \"editedTests\": true,\n    \"firstReadStep\": 2,\n-   \"firstSeenStep\": 1,\n+   \"firstSeenStep\": 2,\n  }\n\n ❯ scripts/eval/metrics.spec.ts:71:19",
+        "is_error": false
+      }
+    ]
+  }
+}

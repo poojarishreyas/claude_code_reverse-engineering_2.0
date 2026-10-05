@@ -1,0 +1,28 @@
+{
+  "id": "1d06a7e3efbc5a04caa59ea4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSlwUKEAgSGAI4AUIIdGhpbmtpbmcSDM1QBwM9i8burtIVMBoM63inWGJEiXoTa1xDIjAZs5staR99SMytYkKfcOtNC+gqKnxcAhjVDpJKXsa/jgSEjNiMehVnv2ChLXCYqLwqtAQu/KqsWW29XjfoJtzEXrOHSJIewEy6kvB5Dp3VMQWygLl1cZyB3C7PXO0ihn3ANOprfXkmix5bJfB4Xv3uihpBMGfq3Nc+r99rRsPt8cwLSO7haHjpu++B3R2n9he6EH2T+DkcRWFa6h+EPGAzpyaxHKQxM0yujf284YiazxFqm6y3Ps65pk6HH1a9t8ty1oN6IJ/NFDwTbxey9koQAdymLgoA2gOMTEn/cFBllVMWC8Xl9jmNAewWXejRK2ftn1h7yUQYPl0cEvxQt9FF0nfmStyO+xEz4Ukt6aelilyL9ilJezTBtxNLOCWcKUdmQ7PWLC59c9JrVlg/uMV0E/aXA7K2oQ0Gmk4dHCRyiYcuQ1o6bDYhYleUhWMAYQIeOnBWplTsEXQduEO08g+6GEYb5Wqv020I/XwTcr7YexB024gozzM1yQZ1/bBj3srbk4S2WTbVcn24B1OFG+cSJ5bfyReq8tbcJh0HOArYYDs7kD/4EBGSvS2paFSwKGvqBrDZWSwnqF+o8+PznFQnOdKElHjz1Q9r54otEW1LQZovRnb/Ridq0Chiy32p/BD/tOQ0aMcg5j70cZvACS/68UNquF6a61LpK5D/NC+iNvJKQrnLTtpRKvVRWxT12U/0KCp78cte0UKxoWpZMRhrh9qj1C46nRu/eAP9qih8/MDszjxx3iIrhhnm9MB3tbrJbaQzDCRjjoR6M/GKUBP1yYHUUoFNLBHor/1lkmHoX5q5cAUYaNsYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Two failures, both from a mistake in my test setup, not the code: `ROOMY` inherited `SMALL`'s 4-character head and 3-character tail. I'll give it the 20/10 budget the tests assume."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01FVsvTcrrDChtHaXveVMdvR",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\tests\\tool-result-pruner.spec.ts",
+          "old_string": "const ROOMY: ToolResultPruneConfig = { ...SMALL, thresholdChars: 400 }",
+          "new_string": "const ROOMY: ToolResultPruneConfig = { ...SMALL, thresholdChars: 400, headChars: 20, tailChars: 10 }"
+        }
+      }
+    ]
+  }
+}

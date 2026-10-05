@@ -1,0 +1,8 @@
+{
+  "id": "ee4fe59707f99352726528ea",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "ho is contxt stored in file or any datastructure like list explain the approach in simple english"
+  }
+}

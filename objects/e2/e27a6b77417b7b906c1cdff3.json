@@ -1,0 +1,28 @@
+{
+  "id": "e27a6b77417b7b906c1cdff3",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSuQYKEAgSGAI4AUIIdGhpbmtpbmcSDJQwX9bwB9lp5d399RoMTnSsE4oWYsSOP6AJIjBz9Jxw5g77g7rFWU3Wn+Gq1IlkBAmOOYr0UkQdFRCifoE3+KfCOHv7+Gl8ZUDLK/Iq1gVz/s4mSbY0f+RpBmSpn609VsJX4p3tPkp/8X2UJzrXUdoGpW49JRZ7pke1uBKqT6dlZoAqXuGrnDcQur8Zm30Ww+NGJ/4OcuB5gporz1hHUZpZzVYd86BOqba44nqAu5k9vWm34N7HtyWr/m5L7A8NN/W1Lmv7rEkJboNhuJydph037h+GMoCksaDNjNqN9EqJEwu34yuzfFbq79ivocBMrkaCTwjSA0gYgir5W8FtFDkiFyU0Tg1nqDn18b5nmhtyc8tcaL9jl7QRtBEytfzgycX3fGmHmSG+77bKKor9MEVPzgWlIUYxlFpC9uY9PYYm7CU6YplXQBFdYiMKjYynrTgNNKteOzRLiisG1YnJulEofqAqN0/XrmwLENhb2KTpaJnUj4fT3qMSyRy4EIEu9o3o8jcJq7sIxttaDd5TqSjTnamkcKtHE0FelLjsxgpnvmDBQbA8I00n0H30gxF2YFfJw3GZNZuzmDs7323Muw3HbCj4IlpXl+P030OPdDbGxuZ9XHc+TP0AB0BdcSRqYaGuqpmVCpfuASvi5XVHsJVN5K6y1LE8/+dz+aEeRrp8dIdZwUzfUkU5NIkjzuFebfzEpnXLHjltTPRcop8nrRtYD66BUxKBRPMZNIfMfgFtuNAlHPwzfX2CklKi3ODzMlRUiHy6MEiIoRnw6ReRyr+v/KCf3qbmx8M7cEAoFuPoDdSBEiSmag6+sV78wzIe309Y/H8u8obXhizYaOZnUoVFF9gXItNk2LBChmBcd0Z3qN6obvt3OQ1dI7Nz2b68o5nKvqBmvtf6FCYKMrAUzLG6hUrnPXDmyjjECKMWFaEusSpaQ4Fg+fD7qOZEjkYljh9cMWCjok4ftk4RYCjhEhu7SKAtmeiCIf9MOuhMdgIOJ9TVhzAH0ogBwwkEOfTZe5mGprEemzCEk+8BNkvdY89RgSfTcRYrArzWWPi64vY9c8rMJeUYAQ=="
+      },
+      {
+        "type": "thinking",
+        "thinking": "Nemotron is built for 1M-token contexts, but it's still unclear if NVIDIA documents a compaction strategy—I'll check the Nemotron 3 Ultra blog on long-running agents next.\n\n",
+        "signature": "CAQSogYKEQgSGAI4AUIJbmFycmF0aW9uEgzuiL/b6aHbgilvbewaDOR52yjfB6bitCKiFCIwfYDiVQMjD0AMLEU4QTTHG0kZYafXZC4bulj8+Fc3SBShtOxzGVKhfdv9SKXOYD68Kr4Frz3gujOok+N+c0z8rvSa/dVCfCHRREepIVxTijX/HtYnDQYI6OpynRIPhu1uRr8KMGCQ26Z7qXkbvWm5S3zOr+xRKH7+jP4H3zhXpFAPthZF+xaOyyZ3rW9wXIJ1TYzoWpUo8FTQ2b+fmpfBx1Hq2TZl9HQPzRX8hDsPF3rggiC8TvAkIM60rairrmv7m2GIvi+g7syM25I4Xcx0i/WS+hGD2X2sbpOglknMGvpYVTVVQEPSndmjSZKpp8N08PgX9OMWW1kYJzepYTg/CL7mFr9XEl6R5xHAA6TtBWLPzOeIkMeuuvUwgqKu72goLCIgSfxYq4oSSljmTZq/FGaAj/KyUWS0eU84Ska0KSdHXcdPDhgIkar8gwYdFhbLZxLwVEPdykZx5IgEQ9HxFgb1cPohtBVMtoNR16pZVbwBqf+RfSorcH2SB5CGaCNJ4MPfrSAmvDKBtjlOXG+/5HeSBDS+8I6OIVu067zJbW6+DmfNMPwfMEqS39/RMwKhRi+AZrbOTknDo9mtZ+pfSNSgGiHb9+dtZ4MDP9rYotDQsoehjtbnjiSDucr9Fitf8W0lLJJVbdTzYkrQMYb80p4EZcHMCb2jXuAOj/tDeSAOXK4IsXoOGJ2z8MJ99f8Hpg5iCq14y4sW6BZ8fzHLEoihwi8wba4SaiHnGZ9mNw+iuOcWV+nk0Ha4VxXKxfRd9kf3AB9nYoAnWkOhwu2NVhtHbtBymrrM1YDuMYw62tI2cuKtZ7FL4s5WrvHCSu8YFyrfpNMGxQ+RBRi3u9+C536989mTLIKYEkyTggNv4M35U1Ekvy6Z9DgMcRfPx1BeikMK4t4IJ3eNQYAWDo7Ayw4EQG2IuFKlIGnJF4UNt68Bwc0ao5t2JocEnEAlNqx21/KSX/w19UtIhK7AC7o6Ja80mlNJIZIsTAY8Mv84YqcHGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01JwL5iPFumiJBSeFgcumDfz",
+        "name": "WebFetch",
+        "input": {
+          "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/",
+          "prompt": "Does this page describe any context compaction, summarization, context management, or memory strategy for long-running agents? Quote the exact sentences about it (trigger, what is kept, how summaries are made, training for compaction, harness used). Also quote any statements about context length and how long agent sessions are handled. If none, say so explicitly."
+        }
+      }
+    ]
+  }
+}

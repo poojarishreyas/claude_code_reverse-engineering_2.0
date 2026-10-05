@@ -1,0 +1,15 @@
+{
+  "id": "b468aed476c99f2dfa1665f7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PsAhagyr8w631HChCjyXhE",
+        "type": "tool_result",
+        "content": "var L7n=20000: 212854593 \nvar cSe=2000: 204561311 \ntable_no_match: 102689828 206004937 \nOutput too large: 103553477 103553736 204563290 \ncompact_micro_keep_recent: 101599048 200230673 212856873",
+        "is_error": false
+      }
+    ]
+  }
+}

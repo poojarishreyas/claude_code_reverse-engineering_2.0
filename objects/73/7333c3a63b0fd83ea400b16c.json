@@ -1,0 +1,15 @@
+{
+  "id": "7333c3a63b0fd83ea400b16c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LJerrkLcUuLM7tz5cwnym2",
+        "type": "tool_result",
+        "content": "snapshots/AGENTS.md\nsnapshots/session/advanced-toolchain/snapshot.yml\nsnapshots/session/advanced-toolchain-runtime/snapshot.yml\nsnapshots/session/agent-instructions/snapshot.yml\nsnapshots/session/background-job-admission/snapshot.yml\nsnapshots/session/base.snapshot.ts\nsnapshots/session/bash-spill/snapshot.yml\nsnapshots/session/bash-tool-turn/snapshot.yml",
+        "is_error": false
+      }
+    ]
+  }
+}

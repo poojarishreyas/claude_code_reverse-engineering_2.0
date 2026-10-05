@@ -1,0 +1,20 @@
+{
+  "id": "958ac693cf711159cf926317",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01MJstbYjRjCMFsT1sXeq4iH",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\README.md has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01TTZRVpnLUAeiTd1p7ZWfPZ",
+        "type": "tool_result",
+        "content": "## Problem\n\nTool outputs need bounded model-facing previews, but some oversized results are still useful later. A fetched page body or a verbose tool response should not consume the next model request in full, but the model should be able to inspect the complete formatted result later with existing file-reading tools.\n\nBefore this change the behavior was uneven. `dsh-bash-local` already writes complete stdout/stderr streams to private temp spill files when its in-memory tail overflows, but ordinary text tool results were returned inline unless the tool hand-rolled its own cap. The [tool result retention library](2026-07-06-tool-result-retention-library.md) owns preview mechanics, but it does not own storage or a\n\nThe shape matches the timeout policy design: a tool author declares a canonical value plus Native renderer, and a policy plugin enforces the deployment's default context budget on rendered content. Tool-specific early spill remains possible for provider acquisition bounds; tool-owned presentation spill may retain a complete acquired canonical value while replacing only presentation. The [canonical\n\n## Decision\n\nA thin spill storage seam plus a default spill policy plugin, in a new `packages/spill/` group:\n\n| Package | Role |\n|---|---|\n| `@deepseek-ai/dsh-spill` | Interface: `ctx.spillStore`, vocabulary types, no storage implementation. |\n| `@deepseek-ai/dsh-spill-local` | Local backend: private, session-scoped file storage on the host filesystem. |\n| `@deepseek-ai/dsh-spill-policy` | Tool-result policy plugin: wraps final text results after dispatch and replaces oversized results with a retained preview plus a spill locator. |\n\nThere is no dedicated model-facing Consumer package. The Consumer is the existing `ctx.tools` execution pipeline: `dsh-spill-policy` consumes final tool results through the `tools/post-execute` waterfall, and the model follows the backend-supplied retrieval hint for the returned locator.\n\n### Spill seam\n\nThe storage seam is minimal: save text and return a locator plus retrieval hint.\n\n```ts ignore-check\ninterface SpillStore {\n  saveText(input: SaveTextSpill): Promise<SpillRef>\n}\n\ninterface SpillSource {\n  toolName: string\n  callId: ToolCallId\n  label: string\n}\n\ninterface SaveTextSpill {\n  owner: { sessionId: SessionId }\n  source: SpillSource\n  suggestedName: string\n  content: string",
+        "is_error": false
+      }
+    ]
+  }
+}

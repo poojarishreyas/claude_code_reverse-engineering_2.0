@@ -1,0 +1,18 @@
+{
+  "id": "99b5a2cafbfd881863dc784a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS5AcKEAgSGAI4AUIIdGhpbmtpbmcSDHsLMH0LjcKPS/ElaBoMz130nnWCnylxKvpGIjBXUyYdY8JIbtlOmCrCX+x6oWgqHQ6S3aSmSl6XuToIwW2CWLW9YHPJ4TWWVeaP/mYqgQfjudTg0FzwvMMw9uf2Kg8ZoaxCTabcjLBhe/seK7Y60eD1P2F5WwOBHzOigElX74xSvaPDXKfgngdLeECLlJNwKY7DQiQCVS27h7nyTMdqLGzTAoZRMScPluNgoA6RgDS+EzDLt9Vb+r8JeUtBBfiV3KZewEc+hbJwJxcEkgR9mvqktdnUS/11JBCjD/iW1h4WxMOEOvdFfEh7QrVIyguS382aK6B2QKzj3o2aPiVMGQ4gqeC8LX3Lq4CMyouvtzihR4t4TFAfiWM8BQ6T+7upTVeT9uu0AqyHkqwYgKCLdUsR/esKTSzf4QVVg7WVSd1iOT+vMb/I2eJrqZjn1WHQhO2VRkUpS1Zj7ldf6Lmm8jJFAjyY7cMnCGdgoEpvrQ0PMdc6m7mCBFp/rKqsmPkVKQsVLXqiBtFFMfA7qG9sfUqxzS4i/PXASB2ntODHwa2ZmF0Ml5M33qxRATjtGiAO//DTC4FqfUUTCRNp89VBalrw5ataNQ6IzSoYfUTGf9JIw70+87w+hm5qWCOSBwfJvgV91v7ZIKOqY+LoiQXWREGhYwKkFcdxhnTieWmtNsKxzV1obTKIpPRIc7g8hhPAOQvvKxyQRo8zMsZSDNGKh9mIz2ApSsm7d+AVTIWZls53Q1j6CQyyic/fu0WrhVKbxG+TClo6nUScYe2gKLUCZC9EOcH7KeupNv6MgKDBgFt0DwR++ELcCorWw40YXkAEcjBxneC/IhNUH/n2+bdqLfylrFwNZ/tbWBeT9xYPghfmpCajTqOydtTQtMHUBAuR24EShf+g5gNyg7AASVQ/tWx+lxYgndufBzHkaGuj05fku2Ydiw6sp9pMelmOXT/7q91XritnizS6CDSbwj7eeNKWTrjGUhS0fFP7dkqc3cwqY8Nk6eKxrpu7ymQpMmgQuvjN33K0RGqeKShTxkvUZorPT68/b+Nn+yqly0ELti8YvVmSsvnW8gQ0sU+/vKf0lsCdE1X3s0Ik7qVuAMci+3uxNEsvsfBOytkcrwEVWDFTcwtkIFRHa/P9r43ubT3GJApA7cw82ayj4jd9r+N9I5u3xewsc0vsalR5Og3AFCcYcmoLVdqiLVPwO52OwK2VG1Riqq5+0ZQppFZkt87TPCgyYmkwTHvaClS8+uuHs99+QUOCmvjLPIfAo+a/NgRU20FdSRAXgrrxuciEasft+coYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Yes. Here's what I'd improve, most important first:\n\n1. **Stop the pruner cutting recent tool output.** This is the one real bug-like weakness. `pruneSession` (`compaction-tool-result-pruner/src/index.ts:136-146`) cuts every tool result over 8k characters, including the one the model is reading right now. The fix is to protect the last N turns or tokens of tool output, as opencode does. It's a small change in one plugin.\n\n2. **Put a file path in the prune marker.** Save the cut middle through the existing spill store and write its path into `[... tool result middle pruned ...]`. Trimming then becomes recoverable, and the model reads the file only when it needs to. It's cheap and needs no LLM call.\n\n3. **Spell out how to merge an earlier summary.** Replace the single line in `COMPACTION_INSTRUCTION` (`compaction-basic/src/summarizer.ts:65`) with explicit rules:\n   - newer facts win;\n   - move finished work out of the in-progress sections;\n   - keep user directives even if recent turns don't mention them;\n   - anything not carried forward is lost.\n\n   This matters most in long sessions that get compacted several times. It's a prompt-only change.\n\n4. **Let the model recall summarized history.** This is the bigger feature from the proposed recallable-compaction note (`.agents/notes/proposed/feature/2026-07-06-recallable-compaction.md`): short index entries per summarized chunk plus a `history_read` tool. Neither harness has this today. It's the largest item, so I'd do it last.\n\n**Worth measuring, not changing blindly:**\n- **80% trigger and 16% kept tail:** reasonable defaults, but I'd first check real sessions to see how often compaction fires and whether the model then rereads files it had already seen.\n- **Tool list in the summary call:** we send the tool list only to reuse the provider's cache. I'd check the logs for summary calls where the model tried to call a tool anyway before changing anything.\n\nItems 1–3 are small, stay inside the compaction plugins, and each needs a test, a snapshot update and an Agent Note under this repo's rules. Want me to start with #1?"
+      }
+    ]
+  }
+}

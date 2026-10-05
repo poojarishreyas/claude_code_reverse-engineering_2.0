@@ -1,0 +1,15 @@
+{
+  "id": "d1f81cbf6810cb1d9b79726d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0139bhEFah2wnTTi1ntwXE8P",
+        "type": "tool_result",
+        "content": "294:  it('uses low-friction service-wide defaults', () => {\n295-    const resolved = resolveConfig({})\n296-\n297-    expect(resolved).toEqual({\n298-      thresholdRatio: 0.8,\n299-      retainRatio: 0.16,\n300-      summarizationProvider: '',\n301-      summarizationModel: '',\n302-      maxTokens: 8192,\n303-      compactionRetries: 1,\n304-      maxOverflowRetries: 1,\n305-      modelPolicies: [],\n306-      auto: true,\n307-    })\n308-    expect(Object.isFrozen(resolved)).toBe(true)\n309-  })\n310-\n311-  it('resolves threshold and retention overrides independently', () => {\n312-    const thresholdOnly = resolveConfig({\n313-      thresholdRatio: 0.5,\n314-    })\n315-    expect(thresholdOnly).toMatchObject({\n316-      thresholdRatio: 0.5,",
+        "is_error": false
+      }
+    ]
+  }
+}

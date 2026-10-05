@@ -1,0 +1,14 @@
+{
+  "id": "a08b9ac393ab4ecc24098d5e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HAPVtVFfcvX2DykDaR9dc9",
+        "type": "tool_result",
+        "content": "320\t    await expect(prune.pruneSession(session, 'pressure')).rejects.toThrow(/outside any open turn/)\n321\t    session.append('turn/start', {\n322\t      turn: 2,\n323\t    })\n324\t    await expect(prune.pruneSession(session, 'pressure')).resolves.toMatchObject({ pruned: [expect.anything()] })\n325\t  })\n326\t})\n327\t"
+      }
+    ]
+  }
+}

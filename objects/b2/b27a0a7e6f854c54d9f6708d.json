@@ -1,0 +1,15 @@
+{
+  "id": "b27a0a7e6f854c54d9f6708d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Exit code 2\nsnapshots/session/fs-glob-sampling/cordis.snapshot.yml\nsnapshots/session/fs-glob-sampling/cordis.yml\nsnapshots/session/fs-write-overwrite-bounded/cordis.snapshot.yml\nsnapshots/session/fs-write-overwrite-bounded/cordis.yml\nsnapshots/session/parallel-tool-calls/cordis.snapshot.yml\nsnapshots/session/parallel-tool-calls/cordis.yml\nsnapshots/session/text-turn/cordis.snapshot.yml\nsnapshots/session/text-turn/cordis.yml",
+        "is_error": true,
+        "tool_use_id": "toolu_015r9nA4UAxQCSm6bGZE3sR1"
+      }
+    ]
+  }
+}

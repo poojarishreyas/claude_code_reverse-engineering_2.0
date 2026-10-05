@@ -1,0 +1,18 @@
+{
+  "id": "cb7540a61ee1abcce45b6f4f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01Uwk9WA7rzGFeePpjiMYPzy",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && grep -n \"extends FileSystem\" -A30 packages/context/agent-instructions/tests/agent-instructions.spec.ts | head -50",
+          "description": "View a test FileSystem fake"
+        }
+      }
+    ]
+  }
+}

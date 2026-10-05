@@ -1,0 +1,15 @@
+{
+  "id": "184b2656285935eab46eebad",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01KGdvUP5AQ5yHVVkJYMA6fr",
+        "type": "tool_result",
+        "content": "7:import { COVERAGE_EXEMPT_ENV, coverageExemptHeavySuites } from './scripts/coverage-exempt.ts'\n8:import { COVERAGE_PARTITION_MODE_ENV } from './scripts/coverage-partitions.ts'\n14:const uncoveredLocationsReporter = fileURLToPath(new URL('./scripts/coverage-uncovered-locations.cjs', import.meta.url))\n17:// has no include, which vite-tsconfig-paths treats as match-all, so its paths\n115:  'scripts/**/*.spec.ts',\n119:// run beside it uninstrumented (membership contract in scripts/coverage-exempt.ts).\n152:    setupFiles: ['./scripts/test-invariants.ts'],\n154:    include: testIncludes,\n168:          setupFiles: ['./scripts/test-invariants.ts'],\n169:          include: testIncludes,\n183:          setupFiles: ['./scripts/test-invariants.ts'],\n184:          include: processBoundTests,\n197:      include: ['packages/*/*/src/**/*.{ts,tsx}'],\n55\nscripts/fixtures/\nscripts/release/\nscripts/snapshots/\nscripts/types/",
+        "is_error": false
+      }
+    ]
+  }
+}

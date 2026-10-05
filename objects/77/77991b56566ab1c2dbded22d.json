@@ -1,0 +1,27 @@
+{
+  "id": "77991b56566ab1c2dbded22d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "text",
+        "text": "I'll find the Claude Code install on your machine and read what it actually ships, and check Anthropic's official docs alongside it."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01EWnnycNyY3EQoajbXYCYhk",
+        "name": "PowerShell",
+        "input": {
+          "command": "(Get-Command claude -All -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source); \"---npm root\"; npm root -g; \"---local\"; Get-ChildItem \"$env:USERPROFILE\\.local\\bin\",\"$env:LOCALAPPDATA\\claude*\",\"$env:USERPROFILE\\.claude\\local\" -ErrorAction SilentlyContinue | Select-Object FullName,Length",
+          "description": "Locate the Claude Code install"
+        }
+      }
+    ]
+  }
+}

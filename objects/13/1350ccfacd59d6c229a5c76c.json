@@ -1,0 +1,30 @@
+{
+  "id": "1350ccfacd59d6c229a5c76c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSpQUKEAgSGAI4AUIIdGhpbmtpbmcSDB3E0IYd2od0h0Fu4BoMM8qL0AfhhuvKYvvkIjCqToAFf2zcV3u5RipnwspFheoTaxfCPlE4Q2lpUEN5QIWM54qfsIrzy+4x8vptq+IqwgTXBIAkgwrbX1ANEG+1m5eweaTbb77QbX9sLTl5uo6X6E+QDdG1sDwfjMezeXG7q2lfGPVLrdmhhozq82DrrCL3phMeadQW2mYxhlhpMA6XQiZUGDdeyouR0GhUSeoG6gxKvdBrFldBCOI/8v4KIx0ns5WnialQ/6gFekYlBOPFJKFjRB1zkXgpbkvr11T7N9ORfTsIiajr8M1Io/URr//SpoVrNzzlTtxrzfdx/HpS+EFfeHEhybj2xdAH+ho3vWzY6kqxXKRKBk/gp7rbyWC8B9rt2o85h9ct2reCFKI/NJAwr/A6t8rFqAosr+q8/FSrjTK8ZL3wXAu4d02tmiVNNxUvKQSB+NTU1n6YElBPYckghVZvVgkLEPH8xt3Y5TLlSnZJQ1bqoksSyrXzN80Rg3p8VYoGY9nJZaRuLOySppPOrZOUKiwTCoZPIf85DM0KXXkOav7k1LQJrUjtGibByCLCL1WelObjvkIIYuWHOQiQXquvrreoWCG9HxTheS+v1n+esz4k76/ijzDVDSCDN4hGzyoJ6F/lcHW9SPfzIizfMnfnaFrSx/xTWKO1yflvI5cOYpDhKuMq45LX3jWOMQnFhz1j/vyEKWW3qjt7fX9hjsovfDTfR/cUB1qPNh35TMjd3VP8/qlik65NXCeOx8QIa7HZoZVXK7D2MZmI/l8gWJNsAV21wkK+qGDQZINIyQVQrXvEbKd9Blx6URbVtkaRKXE9vOBeT/V8CV1iJdcvEDdNd2s3UA1qtwftBlv9lhgB"
+      },
+      {
+        "type": "thinking",
+        "thinking": "The pressure path runs in an `agent/pre-step` listener returning a `PreStepDecision`, so I'll check what decisions are available to cleanly stop a turn with a user-visible reason for the thrashing guard.\n\n",
+        "signature": "CAQSkQYKEQgSGAI4AUIJbmFycmF0aW9uEgy6PgokUX9vK+3FKAEaDHrEZ1XaxI4wWlF20yIwtwv3MBacQNwKHJrLcpikOtcr8PIYTMoC9x8ISOX2E7gJFFyN6gmigR/T5/OvW6l5Kq0Fl5DL2U51U15jpOxAjxC0ntup/gdNyDqhg7zV+PlJb1oeQT3CU/UuCw2JA9ExvtIFBzLqyhVrW/T3Mf3ywsZEif9e4jl9Ve0+sRFmbGWilNNKd3fAJY9bBEwIENo9Y4i4NqFL+X9gRcrYKpCK+kRXELX3D9AjY1OLFJW38gaCKpWU4yrb28Fzrv05gQHSTenCaABkXmG+21GEkbu1cvZSb6cD8QEpG1PRLvcjVJbQAGkpQV/4LmNbJbicuGZafEnx40O98Mrwg22F53ckGIDRnNx6Seo4Or5+G/kJe97Aooi32L/ZpqVBTCGyqYOebCEmdlZ37rX1Ga3zXC02eL8LjClWEr4KpmKI3tdwtU1sY+b1hYAJ47hYmZsNLGmF80eZTuq2jaW97dqnQtjM/JuaYG6w5YZw4QwQ03gQLDx8CUyc/hp2TU1TP836XkeR7stKKsRCBYud0wk+Jjy04HokgDodzdbvLwVU74hjT4JW3npDt55d29LXnWpxq+pUPOPUnPkRbSsEq5sXB3+ztOzmih6JZwQ4K28kHwykM8mQ6n2pPvpsK9MLXKuvYwB2rzMX4l5fyNDvwzJUyNaKTcq70voenAymY3030lqhztHPRK9QgRAwX1zvq6VtjVpgn0tv4ekmKZpHpmJiJm7MRWu2XslLALU1QqI3SrHgYvprN9yy3nPp1dCd4GswsRhZfexm0tsHlj3ockT6wF7wOyCWfWk+6eGleuSFurBSsYZAgHpxl2WkQPB/z/ALVemXjbTVt1Yyp2gTw2kFcYZI8/ouoFO7HUdxFbaa9oT64MNIgluCZP8KJ3lYEIB8tb0rqWPfGQB4MQeyfUVWTTzpZ9cR3w9AttnCL/hbqYg6YxqnWV0kdFhTZ0UelaoLXD9AQA7Z+sMxnYOrvQh2IWVxzhgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Lo41QD83zygPfzu7yGGBNd",
+        "name": "Grep",
+        "input": {
+          "pattern": "PreStepDecision =|interface PreStepDecision|kind: '(stop|end|abort|continue|proceed)'",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\core\\agent\\src",
+          "output_mode": "content",
+          "-A": 12
+        }
+      }
+    ]
+  }
+}

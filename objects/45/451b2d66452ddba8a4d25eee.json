@@ -1,0 +1,20 @@
+{
+  "id": "451b2d66452ddba8a4d25eee",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01JBZAzumuKU6dtrCw6muWjm",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_015Hbq6QZy748YWgnW2fBPRm",
+        "type": "tool_result",
+        "content": "      Tests  126 passed (126)",
+        "is_error": false
+      }
+    ]
+  }
+}

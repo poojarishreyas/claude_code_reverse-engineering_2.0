@@ -1,0 +1,19 @@
+{
+  "id": "2f1247844d5d8da4c7850470",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_019g2xz3QMVrHGhpukqzgsuV",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\README.md",
+          "offset": 28,
+          "limit": 30
+        }
+      }
+    ]
+  }
+}

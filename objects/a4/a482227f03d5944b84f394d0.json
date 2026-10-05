@@ -1,0 +1,27 @@
+{
+  "id": "a482227f03d5944b84f394d0",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSgwgKEAgSGAI4AUIIdGhpbmtpbmcSDATOrQJhn4KCkmTk8hoMSTP++rTBcXOkdkM0IjB7Ucw2oQw3u4/YnjoFAG10cVKYO5kByIOQQZoZ7eVjglPCGaNbqI/9DTg6WKhGKqEqoAdKl682Kzz3iCgTP4yrdnaWCmvx14xjUhGuCMdyobcNhKQJ5Iz9BNbGut+XkuD3ubi2K63Qvf/Di1N9lgOlQLGKQFKhFxEN2zj5dt/RTFIpkGmxo7KDNO8K8ZpYFyi9pPJMePFb+ib4ekJsvcToSWrzILwLJwp9XMcsdyT1uDaWcXk0255a2s+0E9d5w0K3B2LbY8LDHhLvAEZDFt0GYUQW8x25qhjbxPudLo3hEhNoEoXj3Nw+PXqmc2ARL0X/Nup8ZVjR5mYKfCM0gITY+fONa5QuLI1dOIxl5gWQZ+IRmb/TXYuDDqnkQPjflAcvo7eTTcCYQ95OF5Vz1IR3uyW7ceqf2dBGSrvEIsn2urKjUxLlo+DDreXWhIuxsoiVfSNlh6COhXgQystrrpcEQdFOFYIhahNUQoJy862x4MGhfmaIRsus9j5+a/T18NAVf9OdL4qbeuKvHl4dcDS7/hEy8yG87LQESI7bXRyl91nCnAsdyCSXw5qvAc4fxmNdnuEuxfO3dEUDbHFvdCo2oYxW4aPfwFrFxkbMdfsAaQzDAW3ftSiu/FRnqyXMbJn82iA+sajeTtBZ3i9V7lUaFyU6MEfszHb8iVxnGlWrm+fdRpUepD1bJgfNoLyShhAh/SGKT6Ntu7MQMUM2gVEm4+6Xer83dXiDaZQVbbYREbTySaorX2OBX4l35mzKPnBqW6xso8AOWmvPEVC01FhWNIGBb2S8esmxBaPvtuSQkqQaSGUdMYHa58RW+Dh0+ywUIXs/pjqIUW7b6lkRfmqxnOhQkwQ8l83pQJxIdqyXp874s6l/VWp2+zdd3DYvg6rO3si5Wcb6xaSJalAN+c3qMagtgu0LfrFNqM4M8iehKCENJK48+uG3MqcpAyXUn5yFsKjYoMP54U8drI3rnYvni8Gdpyhc44vvmTyLYWUSkfuewfFqNOPLOdAL4PcAS6ANTdaFIRtUMe0kWodqoXz32O1/G8aeENORm3X2s4bZoK7KPUXmE5B8FgOkEr1eDy0HxM3oqiXmah8YA5h9EdrAKhtHCEqQTSWJIUGs+cZGa+N2SY5mzUFxCSLMpEI7FM636zRSdNTOWYIuplz2vMENi4BPjXMhhzK78/MULw/AjqkqfmuOxW+K1+s6642EgUDgc7zV6NcIc+ARFqCiJh8+3+VAG7ttAKO0mFr3IuWeDR5ZDk9d4pT5D8VUQg6tSgN91N97Fq5LDc8EHOKtM0IqV8L0GAE="
+      },
+      {
+        "type": "text",
+        "text": "I'll read opencode's actual source code rather than rely on memory."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_018nC1VmLtzPb7pbw71doPXu",
+        "name": "ToolSearch",
+        "input": {
+          "query": "select:WebFetch,WebSearch",
+          "max_results": 2
+        }
+      }
+    ]
+  }
+}

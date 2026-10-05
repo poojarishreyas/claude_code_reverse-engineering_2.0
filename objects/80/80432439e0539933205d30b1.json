@@ -1,0 +1,15 @@
+{
+  "id": "80432439e0539933205d30b1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DUuKVKCBKF2QBqk1bmkVCP",
+        "type": "tool_result",
+        "content": "27:    \"typecheck\": \"npm run build:lib:host && npm run typecheck:contracts-ready\",\n28:    \"typecheck:contracts-ready\": \"tsc -b tsconfig.client.json\",\n29:    \"lint\": \"npm run build:lib:host && npm run lint:contracts-ready\",\n34:    \"test\": \"vitest run\",\n35:    \"test:coverage\": \"vitest run --coverage\",\n36:    \"test:coverage:partitioned\": \"tsx scripts/run-coverage-partitions.ts\",\n M packages/compaction/compaction-basic/src/index.ts\n M packages/compaction/compaction-tool-result-pruner/package.json\n M packages/compaction/compaction-tool-result-pruner/src/config.ts\n M packages/compaction/compaction-tool-result-pruner/src/index.ts\n M packages/compaction/compaction-tool-result-pruner/src/types.ts\n M packages/compaction/compaction-tool-result-pruner/tsconfig.json\n M pnpm-lock.yaml",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "f2b4417f361ecf02aaae8d28",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQShQgKEAgSGAI4AUIIdGhpbmtpbmcSDPHsilhTMjiVGK0hNxoMpzpC3aD8fhcNpXnKIjDeifOh+ED71tD+U0D0E8/OCLCEWguXfnNbv8zd7Oj5MQuvArOFMAngZh2si68PcjYqogeN4MpghSYNGCTqerZPMTH2DQR6MXYM5Wv38DDbWD69eQIE2VWV/iDj88/LfvJUvakvuOm8sIXE3erAMUtS52fUzOaZ+b/vbL2TfxQfMaeMO0YMIibZXsKE3FHmQB1aIp2ePG82rPGEAeXLladGV9iNvndQkOE/YlAuB14m2DYF7Bdm0RnF0iXlUv0ST8cKyna4YRq5DVXRAl0SY6YGqEdoUwT+S15+1oYs0tmndvrMPjzcQ3qdd1Si5A0MbVJrxiAUibJ3YnLRX1SbzmZ5DNJqIk4DMqdHNgPuSNHD4UIoDzfnoc0WuQ9LaVM7Z3V1Q5k9oaCEH4Z/jv1zdDctJ+IBl8J1pmFXZThmU3r6KxXFV4w1+FafwHnEqhWwPGjxVZclfqpWSDto+4MzFp5bacWZRP0c8m2kL3mKgxvl7KfcafMWZ09eVwVVHJs1yXclpKlN0tWpuIBB8S80cOWbfpd9QD4UABT5TwoXUmuuY2MoTCpxpEugic+v/ZVVEg2P1dgPqaze1JR2Av0LcqGtP5U3qlxids8MZ82tuS68ONWUhu0sQPs2t8czZJC+W/7A7Dz3+5JeE14hRTVJAGj4xZXv+xvEw32qTxVbYN4+8cN9PTYS3WieOVfXYkpBg5w1wwlEwOBPhlrthCe0tWDmEnfTiAZTl4oJE9DvBt4A1ShrFXKOm+rukcyTV1RVdFeUN+8x1FtvQ4I414E3ctwSRu4H0R+ibgJJhWlpCIcnOp7H+Bpdesfgrjed95gcmgmS2kfiYfsm3VKeITlOg1//Qs4oCVg+Kd0AmjWSyUdTFFaojuXQNEFlOT6T18cS70NuUZGa3yGB6sR3MtAhrzD6cOpenMPEZwv3eK8ey1GHEbUPl89mGAfibqrw0eiIPDSlu4ArDmg4B92qFuWfXkm8xxu9ahHPQ70G7x6qc/GpHHaXj7eIXQdQN/2/iObbkO7x9PHNxEWtEGHZB0G1PPX7ZfI53E6PDFF+BEMdUeeA6OqH47xsO2cHhu3ykacByfhgMAQiaMbHOl1ODdKpoarXPB4gQs5K9YFb9a4+CoZchXS9HY/QbqPI3R8xQZa88rby5Xlbu5V/7Js/7yt5qcmU16kcYoXVES81MOEp2+O7q3WsoSm+EDTpFCBUdasf9Ydb5GYCYOIXv0Y212YdyvBFINPSB8AdJK6iWOPzB0JDP5VrHlRpGXimB65oY6QcoDYL9ihJPXoczcaw91D3S4s+HGIP8rkYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Every loop: the full context goes to the LLM on every model request (every \"step\"), not once per turn.\n\n**Turn vs. step:**\n- **Turn:** one user message and everything the agent does in response.\n- **Step:** one call to the LLM. A single turn usually has many steps:\n\n```\nUser: \"fix the bug\"                     ← turn starts\n  step 1: send context → model calls grep\n  step 2: send context + grep result → model calls read\n  step 3: send context + read result → model calls edit\n  step 4: send context + edit result → model replies \"done\"   ← turn ends\n```\n\nEach step sends **everything again**:\n- the system prompt;\n- the tool list;\n- all messages so far, including the summary if one exists, the user's messages, the model's replies and every tool call and result.\n\n**Why the whole thing is resent:** the model API is stateless and remembers nothing between calls, so each request must carry the full conversation. You can see it in the loop code:\n- `packages/core/agent-loop/src/agent.ts:241-251`: before every step, the system prompt is assembled again and the `agent/pre-step` hook runs.\n- `agent.ts:296`: then that step's request is built from the whole conversation and sent.\n\n**Why this isn't as costly as it sounds:** providers cache the start of a request. When step 2 begins with exactly the same text as step 1, that part is read from cache at a much lower price, and only the new part (the latest tool result) is processed at full price. That's why every compaction change keeps the start of the request unchanged wherever possible.\n\n**How this connects to compaction:** the compaction check runs in that same `agent/pre-step` hook, before every step, not just between turns. So a long turn with many tool calls can compact partway through. It's also why the thrashing guard counts steps rather than turns."
+      }
+    ]
+  }
+}

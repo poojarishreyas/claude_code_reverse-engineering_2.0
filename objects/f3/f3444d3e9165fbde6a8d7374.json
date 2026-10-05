@@ -1,0 +1,13 @@
+{
+  "id": "f3444d3e9165fbde6a8d7374",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "I added the no-tools reminder. The summary instruction now ends with this line:\n\n> REMINDER: Do NOT call any tools. Reply with the checkpoint text only; tool calls are discarded, and a reply without checkpoint text fails.\n\n- **It's true to the code:** the summarizer keeps only text from the reply, and a reply with no text fails with \"summarization produced no text summary content\".\n- **It's the last line** of the instruction, the spot the model pays most attention to, the same placement Claude Code uses.\n- **Nothing else changed:** the system prompt, tool list and conversation are still sent word for word, so the provider cache is still reused.\n\nI also updated the README copy of the instruction and the test that checks it matches. All 142 compaction-basic tests and lint pass.\n\nIt's pushed as branch `compaction-phase6`, tagged `compaction-v6`, stacked on the previous five phases. `main` still isn't merged, and the engine book still fails 4 documentation checks there."
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "0a5d7c8a622e51acd2c1e880",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS3wUKEAgSGAI4AUIIdGhpbmtpbmcSDBf/JYlz9mBCLessDhoM+2c6YAgheRhjp8++IjCGdfsSHPBpDhI+HtEH1tf47QPPykVXHAbxZkY4SCrQhfNBFcsCz9303woRWRVQ9EIq/ASSXq2lsYHpc7Pn1Lza6hjeJMoUe+hg5Gf63IXGrbbAgmpKJjcpMonu+geMyZ17gj8WMjQFaeVhr8pC4tPyj4SLiPUPyTR7TX1Ej0BWCJrruegQCzOor9aWSialXVjkCh5TrOwCGtQBeLW54T83m6OOOd8dyMxWlbwu5dgOeOD/SDIrnunP9H2pr7hQVjQ/xqh2WIsDpm2xKtyRyXlBqRH20cMqWgAuKX3SYLehD5/mZJFBjdR5I0tl4DUar09ONjp8DEEvNth0mp3SibXHv7+CvJjjveORaNbnbtkzorvyCHBGlXbuxi4eHYsR4Eco5DWvS8so5FnsdyknwYZrn05B+kO/eBlvFVSTdd3t/ndGxSfv9yT+HY0L/EnkrKmSFcs53wUZBjgbgsZ8NPa66kb5cWIGJzF8srSc39FPDtsgbkTRij1pTVFjUsgXmCGbycefUech8/FNWgBYtZBQ5AUJfDbf1Oq25lnIUJuxmPFTJHPnNO8RHsdrHs7gYbM7JVrcct5R+W3q9MGtzMauMYBg6xkZe7u39kvfjQEG1pIr+66SLFu6opTDo2/W0cKRe+bMbNSxK7XzFSb2eamkLyLh9hQqUdMf7QIPtb7X1eTUom5PRLku/z+VAATCxd0SBt9lStCAeqZ46Gqc4nD9ljlFNSIx3ZXd3+8pUBQBaV69gC/TrdfXeVaTwsEtMUYcvI999dfyl/T7P096q4YBFqAeRZX19QCBWm3+9l+LpPhRcsFZ3VhO9nYf9/RAxH65p7gsw5bf8kovZPIW0ruWBkCiu0gvtWjYJZFGzWOoe6BC2Fd/oe40aPvp0daWp1SGDFH+Ji7zN4KwN/ZyGEUYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "I'll use the Monitor tool to follow progress without polling blindly."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01HRDtet4Hbob8yGyUoEPb63",
+        "name": "ToolSearch",
+        "input": {
+          "query": "select:Monitor",
+          "max_results": 1
+        }
+      }
+    ]
+  }
+}

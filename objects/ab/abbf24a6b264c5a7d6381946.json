@@ -1,0 +1,15 @@
+{
+  "id": "abbf24a6b264c5a7d6381946",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Exit code 2\n/usr/bin/bash: -c: line 135: syntax error: unexpected end of file",
+        "is_error": true,
+        "tool_use_id": "toolu_018yMPiRgEk8zsT4WjVTfKx2"
+      }
+    ]
+  }
+}

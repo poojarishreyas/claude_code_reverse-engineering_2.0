@@ -1,0 +1,18 @@
+{
+  "id": "8b0a80f258f35313fdf36b1c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSmAcKEAgSGAI4AUIIdGhpbmtpbmcSDF3NJUM6dy8r7So+fRoMARDGtB9J9GKBGvQkIjCOijsN7gdhAs9s2WHE/xumbF0veyFNeVv0Ip7eqT3MtIpmf765rmPYBJSU7bK+Y60qtQZrRCLG99AmdOh9ZWSDRO1rHfGlbpHAQ5bg1SSEKPNav2Pc2+WDR0sDmxQ9RIb0HlVfy+1g+4XHAkOlylYXtgBdqqvWFGcVnbtOZ9cA1EhTNMPbsT1c+r4ac+SD/ZIJac9yxwWMUX01tWqMo7uHivxA5sR+jA7baepbVWQRs0A5+trspLgotfzRMc62sgc8Mlpimkrk1a4QuAJLUsFRBgE4QFQUO0XgmHNBV1rvI4RPKkUtMJOGWZ5GpmR1dGZ5xZ7nnR3G2lLBCEWzKeqNTyMZVtBIA219EGtKkaCAubRPVKfCeIRp8dqwbZGhDdEfS9dgHAEY8guLsLJFpN408brL0P0kvMuqFMwfogUo0w/NezR1tNz/YnFCppoosZNPCT6CyoP5f+o/JJCpC2uMPNcOecLyTlE6x2QSGeGjvqWRJ/yeHB7yjyoVi1OTCNUwkB/r1FD0Odr5bDLvh4malT17gbqEb/NFRhLQxkLvV++zjXSoYPL+syMuyu/4n3gQuihps3iM2kP49DYOQ6qL3n2hnqeU4hlKpINQe/k8tvUqMgJ+gH7JyVFom3B/vaPBqml8NPh7GFd3Nsfx7urga1ZTx28ugoTJzHG6OGVV0HeHTAYVhU0p/HiU38EcWeHFLMxymMX7s90mwRSSWotZyMGAUBibj46jnSex1gSbm/eEYf120yE5o76/aecnM/KD+lMJQqrsB+5iMu44E3ZKXowok7hYk46VN9vY0St0ZXJ6yxvL3XGjv4BHzoeCytwlv3d/Stke3JkCQTaCJ5zOBwTQg9CwyvCwzdP6AtWtQn2eF89THFc/tOPdpckghLFdJdvvQHvsUpZY6zuFkAPkDUX2ij5Ccgqbf8zGhlGB0iAYmeCgy96ioPsJioFjQ6qXoRi3L5DMy2gDl3SHEBsjpHoNPzFARa9587JUWk1tXaKiZ+otgHm/2nPqeE7B69uj3WIPKoirvL8n4qpNBjTVzw7g1OpzYYCIvGsoYun+GsP74wwESSb3x+zwtYqxV48mN1vN5+Z5+mhyCCyqxi3KCKpWJEiZG8hKdCFnT49kaRiHJbH/YNvMhUPN3ndBGUli76nGQSRx9RgB"
+      },
+      {
+        "type": "text",
+        "text": "If you mean the Java demo, save it to a file and run it with Java 17 or newer.\n\n**1. Save the code**\n\nCreate a file named exactly `SessionDemo.java`, since the name must match the class, and paste the code in.\n\n**2. Check that Java is installed** (PowerShell):\n```powershell\njava -version\n```\nYou need version 17 or higher. If it isn't installed, get a JDK such as Temurin from adoptium.net, or run `winget install EclipseAdoptium.Temurin.21.JDK`.\n\n**3. Compile and run** from the folder containing the file:\n```powershell\njavac SessionDemo.java\njava SessionDemo\n```\nOn Java 11 or newer you can also skip the compile step with `java SessionDemo.java`.\n\n**What you'll see:** 5 messages before compaction, 2 after (the summary plus \"also add a test\"), a line showing the log still has all 7 events with `surface = [7, 5]`, and a confirmation that reloading `session.log` rebuilds the same surface. It also writes a `session.log` file you can open to see the saved events.\n\n---\n\nIf you meant **the harness itself**, from the repo root:\n```powershell\npnpm install\npnpm run build\npnpm start\n```\nThen open the URL it prints (`dsh web: http://...`). The compaction changes are on the `compaction-phase6` branch (`git switch compaction-phase6` first); `main` doesn't have them yet."
+      }
+    ]
+  }
+}

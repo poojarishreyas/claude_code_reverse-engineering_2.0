@@ -1,0 +1,15 @@
+{
+  "id": "b9745411a6913f1daffcdb8a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01ShtU8x1bJeP8ddf5saEDip",
+        "type": "tool_result",
+        "content": "microcompact: 10 snippets\nCLAUDE_AUTOCOMPACT_PCT_OVERRIDE: 6 snippets\nOld tool result: 4 snippets\nCompact summary: 2 snippets\ncompact_boundary: 51 snippets\ncontext_management: 33 snippets",
+        "is_error": false
+      }
+    ]
+  }
+}

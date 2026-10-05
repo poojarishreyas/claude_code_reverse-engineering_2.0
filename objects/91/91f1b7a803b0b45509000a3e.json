@@ -1,0 +1,14 @@
+{
+  "id": "91f1b7a803b0b45509000a3e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01JEThsWvf3fe682aASkj4sZ",
+        "type": "tool_result",
+        "content": "Found 2 files\npackages\\compaction\\compaction-basic\\src\\summarizer.ts\npackages\\client\\ui-chat\\src\\client\\chat\\CompactionCommandCard.tsx"
+      }
+    ]
+  }
+}

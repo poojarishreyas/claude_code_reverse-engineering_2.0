@@ -1,0 +1,8 @@
+{
+  "id": "ab5538de7573e8e052b86de2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "are context is sent to llm in every turn or every loop?"
+  }
+}

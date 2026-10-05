@@ -1,0 +1,15 @@
+{
+  "id": "efc90bfb67a2bbbb1845c8c8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RU2G3xKzHPauvHnKH86WNh",
+        "type": "tool_result",
+        "content": "version: 1\nscenario: bash-spill\nprofile: test-base\ncomposition: fs\nrecording: authored\nheader:\n  class: fs",
+        "is_error": false
+      }
+    ]
+  }
+}

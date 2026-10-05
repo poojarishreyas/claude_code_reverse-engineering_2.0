@@ -1,0 +1,15 @@
+{
+  "id": "f158cff20f22d6f43b1ed7c0",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DMZKyodbpbERJUrZYDrudD",
+        "type": "tool_result",
+        "content": "snapshots/session/parallel-tool-calls/cordis.yml:2:# `dsh-base`, so this patch changes only the local tool-result spill\nsnapshots/session/parallel-tool-calls/cordis.yml:5:- id: spill-local\nsnapshots/session/parallel-tool-calls/cordis.yml:6:  name: '@deepseek-ai/dsh-spill-local'\nsnapshots/session/parallel-tool-calls/cordis.yml:8:    root: !!js process.env.DSH_SNAPSHOT_SPILL_ROOT ?? './.spill'\nsnapshots/session/parallel-tool-calls/cordis.yml:10:- id: spill-policy\nsnapshots/session/parallel-tool-calls/cordis.yml:11:  name: '@deepseek-ai/dsh-spill-policy'",
+        "is_error": false
+      }
+    ]
+  }
+}

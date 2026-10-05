@@ -1,0 +1,15 @@
+{
+  "id": "8c1e176081e5b85f358c7f6f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RocePVbe1U5r3VMYQh8MsM",
+        "type": "tool_result",
+        "content": "Cloning into 'C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/opencode'...\nUpdating files:   2% (1/46)\rUpdating files:   4% (2/46)\rUpdating files:   6% (3/46)\rUpdating files:   8% (4/46)\rUpdating files:  10% (5/46)\rUpdating files:  13% (6/46)\rUpdating files:  15% (7/46)\rUpdating files:  17% (8/46)\rUpdating files:  19% (9/46)\rUpdating files:  21% (10/46)\rUpdating files:  23% (11/46)\rUpdating files:  26% (12/46)\rUpdating files:  28% (13/46)\rUpdating files:  30% (14/46)\rUpdating files:  32% (15/46)\rUpdating files:  34% (16/46)\rUpdating files:  36% (17/46)\rUpdating files:  39% (18/46)\rUpdating files:  41% (19/46)\rUpdating files:  43% (20/46)\rUpdating files:  45% (21/46)\rUpdating files:  47% (22/46)\rUpdating files:  50% (23/46)\rUpdating files:  52% (24/46)\rUpdating files:  54% (25/46)\rUpdating files:  56% (26/46)\rUpdating files:  58% (27/46)\rUpdating files:  60% (28/46)\rUpdating files:  63% (29/46)\rUpdating files:  65% (30/46)\rUpdating files:  67% (31/46)\rUpdating files:  69% (32/46)\rUpdating files:  71% (33/46)\rUpdating files:  73% (34/46)\rUpdating files:  76% (35/46)\rUpdating files:  78% (36/46)\rUpdating files:  80% (37/46)\rUpdating files:  82% (38/46)\rUpdating files:  84% (39/46)\rUpdating files:  86% (40/46)\rUpdating files:  89% (41/46)\rUpdating files:  91% (42/46)\rUpdating files:  93% (43/46)\rUpdating files:  95% (44/46)\rUpdating files:  97% (45/46)\rUpdating files: 100% (46/46)\rUpdating files: 100% (46/46), done.\nb471c2b4495747353af768fbf2e0790c9d820ce2 Sat Sep 26 14:56:38 2026 -0500 fix(opencode): catch completed MCP browser launcher failures (#51538)\nhttps://github.com/sst/opencode\npackages/opencode/src/agent:\nagent.ts\ngenerate.txt\nprompt\nsubagent-permissions.ts\n\npackages/opencode/src/session:\ncompaction.ts\ninstruction.ts\nllm\nllm.ts\nmessage-error.ts\nmessage-v2.ts\nmessage.ts\noverflow.ts\nprocessor.ts\nprompt\nprompt.ts\nreminders.ts\nretry.ts\nrevert.ts\nrun-state.ts\nschema.ts\nsession.ts\nstatus.ts\nsummary.ts\nsystem.ts\ntodo.ts\ntools.ts\n\npackages/opencode/src/session/prompt:\nanthropic.txt\nbeast.txt\nbuild-switch.txt\ncodex.txt\ncopilot-gpt-5.txt\ndefault.txt\ngemini.txt\ngpt-astra.txt\ngpt.txt\nkimi.txt\nmeta.txt\nplan-mode.txt\nplan-reminder-anthropic.txt\nplan.txt\ntrinity.txt",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "52abbe0830bd0bbf468c43eb",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01Tgrk1BYw2BuievAenHEsAi",
+        "name": "Bash",
+        "input": {
+          "command": "sed -n '10p' \"C:/Users/shrey/desktop/Elemental_harness/packages/session/session-title-llm/README.md\" | cut -c1-900",
+          "description": "Print the title package summary line"
+        }
+      }
+    ]
+  }
+}

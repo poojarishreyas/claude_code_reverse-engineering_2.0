@@ -1,0 +1,14 @@
+{
+  "id": "bf5e08d6184a16716e63adb6",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UCXnTrLPHaQzJXHxsmcRZA",
+        "type": "tool_result",
+        "content": "1\thost tsc exit=0\n2\t\n3\t[exited with code 0]\n4\t"
+      }
+    ]
+  }
+}

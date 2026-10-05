@@ -1,0 +1,15 @@
+{
+  "id": "3cd70081f20d110db95cfbcc",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0165HqTDSmYxXorbJWTqyPBq",
+        "type": "tool_result",
+        "content": "var FU=50000\n     44 maxResultSizeChars:1e5\n      7 maxResultSizeChars:50000\n      7 maxResultSizeChars:1e4\n      7 maxResultSizeChars:1000\n      4 maxResultSizeChars:1\n      3 maxResultSizeChars:300000\n      2 maxResultSizeChars:200000\n      2 maxResultSizeChars:20000",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "b4eba841c36db073d556d28e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "thinking",
+        "thinking": "Those two failures are expected since the new default safeguards (protecting the newest 5 sessions, requiring 20k tokens) now skip tiny test sessions. I'll disable the safeguards in those tests and add a new test confirming the defaults properly reach the pruner via compaction-basic.\n\n",
+        "signature": "CAQShwcKEQgSGAI4AUIJbmFycmF0aW9uEgyhdET0NykM9yLC2yEaDJH9GWFRas15LSnMYSIweSzMCbP3HlGsppo6elRnengfBuOOT0UNKoYDGKTARURi91oPh/AHcXjqmkD8iYP0KqMGn71q06t85oewkxDqlwIbzF643hS9BldzoNjZj4uzI2N28Y2a9eIEPTnp9TESNdfAfP8Prnol9+Pqp1yV6zqBwsE5TxSjq0KAUc9dZ0kBgzsbx7UtlEWcylFXvBuNF0xqIKtS7BSxp+tLGDA3o/Ri2x3TzFCufaDgMLuySccGR4jlimzbevaBCSi5TUdVGviqs1x8zrKPm8EayqLLCgGFeBLRXQh+39l8g02D12VndpRhxJwSGdkX7+C70qbxHSiUyPm1Mp/IobvfrUoSNnMs9dAyiVkzii0rIdYNzq/fqzF2R7UzyZosdtMiSnSEihS5JvNTLRSKZ6+Y0VTAmU431R8mpFvt0opZFqcPjWBd5jBrexmW+J/NdCfpM+QKzj3VH9mEmK0DOOLiVV7dBsIVylH4zJ1KO1YM9Yg2ejeEnYkY9XkeFGlxKAEFenc5hIebl7EAdrQN19G3sQGVfZLCQLUnRBvXmyV7fzOI/5/Gn9MFAqpecQlgA6k2SWgmxCfGwSarnw5zGJYhFUNTtTg+ztBK4LfH5bj1aLzafvIvl1xVtUs19MnKCFISQ4p48k5ZWmuMJV7DE0nyKk6yo0rXA/FG29ecdEj8BtAuUcQQW6JNJdxmkU+bLkpa9u0VizoW+/Y0IowOY56Pie3Ho7ktfdk9gFH8Bg9kYSxOGgt2X4VNDGJTytJWxJwR/lHH++HW4FRkOlzIHu1nVrB34NSb7cw92qTfdw7cJASzq2HClTUmRGvFzhGQB/p22k+bXkrGWlC4ZLN8ci88Zzss9tAvQY5oEooFtQXOFZY8YUIaF+2YiSAqAWLDr+83kGAlGW/Q0FFM7hqcfl+/whTVMN1ZKeDp9rSrc5bp3kgpPFzb7WkMnUa27jMoIUeQJIo+NlUXpyXDhCrg/TDvJuZeUjseDS6TqS8zUskrvq7iMehEowVGLaLmqF/v3W8+2OY4uGPS6uAt4R38EL2Q/hSsTYyaAa+C4xA3z/dBvWmk0U0xAbTWhgLepENK+Q6JyBlpZ8XANBElXeP92fcRoeZSyeekUAgXZvSABVnon0Z5y74kDGpkYswYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01FvZkAikJLf1iuCw2g1K2RG",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts",
+          "old_string": "describe('optional model-free tool-result pruning', () => {\n  const pruneConfig = { thresholdChars: 100, headChars: 20, tailChars: 10 }",
+          "new_string": "describe('optional model-free tool-result pruning', () => {\n  // Pressure safeguards off: these cases exercise the prune-then-remeasure flow on tiny sessions.\n  const pruneConfig = { thresholdChars: 100, headChars: 20, tailChars: 10, protectRecentResults: 0, minTokensSaved: 0 }\n\n  it('passes the pressure trigger so default safeguards keep recent output out of pruning', async () => {\n    const ctx = createContext(2_000)\n    void new ToolResultPruner(ctx, { thresholdChars: 100, headChars: 20, tailChars: 10 })\n    const compact = new TestCompactionEngine(ctx, {\n      auto: false,\n      thresholdRatio: 0.5,\n      retainTokens: 50,\n    })\n    const session = toolConversation()\n\n    expect(await compactIfNeeded(compact, session)).not.toBeNull()\n    expect(session.events.some(event => event.type === 'compaction/prune')).toBe(false)\n    expect(summarizedText(compact.calls[0]!.input)).not.toContain('tool result middle pruned')\n  })"
+        }
+      }
+    ]
+  }
+}

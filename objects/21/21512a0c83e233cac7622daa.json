@@ -1,0 +1,14 @@
+{
+  "id": "21512a0c83e233cac7622daa",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CaXoVSDbuduRj9GTqExvqV",
+        "type": "tool_result",
+        "content": "1:// Only a structured checkpoint uses the compaction marker; all other outcomes\n2-// retain the command's complete settlement text.\n3-\n4-import type { ChatViewSlotProps, CommandRowOwnerProps } from '../contract/slots.ts'"
+      }
+    ]
+  }
+}

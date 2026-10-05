@@ -1,0 +1,39 @@
+{
+  "id": "614f1d580cc00b4bcf390228",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "thinking",
+        "thinking": "I'll review the test setups since a 20k-token minimum and recent-result protection would prevent most compaction-basic tests, which use tiny tool outputs, from pruning as intended.\n\n",
+        "signature": "CAQSjAYKEQgSGAI4AUIJbmFycmF0aW9uEgwfy9lBb8hqEfS17OMaDJcKLaex0BIjsq0XLCIwNEF4evvEmr9dp7st2GYG6vBcEsSP3yRQPY0/IUNXVCIJCNLFgKnmxjw8Au8IZVCeKqgFnOKfVG64gLrABLSUIERQciVtfH/BklgEuLlIE3gH5guX2S/eNBh8lsOLHwX8vh03MxTxMFzimOUUNe58z0l4ZeQrSycao386jDexFm22wVzGmU9Eo7RQpULPmuJbQAsTGBWnL+m6TxGo9IegyutPtat2vqHyS5l+ByPwsie/3vO+6uCNSoyfiYMCvolucq3TEMl5FBYYPA8BhQp5MkkvPJHCJdU9PILLOJh2AtYd3zuAu7T8xJmvU7uTYjI22DSs4exRiNsEJlVC15elUE2P0igQTF0TOUBssjgPQUMlftdkpq37TFhwJ830OZ0eK1P4x2BhCuxJAsB7V3QoNbBUsJT8h5H4unuG8a+OBnmh/m4Zlc4HkBHD3H5zJCZaAWyOsE0MJ/3PsDsJrp38BQK7k/dc5ku3jPVjDEGzQ27P0+tp8caNZLJvW8U3BsrJQnFdx6n5nvURa606h6eEYayAayqn+Pqfiqju5ECdFUSRKrgP0d6n0BbcjchmzTJ+RmN4+33Hbk51SiBy4T/EcXq5nBKFVdhEtt0DP9wsACiLDyqjWXGJ+WKFoF3rfM4v6f+yVfMU1GiigSCs7llaEonK5Twq/N/aYJH3I7zilLyEE4aKERU1orPa+dK98kLMufXWwx9DTNYVdZESrTlghi3Gm6wzu7xmditRT35YkyK6t5h82sGp0zm7zw091Svj+4L4Bm1dCIOLg2fqhnpAEAxMDqU1sb4Vkv7Z3JKW1FlLaEYldpusHIN6ThjWvUAEpD5Whwy+S/k36vocwtWYPN1h6eHn+1sqM6DIKTTlfSkThKCWw511e47XJfYYnjaNlLoYqIZRXlf/QT1mjrplct/QOpL3k03kRDlOj5diPpAXFWES3Ut2yLic+P+6fnVn9WAt08PRxSDGaEYYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01E1Z8GNkyZJw7neyw5hw5PC",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts",
+          "offset": 760,
+          "limit": 75
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01PDsJZBd5VoM7HBgAQtPnUH",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts",
+          "offset": 1575,
+          "limit": 95
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ae8d729477f5480fc70247ea",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01LDLg6wVRBYaQScj43hh9xA",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && git branch --show-current; grep -n \"Primary Request\\|compaction engine\\|COMPACTION_INSTRUCTION\\|Critical Context\\|PRIOR checkpoint\" packages/compaction/compaction-basic/tests/compaction-basic.spec.ts packages/compaction/compaction-basic/README.md | head -20",
+          "description": "See how tests and README pin the prompt"
+        }
+      }
+    ]
+  }
+}

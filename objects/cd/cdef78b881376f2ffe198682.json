@@ -1,0 +1,18 @@
+{
+  "id": "cdef78b881376f2ffe198682",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSrQYKEAgSGAI4AUIIdGhpbmtpbmcSDPBwCjAFiH7mZ0GWFhoMinwpBeeV2TgsQRQRIjDhdeEuNghErcNPHsQaDSJWuNJSTks5C3yjqUrs/simm7IkrUhE4iU0o62tyW6JqTAqygUUs0C+iGxhMhgza+WBtot2r4pxyqVwLiAw4fCqRB9d7uXMTsmgT1NRSc228gtg4BuLH9Dc+aeAjyvp4QDD24nQonpb78OfeQYcANVesjTx+Su0K/W8B0sjYqba1MkRLK0A0O1b9VfTt3sVhnTgzwEARgkJnUGPOL0fmm/HcyzD9r2DwYmdzTRnoEb4WAqwJy2w4ZupqYnGP9HpfXDQj0fiN7+TAvlvrnxOZphEVv416BuPQoGWtGymTvVwoDOqgdw4yGqE2Vx6ixPqq3Ag2+guCWTvC2iKWeblI/uD2FpY2nU9+vvGBIVncL7w/PbOy5KweRPZPZwnJD8aFjHWJDR/QDNs/rTDjGOE1AKn5kp+mbJyoH2RsNNo3Ipt3jhChdgOmWVdqty3QvkcAfdkjRw8dJuHsAeKrBIT2Gb0EHyx6mG8WPdWtKONSPut6xsPnuscpC+eTBPiVFVD/kArOc9VYbimnfXoqifC6NDlYVnw+QXCdUnPeiXK2c/ipaXeTdsEW1KyYoC9bpaCo2jbMPOB+P52FkiORfaYICdVakzgWcEyuq7KrOmrujqn2sOWjCdMRiicS9sfQ0vd+OX/AUX9Ax36iz0R5QcAqZOd6Be2o87HAz0Afz2chqhIbg6443q6ejhPxlPbr5O7iL7TSL4Y/vEYPjfTxH80gZ26vN85pdSYKc8OJvpM2VH8hwWu3s7fmxbz2So6M5YQ4UfwtzOaEmxhIpo5fjwqX4+gFvBIuM0PZERboX8qT64dcrokX1L5g0v+AAb09Kf15I9AFI7HZFv1gK+HESoz59MMAdTNMCXJrkRf42COfP9UOQlvHcePddzx8ebORzEBLoQAUQMxsuj6hPFJcpocBiHSRyIvE8DndoGPPZQltFObAPFEcNjyCYgz63dfTzTrwPChUdoLMCC9YVNo0sV7xRjcNgwKxjI/N9OsK0ZqwTEYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Step 0 is built and pushed on branch `eval-step0` (commit `5141db0`), but the evaluation hasn't produced any agent numbers yet. It needs a model API key, and no key is set on this machine.\n\n**What it does:** `pnpm run eval:file-finding -- --repo <path>` takes past bug fixes from a repo's history and turns each into a test for the agent:\n- Undo the fix in a scratch copy of the repo, keeping the fix's tests.\n- Confirm those tests now fail. If they still pass, the task is dropped.\n- Give the agent only the failing test output, not the fix's file names or commit message.\n- Run the agent headless through the same base profile the product uses.\n- Re-run the tests.\n- Record per task: tests pass, right file edited, the step it first saw and first read the right file, steps, tokens, extra files edited.\n- Write `summary.md` and `summary.json`.\n\n**Checked so far:**\n- **Tests:** the 9 tests pass (metrics and mining, including a real temporary git repo). Lint and the typecheck pass.\n- **Task source:** this repo has only 17 commits, so there's nothing to mine here. Pointed at a copy of upstream `deepseek-ai/deepseek-harness`, it finds 1,751 candidate tasks.\n- **Dry run on real upstream tasks:**\n  - `3825706a15` was correctly dropped, because its 42 tests pass even without the fix.\n  - `3c17f569da` is valid: its tests fail with the fix removed.\n\n**Two things to know before a full run:**\n- **It needs an API key.** Set `DEEPSEEK_API_KEY`, or pick a model with `DSH_EVAL_PROVIDER`/`DSH_EVAL_MODEL`.\n- **It's memory-hungry.** Every task installs the whole upstream project's dependencies. Claude Code stopped my three-task dry run because the machine ran low on memory, and I haven't restarted it. Start with `--limit 2` or `3`.\n\n**Not verified:** a real agent run, since there's no key. The dry run shows preparing, installing and validating tasks works, but the step that launches the agent hasn't run yet.\n\nTo get the baseline numbers, add the key and run:\n```\npnpm run eval:file-finding -- --repo <upstream clone> --limit 3\n```\n\nThen share `eval-results/summary.md`. The numbers will show whether finding files is a real weakness, and so whether the graph or symbol tools are worth building."
+      }
+    ]
+  }
+}

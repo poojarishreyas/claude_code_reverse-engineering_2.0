@@ -1,0 +1,8 @@
+{
+  "id": "0816f748472045b6e2df8f01",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": " A history_read/search tool over the event log, so the model can recall exact events without the transcript-file chain. This matches the recallable-compaction proposal already in the repo. do we need it to use?"
+  }
+}

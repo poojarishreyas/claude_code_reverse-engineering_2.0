@@ -1,0 +1,20 @@
+{
+  "id": "bcf12199c5cc426356684024",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01WD5jqUh8UnGKhces7nBcTs",
+        "name": "Grep",
+        "input": {
+          "pattern": "compactCheckpointSource",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction\\src",
+          "output_mode": "content",
+          "-A": 14
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "dbe6b1ad733bb64df147c96e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PeF38Heatig1R6Qxraicoz",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\README.md has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01DfgKzTBxJMiTNhxUbEFRft",
+        "type": "tool_result",
+        "content": "This section explains the design decisions behind the policy; the observable behavior is fully covered in [Use this package](#use-this-package).\n\n### Design philosophy\n\nThe policy is deliberately narrow: it only decides **when** to spill and composes the notice. It registers no service, owns no storage, and owns no preview mechanics — `TextRetainer` from `dsh-output-retention` builds the head/tail preview. Two invariants shape the code: the model-facing replacement never exceeds `maxInlineBytes` (the notice's byte cost is reserved out of the budget first), and a spill failure never changes the tool call's outcome.\n\n### The two arms\n\nA `tools/post-execute` waterfall listener (registered with `prepend`, delegating via `next()`) bounds the model-facing result; a `tools/ptc-dispatch-log` listener bounds the durable log copy of each `run_code` sub-call. Both share one replacement helper so the two projections are byte-identical. The post-execute arm skips `read` to avoid a read → spill → read loop; the dispatch-log arm bounds `read` sub-calls because a log copy is not model context.\n\n### Source map\n\n| File | Role |\n|---|---|\n| [`src/index.ts`](src/index.ts) | Plugin entry: `Config` validation, the two waterfall listeners, the shared replacement helper |\n| [`src/types.ts`](src/types.ts) | `SpillPolicyExec`: the minimal structural view of a tool execution the policy reads for the owning session id |\n| [`src/invariant.ts`](src/invariant.ts) | Invariant companion (no runtime invariant; contracts are enforced at the seam) |\n\n### Failure modes\n\n<a id=\"model-experience\"></a>\n## Model Experience\n\n### Oversized plain-text result\n\n#### What the model sees\n\nResults at or below `maxInlineBytes`, nested results, `read` results, blocked decisions, and results containing non-text blocks are unchanged. An oversized plain-text model-facing result becomes a bounded head/tail preview followed by `(Omitted <bytes> bytes. Full formatted result stored at: <locator>. <retrievalHint>)`; a storage or ownership failure leaves the original result visible.\n\n#### Token effect\n\nA successful replacement is at most `maxInlineBytes` UTF-8 bytes and remains in history until compaction; the full spill text is not resent to the model.\n\n#### KV Cache effect\n\nAppend-only; newly visible content follows the reusable request prefix and does not invalidate existing KV-cache entries.\n<details>\n<summary>Working context for maintainers — click to expand</summary>\n\nThis Dev Note is working context for maintainers: open directions. It is explicitly non-authoritative.\n\n#### Future: per-tool configuration\n\nPer-tool opt-out or per-tool policy declarations remain deferred; the built-in `read` skip covers the known loop, and a second real tool need would justify configuration.\n\n#### Future: earlier spill\n\nThe policy only sees final formatted text, so content already capped by a provider or held only as runtime artifacts (for example bash streams or subagent rollouts) stays out of reach; tool-owned early spill through `ctx.spillStore` is deferred.\n\n</details>",
+        "is_error": false
+      }
+    ]
+  }
+}

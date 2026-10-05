@@ -1,0 +1,18 @@
+{
+  "id": "41e1bf1e8df05fd5d9ed755c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01XBpd8NtYnrD1j8CHaMbHNH",
+        "name": "Write",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\tsconfig.json",
+          "content": "{\n  \"extends\": \"../../../tsconfig.base.json\",\n  \"compilerOptions\": {\n    \"rootDir\": \"src\",\n    \"outDir\": \"lib/types\"\n  },\n  \"include\": [\"src\"],\n  \"references\": [\n    { \"path\": \"../../../vendor/cosmokit\" },\n    { \"path\": \"../../../vendor/cordis\" },\n    { \"path\": \"../../../vendor/schemastery\" },\n    { \"path\": \"../../llm/llm\" },\n    { \"path\": \"../../llm/token-meter\" },\n    { \"path\": \"../../core/session\" },\n    { \"path\": \"../compaction\" },\n    { \"path\": \"../../spill/spill\" },\n    { \"path\": \"../../runtime-diagnostics/invariants\" }\n  ]\n}\n"
+        }
+      }
+    ]
+  }
+}

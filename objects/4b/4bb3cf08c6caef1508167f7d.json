@@ -1,0 +1,15 @@
+{
+  "id": "4bb3cf08c6caef1508167f7d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_015TPv9E8uK1vbbq72Ep7UQu",
+        "type": "tool_result",
+        "content": "11:    \"apps/web/tests/scaffold.ts\",\n12:    \"apps/web/tests/default-model.e2e.ts\",\n13:    \"apps/web/tests/github-ready-review.e2e.ts\",\n14:    \"apps/web/tests/streaming-fence-highlight.e2e.ts\",\n15:    \"apps/web/tests/declared-reasoning.e2e.ts\",\n{\n  // Host aggregate (one of the two check units; see tsconfig.json). packages/client\n  // type-checks in tsconfig.client.json: the two sides merge cordis Context under\n  // the same keys, one program cannot see both.\n  \"extends\": \"./tsconfig.base.json\",\n  \"compilerOptions\": {\n    \"noEmit\": true,\n    \"rewriteRelativeImportExtensions\": false\n  },\n  \"include\": [\n    \"apps/web/tests/scaffold.ts\",\n    \"apps/web/tests/default-model.e2e.ts\",\n    \"apps/web/tests/github-ready-review.e2e.ts\",\n    \"apps/web/tests/streaming-fence-highlight.e2e.ts\",\n    \"apps/web/tests/declared-reasoning.e2e.ts\",\n    \"apps/web/tests/support.ts\",\n    \"apps/web/tests/scaffold-hermetic.e2e.ts\",\n    \"apps/web/tests/startup-rpc-budget.e2e.ts\",\n    \"apps/web/tests/minimal-preset.snapshot.ts\",\n    \"apps/web/tests/message-feedback-protocol.snapshot.ts\",\n    \"apps/web/tests/live-interactions.e2e.ts\",\n    \"apps/web/tests/question-composer.e2e.ts\",\n    \"apps/web/tests/approval-composer.e2e.ts\",\n    \"apps/web/tests/plan-control-row.e2e.ts\",\n    \"apps/web/tests/plan-review.e2e.ts\",\n    \"apps/web/tests/steering.e2e.ts\",\n    \"apps/web/tests/navigation-panes.e2e.ts\",\n    \"apps/web/tests/chat-scroll-fixture.ts\",\n    \"apps/web/tests/trajectory-virtualization.e2e.ts\",\n    \"apps/web/tests/lifecycle-chrome.e2e.ts\",",
+        "is_error": false
+      }
+    ]
+  }
+}

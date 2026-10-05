@@ -1,0 +1,14 @@
+{
+  "id": "e77c8d104dfe3b75fdd101ba",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019VzMVfxPzdhnaeMcgM63R8",
+        "type": "tool_result",
+        "content": "50\t  readonly requestId?: ProviderRequestId\n51\t}\n52\t\n53\t/** Plain text visible to the end user. */\n54\texport interface TextBlock {\n55\t  type: 'text'\n56\t  text: string\n57\t}\n58\t\n59\t/** Reasoning / thinking content, distinct from visible text. */\n60\texport interface ReasoningBlock {\n61\t  type: 'reasoning'\n62\t  text: string\n63\t}\n64\t\n65\t/**\n66\t * A durable raster image reference, valid in user or assistant content. The\n67\t * block is deliberately role-neutral; assistant-side rendering is forward\n68\t * compatibility — the current production adapters declare text-only output,\n69\t * so only user messages may carry images.\n70\t */\n71\texport interface ImageBlock {\n72\t  type: 'image'\n73\t  /** Immutable bytes and intrinsic display metadata owned by the attachment service. */\n74\t  attachment: ImageAttachmentRef\n75\t}\n76\t\n77\t/** A tool invocation requested by the model. */\n78\texport interface ToolCallBlock {\n79\t  type: 'tool-call'\n80\t  /** Provider-issued call id; correlates with the matching tool result. */\n81\t  id: ToolCallId\n82\t  name: string\n83\t  /** Raw JSON string as produced by the model. */\n84\t  arguments: string\n85\t}\n86\t\n87\t/** The result of a tool invocation, sent back to the model. */\n88\texport interface ToolResultBlock {\n89\t  type: 'tool-result'\n90\t  toolCallId: ToolCallId\n91\t  content: ContentBlock[]\n92\t  isError?: boolean\n93\t}\n94\t\n95\t/**\n96\t * Merge-extensible content blocks keyed by `type`. New core blocks must land\n97\t * with adapter, UI, and compaction support.\n98\t */\n99\texport interface ContentBlockMap {\n100\t  'text': TextBlock\n101\t  'reasoning': ReasoningBlock\n102\t  'image': ImageBlock\n103\t  'tool-call': ToolCallBlock\n104\t  'tool-result': ToolResultBlock\n105\t}\n106\t\n107\t/** The block `type` tag vocabulary; widens as plugins add entries to {@link ContentBlockMap}. */\n108\texport type ContentBlockType = keyof ContentBlockMap\n109\t/** Any known content block, derived from {@link ContentBlockMap}; switch on `type` and fall through unknowns (merge-extensible). */\n110\texport type ContentBlock = ContentBlockMap[ContentBlockType]\n111\t"
+      }
+    ]
+  }
+}

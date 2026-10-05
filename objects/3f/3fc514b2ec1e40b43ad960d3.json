@@ -1,0 +1,82 @@
+{
+  "id": "3fc514b2ec1e40b43ad960d3",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Now updating the README: the settings table, a user-facing section on recovery context, the implementation notes, and what the model sees."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01WxPSr1kkLjG4tC4L5c5BMX",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md",
+          "old_string": "| `auto` | `true` | Enable automatic condensation and overflow recovery; set `false` for manual-only operation. |\n",
+          "new_string": "| `auto` | `true` | Enable automatic condensation and overflow recovery; set `false` for manual-only operation. |\n| `restoreFileCount` | `5` | Most recently read files re-attached after a checkpoint when `ctx.fs` is mounted; `0` disables. |\n| `restoreFileTokens` | `5000` | Estimated-token cap for one re-attached file; longer content is cut at a line boundary. |\n| `restoreTotalTokens` | `50000` | Estimated-token cap for all re-attached files together. |\n"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01DjuN2Yt1chpvyZwNUz4PEc",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md",
+          "old_string": "### On-demand condensation with /compact",
+          "new_string": "### Recovering what the summary left out\n\nTwo optional services add recovery context after the summary in the checkpoint message:\n\n- **Stored transcript** — with a `ctx.spillStore` backend such as `dsh-spill-local`, the condensed span is saved as a plain-text transcript, and the checkpoint names the file with the backend's retrieval guidance. The model can read or search it for exact details the summary dropped.\n- **Re-attached files** — with a `ctx.fs` backend, the most recently read files from the condensed span (by the `read` tool, directly or inside `run_code`) are re-read from disk and attached with their current content. A file read again later in the retained conversation is skipped, since it is still in context; an unreadable or deleted file is skipped too.\n\nBoth are best-effort and bounded: the checkpoint must still cost fewer tokens than the span it replaces, so pieces that would break that are left out, transcript first in priority. The same defaults as Claude Code's post-compaction restore apply to files: 5 files, 5,000 tokens each, 50,000 in total.\n\n### On-demand condensation with /compact"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_0144irKAkZpoAtJ4TyZ4EsP6",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md",
+          "old_string": "The transaction validates the surface span and the durable lock, appends `compaction/start`, summarizes through the hook, revalidates stability",
+          "new_string": "The transaction validates the surface span and the durable lock, appends `compaction/start`, summarizes through the hook, rejects a bare framed summary that does not shrink its source, appends recovery context within the remaining token budget, revalidates stability"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01VfcoXtnHmagW3khZsDoKf4",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md",
+          "old_string": "(whole-surface for automatic calls, selected-span for manual calls), rejects a summary that does not shrink its source, appends",
+          "new_string": "(whole-surface for automatic calls, selected-span for manual calls), appends"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01FsAY8JRpYVw8fvQUzvPoYR",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md",
+          "old_string": "| [`src/summarizer.ts`](src/summarizer.ts) | Default `ctx.llm.stream()` summarization, checkpoint framing, safe-summary projection |",
+          "new_string": "| [`src/summarizer.ts`](src/summarizer.ts) | Default `ctx.llm.stream()` summarization, checkpoint framing, safe-summary projection |\n| [`src/continuation.ts`](src/continuation.ts) | Checkpoint recovery context: stored transcript, recently read files, budget pricing |"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_014d8PvyGJwgCuZRcmxigggR",
+        "name": "Edit",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\README.md",
+          "old_string": "If summarization remains necessary, the next request receives the checkpoint preamble below, a blank line, `<compacted-summary>`, the data-dependent summary, and `</compacted-summary>`.",
+          "new_string": "If summarization remains necessary, the next request receives the checkpoint preamble below, a blank line, `<compacted-summary>`, the data-dependent summary, and `</compacted-summary>`. When the recovery services are mounted and the budget allows, the same message then carries `The full text of the conversation this checkpoint condenses is stored at: <locator>. <retrieval guidance> Read it when you need exact details from before this checkpoint.` and a block headed `Files read before this checkpoint, re-read from disk now (current content; it may differ from what was read earlier):` followed by one `<file path=\"…\">` element per re-attached file."
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Gq3RkjpWbdmF8f91YeEcbH",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && grep -n \"rejects a summary\\|shrink\" packages/compaction/compaction-basic/README.md | head; sed -n '/^#### Token effect/,/^#### KV/p' packages/compaction/compaction-basic/README.md | head -6",
+          "description": "Verify README edits read coherently"
+        }
+      }
+    ]
+  }
+}

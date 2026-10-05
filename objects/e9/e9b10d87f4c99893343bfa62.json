@@ -1,0 +1,14 @@
+{
+  "id": "e9b10d87f4c99893343bfa62",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01P7ciK574siBLWwNTBCQm36",
+        "type": "tool_result",
+        "content": "packages\\core\\tools\\src\\presentation.ts:99:  cwd?: string\npackages\\core\\tools\\src\\presentation.ts-100-}\npackages\\core\\tools\\src\\presentation.ts-101-\npackages\\core\\tools\\src\\presentation.ts-102-/**\n--\npackages\\core\\agent\\src\\index.ts:86:    readonly cwd?: string\npackages\\core\\agent\\src\\index.ts-87-    readonly parentSession?: SessionId\npackages\\core\\agent\\src\\index.ts-88-    readonly seedLength?: number\npackages\\core\\agent\\src\\index.ts-89-    readonly origin?: 'subagent'\n--\npackages\\core\\agent-loop\\src\\index.ts:324:    cwd?: string\npackages\\core\\agent-loop\\src\\index.ts-325-    /** Persisted session to resume instead of creating a fresh session. */\npackages\\core\\agent-loop\\src\\index.ts-326-    resumeSessionId?: SessionId\npackages\\core\\agent-loop\\src\\index.ts-327-  })[]\n--\npackages\\core\\session\\src\\types.ts:68:  readonly cwd?: string\npackages\\core\\session\\src\\types.ts-69-  /** The session this one was forked from (seed lineage), if any. */\npackages\\core\\session\\src\\types.ts-70-  readonly parentSession?: SessionId\npackages\\core\\session\\src\\types.ts-71-  /**\n--\npackages\\core\\session\\src\\types.ts:109:    readonly cwd?: string\npackages\\core\\session\\src\\types.ts-110-    readonly parentSession?: SessionId\npackages\\core\\session\\src\\types.ts-111-    readonly createdAt?: number\npackages\\core\\session\\src\\types.ts-112-    readonly seedLength?: number"
+      }
+    ]
+  }
+}

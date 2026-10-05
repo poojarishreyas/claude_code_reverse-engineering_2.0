@@ -1,0 +1,21 @@
+{
+  "id": "6b7ad36e6ce84d691bb152bb",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01KoQEjHyeXa6YckvxmDHBkm",
+        "name": "Grep",
+        "input": {
+          "pattern": "code-dispatch'|'tool/call':|ToolCallEventData|interface .*CodeDispatch",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages",
+          "glob": "**/src/**/*.ts",
+          "output_mode": "content",
+          "head_limit": 15
+        }
+      }
+    ]
+  }
+}

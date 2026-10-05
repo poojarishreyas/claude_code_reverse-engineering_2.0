@@ -1,0 +1,42 @@
+{
+  "id": "ab6da652356a0dff8e9f39ac",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS/gUKEAgSGAI4AUIIdGhpbmtpbmcSDK7wmbkKTFpduJGYXRoMyiRYP8okwvFIIMz3IjAQomVtnUC86/Q73PcVDnPbcnvplSYVXT80VGTVDd3/sAWNflcfPKWrdLKKDFBUSSEqmwW+GgNw8tx9IU+/pzF2Wrw9RmuUekRY2Ndsq6ewVLAZ6FXcwuMIu3XJQqv0m/Uew38MjFWGLWNoLdNweRTS+Y0qsw79+mzkNlK4ow/UyrpGXleRJtLnZ1f9yXImDUAOWxqAK6wK0/plZkBTR5ZKS0Vg00TFS6EwRR+49o1waXg8g9YtSND8qxl+Ie+GYfb8Sg+NdfrxYiY81sR/5BhRsrKlsJxAq73QFNhbO7oiNr1jLBhUZpiAFB0bOuPIC4+NZ3sWJK0rmVed0AB/nJMGvLZlHYWXjkdaHluTvYwWYSCmp70WYx9675DES0L//8OTBBCe2CUSDpYQd2WLT0Q4fMdJG77SG8P5er66ZJk9eEX6WiB5l9TuCTDUQWmql7xjt9+Gb5oFYphG4k4+KbnOfPYM1SZYEtwiD9Nq5k0GEZnRqxQDlDddZcgtNb/yihPKQKkPPnMJTAuA9LXiw0i+PnfOKMJLRyXw9uuo3SVawlhYTeaEHz0hv7BpQumJbq9NfCkKoIn3B4gk1vaD8ZZsA3jqn6axZC296TTAyGRc+5irxfEBsYW2SQgV6jR4JjVgDaBtU+3I1c7z3ZdGSi0PkKcoj0LeXppbfYGx+TEwT6IWQqxffr/kbwBCiQDcsWMOQvfoLkO6Tprd94JFWQtMhPqFLMmT/GQNKWvouYGMxQe9adt8+XZdbDhWYi+tOx0Z8Y4iYg0ctMhX/PzcuVbvsVqzo4ElGKNVTQRAc59Kcxsx0TkKjYcFvMu2uFfMROSAy+5ErIdRcQXaPGFGw6mp63wIUcaYlB/blf+LjCZuf5I0xiGWIcpAPgUmwdJ3Le4GfVMupdqxfmuuENHC+5EFYzmiMUalF41Mih9Fhgh1R7kO0JtxtjD5YXsAuep+GAE="
+      },
+      {
+        "type": "text",
+        "text": "The broad search is noisy; I'll look at the workspace, context, and search packages directly."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Ngjj9NyLapZ4PPtEZgsF1k",
+        "name": "Glob",
+        "input": {
+          "pattern": "packages/{context,workspace,fs,core}/*/README.md"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01F62uwJjFj8RPeRtE5NqQ7B",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\workspace\\workspace\\README.md"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01XjVRTuWocuajEnVgwfxbBr",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\apps\\server\\tests\\lazy-search-startup.compat.spec.ts"
+        }
+      }
+    ]
+  }
+}

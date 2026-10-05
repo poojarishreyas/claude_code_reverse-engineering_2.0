@@ -1,0 +1,15 @@
+{
+  "id": "8f19f1d38696a916a40b1aa4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01JmYH6mH6vvECivmZ8GvzDE",
+        "type": "tool_result",
+        "content": "packages/bundle/base/cordis.patch.yml:107:    - id: llm-pi-ai\n91:      name: '@deepseek-ai/dsh-settings-file'\nlint=0\ntsc-done",
+        "is_error": false
+      }
+    ]
+  }
+}

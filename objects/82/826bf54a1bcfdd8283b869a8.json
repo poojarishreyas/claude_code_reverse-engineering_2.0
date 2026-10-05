@@ -1,0 +1,25 @@
+{
+  "id": "826bf54a1bcfdd8283b869a8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_0185XzCCn9jdhkYZxmYf9Hia",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\spill\\spill-policy\\src\\index.ts"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_019kYsrziYNakrHrMtD8j7sW",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\tests\\tool-result-pruner.spec.ts"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "a3f979b90b15d0415e62e0fe",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DYMhbswBdHhUsEvvmGtXVC",
+        "type": "tool_result",
+        "content": "class TruncationConfig(BaseModel):\n    \"\"\"Controls output size at render time.\n\n    See module docstring for the layering. The sub-configs (``capture``,\n    ``media_capture``, ``event_format``, ``prefill_format``,\n    ``context_block_format``) cover the distinct mechanisms / rendering\n    moments; the top-level fields are cross-cutting (token budgets).\n    \"\"\"\n\n    model_config = ConfigDict(frozen=True)\n\n    max_context_tokens: Annotated[int | None, Field(description=\"Total context token budget\")] = (\n        None\n    )\n    max_event_tokens: Annotated[\n        int | None,\n        Field(\n            description=(\n                \"Reserved for compatibility; not currently enforced because events \"\n                \"are not evicted separately. Use max_context_tokens for an enforced budget.\"\n            )\n        ),\n    ] = None\n    min_preserved_events: Annotated[\n        int,\n        Field(\n            description=(\n                \"Reserved for compatibility; not currently enforced because events \"\n                \"are not evicted separately. Use max_context_tokens for an enforced budget.\"\n            )\n        ),\n    ] = 5\n    # Output-token planning reserve, used only when UnifiedLLM cannot resolve\n    # a reply cap from client defaults, reasoning settings or call overrides.\n    # The reserve shrinks the usable window for the default\n    # context-block budget (``(context_window - reserve) // 2``), for the\n    # ``ctx N%`` utilization / nearly-full warning, and for post-error archive\n    # sizing. Set to 0 to disable both the reserve and the auto-derived\n    # default budget.",
+        "is_error": false
+      }
+    ]
+  }
+}

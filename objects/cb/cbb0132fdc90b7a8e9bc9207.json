@@ -1,0 +1,28 @@
+{
+  "id": "cbb0132fdc90b7a8e9bc9207",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSuAUKEAgSGAI4AUIIdGhpbmtpbmcSDF5+QMLtzmm3RBgabxoMZBP2MTgjg0a0PqahIjDnmK9s8x0/2qfd+E3cYAFQu8licSm4RbtvIVnvUqs52lffuLAbPsczSusfv2Znh/cq1QQs22Ltqrq+SU/14GBmiYpXux26q/DtVisth+LHjVFU2EpH8jffCvoG+bOH/HOBZSXzfEBGnx2kvDw0/ghtYbblo/pyxB0NIKFQ2whEgys/DFNcFAiWQ3XoStAVxuWeoDVEl1xaZxqXRH7c4lKoru3emHiaeFaz9f5wFHCe/QpcSa71tEXqgW+qlQ3AYnte+ejIrFesHEeCBy/jcAVlR/B5NN4n8gzwf9R6doRTQtdHEkRstZdub/RIIWAoaum8POHSR4ZSkEuoDYHc8Z0LRz8TkELc5WS3i+NbJZXpgBU5roz/eGPkrQ2E2SGaTfl0XXvxLQTE7bpu5bL+ZE/WHEDB4KvmiRjoboham1Zf7qxh5KDMeKlVIalcayZCkXuDsHqqe2NKHi567Rv1pwv55CO7Cs8HEJDg0S2Eh2pVc9VC+Z00OGysnuR7IgASMMQEZLaeamGlVhEOe8R+RAduJmWR7w+KPa7o0K9qIwldlL6R9HofoGW07lUnJ8Wuwwm6WyS6Swbo42QKwBhkX1lzAIQLlXyo8+ceK6JHsBKlMN9eP4/tMnY1hvAxm+s/VV7qia+2kJPI2SRrm2dj9FEteJBIXyGRzTuSbUMWVgQhOcA1wfdE0hFdY4pvbdWP1xChqij+ghTZ9TvIalpZSzJqda3YZuYlhNW3FywsUiS6vX/OsEtOGeX/RaJtN4e7R5Y6wZOxPzPIf1pXs7OFd41d7iMAG6R956OS1IdciULiU6HVBnRxJIMWfni1McyFKA8UNMKWH8NCijdLneW/XeJdsDdCuY1UYhoYAQ=="
+      },
+      {
+        "type": "thinking",
+        "thinking": "Found that `run_code` logs each inner call as a `tool/code-dispatch` event, which lets me locate `read` calls too. I'll check one more field, then write the code.\n\n",
+        "signature": "CAQSlgYKEQgSGAI4AUIJbmFycmF0aW9uEgzApspiaWMzlhWq8FsaDDYh5mtqxuhv6HreCyIwbZYzActRL/QM2W5vO7j3ZwZLQUgKN9RbtlrTb4mhdRgz05Ii+Z1BC2bjjEkMq3sNKrIFMW8qB4udelohxJFkB5RCjrj8mMWQlsAnozxPWVF440/wZPOwWbVf7NLLkhVlbYmxklK1kZ06WQQnj7FvR22151X2m1enJmjvmPbS6YqoraKGH/A6Nygm7dZr1CSAqZh+nGUS4owURnPZfsZhxuRaj2OC7F4wSvfw+P9OnBQ5SkvS4JmV56fQFoESUovXCc4X5y2m2GSiESXK9RNvwDXFLyiqOoYYWJyBB5q0bi3jeDR9feVo2XN72o//Ppv2bhCnzv1WY6+vlNUBBneTwBXFBcLYYVrElqdKRdnBb4Xmdwe1GabqDYoa7YE8u4eSNTa2ouWSTcW3EzFAnDmmQ/0A13L1c9sLoCduQmdIaPbJ4WlvEEduprTTi4Ao49gYdd+EAX3E9jy7kr7R67hVsm6OX9zdDVKY7k8FLbat44kmGfEzOr4KDVM9/wr3Tr3CsfUAnjvxCg2+STJIYsGNOU6eBcd0kwQ8A0/v2tc23mvJUP5Jh/BL3/ESHjK9fTGyDGvJBwcQoTuXJKgsc8ftQxMCZK6QWjygD8qVkHHWn46A5s+KlktaNPYlX+4I4ivCqQRs11AGKLCTDU54KSRN7pyEMBExf93s4Op5upw7UbehT8rQnx5moUMbcaNuZH4IdFO9AOlOvqWHpDD/D8RIO+CWmsVvaPuQyXtek9sqMw4TfShlmWshPa+os7qIsWWG9PhNGc6pTLm3+Tnn5QDGxa28IsedOTlNjCtqfCA1ZStU1y3Th9JlJqf4xK6ZQG1+AWXFVPh7MrgwMYWBb0fP5uy5ZzETOdUu8z3sIF+DEe/gZmo0Y9Dn61J11u+2KHEL1vTBg6OcHycsZ4YSf7jkdABpSmwxvAcjZH2EAonOsn0Xqi8a45wAK8sUOkse0yZczrk7iDEDpnqcI8z4SI6osonEE+XQGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01WcRT4QkfqFAC8GtVU6bQf5",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\core\\tools\\src\\types.ts",
+          "limit": 20
+        }
+      }
+    ]
+  }
+}

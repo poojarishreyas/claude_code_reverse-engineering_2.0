@@ -1,0 +1,15 @@
+{
+  "id": "23d1ee2357385a3fbb3f0370",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DTxKSmjVVsDtuhqEBKpubR",
+        "type": "tool_result",
+        "content": "        policy: !!js \"(process.env.DSH_PERMISSION_MODE ?? 'workspace-write') === 'danger-full-access' ? 'never' : 'ask'\"\n\n    - id: permission\n      name: '@deepseek-ai/dsh-permission-presets'\n      config:\n        presets:\n          read-only:\n            sandbox: read-only",
+        "is_error": false
+      }
+    ]
+  }
+}

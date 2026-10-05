@@ -1,0 +1,20 @@
+{
+  "id": "5ae82b675ba7ee392ca37913",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01CaXoVSDbuduRj9GTqExvqV",
+        "name": "Grep",
+        "input": {
+          "pattern": "structured checkpoint|Critical Context|Pending Jobs",
+          "path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\client\\ui-chat\\src\\client\\chat\\CompactionCommandCard.tsx",
+          "output_mode": "content",
+          "-C": 3
+        }
+      }
+    ]
+  }
+}

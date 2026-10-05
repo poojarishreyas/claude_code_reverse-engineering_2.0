@@ -1,0 +1,18 @@
+{
+  "id": "195169a8edf7a02cdb60c8d6",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS3gQKEAgSGAI4AUIIdGhpbmtpbmcSDDljacO4EYx1AeEiUBoMx6DPC1kYWrmM9MpZIjAoonz5GJ08ocm7qK8BFA811igEqOgRakRIfmWVzMHIGyQIcpwxzs5Vx+CBxXXcXswq+wMH9qVsj+ymhUesDhw/ui1XwbAFdfqfxW741kiXodgC1Mgi3xH8GRZgl+UnMssyXNC+dNu8lYZoY15nP/G3LThjxbRdPHNjZ7GYXbZHF8bYRzF7GXu979Jbr7v8aA25uIYKMV7xvo5Rd3TCYc+hv9zx7mBe1x5qtjj3dTMgbP3H9sjligZYX/RYgTlSvvghNvmWCls7JUjrJZYc9YgwzEj2oeZBRTL1RbWEbY90/x80sfv+A0d4Z3D0dtQCnQ1AbHZewP+uGEtjqdqfP2LCxojdeqzMye74ut6kRI+qK45ykV83sZeVbZrgTkGtJgpy0/nnmWnwqJNXwP8/80RAFAw6EYIJQeRSODlc6cRAvohTHwCTEcSZyKmSxYAV2PpCld8IENTB4fAgKQ+ic6fIQDLXgCJmEhnYylsV49C7ttUERwQw3XCElSbdhHYhot97Dmxaq92+VSZPmVwiwqWqR3QlX9DVnbgZ0mH46sdgyl7/VhXyriKEq0IYLLL8rQziEvkf6hDoHIv4tOxtW0m2qQCJqTRapNrioB6UWSyi2pWc+T/VN+Ltxn9fmsuRy90HmIybqPpln4XSpBnbxm9Bs3cs5w9ZaaSXZJ0NNw00yIqQwsUdAHofzzzoNt4nhrV31xbZqT8t/5drVf1isoqxPqxP2WL1XeVisN0q9vYYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "The model decides for itself. Nothing makes it open the file, and it never asks you. A file path in the marker is just text, like a note saying \"the rest is at /path/x.txt\". If the model thinks it needs the missing part, it calls `read` or `grep` on that path itself. Otherwise it ignores the path and carries on.\n\n**When it would read the file**\n- The visible start and end aren't enough, for example a test log showing \"3 failed\" at the end with the failures in the cut middle.\n- You ask about something that was in that output.\n- It's debugging and needs an exact line, error or value from the middle.\n\n**When it would skip it**\n- It already acted on the output, like finishing an edit or a passing build, and has moved on.\n- The start and end already show what it needs, such as a command's header and its exit status.\n\n**What can go wrong, and how to limit it**\n- **Reading too much:** the model rereads the whole file \"just to be safe\", which undoes the savings. The marker wording should push it toward targeted access, for example: `[... middle pruned; full text at <path> — grep it or read with offset/limit only if you need the omitted part ...]`.\n- **Reading too little:** the model forgets the file exists and guesses. That's better than today, where it can't get the middle back at all.\n- **Behavior varies:** how often it reads depends on the model and the wording. Nothing guarantees it, so the useful measure is how often it rereads in real sessions.\n\nIt's the same approach the existing spill feature takes for outputs over 50 KB: a preview plus a path, and the model reads the file only when it decides to."
+      }
+    ]
+  }
+}

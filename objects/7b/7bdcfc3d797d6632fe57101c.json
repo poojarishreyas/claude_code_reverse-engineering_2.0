@@ -1,0 +1,14 @@
+{
+  "id": "7bdcfc3d797d6632fe57101c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01K9rnR6vtGP73BcYXtTCxxu",
+        "type": "tool_result",
+        "content": "bundle\\base\\cordis.patch.yml:393:    - id: spill-policy\nbundle\\base\\cordis.patch.yml:394:      name: '@deepseek-ai/dsh-spill-policy'\nbundle\\base\\cordis.patch.yml-395-      config:\nbundle\\base\\cordis.patch.yml:396:        maxInlineBytes: 50000\nbundle\\base\\cordis.patch.yml-397-\nbundle\\base\\cordis.patch.yml-398-    # Durability checkpoints before each model request and top-level dispatch.\nbundle\\base\\cordis.patch.yml-399-    - id: session-checkpoint-policy"
+      }
+    ]
+  }
+}

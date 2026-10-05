@@ -1,0 +1,20 @@
+{
+  "id": "3ed87f4283f65c182dab0cef",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_013mc51aEbNFdP85FQyc3WVA",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\continuation.spec.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_018YxqhSdFnpK5mGNgrLvHYT",
+        "type": "tool_result",
+        "content": "lint=0\n      Tests  219 passed (219)\n--- a/docs/config-catalog.md\n+++ b/docs/config-catalog.md\n+  /** Most recently read files re-attached after a checkpoint when `ctx.fs` is mounted; `0` disables. Defaults to `5`. */\n+  restoreFileCount?: number\n+  /** Estimated-token cap for one re-attached file. Defaults to `5000`. */\n+  restoreFileTokens?: number\n+  /** Estimated-token cap for all re-attached files together. Defaults to `50000`. */\n+  restoreTotalTokens?: number",
+        "is_error": false
+      }
+    ]
+  }
+}

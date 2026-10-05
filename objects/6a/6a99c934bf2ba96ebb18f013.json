@@ -1,0 +1,14 @@
+{
+  "id": "6a99c934bf2ba96ebb18f013",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01MmHa9Z8EhZdoe4pcWV6ga9",
+        "type": "tool_result",
+        "content": "Found 3 files\npackages\\compaction\\compaction-basic\\README.md\npackages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts\npackages\\compaction\\compaction-basic\\src\\summarizer.ts"
+      }
+    ]
+  }
+}

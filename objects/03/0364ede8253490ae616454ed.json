@@ -1,0 +1,8 @@
+{
+  "id": "0364ede8253490ae616454ed",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "ok before that push evrything to github such that i can compare different version of compaction later"
+  }
+}

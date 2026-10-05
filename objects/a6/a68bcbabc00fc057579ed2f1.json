@@ -1,0 +1,15 @@
+{
+  "id": "a68bcbabc00fc057579ed2f1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01QtcDWJXMkrZPkwtpBRZCjc",
+        "type": "tool_result",
+        "content": "     × skips a symlink INSIDE a session dir and non-session siblings 11ms\n     × does NOT follow a symlinked session directory (no deletion in the target) 4ms\n     × returns only real dsh-spill-* directories, excluding symlinks and non-matches 5ms\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯\n FAIL  |thread-safe| packages/spill/spill-local/tests/spill-local.spec.ts > startup cleanup sweep > skips a symlink INSIDE a session dir and non-session siblings\n FAIL  |thread-safe| packages/spill/spill-local/tests/spill-local.spec.ts > startup cleanup sweep > does NOT follow a symlinked session directory (no deletion in the target)\n FAIL  |thread-safe| packages/spill/spill-local/tests/spill-local.spec.ts > discoverDefaultRoots > returns only real dsh-spill-* directories, excluding symlinks and non-matches\n      Tests  3 failed | 95 passed (98)\nverify-cordis-config: 95 config files passed.",
+        "is_error": false
+      }
+    ]
+  }
+}

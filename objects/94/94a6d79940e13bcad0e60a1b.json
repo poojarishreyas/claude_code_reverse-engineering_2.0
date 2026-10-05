@@ -1,0 +1,14 @@
+{
+  "id": "94a6d79940e13bcad0e60a1b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Wb8ZmSMUAzvzABK4F5brF3",
+        "type": "tool_result",
+        "content": "86\tThe Service Definition exports `toolPairingBalancedBefore(session, seq)` and `toolPairingBalancedAfter(session, seq)` for the tool-call/result pairing checks before and after a seq. Both validate current surface membership and reject missing seqs and orphan results; the [package contract](../../packages/compaction/compaction/README.md#tool-pairing-boundaries) defines their cache behavior.\n87\t\n88\t## Tool-result pruning outcomes\n89\t\n90\tThe optional tool-result pruning service reports each durable content replacement and the aggregate Unicode-code-point reduction. Its public result types live in [`compaction-tool-result-pruner/src/types.ts`](../../packages/compaction/compaction-tool-result-pruner/src/types.ts).\n91\t\n92\t```ts type-equiv\n93\t/** Cited source event and size accounting for one landed surface replacement. */\n94\tinterface PrunedEntry {\n95\t  /** Full-fidelity tool-result event shadowed by the replacement. */\n96\t  readonly originalSeq: number\n97\t  /** Newly appended pruned tool-result event. */\n98\t  readonly replacementSeq: number\n99\t  /** Tool call shared by the original and replacement. */\n100\t  readonly callId: ToolCallId\n101\t  /** Original text size in Unicode code points. */\n102\t  readonly charsBefore: number\n103\t  /** Replacement text size in Unicode code points. */\n104\t  readonly charsAfter: number\n105\t}\n106\t```\n107\t\n108\t```ts type-equiv\n109\t/** Aggregate outcome of one stable-surface pruning pass. */\n110\tinterface PruneResult {\n111\t  /** Replacements in the snapshotted surface order. */\n112\t  readonly pruned: readonly PrunedEntry[]\n113\t  /** Total Unicode code points removed across replacements. */\n114\t  readonly charsRemoved: number\n115\t}"
+      }
+    ]
+  }
+}

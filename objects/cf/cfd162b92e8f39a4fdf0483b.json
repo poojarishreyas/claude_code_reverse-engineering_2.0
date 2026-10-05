@@ -1,0 +1,14 @@
+{
+  "id": "cfd162b92e8f39a4fdf0483b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Dw9XU3ZqTo6anpPmGS1WMq",
+        "type": "tool_result",
+        "content": "packages\\bundle\\base\\cordis.patch.yml:110:    - id: session-persistence-jsonl\npackages\\bundle\\base\\cordis.patch.yml:111:      name: '@deepseek-ai/dsh-session-persistence-jsonl'\npackages\\bundle\\base\\cordis.patch.yml-112-      config:\npackages\\bundle\\base\\cordis.patch.yml-113-        root: !!js dshHomePath('sessions')\npackages\\bundle\\base\\cordis.patch.yml-114-\npackages\\bundle\\base\\cordis.patch.yml-115-    # Durable image bytes live outside the append-only session log. Messages\npackages\\bundle\\base\\cordis.patch.yml-116-    # keep content-addressed references that this shared backend resolves for\n--\npackages\\bundle\\base\\cordis.patch.yml:197:          compression: gzip\npackages\\bundle\\base\\cordis.patch.yml-198-          timeoutMillis: 1000\npackages\\bundle\\base\\cordis.patch.yml-199-        processor:\npackages\\bundle\\base\\cordis.patch.yml-200-          scheduledDelayMillis: 10000\npackages\\bundle\\base\\cordis.patch.yml-201-          maxQueueSize: 2048\npackages\\bundle\\base\\cordis.patch.yml-202-          maxExportBatchSize: 2048\n--\npackages\\bundle\\web-app\\cordis.patch.yml:127:        compression: gzip\npackages\\bundle\\web-app\\cordis.patch.yml:128:        compressionLevel: 1\npackages\\bundle\\web-app\\cordis.patch.yml:129:        compressionThresholdBytes: 1024\npackages\\bundle\\web-app\\cordis.patch.yml-130-\npackages\\bundle\\web-app\\cordis.patch.yml-131-    # Web glue owned by this bundle: resolves the built frontend dist (an\npackages\\bundle\\web-app\\cordis.patch.yml-132-    # assembly fact of dsh-web-app, never user config), mounts the\npackages\\bundle\\web-app\\cordis.patch.yml-133-    # frontend-static fallback owner, registers the web-surface prompt\npackages\\bundle\\web-app\\cordis.patch.yml-134-    # section and the bash runtime variable, prints the URL line, and opens the"
+      }
+    ]
+  }
+}

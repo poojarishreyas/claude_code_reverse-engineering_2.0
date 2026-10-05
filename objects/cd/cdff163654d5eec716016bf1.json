@@ -1,0 +1,24 @@
+{
+  "id": "cdff163654d5eec716016bf1",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS8gUKEAgSGAI4AUIIdGhpbmtpbmcSDLx6BslAxlOI/+39oBoMoII84d+0/yTTKWq5IjC0KJ0vjxJWrenBo+73ol8UErmiPX9PMJAWttoyDu8N/uefhWWeE4IR+39jL0h9XrwqjwVSWMPi5WKg+BCXaSjLXRozVOv9UClx21M5DkpsdhFaTWV80/BvApMZwWoQr3tuxCDUle78NjtIrgY8cUuNt7mzUO+YyQOORVSg6TVCkAg9ERHOcXQQtrLuzIooOSJ8CMhAz91U8+ySITkWS9PYNGjs5TJwU1U4Oji7fIPvEArtAb+05LlEJjw2tj4/LecxgS2z/NtYdhYW5c0R4BZ83HndCaFF9kSPKVCnluxWxVu0E4rWNN5Es5NVQy7+i1pAQVdPMSBP4n2kKQKKzVriEAuYayiAMDKbEupKm3nW8ABImb+cJFJxvl7TE2r93Q4lEtueCuqVH/A14fmaHiPWpIj1ZL9Spq/V0pdXC9+ld32aCM2vEBxhzedyCOM58OoqBzQYXPQ7fiaiUI00OZb59o2OfgGGHfAAAxynsO7c31C+sbX08RaS3CmXPLDwvAiCIpsViz04/L8ZIZltoBfp1Dqd6wsrbWgpklKcGRmEo/fmNg4x1gpE+lJOblFYZRp1SFhsTnNIW+dh9ZNPEarEnssRmsxNSIKbgpftsHzN8fvi9wq/pSwyub4AxFH4DrQ2I3/YubVZopmPSq+eyVHSs98BSdcMEmJ9doalIBtua5QNwvRM9OFQoM8Do3w92O7/lKLp8NMXpMLDLWyvAjqVqqr0f6xwXdMGA+9fycuDTWHJnGNR6UQR1hQ5CtmMT43GYH9FTSpzYRF+9y+wwlHReqaKs22+SncJ0vNiMk8KOmIKQsXdnbIPY7Ny6sFVpvUAj5gyv2xIbTH8BCTbM9mSuosBdTz5WDqm5tjSCNbPK01O1ZQ/PK8MO3aOOfw4iggdMY2WOAwMya00kUatnxmyZG+qr7UGY317mxyEMGqsEP5jGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01D4GF6zqXJUAuJtZBeZakXS",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && time npx tsc -b packages/compaction/compaction-tool-result-pruner packages/compaction/compaction-basic 2>&1 | tail -30",
+          "description": "Typecheck the two changed packages",
+          "timeout": 600000
+        }
+      }
+    ]
+  }
+}

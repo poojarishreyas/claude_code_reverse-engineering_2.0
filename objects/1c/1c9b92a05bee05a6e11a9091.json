@@ -1,0 +1,14 @@
+{
+  "id": "1c9b92a05bee05a6e11a9091",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01GkErH5A72scUDBA7UFWcJh",
+        "type": "tool_result",
+        "content": "packages\\core\\agent-loop\\src\\agent.ts:277:          turnEnds = { kind: 'blocked' }\npackages\\core\\agent-loop\\src\\agent.ts-278-          return false\npackages\\core\\agent-loop\\src\\agent.ts-279-        }\npackages\\core\\agent-loop\\src\\agent.ts-280-        if (turnEnds && decision.messages.length === 0) break\npackages\\core\\agent-loop\\src\\agent.ts-281-        // A removed waking message or an enter decision rewritten to empty\npackages\\core\\agent-loop\\src\\agent.ts-282-        // still owns the initial turn boundary, but it spends no model call.\npackages\\core\\agent-loop\\src\\agent.ts-283-        if (phase.step === 0 && decision.messages.length === 0) {\npackages\\core\\agent-loop\\src\\agent.ts-284-          turnEnds = { kind: 'completed' }\npackages\\core\\agent-loop\\src\\agent.ts-285-          return false\npackages\\core\\agent-loop\\src\\agent.ts-286-        }\npackages\\core\\agent-loop\\src\\agent.ts-287-        signal.throwIfAborted()\n--\npackages\\core\\session\\src\\types.ts:155:  blocked: { kind: 'blocked' }\npackages\\core\\session\\src\\types.ts-156-  /**\npackages\\core\\session\\src\\types.ts-157-   * The turn failed. `error` is always a structured failure: the `LlmError`\npackages\\core\\session\\src\\types.ts-158-   * facts verbatim, or `{ message: errorChain(error), code: 'UNKNOWN' }`\npackages\\core\\session\\src\\types.ts-159-   * flattened from any other error.\npackages\\core\\session\\src\\types.ts-160-   */\npackages\\core\\session\\src\\types.ts-161-  error: { kind: 'error'; error: LlmFailure }\npackages\\core\\session\\src\\types.ts-162-  /** At least one step reached its output-token ceiling, even if a plugin continued the turn. */\npackages\\core\\session\\src\\types.ts-163-  'max-tokens': { kind: 'max-tokens' }\npackages\\core\\session\\src\\types.ts-164-  /**\npackages\\core\\session\\src\\types.ts-165-   * A persistence backend closed a crash-orphaned turn on reload. The loop never\n--\npackages\\core\\session\\src\\types.ts:172:export type TurnEndReason = TurnEndReasonMap[keyof TurnEndReasonMap]\npackages\\core\\session\\src\\types.ts-173-\npackages\\core\\session\\src\\types.ts-174-/**\npackages\\core\\session\\src\\types.ts-175- * Logged request state outside derived history: call config, system prompt, and\npackages\\core\\session\\src\\types.ts-176- * tools. The latest full `request/header` snapshot reconstructs it; canonical\npackages\\core\\session\\src\\types.ts-177- * empty optional fields are absent.\n\n[Showing results with pagination = limit: 30]"
+      }
+    ]
+  }
+}

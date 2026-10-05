@@ -1,0 +1,15 @@
+{
+  "id": "de8e76615474fba0adb4f1a8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01D4GF6zqXJUAuJtZBeZakXS",
+        "type": "tool_result",
+        "content": "real\t0m20.993s\nuser\t0m0.182s\nsys\t0m0.353s",
+        "is_error": false
+      }
+    ]
+  }
+}

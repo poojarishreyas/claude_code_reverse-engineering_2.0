@@ -1,0 +1,27 @@
+{
+  "id": "72590891019692a93c031ef6",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS0AgKEAgSGAI4AUIIdGhpbmtpbmcSDLODUI/uqcDMOb3/4BoM5q4ZI7yBor15zMkhIjBkasRhbfd6PbOqVsz+Ycgm0wlmzEd6NmdeNITuWc6wQ6V44mvOR+3bN8j3/oTK0x0q7QfIdIuFUBBkibAkdKu3htiXKfnwWclNIJVza+gRZzqkstw2q/tgv1CMHlqyeAohybNx/wiRSVboIQHzWnVaKT/VzWz8GEfCEnRfUZM+cXKJW/YUUEZtMvxv4d6UwNqFhfrYhxshPiHJzucqZmL5NpuASTBFE+301Ws/6c7dFZf1Q7NupEHaMmpZXcPaDiBDvePq+pdTIqF4vjIpFHBFqAxPhck3ntFATfrM9zDrplGAE+oqzwM43ijLtnnAMb0fXKxgqHSKWhn99KuusxqONR1FA8zXFjk8nDdkjjPmnKBz8TpXoV4GpQtVl0tHLvac8qJqWP828eBrQ7ylyYSY3TFTBsB/E/ccu5BG34QaZ5sALfauEU+pwx8vtyt9Dr20SbkL687tfPlMuSlEtgByjl3J0aBifiARUT44ZSMu4ZUfUTD3eJZakfQ4QjgsgB5nGHdBeQicMhWi2rgCfwxzuSqP79moS/VXzlusFYvQGTBR4nA0wkiL/TeTD+dcz0K9Z8jim/42P26Oc2OImaMZFA6pJNqr3RSeVP66/H91/5uH8lV/U9FvaOq2wLSI6qHDeeLnrfIAqxmcPYqKr4IGlG9/jWZYqmHCPz7MA46BEoJjsiJM2yIynrE+9rHlnP8W3elyPc/T+e2LIjQin0OegDvkhGIEKuv4WUzWaw/WLhfb3CjAXDkIHOFWaQfJc++XmECW+PoDHOvn9CgWHxSxX5Jvui9gqWRqJS5yFt/2Bmu5Fy9xMM/fZnVrur1+QTDyKRxguIpC5L2h/l+VKr3qScuUG74oTBbKVXL7f7BKdCZQDW250dgOR4AXQZHu4lf7Erwy32c4sJVDv7fBgGqfJrUWvc6WUi4kGNru3pPA9XHatrEISBKPPhcV1arCH+uC0Ok7SfzDffdQQNcEVzgCCoOGOm32j/ht/K6dUTEHK3V/mgmbagtx+9FWRbiossnyP8DSAP/xkTKAx3Ep3bDATk2Q5MvCYqurIDlShV8qGWIFAG/JEjcIh+y1R+Q/tpgzVHtEvCDdzx2VU1v08/VxVVe4bmvyHrntiA1iS0Gl3j7aND3QZn3y/exl5kzg1KKbvHcttud683M6+Dw2XCEZBQ5ZMiT0CLyUY/lKLyTcYnYstP4CWAuhe20xc6tGw83nx/YhBX9W5q45KAEAUeBOnA7rPXwx2CblqLgtgbLFr2muZqhs6aEAwlzZHtROpSO+jHPWQRtKF7dwd6PFAU9t6xTzJUTGVUtlJgt83iiUcunPlkQQ8l0+5RmErZQwzFzBxV+X5rbWAwrlAR8IsEl5d1+pMZ2Rdz9NE+1jg/E4VplR9+s8MIjBVm0JczsUSVoYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "The shell couldn't parse the heredoc, so nothing was written. I'll append the tests with the file editor instead."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01HAPVtVFfcvX2DykDaR9dc9",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-tool-result-pruner\\tests\\tool-result-pruner.spec.ts",
+          "offset": 320
+        }
+      }
+    ]
+  }
+}

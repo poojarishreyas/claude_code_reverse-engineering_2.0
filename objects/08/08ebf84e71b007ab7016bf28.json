@@ -1,0 +1,19 @@
+{
+  "id": "08ebf84e71b007ab7016bf28",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_019VzMVfxPzdhnaeMcgM63R8",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\llm\\llm\\src\\types.ts",
+          "offset": 50,
+          "limit": 62
+        }
+      }
+    ]
+  }
+}

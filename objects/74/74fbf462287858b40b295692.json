@@ -1,0 +1,15 @@
+{
+  "id": "74fbf462287858b40b295692",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CdzYvL6aAPiX5fRiUBATyv",
+        "type": "tool_result",
+        "content": "All files        |     100 |    99.07 |     100 |     100 |                   \n continuation.ts |     100 |    98.46 |     100 |     100 | 226               \n region.ts       |     100 |     97.5 |     100 |     100 | 396,409           \nERROR: Coverage for branches (98.46%) does not meet global threshold (100%) for packages/compaction/compaction-basic/src/continuation.ts\nERROR: Coverage for branches (97.5%) does not meet global threshold (100%) for packages/compaction/compaction-basic/src/region.ts",
+        "is_error": false
+      }
+    ]
+  }
+}

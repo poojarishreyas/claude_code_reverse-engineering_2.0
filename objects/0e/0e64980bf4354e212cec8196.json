@@ -1,0 +1,15 @@
+{
+  "id": "0e64980bf4354e212cec8196",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_014v11vsBgKYw6UcajSfSqih",
+        "type": "tool_result",
+        "content": "50:  'packages/preset/agent-presets/presets/cordis/skills/editing-cordis-compositions/SKILL.md',\n83:    composition: string\n328:    const target = join(cwd, '.dsh', 'skills', 'editing-cordis-compositions', 'SKILL.md')\n370:    if (manifest.profile !== 'test-base' || manifest.composition === undefined) continue\n377:      manifest: { ...manifest, composition: manifest.composition, recording: manifest.recording, header: manifest.header },\n390:const compositionOwners = new Map<string, BaseScenario>()\n393:  const { composition, header } = scenario.manifest\n395:    if (compositionOwners.has(composition)) throw new Error(`base composition ${composition} has multiple patch owners`)\n396:    compositionOwners.set(composition, scenario)\n399:    const key = `${composition}/${header.class}`\n406:  const owner = compositionOwners.get(scenario.manifest.composition)\n407:  if (owner === undefined) throw new Error(`${scenario.name}: composition has no cordis.yml owner`)\n412:  const { composition, header } = scenario.manifest\n413:  const pin = headerPins.get(`${composition}/${header.class}`)\n414:  if (pin === undefined) throw new Error(`${scenario.name}: composition/header class has no pin`)\n469:  it('gives every composition and header class exactly one pin', () => {\n471:      expect(ownerOf(scenario), `${scenario.name}: composition owner`).toBeDefined()\n561:      const composition = ownerOf(scenario)\n562:      const baseComposition = compositionOwners.get('default')\n563:      if (baseComposition === undefined) throw new Error('base corpus has no default composition')\n566:      const compositionPatch = join(composition.dir, replaying ? 'cordis.snapshot.yml' : 'cordis.yml')\n569:        ...composition === baseComposition && !replaying ? [] : [compositionPatch],\n580:      const spillRoot = snapshotSpillRoot(join(scenario.dir, 'session.jsonl'))\n581:      await rm(spillRoot, { recursive: true, force: true })\n598:            DSH_SNAPSHOT_SPILL_ROOT: spillRoot,\n633:        await rm(spillRoot, { recursive: true, force: true })",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "405a1e42ba47ce6af0b50213",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The agent is running on the task through OmniRoute."
+      }
+    ]
+  }
+}

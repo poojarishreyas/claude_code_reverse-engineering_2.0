@@ -1,0 +1,15 @@
+{
+  "id": "7be6d8891aa4de0a6f077148",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01TkjfJ4XhczfN61ASGBrGkf",
+        "type": "tool_result",
+        "content": "docs/engine-book/_condensed/05-io-context.md\ndocs/engine-book/_condensed/06-motion-extending.md\ndocs/engine-book/_condensed/07-appendices.md\ndocs/engine-book/_condensed/08-rationale.md\ndocs/engine-book/_notes/config.md\ndocs/engine-book/_notes/control-flow.md\ndocs/engine-book/_notes/evidence-report.md\ndocs/engine-book/_notes/mechanism-map.md\ndocs/engine-book/_notes/open-questions.md\ndocs/engine-book/_notes/progress.md\ndocs/engine-book/_notes/raw/boot-cordis.md\ndocs/engine-book/_notes/raw/llm.md\ndocs/engine-book/_notes/raw/plugins-context-mgmt.md\ndocs/engine-book/_notes/raw/prompt-context.md\ndocs/engine-book/_notes/raw/session-log.md\ndocs/engine-book/_notes/raw/tools.md\n--- largest\n3132413 docs/engine-book/How-the-Engine-Works-Digest.pdf\n7184781 docs/engine-book/How-the-Engine-Works.pdf\n--- secret scan\n(scan done)\n--- ignored?",
+        "is_error": false
+      }
+    ]
+  }
+}

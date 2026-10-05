@@ -1,0 +1,8 @@
+{
+  "id": "d0704246dca8e1e95f6eaa18",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "if i told my harness to add this feature or any  fix any bug how it chooses the write file to edit?"
+  }
+}

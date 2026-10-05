@@ -1,0 +1,30 @@
+{
+  "id": "6337faa9065c713fbd8fb149",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011fUxJJKNUFuu4W6BQmjqtm",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\continuation.spec.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01NHBCavNxxw9KeiKKKgeuJt",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\continuation.spec.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01SQC5UPV7p6EQAiMfRZ8Vr3",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\desktop\\Elemental_harness\\packages\\compaction\\compaction-basic\\tests\\compaction-basic.spec.ts has been updated successfully."
+      },
+      {
+        "tool_use_id": "toolu_01KGXbZTTJid6o4FNQYAFdss",
+        "type": "tool_result",
+        "content": "      Tests  225 passed (225)",
+        "is_error": false
+      }
+    ]
+  }
+}

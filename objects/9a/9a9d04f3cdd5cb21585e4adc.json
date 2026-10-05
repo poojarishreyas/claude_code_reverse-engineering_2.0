@@ -1,0 +1,14 @@
+{
+  "id": "9a9d04f3cdd5cb21585e4adc",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XY2EA7vTGhnyS1PfufoFbv",
+        "type": "tool_result",
+        "content": "packages\\compaction\\compaction-basic\\src\\region.ts:24:import { frameSummary } from './summarizer.ts'\npackages\\compaction\\compaction-basic\\src\\region.ts:27:interface RegionDependencies {\npackages\\compaction\\compaction-basic\\src\\region.ts:47:  readonly shadowedRouteTokenCount: number\npackages\\compaction\\compaction-basic\\src\\region.ts:52:  readonly checkpointMessage: UserMessage\npackages\\compaction\\compaction-basic\\src\\region.ts:154:export async function compactSurfaceRegion(\npackages\\compaction\\compaction-basic\\src\\region.ts:361:    shadowedRouteTokenCount: selectedNodes.reduce((total, node) => total + node.tokens, 0),\npackages\\compaction\\compaction-basic\\src\\region.ts:367:async function summarizeCompaction(\npackages\\compaction\\compaction-basic\\src\\region.ts:376:  const checkpointMessage = createUserMessage({\npackages\\compaction\\compaction-basic\\src\\region.ts:377:    content: frameSummary(summaryResult.summary),\npackages\\compaction\\compaction-basic\\src\\region.ts:383:  const framedSummaryTokenCount = dependencies.meter.estimateMessage(checkpointMessage)\npackages\\compaction\\compaction-basic\\src\\region.ts:384:  if (framedSummaryTokenCount >= prepared.shadowedRouteTokenCount) {\npackages\\compaction\\compaction-basic\\src\\region.ts:386:      `summary is not smaller than the shadowed content (${framedSummaryTokenCount} estimated framed tokens >= ${prepared.shadowedRouteTokenCount})`,\npackages\\compaction\\compaction-basic\\src\\region.ts:392:    checkpointMessage,\npackages\\compaction\\compaction-basic\\src\\region.ts:452:    checkpointMessage,\npackages\\compaction\\compaction-basic\\src\\region.ts:472:  session.append('user/message', checkpointMessage, {\npackages\\compaction\\compaction-basic\\src\\summarizer.ts:197:export function frameSummary(summary: readonly ContentBlock[]): ContentBlock[] {"
+      }
+    ]
+  }
+}

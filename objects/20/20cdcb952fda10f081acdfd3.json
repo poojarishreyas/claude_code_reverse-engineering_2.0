@@ -1,0 +1,15 @@
+{
+  "id": "20cdcb952fda10f081acdfd3",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01EWnnycNyY3EQoajbXYCYhk",
+        "type": "tool_result",
+        "content": "C:\\Users\\shrey\\AppData\\Roaming\\npm\\claude.ps1\r\nC:\\Users\\shrey\\AppData\\Roaming\\npm\\claude.cmd\r\nC:\\Users\\shrey\\AppData\\Roaming\\npm\\claude\r\nC:\\Users\\shrey\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe\\claude.exe\r\n---npm root\r\nC:\\Users\\shrey\\AppData\\Roaming\\npm\\node_modules\n---local\r\n\r\nFullName                                          Length\r\n--------                                          ------\r\nC:\\Users\\shrey\\.local\\bin\\claude.exe           240767648\r\nC:\\Users\\shrey\\AppData\\Local\\Claude                     \r\nC:\\Users\\shrey\\AppData\\Local\\Claude-3p                  \r\nC:\\Users\\shrey\\AppData\\Local\\claude-cli-nodejs          \r\nC:\\Users\\shrey\\AppData\\Local\\Claude-Data\nShell cwd was reset to C:\\Users\\shrey\\desktop\\Elemental_harness",
+        "is_error": false
+      }
+    ]
+  }
+}

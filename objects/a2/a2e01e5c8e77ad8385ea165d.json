@@ -1,0 +1,18 @@
+{
+  "id": "a2e01e5c8e77ad8385ea165d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01DMZKyodbpbERJUrZYDrudD",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/desktop/Elemental_harness\" && grep -n \"spill\\|base\\|include\" snapshots/session/text-turn/cordis.yml snapshots/session/parallel-tool-calls/cordis.yml | head -20",
+          "description": "Check whether snapshot compositions include the base bundle"
+        }
+      }
+    ]
+  }
+}

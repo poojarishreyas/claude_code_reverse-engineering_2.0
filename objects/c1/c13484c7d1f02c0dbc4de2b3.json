@@ -1,0 +1,14 @@
+{
+  "id": "c13484c7d1f02c0dbc4de2b3",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012feZyCa4GFjXRguKErDWkM",
+        "type": "tool_result",
+        "content": "Monitor started (task bg0jlaf0m, expires in 30m unless the source ends first; you get one notice at expiry — re-arm if you still need the watch). You will be notified on each event. Keep working — do not poll or sleep. Events may arrive while you are waiting for the user — an event is not their reply."
+      }
+    ]
+  }
+}
