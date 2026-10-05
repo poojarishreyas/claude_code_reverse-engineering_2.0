@@ -1,0 +1,13 @@
+{
+  "id": "80aa37cf984b923c745d4225",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The test is running now, on one hard bug: `ed34a1d7fe`. The fix touches 2 files in different parts of the project from the failing test.\n\nTo get here I:\n- re-downloaded the test repo, turning on Windows long-path support because some file paths in it are too long for the default setting;\n- set the test runner to use one worker, so it needs less memory.\n\nKeep Chrome at a few tabs while it runs. I'll report the result when it finishes."
+      }
+    ]
+  }
+}
