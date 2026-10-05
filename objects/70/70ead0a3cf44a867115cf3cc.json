@@ -1,0 +1,13 @@
+{
+  "id": "70ead0a3cf44a867115cf3cc",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "No response requested."
+      }
+    ]
+  }
+}

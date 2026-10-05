@@ -1,0 +1,15 @@
+{
+  "id": "e7eb0feebbe66b826d0cf81a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01VG59pUgUpHykNUBS1QCr3n",
+        "type": "tool_result",
+        "content": "key length: 35\n{\"id\":\"gen-1791199140-2eT07jo2k1AyffsNoal2\",\"object\":\"chat.completion\",\"created\":1791199140,\"model\":\"anthropic/claude-fable-5\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"refusal\":null,\"content\":\"OK\",\"reasoning\":\"This seems like a straightforward request.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"This seems like a straightforward request.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAIS1AMK4gIIEhgCKkCs/kopZHC2yfUXWRjwTOURSJZ8kiRN9Z/opz+wDjz5Kl4RoFqLkXNh79La2Ee40QI3JnWEoXkK0XoDSAGDJ1TvMg5jbGF1ZGUtZmFibGUtNTgBQgh0aGlua2luZ1okMGQ5ODNmM2YtNDlmYS00YTQ2LTgyNTQtYjFiYjI0OTFhMmE5eh51cHJvZl8wMTFDZWN5c3FjdkhyOUxFdWttOUZjR2WaARAKDmNsYXVkZS1mYWJsZS01qAGoj47WBsIBOggEEAAaDALaigNPNwVYPgQmrSABMgQScc8lOgQ4MyOKQgQ4MyOKSgQ4MyOKUABaBNkF4VZgAmgBcADaAWAKFnByZWZpeF9iZWZvcmVfYmxvY2tfdjESIER7igAsXT7pEsKV0cJyZ40xpVXWxWrnq2OcrDLp8f6HIgAyIMLAE8hqnJLiL5ZvPYYXdo+LekTJAq3MCXv6HgmK+04fSAMSDB0D2zhzYHZJxNYMHhoMenM2J9lJ53DUDJV3IjC/ITXkh2Lp3TAGK27OuDcp3qfELjnPJnwJammpfm1zFYaWxGsyQU0xN0BLbhVHGHUqH9fl9fIKzTEtTzxVJvQBVKOKtOIgRCUpnmgaPaD1woYYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS01LWZhYmxlLTIwMjYwNjA5fGFudGhyb3BpYyJ9\"}],\"reasoning_content\":\"This seems like a straightforward request.\\n\\n\"},\"logprobs\":null}],\"usage\":{\"prompt_tokens\":10,\"completion_tokens\":11,\"total_tokens\":21,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":7,\"image_tokens\":0,\"\nShell cwd was reset to C:\\Users\\shrey\\Desktop\\Elemental_harness",
+        "is_error": false
+      }
+    ]
+  }
+}

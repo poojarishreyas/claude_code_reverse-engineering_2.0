@@ -1,0 +1,31 @@
+{
+  "id": "4db8337f94063fc3f2d9b5ef",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSgggKEAgSGAI4AUIIdGhpbmtpbmcSDGGS400QV3QK4Tg2CBoM6Xyd3UAhrd/u7/JCIjBtBlwlb+Me7UhpUjkKk8CCb/rdKZPpO9Y6AWRsY/p5VHZCKCpRCdj0Gx5PhjFbTlcqnwcLBeog10MYBez9YWJ77cPxoTagWdYF6npevdMVKqSfzpUCG21PVOOTe5xSgst+pRwoLu1v+CqllkSAkXiHdZqxuntIHD62/qehMBK0yDgVLuijALw2uvPy6kygoDP8xA5KVr1m1ZU6e+j/xF2nOZSK/tEcBIjmxFVbHdSgqvtLqRsIFQYTMxYC27nRCinQdHUymDqabXn4Kj4HUjGoWjUe7ByVY8KBSgiWo1Yf2kJTAEuDwzJtfQvNuulmeFGmKz0mUgO+RU3i6Bf0wq/oZPJysOjMuRPB3R2FShQFQhKqEzIO6auexH2IpPIJqCcnDVH9YWaMpcb4iQeYiSG035wA2DCXVqKAkiW72vbFUu8j1dieiFJES1Dj6HQceGJpmTNcztWiE1eqSeYJOumalARGD0BCa+q9hjndk1KyCbPvrebw9NblFhaj3Cp0pI7IE/0GPjhbjB1wgvK7LnKjrjg9cdI/DDbKYJHCktBUmTlGOBCtkTb98H8WL72mKd5+3zfnRZeRrw6ckiMYKxX6xhZrocjj2boa8+pKxjbPcdrj4bPCwn68niki9dVVmP/G+qsuUHkOOG+9kD3CNOIpm1oee+hBk7eIysvOOeNlZvYFdcZe//aADqoVevxKFfUTffwJvvWameVZqe/FEMHfbYIUaGgJXiWNO5NgHRhL9Gc2EEbgRt3WyxFYU+X3ugGaiJb10CJlTkjZZ5gCKmvvC9M7rXbfcYgDFXoJ7fnFqn3GJzkPknpgaTbvGp+MtgRV7q2rKNYjFPy2uYkqSnxoVd6sA7jXeBRgGurwko3QQswESU4FbJXeYeFDZeP17If4m2ui/SxRzAA+LgnASOoZMy2bDXF7MdGfeql0+65k7VHvxCY7mkq/lCv0YgyWubIlg/Pbx5s2JH5/Ud6+5ZVXzNbITTiKdfhSLjHDrHXX6C3AlJlAdbraJsRfIQRH0p3KFmAd8WChtnklnCdTcaAFOHBlx2tu+dXYB37JMosdtVlhumY6K08Ci4IBUE93Y7eSRoII/1C9YdBlF3U42NvKSx2pX73X1xKG+GiqY5xLU9C9KzX4KBbnI5JJKzDrEiuqsrOsD6wiY4mSq6ceifC2XZ7mjEw+/J1lRawD/j34ygUPcVToKW/LSB/7sKKVZXlegLQVrjIlqRyhfhEG9F9vS2tM4BMcwKhYnJIsCSW8kzZmPcicFoYJ/u0AREBwzqIwXZygIJSTHgq92KB3oKWmVj0YAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Before re-running, I'll check whether OmniRoute can complete a request now."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01VG59pUgUpHykNUBS1QCr3n",
+        "name": "Bash",
+        "input": {
+          "command": "cd ~/.dsh && KEY=$(grep -A3 -i 'MYLYNX_API_KEY' .credentials.yaml | grep -oE '(sk|key)[-_A-Za-z0-9]+' | head -1); [ -z \"$KEY\" ] && KEY=$(grep -A3 -i 'MYLYNX_API_KEY' .credentials.yaml | sed -n 's/.*: *//p' | tail -1 | tr -d \"\\\"' \"); echo \"key length: ${#KEY}\"; curl -s -m 60 http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $KEY\" -H 'Content-Type: application/json' -d '{\"model\":\"lynx harness\",\"max_tokens\":20,\"messages\":[{\"role\":\"user\",\"content\":\"Say OK\"}]}' | head -c 1500",
+          "description": "Send a tiny test request through OmniRoute"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
