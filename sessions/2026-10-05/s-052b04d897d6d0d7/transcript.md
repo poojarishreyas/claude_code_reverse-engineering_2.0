@@ -5,7 +5,7 @@
 | session | `s-052b04d897d6d0d7` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:16:12.253Z |
-| requests | 10 (10 errored) |
+| requests | 11 (11 errored) |
 | tokens | in 0 · out 0 · cache read 0 · cache write 0 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
@@ -288,4 +288,14 @@ _max_tokens 64,000 · buffered · 5 messages_
 _[no new input since the previous request]_
 
 > **Error** (http 529) — {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011CfizmHsQazSuTQY66h7Rt"}
+
+---
+
+## req-0011 — claude-opus-5-5
+
+_max_tokens 64,000 · buffered · 5 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (http 529) — {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011CfizpM2jkdDv44CQ7P8Wo"}
 
