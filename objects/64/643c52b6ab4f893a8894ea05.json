@@ -1,0 +1,15 @@
+{
+  "id": "643c52b6ab4f893a8894ea05",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01BpQYeLvdvT9QLJv5bAuwZb",
+        "type": "tool_result",
+        "content": "26c5bf2 Run eval tests with one worker so a task fits in laptop memory",
+        "is_error": false
+      }
+    ]
+  }
+}
