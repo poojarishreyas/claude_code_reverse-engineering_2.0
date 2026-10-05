@@ -5,7 +5,7 @@
 | session | `s-052b04d897d6d0d7` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:16:12.253Z |
-| requests | 28 (22 errored) |
+| requests | 39 (33 errored) |
 | tokens | in 842 · out 2,109 · cache read 406,651 · cache write 82,555 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
@@ -816,6 +816,118 @@ _[no new input since the previous request]_
 ---
 
 ## req-0028 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0029 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+#### USER
+
+The user stepped away and is coming back. Recap in under 40 words, 1-2 plain sentences, no markdown. Lead with the overall goal and current task, then the one next action. Skip root-cause narrative, fix internals, secondary to-dos, and em-dash tangents.
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0030 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0031 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0032 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0033 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0034 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0035 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0036 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0037 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0038 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0039 — claude-opus-5-5
 
 _max_tokens 128,000 · streaming · 14 messages_
 
