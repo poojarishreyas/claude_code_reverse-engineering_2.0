@@ -6,16 +6,16 @@
   "model": "claude-opus-5-5",
   "credential": "22d5a5532969",
   "startedAt": "2026-10-05T11:16:12.253Z",
-  "updatedAt": "2026-10-05T12:52:11.944Z",
-  "durationMs": 5759691,
-  "requests": 42,
+  "updatedAt": "2026-10-05T12:52:28.163Z",
+  "durationMs": 5775910,
+  "requests": 43,
   "errors": 33,
-  "events": 122,
+  "events": 126,
   "usage": {
-    "input": 850,
-    "output": 2944,
-    "cacheRead": 573735,
-    "cacheCreation": 167375
+    "input": 852,
+    "output": 4146,
+    "cacheRead": 658555,
+    "cacheCreation": 167895
   },
   "messageIds": [
     "052b04d897d6d0d77198695f",
@@ -54,6 +54,10 @@
     "2caa867d9730ace96ec2b9bb",
     "e5e1294c9e6a4b8897fb33bb",
     "3cf01419fed3f48523352b79",
-    "7506e6c3faa0073fcedf7f83"
+    "7506e6c3faa0073fcedf7f83",
+    "13980f0ac6c2af98711b1fc9",
+    "c99220df175ffcd4fd460d2b",
+    "aae3272c8acc71fc79283104",
+    "d7dca198c477dbeb345e30f1"
   ]
 }
