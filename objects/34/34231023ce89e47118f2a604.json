@@ -1,0 +1,31 @@
+{
+  "id": "34231023ce89e47118f2a604",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSvwYKEAgSGAI4AUIIdGhpbmtpbmcSDAoPEcgyZ31G9LYagRoMvfNvIyC+L5UqfITWIjDPDZl8PoscEp4omdN2rYaA/NLv3HwTGwig1FJBZWGxxoPk/xY7Conoz1Bo4SlZQWMq3AWq2rZZ+O2wlnPhaQ5T4Rk1NnCgWoKB5650yZsboWgWtHtl0QiONSVbW8hRLWYw/vHQh55g4gkRdaGdMSFuQXfD8pFPA9wj1JO4y11W6YbS74w0j1XIdQuHg2JsqvJcxXODhA5twIzbcf13QUbTf5QF2Ay+6JcPvGI58fJT79ddqDNkB+LJnbBF+IoqzAC5bvDm9Fz66F9mUtKt1tSZ5NujdkMPi+8LyZtuu48awTOInPLmIdN/GDAsXTh4zq/IOg5GpRRSoH8QxmNUvXOtlN5OlfFOq248avTRIx8fvXe7sX3cMoGamiwzBDzlbQxfFU1HSrDYbyHfANDNUL+uEh8oAJljM7B2o33tdrA8+xMjEoW23T6mdmcA6KZMforjT3LOoOvUYILiUv7f8EHH7pB4srjLibapqM1qq5gvQwqmy/lu6BXDJuwkkLOEcg7TzWJw17PJiyyT1l8H4WpOMLbbWJx20CFaBW7xJXNsLT9RCBDNhXVoBq21EzaeFn2e+pby4ugalYbNJJyGmmG3+5X4ibySnkY1+wSu1vT6Nz9PR2lH/VBKWByYu3nFab+QlrQo4hV9j5uHM2D8wkCNULOSK4O93nL14WLII+T+XBkL1VK8Qchf5r3xBmKGHjM2EfIPgocQi15RKnt0ffBhSF8PkWnYKETS2vaLgPwA/rbVHBfoSVlkOBHUL3HmDoo1nrqdMpA9ZWbz8pjqS1Kl3RKIx+M1Yy4aBoE7kDmk9p3epLsnn7jgyosHmick13bu77zrO2h58VyhJ1d9OqW67Ga2sH4TN2FFemSQukp9U6ytHguUX62PV6pwko27Tzc1CWSsHbuJtT/ZQgcDnEtjRU4+0LdCT7FkpGdkhYVB1JLkdX9eIbnfLeHvg/jWEzg1wg0kpCS0NdzSojUaXfkVv67N5EYbYljXStZ8PlqmeI6cE1qrBqg/zqW3zvTvXGf2KUEuHphSHQ/WbAuSdT8YAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Small requests go through now. The earlier failure was the agent's 32768 max-token request, so I'll test that size."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_014vX5ZqaQfj3yeR5ieC9TUV",
+        "name": "Bash",
+        "input": {
+          "command": "cd ~/.dsh && KEY=$(grep -A3 -i 'MYLYNX_API_KEY' .credentials.yaml | grep -oE '(sk|key)[-_A-Za-z0-9]+' | head -1); [ -z \"$KEY\" ] && KEY=$(grep -A3 -i 'MYLYNX_API_KEY' .credentials.yaml | sed -n 's/.*: *//p' | tail -1 | tr -d \"\\\"' \"); curl -s -m 90 http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $KEY\" -H 'Content-Type: application/json' -d '{\"model\":\"lynx harness\",\"max_tokens\":32768,\"messages\":[{\"role\":\"user\",\"content\":\"Say OK\"}]}' | head -c 400",
+          "description": "Test OmniRoute with the agent's max-token size"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

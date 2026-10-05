@@ -1,0 +1,15 @@
+{
+  "id": "be1b523736085b18483cdf0a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_014vX5ZqaQfj3yeR5ieC9TUV",
+        "type": "tool_result",
+        "content": "{\"id\":\"chatcmpl-1791199155059\",\"object\":\"chat.completion\",\"created\":1791199155,\"model\":\"qwen3-coder-next\",\"choices\":[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"OK\"}}],\"usage\":{\"prompt_tokens\":2920,\"completion_tokens\":1,\"total_tokens\":2921}}\nShell cwd was reset to C:\\Users\\shrey\\Desktop\\Elemental_harness",
+        "is_error": false
+      }
+    ]
+  }
+}
