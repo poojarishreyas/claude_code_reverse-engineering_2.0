@@ -1,0 +1,15 @@
+{
+  "id": "15a44a9a9faa3b811e422608",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01MGwmi72xqLWvj4WAq95ms1",
+        "type": "tool_result",
+        "content": "eval: 2 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\upstream\neval: e21ed97f29 [cross-package, indirect, multi-file] fix(desktop): deliver Windows console signals to CLI handlers\neval: e21ed97f29 -> error — agent turn failed: Service temporarily unavailable: all targets were skipped by pre-dispatch filters reset after 3s\neval: ed34a1d7fe [cross-package, multi-file] fix: keep queued question replies read-only after reload\neval: ed34a1d7fe -> error — agent turn failed: kiro/qwen3-coder-next: model — [400]: Improperly formed request. (HTTP 400)\n{\n \"id\": \"e21ed97f29\",\n \"src\": [\n  \"apps/desktop-host/src/cli.ts\",\n  \"apps/desktop-host/src/windows-cli-signals.ts\"\n ],\n \"tests\": [\n  \"apps/desktop/tests/windows-cli-signals.spec.ts\"\n ],\n \"tags\": [\n  \"cross-package\",\n  \"indirect\",\n  \"multi-file\"\n ],\n \"status\": \"error\",\n \"passed\": false,\n \"note\": \"agent turn failed: Service temporarily unavailable: all targets were skipped by pre-dispatch filters reset after 3s\",\n \"final\": \"\"\n}\n{\n \"id\": \"ed34a1d7fe\",\n \"src\": [\n  \"packages/client/ui-tool/src/client/tool/toolviews/ask-question-row.tsx\",\n  \"packages/client/ui-user-questions/src/client/index.ts\"\n ],\n \"tests\": [\n  \"packages/client/ui-user-questions/tests/browser-plugin.client.spec.ts\"\n ],\n \"tags\": [\n  \"cross-package\",\n  \"multi-file\"\n ],\n \"status\": \"error\",\n \"passed\": false,\n \"note\": \"agent turn failed: kiro/qwen3-coder-next: model — [400]: Improperly formed request. (HTTP 400)\",\n \"final\": \"\"\n}",
+        "is_error": false
+      }
+    ]
+  }
+}
