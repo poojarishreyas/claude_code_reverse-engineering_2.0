@@ -1,0 +1,15 @@
+{
+  "id": "13129239e56fe620c5451cbc",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012L3ZRDgGvANG32JYLx7gyu",
+        "type": "tool_result",
+        "content": " .../testing/2026-09-29-file-finding-evaluation.md  |  1 +\n scripts/eval/README.md                             | 19 ++++++\n scripts/eval/run-eval.ts                           | 69 ++++++++++++++++++----\n scripts/eval/tasks.spec.ts                         | 48 ++++++++++++++-\n scripts/eval/tasks.ts                              | 61 ++++++++++++++++++-\n 5 files changed, 184 insertions(+), 14 deletions(-)\ndiff --git a/scripts/eval/tasks.spec.ts b/scripts/eval/tasks.spec.ts\nindex 54b7f32..75ea121 100644\n--- a/scripts/eval/tasks.spec.ts\n+++ b/scripts/eval/tasks.spec.ts\n@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os'\n import { join } from 'node:path'\n import { promisify } from 'node:util'\n import { afterEach, describe, expect, it } from 'vitest'\n-import { classifyCommit, mineTasks, parseGitLog, prepareWorkspace, removeWorkspace, taskPrompt } from './tasks.ts'\n+import { classifyCommit, difficultyTags, mineTasks, packageOf, parseGitLog, prepareWorkspace, removeWorkspace, taskPrompt } from './tasks.ts'\n \n const git = promisify(execFile)\n let root: string | undefined\n@@ -97,4 +97,50 @@ describe('mining and preparing from a real repository', () => {\n     await removeWorkspace(repo, workspace)\n     await expect(readFile(join(workspace, src), 'utf8')).rejects.toThrow()\n   })\n+\n+  it('deletes a source file the fix created instead of failing to restore it', async () => {\n+    root = await mkdtemp(join(tmpdir(), 'dsh-eval-tasks-'))",
+        "is_error": false
+      }
+    ]
+  }
+}
