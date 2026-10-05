@@ -5,7 +5,7 @@
 | session | `s-052b04d897d6d0d7` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:16:12.253Z |
-| requests | 111 (42 errored) |
+| requests | 111 (43 errored) |
 | tokens | in 4,992 · out 35,063 · cache read 7,274,526 · cache write 218,322 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
@@ -5284,4 +5284,6 @@ The file C:\Users\shrey\Desktop\Elemental_harness\scripts\eval\run-eval.ts has b
 ```
 Command running in background with ID: b7e4un481. Output is being written to: C:\Users\shrey\AppData\Local\Temp\claude\C--Users-shrey-Desktop-Elemental-harness\48fd0b89-0bb7-4d72-841b-60770e4d02b7\tasks\b7e4un481.output. You will be notified when it completes. To check interim output, use Read on that file path.
 ```
+
+> **Error** (connect) — This operation was aborted
 
