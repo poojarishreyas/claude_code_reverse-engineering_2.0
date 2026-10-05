@@ -1,0 +1,17 @@
+{
+  "id": "f7de8941e709c9b2bfae004e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "ok what u tested it was normla file serach or graph or file search +symbol",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
