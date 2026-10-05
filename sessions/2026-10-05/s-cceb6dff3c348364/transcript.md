@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
 | requests | 1 |
-| tokens | in 0 · out 0 · cache read 0 · cache write 0 |
+| tokens | in 2 · out 3,594 · cache read 57,947 · cache write 19,891 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -233,4 +233,63 @@ The following skills are available for use with the Skill tool:
 - anthropic-skills:morning: Render the user's morning brief as a styled HTML artifact, or set it up as a recurring weekday task. Use only when the user explicitly asks to run, see, or set up their morning brief, or if they invoke /morning by name. A question about their day, schedule, or calendar is not by itself a request for the brief; answer it directly instead.
 - anthropic-skills:onetake: Make short product / skill motion videos (10–30 s, narrated feature demos up to ~60 s): kinetic type, real UI rebuilt in HTML, beats that carry into each other, one HTML composition rendered frame by frame with real motion blur, synthesised sound, and an oracle that fails a slideshow. Use for launch video / promo / teaser / 做个动效短片 / 产品宣传片 / 介绍视频 / 发布视频 / 给 skill 或 app 做个视频, product feature dem
 ... [21,288 more characters in session.jsonl]
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+These localization papers fit our problem better than the last set. Last time, 4 of 6 papers were about code completion. These are about the exact task our eval measures: starting from a bug report or failing test, find the files to fix. The design below is built only from what we actually saw fail.
+
+## Start from the evidence
+
+In the 3 tasks we ran, the agent failed in 3 different ways:
+
+| Failure we saw | Is it a retrieval problem? |
+|---|---|
+| Edited the test file instead of the source (twice) | **No.** It's a guard/policy problem. |
+| Said "fix looks correct" while the tests were failing | **No.** It's a verification problem. |
+| Fixed one file and never found the dependent file in another package | **Yes.** This is the only retrieval failure. |
+
+The practical point: **2 of the 3 failures need no retrieval engine at all.** They are the cheapest to fix, so they come first. A retrieval engine alone would not have passed those tasks.
+
+## What each paper gives us, practically
+
+| Paper | Practical idea | Use it? |
+|---|---|---|
+| **AutoCodeRover** | Use the **failing tests themselves** to find the code: files that run during a failing test are suspects (spectrum-based fault localization) | **Yes, first.** We always have failing tests, which is a signal Claude Code doesn't use. |
+| **LocAgent** | A graph of files, classes and functions with import, call and inherit links, and simple tools to search and walk it | **Yes.** This is the core index. Build it with tree-sitter, not an LLM. |
+| **Repository Memory** | Use git history: files that were often changed together with the suspect file | **Yes.** It's almost free (`git log`) and targets the cross-package miss. |
+| **Agentless** | Narrow in steps (file → function → line), and show **signatures only** before full files | **Yes**, as a cheap "outline" read mode that saves tokens |
+| **SWE-agent** | Compact tool output, and check right after each edit | **Yes:** run a type check after each edit. A broken caller in another package shows up as a type error. |
+| **SemNav** | LSP plus a semantic graph, ranking candidates by evidence | **Partly.** "Show the evidence for each candidate" is good. LSP stays a fallback because of its RAM cost. |
+| **SweRank** | A trained embedding retriever plus an LLM reranker | **No, for now.** It needs trained models and an LLM call per query: slower and more expensive. Revisit only if the eval shows ranking is the bottleneck. |
+
+## The design: 4 phases, cheapest first
+
+### Phase 0: Guards (no index; fixes 2 of the 3 observed failures)
+- **Test-edit guard:** if a task gives failing tests, warn when the agent edits one of those test files.
+- **Verify-before-done:** if the agent says it's finished but hasn't run the tests since its last edit, nudge it once to run them.
+- **Type check after edit** (the SWE-agent idea): after an edit, run a fast incremental `tsc` on the affected packages and show only new errors.
+
+The type check alone might have caught the cross-package miss. If the first fix changed a type or a signature, the dependent file would have failed to compile. I can't confirm that without checking that bug's diff.
+
+### Phase 1: Suspects from the failure (AutoCodeRover + Repository Memory)
+At the start of a task, rank suspect files using three cheap signals:
+1. **Stack trace and error text:** file paths and symbol names taken directly from the failure.
+2. **Test coverage:** run the failing tests once with V8 coverage, and treat the source files they executed as suspects. This is precise and needs no LLM.
+3. **Co-change:** files that were historically committed together with the top suspects. This is what finds the "other package" file.
+
+The agent gets about 5 files, each with a one-line reason, such as "executed by failing test" or "changed together with X in 9 commits." If no signal is strong, the agent gets nothing; this is the Repoformer gate from the previous design.
+
+### Phase 2: Graph tools (LocAgent)
+- A tree-sitter index of files, classes 
+... [2,254 more characters in session.jsonl]
+
+_stop `end_turn` · 38.60s (ttft 16.25s) · in 2 · out 3,594 · cache r57,947/w19,891_
 
