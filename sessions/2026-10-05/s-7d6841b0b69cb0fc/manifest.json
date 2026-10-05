@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "s-7d6841b0b69cb0fc",
+  "title": "The following is the user's CLAUDE.md configuration. Treat it as context about the user's environment and intent. If ...",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-sonnet-5",
+  "credential": "22d5a5532969",
+  "startedAt": "2026-10-05T13:04:58.230Z",
+  "updatedAt": "2026-10-05T13:05:06.322Z",
+  "durationMs": 8092,
+  "requests": 3,
+  "errors": 3,
+  "events": 11,
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": [
+    "7d6841b0b69cb0fca79e504c",
+    "4385913d5c2946e12c39499b"
+  ]
+}
