@@ -1,0 +1,31 @@
+{
+  "id": "841087adde678b897b5485fe",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS/AYKEAgSGAI4AUIIdGhpbmtpbmcSDDFdZeP8Ktgs4q+WOxoMwR2l6Lm/mEBrbulGIjAGiEtttoTu+HE1J6czprwtXC2XK/JWxG0KiQVPo0PjkKDVBvvihg8M1Y/ofXUnemcqmQZ2YRWyk8KFIh3/rqTYebPzioLepkE5UOFFIdhZKneuBvyJMSnmNe5itLAWL4wiD7N8m98yLeJqcfQZuLN8IYq+WI3usAc2sIbl2nY6+2Pms+nMTln9GxV/RvoUmpNrNJN1X7hnbn7jib2wsrvNRTbfua0Jm0Ytilu9DvAmwsZSuaQ0QZWC3WesyFB2vXisXjJIv2UDG8GffY3qsjZhLdlPiwe4j/QIfOkq/nB/rHCFbBqGkBY2tdQ6lZFlyq6FEzDPxkN4mqJ1PCdu83VCe3W4KMlhL6xXzwNAvv2VHwrvZF4MMhAzATyibqNLkPP5cz+5A2QIM+cZZ8tgzzRNZY+Q25YVfbGgioRcar8+z7GNSoRTxQpYhegKma/P2AWgiC8MTiWCQKgbEdxKD4sSw0hUoFoz4A8fEilrPpPovA1f5MA3+7yqI2Y6YPf/gMu/yEHGE7cZ7sfZh1wGDocXoSK/CB3fkTrJaSwT2+unxOHlIMBgRdgwWfGh4AUCBM6tUKPKyAdaiTI6XDeFkdA6zP7pt6rH6Ci+R7xX8iS5heZ1gDGmiu73aLoyKpszSxwfhsyHqyTsdRZ98hHMrq8+pRUtJQ51nG3+uUyufrVLSepk/0PzwndTnAlaj+x0uJZjwO18f24Vj1KFGGKTEhZK95yTdsS26qOv/3opKxhQ4kfgt3Z4bX1crScys+pwBItomVDrI17iJ/agaaOV6+tupDeNY8cP6jvcG88qGo+r/Byw1qgjDyw2BWRr9rc1JqO+S/crym5n5gMIeT2BnDoNWo9VmElybis0e6IfFVktXHPW5wU8kx5HH3/DI807QXgMXHOSgvOUKAzPUZ5i6x5svCnHVv14NBIrt1rrzlSIGb6HSBT/Ecw5JOjD8ySuwnf5MDGjjGWsXHT/kgmEbOh1AZXmPpEVIbea3Q23MZc2UppLGZuvSyhaZo7EUjQaIavjIQAbyswDtmo7nkZtQ8No34CrgYTf6yNeel4yHu0qLI/tNFueRtWUHKXWUAbAdlT/V5Ko8t/jRcadxqCvvoytjVkpHiYEIR7cZAXCGAE="
+      },
+      {
+        "type": "text",
+        "text": "The LSP tool is confirmed. Last, I'll check what tree-sitter is used for."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_019Tef1T69qWtGsS42GmmohQ",
+        "name": "Bash",
+        "input": {
+          "command": "B=/c/Users/shrey/.local/bin/claude.exe; grep -a -oE \".{0,150}tree-sitter.{0,150}\" \"$B\" | tr -c '[:print:]\\n' ' ' | head -7 | cut -c1-300",
+          "description": "See what tree-sitter is used for in Claude Code"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

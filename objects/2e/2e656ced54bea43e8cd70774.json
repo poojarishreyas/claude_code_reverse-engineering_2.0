@@ -1,0 +1,19 @@
+{
+  "id": "2e656ced54bea43e8cd70774",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019Tef1T69qWtGsS42GmmohQ",
+        "type": "tool_result",
+        "content": "tree-sitter\ntree-sitter-cli\ntree-sitter-json\ntree-sitter-kotlin\ntree-sitter-typescript\ntree-sitter-yaml\ncutes its argument as a command \\u2014 cannot be statically analyzed\"}}if(MHn.has(r))return{ok:!1,reason:`Shell keyword '${r}' as command name \\u2014 tree-sitter mis-parse`};if(a){if(r===\"find\"||r===\"jq\")return{ok:!1,reason:`${r} through xargs \\u2014 stdin-appended arguments cannot be statically ana",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

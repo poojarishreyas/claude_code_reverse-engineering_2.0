@@ -1,0 +1,15 @@
+{
+  "id": "e34d84d777b85490072f5637",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RJ2xsz4gh9yVzJ6U5YywYx",
+        "type": "tool_result",
+        "content": "2.1.281 (Claude Code)\ngoToDefinition             8\nfindReferences             6\nworkspaceSymbol            8\ndocumentSymbol             8\ngoToImplementation         6\nincomingCalls              7\noutgoingCalls              7\nprepareCallHierarchy       7\nhover                      189\ntree-sitter                7\nts-morph                   3\ntextDocument/definition    2\nENABLE_LSP_TOOL            2",
+        "is_error": false
+      }
+    ]
+  }
+}

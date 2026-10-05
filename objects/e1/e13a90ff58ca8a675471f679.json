@@ -1,0 +1,18 @@
+{
+  "id": "e13a90ff58ca8a675471f679",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01LQDyfKZdvwojMdyCFbCiUR",
+        "name": "Bash",
+        "input": {
+          "command": "B=/c/Users/shrey/.local/bin/claude.exe; grep -a -A25 -F \"Interact with Language Server Protocol (LSP) servers\" \"$B\" | head -30 | cut -c1-250; echo =====; grep -a -oE \".{0,200}(No LSP server|lspServers|LSP server for).{0,200}\" \"$B\" | head -4 | cut -c1-400",
+          "description": "Extract the LSP tool description and server requirements"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "72db046ad23ded091f62ae50",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01RJ2xsz4gh9yVzJ6U5YywYx",
+        "name": "Bash",
+        "input": {
+          "command": "B=/c/Users/shrey/.local/bin/claude.exe; \"$B\" --version 2>/dev/null; for p in goToDefinition findReferences workspaceSymbol documentSymbol goToImplementation incomingCalls outgoingCalls prepareCallHierarchy hover tree-sitter ts-morph \"textDocument/definition\" ENABLE_LSP_TOOL; do printf \"%-26s %s\\n\" \"$p\" \"$(grep -c -a -F \"$p\" \"$B\")\"; done",
+          "description": "Search the Claude Code binary for code-navigation features"
+        }
+      }
+    ]
+  }
+}

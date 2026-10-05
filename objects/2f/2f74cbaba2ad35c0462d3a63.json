@@ -1,0 +1,31 @@
+{
+  "id": "2f74cbaba2ad35c0462d3a63",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS6AcKEAgSGAI4AUIIdGhpbmtpbmcSDK7zio+/P0jqYSr0jxoMUgNc5o2930cFYgqvIjDlCPIl2vum5vEtLZou1/6AYDF8sKbuPFhQ/wRz8nzzRXjILosfRz3BHfHOFjk1jv8qhQc6JgI/ycxgbr32ywZzBmc6SGfUETK4nZZ1Onbig0SgtrUN5ATgtaCVamrySHRx2SxKSZpJM+S00IPjS2fWEgk75gJ87brhOMtnNsPlOrKH2twHG1Y1IaXG7h/ZyR86+rI7z8ahzJ/oqctuqGwDDvOXXZLhkSRQN9v6x2ZttpGl8L9d8BmPoxCA92uG/Z2sppl4x5SrgVVqQiHWzegOJWmQsUn997+EAtiaskTlA3jUJWNq1hKKt3DHcZuDQO50mzFlw+rSxJ4ZgfkJdYXpBn8InA6f9hLkDc1jsAQzA7EEMU5mfOVLw0C0RzX8tkt3XagTl+LKjA22cTc06yoiMpCj5QnJ0Wo5CsB7FLTsuxCZ6KE+r7rXN8GU5GI1j8Dd2ePl5JHBgzd8UeJdGYKXm9v0r91nlUZ40jZYY/m0lfhTkkJcSX4oujCcRykxYkKSEQhP8JfJj7sYULr3oRhzUzJPZ29qulGDTAKKbG/xt1AeT4H3aZfIoRlsp9xEBQkTbvLRHt/gK5jASZUeFp4m3kpo6qOkwNSfMQ9dj83oVGktJpAcGFRa8m/cL3F+WxbnWlExxmGd0jJE2LDte54Sg6ax9La59ISMYyg3phiB3kJjCVuXDzsmjz0BcohbTzW9qeIZd7PEV/SgnanO09NwjjAgezKpU3PoJSkD6LItbWgiPHTn7dCbkklXDFDUhdj7l5tiTaLVnzDM1RoiibBBsMzKSEfVnLq0E8ZS/s/uUPIP+goirzJK0pedvWtcu+x2IDfGFB3vk99oE2ahVua3EtrQAqA1mMp6cHE1+RhLNK2DxFOAJdyptKw1bpqGX8NqJaxzv0KRhJh8o5kB+DdNuvnXodcB70iOBFkIN91ACMvXD58u5R79pXpJSz3v47nj/NKRA8F/dSdJrj5qqip4cNur07Iti/fO0/2g1vtDgNCVTDVX8oQ87p0K/BmpU42UOGYXlm1Lca9qRlmakpKFoYDNdfjGj/yxXG5Ba8iCzY7e5czjIvw43nOEAth1FNZOxNymMTi222/aOxHinmtE/g2DfP2T7yw5d4wHRxQdknrwwSsF8MlnPJ7Xfh8QCxItoWsfODmNGVvy2C26J87gt7JRcwToGaOjFOhFC+YXD+jg+8b55aZEkH3I+5jlKs82mMvUykUmn2P5fcR16Q0BwTTwlS08VRP1+G+W7ZK2tYMM202UhrxdGAE="
+      },
+      {
+        "type": "text",
+        "text": "The binary has language-server code. I'll pull out the actual tool text to see what it does and how it's turned on."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01GhPFCo4f1gFuocAYyecVsD",
+        "name": "Bash",
+        "input": {
+          "command": "B=/c/Users/shrey/.local/bin/claude.exe; grep -a -oE \".{0,300}ENABLE_LSP_TOOL.{0,300}\" \"$B\" | head -2; echo; echo =====; grep -a -oE \"[^\\\"'\\`]{0,40}(Interact with Language Server|goToDefinition: )[^\\\"'\\`]{0,900}\" \"$B\" | head -3",
+          "description": "Extract LSP tool gating and description from the binary"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
