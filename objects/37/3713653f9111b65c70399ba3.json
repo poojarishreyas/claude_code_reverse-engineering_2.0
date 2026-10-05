@@ -1,0 +1,17 @@
+{
+  "id": "3713653f9111b65c70399ba3",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The eval is running on task `3c17f569da` (install, failing tests, agent run, re-test). I'll report the result when it finishes.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
