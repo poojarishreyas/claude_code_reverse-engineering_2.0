@@ -1,0 +1,15 @@
+{
+  "id": "f106202193e924e881e434b1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012By6FNReqjHxqmBn7N1a7g",
+        "type": "tool_result",
+        "content": "Total: 15.7 GB   Used: 11.8 GB   Free: 3.9 GB\r\n\r\nApp                Count RAM (MB)\r\n---                ----- --------\r\nchrome                37     6238\r\nsvchost               89     1597\r\nMemory Compression     1      937\r\nclaude                 2      614\r\nmsedge                 7      418\r\nMsMpEng                1      361\r\nexplorer               1      354\r\npowershell             5      342\r\nmsedgewebview2         6      338\r\nnode                   3      282\r\n\r\n\r\nScratchpad exists: False",
+        "is_error": false
+      }
+    ]
+  }
+}

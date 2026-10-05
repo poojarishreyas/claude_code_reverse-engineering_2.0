@@ -1,0 +1,19 @@
+{
+  "id": "6e07b1039328f12ad4f903ec",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Wgup3xmtLYvAufHBbBJKZP",
+        "type": "tool_result",
+        "content": "Free: 5.6 GB\r\nChrome: 19 processes, 3.4 GB",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
