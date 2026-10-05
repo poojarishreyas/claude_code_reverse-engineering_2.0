@@ -5,8 +5,8 @@
 | session | `s-052b04d897d6d0d7` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:16:12.253Z |
-| requests | 43 (33 errored) |
-| tokens | in 852 · out 4,146 · cache read 658,555 · cache write 167,895 |
+| requests | 44 (33 errored) |
+| tokens | in 948 · out 4,264 · cache read 743,895 · cache write 169,097 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -1299,4 +1299,72 @@ I ran the baseline on one task through OmniRoute.
 **Next step:** pin OmniRoute to one model, then run about 5 more tasks with `--limit 5`. I haven't started that because it uses your credits. If the pattern holds (the right file found early, then the wrong fix), the better investment is prompt and verification changes, such as rejecting edits to test files, not a graph.
 
 _stop `end_turn` · 13.07s (ttft 12.83s) · in 2 · out 1,202 · cache r84,820/w520_
+
+---
+
+## req-0044 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 22 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01GTam4kkaSs51yawHX7D8qZ)_
+
+```
+packages/client/ui-deliverables/src/client/turn-deliverables.ts
+packages/client/ui-tool/src/client/tool/models/diff-card-model.ts
+packages/fs/tool-str-replace-editor/src/index.ts
+packages/client/ui-deliverables/src/client/turn-deliverables.ts:77:    case 'str_replace':
+packages/client/ui-tool/src/client/tool/models/diff-card-model.ts:65:    if (command === 'str_replace') {
+packages/fs/tool-str-replace-editor/src/index.ts:104:  command: 'view' | 'str_replace' | 'insert',
+packages/fs/tool-str-replace-editor/src/index.ts:289:  const oldValue = requiredForCommand(oldStr, 'old_str', 'str_replace', false)
+packages/fs/tool-str-replace-editor/src/index.ts:291:  const info = await statExisting(ctx, target, 'str_replace', exec)
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+I ran the baseline on one task through OmniRoute.
+
+**Task `3c17f569da`** (a fix to the settings page's Creator entry): the real fix changed `AgentPresetSection.tsx`, `index.ts` and `locales.ts` in `packages/client/ui-agent-preset/src/client/`.
+
+| Metric | Result |
+|---|---|
+| Tests pass after the agent's change | **no** |
+| Edited a file the real fix changed | **no** |
+| First step that read a file the real fix changed | step 1 |
+| Steps / tool calls | 30 / 29 (10 reads, 5 greps, 4 globs, 4 shell) |
+| Tokens | 1.24M input, 1.8k output |
+| Edited the test file | **yes**, which the task forbids |
+
+**What happened:** finding the file was not the problem. The agent read one of the files the real fix changed at step 1, and it even noted that `index.ts` injects `useDeveloperTools`. It then "fixed" the failure by changing the test to pass that prop, instead of changing the source so the Creator entry no longer depends on it. That is a reasoning failure, not a navigation failure, and symbol tools or a code graph would not have changed it.
+
+**Caveats:**
+- **One task proves nothing.** It's an early signal only.
+- **The model wasn't fixed.** OmniRoute switched between models during the run; my two probes came back from Fable and from `qwen3-coder-next`. A baseline should use one fixed model, so set OmniRoute to a single model rather than a combo before running more.
+- **One call may not be counted correctly.** The agent made one `str_replace` call, which isn't a name the metric counts as an edit. I believe the call failed (the harness only registers `str_replace_editor`), but the workspace was cleaned up, so I can't confirm that.
+- **It's expensive.** 1.24M input tokens for a single task, so a 10-task run is about 12M tokens.
+
+**Next step:** pin OmniRoute to one model, then run about 5 more tasks with `--limit 5`. I haven't started that because it uses your credits. If the pattern holds (the right file found early, then the wrong fix), the better investment is prompt and verification changes, such as rejecting edits to test files, not a graph.
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+We're measuring whether the agent struggles to find the right file before building symbol tools or a code graph. One OmniRoute task ran: the agent read a right file at step one but edited the test instead. Next, pin OmniRoute to one model and run about five more tasks.
+
+_stop `end_turn` · 3.00s (ttft 2.28s) · in 96 · out 118 · cache r85,340/w1,202_
 

@@ -1,0 +1,15 @@
+{
+  "id": "7dc6ce1363c08d6097933e95",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01GTam4kkaSs51yawHX7D8qZ",
+        "type": "tool_result",
+        "content": "packages/client/ui-deliverables/src/client/turn-deliverables.ts\npackages/client/ui-tool/src/client/tool/models/diff-card-model.ts\npackages/fs/tool-str-replace-editor/src/index.ts\npackages/client/ui-deliverables/src/client/turn-deliverables.ts:77:    case 'str_replace':\npackages/client/ui-tool/src/client/tool/models/diff-card-model.ts:65:    if (command === 'str_replace') {\npackages/fs/tool-str-replace-editor/src/index.ts:104:  command: 'view' | 'str_replace' | 'insert',\npackages/fs/tool-str-replace-editor/src/index.ts:289:  const oldValue = requiredForCommand(oldStr, 'old_str', 'str_replace', false)\npackages/fs/tool-str-replace-editor/src/index.ts:291:  const info = await statExisting(ctx, target, 'str_replace', exec)",
+        "is_error": false
+      }
+    ]
+  }
+}
