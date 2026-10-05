@@ -1,0 +1,19 @@
+{
+  "id": "ee24237c8f43fe0b186741ae",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01AWLtjFMtqC7c1QNUtPpWmn",
+        "type": "tool_result",
+        "content": "C:\\Users\\shrey\\AppData\\Roaming\\npm\\claude.ps1\r\n\r\n\r\nFullName      : C:\\Users\\shrey\\AppData\\Roaming\\npm\\claude.ps1\r\nLength        : 520\r\nLastWriteTime : 9/25/2026 1:48:05 AM\r\n\r\n\r\n\r\n\r\nFullName                                                                               Length\r\n--------                                                                               ------\r\nC:\\Users\\shrey\\.local\\bin\\claude.exe                                                240767648\r\nC:\\Users\\shrey\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\.claude-code-mAD6Asru          \r\nC:\\Users\\shrey\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

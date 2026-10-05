@@ -1,0 +1,8 @@
+{
+  "id": "6563e8fa3df393320fb597ff",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "what claude code has"
+  }
+}
