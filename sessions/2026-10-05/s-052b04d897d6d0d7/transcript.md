@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:16:12.253Z |
 | requests | 145 (44 errored) |
-| tokens | in 7,195 · out 46,829 · cache read 11,758,928 · cache write 375,148 |
+| tokens | in 7,197 · out 50,227 · cache read 11,915,228 · cache write 377,037 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -7750,4 +7750,90 @@ kind: "package-reference"
 `dsh-fs-observation-policy` adds the read-before-edit policy to the `ctx.fs` filesystem contract ([`dsh-fs`](../fs/README.md)): it records which files the calling session has observed, and guards every write and edit with that record — an unseen file can only be created, an observed file can only be replaced at the version last seen, and editing requires a prior read. It participates through the `fs/*` events only, so it registers no service and has no public methods; removing it leaves the bare provider's unconditional mutation behavior instead of breaking the tools. Loading it alongside a backend (`fs-local`, `fs-sandbox`) and the tools (`tool-fs`) makes model f
 ... [956 more characters in session.jsonl]
 ````
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Here is a high-level design for adding an LSP tool to your harness, built to fit how your harness already works. It follows Claude Code's approach but fixes its biggest weakness.
+
+## The goal
+
+Let the agent ask questions about code meaning instead of searching text:
+- "Where is `close()` defined?"
+- "Who calls it?"
+- "What breaks if I change it?"
+
+## Where it fits
+
+```
+            Agent (model)
+                 │  calls tool:  lsp { op: "references", symbol: "close", file: "..." }
+                 ▼
+   ┌───────────────────────────────┐
+   │  tool-lsp   (model-facing)    │  ← validates input, turns a symbol name into a
+   │                               │    position, formats short results
+   └──────────────┬────────────────┘
+                  ▼
+   ┌───────────────────────────────┐
+   │  lsp-client  (service)        │  ← starts and stops language servers, speaks the
+   │  • server manager             │    LSP protocol, keeps open files in sync
+   │  • document sync              │
+   └──────────────┬────────────────┘
+                  ▼   via ctx.subprocess.spawn (already exists)
+   ┌───────────────────────────────┐
+   │  Language servers             │  typescript-language-server, pyright, gopls ...
+   │  (one per language + project) │  — existing tools, not written by us
+   └───────────────────────────────┘
+```
+
+There are two new packages, built the same way as your existing `tool-fs-search` (a Cordis plugin that runs ripgrep through the `subprocess` service).
+
+## The parts
+
+**1. `lsp-client`: the server manager.** It runs in the background.
+- **Starts lazily:** a server starts only when the agent first asks about that language, one per language per project root.
+- **Keeps it running:** the server stays alive between calls, shuts down after a few minutes idle, and restarts if it crashes.
+- **Speaks LSP:** it handles the JSON-RPC messages over stdin/stdout, through `ctx.subprocess.spawn`. The subprocess service already supports long-running processes with explicit stdio.
+- **Has hard limits:** at most N servers at a time and a memory cap. That matters on your 16 GB laptop, because a TypeScript server on a big monorepo can take 1–2 GB.
+
+**2. Keeping files in sync.** The language server must see the agent's edits, or it gives stale answers.
+- It opens files on demand, reading them through `ctx.fs`.
+- It listens to your existing `fs/*` events (the same ones the read-before-edit policy uses). After every `edit` or `write`, it tells the server what changed.
+
+**3. `tool-lsp`: the tool the model sees.** It's one tool with an `op` field:
+
+| op | Answers |
+|---|---|
+| `definition` | Where is this defined? |
+| `references` | Every place it's used |
+| `callers` | Which functions call this one? |
+| `implementations` | Who implements this interface? |
+| `symbols` | List the functions and classes in a file, or search them across the project |
+| `hover` | Its type and docs |
+
+**4. Configuration** (a YAML profile, like the rest of the harness): which server to run for which file types, how to find the project root (`tsconfig.json`, `pyproject.toml`), memory limits, and an on/off switch.
+
+## How to beat Claude Code
+
+| Claude Code's weakness | Our design |
+|---|---|
+| The model must give an exact line and character position. Models often get these wrong. | The model just names the symbol: `symbol: "close", file: "x.ts"`. The tool finds the position itself. |
+| Results come back as raw locations | Grouped by file, each with a one-line code preview, project-relative paths, capped, with overflow saved to the spill store you already have |
+| Off by default and needs plugin setup | TypeScript works out of the box; other languages are added through config |
+| Nothing tells the model when to use it | A short system-prompt section: "before changing a function, check its `references`/`callers`" |
+| Just errors if the server isn't ready | A clear message: "server still loading, try again or use grep" |
+
+## Safety
+
+- **Read-only:** the tool only asks questi
+... [1,910 more characters in session.jsonl]
+
+_stop `end_turn` · 36.59s (ttft 21.54s) · in 2 · out 3,398 · cache r156,300/w1,889_
 
