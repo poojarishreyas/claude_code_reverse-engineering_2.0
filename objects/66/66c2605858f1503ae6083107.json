@@ -1,0 +1,31 @@
+{
+  "id": "66c2605858f1503ae6083107",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSvgcKEAgSGAI4AUIIdGhpbmtpbmcSDG2ohY0NLE3FDQvKERoM+RohIY4gJ3e0XojyIjAkAwne/B/eS548qyTyM0exf7EtxnAyTx2R6S8w9z7qTD/NtDRnQolDhP4diMU+/8cq2wa2XmSynFbrlsYJDfkQ5F9JwF/btxwzzcslocLlg580e9LqmUo5ugBvD5E7aijK04RG/5NovxPpxkimk2yD04zcIErrLz7e2FuIZ9wX68E+mTQ5OUIJCdscKpPLaN/A5JEEe1QFQTdWCCrbT7t1LgJlEw16uoi/jjDkF6J70PNaQyzcoBOTwIWtBoi+NKy0+I4IxtGxWHgCfeiukm9mEJQIc3zNnoBMHxu3BKuSWGgrarSgvj6FzNWqZE4zzlLz/yqLVzmDLj2hy9wZdRAyoztlrovHVNVwOqO7KczDDZMUZu/7mpwQXr9DCBso/VOsgMlocKrtud7UQQ/Wfa60ESG5x0CqB4oTH/RYQ285v6tgMUFx62AgDv9JPHP4SsNnxmWSU48PibPs3i2w9uEVCrdBbxtGBusUrds3AzwksjT66dR+qMSpJHhK2n1zPIATt9otyBWtWzX/R19zteM7PDfmyo2fLSQzHeV/CnQSs89hDBwY2GBUx9iRd6tjn8Kw8SWM96bezMdMwf8oP2xMNiqgugouBtu/7MM5HY0wCkryQ3O/8fEfSJbtIMvnSPvnoQkoVElY91yMIZ2g5Kux+JekIIpsthKx8hYpwT/T4JnLmvuywvn0366c6burtItSPUYt5dTD8TYgu/6ED8h9JXmpReu4ZPLz8Qq3bWagjcz5q9OsYQPekQEnIgsy4v2QfZEFF5aIXy1Ve3dfE/dLKadU6c8MYt3lqua9y4LT5+0zTa7IYAVRuk96mEfx2KhxpChpTd2WgE/kIYD5c8S67YiR0sbAhGCRAh/3psDqicck4PvgiDu8XQu9oX40S0YHPi8n+SSN+JVZCEJxrqzV+M31WQbKWGeB74t0xX4zjE1XwNGLOHyOIIYM08QKinTf0YybVAHtItkIj7x6JvLWJ3VoD6imuQE1zeqo5INcJ8RbdAdktrGqlMx/Tp/4ps3ynieok1ewdTD4azSoyMoOJyP+5lkVgczQcb/FoemTKNH4hBEhFG3GXwLCIPAlBR2oLbAlQdD9SzhlVeN0nvSe37ae6KB5M8HMLP940A9XohnPO97HU/KdS0OAm9TmZygFns/UbGzwMB//m/qMEkA7jOpKT9jb5/dcAchJBJAQ/bsIfc7w5TtBjXTA2q10GAE="
+      },
+      {
+        "type": "text",
+        "text": "I'll check the code rather than answer from memory."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01PYeCsiupdwu617KFQYoCAm",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && ls packages; echo ---; ls packages/*/ | grep -iE \"lsp|symbol|ast|tree|sitter|index|graph|code-?nav|search|grep|glob\" ; echo ---; grep -rliE \"tree-sitter|web-tree-sitter|typescript-language-server|vscode-languageserver|textDocument/definition|ts-morph|go_to_definition|find_references\" packages --include=*.ts --include=package.json 2>/dev/null | grep -v node_modules | head",
+          "description": "Search packages for AST, symbol, LSP, or graph tools"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

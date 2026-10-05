@@ -1,0 +1,17 @@
+{
+  "id": "890b960314629c0bd9cef07c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "so my harness has only simple file search it does not have any other thing lkme ast symbol?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
