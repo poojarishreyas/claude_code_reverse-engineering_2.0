@@ -1,0 +1,15 @@
+{
+  "id": "36d53aad6ae4c80e4be4954b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HsfRGik8bgiwVMgqfaqMJW",
+        "type": "tool_result",
+        "content": "eval: 6 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\upstream\neval: e21ed97f29 [cross-package, indirect, multi-file] fix(desktop): deliver Windows console signals to CLI handlers\neval: e21ed97f29 -> error — Command failed: git checkout 197cb2a379955bbf0b815c71f45042eb4121c848 -- apps/desktop-host/src/cli.ts apps/desktop-host/src/windows-cli-signals.ts\neval: 4b7a45d154 [indirect] fix(pwsh): accept ASCII-padded completion status lines\neval: 4b7a45d154 -> ran (passed)\neval: 3c17f569da [multi-file] fix(web): 设置页的 Creator 入口不再受代码工作工具开关限制\neval: 3c17f569da -> ran\neval: ed34a1d7fe [cross-package, multi-file] fix: keep queued question replies read-only after reload\n3c17f569da.json\n4b7a45d154.json\ne21ed97f29.json\n3c17f569da [ 'multi-file' ] ran false {\"steps\":16,\"seen\":1,\"read\":1,\"rb\":0,\"edited\":[\"packages/client/ui-agent-preset/tests/section.client.spec.tsx\"],\"tests\":true,\"in\":515841} \n4b7a45d154 [ 'indirect' ] ran true {\"steps\":18,\"seen\":2,\"read\":3,\"rb\":1,\"edited\":[\"packages/shell/tool-pwsh-persistent/src/index.ts\"],\"tests\":false,\"in\":592228} \ne21ed97f29 [ 'cross-package', 'indirect', 'multi-file' ] error false undefined Command failed: git checkout 197cb2a379955bbf0b815c71f45042eb4121c848 -- apps/desktop-host/src/cli.ts apps/desktop-host/src/windows-cli-signals.ts\nerror: pathspec 'apps/desktop-host/src/windows-cli-si\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream 639ed01539 [master]\nC:/Users/shrey/AppData/Local/Temp/dsh-eval-ed34a1d7fe                                                                                      ed34a1d7fe (detached HEAD)",
+        "is_error": false
+      }
+    ]
+  }
+}

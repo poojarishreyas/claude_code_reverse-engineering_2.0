@@ -1,0 +1,19 @@
+{
+  "id": "f710be7c912a473a82019944",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01JCTx1GSmaiQiKQco4fmhJq",
+        "type": "tool_result",
+        "content": "C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream 639ed01539 [master]",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
