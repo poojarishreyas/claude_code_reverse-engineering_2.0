@@ -1,0 +1,19 @@
+{
+  "id": "74b85c18fbfb34311c74722e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HPoT892UNUU87kyVkd9jHE",
+        "type": "tool_result",
+        "content": "eval: 2 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\upstream\neval: e21ed97f29 [cross-package, indirect, multi-file] fix(desktop): deliver Windows console signals to CLI handlers\neval: e21ed97f29 -> ran — driver exited 3221225794: \neval: ed34a1d7fe [cross-package, multi-file] fix: keep queued question replies read-only after reload\neval: ed34a1d7fe -> error — Command failed: git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-ed34a1d7fe ed34a1d7fe1110f675527bce4fbfc386d0d9ee28\ne21ed97f29.json\ned34a1d7fe.json\nsummary.json\nsummary.md\n{\n \"id\": \"e21ed97f29\",\n \"status\": \"ran\",\n \"passed\": false,\n \"m\": {\n  \"steps\": 0,\n  \"toolCalls\": {},\n  \"firstSeenStep\": null,\n  \"firstReadStep\": null,\n  \"readsBeforeCorrect\": 0,\n  \"editedFiles\": [],\n  \"editedExpected\": false,\n  \"extraEdits\": [],\n  \"editedTests\": false\n },\n \"note\": \"driver exited 3221225794: \",\n \"final\": \"\"\n}\n{\n \"id\": \"ed34a1d7fe\",\n \"status\": \"error\",\n \"passed\": false,\n \"note\": \"Command failed: git worktree add --detach C:\\\\Users\\\\shrey\\\\AppData\\\\Local\\\\Temp\\\\dsh-eval-ed34a1d7fe ed34a1d7fe1110f675527bce4fbfc386d0d9ee28\\n\",\n \"final\": \"\"\n}\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream 639ed01539 [master]\nC:/Users/shrey/AppData/Local/Temp/dsh-eval-e21ed97f29                                                                                      e21ed97f29 (detached HEAD) prunable",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

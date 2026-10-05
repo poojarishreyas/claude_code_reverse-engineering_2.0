@@ -1,0 +1,13 @@
+{
+  "id": "144fdcc7cedf98898e39e37c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "In simple terms, both hard bugs failed because the AI service behind OmniRoute broke partway through, not because the agent did anything wrong:\n- **Bug 1:** OmniRoute said \"service temporarily unavailable\" and had no backend to send the request to.\n- **Bug 2:** the backend serving `qwen3-coder-next` (Kiro) rejected one of the agent's requests as \"improperly formed\".\n\nQuick test requests work again now, so it looks like a temporary glitch.\n\n**What I changed:** when the AI service fails mid-run, the results file now still records how far the agent got: the steps, the files it read, and whether it found the right file. Before, all of that was thrown away. This change isn't committed yet.\n\n**Now:** both bugs are running again. If the service fails again, we'll at least see whether the agent had already found the right files before it broke. I'll report back when it finishes."
+      }
+    ]
+  }
+}
