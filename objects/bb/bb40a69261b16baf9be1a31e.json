@@ -1,0 +1,19 @@
+{
+  "id": "bb40a69261b16baf9be1a31e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01KmT9k77LZ2R3qnsvtqbdPQ",
+        "type": "tool_result",
+        "content": "Oops! Something went wrong! :(\n\nESLint: 10.5.0\n\nESLint couldn't find an eslint.config.(js|mjs|cjs) file.\n\nFrom ESLint v9.0.0, the default configuration file is now eslint.config.js.\nIf you are using a .eslintrc.* file, please follow the migration guide\nto update your configuration file to the new format:\n\nhttps://eslint.org/docs/latest/use/configure/migration-guide\n\nIf you still have problems after following the migration guide, please stop by\nhttps://eslint.org/chat/help to chat with the team.",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
