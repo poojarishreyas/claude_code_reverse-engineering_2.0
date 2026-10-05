@@ -1,0 +1,19 @@
+{
+  "id": "7506e6c3faa0073fcedf7f83",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016fNHKAUkmWEccXgXGeJovH",
+        "type": "tool_result",
+        "content": "      7 name: 'edit'\n      2 name: 'str_replace_editor'\n     28 name: 'write'",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
