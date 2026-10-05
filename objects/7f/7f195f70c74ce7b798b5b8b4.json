@@ -1,0 +1,31 @@
+{
+  "id": "7f195f70c74ce7b798b5b8b4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSuwYKEAgSGAI4AUIIdGhpbmtpbmcSDI/HmUaBBTZ8FG8XqRoMG5YZrDcqt9GivnJeIjBjBn+Mh9IpF8EHo5Vd5KVTZYhZQaI7KU0rLRiVWmWDqfv/XHvjXWMSaZBA5rTxRZ0q2AVXROZWWkWCGf3QkzQLFx39Mrh4KLWOpGqkHKu83nORTN6hRgb2fK4dGEA5lBA7Vk4jJbtlfrgOemUYFYGV2dQ+VU5gPWRE7ip2WGjiZG5BptqYCJMNm1l7DGVWfvAYm0nRaqCzjUotHnuk6E5KbVAze6476R2UXPOrSdYbSRODwJrOjXhL8xgkc6V6y26lIRF/gZNFAKHG8zLNJLym84i+oJ0cjMY4+nEozFY2mTJIOidNqd/ApB7fOF1CeUSgndNPJGfOkD9x8fSL/L2fFv5eppftnkHTnc7UDmMYOMzuamBlQhiBAfmEgSzIXMMpDJ3gAtxGcHP+JudoAfUFALfkqs7v7eGxdtX4p1Iii9iH2cGw5QfPO6vpSWKBSx90TfWEv6+Mw3N8yhocsetgAZ7jiwHb1bEsynhRcYOC0vElqOYpxuV/dMZ5dA+U8BL82/K1glBcFQghHuEhGunY6TVzrpMwzo01heUZE0kS/2rSaW+BYDItnupiDzm1xOZxEDDZSMnhfRgCrSaLVJdpktEYErcU03MqNvjoMg21UyJ9Drz2c19EeKR9mLBLftenR6LlzmnX1UWVTuKozFiBQ2jVoZhRDASmcmP4gLg4VLYBUEe55MxVCHVY/aBE2VzXRrBMObPFwUAyqsBTmkIFHeHreSM61WvqX8HgnAlt8rnE4ihSOOPP+D5nobCf0Xgi9O3HQ9fzA/9IfFm+s0DAsvKee/qE2L4SXew56m8Ra9ba7t1xLlj3f6ya1BTa5Xbco2HaVXiBi6608C3d9vNs996lFRsRCVOwU4zxDcxansi5k2BILtRFjhMjqlTATjRV0QOj7FP/1hO4LFtva/pm8lDOExGrfoiYvn52u7Ced+IDycPau3XjPEazl2FXsm/NwbC1DHglG3scdhI40+imjAAOTm0cVMHuSauOkrBmYIkP3LtKJvKPPv7Zk39SUOPQQBiLcUlfHxYtsxgB"
+      },
+      {
+        "type": "text",
+        "text": "Yes, RAM. I'll check how much your computer has free right now."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01G43Lhtp2NHmcn8PJ5pyfsA",
+        "name": "PowerShell",
+        "input": {
+          "command": "$os = Get-CimInstance Win32_OperatingSystem; \"Total RAM: {0:N1} GB  Free: {1:N1} GB\" -f ($os.TotalVisibleMemorySize/1MB), ($os.FreePhysicalMemory/1MB); Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 8 Name, @{n='RAM (MB)';e={[int]($_.WorkingSet64/1MB)}} | Format-Table -AutoSize",
+          "description": "Show total and free RAM and the biggest processes"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

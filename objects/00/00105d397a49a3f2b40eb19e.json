@@ -1,0 +1,17 @@
+{
+  "id": "00105d397a49a3f2b40eb19e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "which memeory ram?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

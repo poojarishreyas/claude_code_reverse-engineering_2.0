@@ -1,0 +1,15 @@
+{
+  "id": "0961b0cd4cda1b74ac07a10d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01G43Lhtp2NHmcn8PJ5pyfsA",
+        "type": "tool_result",
+        "content": "Total RAM: 15.7 GB  Free: 3.7 GB\r\n\r\nName     RAM (MB)\r\n----     --------\r\nchrome        700\r\nopencode      625\r\nchrome        512\r\nMsMpEng       435\r\nchrome        420\r\nnode          387\r\nchrome        376\r\nclaude        349",
+        "is_error": false
+      }
+    ]
+  }
+}
