@@ -1,0 +1,8 @@
+{
+  "id": "9ce2e430fc26d9eea922405d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "is it using qwen 3 coder"
+  }
+}

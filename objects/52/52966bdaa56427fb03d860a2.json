@@ -1,0 +1,16 @@
+{
+  "id": "52966bdaa56427fb03d860a2",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Probably, but I can't confirm it from here.\n\n- **Small test request** (`max_tokens` 20): OmniRoute sent it to `anthropic/claude-fable-5`.\n- **Large test request** (`max_tokens` 32768): OmniRoute sent it to `qwen3-coder-next`.\n\nThe agent asks for up to 32768 tokens per request, the same size as the large test. That makes `qwen3-coder-next` the likely model for most or all of its turns. Earlier, OpenRouter rejected Fable at that size because the account lacked credits, which may be why OmniRoute falls back to Qwen.\n\nOmniRoute chooses the model separately for each request, so the run could use a mix of models. The OmniRoute dashboard or logs will show which model served each call. After the run, I can also check the session events in the main conversation, if they record the model.",
+        "cache_control": {
+          "type": "ephemeral"
+        }
+      }
+    ]
+  }
+}
