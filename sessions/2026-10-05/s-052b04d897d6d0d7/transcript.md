@@ -5,8 +5,8 @@
 | session | `s-052b04d897d6d0d7` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:16:12.253Z |
-| requests | 148 (44 errored) |
-| tokens | in 7,295 · out 52,247 · cache read 12,073,417 · cache write 542,550 |
+| requests | 149 (44 errored) |
+| tokens | in 7,803 · out 55,199 · cache read 12,400,981 · cache write 548,829 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -8085,4 +8085,180 @@ I found the paper. It's in the ACL Anthology as part of the ACL 2026 main confer
 - ProCC, whi
 ... [320 more characters in session.jsonl]
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+The AIRCoder paper checks out ([ACL 2026](https://aclanthology.org/2026.acl-long.1166/)): it scores code with several retrieval methods at once and learns how much to trust each one per query, which it reports as 10.2× more efficient than other methods.
+
+Before the design, one important point: **4 of these 6 papers solve a different problem from ours.** AIRCoder, Repoformer, CodeRAG and RepoCoder are about code completion, meaning predicting the next lines at a cursor. Our problem is an agent finding which files to fix. Their ideas still transfer, but not their systems. RepoGraph and CodePlan are about agents and multi-file edits, which is exactly where our test failed.
+
+## What we take from each paper
+
+| Paper | Idea we take | What we skip and why |
+|---|---|---|
+| **RepoGraph** | A code graph (definitions, references, imports), and show the agent a symbol's neighbourhood: what it uses and what uses it | Nothing major; this is the core |
+| **CodePlan** | **Change impact:** after an edit, find other code that depends on what changed. This directly fixes the missed second file in our hard bug. | The full planning system; too heavy |
+| **AIRCoder** | Mix several retrieval signals (text, symbols, graph) with weights that adapt per query | Its learned fusion model. Start with simple rank fusion, and learn weights later from eval data. |
+| **Repoformer** | **Only retrieve when it helps.** That's where most of the cost saving comes from. | Its trained self-check model. Use simple rules instead: free and instant. |
+| **CodeRAG** | Retrieve along several paths at once, then rerank | LLM reranking: it costs money and time on every query |
+| **RepoCoder** | Retrieve again using what was just learned | Nothing separate: the agent loop already does this, and we hook it after edits |
+
+## The design: 4 layers, cheapest first
+
+```
+ Task arrives (e.g. failing tests)
+        │
+        ▼
+ ┌─────────────────────────────────────────────────────────┐
+ │ L3  Seed + gate (Repoformer)    rule-based, no LLM       │
+ │     strong signal? → hand the agent 3–5 likely files     │
+ │     weak signal?   → inject nothing (save tokens)        │
+ └───────────────┬─────────────────────────────────────────┘
+                 ▼
+ ┌─────────────────────────────────────────────────────────┐
+ │ L2  Agent tools                                          │
+ │   code_search(query)   multi-path + fusion  (CodeRAG,    │
+ │                        AIRCoder)                         │
+ │   code_context(symbol) def + callers + callees, compact  │
+ │                        (RepoGraph)                       │
+ │   impact(edited)       who depends on what changed       │
+ │                        (CodePlan)                        │
+ │   + existing grep / glob / read                          │
+ └───────────────┬─────────────────────────────────────────┘
+                 ▼
+ ┌─────────────────────────────────────────────────────────┐
+ │ L1  Code index (RepoGraph)  built once, updated per edit │
+ │     symbols · imports · calls · references · paths       │
+ │     tree-sitter parse, cached on disk by file hash       │
+ └───────────────┬─────────────────────────────────────────┘
+                 ▼
+ ┌─────────────────────────────────────────────────────────┐
+ │ L0  Precision on demand (LSP, the earlier design)        │
+ │     only when the index is ambiguous                     │
+ └─────────────────────────────────────────────────────────┘
+```
+
+### L1: The code index
+- **Builds a graph:** it parses every file with tree-sitter (fast, many languages, no language server needed) and records which files define and use which symbols, and which import which.
+- **Is cheap to keep fresh:** it's cached by file hash, so only changed files are re-parsed, and the existing `fs/*` events update it after every agent edit.
+- **Why not LSP for everything:** a TypeScript server can use 1–2 GB of RAM and take up to a minute to load; a tree-sitter index is roughly tens of MB. That's my estimate, to be measured
+... [3,942 more characters in session.jsonl]
+
+_stop `end_turn` · 30.74s (ttft 9.34s) · in 2 · out 2,945 · cache r162,115/w3,334_
+
+---
+
+## req-0149 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 171 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_017edLWnsBFUi9BsqLJqB3tG)_
+
+```
+Web search results for query: "AIRCoder Adaptive Integration of Multi-dimensional Retrieval Repository-level Code Completion ACL 2026"
+
+Links: [{"title":"AIRCoder: Adaptive Integration of Multi-dimensional Retrieval for Repository-level Code Completion - ACL Anthology","url":"https://aclanthology.org/2026.acl-long.1166/"},{"title":"Dataflow-Guided Retrieval Augmentation for Repository-Level Code Completion","url":"https://www.researchgate.net/publication/384212833_Dataflow-Guided_Retrieval_Augmentation_for_Repository-Level_Code_Completion"},{"title":"Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation","url":"https://arxiv.org/pdf/2609.01601"},{"title":"A Lightweight Framework for Adaptive Retrieval In Code Completion With Critique Model","url":"https://arxiv.org/pdf/2406.10263"},{"title":"Prompt-based Code Completion via Multi-Retrieval Augmented Generation","url":"https://arxiv.org/pdf/2405.07530"},{"title":"SaraCoder: Orchestrating Semantic and Structural Cues for Resource-Optimized Repository-Level Code Completion","url":"https://arxiv.org/pdf/2508.10068"},{"title":"(PDF) RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation","url":"https://www.researchgate.net/publication/369449786_RepoCoder_Repository-Level_Code_Completion_Through_Iterative_Retrieval_and_Generation"},{"title":"RepoCoder: Repository-Level Code Completion","url":"https://arxiv.org/pdf/2303.12570"},{"title":"Retrieval-Augmented Code Generation: A Survey with Focus on","url":"https://arxiv.org/pdf/2510.04905"}]
+
+I found the paper. It's in the ACL Anthology as part of the ACL 2026 main conference proceedings.
+
+**Paper details**
+- **Title:** AIRCoder: Adaptive Integration of Multi-dimensional Retrieval for Repository-level Code Completion
+- **Authors:** Chuanqi Shi, Miao Gao, Zhiqiang Gao
+- **Venue:** Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), July 2026, San Diego, California, United States
+- **Anthology ID / pages:** 2026.acl-long.1166, pages 25458–25470
+- **Link:** https://aclanthology.org/2026.acl-long.1166/ (PDF: https://aclanthology.org/2026.acl-long.1166.pdf)
+- **Informal citation:** Shi et al., ACL 2026, BibTeX key `shi-etal-2026-aircoder`
+
+**Method:** AIRCoder uses a structure-preserving chunking strategy and a lightweight fusion module. It learns context-dependent weights so it can adaptively combine retrieval metrics for each query.
+
+**Results:** On CrossCodeEval and RepoEval, AIRCoder improves exact match by 4.63% on average over the best baseline. It is also 10.2× more efficient and generalizes well across Python, Java, C#, and TypeScript.
+
+**Related work:** The search also turned up other repository-level code completion methods, which may be useful for comparison:
+- RepoCoder, which uses iterative retrieval and generation
+- DraCo, which uses dataflow analysis to retrieve dependency contexts such as function or class definitions
+- ProCC, whi
+... [320 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+The AIRCoder paper checks out ([ACL 2026](https://aclanthology.org/2026.acl-long.1166/)): it scores code with several retrieval methods at once and learns how much to trust each one per query, which it reports as 10.2× more efficient than other methods.
+
+Before the design, one important point: **4 of these 6 papers solve a different problem from ours.** AIRCoder, Repoformer, CodeRAG and RepoCoder are about code completion, meaning predicting the next lines at a cursor. Our problem is an agent finding which files to fix. Their ideas still transfer, but not their systems. RepoGraph and CodePlan are about agents and multi-file edits, which is exactly where our test failed.
+
+## What we take from each paper
+
+| Paper | Idea we take | What we skip and why |
+|---|---|---|
+| **RepoGraph** | A code graph (definitions, references, imports), and show the agent a symbol's neighbourhood: what it uses and what uses it | Nothing major; this is the core |
+| **CodePlan** | **Change impact:** after an edit, find other code that depends on what changed. This directly fixes the missed second file in our hard bug. | The full planning system; too heavy |
+| **AIRCoder** | Mix several retrieval signals (text, symbols, graph) with weights that adapt per query | Its learned fusion model. Start with simple rank fusion, and learn weights later from eval data. |
+| **Repoformer** | **Only retrieve when it helps.** That's where most of the cost saving comes from. | Its trained self-check model. Use simple rules instead: free and instant. |
+| **CodeRAG** | Retrieve along several paths at once, then rerank | LLM reranking: it costs money and time on every query |
+| **RepoCoder** | Retrieve again using what was just learned | Nothing separate: the agent loop already does this, and we hook it after edits |
+
+## The design: 4 layers, cheapest first
+
+```
+ Task arrives (e.g. failing tests)
+        │
+        ▼
+ ┌─────────────────────────────────────────────────────────┐
+ │ L3  Seed + gate (Repoformer)    rule-based, no LLM       │
+ │     strong signal? → hand the agent 3–5 likely files     │
+ │     weak signal?   → inject nothing (save tokens)        │
+ └───────────────┬─────────────────────────────────────────┘
+                 ▼
+ ┌─────────────────────────────────────────────────────────┐
+ │ L2  Agent tools                                          │
+ │   code_search(query)   multi-path + fusion  (CodeRAG,    │
+ │                        AIRCoder)                         │
+ │   code_context(symbol) def + callers + callees, compact  │
+ │                        (RepoGraph)                       │
+ │   impact(edited)       who depends on what changed       │
+ │                        (CodePlan)                        │
+ │   + existing grep / glob / read                          │
+ └───────────────┬─────────────────────────────────────────┘
+                 ▼
+ ┌─────────────────────────────────────────────────────────┐
+ │ L1  Code index (RepoGraph)  built once, updated per edit │
+ │     symbols · imports · calls · references · paths       │
+ │     tree-sitter parse, cached on disk by file hash       │
+ └───────────────┬─────────────────────────────────────────┘
+                 ▼
+ ┌─────────────────────────────────────────────────────────┐
+ │ L0  Precision on demand (LSP, the earlier design)        │
+ │     only when the index is ambiguous                     │
+ └─────────────────────────────────────────────────────────┘
+```
+
+### L1: The code index
+- **Builds a graph:** it parses every file with tree-sitter (fast, many languages, no language server needed) and records which files define and use which symbols, and which import which.
+- **Is cheap to keep fresh:** it's cached by file hash, so only changed files are re-parsed, and the existing `fs/*` events update it after every agent edit.
+- **Why not LSP for everything:** a TypeScript server can use 1–2 GB of RAM and take up to a minute to load; a tree-sitter index is roughly tens of MB. That's my estimate, to be measured
+... [3,942 more characters in session.jsonl]
+
+#### ASSISTANT
+
+start building step 1
+
+_stop `end_turn` · 2.04s (ttft 2.04s) · in 506 · out 7 · cache r165,449/w2,945_
 
