@@ -1,0 +1,15 @@
+{
+  "id": "b735e8763e9f88fab82a3d7e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0135rDZq92FNXqrskuHQgYiu",
+        "type": "tool_result",
+        "content": "Free: 4.8 GB",
+        "is_error": false
+      }
+    ]
+  }
+}

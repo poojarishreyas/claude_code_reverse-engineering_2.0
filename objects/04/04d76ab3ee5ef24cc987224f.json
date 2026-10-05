@@ -1,0 +1,18 @@
+{
+  "id": "04d76ab3ee5ef24cc987224f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjQcKEAgSGAI4AUIIdGhpbmtpbmcSDP8qqzGakICMNnPevxoMBlYCBR+Mszkd5tqlIjCTPqG+8T1EMh9ppbk782cKO7wUjpjc4ciz0FQPXJyXWgBgd0e1HMW8uCsYNQ9vO3sqqgYSrsCVIrw3bYZHx8JCh9StuM0NZFDZH33khxco7IQB4PiK0ZoyfT9EDMNFoQqTYhEMv+4J1SPLBt5dfvx6lpUq3i4Hm9MBBTXILEUueO0l9/CaNpT1hy6++Tb7zvlWLPsUSp1yRxbH8dt45vyAWdBiAQsnrHwkMQxHPTrfl1d8VgzWyDo3sXn7mxSoshMbmbN6kLJObJtVpOLSxISqiWZBPvZsFoTRbL/u4/USr8vlHclDyALOW84sgLqaSgXfiyhoqOQRRWmxkJyGdXCFbhIapcdAKtZyjGLknfnYzX13EgDOq2813Ky8xp8jRLmsah7QnrKpp00iVq5Mo7501Fn+arJUKvMMWIrNMS4emScHCVnej4PiXy5k92f43R7ypD0og08Ry2KnpNHG96oyh3fPNEBj8gCP/i2ARn/TZ2d9vCBKKJodtqb4JD+/lhtNlqKriOSlLN7GagVAsHTiiCZDuREArVThHrCNxEv7KqLkweMwcsdnOTVYoAWcNXyQP27z/PVPsISNTcU3BBKJG9YLU1htqf6naBrchfiuBS0rnV/M6lK09ieyEigCaxhSYLjgWT5Ss0kiiVrV2LkNElh+zL5l+3jZbYNxQGwlwrnRPWVbDP8pRXv2A0cb/W4Ax4IqpxZ8oqeqFLG2z8hep8strLLcgiIlcJWBssslGZuuOoJVh0SKNAII+tZD+RuqchrHKd1jgNhNECp2XpT+97AeZHvikdt9/A8iFgfNsNpwLSJ1wnrReho9bBY/+NXBuFwfI6QuqKtkcdjoBZUnEzAZ33f7g3FGDaeoerOJaVItmLjLNrnsPCTF46oAtDg+KsqA4p9adtxX/4NQ9gkBS6s6okFXHM27N8nYN9PhtjJ6Ry7KJ3NSuMlWP03pt8MzrIc/J6jLCDXjZWMi0CvIDqnR6eJxAOqHATZfpu476Dhn1jBCqCdE3D02wfyhLQDEmgTKdpY6remDxSmeTid06uYxWHi6ZzcNiyNESxaWCCVGPH4YPX0hNsE9lZlMrt3RPOLccGuVugyqFI5OJbWfdTI4dhlCKnjC3G9uCNfx95PmXoaDBIkBLi/pK7QYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Your computer has 15.7 GB of RAM, and only 3.7 GB is free right now.\n\n**Why the test needs so much:** for each bug, the test does three heavy things on top of everything else that's running:\n1. It makes a full copy of the project and installs all its packages, which is a big install.\n2. It runs the project's tests, and the test runner starts several worker processes.\n3. It runs the agent itself, and OmniRoute (the router you set up) is running too.\n\nTogether these can take several GB at their peak. When free RAM got too low, Claude Code stopped the test to protect your system.\n\n**What's using RAM now** (the biggest processes):\n- **Chrome:** several processes, about 2 GB or more in total.\n- **opencode:** about 625 MB. If you aren't using it, closing it frees memory.\n- **Windows Defender** (MsMpEng): about 435 MB. It also scans every file the install creates, which slows things down.\n\n**To give the test room:**\n- Close Chrome tabs you don't need, and opencode.\n- Run the test from your own terminal; Claude Code won't stop it there.\n- Run one or two bugs at a time with `--limit 2` instead of 6.\n\nOnce some RAM is free, tell me and I'll restart it with a smaller batch."
+      }
+    ]
+  }
+}
