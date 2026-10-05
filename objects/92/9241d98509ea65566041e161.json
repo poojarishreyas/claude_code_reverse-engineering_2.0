@@ -1,0 +1,15 @@
+{
+  "id": "9241d98509ea65566041e161",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01N1PALiHn8EJYEV7hMCZPHP",
+        "type": "tool_result",
+        "content": "packages/fs/tool-fs-search/src/glob.ts\npackages/fs/tool-fs-search/src/grep.ts\npackages/fs/tool-fs-search/src/index.ts\npackages/fs/tool-fs-search/src/glob.ts:312:    description: 'Find files whose paths match a glob pattern. Returns matching file paths — never directories — '\npackages/fs/tool-fs-search/src/glob.ts:320:        description: 'Glob pattern to match file paths against (e.g. \"**/*.ts\", \"src/**/*.test.js\"). '\npackages/fs/tool-fs-search/src/glob.ts:323:      path: { type: 'string', description: 'Directory to search in. Defaults to the session workspace; a relative path resolves against it.' },\npackages/fs/tool-fs-search/src/grep.ts:283:    description: 'Search file contents with a ripgrep regular expression. Returns matching lines with line numbers, grouped by file. '",
+        "is_error": false
+      }
+    ]
+  }
+}

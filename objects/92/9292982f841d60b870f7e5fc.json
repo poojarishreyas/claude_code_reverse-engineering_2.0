@@ -1,0 +1,27 @@
+{
+  "id": "9292982f841d60b870f7e5fc",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1QYKEAgSGAI4AUIIdGhpbmtpbmcSDFt1IacsnSruamr98xoMOXD0QmIrXVvGE8U4IjC0yKh5WOqI5Z236GBICIJZ3+/tG4aotiyg+O5uuALRFzc3/SPcmVnimiH8FB0at7cq8gV+qL6k4DVdoAQPTUrKq/iz1/ibG32CZbEijBvfppvcK3oVDz39CLAGBGGE6OfrgKmaO5HXTlhucBvzHIZHK8v0PS6UkVxtQP5YoccPWhfRuc7Y2vPfy+3AkzwckyouN6IBhYGc3JpbHMfVfyw9l3VekRA9o3J2LUPb3PftaqcFKVCGVF8csdeKPfbdfFNL+cbxqmrsYy/OG1SDh/8BRcToP/u+GNiBQXkPgRWfwqtnRSzNYsKNZo1bVjMDwmiKGcF/yO9stxpsWXWGDxJVgr67uYaW/3otmBL+p5KJwbeVyKb6USm/klqLqn2VQSmUCl+jx3b/zPbSssXSOCVcxYAZVUNVkQZqpddeB4xD4JCRWW4cmgGmUEtn0D1uWLfa3YRl5ujC8YbHkgbloC7VbpWM0zA/cO3GXHpsfafyiYqYTgJW/TEby0ps4DUxUvBt7jjArgshe6jW2QBRNrjq7U5CzbBcJZAgiKWYQV33qVCgvYNhW8fLnRuoafnZFmMxYufaSOTcygPYA74WggNHieba09E5D3bOHUzwG+9sqxbBKtZmT4Sw6eJBINA9gn3Qt5CEBJY44oa7WZRRDxjPKjn3d3Zic37LJkWwsv4h0j8EAB0sRjBnFL2sf2u/yeRffKmI58f70r4QdtfmxKOujk9S3/nDjLUFx1YcREXQOqRuB3po0KAEdZkpj2wnVwPwrRwFFEu422yOkwbzxqfi9zUvfm3ri83aJjy7CH6HjAeLgy81VjlYg/AsPm7a4KP1FWHS5lQUj/OgMKYge88c15YFKZ3DYTpJjhoklu+xCHQ0ta62poapnq2fY1GJCcVDvU7I+QgZXAYb3KIrox8PMD2jw89ETSs40cr3saWJxaiXHQm0+GrxW5b15bri4HRPZ2UmZxR/HT/QfXL3RshhAUMWRCjvvgeeeM6mbbXGgFb6QS/RqorTidrkFshazLPypsGbPxVbyiaoGtbMjihwVOo9SDl6usV+nGNiAKNzWcrJlyTPGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01N1PALiHn8EJYEV7hMCZPHP",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -rliE \"ripgrep|\\brg\\b|@vscode/ripgrep\" packages/fs/tool-fs-search/src packages/fs/tool-fs-search/package.json | head -3; grep -rn \"description:\" packages/fs/tool-fs-search/src/*.ts | head -4",
+          "description": "Check how the grep and glob tools search"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

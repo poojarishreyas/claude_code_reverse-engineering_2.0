@@ -1,0 +1,19 @@
+{
+  "id": "efca0d26923ffdb6adf70cb4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LvpDN9EYeWjUF7Le2Pi8DM",
+        "type": "tool_result",
+        "content": "ask_user_question bash cordis_define cordis_inspect_list cordis_inspect_query cordis_inspect_self cordis_run cordis_stop cordis_undefine create_goal edit get_goal glob grep interrupt_agent job_kill job_list job_output list_agents list_subagent_models pwsh ralph read read_image report schedule_create schedule_delete schedule_list send_message skill spawn_teammate str_replace_editor team_task_create team_task_get team_task_list team_task_update todo_write update_goal wait_agent web_fetch web_search write \n---\npackages/code-runtime:\nREADME.md\ncode-runtime\ncode-runtime-worker-thread\n\npackages/fs:\nREADME.md\nfs\nfs-local\nfs-observation-policy\nfs-sandbox\ntool-fs\ntool-fs-search\ntool-str-replace-editor\n\npackages/mcp:\nREADME.md\nmcp-client\n\npackages/subagent:\nREADME.md\nsubagent\nsubagent-fork-in-process\nsubagent-in-process-driver\nsubagent-spawn-in-process\ntool-subagent\ntool-subagent-control\ntool-subagent-report",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

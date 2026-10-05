@@ -1,0 +1,15 @@
+{
+  "id": "caec5a17a521c90186a1e3f5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PYeCsiupdwu617KFQYoCAm",
+        "type": "tool_result",
+        "content": "AGENTS.md\nCLAUDE.md\nREADME.md\napi\nattachment\nboot\nbundle\nclient\ncode-runtime\ncompaction\ncontext\ncore\ncredentials\nexperimental\nextensions\nfeedback\nfs\ngoal\nguard\nhooks\nhost\nidentity\ninteraction\njobs\nllm\nmcp\nplan\npreset\nruntime-diagnostics\nsandbox\nschedule\nsession\nsession-query\nsettings\nshell\nskill\nspill\nstorage\nsubagent\nsubprocess\nterminal\ntest-support\ntodo\ntypert\nutil\nweb\nwebhook\nworkflow\nworkspace\n---\ntool-fs-search\nweb-search-deepseek\nweb-search-exa\n---",
+        "is_error": false
+      }
+    ]
+  }
+}

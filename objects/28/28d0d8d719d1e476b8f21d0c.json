@@ -1,0 +1,17 @@
+{
+  "id": "28d0d8d719d1e476b8f21d0c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Yes, I checked the code, and your harness has only text-based file search. There's no AST, no symbols, no LSP and no code graph.\n\n**What I checked:**\n- I searched every package for code-understanding libraries (tree-sitter, language servers, ts-morph, \"go to definition\", \"find references\") and found none.\n- I listed every tool the agent gets. The only ones for finding code are:\n\n| Tool | How it works |\n|---|---|\n| `grep` | Searches text using ripgrep with regular expressions. It matches characters only, not code meaning. |\n| `glob` | Finds files by name pattern, such as `**/*.ts`. |\n| `read` | Opens a file. |\n| `bash` / `pwsh` | Runs shell commands, so the model could run something like `tsc` itself if it thought to. |\n\nThe other tools are for editing (`edit`, `write`, `str_replace_editor`), subagents, todos, goals, schedules, web search, and so on. None of them understand code structure.\n\n**What this means in practice:** when the agent needs to know where `close()` is used, it can only grep for the text `close(`. That finds every `close(` in the whole project, including unrelated ones, and misses calls that go through re-exports or renamed imports. A symbol tool would answer exactly: \"this `close` is defined here and called from these 3 files.\"\n\n**Two small exceptions, neither of them a code-understanding feature:**\n- **MCP support:** you could plug in an external server that provides symbol tools, but none is set up.\n- **`util/code-language`:** it only detects a file's language for syntax highlighting in the UI. The agent can't use it.\n\nThis is the same starting point as Claude Code and opencode, which also rely mainly on grep, glob and read. Adding symbol tools would be a real difference, but only if the test numbers show it helps.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

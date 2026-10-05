@@ -1,0 +1,31 @@
+{
+  "id": "b6981ce26cbbe49e3ea307d4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS2ggKEAgSGAI4AUIIdGhpbmtpbmcSDJcRPc6McyfkiTWkiRoMxmmuNvSn9eDVmiGwIjAWos3G0BVUM0qnYhFZsLiy5WEkZ9FrjCtn0eLADKTJznYz+RsuGOBcGk4XfgsDMgMq9wfQFyF39FGGifo0Geum1u2x7mDKWTUXUhbU/22ReMNKOBO1azs6AUhji4JZfXDjn908Qs4Ce2RnY7TnXGtyla8OrpHNsE5Mf5XyhQMVvV7tnvE3iMnEzL+H22AIRvy53Ma8rY3GonLdtcT61f3+ojJmBGZwNAIhja289kjfkcyy6eM8dpaIyOHjVJnZHX/Ac9PmI8mpAS0HwXRq6m5QCd73MkM9U7gUInTgR7qr4s3KKexCJ8uae6g3FgoMM/6F9ddmqpSK76EVZuGisWtKKrWkTZ0e66SlmuUsE74vxVclvqCMjZ5gukBhvjsME9a5PwO273ufU36i5O3Yfdd7vKmsqvvvr29pO99qCCawYr3kTgIN/RxAJD9XePAxrqj5IdK/NwLVVii21C9ntYQ4/RYPW2S11BH3ZAqDMoRGYntfGRPTaM3D7AZ4NHXtvEuTeFnf5pfVLK4aeFc/WJP/LFkwTuwu9m5ReJ2gQlMfiW8e9zElzcsMAg8xhd7cjzn+2to0aohMwmvqN8b0PXo4KzqjA6KN00tUGyRocoM0H6bLjJOcanMt7T94m5SBfv6fnXVs6GJDVLqGbQiAPcNh9zLcf1cfqVQYKO6k9LCA/90Ssg70O4n/Whd+9fMMV8HSkj/miadvrt99wdtqIVVMCXKXvgf3lezFLh/o3/LZ1jOOm5j69j+Wng98yW3Ogm7a1GbfEULKBa6cXpYqx2P0Ns8/RUGXOscO3kb+yjLNcs9i1QaDi2HwK18IhqyZ+/GQW6prx+kjAWDSdv1s/LEpau9jeFSM4rcY5Z4u7ASdLVBP7itqC+uVghx7UntNZJNNsrLcRGvXrYl6rXHpWMeUr28aUqnGMUnZCVZXnUh10XyPtGGejqoXjqNT1WNn8oQi/G66fC3XLG7d0ft0QoEnj+Uyb8twPNpdn136707GSuEuWRPOSkrcEt52dW+OI/rudetBgyRDGKPa/CBMvSJYi6oIC6dxEAVHygGg5QK1QQ5li/V5/ruNR65l0DqPuVHdg7yZRY+cFedWgx1pSHvnGfoAXLykf1cOpOAMX09ABxvzrGOzxMtFWL7LEEAYQRGGCsohoLcSAbma6KuqIugIg8zbP+GE4jtmOosn8EIapjSIbsNx3kTOPqEDmZMfpLaYzyAhJBc9NaS7RbYGk8QA+L3+i8p0X6FNB/TjqSs87szjW1E7vq/G/S3H7Dd+SF1egJZWkyzsStRvP0WL6BiBUHDURU4/2EVgK6P10yBFqTRoKVDSbvYGZ2L5cCzDjRVHKfkcQrk+A3HWu7zP9Xsnd3cgNJM8CDM6HHqhTvx8NnYbn+arCvK4rN5dxsKu/UH2xXQVLKg9tjwPGAE="
+      },
+      {
+        "type": "text",
+        "text": "No AST, symbol, LSP, or graph library appears anywhere. Next I'll list every tool the agent actually gets, to be complete."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01LvpDN9EYeWjUF7Le2Pi8DM",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -rhoE \"^\\s+name: '[a-z_]+',\" packages/*/tool-*/src packages/*/*/src/tools* 2>/dev/null | sed -E \"s/.*'(.*)'.*/\\1/\" | sort -u | tr '\\n' ' '; echo; echo ---; ls packages/fs packages/code-runtime packages/subagent packages/mcp 2>/dev/null",
+          "description": "List tool names the harness registers"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
