@@ -1,0 +1,28 @@
+{
+  "id": "1cdbfb6f92efafd3c5114a44",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS5QkKEAgSGAI4AUIIdGhpbmtpbmcSDKDgIaF2+cQWXX5SThoMFDh7Xf0IY8Vua3cPIjCNa+rZQXjHD8QxzfVE70ic5k2NoAm+1oovAK/GnIZ+9/Jc/UJ5h3VB0b8zpIX/KgIqggk7Iwl73y5N62VGgF/bHxFtE9dkasflXkYU8swu1C2Yl8jqyFAhDrruJ4wuZImpEXJvOAWRk8aKomlDUQ1psAYVJ+AbUYuy6arfvFc2z5YVPp9ylOciIF5pdYWP5aQzrFCga4BJMo83bEk1UpXCLS/IyCCBC+II8pEadEI/6fCqB0tYpuRObaCbpCqhgkB4XEHz0en+c0ayPl/swPe07JZmcsx41nt/laeNX9bwKl6ASSn/52Tu79L4ezDK/XYQlvGoypIy+9r3gnklh8aqGvzq/WsWIZCV0DO+7OrgiYLVLWTDLC5bjpi8BKAeOoVSfSUqvM1ZvKo3QKpEDaMB5ljU6IC4aoY+jXMN8uat4wJHNz0H3Fh1tcZq7pAN5K8SxlBDffXx8YlsaRn+vSCay1+KwN375D7bzvi9gJKqHUheUL4ZALv7qsw3LgFK4evJUlPSZfXIqdcSqeSs20gg62wXGQzzWob5jtCoDwIVNhz7zzWKRhLnefEIbJ+Dmx2VXFvNLsfGZhr/CY5QJl+fi3GgdrLrSthk00RpMRjGSUu19Gn7RgN2xaV6Vy9j8oYEaPnoCuwn2g/h/sAAi6Xtf7Vur0SCwworQQplVYuKLYn1308eJ+/Wjwc3qu2HN4v6yTyJTzMeEusotF+akuVuqAj3BBWgDZJeMyhBEcx6sT4l4osv/IW1Rm6hcGUXED7uzIGeOKjPz/k6f2IV7CbD5s0qRBE5OYOlSULbvWGb74CN1FLVJVqVf/zBPZyfpGOmzhqN5oTF0jjdZIQoo+ewKtAB+nqOxnlF/V5WeU5uaxD0DKqPWh+/fmdfSdoYYYsaYlnx3m0RpJmut9c/GiFqqwDIKoDlmQQg0p2/ErbtPsJTtaAGD/ds5KjOz5t8pa3zhYTDbDv04AyKyBf3xbEO3yfLBm3XCDdPaA0uWVo+4T22YEcSapNvx15FJ+B7D1khcYUpMf3aHPoKdznPOHzQ9pnbKHckpyHmRR3jMKg7F5q4YsQLUWHf1Si3lfoMlpBTqgQJbqyJdvFBLZhdbf7HfGjXnlgRyxuLcuSI4h1rirY6Nu2bQMv/3BztZPeV6Dos8TBL9fH4m2pY9cQ3BnE8AR0UOO5FOlCcMWqTgUAvuncO3GBe1gwQWrIk7HvlJwshb+awYvJZHbIl7UqF818oxBU06I4+73Hr3H+8CXZrqEFqatzJaJn/dtlmmNZVmMrT3WgA2aI51HeBsS/VmNS/VKicN3IdanK7ny5E8XKFDdgRIkksGj59aV40knuXCtwgwUIpTZDaeMvTo65ckEzOF2THq96z0ZhyplE+A2xxd6tpfsbn3f4oqljROcUkwe4Vu93xrKEiYHRqQoRnsIavHRQonr7aHVf+jDOCoBj5xvzSxCxKFsVSXLUhiUn0Qg7NZNy1OANB+AAAzihlYM2fyPrZ7CRwtr9/pFhT9ONHJ3hWd73TPCRiO/cntMn8nbGWExk55i8kXnG0p5JdYsLab8E3+Xc/J8FT5XQpd01kDOgpWTR2xmH7Mw7iHlacD/jRNTu2uRgB"
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSnQgKEQgSGAI4AUIJbmFycmF0aW9uEgyylMYu4Dfx4lHt6WEaDLjjZ9Eo1XWMG/neViIw7m+QvRS5a5DSyylz7+wPzEd3oDERgNvHlKo8npL+ZAp5zqEt+erKtdImtkvAla1aKrkHC904EJv/tuHPEWXOYn1WvXo26jOhiXrV1eHZHIuBaMulfTJFMzvFqRQTd4y0xuqghEsFEZqdbg6JJBzALcypx0j1Syi5pySoOVbTV65dtS/2nInQDDJFcTLJ/h7SwpPVtpJD/sTJVOC8J7RUwLz+F8kPLzvopm6ISshdwlTMnlhs2Tw44UVVt59FPtWoyYp5A0WNvJR4rlyW6Rz5GjLo15e3aJbDlpQ3v8a/pwZUo9ujCpNszqCi7kFZs0mScvXYZbkxRy0duikN6sPkfvspPQL30ryZ/84KzDtXWjPqcJidEY71yyrEWZ3n4YwKgKjGpVQXpMDrm1V5AoxMEkaJtT1Id5F36nh0H2j0eep8Qv/Ql0iJ4Dkhvoma4iw9ElLXhwRstE4kzOsOWMUYRDNkZZ2ti5r3F8arb91xzidlu5S8nwl/CvBy8x3f595UfP41nBCrkp6rtzgJ6UfMlSSiKWWz+RM9USPXI9SyxMxWtC0y+8lTXX4AUG01qw4RVkjb5s1cIBzTUDlSSMjnq2GOpEK2N8ccrXA3HASQ2kWv9V7TCXTafC77xKMEXdkNRAVg8OlFbOKd0mtzoduNENMGmoAMYWatJUBZJqaDRfgSQbXUQ+chpo/G5lTmAyfse63V7CiYNKXXT5WX5UJZzHcqOSAkHPxfRCU/2nuI9qnCdIBBi55zRTrQr7RU3c57hT6x4f1ZwETFgRLmaD7mlqjHLTTexL8hKFENbsxIGNE3HuBcxDK94tXLDMJvETABOrx/XxOgIEuyscR2aW+QlU7ZNXAxDnlklrYW6HVhdaVF/7DHDSxZP3wbgab2b6YBr5059uDDiIiyxqwzVrgDdts7KyzvdAlcBw+9HKjKbGnqxJEGZQgHX+37Ja4ezK/cW7XWAKVo7gcN4yDbTcAHekeGrvxet/T7aAc2yLO1ipptwIVc6aSIAZpH5ij5TFs2Pl0isgJXv02atxWj0U11CQVsHM0AEWuP3k5wg7b7OEUQ7jGyvLLzUWzlLoZHFSOTF05o0JNz8EFP6vr5nNgo3gpigJmE+aG+1cl0r9nZXApNaqEeLu1Yd5mRiNm6VHCngy6zQ24bYp8hR66zAgpQeneC9WK8+O/hlR7OIJ89S5qRkdvh+BywLUJH+M0MIdVnvOa3iPeFFRwhZo3SIJA1Ojf78UDQsRrZrc7GPzNJ46YP8yb5T7Q7tt/lCK2Pufau2ujnPbs/dv1se86Pns1dFrOL+aAKKC+NtRLrmY/vauHClwA6VdaFXas6mNkYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01CNQnniGH7RGbEWPGUoyeMV",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && ls node_modules/.pnpm | grep -iE \"^(typescript|typescript-language-server|vscode-languageserver|vscode-jsonrpc|@typescript\\+native-preview|@vtsls)\" | head; echo ---; ls packages/subprocess; sed -n 1,40p packages/subprocess/*/README.md 2>/dev/null | head -60; echo ---; head -30 packages/fs/fs-observation-policy/README.md",
+          "description": "Check for language servers and long-lived process support"
+        }
+      }
+    ]
+  }
+}
