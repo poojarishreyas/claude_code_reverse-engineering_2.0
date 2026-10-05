@@ -5,8 +5,8 @@
 | session | `s-052b04d897d6d0d7` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:16:12.253Z |
-| requests | 61 (33 errored) |
-| tokens | in 1,490 · out 17,955 · cache read 2,370,027 · cache write 190,936 |
+| requests | 62 (33 errored) |
+| tokens | in 1,586 · out 18,036 · cache read 2,478,408 · cache write 191,001 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -2581,4 +2581,32 @@ While it runs, I'll document the difficulty tags in the README and the Agent Not
 The docs are updated. The 6-task hard run is still going in the background. Each task does a full install and test run plus up to an hour of agent time, so it will take a while. I'll report the results when it finishes.
 
 _stop `end_turn` · 1.95s (ttft 1.95s) · in 2 · out 65 · cache r107,202/w1,179_
+
+---
+
+## req-0062 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 54 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01DPb5aBE7gAriLMVXLw4jYc)_
+
+```
+ M .agents/notes/implemented/testing/2026-09-29-file-finding-evaluation.md
+ M scripts/eval/README.md
+ M scripts/eval/run-eval.ts
+ M scripts/eval/tasks.spec.ts
+ M scripts/eval/tasks.ts
+```
+
+#### ASSISTANT
+
+The docs are updated. The 6-task hard run is still going in the background. Each task does a full install and test run plus up to an hour of agent time, so it will take a while. I'll report the results when it finishes.
+
+#### ASSISTANT
+
+The goal is to measure whether the agent struggles to find the right file before we build symbol tools or a code graph. A 6-task run of hard edge cases on the pinned OmniRoute model is in progress; when it finishes I'll report the results and commit.
+
+_stop `end_turn` · 3.60s (ttft 2.26s) · in 96 · out 81 · cache r108,381/w65_
 
