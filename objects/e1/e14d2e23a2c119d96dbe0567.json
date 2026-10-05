@@ -1,0 +1,19 @@
+{
+  "id": "e14d2e23a2c119d96dbe0567",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01WD4B3Uz4Fp87ww4ikkG8HF",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && SP=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\" && cat > scripts/eval/_preview.ts <<EOF\nimport { difficultyTags, mineTasks, readTestSources } from './tasks.ts'\nconst repo = '$SP/upstream'\nconst tasks = (await mineTasks(repo, 120)).filter(t => !t.sourceFiles.every(f => /(^|\\/)locales?(\\/|\\.ts$|\\.tsx$)/.test(f)))\nconst counts: Record<string, number> = {}\nfor (const t of tasks) {\n  const tags = difficultyTags(t, await readTestSources(repo, t))\n  for (const tag of tags) counts[tag] = (counts[tag] ?? 0) + 1\n  if (!tags.includes('direct')) console.log(t.id, tags.join(','), '|', t.sourceFiles.join(' '), '<-', t.testFiles.join(' '))\n}\nconsole.log(tasks.length, counts)\nEOF\nnpx tsx scripts/eval/_preview.ts 2>&1 | tail -40; rm scripts/eval/_preview.ts",
+          "description": "Preview difficulty tags over recent candidate tasks",
+          "timeout": 600000
+        }
+      }
+    ]
+  }
+}
