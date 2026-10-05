@@ -1,0 +1,11 @@
+{
+  "id": "d7a64925cd9e1330abf18ea8",
+  "kind": "tools",
+  "value": [
+    {
+      "type": "web_search_20250305",
+      "name": "web_search",
+      "max_uses": 8
+    }
+  ]
+}

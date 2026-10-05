@@ -1,0 +1,18 @@
+{
+  "id": "1223f33ae27764b20a054671",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017edLWnsBFUi9BsqLJqB3tG",
+        "type": "tool_result",
+        "content": "Web search results for query: \"AIRCoder Adaptive Integration of Multi-dimensional Retrieval Repository-level Code Completion ACL 2026\"\n\nLinks: [{\"title\":\"AIRCoder: Adaptive Integration of Multi-dimensional Retrieval for Repository-level Code Completion - ACL Anthology\",\"url\":\"https://aclanthology.org/2026.acl-long.1166/\"},{\"title\":\"Dataflow-Guided Retrieval Augmentation for Repository-Level Code Completion\",\"url\":\"https://www.researchgate.net/publication/384212833_Dataflow-Guided_Retrieval_Augmentation_for_Repository-Level_Code_Completion\"},{\"title\":\"Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation\",\"url\":\"https://arxiv.org/pdf/2609.01601\"},{\"title\":\"A Lightweight Framework for Adaptive Retrieval In Code Completion With Critique Model\",\"url\":\"https://arxiv.org/pdf/2406.10263\"},{\"title\":\"Prompt-based Code Completion via Multi-Retrieval Augmented Generation\",\"url\":\"https://arxiv.org/pdf/2405.07530\"},{\"title\":\"SaraCoder: Orchestrating Semantic and Structural Cues for Resource-Optimized Repository-Level Code Completion\",\"url\":\"https://arxiv.org/pdf/2508.10068\"},{\"title\":\"(PDF) RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation\",\"url\":\"https://www.researchgate.net/publication/369449786_RepoCoder_Repository-Level_Code_Completion_Through_Iterative_Retrieval_and_Generation\"},{\"title\":\"RepoCoder: Repository-Level Code Completion\",\"url\":\"https://arxiv.org/pdf/2303.12570\"},{\"title\":\"Retrieval-Augmented Code Generation: A Survey with Focus on\",\"url\":\"https://arxiv.org/pdf/2510.04905\"}]\n\nI found the paper. It's in the ACL Anthology as part of the ACL 2026 main conference proceedings.\n\n**Paper details**\n- **Title:** AIRCoder: Adaptive Integration of Multi-dimensional Retrieval for Repository-level Code Completion\n- **Authors:** Chuanqi Shi, Miao Gao, Zhiqiang Gao\n- **Venue:** Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), July 2026, San Diego, California, United States\n- **Anthology ID / pages:** 2026.acl-long.1166, pages 25458–25470\n- **Link:** https://aclanthology.org/2026.acl-long.1166/ (PDF: https://aclanthology.org/2026.acl-long.1166.pdf)\n- **Informal citation:** Shi et al., ACL 2026, BibTeX key `shi-etal-2026-aircoder`\n\n**Method:** AIRCoder uses a structure-preserving chunking strategy and a lightweight fusion module. It learns context-dependent weights so it can adaptively combine retrieval metrics for each query.\n\n**Results:** On CrossCodeEval and RepoEval, AIRCoder improves exact match by 4.63% on average over the best baseline. It is also 10.2× more efficient and generalizes well across Python, Java, C#, and TypeScript.\n\n**Related work:** The search also turned up other repository-level code completion methods, which may be useful for comparison:\n- RepoCoder, which uses iterative retrieval and generation\n- DraCo, which uses dataflow analysis to retrieve dependency contexts such as function or class definitions\n- ProCC, which uses prompt engineering and a contextual multi-armed bandit algorithm to combine and adapt to multiple views of the code\n- SaraCoder, a hierarchical, resource-optimized retrieval-augmented code completion framework\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

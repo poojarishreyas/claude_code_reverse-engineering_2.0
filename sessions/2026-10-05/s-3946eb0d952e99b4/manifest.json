@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "s-3946eb0d952e99b4",
+  "title": "Perform a web search for the query: AIRCoder Adaptive Integration of Multi-dimensional Retrieval Repository-level Cod...",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-opus-5-5",
+  "credential": "ef49a1c49dfb",
+  "startedAt": "2026-10-05T20:11:29.656Z",
+  "updatedAt": "2026-10-05T20:11:38.796Z",
+  "durationMs": 9140,
+  "requests": 1,
+  "errors": 0,
+  "events": 6,
+  "usage": {
+    "input": 12626,
+    "output": 922,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": [
+    "3946eb0d952e99b446715ecf"
+  ]
+}

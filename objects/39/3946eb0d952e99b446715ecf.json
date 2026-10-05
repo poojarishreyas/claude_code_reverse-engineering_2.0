@@ -1,0 +1,13 @@
+{
+  "id": "3946eb0d952e99b446715ecf",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "Perform a web search for the query: AIRCoder Adaptive Integration of Multi-dimensional Retrieval Repository-level Code Completion ACL 2026"
+      }
+    ]
+  }
+}
