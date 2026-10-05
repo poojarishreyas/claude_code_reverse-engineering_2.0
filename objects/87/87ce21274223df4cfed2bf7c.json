@@ -1,0 +1,19 @@
+{
+  "id": "87ce21274223df4cfed2bf7c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CvjnwmygFDG5ADf95DBzck",
+        "type": "tool_result",
+        "content": " RUN  v4.1.8 C:/Users/shrey/Desktop/Elemental_harness\n\n\n Test Files  2 passed (2)\n      Tests  13 passed (13)\n   Start at  18:34:22\n   Duration  1.92s (transform 1.17s, setup 1.27s, import 171ms, tests 886ms, environment 0ms)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
