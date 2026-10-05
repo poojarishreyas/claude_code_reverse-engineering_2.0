@@ -1,0 +1,17 @@
+{
+  "id": "aa7f78e7fb9baaaa962d9f00",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "i need high level design of lsp",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

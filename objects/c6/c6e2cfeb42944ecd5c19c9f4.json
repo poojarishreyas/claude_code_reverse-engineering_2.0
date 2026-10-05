@@ -1,0 +1,8 @@
+{
+  "id": "c6e2cfeb42944ecd5c19c9f4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "i need high level design of lsp"
+  }
+}
