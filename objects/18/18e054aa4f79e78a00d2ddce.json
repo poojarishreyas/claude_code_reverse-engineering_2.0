@@ -1,0 +1,19 @@
+{
+  "id": "18e054aa4f79e78a00d2ddce",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017BVTwTySKkNJmLo7scR6AK",
+        "type": "tool_result",
+        "content": "0",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
