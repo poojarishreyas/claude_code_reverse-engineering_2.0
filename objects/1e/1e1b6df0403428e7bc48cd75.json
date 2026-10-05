@@ -1,0 +1,19 @@
+{
+  "id": "1e1b6df0403428e7bc48cd75",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_013t59QZ6KiiboDgSBAT6Rf7",
+        "type": "tool_result",
+        "content": "Total: 15.7 GB   Used: 11.6 GB   Free: 4.2 GB\r\n\r\n\r\nApp                     Count RAM (MB)\r\n---                     ----- --------\r\nchrome                     24     4194\r\nsvchost                    87     1572\r\nmsedge                     13     1073\r\nChatGPT                     9      793\r\nclaude                      2      634\r\nnode                        3      480\r\nMemory Compression          1      424\r\nMsMpEng                     1      400\r\npowershell                  5      342\r\nmsedgewebview2              6      333\r\nexplorer                    1      311\r\nOneDrive.Sync.Service       1      261\r\nRuntimeBroker               7      224\r\nUnzipWatcher                1      188\r\nStartMenuExperienceHost     1      166\r\nTaskmgr                     1      156\r\nTextInputHost               1      148\r\ndwm                         1      148\r\nSearchHost                  1      128\r\nWindowsTerminal             1      112",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

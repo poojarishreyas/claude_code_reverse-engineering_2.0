@@ -1,0 +1,8 @@
+{
+  "id": "d7b45362b30180c4ab4973f5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "what is using how much mmory?"
+  }
+}
