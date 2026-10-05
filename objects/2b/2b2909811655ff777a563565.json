@@ -1,0 +1,17 @@
+{
+  "id": "2b2909811655ff777a563565",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "can u tell m what happened in simple english",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
