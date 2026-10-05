@@ -1,0 +1,19 @@
+{
+  "id": "c1005831df9177ba062489bd",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "claude-sonnet-5[1m] is temporarily unavailable (overloaded), so auto mode cannot determine the safety of Bash right now. Wait a moment and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used.",
+        "is_error": true,
+        "tool_use_id": "toolu_01WrubGkbWkV15WxaEVPPwRN",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

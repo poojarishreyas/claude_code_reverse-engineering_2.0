@@ -5,7 +5,7 @@
 | session | `s-7d6841b0b69cb0fc` |
 | model | `claude-sonnet-5` |
 | started | 2026-10-05T13:04:58.230Z |
-| requests | 3 (2 errored) |
+| requests | 5 (5 errored) |
 | tokens | in 0 · out 0 · cache read 0 · cache write 0 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
@@ -79,4 +79,26 @@ _[no new input since the previous request]_
 _max_tokens 64 · buffered · 2 messages_
 
 _[no new input since the previous request]_
+
+> **Error** (http 529) — {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011Cfj8z1PW7FPNpyeH2Qy15"}
+
+---
+
+## req-0004 — claude-sonnet-5
+
+_max_tokens 64 · buffered · 2 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (http 529) — {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011Cfj8zHKwsRzS25jvpatdu"}
+
+---
+
+## req-0005 — claude-sonnet-5
+
+_max_tokens 64 · buffered · 2 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (http 529) — {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011Cfj8zg5RSKMsjTxFDafL4"}
 
