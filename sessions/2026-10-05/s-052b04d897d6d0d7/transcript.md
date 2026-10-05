@@ -5,7 +5,7 @@
 | session | `s-052b04d897d6d0d7` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:16:12.253Z |
-| requests | 87 (37 errored) |
+| requests | 91 (41 errored) |
 | tokens | in 3,244 · out 25,834 · cache read 4,943,271 · cache write 205,728 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
@@ -4034,6 +4034,54 @@ _[no new input since the previous request]_
 ## req-0087 — claude-opus-5-5
 
 _max_tokens 128,000 · streaming · 92 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+### Context changed — 42 tools
+
+- system prompt: [`b897085d50cb41320290475f`](../../../objects/b8/b897085d50cb41320290475f.json)
+- tool catalogue: [`9425ed578c7836196a30421d`](../../../objects/94/9425ed578c7836196a30421d.json)
+- tools: `Agent`, `Artifact`, `ArtifactComments`, `ArtifactData`, `AskUserQuestion`, `Bash`, `CronCreate`, `CronDelete`, `CronList`, `DesignSync`, `Edit`, `EndConversation`, `EnterPlanMode`, `EnterWorktree`, `ExitPlanMode`, `ExitWorktree`, `Glob`, `Grep`, `ListAgents`, `Monitor`, `NotebookEdit`, `PowerShell`, `PushNotification`, `Read`, `RemoteTrigger`, `ReportFindings`, `ScheduleWakeup`, `SendFeedback`, `SendMessage`, `Skill`, `TaskStop`, `WebFetch`, `WebSearch`, `Write`, `mcp__claude_ai_Claude_Docs__batch`, `mcp__claude_ai_Claude_Docs__create`, `mcp__claude_ai_Claude_Docs__delete`, `mcp__claude_ai_Claude_Docs__export`, `mcp__claude_ai_Claude_Docs__guide`, `mcp__claude_ai_Claude_Docs__query`, `mcp__claude_ai_Claude_Docs__read`, `mcp__claude_ai_Claude_Docs__update`
+
+---
+
+## req-0088 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 88 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0089 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 88 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0090 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 88 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0091 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 88 messages_
 
 _[no new input since the previous request]_
 
