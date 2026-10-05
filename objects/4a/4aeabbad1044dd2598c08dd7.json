@@ -1,0 +1,15 @@
+{
+  "id": "4aeabbad1044dd2598c08dd7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019SUZ9CrZaaJSZxAsV3JRFE",
+        "type": "tool_result",
+        "content": "196:      !candidate.name.startsWith('.')\n197:      && candidate.name !== 'node_modules'\n198:      && candidate.name !== '__pycache__')) {\n429:    name: 'str_replace_editor',\n501:export const name = 'tool-str-replace-editor'\ngrep: bundle/base/*.yml: No such file or directory",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "c241b69fd626529886cabe7e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HQpUbvGd427zJU4t5KWf1t",
+        "type": "tool_result",
+        "content": "<stdin>:17: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

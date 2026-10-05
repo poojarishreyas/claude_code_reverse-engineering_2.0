@@ -1,0 +1,19 @@
+{
+  "id": "2a054a3ea2ce18a874bdce8f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0153ZJx2rm7RHfnauTQR8fB9",
+        "type": "tool_result",
+        "content": "126:const IMPORT_SPECIFIER = /(?:from\\s+|import\\s*\\(\\s*|vi\\.mock\\(\\s*)['\"]([^'\"]+)['\"]/g\n131:  const stem = (parts.at(-1) ?? '').replace(/\\.(ts|tsx)$/, '')",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
