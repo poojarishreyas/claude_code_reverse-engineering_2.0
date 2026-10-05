@@ -1,0 +1,8 @@
+{
+  "id": "cde41f9d4c9f5c01a63ddace",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "how much memory does it ned?"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "28e7dd6b0afb95cbebe63ad1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "how much memory does it ned?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

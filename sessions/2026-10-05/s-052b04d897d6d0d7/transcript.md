@@ -5,8 +5,8 @@
 | session | `s-052b04d897d6d0d7` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:16:12.253Z |
-| requests | 103 (42 errored) |
-| tokens | in 3,962 · out 31,211 · cache read 6,336,970 · cache write 215,094 |
+| requests | 105 (42 errored) |
+| tokens | in 4,472 · out 32,109 · cache read 6,602,635 · cache write 215,999 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -4909,4 +4909,61 @@ Another option is to restart Claude Code with `CLAUDE_CODE_DISABLE_BG_SHELL_PRES
 closed chrome, run it now
 
 _stop `end_turn` · 2.52s (ttft 1.77s) · in 506 · out 11 · cache r131,803/w1,024_
+
+---
+
+## req-0104 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 104 messages_
+
+#### USER
+
+how much memory does it ned?
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+I haven't measured it, so this is an estimate based on what the test runs. The steps run one after another, so what matters is the heaviest single step, not all of them added up:
+
+| Step | Rough RAM |
+|---|---|
+| Installing the project's packages (`pnpm install`) | about 1–2 GB |
+| Running the tests (the test runner starts several worker processes, one per CPU core) | about 1–3 GB, the likely peak |
+| The agent itself (loads the whole harness and all its plugins) | about 0.5–1 GB |
+| OmniRoute plus Windows Defender scanning the new files, running the whole time | about 0.5 GB |
+
+**My estimate:** a peak of about 3–4 GB. To be safe, have about **6 GB free** before starting. You had 4.8 GB free and it still ran out, which fits: the test-run step probably went over.
+
+**How to make it need less:** I can make two changes to the eval itself.
+1. **Run the tests with one worker** (`--maxWorkers=1`). That probably cuts the test step to under 1 GB, which brings the peak down to about 2 GB. It's slower, but it would fit on your machine.
+2. **Skip the full install for each bug.** The packages could be reused instead of reinstalled every time. That saves time and memory, but it's more work to set up.
+
+If you want a real number instead of my estimate, I can add a small memory logger that records the peak RAM of each step during the next run.
+
+My recommendation is change 1 plus the memory logger, then try one bug. That should run even with only about 4 GB free. Should I do that?
+
+_stop `end_turn` · 12.95s (ttft 7.71s) · in 4 · out 892 · cache r132,827/w11_
+
+---
+
+## req-0105 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 106 messages_
+
+#### USER
+
+how much memory does it ned?
+
+#### ASSISTANT
+
+yes do that
+
+_stop `end_turn` · 4.54s (ttft 3.81s) · in 506 · out 6 · cache r132,838/w894_
 
