@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "s-b4438aa44346e089",
+  "title": "/** * File-finding evaluation runner. * * For each task mined from a repository's bug-fix history: prepare a worktree...",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-opus-5-5",
+  "credential": "22d5a5532969",
+  "startedAt": "2026-10-05T11:16:10.983Z",
+  "updatedAt": "2026-10-05T11:16:11.507Z",
+  "durationMs": 524,
+  "requests": 1,
+  "errors": 0,
+  "events": 5,
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": [
+    "b4438aa44346e0893d6ae712"
+  ]
+}

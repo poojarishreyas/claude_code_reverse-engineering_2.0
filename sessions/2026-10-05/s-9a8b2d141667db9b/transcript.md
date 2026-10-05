@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T11:15:20.162Z |
 | requests | 1 |
-| tokens | in 0 · out 0 · cache read 0 · cache write 0 |
+| tokens | in 637,502 · out 4,918 · cache read 0 · cache write 64,845 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -24174,4 +24174,56 @@ Your summary should include the following sections:
 8. Current Work: Describe in detail precisely what was being worked on immediately before this summary request, paying special attention to the most recent messages from both user and assistant. Include file names and code snippets where applicable.
 9. Optional Next Step: List the next step that you will take that is related to the most recent work you were doing. IMPORTANT: ensure that this step is DIRECTLY in line with the user's most recent explicit requests, and the task you were working on immediately before this summary request. If your last task was concluded, then only list next
 ... [2,361 more characters in session.jsonl]
+
+#### ASSISTANT
+
+<analysis>
+The session began with questions about how the harness works. It then compared compaction across three other tools, implemented seven compaction phases, and built an evaluation for file-finding. The latest work was running that evaluation live through the user's OmniRoute provider. The run was blocked because every upstream model OmniRoute tried rejected the request (403 OpenCode free tier, 402 OpenRouter credits). Security handling so far: I masked keys when reading the settings, and copied credentials only into temporary homes that are deleted after each task.
+</analysis>
+
+<summary>
+1. Primary Request and Intent:
+   - **Early questions about the Elemental (Lynx) harness:** indexing, query classifier, ReAct-style loop, context retrieval, how summarization works, and the tool-result pruner. All answered: no index, a single agent loop, an LLM summary plus a code pipeline.
+   - **Comparisons:**
+     - opencode, read from its source;
+     - Claude Code, read from the installed binary (user: "dont guess or assume … check claude code binary in my computer");
+     - NVIDIA Nemotron/NOOA, read from the open-source repos.
+   - **"push everything to github such that i can compare different version of compaction later"**: done; tagged `compaction-baseline`.
+   - **"complete all the phases"**: compaction phases 1–5, then v6 (no-tools reminder) and v7 (transcript path list).
+   - **Code navigation, symbol tools and code graph with blast radius:** the user said "use this approach only if it is truly needed and it will make better than claude code and nemetron". We agreed to measure first (Step 0), and the user replied "ok".
+   - **User clarified** that the graph and symbol tools are not implemented yet, then said "measure first there is omniroute provider that i have added in models".
+
+2. Key Technical Concepts:
+   - **Session storage:** an append-only event log plus a surface (seq numbers the model sees); replacements change the surface without deleting events; saved as JSONL.
+   - **compaction-basic:**
+     - 80% threshold, keeps the newest 16% word for word;
+     - the summary call replays the exact last request so the provider cache is reused;
+     - the instruction is the last user message; the summary is framed in `<compacted-summary>` tags.
+   - **Pruner:**
+     - protects the newest 5 results (`protectRecentResults`), acts only on 20k+ tokens (`minTokensSaved`);
+     - overflow recovery bypasses both safeguards;
+     - stores originals through the spill store.
+   - **Spill policy:** `maxInlineBytes` 50000, `previewBytes` 2000.
+   - **Continuation:** a transcript path list (`TRANSCRIPTS_HEADER`) plus up to 5 re-read files.
+   - **Thrash guard:** `thrashWindowSteps` 3, `thrashLimit` 3, `CompactionThrashError`.
+   - **Repo rules (AGENTS.md):** an Agent Note for every non-trivial change, 100% coverage on `packages/*/*/src`, README Model Experience sections, generated docs (`gen-config-catalog`, `gen-cordis-catalog`).
+   - **Eval harness (`scripts/eval`):**
+     - mines fix commits (1–3 source files plus specs, at most 12 files changed, locale-only skipped);
+     - prepares a worktree at the fix commit with the source reverted to the parent;
+     - runs the headless base driver (`packages/test-support/loader-smoke/tests/fixtures/base-driver.ts`) with the overlay `scripts/eval/eval.cordis.yml`;
+     - computes metrics from session events.
+   - **OmniRoute:**
+     - set up in `~/.dsh/settings.yaml` under `llm-pi-ai` providers;
+     - provider id `mylynx` (displayName omniroute), api `openai-completions`, baseURL `http://localhost:20128/v1`, model id `lynx harness`;
+     - `apiKeyEnv` `MYLYNX_API_KEY`, stored in `~/.dsh/.credentials.yaml` refs (not in the environment).
+
+3. Files and Code Sections:
+
+   **Compaction branches** (all stacked; pushed with tags v1–v7):
+   - `compaction-tool-result-pruner`:
+     - `src/config.ts`: `DEFAULTS` gained `protectRecentResults: 5` and `minTokensSaved: 20_000`, plus `spillMarker(ref)`.
+     - 
+... [8,535 more characters in session.jsonl]
+
+_stop `end_turn` · 50.74s (ttft 16.94s) · in 637,502 · out 4,918 · cache r0/w64,845_
 
