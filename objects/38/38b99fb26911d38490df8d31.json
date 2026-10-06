@@ -1,0 +1,15 @@
+{
+  "id": "38b99fb26911d38490df8d31",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01ENfkKxyAp6JnEgfkFpaaA6",
+        "type": "tool_result",
+        "content": "eval: 1f8cdc08a1 -> error — Command failed: git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-1f8cdc08a1 1f8cdc08a1d83dac2ab345725a0418325b48d771\neval: a59beb8ae3 [multi-file] fix(hmr): preserve manifest refresh with Office resolution\neval: a59beb8ae3 -> error — Command failed: git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-a59beb8ae3 a59beb8ae301ff84472dd7a50ecabdeb8dac8c23\neval: ed34a1d7fe [cross-package, multi-file] fix: keep queued question replies read-only after reload\neval: ed34a1d7fe -> error — Command failed: git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-ed34a1d7fe ed34a1d7fe1110f675527bce4fbfc386d0d9ee28\neval: 9633724b40 [indirect] fix(app-boot): drop the retired schedule bundle from profile manifests\neval: 9633724b40 -> error — Command failed: git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-9633724b40 9633724b40bb5b6d8cf844606c3344affc8bc1e7\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream 5badb15009 [master]\nC:/Users/shrey/AppData/Local/Temp/dsh-eval-a59beb8ae3                                                                                      a59beb8ae3 (detached HEAD) prunable\nC:/Users/shrey/AppData/Local/Temp/dsh-eval-e21ed97f29                                                                                      e21ed97f29 (detached HEAD) prunable\n4: * For each task mined from a repository's bug-fix history: prepare a worktree",
+        "is_error": false
+      }
+    ]
+  }
+}

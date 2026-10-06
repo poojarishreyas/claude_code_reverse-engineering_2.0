@@ -1,0 +1,17 @@
+{
+  "id": "6d3480ac24d105ab0c380f52",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>bw5y64720</task-id>\n<summary>Monitor event: \"Claude Code gemini eval task results\"</summary>\n<event>eval: e21ed97f29 -&gt; ran\neval: 1f8cdc08a1 -&gt; error — Command failed: git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-1f8cdc08a1 1f8cdc08a1d83dac2ab345725a0418325b48d771</event>\n</task-notification>",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

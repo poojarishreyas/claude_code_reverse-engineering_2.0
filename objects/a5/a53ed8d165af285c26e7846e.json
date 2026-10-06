@@ -1,0 +1,19 @@
+{
+  "id": "a53ed8d165af285c26e7846e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01L2FXx9PbwxsvXs86ZF9LBT",
+        "type": "tool_result",
+        "content": "scripts/eval/claude-code.ts:28: * run is confined only by its working directory being a throwaway worktree.\nscripts/eval/run-eval.ts:4: * For each task mined from a repository's bug-fix history: prepare a worktree\nscripts/eval/tasks.ts:6: * commit in a detached worktree and restores the source files to their\nscripts/eval/tasks.ts:166: * Create a detached worktree at the fix commit with its source files reverted\nscripts/eval/tasks.ts:171: * @param dir - new worktree directory; must not exist.\nscripts/eval/tasks.ts:174:  await run('git', ['worktree', 'add', '--detach', dir, task.fixCommit], { cwd: repo })\nscripts/eval/tasks.ts:183: * Remove a task worktree.\nscripts/eval/tasks.ts:185: * @param dir - the worktree directory.\nscripts/eval/tasks.ts:188:  await run('git', ['worktree', 'remove', '--force', dir], { cwd: repo })\n1f8cdc08a1: \n9633724b40: \ned34a1d7fe:",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
