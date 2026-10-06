@@ -6,11 +6,11 @@
   "model": "claude-opus-5-5",
   "credential": "67c240ee773f",
   "startedAt": "2026-10-06T16:12:54.080Z",
-  "updatedAt": "2026-10-06T17:07:00.656Z",
-  "durationMs": 3246576,
-  "requests": 15,
-  "errors": 0,
-  "events": 62,
+  "updatedAt": "2026-10-06T17:07:36.248Z",
+  "durationMs": 3282168,
+  "requests": 17,
+  "errors": 2,
+  "events": 66,
   "usage": {
     "input": 44,
     "output": 5959,
@@ -79,6 +79,10 @@
     "b9c2567e0e94c776ae9889af",
     "1940395c00bbfc4e92348a3a",
     "654ac79bb852202b2fd4ce26",
-    "bde0ccdd8f5161b981470768"
+    "bde0ccdd8f5161b981470768",
+    "09adb7d400a6357ea724695d",
+    "9a9e5389079fa2983e7f7189",
+    "b3011493251a1de622332aa3",
+    "be6a7bb1fbb599b29c1cadec"
   ]
 }
