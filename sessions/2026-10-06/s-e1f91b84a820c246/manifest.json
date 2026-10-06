@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "s-e1f91b84a820c246",
+  "title": "/** Scoped Remote Event wiring and projection publishing for the browser question consumer. */ import { Context } fro...",
+  "source": "claude-cli/2.1.268 (external, sdk-cli)",
+  "model": "claude-haiku-4-5-20251001",
+  "credential": "558767a26377",
+  "startedAt": "2026-10-06T06:36:47.954Z",
+  "updatedAt": "2026-10-06T06:36:48.870Z",
+  "durationMs": 916,
+  "requests": 1,
+  "errors": 0,
+  "events": 5,
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": [
+    "e1f91b84a820c246733819f7"
+  ]
+}

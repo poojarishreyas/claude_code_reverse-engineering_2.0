@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "s-2b64de8d4ffadba1",
+  "title": "These tests fail in this repository: - packages/client/ui-user-questions/tests/browser-plugin.client.spec.ts Test out...",
+  "source": "claude-cli/2.1.268 (external, sdk-cli)",
+  "model": "claude-haiku-4-5-20251001",
+  "credential": "558767a26377",
+  "startedAt": "2026-10-06T06:36:42.768Z",
+  "updatedAt": "2026-10-06T06:36:47.807Z",
+  "durationMs": 5039,
+  "requests": 1,
+  "errors": 0,
+  "events": 6,
+  "usage": {
+    "input": 10,
+    "output": 318,
+    "cacheRead": 0,
+    "cacheCreation": 39669
+  },
+  "messageIds": [
+    "2b64de8d4ffadba12a1a21ef"
+  ]
+}
