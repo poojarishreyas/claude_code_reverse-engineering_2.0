@@ -1,0 +1,17 @@
+{
+  "id": "bfc288b5519ad45513285007",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Got it. If OmniRoute has only one model, every dsh request went to gemini-3.7-flash-high and there's nothing to check. I'll keep watching the run and report each task as it finishes.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

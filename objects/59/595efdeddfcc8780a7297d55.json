@@ -1,0 +1,24 @@
+{
+  "id": "595efdeddfcc8780a7297d55",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01VZEF3dmQy8HrkqsPqtvCey",
+        "type": "tool_result",
+        "content": "Monitor started (task bc1qtuxfr, expires in 30m unless the source ends first; you get one notice at expiry — re-arm if you still need the watch). You will be notified on each event. Keep working — do not poll or sleep. Events may arrive while you are waiting for the user — an event is not their reply."
+      },
+      {
+        "tool_use_id": "toolu_01ThbKqjWodAyHHnQNsFL462",
+        "type": "tool_result",
+        "content": "(Use `node --trace-deprecation ...` to show where the warning was created)\neval: 4eb53e63ff -> invalid — tests pass without the fix:\neval: 4b9d8ad6f7 [indirect] fix(client): re-pin StateDot loaders whose animation restarts\neval: 4b9d8ad6f7 -> ran (passed)\neval: a59beb8ae3 [multi-file] fix(hmr): preserve manifest refresh with Office resolution\ntotal 632\ndrwxr-xr-x 1 shrey 197609      0 Oct  6 21:57 .\ndrwxr-xr-x 1 shrey 197609      0 Oct  6 21:43 ..\n-rw-r--r-- 1 shrey 197609 627515 Oct  6 21:56 4b9d8ad6f7.events.jsonl\n-rw-r--r-- 1 shrey 197609   2185 Oct  6 21:57 4b9d8ad6f7.json\n-rw-r--r-- 1 shrey 197609    839 Oct  6 21:44 4eb53e63ff.json\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-1f8cdc08a1\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-4b9d8ad6f7\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-4eb53e63ff\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-54fa38795f\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-9633724b40\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-980b410340\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-a59beb8ae3\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-e21ed97f29\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-ed34a1d7fe\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-home-a59beb8ae3",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
