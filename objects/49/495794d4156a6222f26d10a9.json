@@ -1,0 +1,17 @@
+{
+  "id": "495794d4156a6222f26d10a9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "yeah go on but with proof of evdence include the particular strategy only if its actually workng we dont need garbagge features",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

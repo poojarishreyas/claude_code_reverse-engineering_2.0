@@ -1,0 +1,27 @@
+{
+  "id": "455a64c624f935e429078522",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS+QcKEAgSGAI4AUIIdGhpbmtpbmcSDK5mbwGJwcZdy0cXBxoMQbnAuQ2y64rWDYQPIjBhnmS5krMoEH2pdFCLE8y7IHdmIjuZ3qEtmKgyBQVezMCG5Hw81Sr+WBu5C02/bE0qlgcLtiQhvdJGr4otrecbXChEFDiKe6h0RaTh1ctkhUZqcvNOfN0EoTjIzaapa1bttKF55AiB3oG4RD2YpPIS/K4llnbAETcCdB3ESqStrnzk8BAgL3TZIodjxtrOTduW77eJk1/MoQDhCMVuf8CglQNY+9pgAish4B6GZLXBec0KoP6cCMkqRMyZhG2tN0GrBq8X7LxJ9tOOhRnglrUBEFIviIjwQPZki2AXVThKSfsEO7xHuJrKAAcTKaYf0x7TdgIceM7/c6H0LOHraDcXY1pmULE9NIaxN6/fnI8mdv2F4Pf0gAfROvADE8y6LOy7bLTCnVVpPgRK3LzVhnlGKYkmEgyw/r+b/+8WHN3zitTwMIxfsu5/k4m5cP/wjjEhteDpMRGWU3sHqOLjUka98LKQJEE2qxaENpVoRqpwmK3ivQnRaQrqENA3Xs60gklMParFiNMtw8/o07kQHUvktBHvYxKAR0M0KZYkiZGwvlggGqL7KL0G6nAAd88vrq5o8tNGR5tsNX71nfGH6CGRfp6pIYH+S+UfN/56RH/icGZj2cK2xiAS0lsjL/0urTQ9U0IcAZ2u3Ip56MLK1aElcwCMm0+eAuctoF4REpcnJUc5noU1YoCg8OslJBebR/ai7HYd1Kgr1vvC/Ftak47XrBtASVzAr7Emie/VgobjI8G7iZgVpjpR+qUMeAlJbpMj5gZOoc66bl6iLCwrscJbaePBteQRcHSI0up0zxDjywUGBl9lEXRJR+Q+vv6ErofsdGj/0G/8Bz22knP/MxUU/4pUcKGUfhWZ+wRC2ElAddAZsVwtkfZTdBeHivtfF583TqaYS4Zdr5PigNwW1uWKe/E/CEYfvU6W0JZvieK3CW/YBxMmQPHCQ3momNq1qU/oPtgk0s6Egc8SomSlQG6FdJ31wKTfF+vQYsh+sSwstwmIB67HMNuzvUojpOOZeMhIifzqeyOBiwmwy6BXVK/pRnarQnBbeHX5VAQ7UiEYnnImseOMVCzzsBDl+4+oUhVl2fAIKQfcXTMT7gDbBJj8JoJG8k9pMCmL6Mb1eZf32enIe9ymrGE1+11KeK/oGdOTiSc6Ib6qgqaJnL4g3RRAXR6fcSCNd8m1xe5TA6JSkGTMK19jwLZRA5EeRjBTeJaw5KGP8RpZkej/gY7t405vHoPS1Fn7Aqkp+HtGTUBJ7oMr0h7iXpMCb6LQ80NAC2jZ2Ss6fAoq1OsYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_014AnDPva6nbJ2Hg3XjUDKq5",
+        "name": "Bash",
+        "input": {
+          "command": "cd ~ && KEY=$(grep -E \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | head -1 | sed -E 's/.*MYLYNX_API_KEY[^:]*:[[:space:]]*//; s/^[\"'\"'\"']//; s/[\"'\"'\"']$//'); echo \"keylen=${#KEY}\"; curl -s -m 60 http://localhost:20128/v1/messages -H \"x-api-key: $KEY\" -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":30,\"messages\":[{\"role\":\"user\",\"content\":\"Say hi\"}]}' | head -c 600; echo; echo ---TOOLS; curl -s -m 90 http://localhost:20128/v1/messages -H \"x-api-key: $KEY\" -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":200,\"tools\":[{\"name\":\"get_time\",\"description\":\"Get time\",\"input_schema\":{\"type\":\"object\",\"properties\":{\"tz\":{\"type\":\"string\"}},\"required\":[\"tz\"]}}],\"messages\":[{\"role\":\"user\",\"content\":\"Use the get_time tool for UTC.\"}]}' | head -c 800",
+          "description": "Test OmniRoute Anthropic-format endpoint with and without tools"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

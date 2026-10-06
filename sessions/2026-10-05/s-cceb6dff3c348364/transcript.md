@@ -5,8 +5,8 @@
 | session | `s-cceb6dff3c348364` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
-| requests | 24 |
-| tokens | in 2,674 · out 22,163 · cache read 2,295,999 · cache write 145,129 |
+| requests | 25 |
+| tokens | in 2,678 · out 22,851 · cache read 2,417,643 · cache write 145,167 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -3020,4 +3020,35 @@ dont just satisfy me tellme at wht percentage it will be better than claude code
 yes check omniroute and add claude code mode
 
 _stop `end_turn` · 3.54s (ttft 2.85s) · in 506 · out 16 · cache r119,870/w1,774_
+
+---
+
+## req-0025 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 44 messages_
+
+#### USER
+
+yeah go on but with proof of evdence include the particular strategy only if its actually workng we dont need garbagge features
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_014AnDPva6nbJ2Hg3XjUDKq5)_
+
+```json
+{
+  "command": "cd ~ && KEY=$(grep -E \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | head -1 | sed -E 's/.*MYLYNX_API_KEY[^:]*:[[:space:]]*//; s/^[\"'\"'\"']//; s/[\"'\"'\"']$//'); echo \"keylen=${#KEY}\"; curl -s -m 60 http://localhost:20128/v1/messages -H \"x-api-key: $KEY\" -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":30,\"messages\":[{\"role\":\"user\",\"content\":\"Say hi\"}]}' | head -c 600; echo; echo ---TOOLS; curl -s -m 90 http://localhost:20128/v1/messages -H \"x-api-key: $KEY\" -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":200,\"tools\":[{\"name\":\"get_time\",\"description\":\"Get time\",\"input_schema\":{\"type\":\"object\",\"properties\":{\"tz\":{\"type\":\"string\"}},\"required\":[\"tz\"]}}],\"messages\":[{\"role\":\"user\",\"content\":\"Use the get_time tool for UTC.\"}]}' | head -c 800",
+  "description": "Test OmniRoute Anthropic-format endpoint with and without tools"
+}
+```
+
+_stop `tool_use` · 10.08s (ttft 5.57s) · in 4 · out 688 · cache r121,644/w38_
 
