@@ -1,0 +1,8 @@
+{
+  "id": "a15e8e740751cb4504dd2aea",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "i have editted permission do i need to restart claude code?"
+  }
+}
