@@ -1,0 +1,17 @@
+{
+  "id": "fd9b0741805121b5ecb2070c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "no omniroute has only on model so no worries",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

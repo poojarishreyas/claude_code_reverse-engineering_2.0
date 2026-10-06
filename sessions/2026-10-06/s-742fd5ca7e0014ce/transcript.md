@@ -5,8 +5,8 @@
 | session | `s-742fd5ca7e0014ce` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-06T16:12:54.080Z |
-| requests | 9 |
-| tokens | in 24 · out 3,999 · cache read 699,308 · cache write 25,119 |
+| requests | 10 |
+| tokens | in 28 · out 4,064 · cache read 782,374 · cache write 25,473 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -913,4 +913,46 @@ It made 19 `pwsh` calls, so dsh *can* run commands in its sandbox here. That mak
 There's one gap. For dsh, the log only records the name we sent ("lynx harness"), not the model OmniRoute actually used. So I can't prove from dsh's side that every request went to gemini. The Claude Code side does record the actual model.
 
 _stop `end_turn` · 4.95s (ttft 4.94s) · in 2 · out 339 · cache r82,506/w560_
+
+---
+
+## req-0010 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 24 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01SZiUdPh2HdYEsiup1bYqB4)_
+
+```
+{'status': 'ran', 'model': None, 'error': None}
+{"steps": 47, "toolCalls": {"glob": 4, "read": 16, "grep": 4, "pwsh": 19, "edit": 2, "write": 1}, "firstSeenStep": 3, "firstReadStep": 5, "readsBeforeCorrect": 1, "editedFiles": ["packages/client/ui-primitives/src/StateDot.tsx"], "editedExpected": true, "extraEdits": [], "editedTests": false, "usage": {"inputTokens": 341737, "outputTokens": 18836, "cacheReadTokens": 2372574}}
+    143 "model":"lynx harness"
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Task 2 of 10 (4b9d8ad6f7) passed. It found the file at step 3, read it at step 5, edited only the right file, and took 47 steps. Prompt tokens were about 2.7M, but 2.37M of that was cache reads, so it's cheap. The qwen run passed this task too, at step 6/7.
+
+It made 19 `pwsh` calls, so dsh *can* run commands in its sandbox here. That makes "the sandbox blocks running tests" less likely as an explanation for the earlier failures. I'll confirm it from the logs of the failed tasks.
+
+There's one gap. For dsh, the log only records the name we sent ("lynx harness"), not the model OmniRoute actually used. So I can't prove from dsh's side that every request went to gemini. The Claude Code side does record the actual model.
+
+#### USER
+
+no omniroute has only on model so no worries
+
+#### ASSISTANT
+
+Got it. If OmniRoute has only one model, every dsh request went to gemini-3.7-flash-high and there's nothing to check. I'll keep watching the run and report each task as it finishes.
+
+_stop `end_turn` · 3.21s (ttft 2.02s) · in 4 · out 65 · cache r83,066/w354_
 

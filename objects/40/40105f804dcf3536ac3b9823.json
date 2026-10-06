@@ -1,0 +1,15 @@
+{
+  "id": "40105f804dcf3536ac3b9823",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01SZiUdPh2HdYEsiup1bYqB4",
+        "type": "tool_result",
+        "content": "{'status': 'ran', 'model': None, 'error': None}\r\n{\"steps\": 47, \"toolCalls\": {\"glob\": 4, \"read\": 16, \"grep\": 4, \"pwsh\": 19, \"edit\": 2, \"write\": 1}, \"firstSeenStep\": 3, \"firstReadStep\": 5, \"readsBeforeCorrect\": 1, \"editedFiles\": [\"packages/client/ui-primitives/src/StateDot.tsx\"], \"editedExpected\": true, \"extraEdits\": [], \"editedTests\": false, \"usage\": {\"inputTokens\": 341737, \"outputTokens\": 18836, \"cacheReadTokens\": 2372574}}\r\n    143 \"model\":\"lynx harness\"",
+        "is_error": false
+      }
+    ]
+  }
+}
