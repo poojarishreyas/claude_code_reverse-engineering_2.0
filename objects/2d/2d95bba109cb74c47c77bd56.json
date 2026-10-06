@@ -1,0 +1,11 @@
+{
+  "id": "2d95bba109cb74c47c77bd56",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [],
+    "output_config": {
+      "effort": "high"
+    }
+  }
+}
