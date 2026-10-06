@@ -1,0 +1,17 @@
+{
+  "id": "b73bf026b58d0ab1b60e755b",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "dsh has picked its 10 hard tasks and is on the first one. I'll report the results once tasks finish.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
