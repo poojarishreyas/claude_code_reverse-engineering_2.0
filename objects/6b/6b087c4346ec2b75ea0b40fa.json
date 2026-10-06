@@ -1,0 +1,22 @@
+{
+  "id": "6b087c4346ec2b75ea0b40fa",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSuQgKEAgSGAI4AUIIdGhpbmtpbmcSDA7vs7pgCxwJ4SM6VxoM1kUuyUC6U6kgRAWQIjC0C4+YfqDpnSv6KJzdAZGOgtxlRGPOlbvYa3xLh2k5nI3hYeIU371b411Hmn5f7JIq1gcDol2ywDu6XmKdHHFwOhHmei9u5gXK3eu/RbuNvRqPAmelR3LmOo+s2vcJQn7+TPMOtvwl4TUb56leGRKOIXYKIYxnVVifdlkA/Q2wAySJqSETr0w/kZi42D1M00iEjoPM7Zc+3r6NIOe2UX2JGnxlGDqYGNhmfbDSfJK/6649kszgg08FOI9Lw5uCUs4qJC/nXX7mx5wk7zdxiVOcGZSdZzq/OsA6q5yFK5crRqMCXP4y76ZmBb3K+OKrBK0ERMwFZO1O+xz9vLAS/c4aKINLmF97iuVtfAATaoq06PuHaeDJfFVVrb0nDFeppP4IuB4l6WaReVyvf7IysQ+/bBaJxJz52eloRYbm7DewyFglrRsD+Z0tgjyF0op88io7llvoIEOpP9VQpyy0QUb58rsN/WMoDdRZN5CmZJ/CNhAAV3hCLljhIX7rD9RxcCpbQe6/knv3T70nOYVNhF4yO0xgyiKybeAy+uoyu1omaPt2LS+N3OqQaruxQ4iF6ubtuMLp7wcTxvbIH4FsLBqnYGSba6MrIUAcRnVcqo4aU8fPnyddwkKn8da9tBqwBujPUxpTnEu6d1+gZxf8UqPIOUCYy4VRFxmUBVTPMPi1RJOEmy4aYpOf95p14hFpGO3ZEUilAQDRHlFt1vwYMA75BZEmp9dCS9/0Exa+rNQGVuNxs4ixsMwUqs1yfkouJsNOTfwpZWELQadb4vvclFGwFJO3EOu3dj7iKdziKnKbLKZsTDZkwbKXE6aDcjFRPmEuwml40tA7u1lWAheW5INOTJq3FmgI5OEX+jC4TWrGQOtHBkSI8s1Igu4BhzUKbSB+o+7eW+gcFN9KYdBgjV993hsgNjd3Q34s9MPKprThctior7TC2t3MWyYO/2rEzyESrMihM7cir1pOfRDqf2plFoNmyx3PFuBNtiRQdTvk77p58RppY1iOlCPe4P/D9GZeybS2ujOz1OIq4jRgYIS8x1i560gmZgZ+5ED0gJDtVcyPbcwhSE1pbvBfGXGfi127rkobvG8VJYHlv8+lcbl/1p8neOPxsb//D7uxqxI9hKkMpt5cg/pdjE864+xIPbxKf4er6DA9aaie2rvQFdjjIaW2ACANfX3VmZd9e8NmHGnYlmKQi66km63XOkkp79XC/sPLRE4PAgNp9tYhRllnc95CSDkB/MNTeQWCKRDjmP8B6xrSrO65Lkf+1Nvf71OAK1z61iQayI4QoBky58TiwNfuy8+cma3REeZfjHgQCmmuj6is7El2Vl5uj37xfefPguUlXSegYzwCYoWfgqhJsmPwBgXHEcMNGAE="
+      },
+      {
+        "type": "text",
+        "text": "**None yet.** I haven't added a single search or retrieval feature to dsh itself. That's deliberate: you said to add a strategy only once there's proof it works, and so far there isn't proof for any of them.\n\nWhat I've built is the **measuring tool**, all in `scripts/eval/`, outside the harness code.\n\n**Committed on this branch (`eval-step0`):**\n- **5141db0:** the file-finding eval. It takes real bug fixes from the upstream git history, rewinds the code to before each fix, and gives the agent the bug report. It then re-runs the tests and measures:\n  - did the fix pass;\n  - did the agent edit the right file;\n  - at which step it first saw and first read that file;\n  - steps, tool calls and tokens used.\n- **ff8c2b6:** the eval can use any provider you've set up in dsh (like OmniRoute), and it reports agent turns that failed.\n- **d7accc6:** tasks are tagged by difficulty (cross-package, indirect, multi-file), and `--hard` runs only the hard ones.\n- **7d539e8:** a run that crashes still keeps its metrics, and tasks that never started are reported.\n- **26c5bf2:** tests run with one worker so a task fits in your laptop's memory.\n\n**Not committed yet:**\n- `claude-code.ts`: runs Claude Code on the same tasks and turns its output into the same format, so both are scored the same way.\n- `--provider` / `--model` flags, so both agents run the same model through OmniRoute.\n- Tokens now count cache reads and writes, so the totals are honest.\n- Each task's full tool log is saved as `<task>.events.jsonl`, so I can see *why* a run failed, not just that it did.\n\nThe branch also has older compaction commits (5064701 to aff00cb), but those are about the context window, not about search.\n\n**What the evidence says so far (qwen runs):** dsh found the right file in 6 of 7 tasks, usually within 2 to 4 steps. It lost because of incomplete fixes:\n- edited only 1 of 2 files;\n- edited the test file instead of the source;\n- said \"done\" without running the tests.\n\nSo the first feature worth adding probably isn't better search. It's more likely \"check the fix before saying done\". I'll only propose it if the gemini comparison with Claude Code shows the same pattern.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
