@@ -1,0 +1,19 @@
+{
+  "id": "667a7d5a265ae06024989c09",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01M6uV2b3Y3eySvQnZJ7eCA1",
+        "type": "tool_result",
+        "content": "\" (dry run)' : ''}\\n`)\"\r\n\"task(s) from ${repo}${dryRun ? ' (dry run)' : ''}\\\\n`)\\n\\n  const results\"",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
