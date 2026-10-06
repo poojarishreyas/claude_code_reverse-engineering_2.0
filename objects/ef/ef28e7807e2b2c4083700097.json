@@ -1,0 +1,17 @@
+{
+  "id": "ef28e7807e2b2c4083700097",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "hey use same model for both harness",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

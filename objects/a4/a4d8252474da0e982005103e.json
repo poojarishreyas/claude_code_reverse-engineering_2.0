@@ -1,0 +1,8 @@
+{
+  "id": "a4d8252474da0e982005103e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "hey use same model for both harness"
+  }
+}

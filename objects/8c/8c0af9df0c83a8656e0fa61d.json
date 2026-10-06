@@ -1,0 +1,27 @@
+{
+  "id": "8c0af9df0c83a8656e0fa61d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS8wkKEAgSGAI4AUIIdGhpbmtpbmcSDPllQ+LmXBKrGbBxSxoMmqscEqh56+ia+PCXIjCzkSf49/7ot03JgP309RYNk22VOd8VV8OfREgVv5/RyBB9qEaDQUUZ2LEtT7kgxQcqkAkNiMOMh7rwAxvpdgmgYlE0CnsacnckPrdFahsyLKuHoNLYsGB17OeCu3pFgybQ8Pybths+poUQn3oRYhhwVEtbLCrjfPecJx6etcBKGhtLxDm7FXBPDQjli30uGba0HW7NKDT03Wvfh5LnfcLMQKFrai9r7emOFTbDy5sG4D05TA4Cdhz4RTsmWA9C25tXF/r+QL0uSpxvBVzziRVK0kHchhf+GOTir/kvNnjqOvfBJfjxb/LqmMItQcqN4PFMQxLPeEd+MJ6Jer3Nv99/B1DdXGspDHUDS+I8Ria3KczZvCWP3LTicXKP5QBXLPiXStq8D3lsnrE7J5esmPCXfm4j4AasH4jK1u6FE2U6bh4HJk7JH6YjScMFHXSzw0yURTdddMsDP5ikY/LlEDwlZQDldyyZYo1zwldq7Q6ND2+l1vqmlkRnS9+dpOQ/2OMs47xNfvg8lZ4GUbIIvyV1o7CHDxg3mYPjyEvkdHZTsly2FFWa8r5IrE2Va06fbcG9EUNw78LLwbTsvim0cQkmc5DtFIPacYbL4jRagZWPGDfsonAClSoD0yT4NS2/eAyqixGZg5VQ8l9HhgN6gST1iIY5V7eMofS6nSiTnE8MLxe7yns6cZwEJvxT0L/LhACcv+5KOqJsIzJjzmY/CnF+gDqd+8XduBlsMQz2ByiO/KCIspHVV1QgrAIR+znbSYuh94FLK3luQf75PAqjUi99//yG2xJMMjhKzN6+XRmi0DF/5DDb7+NxJA1ipXo6fC3rwxkA0PAqJkspHWhvo968QoL4J9MR+YZw7uY9px7djw71vvixqR3T7islZcX3xpY2jzlex1afBF7w8lxE6aWns9LYdshwvnWF7XC8Qcr6D8trOE8k8MA0MfLB/mdlJA42+WCvPBhDtXQz8V3jxWiSGqnaWpobZL1oKA8pJjOJz35fna9HRD0vTGxlIEpOae7iLjO2PrMAIsV489gLeHRQ/dohABc9L+WUTHj1jwrHQ2eq/Gcz0wwzdzI3bf8YImxiwUd8tWd1wqScyBaL4MyqFo62g3QvaqJIokmrJdnI0oxoLbk/02NBfQxprQK7FCQwHSGM316+r+PTTTYir5gbMK0zdKMOvRpDypKuPOqZOFQcKparHq92P0bacy8olxN9OGigTadoMVopOQfIG6hSR2JiYmjwjL7QroMEgDd6Rm3AAgJx8uOYybhTYuh8NK7QFYlIkaQ7Xja59SVksuWn5m6sYWcP9iioRWplpilJUQKy6xyktaIMHP9u/w9R1sEfNAArR5opCy4h88t1PpEMtDAXN86sJFg8WmQaDB/rqGaDxRyuhlJ1bezt2hLSyiAh6w1phkPL48aEEoApk1TMIZpbXgxs7cTw/+edU3AWKwfMWEAi1pDwR3GwEvrZcIC48ENmPaW6QKKjxwoh7/9NidOZERWQquZYxg2mEyLgF8XMqQ3r+4VvxoKb6h1gUQVcr9boQJHV9mB2kYcuPHCWFsjXzO1qW5Ti8e38DTNM32wkx3flwimPjeu46TtQ1CzBjHrBqel17LS24cf8iW60p5jQGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01C5FGfNv2YLfwYt98yb6jdU",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness; curl -s -o /dev/null -w \"omniroute models: %{http_code}\\n\" --max-time 5 http://localhost:20128/v1/models; ls packages | head -50; ls packages/*/ -d 2>/dev/null | grep -i -E \"provider|anthropic|llm|model\" ; grep -rl -i \"anthropic\" --include=package.json packages 2>/dev/null | head",
+          "description": "Check OmniRoute status and look for Anthropic provider packages"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

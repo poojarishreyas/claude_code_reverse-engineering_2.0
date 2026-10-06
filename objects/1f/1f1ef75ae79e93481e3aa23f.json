@@ -1,0 +1,17 @@
+{
+  "id": "1f1ef75ae79e93481e3aa23f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "That notice was from a stray no-op watch I started by mistake, so ignore it. The Claude Code run is still in progress, and its own watch will report when it finishes.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
