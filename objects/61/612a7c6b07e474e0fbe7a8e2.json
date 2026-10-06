@@ -1,0 +1,19 @@
+{
+  "id": "612a7c6b07e474e0fbe7a8e2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019ZsfAcD34vWTd4W8gsnC8N",
+        "type": "tool_result",
+        "content": " M .agents/notes/implemented/testing/2026-09-29-file-finding-evaluation.md\n M scripts/eval/README.md\n M scripts/eval/metrics.spec.ts\n M scripts/eval/metrics.ts\n M scripts/eval/run-eval.ts\n?? scripts/eval/claude-code.spec.ts\n?? scripts/eval/claude-code.ts\n26c5bf2 Run eval tests with one worker so a task fits in laptop memory\n7d539e8 Keep eval metrics when a run fails, and report runs that never started\nd7accc6 Tag eval tasks by difficulty and run the hard ones on request\nff8c2b6 Let the eval use a configured provider and report failed agent turns\n5141db0 Add a file-finding evaluation mined from bug-fix history\naff00cb List every stored transcript in each compaction checkpoint\n8daf3da End the compaction instruction with a no-tools reminder\n9f289be Keep a 2 KB preview for spilled tool results\n70f9460 Stop a turn when automatic compaction keeps thrashing\nd2ff0a7 Point compaction checkpoints to a stored transcript and re-attach read files\n81b67fb Keep user messages and security constraints in compaction checkpoints\n5064701 Keep recent tool results, skip small prunes, and store pruned originals\n scripts/eval/tasks.spec.ts                         | 146 +++++++++\n scripts/eval/tasks.ts                              | 210 +++++++++++++\n 43 files changed, 2818 insertions(+), 116 deletions(-)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

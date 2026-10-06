@@ -1,0 +1,17 @@
+{
+  "id": "f4954aea11c6238a6940deb7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "ok what features u have added to dsh?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

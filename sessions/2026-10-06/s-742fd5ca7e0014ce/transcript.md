@@ -5,8 +5,8 @@
 | session | `s-742fd5ca7e0014ce` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-06T16:12:54.080Z |
-| requests | 4 |
-| tokens | in 8 · out 2,168 · cache read 293,485 · cache write 21,908 |
+| requests | 6 |
+| tokens | in 14 · out 3,279 · cache read 453,589 · cache write 23,089 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -528,4 +528,164 @@ The dsh run has started: 10 hard tasks on gemini-3.7-flash-high through OmniRout
 If "lynx harness" is a combo that can fall back to other models mid-run, the comparison gets muddied. Each `<task>.json` records the model that answered, so I'll check that.
 
 _stop `end_turn` · 4.75s (ttft 4.74s) · in 2 · out 380 · cache r79,407/w448_
+
+---
+
+## req-0005 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 14 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_015Uf68MQXpvctyF7tFEJ7wk)_
+
+```
+$ tsx scripts/eval/run-eval.ts "--" "--repo" "C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream" "--hard" "--limit" "10" "--agent" "dsh" "--home-from" "C:/Users/shrey/.dsh" "--provider" "mylynx" "--model" "lynx harness" "--out" "C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-dsh"
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+The dsh run has started: 10 hard tasks on gemini-3.7-flash-high through OmniRoute, with results saved to `scratchpad/gem-dsh`.
+
+**Why both agents are being re-run:** the model behind "lynx harness" is no longer qwen3-coder-next. The earlier dsh results (1 of 7 passed on qwen) can't be compared with a gemini run, so both agents will run the same tasks on the new model.
+
+**Plan:**
+1. dsh on the 10 tasks, running now. A monitor reports each task as it finishes.
+2. Claude Code on the same 10 tasks, same route and model, after dsh finishes. They run one at a time because of laptop memory.
+3. A per-task comparison of pass rate, file-finding steps and tokens. For each failure, I'll read the saved `events.jsonl` log to check whether dsh's sandbox blocked it from running tests.
+
+If "lynx harness" is a combo that can fall back to other models mid-run, the comparison gets muddied. Each `<task>.json` records the model that answered, so I'll check that.
+
+#### USER
+
+ok what features u have added to dsh?
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_019ZsfAcD34vWTd4W8gsnC8N)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && git status --short && git log --oneline main..HEAD && git diff --stat main...HEAD | tail -3",
+  "description": "List changes on this branch vs main"
+}
+```
+
+_stop `tool_use` · 4.21s (ttft 2.74s) · in 4 · out 238 · cache r79,855/w394_
+
+---
+
+## req-0006 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 16 messages_
+
+#### USER
+
+ok what features u have added to dsh?
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_019ZsfAcD34vWTd4W8gsnC8N)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && git status --short && git log --oneline main..HEAD && git diff --stat main...HEAD | tail -3",
+  "description": "List changes on this branch vs main"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_019ZsfAcD34vWTd4W8gsnC8N)_
+
+```
+ M .agents/notes/implemented/testing/2026-09-29-file-finding-evaluation.md
+ M scripts/eval/README.md
+ M scripts/eval/metrics.spec.ts
+ M scripts/eval/metrics.ts
+ M scripts/eval/run-eval.ts
+?? scripts/eval/claude-code.spec.ts
+?? scripts/eval/claude-code.ts
+26c5bf2 Run eval tests with one worker so a task fits in laptop memory
+7d539e8 Keep eval metrics when a run fails, and report runs that never started
+d7accc6 Tag eval tasks by difficulty and run the hard ones on request
+ff8c2b6 Let the eval use a configured provider and report failed agent turns
+5141db0 Add a file-finding evaluation mined from bug-fix history
+aff00cb List every stored transcript in each compaction checkpoint
+8daf3da End the compaction instruction with a no-tools reminder
+9f289be Keep a 2 KB preview for spilled tool results
+70f9460 Stop a turn when automatic compaction keeps thrashing
+d2ff0a7 Point compaction checkpoints to a stored transcript and re-attach read files
+81b67fb Keep user messages and security constraints in compaction checkpoints
+5064701 Keep recent tool results, skip small prunes, and store pruned originals
+ scripts/eval/tasks.spec.ts                         | 146 +++++++++
+ scripts/eval/tasks.ts                              | 210 +++++++++++++
+ 43 files changed, 2818 insertions(+), 116 deletions(-)
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**None yet.** I haven't added a single search or retrieval feature to dsh itself. That's deliberate: you said to add a strategy only once there's proof it works, and so far there isn't proof for any of them.
+
+What I've built is the **measuring tool**, all in `scripts/eval/`, outside the harness code.
+
+**Committed on this branch (`eval-step0`):**
+- **5141db0:** the file-finding eval. It takes real bug fixes from the upstream git history, rewinds the code to before each fix, and gives the agent the bug report. It then re-runs the tests and measures:
+  - did the fix pass;
+  - did the agent edit the right file;
+  - at which step it first saw and first read that file;
+  - steps, tool calls and tokens used.
+- **ff8c2b6:** the eval can use any provider you've set up in dsh (like OmniRoute), and it reports agent turns that failed.
+- **d7accc6:** tasks are tagged by difficulty (cross-package, indirect, multi-file), and `--hard` runs only the hard ones.
+- **7d539e8:** a run that crashes still keeps its metrics, and tasks that never started are reported.
+- **26c5bf2:** tests run with one worker so a task fits in your laptop's memory.
+
+**Not committed yet:**
+- `claude-code.ts`: runs Claude Code on the same tasks and turns its output into the same format, so both are scored the same way.
+- `--provider` / `--model` flags, so both agents run the same model through OmniRoute.
+- Tokens now count cache reads and writes, so the totals are honest.
+- Each task's full tool log is saved as `<task>.events.jsonl`, so I can see *why* a run failed, not just that it did.
+
+The branch also has older compaction commits (5064701 to aff00cb), but those are about the context window, not about search.
+
+**What the evidence says so far (qwen runs):** dsh found the right file in 6 of 7 tasks, usually within 2 to 4 steps. It lost because of incomplete fixes:
+- edited only 1 of 2 files;
+- edited the test file instead of the source;
+- said "done" without running the tests.
+
+So the first feature worth adding probably isn't better search. It's more likely "check the fix before saying done". I'll only propose it if the gemini comparison with Claude Code shows the same pattern.
+
+_stop `end_turn` · 10.08s (ttft 9.38s) · in 2 · out 873 · cache r80,249/w787_
 
