@@ -1,0 +1,15 @@
+{
+  "id": "b1413a1d319bf3130fa1b2af",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CyNPYa2mbam8PHmTJp7YQ6",
+        "type": "tool_result",
+        "content": "   Id StartTime             CPU_s MemMB\r\n   -- ---------             ----- -----\r\n  804 10/6/2026 11:59:10 AM   117   354\r\n 1728 10/6/2026 11:59:01 AM     6    60\r\n 1980 10/6/2026 11:15:00 AM    38    80\r\n 9716 10/6/2026 12:50:23 PM     1    46\r\n13920 10/6/2026 12:09:55 PM     3    48\r\n14732 10/6/2026 12:09:58 PM     1    47\r\n18512 10/6/2026 12:50:24 PM     1    49\r\n20440 10/6/2026 12:50:25 PM    19    95\r\n21576 10/6/2026 12:50:25 PM     0    48\r\n\r\n\r\n\r\nFullName                                              LastWriteTime       \r\n--------                                              -------------       \r\nC:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-9633724b40 10/6/2026 2:50:26 PM\r\nC:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-ed34a1d7fe 10/6/2026 2:20:21 PM\r\nC:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-980b410340 10/6/2026 2:04:43 PM",
+        "is_error": false
+      }
+    ]
+  }
+}

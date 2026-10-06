@@ -1,0 +1,19 @@
+{
+  "id": "44e278cc2333434c0ee0b8ce",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Exit code 1\ntotal 2003\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:51 .\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:51 ..\n-rw-r--r-- 1 shrey 197609    1082 Oct  6 14:20 README.i18n.yaml\n-rw-r--r-- 1 shrey 197609    2673 Oct  6 14:20 README.md\n-rw-r--r-- 1 shrey 197609    3371 Oct  6 14:20 README.zh.md\n-rw-r--r-- 1 shrey 197609     665 Oct  6 14:20 SAFETY.i18n.yaml\n-rw-r--r-- 1 shrey 197609    1673 Oct  6 14:20 SAFETY.md\n-rw-r--r-- 1 shrey 197609    1530 Oct  6 14:20 SAFETY.zh.md\n-rw-r--r-- 1 shrey 197609   23637 Oct  6 14:20 THIRD_PARTY_NOTICES.md\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:20 apps\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:50 benchmarks\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:50 native\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:51 node_modules\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:51 packages\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:20 patches\n-rw-r--r-- 1 shrey 197609 1023807 Oct  6 14:20 pnpm-lock.yaml\n-rw-r--r-- 1 shrey 197609    5411 Oct  6 14:20 pnpm-workspace.yaml\n-rw-r--r-- 1 shrey 197609     219 Oct  6 14:20 pytest.ini\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:20 python\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:20 scripts\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:20 snapshots\n-rw-r--r-- 1 shrey 197609     472 Oct  6 14:20 tsconfig.base.client.json\n-rw-r--r-- 1 shrey 197609   48901 Oct  6 14:20 tsconfig.base.json\n-rw-r--r-- 1 shrey 197609    7800 Oct  6 14:20 tsconfig.client.json\n-rw-r--r-- 1 shrey 197609   23838 Oct  6 14:20 tsconfig.host.json\n-rw-r--r-- 1 shrey 197609     670 Oct  6 14:20 tsconfig.json\n-rw-r--r-- 1 shrey 197609    1449 Oct  6 14:20 tsdown.config.ts\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:20 vendor\n-rw-r--r-- 1 shrey 197609     937 Oct  6 14:20 vitest.bench.config.ts\n-rw-r--r-- 1 shrey 197609   21525 Oct  6 14:20 vitest.config.ts\n-rw-r--r-- 1 shrey 197609    2849 Oct  6 14:20 vitest.e2e.config.ts\n-rw-r--r-- 1 shrey 197609     753 Oct  6 14:20 vitest.expected.config.ts\n-rw-r--r-- 1 shrey 197609    1482 Oct  6 14:20 vitest.shared.ts\n-rw-r--r-- 1 shrey 197609    3510 Oct  6 14:20 vitest.snapshot.config.ts\n-rw-r--r-- 1 shrey 197609     566 Oct  6 14:20 vitest.web-stress.config.ts\n-rw-r--r-- 1 shrey 197609    1514 Oct  6 14:20 vitest.web.config.ts\n-rw-r--r-- 1 shrey 197609     710 Oct  6 14:20 vitest.web.perf.config.ts\ndrwxr-xr-x 1 shrey 197609       0 Oct  6 14:22 website\nsession: \nls: cannot access '': No such file or directory\ngrep: : No such file or directory\ntail: cannot open '' for reading: No such file or directory",
+        "is_error": true,
+        "tool_use_id": "toolu_011UKuiADSUHou6BoDuQUHp7",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
