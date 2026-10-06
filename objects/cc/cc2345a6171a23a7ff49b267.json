@@ -1,0 +1,27 @@
+{
+  "id": "cc2345a6171a23a7ff49b267",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSiQcKEAgSGAI4AUIIdGhpbmtpbmcSDJhhPpokgdfzp5LqdxoME6taQ4W6HgOPfI9/IjBp4ESFIerHYOzHTRzps/KCV1Jo1D0iVoHFoYnPeWrmAYhrs1pdUfzBOyKW60lV2NUqpgbkLkHWFfEuc8PSKNnnLsN9bhybvV9MD5Kp9081oKMSLk4h82ZYyp72QUsLjl9gO/DUKEQ7jK8b3caC0BL2UTsE0rQMTE8RA/CZflk6SAVRJ3zvHK0Sw4bdc1snwSvMetK2hhpuA3er0lhXf6CzXUAk5/qSjlm4wabHO1e42UV3Mrz+DOptjWNPSRVE8WOtD2jhhHwKbz0b7N0+SOSuywlPTgAS+30MwffZCFwqoylDaylYRPZ9dETTq20DIGRhjYg6buV9ilvJAuLw0vjlhMHDjb9j02HFbHVQnSa+mbFbnBtIjnovt/N+XYAzUJbcGFyBHxXbNK7hlBq9TV81Sw7orL0PJAowPFPqa/vlbzTR3X3SOW5B23CbpiQfXmUGfoRi0JXabZO8zSenHLYGjNl6mbCIhxjLzR42znUxowHocSt8CSj3Q+n8Bj2HZg7mxIFLhEnrRvSYDWMeYEWNgGXIWx/Ecwl36wp1TMIOXXtj5mTLjrkvNSWSymCKl/XumvnWSZJnl338rby//VvPJE8yzkCvwj4ZghQKT+Qm98yrkXd9YqCGOJG4gFLpHub7DjSzNK2dLwLYODDuAGAaQIo6XWl1gmNUk+NezIfi0ABpGirwZ67MxJalXOYf4JyxhIJWty5uynOD1BjWIIhXlKPzSrCtCBlHkqqLExzW85awhmRjd3ew4pR+wTdiORM01HbD4Mzhr8ShbtfaSz2Q5J+SrKeY5+a0xOsXbG+FoLnUaHZQ9WE3SPb22qjWH9IHUgarWnYyBODaWHtvPqkNxCzOZF2xUYPifQPMTfyx00AioxTuVxFRudgIZK+oPgSJXMRA7wSYQB8kM35n/mGTxld/muNkQvqB9dMW2fono9PNtZ2yc4w1/3cHAalIvUTHA1EuWhlGIwRtg+lJIlDnzDpcfQdZ/eDllCWPYipTLlJYrtAJVlgQPA2s2fMbbMQTCeob8noXMqkRGk6zx9YHrWT2kEWRjSFKxaVuWyVClyUbk1z5GxSWHUkmLtzpzfR8yFvxv+V2qQgDIe4Xi2VI6CKFDG9kHvp6iWJ/xDHFC5VlocsywBUyjRgB"
+      },
+      {
+        "type": "text",
+        "text": "OmniRoute is up, but kiro is still out of quota (402, \"credit 100%\"). I'll check whether OmniRoute offers any other model that both harnesses could share."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01EuQagDUCMfp7xcihe76NcS",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); curl -s --max-time 30 http://localhost:20128/v1/models -H \"Authorization: Bearer $KEY\" | python -c \"import json,sys; d=json.load(sys.stdin); ids=[m.get('id') for m in d.get('data',[])]; print(len(ids)); print('\\n'.join(ids[:60]))\"",
+          "description": "List models OmniRoute can route to"
+        }
+      }
+    ]
+  }
+}

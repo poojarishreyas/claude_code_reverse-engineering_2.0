@@ -5,8 +5,8 @@
 | session | `s-874b54d957564664` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-06T06:32:41.424Z |
-| requests | 106 (17 errored) |
-| tokens | in 5,222 · out 52,393 · cache read 10,376,256 · cache write 268,179 |
+| requests | 109 (17 errored) |
+| tokens | in 5,226 · out 53,176 · cache read 10,697,261 · cache write 269,957 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -7324,4 +7324,302 @@ Something is listening on port 20128 now, so OmniRoute may still be starting up.
 ```
 
 _stop `tool_use` · 4.91s (ttft 2.22s) · in 2 · out 422 · cache r159,784/w289_
+
+---
+
+## req-0107 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 162 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01PRZGJ9RydyMx7X4g1taBKw)_
+
+```
+LocalAddress LocalPort OwningProcess
+------------ --------- -------------
+0.0.0.0          20128          6068
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Something is listening on port 20128 now, so OmniRoute may still be starting up. I'll retry.
+
+**-> tool_use** `Bash` _(toolu_01WG2frZpSNiJ5CHAxxz13fi)_
+
+```json
+{
+  "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); for i in 1 2 3; do r=$(curl -s -w \"|http %{http_code}\" --max-time 90 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}'); echo \"${r:0:300}\"; case \"$r\" in *\"http 200\"*) break;; esac; sleep 10; done",
+  "description": "Retry OmniRoute until it answers",
+  "timeout": 330000
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01WG2frZpSNiJ5CHAxxz13fi)_
+
+```
+{"error":{"message":"kiro/qwen3-coder-next: model — You have reached the limit. (HTTP 402)","type":"billing_error","code":"payment_required"},"diagnostics":{"poolSize":1,"attempted":1,"excluded":[{"provider":"kiro","reason":"exhausted"}],"attemptOrder":[{"provider":"kiro","model":"kiro/qwen3-coder
+{"error":{"message":"Service temporarily unavailable: all targets were skipped by pre-dispatch filters (credit 100% conn:fa0c83a9)","type":"service_unavailable","code":"ALL_TARGETS_SKIPPED"},"diagnostics":{"poolSize":1,"attempted":0,"excluded":[{"provider":"kiro","model":"kiro/qwen3-coder-next","rea
+{"error":{"message":"Service temporarily unavailable: all targets were skipped by pre-dispatch filters (credit 100% conn:fa0c83a9)","type":"service_unavailable","code":"ALL_TARGETS_SKIPPED"},"diagnostics":{"poolSize":1,"attempted":0,"excluded":[{"provider":"kiro","model":"kiro/qwen3-coder-next","rea
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+OmniRoute is up, but kiro is still out of quota (402, "credit 100%"). I'll check whether OmniRoute offers any other model that both harnesses could share.
+
+**-> tool_use** `Bash` _(toolu_01EuQagDUCMfp7xcihe76NcS)_
+
+```json
+{
+  "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); curl -s --max-time 30 http://localhost:20128/v1/models -H \"Authorization: Bearer $KEY\" | python -c \"import json,sys; d=json.load(sys.stdin); ids=[m.get('id') for m in d.get('data',[])]; print(len(ids)); print('\\n'.join(ids[:60]))\"",
+  "description": "List models OmniRoute can route to"
+}
+```
+
+_stop `tool_use` · 5.54s (ttft 2.82s) · in 2 · out 368 · cache r160,073/w859_
+
+---
+
+## req-0108 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 164 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01WG2frZpSNiJ5CHAxxz13fi)_
+
+```
+{"error":{"message":"kiro/qwen3-coder-next: model — You have reached the limit. (HTTP 402)","type":"billing_error","code":"payment_required"},"diagnostics":{"poolSize":1,"attempted":1,"excluded":[{"provider":"kiro","reason":"exhausted"}],"attemptOrder":[{"provider":"kiro","model":"kiro/qwen3-coder
+{"error":{"message":"Service temporarily unavailable: all targets were skipped by pre-dispatch filters (credit 100% conn:fa0c83a9)","type":"service_unavailable","code":"ALL_TARGETS_SKIPPED"},"diagnostics":{"poolSize":1,"attempted":0,"excluded":[{"provider":"kiro","model":"kiro/qwen3-coder-next","rea
+{"error":{"message":"Service temporarily unavailable: all targets were skipped by pre-dispatch filters (credit 100% conn:fa0c83a9)","type":"service_unavailable","code":"ALL_TARGETS_SKIPPED"},"diagnostics":{"poolSize":1,"attempted":0,"excluded":[{"provider":"kiro","model":"kiro/qwen3-coder-next","rea
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+OmniRoute is up, but kiro is still out of quota (402, "credit 100%"). I'll check whether OmniRoute offers any other model that both harnesses could share.
+
+**-> tool_use** `Bash` _(toolu_01EuQagDUCMfp7xcihe76NcS)_
+
+```json
+{
+  "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); curl -s --max-time 30 http://localhost:20128/v1/models -H \"Authorization: Bearer $KEY\" | python -c \"import json,sys; d=json.load(sys.stdin); ids=[m.get('id') for m in d.get('data',[])]; print(len(ids)); print('\\n'.join(ids[:60]))\"",
+  "description": "List models OmniRoute can route to"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01EuQagDUCMfp7xcihe76NcS)_
+
+```
+1318
+auto/best-coding
+auto/best-reasoning
+auto/best-fast
+auto/best-vision
+auto/best-chat
+auto/best-coding-fast
+auto/pro-coding
+auto/pro-reasoning
+auto/pro-vision
+auto/pro-chat
+auto/pro-fast
+auto/coding
+auto/fast
+auto/chat
+auto/cheap
+auto/offline
+auto/smart
+auto/claude-opus
+auto/claude-sonnet
+auto/claude-haiku
+auto/best-free
+auto/subscription
+auto/thrifty
+auto/best-chaos
+auto/chaos
+auto/coding:fast
+auto/coding:cheap
+auto/coding:free
+auto/coding:pro
+auto/coding:reliable
+auto/reasoning
+auto/reasoning:pro
+auto/vision
+auto/multimodal
+auto/glm
+auto/minimax
+auto/mimo
+auto/zai
+auto/gemma
+auto/llama
+auto/gemini
+auto/kimi
+auto/qwen
+auto/deepseek
+auto/gpt
+lynx harness
+lynx harness-copy
+kr/claude-sonnet-5
+kiro/claude-sonnet-5
+kr/claude-sonnet-4.5
+kiro/claude-sonnet-4.5
+kr/claude-haiku-4.5
+kiro/claude-haiku-4.5
+kr/deepseek-3.2
+kiro/deepseek-3.2
+kr/minimax-m2.5
+kiro/minimax-m2.5
+kr/minimax-m2.1
+kiro/minimax-m2.1
+kr/glm-5
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01CSwVv8PHMA99mcfU53canU)_
+
+```json
+{
+  "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); curl -s --max-time 30 http://localhost:20128/v1/models -H \"Authorization: Bearer $KEY\" | python -c \"\nimport json,sys,collections; d=json.load(sys.stdin); c=collections.Counter((m.get('id') or '').split('/')[0] for m in d['data'] if '/' in (m.get('id') or '')); print(c.most_common(40))\"",
+  "description": "Count OmniRoute models by provider prefix"
+}
+```
+
+_stop `tool_use` · 5.06s (ttft 2.97s) · in 2 · out 415 · cache r160,932/w919_
+
+---
+
+## req-0109 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 166 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01EuQagDUCMfp7xcihe76NcS)_
+
+```
+1318
+auto/best-coding
+auto/best-reasoning
+auto/best-fast
+auto/best-vision
+auto/best-chat
+auto/best-coding-fast
+auto/pro-coding
+auto/pro-reasoning
+auto/pro-vision
+auto/pro-chat
+auto/pro-fast
+auto/coding
+auto/fast
+auto/chat
+auto/cheap
+auto/offline
+auto/smart
+auto/claude-opus
+auto/claude-sonnet
+auto/claude-haiku
+auto/best-free
+auto/subscription
+auto/thrifty
+auto/best-chaos
+auto/chaos
+auto/coding:fast
+auto/coding:cheap
+auto/coding:free
+auto/coding:pro
+auto/coding:reliable
+auto/reasoning
+auto/reasoning:pro
+auto/vision
+auto/multimodal
+auto/glm
+auto/minimax
+auto/mimo
+auto/zai
+auto/gemma
+auto/llama
+auto/gemini
+auto/kimi
+auto/qwen
+auto/deepseek
+auto/gpt
+lynx harness
+lynx harness-copy
+kr/claude-sonnet-5
+kiro/claude-sonnet-5
+kr/claude-sonnet-4.5
+kiro/claude-sonnet-4.5
+kr/claude-haiku-4.5
+kiro/claude-haiku-4.5
+kr/deepseek-3.2
+kiro/deepseek-3.2
+kr/minimax-m2.5
+kiro/minimax-m2.5
+kr/minimax-m2.1
+kiro/minimax-m2.1
+kr/glm-5
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01CSwVv8PHMA99mcfU53canU)_
+
+```json
+{
+  "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); curl -s --max-time 30 http://localhost:20128/v1/models -H \"Authorization: Bearer $KEY\" | python -c \"\nimport json,sys,collections; d=json.load(sys.stdin); c=collections.Counter((m.get('id') or '').split('/')[0] for m in d['data'] if '/' in (m.get('id') or '')); print(c.most_common(40))\"",
+  "description": "Count OmniRoute models by provider prefix"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01CSwVv8PHMA99mcfU53canU)_
+
+```
+[('openrouter', 769), ('aihorde', 143), ('dva', 110), ('no-think', 67), ('auto', 45), ('cxa', 45), ('aug', 28), ('kr', 22), ('kiro', 22), ('cfp', 20), ('zc', 14), ('nvidia', 14), ('ddgw', 6), ('oc', 3), ('opencode', 3), ('veoaifree-web', 2), ('veo-free', 2), ('unc', 1)]
+```
 

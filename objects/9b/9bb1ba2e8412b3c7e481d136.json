@@ -1,0 +1,27 @@
+{
+  "id": "9bb1ba2e8412b3c7e481d136",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS+QgKEAgSGAI4AUIIdGhpbmtpbmcSDDQf9hpxJHTXsqxb5BoMy0BGA+NT+SP0+cF/IjA0DA18oJ3QACp490F14TvtPJyfyrtecq5efO/EhUj0YUVx43btoPssPeaLt/IyKdkqlgi9rEJJ74j0qgFxnVU5xc7dDFefKxfj0KC7v7zVNkZ+fpIkGxzCkFxKiGMVBfvWkI3gKGVclZNWkCfkHdFZvVe23RlIB0c+xyRr0KRCaKllEgVvVgtwP8gQJDzJ6MZBe6vxV9Wy6vy0arfnvxzaoSfcYgoUw1uO5gj2e2HapM4LZc4ohH0PRK9DLfA/XgssLUuCHXdNczjrLpdOsjuZscLugfF9RdTP3apJedrB365i4L4vS4Cab8Q0DygvNsQ1RYE5IWjgMiCpNUAQG9kr9MeAhmpTFjvbtzIINCy22xpJ+W0CTy+8L7gt5K8RpDBH4Lal9mz1Mh9pM8tT/nIOxj2eMR3nkJGtA7Zevpxaq7+CjWsDdoNY2b8SXlz9jCUJCVL0KzH3RuoVJcyO1hcGZaP9j6cPw7weP6+SqS1Wy/DD926FXWo0CpZ3DQhFaqsildbOmpe1+07DWqFI+CNpGNcPJrFSWaTC2VQ84jUe3ghp2NruCKe42+XMzAOverPUQeZOoqsr9T0QNB8PQVmHOC3rfoW8FCXJEmAy+9uWm/SrKLeAiS0yIshmDyraLnAfbBN58o6+A2U8Mo1m+WWyEsNSBWzG4gVxnO9dMXqHurTLFxikPhg440VrVfwpdwl3Ix5+hjL6Knm8BcOCBDi3htGTUnv5xcQxE8dIkoTcZ1oZGpEQQ7ijLLjszlRtGmD+jZk23n73o3Pl5ejXnquGmyhuIYwEi9CfIomgJoGcLz4XvGuDS0iJJl9GX80d5rx+R5KLXev/n/Ng7oi7srO9uzslVvdqDzeCEx/ZEu05DRlYPDB5P+7wWUx9ok9iSvTP3Zb0E0u1t4UaP0SFKoCeSpPehvReMwmZJailHZOPYEoeKtHpVK0EHHqHehaoGOJ/RfLFjGi8PJg8vh0ezqGq+S91qQeQV5rHnvA7IXB5uEm9D4ByPM7ptAY7cnqA1mxVNHrBd7tzdULPzizi/LNjvUtO8eKxFbYmYIbH2ObYMhLh0JdqHCmg42gEHYWDTPWDLCI7GR9EbTmI0u915I1OXVGRqHImKPWYdY/ihLClwJGRr7Pph4Up8ZyFV7/vykprFzvauimh2T2x6wNajb7F3NJ6zXGGA3cq5k/t0Y+jnu5wp6NBjS1qWKxYJl9ACzjCmInwDOWv8RZyfgi3FTKaAz75lYtWQsS69SySWaiCiEfFtYE5aPwezSgGRa0uY9Xa3cqbwBcHcFJoEvqqtRA1FacRAiW5fu9Sxvv96dfmFNowsjSd+gWcFNCQN/vjQG5fgfY1zdA6X2moQ6qZ+yDQ3a6PdWLsi3gtjdcLlHPtUHoFd28KK5iglH9zonxbZgFMIVjznQ5Qd6hbNKIAz9h8A2hSXqP9nwtqazfcQ3Zn38kOu8buQme9oxgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01CSwVv8PHMA99mcfU53canU",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); curl -s --max-time 30 http://localhost:20128/v1/models -H \"Authorization: Bearer $KEY\" | python -c \"\nimport json,sys,collections; d=json.load(sys.stdin); c=collections.Counter((m.get('id') or '').split('/')[0] for m in d['data'] if '/' in (m.get('id') or '')); print(c.most_common(40))\"",
+          "description": "Count OmniRoute models by provider prefix"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

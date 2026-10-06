@@ -1,0 +1,19 @@
+{
+  "id": "d9921e76d2e17c3ff797e27b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CSwVv8PHMA99mcfU53canU",
+        "type": "tool_result",
+        "content": "[('openrouter', 769), ('aihorde', 143), ('dva', 110), ('no-think', 67), ('auto', 45), ('cxa', 45), ('aug', 28), ('kr', 22), ('kiro', 22), ('cfp', 20), ('zc', 14), ('nvidia', 14), ('ddgw', 6), ('oc', 3), ('opencode', 3), ('veoaifree-web', 2), ('veo-free', 2), ('unc', 1)]",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

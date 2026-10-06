@@ -1,0 +1,15 @@
+{
+  "id": "9ad4444c326d9fd28c9cc7c2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PRZGJ9RydyMx7X4g1taBKw",
+        "type": "tool_result",
+        "content": "LocalAddress LocalPort OwningProcess\r\n------------ --------- -------------\r\n0.0.0.0          20128          6068",
+        "is_error": false
+      }
+    ]
+  }
+}

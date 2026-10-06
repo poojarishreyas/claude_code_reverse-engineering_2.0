@@ -1,0 +1,15 @@
+{
+  "id": "79f3eb52f8858f332fdc9ccf",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WG2frZpSNiJ5CHAxxz13fi",
+        "type": "tool_result",
+        "content": "{\"error\":{\"message\":\"kiro/qwen3-coder-next: model — You have reached the limit. (HTTP 402)\",\"type\":\"billing_error\",\"code\":\"payment_required\"},\"diagnostics\":{\"poolSize\":1,\"attempted\":1,\"excluded\":[{\"provider\":\"kiro\",\"reason\":\"exhausted\"}],\"attemptOrder\":[{\"provider\":\"kiro\",\"model\":\"kiro/qwen3-coder\n{\"error\":{\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters (credit 100% conn:fa0c83a9)\",\"type\":\"service_unavailable\",\"code\":\"ALL_TARGETS_SKIPPED\"},\"diagnostics\":{\"poolSize\":1,\"attempted\":0,\"excluded\":[{\"provider\":\"kiro\",\"model\":\"kiro/qwen3-coder-next\",\"rea\n{\"error\":{\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters (credit 100% conn:fa0c83a9)\",\"type\":\"service_unavailable\",\"code\":\"ALL_TARGETS_SKIPPED\"},\"diagnostics\":{\"poolSize\":1,\"attempted\":0,\"excluded\":[{\"provider\":\"kiro\",\"model\":\"kiro/qwen3-coder-next\",\"rea",
+        "is_error": false
+      }
+    ]
+  }
+}

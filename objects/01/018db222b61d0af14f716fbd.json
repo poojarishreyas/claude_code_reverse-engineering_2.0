@@ -1,0 +1,19 @@
+{
+  "id": "018db222b61d0af14f716fbd",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01EuQagDUCMfp7xcihe76NcS",
+        "type": "tool_result",
+        "content": "1318\r\nauto/best-coding\r\nauto/best-reasoning\r\nauto/best-fast\r\nauto/best-vision\r\nauto/best-chat\r\nauto/best-coding-fast\r\nauto/pro-coding\r\nauto/pro-reasoning\r\nauto/pro-vision\r\nauto/pro-chat\r\nauto/pro-fast\r\nauto/coding\r\nauto/fast\r\nauto/chat\r\nauto/cheap\r\nauto/offline\r\nauto/smart\r\nauto/claude-opus\r\nauto/claude-sonnet\r\nauto/claude-haiku\r\nauto/best-free\r\nauto/subscription\r\nauto/thrifty\r\nauto/best-chaos\r\nauto/chaos\r\nauto/coding:fast\r\nauto/coding:cheap\r\nauto/coding:free\r\nauto/coding:pro\r\nauto/coding:reliable\r\nauto/reasoning\r\nauto/reasoning:pro\r\nauto/vision\r\nauto/multimodal\r\nauto/glm\r\nauto/minimax\r\nauto/mimo\r\nauto/zai\r\nauto/gemma\r\nauto/llama\r\nauto/gemini\r\nauto/kimi\r\nauto/qwen\r\nauto/deepseek\r\nauto/gpt\r\nlynx harness\r\nlynx harness-copy\r\nkr/claude-sonnet-5\r\nkiro/claude-sonnet-5\r\nkr/claude-sonnet-4.5\r\nkiro/claude-sonnet-4.5\r\nkr/claude-haiku-4.5\r\nkiro/claude-haiku-4.5\r\nkr/deepseek-3.2\r\nkiro/deepseek-3.2\r\nkr/minimax-m2.5\r\nkiro/minimax-m2.5\r\nkr/minimax-m2.1\r\nkiro/minimax-m2.1\r\nkr/glm-5",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

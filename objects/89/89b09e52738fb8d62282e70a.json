@@ -1,0 +1,18 @@
+{
+  "id": "89b09e52738fb8d62282e70a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01PRZGJ9RydyMx7X4g1taBKw",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-NetTCPConnection -State Listen -ErrorAction SilentlyContinue | Where-Object { $_.LocalPort -in 20128,20129,3000,8080 } | Select-Object LocalAddress, LocalPort, OwningProcess | Format-Table -AutoSize; Get-Process | Where-Object { $_.ProcessName -match 'omni|route' } | Select-Object Id, ProcessName, StartTime | Format-Table -AutoSize",
+          "description": "Look for an OmniRoute listener or process"
+        }
+      }
+    ]
+  }
+}

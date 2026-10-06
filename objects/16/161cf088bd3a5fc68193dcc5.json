@@ -1,0 +1,32 @@
+{
+  "id": "161cf088bd3a5fc68193dcc5",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSgQcKEAgSGAI4AUIIdGhpbmtpbmcSDILbz7y5ZiVj6DSHXxoMsp4Tze/iQKg0AeMEIjAfRpgz7/fxrMLopFeylMRHTgSkWCUw8wxNf87ld/aFeWrM6u0//Y2oxacjSvEmI1UqngbS0b+ZcceKP9uXo1ftDuy13G56l1v2WPr//p74vvX1lLjvtRdZA/KVxeQyDk+bZ2wGyKmF3BKJ+GKe1WS0F0LHhwPPlwvqR9M5BzMYmROTVXwd+a36Y4dT+tqYNUQX6YERadGEiQln8mSPom+Kwktzxd20dUl0uRRwJPjqjC8FW2JO7GhzS8rZBAE57E/iapKgjKVifUZZD4JaJVyCS3vUlUVbqfC30lK464enSfyuT3MMpF8DS7VpDxywnXTjPc0EIx2Uc7oZw+hxx82KV2TpjicHNCipHOtqGkZ0Pmzc17s0g9wWMMZ5Z76XAQ8E3UspEnqTjVeryM10n05IMwfc1lnfaWYl0d5PIs0mjEwQ873RyUAxHkCqPA9CD3J6XohLADx7XbwaTceJp4tYkJAmMQZ/bTK7I0l+oZ8LHdGFPj0l77/eKSLHD3s1HW9+2FhR0lOwi/HYXqzps2eDX+KeH92LiZfcc7oEq89sM4oNSoyPr8Z9+gTRyhkRm90x2vzh1zmh8v5TvG6YCCUZMDvXZp0Osljjx4+ZVk+ouU8ugnUXWxIadelqvZZbMV1p6IjkM3e02ZR6AanNrlA6+H8n3h5hgVh0WXwF8amMO8EP6W6VUE0+2N2SE+qmSXvTpa/zBXSeOpbEkqHntJ1nkXbN9IaPqODUj2pj2pjLUeYqaAPNkUfmYKTUu75xxSq+4igDxx1Kr+AeklSjUd1YFIlYyz8/WGVEihBSAY5w6ynqQS4izvoPSy2gEVyPek0jtb1OEP7VhcZ+oBQlVZsr4/bwHG0wbweN5FafL3n4SwdIMzxkIzHLBlziXVYhJpKxf/z5bLkNkGAQG4/4a6maVcOryMQ+766bRlW9blnat5hO8Y23CRQPqSIDkIBJlYKY5uDT8gsgwGbpb+Pnv1R6ViGCCAmez8JQakhJ+QIZkp6hYwO7E9OtqWpGwLtf4lFUwETBoUG8PxN6d6KntI3W1tWtbfm0Wt+olA4V8J3I8E9nke/XhTlN80gUjdFXWes6AH2bhhnkUELlA0POHT6/K59sx0/uUrqLDysJ2zHAUqEYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Something is listening on port 20128 now, so OmniRoute may still be starting up. I'll retry."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01WG2frZpSNiJ5CHAxxz13fi",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); for i in 1 2 3; do r=$(curl -s -w \"|http %{http_code}\" --max-time 90 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}'); echo \"${r:0:300}\"; case \"$r\" in *\"http 200\"*) break;; esac; sleep 10; done",
+          "description": "Retry OmniRoute until it answers",
+          "timeout": 330000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
