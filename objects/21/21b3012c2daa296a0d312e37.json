@@ -1,0 +1,8 @@
+{
+  "id": "21b3012c2daa296a0d312e37",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "go"
+  }
+}
