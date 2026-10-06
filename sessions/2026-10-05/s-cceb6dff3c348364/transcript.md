@@ -5,8 +5,8 @@
 | session | `s-cceb6dff3c348364` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
-| requests | 57 |
-| tokens | in 3,277 · out 45,476 · cache read 6,972,430 · cache write 188,411 |
+| requests | 58 |
+| tokens | in 3,279 · out 45,578 · cache read 7,137,356 · cache write 189,021 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -5872,4 +5872,100 @@ While that runs (install plus agent, probably 10–20 minutes), I'll document th
 57:DSH_EVAL_PROVIDER=<provider id> DSH_EVAL_MODEL=<model id> pnpm run eval:file-finding -- --repo <path-to-repo> --home-from ~/.dsh --only <hash>,<hash>
 62:## Limits
 ```
+
+#### ASSISTANT
+
+**-> tool_use** `Read` _(toolu_01W5fquLtUzJLV3k7DRrkjhE)_
+
+```json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\scripts\\eval\\README.md",
+  "offset": 30
+}
+```
+
+_stop `tool_use` · 8.32s (ttft 8.23s) · in 2 · out 102 · cache r164,926/w610_
+
+---
+
+## req-0058 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 108 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01QnscJmhjG8qK9MeCNTTHAg)_
+
+```
+1:# File-finding evaluation
+5:## How a task is made
+17:## Difficulty
+28:`--hard` runs only tagged tasks, taking `cross-package`, `indirect`, and `multi-file` in turn so each kind is represented. Tags appear in the log, each `<task>.json`, and `summary.md`.
+30:## Metrics
+39:| steps, tool calls, input tokens | Cost of the run |
+44:## Running it
+47:# Prepare and validate tasks only; no model key needed.
+50:# Full run; needs DEEPSEEK_API_KEY (model via DSH_EVAL_PROVIDER / DSH_EVAL_MODEL).
+53:# Edge cases only: tasks where the failing test does not lead straight to the fix.
+54:pnpm run eval:file-finding -- --repo <path-to-repo> --hard --limit 6
+56:# A model from an existing DSH home (e.g. a custom provider), and specific tasks.
+57:DSH_EVAL_PROVIDER=<provider id> DSH_EVAL_MODEL=<model id> pnpm run eval:file-finding -- --repo <path-to-repo> --home-from ~/.dsh --only <hash>,<hash>
+62:## Limits
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Read` _(toolu_01W5fquLtUzJLV3k7DRrkjhE)_
+
+```json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\scripts\\eval\\README.md",
+  "offset": 30
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01W5fquLtUzJLV3k7DRrkjhE)_
+
+````
+30	## Metrics
+31	
+32	| Metric | Meaning |
+33	|---|---|
+34	| passed | The fix's tests pass afterwards and no test file was edited |
+35	| right file edited | At least one of the real fix's source files was edited |
+36	| first seen step | First step whose search results or reads named a real fix file |
+37	| first read step | First step that read a real fix file |
+38	| reads before correct | `read` calls before that first correct read |
+39	| steps, tool calls, input tokens | Cost of the run |
+40	| extra edits | Files edited that are neither fix sources nor tests |
+41	
+42	`summary.json` aggregates pass count, correct-file count, and medians; `summary.md` is a per-task table; `<task>.json` holds each run's full metrics and final answer.
+43	
+44	## Running it
+45	
+46	```sh
+47	# Prepare and validate tasks only; no model key needed.
+48	pnpm run eval:file-finding -- --repo <path-to-repo> --limit 5 --dry-run
+49	
+50	# Full run; needs DEEPSEEK_API_KEY (model via DSH_EVAL_PROVIDER / DSH_EVAL_MODEL).
+51	pnpm run eval:file-finding -- --repo <path-to-repo> --limit 20 --out eval-results
+52	
+53	# Edge cases only: tasks where the failing test does not lead straight to the fix.
+54	pnpm run eval:file-finding -- --repo <path-to-repo> --hard --limit 6
+55	
+56	# A model from an existing DSH home (e.g. a custom provider), and specific tasks.
+57	DSH_EVAL_PROVIDER=<provider id> DSH_EVAL_MODEL=<model id> pnpm run eval:file-finding -- --repo <path-to-repo> --home-from ~/.dsh --only <hash>,<hash>
+58	```
+59	
+60	This repository's history is squashed, so mine a repository with real history, such as a clone of the upstream `deepseek-ai/deepseek-harness`. A blobless clone (`git clone --filter=blob:none`) is enough. `--install` overrides the dependency command, and `--keep` leaves worktrees in place for inspection.
+61	
+62	## Limits
+63	
+64	- The agent runs the base profile with workspace-write sandboxing and no approval prompts; the web presets add their own compaction rows, so compaction behavior can differ slightly from the web app.
+65	- The prompt names the failing test files, which hints at the package; the metrics measure finding the source file within that hint.
+66	- One run per task is noisy. Compare feature variants on the same tasks and several runs before drawing conclusions.
+67	
+````
 

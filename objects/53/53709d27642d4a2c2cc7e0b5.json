@@ -1,0 +1,22 @@
+{
+  "id": "53709d27642d4a2c2cc7e0b5",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01W5fquLtUzJLV3k7DRrkjhE",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\scripts\\eval\\README.md",
+          "offset": 30
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "1d85c82b6f202c00b5b7d8f6",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01W5fquLtUzJLV3k7DRrkjhE",
+        "type": "tool_result",
+        "content": "30\t## Metrics\n31\t\n32\t| Metric | Meaning |\n33\t|---|---|\n34\t| passed | The fix's tests pass afterwards and no test file was edited |\n35\t| right file edited | At least one of the real fix's source files was edited |\n36\t| first seen step | First step whose search results or reads named a real fix file |\n37\t| first read step | First step that read a real fix file |\n38\t| reads before correct | `read` calls before that first correct read |\n39\t| steps, tool calls, input tokens | Cost of the run |\n40\t| extra edits | Files edited that are neither fix sources nor tests |\n41\t\n42\t`summary.json` aggregates pass count, correct-file count, and medians; `summary.md` is a per-task table; `<task>.json` holds each run's full metrics and final answer.\n43\t\n44\t## Running it\n45\t\n46\t```sh\n47\t# Prepare and validate tasks only; no model key needed.\n48\tpnpm run eval:file-finding -- --repo <path-to-repo> --limit 5 --dry-run\n49\t\n50\t# Full run; needs DEEPSEEK_API_KEY (model via DSH_EVAL_PROVIDER / DSH_EVAL_MODEL).\n51\tpnpm run eval:file-finding -- --repo <path-to-repo> --limit 20 --out eval-results\n52\t\n53\t# Edge cases only: tasks where the failing test does not lead straight to the fix.\n54\tpnpm run eval:file-finding -- --repo <path-to-repo> --hard --limit 6\n55\t\n56\t# A model from an existing DSH home (e.g. a custom provider), and specific tasks.\n57\tDSH_EVAL_PROVIDER=<provider id> DSH_EVAL_MODEL=<model id> pnpm run eval:file-finding -- --repo <path-to-repo> --home-from ~/.dsh --only <hash>,<hash>\n58\t```\n59\t\n60\tThis repository's history is squashed, so mine a repository with real history, such as a clone of the upstream `deepseek-ai/deepseek-harness`. A blobless clone (`git clone --filter=blob:none`) is enough. `--install` overrides the dependency command, and `--keep` leaves worktrees in place for inspection.\n61\t\n62\t## Limits\n63\t\n64\t- The agent runs the base profile with workspace-write sandboxing and no approval prompts; the web presets add their own compaction rows, so compaction behavior can differ slightly from the web app.\n65\t- The prompt names the failing test files, which hints at the package; the metrics measure finding the source file within that hint.\n66\t- One run per task is noisy. Compare feature variants on the same tasks and several runs before drawing conclusions.\n67\t",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

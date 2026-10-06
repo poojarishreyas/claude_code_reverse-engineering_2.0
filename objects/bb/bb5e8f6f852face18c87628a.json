@@ -1,0 +1,15 @@
+{
+  "id": "bb5e8f6f852face18c87628a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01QnscJmhjG8qK9MeCNTTHAg",
+        "type": "tool_result",
+        "content": "1:# File-finding evaluation\n5:## How a task is made\n17:## Difficulty\n28:`--hard` runs only tagged tasks, taking `cross-package`, `indirect`, and `multi-file` in turn so each kind is represented. Tags appear in the log, each `<task>.json`, and `summary.md`.\n30:## Metrics\n39:| steps, tool calls, input tokens | Cost of the run |\n44:## Running it\n47:# Prepare and validate tasks only; no model key needed.\n50:# Full run; needs DEEPSEEK_API_KEY (model via DSH_EVAL_PROVIDER / DSH_EVAL_MODEL).\n53:# Edge cases only: tasks where the failing test does not lead straight to the fix.\n54:pnpm run eval:file-finding -- --repo <path-to-repo> --hard --limit 6\n56:# A model from an existing DSH home (e.g. a custom provider), and specific tasks.\n57:DSH_EVAL_PROVIDER=<provider id> DSH_EVAL_MODEL=<model id> pnpm run eval:file-finding -- --repo <path-to-repo> --home-from ~/.dsh --only <hash>,<hash>\n62:## Limits",
+        "is_error": false
+      }
+    ]
+  }
+}
