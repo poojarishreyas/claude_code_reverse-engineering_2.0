@@ -1,0 +1,17 @@
+{
+  "id": "73800c2e8686a584b3b53f69",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The same-model comparison has started. dsh is working 10 hard tasks on qwen3-coder-next through OmniRoute, and I'm watching each task's result.\n\nOn the one task tested so far, Claude Code with the same model **passed**:\n- **Claude Code (qwen3-coder-next):** 44 steps, 2.66M tokens sent, and it found the right file at step 2.\n- **dsh (same model, earlier single run):** failed after 67 steps.\n\nOne run is too noisy to decide anything, which is why the 10-task batch is running. After dsh finishes, Claude Code runs the same 10 tasks.\n\nOmniRoute shows no prompt caching, so every step pays full price for the whole context. That is the same for both harnesses.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
