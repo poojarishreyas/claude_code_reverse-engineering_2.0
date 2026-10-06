@@ -1,0 +1,14 @@
+{
+  "id": "0d7c949798779f8508699a2e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DeNooNmsCewZukRtXvDGXY",
+        "type": "tool_result",
+        "content": "160\texport async function readTestSources(repo: string, task: EvalTask): Promise<string[]> {\n161\t  return Promise.all(task.testFiles.map(async file => run('git', ['show', `${task.fixCommit}:${file}`], { cwd: repo, maxBuffer: 16 * 1024 * 1024 })\n162\t    .then(result => result.stdout, () => '')))\n163\t}\n164\t\n165\t/**\n166\t * Create a detached worktree at the fix commit with its source files reverted\n167\t * to the parent commit, leaving the fix's tests in place. Source files the fix\n168\t * created are deleted, so the agent must write them.\n169\t * @param repo - repository root.\n170\t * @param task - the task to prepare.\n171\t * @param dir - new worktree directory; must not exist.\n172\t */\n173\texport async function prepareWorkspace(repo: string, task: EvalTask, dir: string): Promise<void> {\n174\t  await run('git', ['worktree', 'add', '--detach', dir, task.fixCommit], { cwd: repo })\n175\t  const existed = await Promise.all(task.sourceFiles.map(file => run('git', ['cat-file', '-e', `${task.parentCommit}:${file}`], { cwd: dir })\n176\t    .then(() => true, () => false)))\n177\t  const restore = task.sourceFiles.filter((_, index) => existed[index])\n178\t  if (restore.length > 0) await run('git', ['checkout', task.parentCommit, '--', ...restore], { cwd: dir })\n179\t  for (const file of task.sourceFiles.filter((_, index) => !existed[index])) await rm(join(dir, file), { force: true })\n180\t}\n181\t\n182\t/**\n183\t * Remove a task worktree.\n184\t * @param repo - repository root.\n185\t * @param dir - the worktree directory.\n186\t */\n187\texport async function removeWorkspace(repo: string, dir: string): Promise<void> {\n188\t  await run('git', ['worktree', 'remove', '--force', dir], { cwd: repo })\n189\t}\n190\t\n191\t/**\n192\t * The model-facing task: the failing test output, as a CI report would show it.\n193\t * @param task - the task.\n194\t * @param failure - test runner output from the prepared workspace."
+      }
+    ]
+  }
+}

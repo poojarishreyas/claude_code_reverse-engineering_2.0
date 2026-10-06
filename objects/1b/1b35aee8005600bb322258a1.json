@@ -1,0 +1,27 @@
+{
+  "id": "1b35aee8005600bb322258a1",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjwkKEAgSGAI4AUIIdGhpbmtpbmcSDCQfJGnkSRWEG9uz1RoMnFEXfYttL8qhvk0YIjB9cKF/Brlb3gx/LeMPMh4EzQT7U9KGMDcHA3QH1JDa8uUpM/jJRXlZXvpVhwpyidcqrAhjNzBhpzKC/2qRGHyMxkv7kKErc92iH7VmnCKpXJFV7aq8yQj+ubtZ0vDWEFmMPenFfz6Won3jDdTInfB+0lcbXDQOVeTzDuicGEXTiW3fbGoAR72cQ5i/N7sORKxwW0xlq2OYWs401UAIKN0l4JbyAaAyiOLQcNmSUNsMXFk/U3QXL5SvqjLrM+6+bpQlHsFFi1MDLv3cxP3zq+qWPOFTGcwg4VEywqaihk8sD++JGiOyKKXnVSUXIXI+1H0EvdPB+2hFPzry4Gfffaac1M8pXXF3XFBoTw2dkskhWkSlpeGXC8z6FQ+JdyYQx6GpKQrhUGgLhwmnt0VOh3AdlgkO+pVQd4czA6lg5u2Hqn8ALUbhpD0NOald7lun8ZIN60X1AQDmK6gm5YTgs3LsuXlZAwCxKghUteTNKDwQ2ikuHrXFbmTMl77tKZVUQ2wkk5RfUYyBzrQ2El1eFNhAlo5LVdAKEBjOkYNZggKCReR0hHagFE/UM13fSG61ZbBoM/YjTz7+JC2E2mURRkDpAK0L7DTUZDW6saYxOcBrEEr1nZYxMUyxIjaB2LzVMwUqBJJJm9RvbIhv1NHnC4cJFgUp2bgaEFZUBilTPzv3MCT6KuZ5p3qz9sJuVSOeetQclF/GZz2NNuXPXvDE6pytvNDQr5PCKdQWPrN06pi5bQHI26oQ9q6kMqDSgKx+Hjyb/fJJfvKZKKCpNsWbf3OufX81QSV8x6wsyWtaBng0EL+JqpaZR9vz8JQDF2x4eNvWFpIpXjXjgr85E0lpD9keN7R6w+CjxrPpcujuVjGe53mQd2KNZCDluymoY2zzhkUpfD1h6QWhEhEmFc1RfC6vaQ3sk2LVRsk6TzoTW4eq6NeA8NEo/oz2wsarIEHYvBoFzEecupubRPJIMqb/wFgtTYnPa8zgkkWX+mhhYaAArH7Rn6MLirIic03FJg0axIpovStPa/hvb2/zB6xaCQGoX3zlA1dvM4V3bLQnot+oZzaHWEbvEyhTQd+W2xRTSko8T0yh/lsENLssFG7uIT5S1+Y3bt59bLP3GPueQD8LHpYuhaO4JargTS4WFRE1VbDLUsivTzPoZKbcXNQzdMHIFnUVnaCLw39XSsKrzotfggSCZbO3TndIZxFjxXuD8toR0ZurbMnq84CQHNTZSD4luOQjCsqlvOkiblLy54q5vyFvQGWivH6/RdMBbusgd9vKGzqS7sMnyNjR6y9A1PH0u74vqEzydnynElzoOFCGogG07PJjWGIax3uuhaaWwkky9kGrd0eIMu3xVjCRNqw4gO6i4IyGLEw0Me4NKF7HIB0GYhLQkOERqDLESGz55tXqI96PK5t0HFdB0PP/G2iTeKxdnkdAR5jJKX2rwK8KrMldt8bZ842k/h+hhjQJgFu646KJD6CGsfVswc/p9GEYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01AUQw3AFmJVqnszLreHkTVe",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; cd \"$S\" && PYTHONIOENCODING=utf8 python -c \"\nimport json;d=json.load(open('gem-cc2/e21ed97f29.json'));m=d['metrics'];u=m['usage']\nprint(d['passed'],d.get('model'),m['steps'],m['toolCalls'],m['firstSeenStep'],m['firstReadStep'],m['editedFiles'],m['extraEdits'],m['editedTests'],u['inputTokens']+u.get('cacheReadTokens',0)+u.get('cacheWriteTokens',0),d['task']['sourceFiles'])\nprint((d.get('finalText') or '')[-700:])\"; git -C upstream worktree prune -v; git -C upstream worktree list; ls -d \"$TEMP\"/dsh-eval-* 2>/dev/null",
+          "description": "Inspect Claude Code e21ed97f29 result and prune worktrees"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

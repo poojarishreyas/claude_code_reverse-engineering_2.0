@@ -1,0 +1,28 @@
+{
+  "id": "9373915047fdc80c0a4ad5d4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01DeNooNmsCewZukRtXvDGXY",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\scripts\\eval\\tasks.ts",
+          "offset": 160,
+          "limit": 35
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
