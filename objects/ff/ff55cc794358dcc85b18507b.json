@@ -1,0 +1,16 @@
+{
+  "id": "ff55cc794358dcc85b18507b",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Add a `\"permissions\"` block next to your other settings. Your file would become:\n\n```json\n{\n  \"model\": \"opus\",\n  \"autoUpdatesChannel\": \"latest\",\n  \"theme\": \"dark\",\n  \"switchModelsOnFlag\": true,\n  \"modelSettings\": {\n    \"claude-opus-5-5\": {\n      \"effortLevel\": \"high\"\n    }\n  },\n  \"permissions\": {\n    \"allow\": [\n      \"Bash(pnpm run eval:file-finding:*)\",\n      \"Bash(env -u ANTHROPIC_API_KEY ANTHROPIC_BASE_URL=http://localhost:20128:*)\"\n    ]\n  }\n}\n```\n\n**What to watch for:**\n- **Add a comma after the `modelSettings` closing `}`.** Without it the JSON is invalid and Claude Code will ignore the file or report an error.\n- **Use the right file.** This is your user settings file at `C:\\Users\\shrey\\.claude\\settings.json`, so the rule applies only on your machine and nothing gets committed.\n- **Check the second rule after saving.** It is meant to cover commands that start with environment variables. I'm not certain the matcher handles that prefix. If the run is still blocked, the fallback is a small wrapper script that sets the variables itself, so a single plain rule can match it.\n- **Don't add `ANTHROPIC_BASE_URL` to an `\"env\"` block in this file.** That would send your normal Claude Code sessions to qwen as well.\n\nAfter saving, tell the main conversation \"allowed, go ahead\" so it can start the run.",
+        "cache_control": {
+          "type": "ephemeral"
+        }
+      }
+    ]
+  }
+}

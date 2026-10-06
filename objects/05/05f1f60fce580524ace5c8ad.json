@@ -1,0 +1,8 @@
+{
+  "id": "05f1f60fce580524ace5c8ad",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "how to set permission{\n  \"model\": \"opus\",\n  \"autoUpdatesChannel\": \"latest\",\n  \"theme\": \"dark\",\n  \"switchModelsOnFlag\": true,\n  \"modelSettings\": {\n    \"claude-opus-5-5\": {\n      \"effortLevel\": \"high\"\n    }\n  }\n}"
+  }
+}
