@@ -1,0 +1,21 @@
+{
+  "id": "4dbbb112f2e15cdc39b83612",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "<system-reminder>\n[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>bxdungek3</task-id>\n<tool-use-id>toolu_0197wEckjji7uRWrcuWXJZTr</tool-use-id>\n<output-file>C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\tasks\\bxdungek3.output</output-file>\n<status>completed</status>\n<summary>Background command \"Run Claude Code on qwen3-coder-next via OmniRoute on one task\" completed (exit code 0)</summary>\n</task-notification>\n</system-reminder>\n"
+      },
+      {
+        "type": "text",
+        "text": "<system-reminder>\n[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>b0ejg8o3p</task-id>\n<tool-use-id>toolu_01QRBjTWLVe8wM7fbw3BRc9n</tool-use-id>\n<output-file>C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\tasks\\b0ejg8o3p.output</output-file>\n<status>completed</status>\n<summary>Monitor \"Claude Code qwen smoke run finishing\" stream ended</summary>\n<event>eval: 1 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\upstream with claude-code\neval: ed34a1d7fe [cross-package, multi-file] fix: keep queued question replies read-only after reload\neval: ed34a1d7fe -&gt; error — agent turn failed: API Error: Request rejected (429) · Service temporarily unavailable: all targets were skipped by pre-dispatch filters reset after 3s</event>\n</task-notification>\n</system-reminder>",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
