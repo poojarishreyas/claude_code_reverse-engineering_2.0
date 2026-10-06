@@ -5,8 +5,8 @@
 | session | `s-cceb6dff3c348364` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
-| requests | 21 |
-| tokens | in 1,656 · out 19,273 · cache read 1,820,167 · cache write 140,849 |
+| requests | 22 |
+| tokens | in 2,164 · out 20,375 · cache read 2,056,286 · cache write 143,328 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -2821,4 +2821,121 @@ dited to verify \u2014 Edit/Write would have errored if the change failed, and t
 ",l="Wasted call \u2014 file unchanged since your last Read. Refer to that earlier tool_result instead.
 Shell cwd was reset to C:\Users\shrey\Desktop\Elemental_harness
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Yes, it can, and the risk is real. I also checked your Claude Code binary: **Claude Code already does this.** It contains the exact text: *"File unchanged since last read. The content from the earlier Read tool_result in this conversation is still current — refer to that instead of re-reading."* So this move is catching up to Claude Code, not beating it. I'm correcting my earlier claim.
+
+## When the stub makes the model hallucinate
+
+| Case | What goes wrong |
+|---|---|
+| **The earlier read was compacted or pruned** | The stub says "see the earlier read", but that content was summarized or trimmed away. The model then invents the file's contents. **This is the dangerous one**, because our harness does compaction and tool-result pruning. |
+| **The earlier read covered other lines** | It read lines 1–200 and now asks for 400–500. "Unchanged" would hide content the model never saw. |
+| **The read is far back in a long context** | The content is still there 80k tokens back, but models recall distant context poorly ("lost in the middle"). A fresh re-read puts it near the end, where attention is strongest. Sometimes the re-read is **worth its tokens**. |
+| **Diff-only after an edit** | The model must apply the diff in its head to the old version. Weaker models get that wrong. |
+| **"Ruled-out" files** | The harness can't actually know a file is irrelevant. If it says so, the model may skip the file that's actually wrong. |
+
+## Safe rules if we do it
+
+Return the stub only if **all** of these are true:
+1. Same file version (the observation policy already tracks this).
+2. The requested lines were fully returned before.
+3. **That earlier result is still word-for-word in context:** not compacted, not pruned. Any compaction resets the record.
+4. It was recent, say within the last ~20k tokens. Otherwise return the full content.
+
+Also:
+- **Always allow an override:** the stub says "pass `force: true` to read it again", so the model is never stuck.
+- **Drop diff-only re-reads:** our edit tool already shows the change, so the saving is small and the risk is real.
+- **Drop harness-decided "ruled-out" files:** relevance isn't the harness's call to make.
+
+## What this changes in the strategy
+- Move 3 drops from "edge" to "**parity plus safety**". It's still worth doing, because repeated reads waste tokens. The rule that matters is #3: never stub over compacted content. Our compaction makes that the main risk, and I couldn't tell from the binary whether Claude Code guards against it.
+- **The real edges against Claude Code remain:**
+  - the closed loop (impact, type check, verify before done);
+  - runtime seeding from failing tests;
+  - repo memory;
+  - compact "answers, not files" search results.
+
+The lesson I'm taking from this is to check Claude Code's binary before calling something an edge. I'll do that for the remaining moves before we commit to the plan.
+
+_stop `end_turn` · 14.30s (ttft 11.07s) · in 2 · out 1,088 · cache r117,364/w1,391_
+
+---
+
+## req-0022 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 42 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01HsNCJrnB3cvVDrnGG7voQP)_
+
+```
+  �z exitActive    �F�� elided     $�c �    ����  other active     � n= setting #  �_��  unchanged since your last approval    v� 
+e page loads any.  �rVf type_file_path  &   K%      s e n d   o n l y   t h i s   A r t i f a c t ' s   o w n   f i l e s   �Dx type_file_write ;  ���� root: could not verify the publish base is unchanged since     a� a p p r o v a l      r e t r y   t h e   p u b l i s h   ��Q� root_unpinned   F   ��� a   R e a d   p e r m i s s i o n   a p p r o v a l   h e r e      r e t r y   t h e   p u b l i s h   s o   i t   c a n   b e   a s k e d �   �� f i 
+_design_scopes S  ���� Claude Design returned a text/event-stream response; this client only handles JSON.   �$T� design_tool_sse_unsupported   ���� Mcp-Session-Id  6  �Q[d The operation catalog is unchanged since the earlier 
+dited to verify \u2014 Edit/Write would have errored if the change failed, and the harness tracks file state for you.`,mLn=" (file state is current in your context \u2014 no need to Read it back)",h="File unchanged since last read. The content from the earlier Read tool_result in this conversation is still current \u2014 refer to that instead of re-reading.
+",l="Wasted call \u2014 file unchanged since your last Read. Refer to that earlier tool_result instead.
+Shell cwd was reset to C:\Users\shrey\Desktop\Elemental_harness
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Yes, it can, and the risk is real. I also checked your Claude Code binary: **Claude Code already does this.** It contains the exact text: *"File unchanged since last read. The content from the earlier Read tool_result in this conversation is still current — refer to that instead of re-reading."* So this move is catching up to Claude Code, not beating it. I'm correcting my earlier claim.
+
+## When the stub makes the model hallucinate
+
+| Case | What goes wrong |
+|---|---|
+| **The earlier read was compacted or pruned** | The stub says "see the earlier read", but that content was summarized or trimmed away. The model then invents the file's contents. **This is the dangerous one**, because our harness does compaction and tool-result pruning. |
+| **The earlier read covered other lines** | It read lines 1–200 and now asks for 400–500. "Unchanged" would hide content the model never saw. |
+| **The read is far back in a long context** | The content is still there 80k tokens back, but models recall distant context poorly ("lost in the middle"). A fresh re-read puts it near the end, where attention is strongest. Sometimes the re-read is **worth its tokens**. |
+| **Diff-only after an edit** | The model must apply the diff in its head to the old version. Weaker models get that wrong. |
+| **"Ruled-out" files** | The harness can't actually know a file is irrelevant. If it says so, the model may skip the file that's actually wrong. |
+
+## Safe rules if we do it
+
+Return the stub only if **all** of these are true:
+1. Same file version (the observation policy already tracks this).
+2. The requested lines were fully returned before.
+3. **That earlier result is still word-for-word in context:** not compacted, not pruned. Any compaction resets the record.
+4. It was recent, say within the last ~20k tokens. Otherwise return the full content.
+
+Also:
+- **Always allow an override:** the stub says "pass `force: true` to read it again", so the model is never stuck.
+- **Drop diff-only re-reads:** our edit tool already shows the change, so the saving is small and the risk is real.
+- **Drop harness-decided "ruled-out" files:** relevance isn't the harness's call to make.
+
+## What this changes in the strategy
+- Move 3 drops from "edge" to "**parity plus safety**". It's still worth doing, because repeated reads waste tokens. The rule that matters is #3: never stub over compacted content. Our compaction makes that the main risk, and I couldn't tell from the binary whether Claude Code guards against it.
+- **The real edges against Claude Code remain:**
+  - the closed loop (impact, type check, verify before done);
+  - runtime seeding from failing tests;
+  - repo memory;
+  - compact "answers, not files" search results.
+
+The lesson I'm taking from this is to check Claude Code's binary before calling something an edge. I'll do that for the remaining moves before we commit to the plan.
+
+#### ASSISTANT
+
+check claude code binary for the other moves too
+
+_stop `end_turn` · 3.61s (ttft 3.00s) · in 506 · out 14 · cache r118,755/w1,088_
 
