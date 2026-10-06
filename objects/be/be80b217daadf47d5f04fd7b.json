@@ -1,0 +1,19 @@
+{
+  "id": "be80b217daadf47d5f04fd7b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01EmpsLtFAXS64zngRhSKH1f",
+        "type": "tool_result",
+        "content": "2.1.282 (Claude Code)\n  --allow-dangerously-skip-permissions  Enable bypassing all permission checks\n  --allowedTools, --allowed-tools <tools...>\n  --append-system-prompt <prompt>       Append a system prompt to the default\n  --bare                                Minimal mode: skip hooks (those defined\n                                        --append-system-prompt[-file], --add-dir\n                                        (CLAUDE.md dirs), --mcp-config,\n  --dangerously-skip-permissions        Bypass all permission checks.\n  --disallowedTools, --disallowed-tools <tools...>\n  --fallback-model <model>              Enable automatic fallback to specified\n                                        model(s) when the default model is\n                                        --print and --output-format=stream-json)\n                                        --output-format=stream-json)\n                                        --output-format=stream-json)\n  --mcp-config <configs...>             Load MCP servers from JSON files or\n  --model <model>                       Model for the current session. Provide\n                                        an alias for the latest model (e.g.\n                                        model's full name (e.g.\n  --no-session-persistence              Disable session persistence - sessions\n  --output-format <format>              Output format (only works with --print):\n  --permission-mode <mode>              Permission mode to use for the session\n                                        \"bypassPermissions\", \"manual\",\n  --permission-prompts <target>         Who answers permission prompts with\n                                        --permission-prompt-tool) or \"none\"\n                                        denied automatically; the permission\n                                        --output-format=stream-json)\n                                        apply; add --strict-mcp-config to skip\n                                        bypassPermissions, and lets only a\n                                        person or the configured permission\n                                        settings still apply. Auth, model\n                                        and permissions work normally. Sets",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

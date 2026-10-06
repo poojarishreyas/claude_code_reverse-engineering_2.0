@@ -1,0 +1,25 @@
+{
+  "id": "91acb26a612cc04a9c037ef4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01BAeeiv3DZLyaUC4QoSghUg",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\scripts\\eval\\run-eval.ts"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01EzDyqxUnZCLyfjM6iRpmzc",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\scripts\\eval\\metrics.ts"
+        }
+      }
+    ]
+  }
+}

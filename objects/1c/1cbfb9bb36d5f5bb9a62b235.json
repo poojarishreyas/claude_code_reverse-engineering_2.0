@@ -1,0 +1,22 @@
+{
+  "id": "1cbfb9bb36d5f5bb9a62b235",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01WZ7kFVVq6uBywpx6CoU5AE",
+        "name": "Bash",
+        "input": {
+          "command": "claude --help 2>&1 | grep -A12 -E \"^\\s+--bare\" ; claude --help 2>&1 | grep -A4 -E \"setting-sources|--settings \"",
+          "description": "Read --bare and settings flag help"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
