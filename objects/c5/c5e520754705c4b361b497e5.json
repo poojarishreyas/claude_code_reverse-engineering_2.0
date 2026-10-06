@@ -1,0 +1,15 @@
+{
+  "id": "c5e520754705c4b361b497e5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01AuGpXBr4P4HVUkR2o241x3",
+        "type": "tool_result",
+        "content": "47:interface TaskResult {\n48-  readonly task: EvalTask\n49-  readonly tags: readonly TaskTag[]\n50-  readonly status: 'valid' | 'invalid' | 'ran' | 'error'\n51-  readonly passed: boolean\n52-  readonly metrics?: RunMetrics\n53-  readonly finalText?: string\n54-  readonly note?: string\n55-}\n56-\n57-interface Command {\n58-  readonly code: number | null\n59-  readonly stdout: string\n60-  readonly stderr: string\n61-}\n53:  readonly finalText?: string\n174:      ...run.output === undefined ? {} : { finalText: run.output },",
+        "is_error": false
+      }
+    ]
+  }
+}
