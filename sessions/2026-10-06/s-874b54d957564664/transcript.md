@@ -5,8 +5,8 @@
 | session | `s-874b54d957564664` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-06T06:32:41.424Z |
-| requests | 109 (17 errored) |
-| tokens | in 5,226 · out 53,176 · cache read 10,697,261 · cache write 269,957 |
+| requests | 110 (17 errored) |
+| tokens | in 5,228 · out 53,752 · cache read 10,859,112 · cache write 270,542 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -7621,5 +7621,79 @@ kr/glm-5
 
 ```
 [('openrouter', 769), ('aihorde', 143), ('dva', 110), ('no-think', 67), ('auto', 45), ('cxa', 45), ('aug', 28), ('kr', 22), ('kiro', 22), ('cfp', 20), ('zc', 14), ('nvidia', 14), ('ddgw', 6), ('oc', 3), ('opencode', 3), ('veoaifree-web', 2), ('veo-free', 2), ('unc', 1)]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_017WF2UfBBVsFzzf51FqG4W5)_
+
+```json
+{
+  "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); ids=$(curl -s --max-time 30 http://localhost:20128/v1/models -H \"Authorization: Bearer $KEY\" | python -c \"\nimport json,sys; d=json.load(sys.stdin)\nfor m in d['data']:\n  i=m.get('id') or ''\n  if 'qwen3-coder' in i.lower() and not i.startswith(('kiro/','kr/')): print(i)\"); echo \"$ids\"; echo ---\nfor m in $(echo \"$ids\" | head -8); do r=$(curl -s -w \"|%{http_code}\" --max-time 60 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d \"{\\\"model\\\":\\\"$m\\\",\\\"max_tokens\\\":5,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}\"); echo \"$m -> ${r##*|} ${r:0:120}\"; done",
+  "description": "Find and probe non-kiro qwen3-coder routes",
+  "timeout": 600000
+}
+```
+
+_stop `tool_use` · 5.93s (ttft 2.18s) · in 2 · out 576 · cache r161,851/w585_
+
+---
+
+## req-0110 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 168 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01CSwVv8PHMA99mcfU53canU)_
+
+```
+[('openrouter', 769), ('aihorde', 143), ('dva', 110), ('no-think', 67), ('auto', 45), ('cxa', 45), ('aug', 28), ('kr', 22), ('kiro', 22), ('cfp', 20), ('zc', 14), ('nvidia', 14), ('ddgw', 6), ('oc', 3), ('opencode', 3), ('veoaifree-web', 2), ('veo-free', 2), ('unc', 1)]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_017WF2UfBBVsFzzf51FqG4W5)_
+
+```json
+{
+  "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); ids=$(curl -s --max-time 30 http://localhost:20128/v1/models -H \"Authorization: Bearer $KEY\" | python -c \"\nimport json,sys; d=json.load(sys.stdin)\nfor m in d['data']:\n  i=m.get('id') or ''\n  if 'qwen3-coder' in i.lower() and not i.startswith(('kiro/','kr/')): print(i)\"); echo \"$ids\"; echo ---\nfor m in $(echo \"$ids\" | head -8); do r=$(curl -s -w \"|%{http_code}\" --max-time 60 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d \"{\\\"model\\\":\\\"$m\\\",\\\"max_tokens\\\":5,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}\"); echo \"$m -> ${r##*|} ${r:0:120}\"; done",
+  "description": "Find and probe non-kiro qwen3-coder routes",
+  "timeout": 600000
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_017WF2UfBBVsFzzf51FqG4W5)_
+
+```
+openrouter/qwen/qwen3-coder-next
+openrouter/qwen/qwen3-coder-plus
+openrouter/qwen/qwen3-coder-flash
+openrouter/qwen/qwen3-coder-30b-a3b-instruct
+openrouter/qwen/qwen3-coder
+---
+openrouter/qwen/qwen3-coder-next -> 400 {"error":{"message":"Invalid JSON body","type":"invalid_request_error","code":"bad_request"}}|400
+openrouter/qwen/qwen3-coder-plus -> 400 {"error":{"message":"Invalid JSON body","type":"invalid_request_error","code":"bad_request"}}|400
+openrouter/qwen/qwen3-coder-flash -> 400 {"error":{"message":"Invalid JSON body","type":"invalid_request_error","code":"bad_request"}}|400
+openrouter/qwen/qwen3-coder-30b-a3b-instruct -> 400 {"error":{"message":"Invalid JSON body","type":"invalid_request_error","code":"bad_request"}}|400
+openrouter/qwen/qwen3-coder -> 200 {"id":"gen-1791301865-i8qLeyMcbiqFD2G31hCj","type":"message","role":"assistant","model":"qwen/qwen3-coder","content":[{"
 ```
 

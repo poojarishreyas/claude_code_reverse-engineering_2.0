@@ -1,0 +1,28 @@
+{
+  "id": "7eec1ca388098e6b73c2cd29",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS+gYKEAgSGAI4AUIIdGhpbmtpbmcSDOnguC4hbco3jd1nYRoMO+sXsfq0c8oz1HApIjDcquodb9aEdKVTXoMXXEYMgUfkOxSdD/1S1zUmz1SGOm2HELBUBWb/u3eQFkGMbMsqlwYVmIeAvSbKDTpDJR3cVckyG6OtC8cgSwGTS+zfQ7ihHCgoeUNsXVipMEq7jkbTyt+mmwxppM1OkbBVFsi++kn/VzIB8aRE2OCmDUD2IKZ9qoUKytcbejXNS+GYF3TTWVpQwv8Z//DdY8Cnac+0Nkm6mCJ284pBUWuMdC/gkHk86efee+CoDr1JaHsbB0NaF4v6+5iJBJN6bcCQWM05uSUMo0LZlasTrgKMNURxVPdtoiNHTTVXPBnn5LACcVYUy32je6xm2O8hwCbW5zT0nKOV6OFMfFV/dyGG5TH+YNC/zBbKywUoVNRG4YATeCKYcSMQXfXSpPblEwuaol8ZDXZMnYiy2QW+oP1Bm5b2oaKMjRGDRsRqdWoNa0YPzeEI586rsKA/F15uqGRNK84LmVhZ9wwtIz0uAUiYc265NcKrMV+nU0cisoCzWYbVsDjrDhRKXtWNlma5C7yODKu/kDeomxhXtmonAV3ZVTtS5ImR6TBeVkhp8MG48kh/o0dJS2eiXyHR1lTdZ+TXQZnLPUk/yPMFd4seNjy8WZqIDhYbd5BNxNNz+1oTUAZ+i0D1Cs82GfE7IjEX/ZgOSilSmALjvUQBLhuLdAbnt7rjUqjq2DoV1NP/cTs0EsqnJ/8U+dUg1rHLqNYTL4qLqBNm/VCpCW9lk+pMYEtXeMdPGc3BgdlL7dy/q+yiLYBTHsa9M+xgJvg9koYAiKu1upJ6lICH8D6hK7RWsCByxs55LLxBLt7C/HPqlRZibnSPkUv3rJB/Ja3/RweZZksvyYdLOrv+JPG2CH5iMRYKe+xrt2zSH6seKSCChIUWnBkPZPytI8WIxIIH60XGeCNVBgAghhQ2G+uYjO9c72M74WA3uktCzj2GCVBKig7aKNBB9GHYzoyFwz66Wavka5TRIKqcF2jWeWCWWdtm08GwIbXBIqJVhVI0w+5rA42/tIA8FZy5517kXsGRQmtslf2y5Icnewn9Xu2jGI7dcoziS/v8upzjyQbH8UNWagJLWKJxxxqbgmwm/ppCXrA7l0gHm+RPWlsVPBXgjxJldhgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_017WF2UfBBVsFzzf51FqG4W5",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); ids=$(curl -s --max-time 30 http://localhost:20128/v1/models -H \"Authorization: Bearer $KEY\" | python -c \"\nimport json,sys; d=json.load(sys.stdin)\nfor m in d['data']:\n  i=m.get('id') or ''\n  if 'qwen3-coder' in i.lower() and not i.startswith(('kiro/','kr/')): print(i)\"); echo \"$ids\"; echo ---\nfor m in $(echo \"$ids\" | head -8); do r=$(curl -s -w \"|%{http_code}\" --max-time 60 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d \"{\\\"model\\\":\\\"$m\\\",\\\"max_tokens\\\":5,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}\"); echo \"$m -> ${r##*|} ${r:0:120}\"; done",
+          "description": "Find and probe non-kiro qwen3-coder routes",
+          "timeout": 600000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
