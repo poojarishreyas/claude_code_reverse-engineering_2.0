@@ -1,0 +1,19 @@
+{
+  "id": "5f81915a4ff8e82cc2c963d5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01649ArdKyh4V6TdyeKfyswz",
+        "type": "tool_result",
+        "content": "eval: ed34a1d7fe [cross-package, multi-file] fix: keep queued question replies read-only after reload\neval: ed34a1d7fe -> error — agent turn failed: kiro/qwen3-coder-next: model — [400]: Improperly formed request. (HTTP 400)\neval: 9633724b40 [indirect] fix(app-boot): drop the retired schedule bundle from profile manifests\nle] fix(hmr): preserve native manifest behavior\neval: 980b410340 -> ran\neval: ed34a1d7fe [cross-package, multi-file] fix: keep queued question replies read-only after reload\neval: ed34a1d7fe -> error — agent turn failed: kiro/qwen3-coder-next: model — [400]: Improperly formed request. (HTTP 400)\neval: 9633724b40 [indirect] fix(app-boot): drop the retired schedule bundle from profile manifests\n\nTue Oct  6 14:51:08 IST 2026\n1",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

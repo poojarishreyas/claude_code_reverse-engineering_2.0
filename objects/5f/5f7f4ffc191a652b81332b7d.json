@@ -1,0 +1,13 @@
+{
+  "id": "5f7f4ffc191a652b81332b7d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "dsh is on task 8 of 10 (9633724b40), about 1.5 hours into the run.\n\n| Task | Kind | dsh result |\n|---|---|---|\n| 4eb53e63ff | cross-package, indirect | dropped (tests pass without the fix) |\n| 4b9d8ad6f7 | indirect | **passed** |\n| a59beb8ae3 | multi-file | failed |\n| e21ed97f29 | cross-package, indirect, multi-file | failed |\n| 1f8cdc08a1 | indirect, multi-file | dropped (tests pass without the fix) |\n| 980b410340 | multi-file | failed |\n| ed34a1d7fe | cross-package, multi-file | error at step 62: the provider rejected one of dsh's requests as malformed |\n| 9633724b40 | indirect | running |\n| 2 more | | waiting |\n\n**So far, dsh has passed 1 of 6 valid tasks.** Claude Code on the same model passed ed34a1d7fe, where dsh hit the error. That's one task, so it isn't a conclusion yet.\n\nAt about 15 minutes per task, dsh needs roughly 30 more minutes. Claude Code then runs the same 10 tasks, about 1.5–2 hours more."
+      }
+    ]
+  }
+}
