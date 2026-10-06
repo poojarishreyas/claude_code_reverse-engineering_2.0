@@ -1,0 +1,15 @@
+{
+  "id": "2c45488eca2fd6550ca51c84",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016o76JnPVuvRmDh8QM5BoCt",
+        "type": "tool_result",
+        "content": "11: *     [--install \"pnpm install --prefer-offline\"] [--keep] [--dry-run] [--hard] [--only <id,...>]\n16: * `--hard` keeps only tasks where the failing test does not lead straight to\n37:import { difficultyTags, mineTasks, prepareWorkspace, readTestSources, removeWorkspace, taskPrompt } from './tasks.ts'\n136:  readonly keep: boolean\n148:  const home = join(tmpdir(), `dsh-eval-home-${task.id}`)\n150:  await rm(home, { recursive: true, force: true })\n186:    await rm(home, { recursive: true, force: true })\n187:    if (!options.keep) await removeWorkspace(options.repo, workspace).catch(() => rm(workspace, { recursive: true, force: true }))\n301:      keep: { type: 'boolean', default: false },\n313:  const homeFrom = values['home-from'] === undefined ? undefined : resolve(values['home-from'])\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-1f8cdc08a1\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-4b9d8ad6f7\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-4eb53e63ff\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-54fa38795f\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-9633724b40\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-980b410340\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-a59beb8ae3\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-e21ed97f29\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-ed34a1d7fe\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-f04ad05f30",
+        "is_error": false
+      }
+    ]
+  }
+}
