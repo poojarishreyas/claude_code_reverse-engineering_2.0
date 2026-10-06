@@ -1,0 +1,17 @@
+{
+  "id": "447c49de1672436bd7b4b5f7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "<system-reminder>\n[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>byp1kpqus</task-id>\n<summary>Monitor event: \"dsh gemini eval task results\"</summary>\n<event>eval: 1f8cdc08a1 -&gt; invalid — tests pass without the fix:</event>\n</task-notification>\n</system-reminder>",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
