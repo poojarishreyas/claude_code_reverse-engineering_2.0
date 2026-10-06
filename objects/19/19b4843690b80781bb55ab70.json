@@ -1,0 +1,17 @@
+{
+  "id": "19b4843690b80781bb55ab70",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "what about obsedian graph?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

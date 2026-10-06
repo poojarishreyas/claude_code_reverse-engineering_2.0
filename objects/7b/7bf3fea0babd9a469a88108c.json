@@ -1,0 +1,19 @@
+{
+  "id": "7bf3fea0babd9a469a88108c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01KG8w24SS9ehw3REt5cdn8M",
+        "type": "tool_result",
+        "content": "AGENTS.md\nREADME.md\nimplemented\nproposed\nrejected\n654\n4\n629",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
