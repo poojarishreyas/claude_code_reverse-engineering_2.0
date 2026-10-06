@@ -1,0 +1,23 @@
+{
+  "id": "3c24e4e1c1004cc92a9afd37",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSrgkKEAgSGAI4AUIIdGhpbmtpbmcSDKhk3LOxcmLeO31chxoMbQdtswtdzOOYcxpjIjAPLkD8ZyJ39P27BDNrPx7Umz+Y4O02qhqYSVRG3TqomAT95qoWZF08Rf+lFxBatTQqywj+rKHubZXjBd4NEH54+BSG5XFbzOFNB3QGXmlOoIyaAWjmMyy8FgaLhYxRXpYDi7T0hhcLhDVz5ALPo34K7/+Q+FnZ/cXY7y2nnX0cDJa1rDkc+urd4Mvb4ia4WMpV23RwQkMMVAgSElOAoMGVxHJ93+4WBUmiXa66flvMzdXriJkvG3ZN6M6j8HqPAHH7Y9NHM++GizH7kR5j/PmCffisfE6Ho4kyXsOzPi8I22bxZec2A2CTX6ZPKG4JoS5kVgp/6NNPIwOsSTc3DfVc7HH1cJKiKK/0dJivMG91mJdeR2c5fkvVd6gFsLoX5P9dvFWPd5K9ELyOnQ0uU29DKataniNJ0FSbaWeBcfpoUzkmA5jlUbR+C6i5Fn9KbToUCn9vKVKTO2Nq7m+bG/NEyuQPthncdJ6/5gluNk4XP9HljPLpiZhvPkhD0jBeCHa1EKmST+fF0CSRznyEusDPnrDXsq0Rzo6y6z3ixvriKzDQnK/q2eVWerx6dokV2V9yxeEvX17k2s/cZq3ZOe1KK2BvUoZfGl+XJVO2uaClcDDcByYkh0dI69iqX6dHfQ8xK09pzyHwISnEeVAsLOJ99MfH21Qo4g0n/z0PyZbVXX4stERiz/Fu8LKos9prnrHreLv1PQg90aInsp0IbWk+JVp1Ze5P7XHPSI/m5w22dfHdD3H2qsTMf5RXiXGGiHu0g5BMyoJWcRXgLB0F794s9BdtsmOZBsa/o/fZOb0fDeMJL9Dev732fJcmXzvL2POdjlrbjnBX/AzD/CvOnM8m9FnRnLzPulfAW9Q6pNmL9E7NChL8QFqUDqO86Kc8uyyGuz7VFm+EPLyPSzSItTSD/6RCQksAmWD0ZBzMFmziju5GQbKUCRACo8snZlw38P8iZ2wtdR2vfXA1ZRFWX8Q5/QkZvraatwVlK5jpL7jeGhZN691b78EBeebrnDoF26T13NhMs6NQRzi5U7Yyfd/pTnKrcxvmAj8CqzGseMsPlvK2RTMiAU+adlXeq6B2tX1LaEwoSK5WXbfl2kp8+Th0dQlNHmcBWKiIukCK+kM7TnojUfVrEQFykA74tayLzbSs6LE333kJYiOnvMH6WX52kyBxLbW6lfLihKUZWrGglxSZhromHa/OvOPNFb7nBJlMQxHCHRWsNstvmUotoCuCxr6Wq6gGydX+D81A/Vxqa46VWH8HXoFTIXppEQXSKj+W8ywr6DcIPshCc0hx1i+0a+Cf/Nj26YBD/vS6QQw7HypyyOWzpnLHjmc15l2f/rWzaPJCBaaLD+7NJpic0Y8vXqxDwMFMDFYkr8WfCfVf+modCkm8QIIpYvOQW44Gt/who4S9efiqUP/l+xHMddtdixdcBlyoPtwRd5hk75XIWJ9CH9UGRkqKixf9W5oG2bln0gANiBlPRuyPbExS6KKUIcUT1TGC5U46IA9vnHlgGS3TODKtDE38Ahh8ZzRUGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_011jQM4HCFionjotaFjcx8R4",
+        "name": "Bash",
+        "input": {
+          "command": "sleep 5; O=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/tasks/bs1z70plr.output\"; grep -E \"^eval:\" \"$O\" | tail -3; KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); curl -s --max-time 60 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | head -c 300",
+          "description": "Check run status and whether OmniRoute quota is exhausted"
+        }
+      }
+    ]
+  }
+}

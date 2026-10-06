@@ -1,0 +1,15 @@
+{
+  "id": "80ce3c3a4937bf8ca1b1c2ea",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011jQM4HCFionjotaFjcx8R4",
+        "type": "tool_result",
+        "content": "eval: 54fa38795f [multi-file] fix(experimental): drop unknown casts from the mods bridge and its tests\neval: 54fa38795f -> error — agent turn failed: kiro/qwen3-coder-next: model — [402]: You have reached the limit. (HTTP 402)\neval: f04ad05f30 [cross-package, multi-file] fix(user-questions): reset projection version and use brand utility\n{\"error\":{\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"service_unavailable\",\"code\":\"ALL_TARGETS_SKIPPED\"},\"diagnostics\":{\"poolSize\":1,\"attempted\":0,\"excluded\":[],\"attemptOrder\":[],\"terminalReason\":\"all_targets_skipped\",\"recovery\":{\"action\":\"sw",
+        "is_error": false
+      }
+    ]
+  }
+}
