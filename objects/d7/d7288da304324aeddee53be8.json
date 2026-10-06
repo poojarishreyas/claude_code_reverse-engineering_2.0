@@ -1,0 +1,17 @@
+{
+  "id": "d7288da304324aeddee53be8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "<system-reminder>\n[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>betdlv3n5</task-id>\n<task-id>bhw0qww5c</task-id>\n<task-id>bfaptviv7</task-id>\n<task-id>bq3lk43q4</task-id>\n<task-id>__orphan_summary__:shell</task-id>\n<status>stopped</status>\n<summary>4 background shell command tasks didn't finish before the previous session ended. Task ids: betdlv3n5, bhw0qww5c, bfaptviv7, bq3lk43q4.</summary>\n<note>No completion record was found for them in the previous session. They may have been stopped (via the UI, Monitor timeout, or agent teardown — these leave no transcript marker), or they may have been running when the previous Claude Code process exited. They have been marked stopped. Task ids in this notification beginning with \"__orphan_summary\" are internal scan markers, not tasks.</note>\n</task-notification>\n</system-reminder>\n"
+      },
+      {
+        "type": "text",
+        "text": "now?"
+      }
+    ]
+  }
+}
