@@ -1,0 +1,18 @@
+{
+  "id": "796e2ba935332e519a3899e7",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01DuSBWhbqvjLLixNpCmoMrj",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && ls packages/test-support/loader-smoke/tests/fixtures/ | head; grep -rnE \"'result'|type: 'result'|inputTokens\" packages/test-support/loader-smoke/src packages/test-support/loader-smoke/tests/fixtures 2>/dev/null | head -10",
+          "description": "Find where driver emits result usage"
+        }
+      }
+    ]
+  }
+}

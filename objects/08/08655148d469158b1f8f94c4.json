@@ -1,0 +1,22 @@
+{
+  "id": "08655148d469158b1f8f94c4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01JCqSdWLeHAwNVksoR5YEnJ",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 1,45p packages/test-support/loader-smoke/src/agent-turn.ts; grep -rnE \"cacheReadTokens|inputTokens\" packages/llm/llm/src/*.ts | head -12",
+          "description": "Read usage accumulation and llm usage definitions"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

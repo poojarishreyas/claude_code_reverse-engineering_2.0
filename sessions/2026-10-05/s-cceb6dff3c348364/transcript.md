@@ -5,8 +5,8 @@
 | session | `s-cceb6dff3c348364` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
-| requests | 35 |
-| tokens | in 2,696 · out 27,060 · cache read 3,580,089 · cache write 164,231 |
+| requests | 36 |
+| tokens | in 2,698 · out 27,242 · cache read 3,720,835 · cache write 164,780 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -4180,5 +4180,109 @@ packages/test-support/loader-smoke/src/agent-turn.ts:27:    inputTokens: (total?
 packages/test-support/loader-smoke/src/agent-turn.ts:95:    type: 'result',
 packages/test-support/loader-smoke/tests/fixtures/cli-mock-llm.ts:50:      yield { type: 'usage', usage: { inputTokens: 11, outputTokens: 3, cacheReadTokens: 2 } }
 packages/test-support/loader-smoke/tests/fixtures/cli-mock-llm.ts:63:    yield { type: 'usage', usage: { inputTokens: 7, outputTokens: 5, reasoningTokens: 1 } }
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01JCqSdWLeHAwNVksoR5YEnJ)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 1,45p packages/test-support/loader-smoke/src/agent-turn.ts; grep -rnE \"cacheReadTokens|inputTokens\" packages/llm/llm/src/*.ts | head -12",
+  "description": "Read usage accumulation and llm usage definitions"
+}
+```
+
+_stop `tool_use` · 8.59s (ttft 7.83s) · in 2 · out 182 · cache r140,746/w549_
+
+---
+
+## req-0036 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 66 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01DuSBWhbqvjLLixNpCmoMrj)_
+
+```
+base-driver.ts
+cli-mock-llm.ts
+fail.ts
+hang.ts
+production-profile.ts
+success.ts
+packages/test-support/loader-smoke/src/agent-turn.ts:13:  readonly type: 'result'
+packages/test-support/loader-smoke/src/agent-turn.ts:27:    inputTokens: (total?.inputTokens ?? 0) + step.inputTokens,
+packages/test-support/loader-smoke/src/agent-turn.ts:95:    type: 'result',
+packages/test-support/loader-smoke/tests/fixtures/cli-mock-llm.ts:50:      yield { type: 'usage', usage: { inputTokens: 11, outputTokens: 3, cacheReadTokens: 2 } }
+packages/test-support/loader-smoke/tests/fixtures/cli-mock-llm.ts:63:    yield { type: 'usage', usage: { inputTokens: 7, outputTokens: 5, reasoningTokens: 1 } }
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01JCqSdWLeHAwNVksoR5YEnJ)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 1,45p packages/test-support/loader-smoke/src/agent-turn.ts; grep -rnE \"cacheReadTokens|inputTokens\" packages/llm/llm/src/*.ts | head -12",
+  "description": "Read usage accumulation and llm usage definitions"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01JCqSdWLeHAwNVksoR5YEnJ)_
+
+```
+/**
+ * Test-only direct-agent turn driver shared by assembled Loader fixtures.
+ * @module @deepseek-ai/dsh-loader-smoke/agent-turn
+ */
+
+import type { Context } from '@deepseek-ai/cordis'
+import type { Agent } from '@deepseek-ai/dsh-agent'
+import { createUserMessage, type TokenUsage } from '@deepseek-ai/dsh-llm'
+import type { SessionEvent } from '@deepseek-ai/dsh-session'
+
+/** Result envelope consumed only by snapshot and composition tests. */
+export interface FixtureTurnResult {
+  readonly type: 'result'
+  readonly sessionId: string
+  readonly output: string
+  readonly usage?: TokenUsage
+}
+
+/** Options for one fixture turn against exactly one configured root agent. */
+export interface FixtureTurnOptions {
+  readonly task: string
+  readonly onEvent?: (sessionId: string, event: SessionEvent) => void
+}
+
+function addUsage(total: TokenUsage | undefined, step: TokenUsage): TokenUsage {
+  const next: TokenUsage = {
+    inputTokens: (total?.inputTokens ?? 0) + step.inputTokens,
+    outputTokens: (total?.outputTokens ?? 0) + step.outputTokens,
+  }
+  for (const key of ['cacheReadTokens', 'cacheWriteTokens', 'reasoningTokens'] as const) {
+    if (total?.[key] !== undefined || step[key] !== undefined) next[key] = (total?.[key] ?? 0) + (step[key] ?? 0)
+  }
+  return next
+}
+
+function assistantText(event: Extract<SessionEvent, { type: 'assistant/message' }>): string | undefined {
+  const blocks = event.data.message.content.filter(block => block.type === 'text')
+  return blocks.length === 0 ? undefined : blocks.map(block => block.text).join('')
+}
+
+function onlyRootAgent(ctx: Context): Agent {
+  const agents = ctx.get('agents')?.roots() ?? []
+  const [agent] = agents
+  if (agent === undefined || agents.length !== 1) {
+    throw new Error(`fixture turn requires exactly one top-level agent, found ${agents.length}`)
+packages/llm/llm/src/types.ts:130: * Counts are DISJOINT: `inputTokens` is uncached input only; cached input is
+packages/llm/llm/src/types.ts:131: * reported separately as `cacheReadTokens`/`cacheWriteTokens` (billed input =
+packages/llm/llm/src/types.ts:136:  inputTokens: number
+packages/llm/llm/src/types.ts:146:  cacheReadTokens?: number
 ```
 
