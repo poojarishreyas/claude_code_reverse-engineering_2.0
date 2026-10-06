@@ -1,0 +1,18 @@
+{
+  "id": "5f4539cfc5a5d62564d30829",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01AX5A4PmDGN4SNyx2YH4dvJ",
+        "name": "Bash",
+        "input": {
+          "command": "curl -s -o /dev/null -w \"models: %{http_code}\\n\" --max-time 5 http://localhost:20128/v1/models; netstat -ano 2>/dev/null | grep \":20128\" | head -3",
+          "description": "Check whether OmniRoute is listening at all"
+        }
+      }
+    ]
+  }
+}
