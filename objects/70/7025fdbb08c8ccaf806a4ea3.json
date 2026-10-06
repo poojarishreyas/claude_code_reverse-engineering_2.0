@@ -1,0 +1,23 @@
+{
+  "id": "7025fdbb08c8ccaf806a4ea3",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01712ZNvq5eFEjyxet3pYtNy",
+        "name": "Monitor",
+        "input": {
+          "description": "dsh comparison run: per-task results",
+          "timeout_ms": 1800000,
+          "command": "O=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/tasks/bs1z70plr.output\"; touch \"$O\"; tail -n +1 -f \"$O\" | grep --line-buffered -E \"^eval: .* -> |^eval: [0-9]+ task|Error:|ERR_|Killed\""
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
