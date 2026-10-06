@@ -1,0 +1,19 @@
+{
+  "id": "c7e3773684bef30723d4a068",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_013MSF2ZL39k3u5MNHAX6PVo",
+        "type": "tool_result",
+        "content": "eval: 10 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\upstream with dsh\neval: 4eb53e63ff [cross-package, indirect] fix(ci): cover HMR edge cases and document strict assertions\neval: 4eb53e63ff -> invalid — tests pass without the fix:\neval: 4b9d8ad6f7 [indirect] fix(client): re-pin StateDot loaders whose animation restarts\neval: 4b9d8ad6f7 -> ran (passed)\neval: a59beb8ae3 [multi-file] fix(hmr): preserve manifest refresh with Office resolution\neval: a59beb8ae3 -> ran\neval: e21ed97f29 [cross-package, indirect, multi-file] fix(desktop): deliver Windows console signals to CLI handlers\neval: e21ed97f29 -> ran\neval: 1f8cdc08a1 [indirect, multi-file] fix(ui-chat): document dock pill replacement order and outside-click close\neval: 1f8cdc08a1 -> invalid — tests pass without the fix:\neval: 980b410340 [multi-file] fix(hmr): preserve native manifest behavior\n] fix(client): re-pin StateDot loaders whose animation restarts\neval: 4b9d8ad6f7 -> ran (passed)\neval: a59beb8ae3 [multi-file] fix(hmr): preserve manifest refresh with Office resolution\neval: a59beb8ae3 -> ran\neval: e21ed97f29 [cross-package, indirect, multi-file] fix(desktop): deliver Windows console signals to CLI handlers\neval: e21ed97f29 -> ran\neval: 1f8cdc08a1 [indirect, multi-file] fix(ui-chat): document dock pill replacement order and outside-click close\neval: 1f8cdc08a1 -> invalid — tests pass without the fix:\neval: 980b410340 [multi-file] fix(hmr): preserve native manifest behavior\n\ntotal 28\ndrwxr-xr-x 1 shrey 197609    0 Oct  6 13:47 .\ndrwxr-xr-x 1 shrey 197609    0 Oct  6 12:50 ..\n-rw-r--r-- 1 shrey 197609  901 Oct  6 13:47 1f8cdc08a1.json\n-rw-r--r-- 1 shrey 197609 2173 Oct  6 13:07 4b9d8ad6f7.json\n-rw-r--r-- 1 shrey 197609  839 Oct  6 12:56 4eb53e63ff.json\n-rw-r--r-- 1 shrey 197609 2931 Oct  6 13:34 a59beb8ae3.json\n-rw-r--r-- 1 shrey 197609 2225 Oct  6 13:43 e21ed97f29.json\nTue Oct  6 13:50:42 IST 2026",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
