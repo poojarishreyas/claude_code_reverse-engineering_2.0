@@ -1,0 +1,19 @@
+{
+  "id": "ce1bf3131433292d8c2d8b10",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01QKq3yPbe9RvEBvMnfQ1MrK",
+        "type": "tool_result",
+        "content": "{'steps': 1, 'toolCalls': {}, 'firstSeenStep': None, 'firstReadStep': None, 'editedFiles': [], 'usage': {'inputTokens': 0, 'outputTokens': 0, 'cacheReadTokens': 0, 'cacheWriteTokens': 0}}\r\n200 200 200",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
