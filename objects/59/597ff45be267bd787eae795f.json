@@ -1,0 +1,19 @@
+{
+  "id": "597ff45be267bd787eae795f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01W9Qai7YENx5jKf9HiiiE6y",
+        "type": "tool_result",
+        "content": "packages/fs/tool-fs/src/read.ts:159:      // read already succeeded; an fs/observed listener is contractually a\npackages/fs/tool-fs/src/read-render.ts:38:  /** Returned lines, already numbered. */\npackages/fs/tool-fs/src/read-render.ts:50:  /** Returned lines, already numbered. */\npackages/fs/tool-fs/src/read-render.ts:107: * @param request - the resolved window; the caller has already applied its defaults and caps.\n---DIFF\n/**\n * Result-time contextual diff presentation for write and edit. Storage returns before/after\n * text; this model-facing layer derives one three-line-context card per applied hunk.\n * @module @deepseek-ai/dsh-tool-fs/src/diff\n */\n\nimport { structuredPatch } from 'diff'\nimport type { FileDiff } from '@deepseek-ai/dsh-tools'\n\n/** Context lines shown on each side of an applied hunk. */\nexport const DIFF_CONTEXT = 3\n\n/**\n * The `write`/`edit` tools' private `tool/result` `meta` payload: the applied\n * contextual-diff hunks. Attached opaquely (as `unknown`) on the tool result and\n---HOOKS\n the bridge.\"\nkind: \"package-reference\"\n---\n\n# @deepseek-ai/dsh-hooks-claude-code\n\n## Summary\n\n`dsh-hooks-claude-code` runs the hooks from your existing Claude Code config — a `hooks.json` or a settings file's `hooks` key — during agent runs, so the behavior you already wrote keeps working without rewriting it. Your hooks fire at the matching moments: when a session starts, when a prompt is submitted, before and after a tool runs, when the run is about to stop, and when subagents start or end. A hook can block a prompt or tool call with a message the model sees, attach extra context to the conversation, or force the run to continue. Choose it when you have Claude Code command hooks and w\n---AGENTSPROMPT",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
