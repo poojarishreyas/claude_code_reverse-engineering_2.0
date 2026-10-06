@@ -1,0 +1,23 @@
+{
+  "id": "59c0bbda4ca9db4635ce02c6",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS4wcKEAgSGAI4AUIIdGhpbmtpbmcSDHRJshTuYc9kFi+80BoMiAawZqef45yguBZVIjAxrIWD6XKgjIYuOjDqC7ltEyPLt6YEu/crWxLsC24J0KW+2u0XwulfqqhF4HS5nHAqgAcNpCCq5tfJdFCEilDBEFe9epagi6Fd4lFfK53Rj0fTn1ywEf8ZCqf5GbLX+Dag/86dkO9g39vWAAhqm1cwGxsjpIrTK1D18ThTeCcETiMPtF9GSdTbOJ/glib4Wwt/HMmW14NfskIv5+JM87ytfHUDuRX9QmUSoA43kP6IVJsLVM2u/eiD0iBfgxPlCuds0y5NRAukq+CxVYaMLrvaDyUjlsm+PISoTcvS2XY/alOXfsI0Zui50WWSI7h1EgykQxPaH9RCvy+0AlGL/NS7vA0PgQdkZ5qdb3EiFliP0xPOTI2rsJfo2eYRDOCoku+4id1itSTYXlmUXi6WlymuThTO/tSWumyV1lwIrlDU3+5SfDf/7YRZ924qDPHKZIDKKwVGmty+zkJa8HXUqedyP+oCsDJ8ysDteFVBKx6lE7w0Y90GS+IMHrF/wSEPY2sbYkVYJyst4XFhr+RhDu56vszvSA2mwuUMfBcaXj16UjoDSPVS1ISygmAsoNMWsWPYQZLiC0sr9xEqb0I1toy2q76lOlZB34venDu4nPfk7lBM/FVIfKhLSsHqbvBM0k6RDqf5Ec9syC9fjCQhvpYa7aUv8JXdbyKCIESGQKbvNmGhdQkhWaaJQxPG27ioFsivPFI3yflAJoa/y+Se2AcEG24jRaOUw8DcIo6J1l0XJrh9HnpNWzIG/mtmbT/U9aoudJvMCPi2WEr4FXd3v1DYvnHs8OFgZrW+cqg2S1U+0nr1L2t8FioZWTLz7qR7CUEKBvuJZnSePv2xi8/S2omLXCGciXHfLf7MFLEh4ClhLdGzI9DXGD4OjcEm+u4Um9ZiMqVUairPvVLa6P/rES83Q4TfupkEG77pgcCL4liSWWnkMnluJWGJ/pLyLTm8RoqUbxMMv018I71KE1ceicXPpRLuZd4o9vtxuQJRDJyoufVrvA3g+BEFBaRsFzW2bmUoa5utGTo3svdBver6BHRIb2Eu+byH05sFVRCRbYB5eidLmWipqRSAK42upu1wiWHu2IiHnp+rcwsHm0bVWOR94eCDAH3CIRcfpBUPa1ViWBGmVVRCKC0D724L8rOOqNu9arhPRy20JHFreiziQ4OhlpUd64dMAyOdr06YEcqiEqRI8IpVAZ7s+IWATC5idNTxsxAUKGlAJAG1lQ+h2REiJubVy92pMHhieTu1m2eQW9kfARgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01TjYZFBALswZyfVm3sSVEXE",
+        "name": "Bash",
+        "input": {
+          "command": "powershell -NoProfile -Command \"Get-CimInstance Win32_Process -Filter 'ProcessId=18232' | select ProcessId,ParentProcessId,CreationDate,CommandLine | fl | Out-String -Width 400\"",
+          "description": "Inspect leftover node process"
+        }
+      }
+    ]
+  }
+}

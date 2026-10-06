@@ -1,0 +1,32 @@
+{
+  "id": "38cc0dcf85b175ae2dd9f9d2",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS7AcKEAgSGAI4AUIIdGhpbmtpbmcSDBCLo0miWtOyewN3OBoMt3AtfqKyLUXreAQaIjDsB+/t36IMANvggslykUMIiXoDLZqHhoHwyeNbNGRBtt+JDYX2DULOgOrAkP4y95oqiQePiktVVkGUzXknmcQJ8q6bCVajWUE1mqwrGdvDSO85CIU0SrQXamU/06Pu8CAOWvDdxYvwGjDZRhfl043cFscR344fQ92IGHJx/BE5xBvUNuRSsxat6yP794ULbEqAfxPpl0+UdOoAQNVKDRE7ZyXhJP8EeXlsMMBKW7SEUT3FtnisdFwZsb/pBA7GRZkmfnJHq8BftF0NUCwx6M4lZiykZ8l1vO+u7gHmSANv+a815U4pN3X5BXN9eqqkPcP4+hH7OyDa/o0f00DvW81Db8TX6nrP3FPBWEVnZ5wP58LAJSCXiwQ//5h1Ax3AEcslrVvYqHEExg3ZReC1jZAJIqw2LmV0IgatVgxPmuTO39PN4/7UReOkS7rlRWn4F/MSo4fBwQm9Rcjc2Q9JxjCM49aMY+sA749iGKg6Lsr8h9Jqu1lz5gRExyswvOopLd99ykmpTMnDogydp+DzSFkmGeO+uE76tH6X9QczY4JIyWVAUrKZwnJNnhH39EIlcNfsYK2SkCetlQwQ0mcqLbmkJrAbncYX9hMgDkPh4abVRCvdHV0Bt8KS7OCFek89CZr+ync7rYz8JYJJYwN6U2bIuLoYfcWJp39wnGrjv11xe+5xGaNhhA+Ska6jsn/h/cLiTA76mqK2hHmWf9pc4P80ltRDokCfHNuX038KK5sri4mC9u/oDlzDBydZIDzEXgFKxlsfhrbv+ACJtqchhYCdtgQJOe7ZSMZKjQaKBV1X+5UfXErRxeY8W+u70cuoqyTRMVnv91wIEGPNMH/WrOX3GO86LIMQV6YC32NlBZzs/W1mDNjeO1sPKK+0/Fo3u/WeVqcwTOZOI9QQUxEc4SAsK6NlU+AiS1t1bDWDAiucZxkB8sHlS4n3dV52noHzE1a1lVqeafA6h5cWg39I/nsMOqN68PSmlyZq0ehvThgkRSlqUyxNY4N6723Fg/Q4oAHGhiNIC9tgtUmIDiCy6nWmNcW3m60Ned0L1mEaUqYCTDvv9Uyady2BIsoYM5k/RESYoeA/McAlolq6E7CPKraGCvUF5ccpTz8biliW/OpCI9bT5rhC+xcEDs5q9XfvaBqXNu5ZCGoQRwBpZM7pRvF/MQSHu3pZKLsRcaw3mrRJ4Qfe0zssJUYNYYwlB0bHnFwJD+Js4f7j93Tf5Fr/XovC2/nPz7lqb6Vucdd46toFD6LFCMgsC9a6Ex4xeBgB"
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1AcKEQgSGAI4AUIJbmFycmF0aW9uEgwSsWZATDEiXcu+euUaDLw5pFCRxQfyoNKJnSIwFYjVgJzE6rpwXxpJzn6wExOC/rJ5TZJ8W4+6ZhcddiuQWQELPOOW0AgTEsltN/5rKvAGdDkMVYPRHU+nyv/6Gq1jjEL1EcDuWSQfa2ARzsW0IQb/8Cm6zGGeFZ02+q1GY0xC1aomtvzgBkDAkZVpcGwHRUf72L8ZVlDpLVWsS91xTkko0KTkhBM7mWQmELABT36lBv7TkMVu9lCgZvpwuXSv21Yh80E9H6ZklmvZW9lgTAIQ81qe5p9L2PX2veFp9nMsvd5EeZKHEZRDM3q9848YRZ3kl8ooUckOUTOFbcIb48PB4yPSsjQuZn3FSi8lh4r+Go+eHiz6qsuK/FaFFGO4my0pXlASZs9Mcfj6M4KYqjknd9Q7g0QI8BCS7oHmhzylV05marGBK71ZZxgjeMLqdKbBEcI3Zgs1sINT8EjbvaUczqR92VfpUjK+sTZIVxmzcIwdpiKIt4T1uUi2LCJjUVq8mfkcJsIUqvYJA98/gQIGN17XPvNLT6eBZnWeAdH65Ue2LYrDOaLyYmH2gTVzdEOJo1kNc5vpGokDK8tCZ7tXmX1KYgzf6XqL+VLs5LUFXGbDRoXILMeCD1dEecF0Myglj7pnRp8+yAjNov6DAAQvaAtYzSvLwWYRwTMnTJvAHoGLP/UTdNVTDnwBFZ5NXWr/UdtxJUmeVQZ9tIROYvfeW/Orntmkho8QRjjAh0t8BMrrQrVqn8J3gbPsdT4Ndve5hJ0lCYHrmIoQeVCa4YX9XwgrA2oTLClF/Et3l/rboH6CQhRmgVRdb7AtRx8n8lFIZYQvvItrC8H4sQGpnikFaT1qygAdl9tTRkR9asv5jJ7T5KMrDNYAyKG8cvHxgCvfzh1ArWywyADadUsoN4VnE0QJ+OLG3pMxKnQiKJKaTyBZTn3Nip4HQTrHmKX/oOkXMRJir6IWvpMOA56iPVWHwBh0VJa22yOjb2P0aGaI8aUBXqW5+WN3pMcUFIsP/Isw3wbOati63pm1MdBrbrSHrEo8P/zWbE1m6ZuCv3CGwUFSovuh8R1hbMFJ9qVSulQbUeZkKvIst4nMwa3g7wkSsHtV+wiFZ5ykuj0fOOM/Av67zoT9gw4/KP5lBrrNKIHCt/RAV4jeffWIA5fW8l/vL1iILyDn4Ft1QZmkCetTBRKZTgNbx5cosuDthJM1oRY5LHJa264wQoacXcn5tfpW9G1YIxHd4D487vndT7xScldi+6oH0uCb74cPytxe4hgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_019RfA2MajpuN2f7Tzr8c8PR",
+        "name": "Bash",
+        "input": {
+          "command": "powershell -NoProfile -Command \"Stop-Process -Id 18232 -Force; Start-Sleep 1; (Get-Process -Id 18232 -ErrorAction SilentlyContinue) -eq \\$null\"",
+          "description": "Stop the orphaned vitest process"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
