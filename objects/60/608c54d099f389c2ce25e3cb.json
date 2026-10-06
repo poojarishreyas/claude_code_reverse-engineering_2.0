@@ -1,0 +1,17 @@
+{
+  "id": "608c54d099f389c2ce25e3cb",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "chexk whtehr the startegy we have designed is laready implememnted by our harness i thinlk loop engineering is already there",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

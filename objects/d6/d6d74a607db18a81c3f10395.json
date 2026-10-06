@@ -1,0 +1,27 @@
+{
+  "id": "d6d74a607db18a81c3f10395",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSwQgKEAgSGAI4AUIIdGhpbmtpbmcSDK9wcS7SEA861tzjZRoMnHeq3S3X94j2jKdnIjBABDczUVtjuh4Ru31crRnspyCisxa7iag4fAz/+xqBfXZEZ3W1MUwIdnZlGY+0hrMq3gfpD0Mp7GXLj1QG2pGsurj7LaStKHkUK0p/65j87u7i2Axy903uJ958ot5eOkD1elegSnfRRKoVR//x+MkfVTFq6/U5G+xKsu10j1+uP389CbSravJLjUr/dRPMZfkc04mIk/vmdEt5HQ00bOLTPzMKz9agd4Cpd0pjRHW3v1ei1++vptphg1jeN7GWcK0BS1TuSMoLCDRCGTDrXOervxgddI0tPAfDupewq7oa5EA3/rhyQNK7sJ/vwOp/uhdzk67Flbjl41AukqfRlCd8gc/6rE8YThWgP8KbRTf0DpUGqg1qNyMEDHpbhc5DsvTLP6ihsHHuH86NupOiBvzt84N+IBg9pskHZHXqFYlRYEWW5m5JW9Eo1NNnDjljbjA7UYFC1sDQ5jaILVFlaDUmu+fbV4wP0gPAhOUf2W3TysVvRZ92uf9AOHMPgZEg6efUKyCyXXn/vWRGdzPOOZbWn5BVFDnUOlEdJj66o71ioFhQLN1Q749YQzah2OmgbL7lzZVg78cvbpaaKnSp1BO9K3zaEeL6+8puKVMLICHxjqhmosiZyEeCGvlIeACnKhxPwcYcMPBtmbcCP4pZlvKKI8GFzZArugHIa5H2I++2+iL5yzyq/RGngjEm1kGMF9fSKgaP2yVyBCibtLf3+80GkJiCbjTCYTSksrhZaa9cc6kdzi3c3l92Y14VaiKNDntSz+dickbKXd7IEaQhbUyzxVDWlttW5nOWZj2LTkySOHW4cKIK7FGsQf9gvUlwMx8xjRZ/HgwQ2cyMYPbLNxIjuRXz14YZOhBI4z9m+H92fGhYCVBD1Ivi/ZuPULmdqCjHo+WeKdUeGNogtYCwD1whHBG9sjCddWL9Vk5vYl2ufC10byTJLBUbDy7QAf8+HRTzJxhJcH6srZ77CtzoBj7DK2s++IaSBdN15CuzdI1cE9ej/r5JEptKU3kbanS4N/+YhvWZWK9qHGrWDh4kHsTqqZ2zAWlyaH35Mz5prGJ2rjobcLM5hSsQPsJ+kyE+BtsqgT7ia71RvPxKOBwHOIyObUvFBWvf/ZdbYQU1gR/Ax6d5zLpyA6hIdqwpqsrLZrliITP7L7n/UYQi1w065bo6lENYqweqbQMJRgBxhHqQZ8pS5iE9cctPqbrJR29a4YqYagpDPSD2pehdS4AIcjIfsFANXtatSrcdDfgRF68200LYjAqf5d0tAC5DrZBvUCdCkeozvx64FQB9j2+RzRNgkDAdgobonjp9nmaEtNgI7+hH7fxxQRdlDt8gPhCTCQRCdll/n0iQVLlt91TmZJk4yMvOhhydbMPG1QOdGNYh4JQYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01LS2EjiNup4L4LVbBmEQz7T",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && ls packages; echo ---; ls packages/*/ | head -300",
+          "description": "List harness packages"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
