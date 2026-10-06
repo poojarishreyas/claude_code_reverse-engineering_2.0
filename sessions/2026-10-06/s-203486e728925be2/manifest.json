@@ -6,16 +6,16 @@
   "model": "claude-haiku-4-5-20251001",
   "credential": "558767a26377",
   "startedAt": "2026-10-06T06:36:48.935Z",
-  "updatedAt": "2026-10-06T06:37:07.880Z",
-  "durationMs": 18945,
-  "requests": 3,
+  "updatedAt": "2026-10-06T06:37:23.962Z",
+  "durationMs": 35027,
+  "requests": 5,
   "errors": 0,
-  "events": 14,
+  "events": 22,
   "usage": {
-    "input": 24,
-    "output": 1144,
-    "cacheRead": 144398,
-    "cacheCreation": 19457
+    "input": 40,
+    "output": 2163,
+    "cacheRead": 262922,
+    "cacheCreation": 25983
   },
   "messageIds": [
     "203486e728925be28c74927d",
@@ -28,6 +28,14 @@
     "9d09545bb866fe254ccb0c16",
     "a8ed0f928d53b1f561eaf06d",
     "d101ac23fe82ae224366280a",
-    "e99bb5c59d479546628df45d"
+    "e99bb5c59d479546628df45d",
+    "88155a048e32d88c62ae524f",
+    "0f9651b38d1b10cc80c1a7e4",
+    "e056d82470db3664970c64d2",
+    "25916fe625e128ebc220eba8",
+    "233a0fd20782c45adf5fdfee",
+    "8131aa6ea286a498749cabf8",
+    "fc946ebb46cbbac0e1ad2544",
+    "42db8620294f2e567af01e78"
   ]
 }

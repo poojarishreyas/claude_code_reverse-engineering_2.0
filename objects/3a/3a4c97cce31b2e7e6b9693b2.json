@@ -1,0 +1,18 @@
+{
+  "id": "3a4c97cce31b2e7e6b9693b2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01AL8J4x4tKpwDJ8Bgd8HLaw",
+        "type": "tool_result",
+        "content": "281\t/**\n282\t * Mirror the `userQuestions` projection of every bound Session onto the cards:\n283\t * continued rows get a card and the Remote answer path, and a tool-call-keyed\n284\t * card whose call the projection no longer lists is removed once its waterfall is gone.\n285\t */\n286\tfunction publishContinuedQuestions(ctx: ClientContext, cards: QuestionCards): () => void {\n287\t  const sessions = ctx.sessions\n288\t  const stopProjections = new Map<SessionId, () => void>()\n289\t\n290\t  const unwrap = <T>(result: { ok: true; value: T } | { ok: false; error: { message: string } }): T => {\n291\t    if (!result.ok) throw new Error(result.error.message)\n292\t    return result.value\n293\t  }\n294\t  const rpcFor = (sessionId: SessionId, callId: ToolCallId): QuestionRpcChannel => ({\n295\t    answer: async answer => unwrap(await ctx.remote.userQuestions.answer(sessionId, callId, answer)),\n296\t  })\n297\t\n298\t  const reconcile = (): void => {\n299\t    const snapshot = sessions.list.getSnapshot()\n300\t    const bound = new Map(Object.values(snapshot.byId).flatMap((summary) => {\n301\t      const binding = sessions.binding(summary.id)\n302\t      return binding === undefined ? [] : [[summary.id, binding] as const]\n303\t    }))\n304\t    for (const [sessionId, stop] of stopProjections) {\n305\t      if (bound.has(sessionId)) continue\n306\t      stop()\n307\t      stopProjections.delete(sessionId)\n308\t    }\n309\t    for (const [sessionId, binding] of bound) {\n310\t      if (stopProjections.has(sessionId)) continue\n311\t      stopProjections.set(sessionId, binding.session.projections.faceOf('userQuestions').subscribe(reconcile))\n312\t    }\n313\t    const rows = new Map<string, { sessionId: SessionId; row: PendingUserQuestion }>()\n314\t    for (const [sessionId, binding] of bound) {\n315\t      const projected = binding.session.projections.faceOf('userQuestions').getSnapshot() as\n316\t        UserQuestionProjectionView | undefined\n317\t      for (const row of projected?.active ?? []) {\n318\t        rows.set(PendingQuestion.keyOf(sessionId, row.callId), { sessionId, row })\n319\t      }\n320\t    }\n321\t    for (const { sessionId, row } of rows.values()) {\n322\t      if (row.state === 'continued') {\n323\t        const card = cards.ensure(sessionId, row.questions, row.callId)\n324\t        card.pending.attachRpc(rpcFor(sessionId, row.callId))\n325\t        card.pending.setState('continued')\n326\t        continue\n327\t      }\n328\t      cards.byCallId(sessionId, row.callId)?.pending.setState('open')\n329\t    }\n330\t    for (const card of cards.values()) {\n331\t      // A review card's call already settled, so the projection no longer lists it as answerable.\n332\t      if (card.pending.callId === undefined\n333\t        || card.pending.review !== undefined\n334\t        || rows.has(card.pending.key)\n335\t        || card.hasRequest()\n336\t        || card.pending.hasWaterfall()) continue\n337\t      card.remove()\n338\t    }\n339\t  }\n340\t\n341\t  reconcile()\n342\t  const stopList = sessions.list.subscribe(reconcile)\n343\t  return () => {\n344\t    stopList()\n345\t    for (const stop of stopProjections.values()) stop()\n346\t    stopProjections.clear()\n347\t  }\n348\t}",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
