@@ -1,0 +1,19 @@
+{
+  "id": "68dfc2e38a55236f2fdcb422",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DuSBWhbqvjLLixNpCmoMrj",
+        "type": "tool_result",
+        "content": "base-driver.ts\ncli-mock-llm.ts\nfail.ts\nhang.ts\nproduction-profile.ts\nsuccess.ts\npackages/test-support/loader-smoke/src/agent-turn.ts:13:  readonly type: 'result'\npackages/test-support/loader-smoke/src/agent-turn.ts:27:    inputTokens: (total?.inputTokens ?? 0) + step.inputTokens,\npackages/test-support/loader-smoke/src/agent-turn.ts:95:    type: 'result',\npackages/test-support/loader-smoke/tests/fixtures/cli-mock-llm.ts:50:      yield { type: 'usage', usage: { inputTokens: 11, outputTokens: 3, cacheReadTokens: 2 } }\npackages/test-support/loader-smoke/tests/fixtures/cli-mock-llm.ts:63:    yield { type: 'usage', usage: { inputTokens: 7, outputTokens: 5, reasoningTokens: 1 } }",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

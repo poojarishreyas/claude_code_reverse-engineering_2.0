@@ -1,0 +1,32 @@
+{
+  "id": "d0ed21cf2d6bdcc949325234",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSxg0KEAgSGAI4AUIIdGhpbmtpbmcSDGgfQs76QtiQbKN9xxoM9L+kjkm46bdXik9IIjBVR1EC9Zsd+5shVFDrWXC3yE8gux0RR2peVsBvSBjN+di7LYgem6xG50FevqiQ5Jkq4ww3l31nG7OSjI38nwEd/IGKt7iFuIrlE6Y5jPdy2mwKheFwAbL1tIg+GwFzol6stc5CCIZkFneK1hZl8/gCZ1jFB8lmByjVNwVaigunNX8EKzIPcg4uCC3o2DO1zwpJUANg+/r/rOo0YYDi+Ih1LB4LZXmDNJJXYRYV4Nna07jAPvw5Y59DQ1lpuCxVi98J/Zte0M6D3p+s8EOtMi9PudUJFAd6ypydgRXK9DpfyHNY+Hnl9xl7yfDZMPm53B0fZ324Fif7QWHMjjxsCpPDoRT5I4sSAnOyQgAgf80AhqywPhWus6SJW/4i4es88URHcdsP7XHxTzdS+GTpd6HQJE73mX81b79rDycyzy43A5aE5Ly1wk75MwQVx58UXldctEAgZwEs13wYXmv8ZMPOgUez0vUmaeQ359xKqpr0F6uv3RlvpRqWBIxNcevxaGgTunqY6yGNt8CbUPodPSEcZWl/9YQ+0OFEPedm+2I+3drqWLGLlX67osJPEc+jtDF4t1hd9CaCz92Q2SZ7sUYvy22QsT4x8D+3A0AYHagrwjf/0xI0FE3h7H+8JtKLnXnTpIU4L7RLPl2RgPQOaOlQEb30KjWlIS3Zb21+TTiNWnMb6+80P5nVu1cMxIlOE7rlxK5yhOVu1BL8BKLmy3OD1biuPDQwTlW5+pvKJlJGazY9VuhtnqT1/o4rrTWHOZg9iOHkjkIiqHuqtPJjQ6SL7xHW910UZfAFCipDpnO8EYHii842E9RFWOmu05f5xVbEEkBujbBa7x9dVws14uwE70n/wnyMwHY3voRpUHOSmCL6poLvUXSNQdexFOYP+c6b3Djt7PCqWeLBQmINvsUPgCVQNQtHnd6SznLrGOdy/tyVRoUPwpmSjPooh/NU0LeGUKMlD9FTzPy4E70yVt2A5qd9Fl1AppDcloXDaaDkeTFH+sLH2Pxg/pJ2wYalFUPuAvD8bVY0iMQkdQS7hJ8tSeE64pWynVZirDBtiUn+0byQCXHKSPouXNQyAIIQTpMGzjLkAMfXOf45c5iL6iKan5KgaADo76sd3qq8Zl+Cot2xWe0qVVm6OzhBJCSOkOLJ9Ata5x6Jg/tsKKiya1Hzp2VyR3u22QAW4v9httwr+JzQXgpMUNQnIXOFMe3Vwq0ZdISCD/tGwUl/zbCSo4kNb11noeo5syqfb/uRe20YHW4NxOteQw/50IP/uCvPlf5pDKL7xnm/2I/2FUNK9YiC+Sf5/Oo6H6vrvPwur9Zs4f8e/OyFAOwCAIf3ni5L0lHPkUiT33ZAy62lX7/NqCj7r4sEBOZQ7Z3jB0oEcQoVPK+TqtF9DL7wkvHWc0FEY+vrcpyRxdFYu6TWXggdCotHdECPcIQrEtAHSddldLSFFlsihoYvfbDEH2z+24+2mQrh37wJxzjSIhMARU3sui2T+pgM3lZHABzQxnsPfmOU5DuXe6uNdk1QGUkzozVkOSOd2L4qRNY7AJqYbdIjGZ0QzaHQbO7HQScGDRALje01hSeFIm6GMyW5kbhyC9QsLPuR8V7Pcb2/51AcEbLUhSmzJVA7P3ah7sNaqOXZKZdYOSfxiLj6aFPStUjbb3bSuPs4TIpjsmrNfUu5Jc6qp9xhCV3sjN5rFa9mc0wNYqYowMhZsy8B6y90k6i5/VAZktFtPVCTaMY2B7gF1gBm/XBeihxwLnDMNGstaRL8Ismd1PcLvaEkcnudODKRK2l4uX7T+BP6K5/xHA6iEToEJgpSrg3UkKk+FZsY05anStTFyPHCi31hI6XuQ5jVR3Wsmum0ylVPGMUSPWvLuWhTZH6oy7J/Vmu1eBK7Z+XlPIp+ObkFWPbCn4QzQzWN6NzkB3TaB4hlgIBfn1fbYZMedH+3tf4hXIFVEiAE0tphZMPSbVzZve4ce92u3CzjW2HqJIzdcVsdx/u7ogEHgWPkyiuwIjrHX+hAzH6ghUgKTpT8j03ISz2nWyxIPPRh6hDIb/9S5/fiEcDzwFm2BZbX1fv/9BI2TNB9CCfGJ9IeCi5g/WX4lCfQn9wlm31/HHbzXM/XmWFwVAbozpAaXyRTrr1bApDSBNG4E4TjbqXIB5rYb4FCzvwgEQBeTel0zftozXbNHmp9WmeOBTCZ5CetnhuNprB8PwGx3OPQcZMbDUk7IbiOHI+6o2mqXyn0cU1G58Km2tZKmIoYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Claude Code exposes everything a fair headless run needs. Next I'll capture its real event stream with a tiny run, so the parser is built from actual output rather than assumptions."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01S6UYLhqqDEz4UmGj9m75Ks",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/ccprobe\"; mkdir -p \"$S\" && cd \"$S\" && printf 'export const x = 1\\n' > a.ts && timeout 300 claude -p \"Use the Grep tool to find 'x =' then Read a.ts, then Edit a.ts to set x to 2. Reply done.\" --output-format stream-json --verbose --permission-mode bypassPermissions --setting-sources project --strict-mcp-config --model haiku > out.jsonl 2> err.txt; echo \"exit=$?\"; wc -l out.jsonl; node -e '\nconst l=require(\"fs\").readFileSync(\"out.jsonl\",\"utf8\").trim().split(\"\\n\").map(s=>JSON.parse(s));\nfor(const r of l){ if(r.type===\"assistant\"){console.log(\"A\",r.message.id,r.message.content.map(c=>c.type===\"tool_use\"?`tool_use:${c.name}:${JSON.stringify(c.input)}`:c.type).join(\" | \"), JSON.stringify(r.message.usage))}\n else if(r.type===\"user\"){console.log(\"U\",r.message.content.map(c=>c.type+(c.is_error?\"(err)\":\"\")).join(\",\"))}\n else if(r.type===\"result\"){const {result,...rest}=r;console.log(\"R\",JSON.stringify(rest).slice(0,900))}\n else console.log(r.type,r.subtype??\"\") }'; cat a.ts; head -c 300 err.txt",
+          "description": "Probe Claude Code stream-json output with a tiny task",
+          "timeout": 320000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

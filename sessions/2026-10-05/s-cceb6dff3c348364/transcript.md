@@ -5,8 +5,8 @@
 | session | `s-cceb6dff3c348364` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
-| requests | 32 |
-| tokens | in 2,692 · out 26,514 · cache read 3,302,824 · cache write 160,364 |
+| requests | 35 |
+| tokens | in 2,696 · out 27,060 · cache read 3,580,089 · cache write 164,231 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -3878,4 +3878,307 @@ Claude Code exposes everything a fair headless run needs. Next I'll capture its 
 ```
 
 _stop `tool_use` · 14.52s (ttft 8.53s) · in 2 · out 1,138 · cache r136,160/w719_
+
+---
+
+## req-0033 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 60 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01WZ7kFVVq6uBywpx6CoU5AE)_
+
+```
+  --bare                                Minimal mode: skip hooks (those defined
+                                        in settings and by installed plugins;
+                                        features built into Claude Code are
+                                        unaffected), LSP, plugin sync,
+                                        attribution, auto-memory, background
+                                        prefetches, keychain reads, and
+                                        CLAUDE.md auto-discovery. Sets
+                                        CLAUDE_CODE_SIMPLE=1. Anthropic auth is
+                                        strictly ANTHROPIC_API_KEY or
+                                        apiKeyHelper via --settings (OAuth and
+                                        keychain are never read). 3P providers
+                                        (Bedrock/Vertex/Foundry) use their own
+                                        credentials. Skills still resolve via
+                                        apiKeyHelper via --settings (OAuth and
+                                        keychain are never read). 3P providers
+                                        (Bedrock/Vertex/Foundry) use their own
+                                        credentials. Skills still resolve via
+                                        /skill-name. Explicitly provide context
+--
+                                        (managed settings and --settings still
+                                        apply; add --strict-mcp-config to skip
+                                        MCP servers too). Also confines the file
+                                        tools to the working directories
+                                        (--add-dir included), refuses
+--
+  --setting-sources <sources>           Comma-separated list of setting sources
+                                        to load (user, project, local).
+  --settings <file-or-json>             Path to a settings JSON file or a JSON
+                                        string to load additional settings from
+  --strict-mcp-config                   Only use MCP servers from --mcp-config,
+                                        ignoring all other MCP configurations
+  --system-prompt <prompt>              System prompt to use for the session
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Claude Code exposes everything a fair headless run needs. Next I'll capture its real event stream with a tiny run, so the parser is built from actual output rather than assumptions.
+
+**-> tool_use** `Bash` _(toolu_01S6UYLhqqDEz4UmGj9m75Ks)_
+
+```json
+{
+  "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/ccprobe\"; mkdir -p \"$S\" && cd \"$S\" && printf 'export const x = 1\\n' > a.ts && timeout 300 claude -p \"Use the Grep tool to find 'x =' then Read a.ts, then Edit a.ts to set x to 2. Reply done.\" --output-format stream-json --verbose --permission-mode bypassPermissions --setting-sources project --strict-mcp-config --model haiku > out.jsonl 2> err.txt; echo \"exit=$?\"; wc -l out.jsonl; node -e '\nconst l=require(\"fs\").readFileSync(\"out.jsonl\",\"utf8\").trim().split(\"\\n\").map(s=>JSON.parse(s));\nfor(const r of l){ if(r.type===\"assistant\"){console.log(\"A\",r.message.id,r.message.content.map(c=>c.type===\"tool_use\"?`tool_use:${c.name}:${JSON.stringify(c.input)}`:c.type).join(\" | \"), JSON.stringify(r.message.usage))}\n else if(r.type===\"user\"){console.log(\"U\",r.message.content.map(c=>c.type+(c.is_error?\"(err)\":\"\")).join(\",\"))}\n else if(r.type===\"result\"){const {result,...rest}=r;console.log(\"R\",JSON.stringify(rest).slice(0,900))}\n else console.log(r.type,r.subtype??\"\") }'; cat a.ts; head -c 300 err.txt",
+  "description": "Probe Claude Code stream-json output with a tiny task",
+  "timeout": 320000
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01S6UYLhqqDEz4UmGj9m75Ks)_
+
+```
+exit=0
+62 out.jsonl
+system init
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+A msg_011CfkWH8NNoFNg6EDnsQDkM thinking {"input_tokens":10,"cache_creation_input_tokens":38066,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":38066},"output_tokens":3,"service_tier":"standard","inference_geo":"not_available"}
+A msg_011CfkWH8NNoFNg6EDnsQDkM text {"input_tokens":10,"cache_creation_input_tokens":38066,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":38066},"output_tokens":3,"service_tier":"standard","inference_geo":"not_available"}
+A msg_011CfkWH8NNoFNg6EDnsQDkM tool_use:Grep:{"pattern":"x ="} {"input_tokens":10,"cache_creation_input_tokens":38066,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":38066},"output_tokens":3,"service_tier":"standard","inference_geo":"not_available"}
+U tool_result
+A msg_011CfkWH8NNoFNg6EDnsQDkM tool_use:Read:{"file_path":"C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\ccprobe\\a.ts"} {"input_tokens":10,"cache_creation_input_tokens":38066,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":38066},"output_tokens":3,"service_tier":"standard","inference_geo":"not_available"}
+rate_limit_event 
+U tool_result
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+A msg_011CfkWHUBF9zfkGtNg5Njvc thinking {"input_tokens":8,"cache_creation_input_tokens":339,"cache_read_input_tokens":38066,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":339},"output_tokens":1,"service_tier":"standard","inference_geo":"not_available"}
+A msg_011CfkWHUBF9zfkGtNg5Njvc tool_use:Edit:{"replace_all":false,"file_path":"C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\ccprobe\\a.ts","old_string":"export const x = 1","new_string":"export const x = 2"} {"input_tokens":8,"cache_creation_input_tokens":339,"cache_read_input_tokens":38066,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":339},"output_tokens":1,"service_tier":"standard","inference_geo":"not_available"}
+rate_limit_event 
+U tool_result
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+s
+... [1,825 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01JQ27pXfQhxFQzCVyPfMspx)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -nE \"usage|inputTokens|cacheRead|output\" packages/test-support/loader-smoke/tests/fixtures/base-driver.ts | head -30",
+  "description": "Check how base driver reports token usage"
+}
+```
+
+_stop `tool_use` · 6.99s (ttft 5.81s) · in 2 · out 345 · cache r136,879/w3,507_
+
+---
+
+## req-0034 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 62 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01S6UYLhqqDEz4UmGj9m75Ks)_
+
+```
+exit=0
+62 out.jsonl
+system init
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+A msg_011CfkWH8NNoFNg6EDnsQDkM thinking {"input_tokens":10,"cache_creation_input_tokens":38066,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":38066},"output_tokens":3,"service_tier":"standard","inference_geo":"not_available"}
+A msg_011CfkWH8NNoFNg6EDnsQDkM text {"input_tokens":10,"cache_creation_input_tokens":38066,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":38066},"output_tokens":3,"service_tier":"standard","inference_geo":"not_available"}
+A msg_011CfkWH8NNoFNg6EDnsQDkM tool_use:Grep:{"pattern":"x ="} {"input_tokens":10,"cache_creation_input_tokens":38066,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":38066},"output_tokens":3,"service_tier":"standard","inference_geo":"not_available"}
+U tool_result
+A msg_011CfkWH8NNoFNg6EDnsQDkM tool_use:Read:{"file_path":"C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\ccprobe\\a.ts"} {"input_tokens":10,"cache_creation_input_tokens":38066,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":38066},"output_tokens":3,"service_tier":"standard","inference_geo":"not_available"}
+rate_limit_event 
+U tool_result
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+A msg_011CfkWHUBF9zfkGtNg5Njvc thinking {"input_tokens":8,"cache_creation_input_tokens":339,"cache_read_input_tokens":38066,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":339},"output_tokens":1,"service_tier":"standard","inference_geo":"not_available"}
+A msg_011CfkWHUBF9zfkGtNg5Njvc tool_use:Edit:{"replace_all":false,"file_path":"C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\ccprobe\\a.ts","old_string":"export const x = 1","new_string":"export const x = 2"} {"input_tokens":8,"cache_creation_input_tokens":339,"cache_read_input_tokens":38066,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":339},"output_tokens":1,"service_tier":"standard","inference_geo":"not_available"}
+rate_limit_event 
+U tool_result
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+system thinking_tokens
+s
+... [1,825 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01JQ27pXfQhxFQzCVyPfMspx)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -nE \"usage|inputTokens|cacheRead|output\" packages/test-support/loader-smoke/tests/fixtures/base-driver.ts | head -30",
+  "description": "Check how base driver reports token usage"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01JQ27pXfQhxFQzCVyPfMspx)_
+
+```
+(Bash completed with no output)
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01DuSBWhbqvjLLixNpCmoMrj)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && ls packages/test-support/loader-smoke/tests/fixtures/ | head; grep -rnE \"'result'|type: 'result'|inputTokens\" packages/test-support/loader-smoke/src packages/test-support/loader-smoke/tests/fixtures 2>/dev/null | head -10",
+  "description": "Find where driver emits result usage"
+}
+```
+
+_stop `tool_use` · 6.71s (ttft 5.79s) · in 2 · out 201 · cache r140,386/w360_
+
+---
+
+## req-0035 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 64 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01JQ27pXfQhxFQzCVyPfMspx)_
+
+```
+(Bash completed with no output)
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01DuSBWhbqvjLLixNpCmoMrj)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && ls packages/test-support/loader-smoke/tests/fixtures/ | head; grep -rnE \"'result'|type: 'result'|inputTokens\" packages/test-support/loader-smoke/src packages/test-support/loader-smoke/tests/fixtures 2>/dev/null | head -10",
+  "description": "Find where driver emits result usage"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01DuSBWhbqvjLLixNpCmoMrj)_
+
+```
+base-driver.ts
+cli-mock-llm.ts
+fail.ts
+hang.ts
+production-profile.ts
+success.ts
+packages/test-support/loader-smoke/src/agent-turn.ts:13:  readonly type: 'result'
+packages/test-support/loader-smoke/src/agent-turn.ts:27:    inputTokens: (total?.inputTokens ?? 0) + step.inputTokens,
+packages/test-support/loader-smoke/src/agent-turn.ts:95:    type: 'result',
+packages/test-support/loader-smoke/tests/fixtures/cli-mock-llm.ts:50:      yield { type: 'usage', usage: { inputTokens: 11, outputTokens: 3, cacheReadTokens: 2 } }
+packages/test-support/loader-smoke/tests/fixtures/cli-mock-llm.ts:63:    yield { type: 'usage', usage: { inputTokens: 7, outputTokens: 5, reasoningTokens: 1 } }
+```
 

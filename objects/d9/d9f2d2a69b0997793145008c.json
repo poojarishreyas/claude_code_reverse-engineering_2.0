@@ -1,0 +1,28 @@
+{
+  "id": "d9f2d2a69b0997793145008c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSrQgKEAgSGAI4AUIIdGhpbmtpbmcSDAf27mAN3Qdad+1kJBoMa75FsKQUjsnTVtwsIjABSjgWKtHLzzmgTyPN7S9IABiV7cbIvYoEd++XdetSKdpBmaJaPaqO6EPaJqGh244qygeO0sabeNV3W6j3nYRj9uJ6+tERqp5q1NSPnSrdpNrwoLUy4XYGzqELb20J+MWrqAy+yCAZLd49LmeJ4yKTm9VUu9XHbOYAKbvrC/cFF/UmWUgawBVXWGXnM2Slvyy1rXhrZybcQ2+P1ADjgs8nROT6cpipStxK1XgUXQTTcRIE+2IdUOu2BLyj1h2vLR7XcQGK1frDXcXmyO5o+fjFVmvV899Dh5seaZgVDC3u4jymZdH7s+aYXOFTCKat+EOfOh544AGOvXEc5X3MaPMQBOXRHQMoIWbzj9s33VpQxCOtAIhq/HxV/SibJWZOOEGS0EwW6glqgbjJs09WPDx4SMmXSxQZHpx+AeZkyNP1zrru3lkz8ktPULO1kEkxjys4q+99yxhtvKW+SlLp+ydWxiov8lVil2ErKVSfBY2F3cRy+01oSdFtBRqGpvZ4Tw9BTvrdISyre87NrHc7GJ69tRq5P2z25WORYSsKOvnkEYzvx0wqqNH7X6YXyo9wVUomsEVWAC8Si2dCJ4BzzrioNlrWqApezCFqhyvcf94l4AI/Dhorzf/NyoVJQxYBufoEk9uXL6IrbEDlpUGVIWVwl1e+n8T34sWfqy+M2Z26HVZvUXGlzsCTk4yBhba7VuTUmeZJZ3K1sRnOqFtYTpUDAkYX3yhi4DnlDhLYYhcMXA3P7SrVL4FKMh4Yeu5X3CCPeInXkd3BtRgCZmk5K5D/9M9c92m6tfOZWOU8ziv935cf4XhZSYj7ZtgIti1F59R3GNI66uM7opY6RobyCT56P8vnOFXPhNRf4CKh0BuqDeujlmeokjuYlJ1c2hyHhGHqpcHWG2Vx21W6pIwk/Br7fhNrLVyu52u29xfW/TUnDgZhFY32JU1OqwqJmtNW1+dZdRiIr//GEpMpBujz6C4tVdumT6uOwxQyjDH/qT2iOFNKdgO4b4vir8vsvFeXBxy43KSYwcMZilg6ema5CcCBs+qPgpwyA1PNuc6ksRvKupnMg5I/hOc7ixgKo+Y7GpEaX6ZAOqBpiuAV8fzNR5a+I6CD1bxrpMNoaAfVMST5DVsb1+mLj58yZos8k+sg1Epv6D964USixbtG97bz08sqRJu7L+fBBccSRFeiFgLBjpSpwp0IliZibu+ZXzMtw6LGAFPTTdoUXP6OnsFfPYgRP/9k9CCSxRy6/sRbdeFrxmhvlB18vlIeogFXNPW0QSPqIKZQnzGsQOyElsVGd/HUUNHo62kBV5FcbzNZVsClJeAUld/VX+TqcN22/TIL71hSOZ67eW1miV+VTGybGAE="
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS3gcKEQgSGAI4AUIJbmFycmF0aW9uEgz/YQC6dA6Ztn2jl3oaDCKRQes/ROYfd4x+ryIwwHUQXD2PWB9qXG8s2t9jTerkukMRXU0lXKajzwt0p75N/m3N8G4bD+MhS7vKCgM3KvoGCSbs0yGC5zkJKHVpnKaNNcwwMuJhHbC2qmo5noMhUmmOzAVZHK06R6G/46zjgS5XiWd6iT1bpK9jLE54zXLEDx+ua5VJqvg31ePKHQ+maAfy5877Gajyjea35ieYakAXPLWlTJ3ilMwLzgbZpyb7cjJkFzbgNPcjHZL7XefiHRrMk7vnxt+IQ8nUejuulqJ1DhV0xtD7VrxxlJwBGyWdgxCOyFsJQBE3c5l6y+BauFb8ymJg4/A6iemPNHL+YcxluNQAyqb3zg9KX1Kx7Zud9ZBkl5Ladm+9r79C7H81nsDSEpxlmY3wsqytTI9mmf2IlNaiw93i7UDO9h31VnUXwJ0ykt1zM/cU542EZ5DXDqk4SvouOFw7gEscQ9Dbhlv/aJAIlUhCiHFOsS7YsfDPqBpcnFh03SEiP4haAC46I3/HjZOaj2c2wNbpM2h2aqzd8iR4JpZ5b0GekwJy8TzxzpshvoS8sfRI7NgVBgubzBjwUpfxdz/uweeveyWBS4xhhgBfflKFJ5v6UhPpO0/4Z5SXxBVmKmGvF/Gh2bzwh2ZZmPSvmq30t/VXQuSVYqsTQ9HnO94fTF92HEVoBbAcnKATl5JV+kDH3ZQUA/eOZ19rPXxU5wx0UENo0ux+z6bwc9w3H3O7DL0H+RlWV6AWHBQvQn2k1tAr1a+E4yOovJri61KHNUlko4Q+Ni+SC7uGyY0CMUT9ogZ5csro79hAFsW8MR9XMIYL6A1+izTIVn4nEoK3pGfrohfX/eqqU5qVJv8xVfWmbbOTLsTY5awI6yMXvFmFynKhbuo+I0VT0egnlH9rModZ44b846nScfE3SQ1YLehJbEa9zTZ5En7bu6RIVfy7dxQMWEKXRlFplsXHvnFTV2MiIbOQSZ4pKqcFkWgRZyuadFW0iDT9IQZFdo/y1HlLnhhVMAOkjOvB1ajGUe78cmsg6qHB6oeUzw+J6OA6hF+Fx0yuzrBeiKjHNzmjYt8I/rGmTcfRqKvlgjR0+v6lu7Qca38e2lXLQt9jv0FI9dD1j1w4FCJ/8jquuZ5Ahw3hfmuM6TgHF+aXr4LfEPeTBku9UUtCeV8uY9DtVMdGC3JdMCwehbfATroan1/s0LZ31H1EiAoF7fOWBkMkdpwMf5/Hz70FnFCKeO54gZh4Rb8TmREr1YgXPF5EBL3RVTxQgDavq3UYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01JQ27pXfQhxFQzCVyPfMspx",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -nE \"usage|inputTokens|cacheRead|output\" packages/test-support/loader-smoke/tests/fixtures/base-driver.ts | head -30",
+          "description": "Check how base driver reports token usage"
+        }
+      }
+    ]
+  }
+}
