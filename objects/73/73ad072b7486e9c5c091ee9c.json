@@ -1,0 +1,19 @@
+{
+  "id": "73ad072b7486e9c5c091ee9c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017qSvC5QegJydGTWoxEssyG",
+        "type": "tool_result",
+        "content": "== /c/Users/shrey/.claude/settings.json\n  {\n    \"model\": \"opus\",\n    \"autoUpdatesChannel\": \"latest\",\n    \"theme\": \"dark\",\n    \"switchModelsOnFlag\": true,\n    \"modelSettings\": {\n      \"claude-opus-5-5\": {\n        \"effortLevel\": \"high\"\n      }\n    },\n    \"permissions\": {\n      \"allow\": [\n        \"Bash(pnpm run eval:file-finding:*)\",\n      ]\n    }\n  }",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

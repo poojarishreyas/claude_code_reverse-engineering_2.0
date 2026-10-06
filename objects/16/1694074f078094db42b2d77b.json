@@ -1,0 +1,17 @@
+{
+  "id": "1694074f078094db42b2d77b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "yeah i have added permissions n sttings .json now use omniroute for both",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
