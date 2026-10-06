@@ -1,0 +1,19 @@
+{
+  "id": "624b5be21bd441d9aea7faa8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DVxaa2gqpZjbeF11fwYaAh",
+        "type": "tool_result",
+        "content": "packages/api/gateway/lib/types/stream-server.d.ts\npackages/api/gateway/src/stream-server.ts\npackages/api/remotes/src/client/index.ts\npackages/boot/app-boot/src/profile.ts\npackages/client/hmr/src/index.ts\npackages/client/ui-message-feedback/src/client/controller.ts\npackages/client/ui-message-feedback/src/client/index.ts\npackages/core/agent/src/index.ts\npackages/llm/llm/tests/topology.spec.ts\npackages/preset/agent-presets/lib/types/index.d.ts\n---DIAG\npackages/fs/fs-observation-policy/lib/types/index.d.ts\npackages/fs/fs-observation-policy/src/index.ts\npackages/fs/tool-fs/lib/types/index.d.ts\npackages/fs/tool-fs/src/index.ts\npackages/fs/tool-fs-search/lib/types/glob.d.ts\npackages/fs/tool-fs-search/lib/types/grep.d.ts\npackages/fs/tool-fs-search/lib/types/index.d.ts\npackages/fs/tool-fs-search/lib/types/search-core.d.ts\npackages/fs/tool-fs-search/src/glob.ts\npackages/fs/tool-fs-search/src/grep.ts\n---VERIFY\npackages/goal/command-goal/README.md\npackages/goal/command-goal/tests/command-goal.spec.ts\npackages/goal/goal-round-driver/src/prompt.ts\npackages/goal/goal-round-driver/tests/goal-round-driver.spec.ts\npackages/goal/goal-round-driver/tests/invariant.spec.ts\npackages/preset/agent-presets/presets/cordis/skills/cordis-plugin-development/SKILL.md\npackages/preset/agent-presets/presets/cordis/skills/editing-cordis-compositions/SKILL.md\npackages/preset/agent-presets/src/invariant.ts\n---PROMPTFILES\npackages/core/system-prompt/src:\nindex.ts\ninvariant.ts\n\npackages/preset/agent-presets/src:\nauthoring.ts\ncomposition-inventory.ts\ndiscovery.ts\ndisplay.ts\nindex.ts\ninvariant.ts\nmetadata.ts\nmount.ts\npreset.ts\nsession.ts\nspecifier.ts\ntypes.ts",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
