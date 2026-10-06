@@ -1,0 +1,15 @@
+{
+  "id": "9e380301dfac0ba04b1753d4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UUWypECSXL4UiZ3B7tjwFm",
+        "type": "tool_result",
+        "content": "})\n\ndescribe('summarize', () => {\n  const base = computeMetrics([], EXPECTED)\n\n  it('counts passes and correct edits and takes medians', () => {\n    const summary = summarize([\n      { passed: true, metrics: { ...base, editedExpected: true, firstReadStep: 2, steps: 5, usage: { inputTokens: 10, outputTokens: 1 } } },\n      { passed: false, metrics: { ...base, firstReadStep: 6, steps: 9 } },\n      { passed: true, metrics: { ...base, editedExpected: true, firstReadStep: null, steps: 4 } },\n      { passed: false, metrics: { ...base, firstReadStep: 3, steps: 7 } },\n    ])\n    expect(summary).toEqual({\n      runs: 4,\n      passed: 2,\n      editedExpected: 2,\n      medianFirstReadStep: 3,\n      medianSteps: 6,\n      totalInputTokens: 10,\n    })\n    expect(summarize([])).toMatchObject({ runs: 0, medianFirstReadStep: null, medianSteps: null })\n  })\n})",
+        "is_error": false
+      }
+    ]
+  }
+}

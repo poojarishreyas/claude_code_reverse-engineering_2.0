@@ -1,0 +1,22 @@
+{
+  "id": "a3a1f9d6c9627869fe26e86b",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01QELWHkEgA6ek2iR5qGLBh4",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && python - <<'EOF'\np='scripts/eval/metrics.spec.ts'\ns=open(p,encoding='utf8').read()\ns=s.replace(\"usage: { inputTokens: 10, outputTokens: 1 } } },\",\"usage: { inputTokens: 10, outputTokens: 1, cacheReadTokens: 100, cacheWriteTokens: 5 } } },\")\ns=s.replace(\"\"\"      totalInputTokens: 10,\n    })\"\"\",\"\"\"      totalInputTokens: 10,\n      totalPromptTokens: 115,\n      totalOutputTokens: 1,\n    })\"\"\")\nopen(p,'w',encoding='utf8',newline='\\n').write(s)\nEOF\necho ok",
+          "description": "Update summarize test for prompt tokens"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

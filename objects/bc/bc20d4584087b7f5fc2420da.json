@@ -1,0 +1,22 @@
+{
+  "id": "bc20d4584087b7f5fc2420da",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01UUWypECSXL4UiZ3B7tjwFm",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 85,107p scripts/eval/metrics.spec.ts",
+          "description": "View summarize test expectations"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

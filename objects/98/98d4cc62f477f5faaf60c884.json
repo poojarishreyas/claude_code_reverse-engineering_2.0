@@ -1,0 +1,15 @@
+{
+  "id": "98d4cc62f477f5faaf60c884",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01612gmP7XQJznf1ekrCphoU",
+        "type": "tool_result",
+        "content": "22:  readonly cacheWriteTokens?: number\n31:export function promptTokens(usage: EvalUsage): number {\n32:  return usage.inputTokens + (usage.cacheReadTokens ?? 0) + (usage.cacheWriteTokens ?? 0)\n186:  /** Sum of {@link promptTokens} over the runs that reported usage. */\n204:    totalPromptTokens: results.reduce((total, result) => total + (result.metrics.usage === undefined ? 0 : promptTokens(result.metrics.usage)), 0),\n103:      totalInputTokens: 10,",
+        "is_error": false
+      }
+    ]
+  }
+}
