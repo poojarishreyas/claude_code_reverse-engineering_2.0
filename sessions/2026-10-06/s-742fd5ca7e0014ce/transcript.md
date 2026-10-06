@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-06T16:12:54.080Z |
 | requests | 33 (3 errored) |
-| tokens | in 78 · out 12,391 · cache read 2,525,966 · cache write 47,990 |
+| tokens | in 80 · out 14,120 · cache read 2,631,903 · cache write 55,644 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -2559,4 +2559,34 @@ const sandbox = new AclSandbox({
   writeSid: workspaceWr
 ... [17,688 more characters in session.jsonl]
 ````
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+The cause is already known to the dsh team. It's in the sandbox's own docs (`packages/sandbox/sandbox-windows-acl/README.md` and the 2026-08-08 design note):
+
+> named-pipe opens remaining denied, so libuv piped-stdio grandchildren fail with EPERM while inherited/ignored stdio and anonymous pipes work.
+
+In simple terms:
+- On Windows, Node connects to a child process through a *named pipe*.
+- The sandbox's restricted token isn't allowed to write to that pipe, so any child that Node starts with piped output fails.
+- Vite (`exec('net use')`), vitest's `forks` pool and tests that spawn `node` all start children this way.
+
+This isn't a bug I can patch quickly. It comes from how the restricted-token sandbox works. The obvious fix, giving the token write rights to the pipe, would also let it write outside the workspace. So for comparing against Claude Code, the honest options are:
+
+1. **Run dsh with the sandbox off** (full access, like Claude Code's `bypassPermissions`). This measures the agent loop and search fairly.
+2. **Also keep the sandboxed numbers**, because that's what a real Windows user of dsh gets.
+
+There's a cheap fix this evidence does support: dsh spent about 40 steps figuring out the EPERM error by itself. Telling the model the limit up front, or when a spawn fails with EPERM, would save those steps. I'll only propose it after the full numbers are in.
+
+Running now: task ed34a1d7fe, 6th of 10. On qwen, this task hit a 400 error at step 62.
+
+_stop `end_turn` · 18.77s (ttft 18.75s) · in 2 · out 1,729 · cache r105,937/w7,654_
 
