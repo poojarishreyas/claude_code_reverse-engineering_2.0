@@ -1,0 +1,19 @@
+{
+  "id": "000b0a51b13e3282b0a0a630",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01QHZerHLTSZKLN7Y2VV6HUH",
+        "type": "tool_result",
+        "content": "1f8cdc08a1 Command failed: git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-1f8cdc08a1 1f8cdc08a1d83dac2ab345725a0418325b48d771\r\n\r\n\r\n9633724b40 Command failed: git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-9633724b40 9633724b40bb5b6d8cf844606c3344affc8bc1e7\r\n\r\n\r\na59beb8ae3 Command failed: git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-a59beb8ae3 a59beb8ae301ff84472dd7a50ecabdeb8dac8c23",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

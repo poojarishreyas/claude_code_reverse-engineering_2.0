@@ -1,0 +1,27 @@
+{
+  "id": "be89d314bea74c83c04b03c7",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01QHZerHLTSZKLN7Y2VV6HUH",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-cc2\" && python -c \"\nimport json\nfor t in ('1f8cdc08a1','9633724b40','a59beb8ae3'): print(t, json.load(open(t+'.json')).get('note','')[:600]); print()\"",
+          "description": "Read the worktree failure notes"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

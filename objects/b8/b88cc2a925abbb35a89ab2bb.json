@@ -1,0 +1,15 @@
+{
+  "id": "b88cc2a925abbb35a89ab2bb",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01SS7BJvVY1hdbey6fRvN5tv",
+        "type": "tool_result",
+        "content": "34-import type { ClaudeCodeProvider } from './claude-code.ts'\n35-import { computeMetrics, promptTokens, summarize } from './metrics.ts'\n36-import type { EvalEvent, EvalUsage, RunMetrics } from './metrics.ts'\n37:import { difficultyTags, mineTasks, prepareWorkspace, readTestSources, removeWorkspace, taskPrompt } from './tasks.ts'\n38-import type { EvalTask, TaskTag } from './tasks.ts'\n39-\n40-const repoRoot = fileURLToPath(new URL('../../', import.meta.url))\n--\n151-  await rm(workspace, { recursive: true, force: true })\n152-  await rm(home, { recursive: true, force: true })\n153-  try {\n154:    await prepareWorkspace(options.repo, task, workspace)\n155-    const [installCommand = 'pnpm', ...installArgs] = options.install.split(' ')\n156-    const install = await exec(installCommand, installArgs, workspace, process.env, 30 * 60_000)\n157-    if (install.code !== 0) return { task, status: 'error', passed: false, note: `install failed: ${tail(install.stderr, 800)}` }\n--\n187-    return { task, status: 'error', passed: false, note: error instanceof Error ? error.message : String(error) }\n188-  } finally {\n189-    await rm(home, { recursive: true, force: true })\n190:    if (!options.keep) await removeWorkspace(options.repo, workspace).catch(() => rm(workspace, { recursive: true, force: true }))\n191-  }\n192-}\n193-",
+        "is_error": false
+      }
+    ]
+  }
+}
