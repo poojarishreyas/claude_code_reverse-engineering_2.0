@@ -1,0 +1,15 @@
+{
+  "id": "35d94aa1e53a9c59a1e0eda9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017WF2UfBBVsFzzf51FqG4W5",
+        "type": "tool_result",
+        "content": "openrouter/qwen/qwen3-coder-next\r\nopenrouter/qwen/qwen3-coder-plus\r\nopenrouter/qwen/qwen3-coder-flash\r\nopenrouter/qwen/qwen3-coder-30b-a3b-instruct\r\nopenrouter/qwen/qwen3-coder\n---\nopenrouter/qwen/qwen3-coder-next\r -> 400 {\"error\":{\"message\":\"Invalid JSON body\",\"type\":\"invalid_request_error\",\"code\":\"bad_request\"}}|400\nopenrouter/qwen/qwen3-coder-plus\r -> 400 {\"error\":{\"message\":\"Invalid JSON body\",\"type\":\"invalid_request_error\",\"code\":\"bad_request\"}}|400\nopenrouter/qwen/qwen3-coder-flash\r -> 400 {\"error\":{\"message\":\"Invalid JSON body\",\"type\":\"invalid_request_error\",\"code\":\"bad_request\"}}|400\nopenrouter/qwen/qwen3-coder-30b-a3b-instruct\r -> 400 {\"error\":{\"message\":\"Invalid JSON body\",\"type\":\"invalid_request_error\",\"code\":\"bad_request\"}}|400\nopenrouter/qwen/qwen3-coder -> 200 {\"id\":\"gen-1791301865-i8qLeyMcbiqFD2G31hCj\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"qwen/qwen3-coder\",\"content\":[{\"",
+        "is_error": false
+      }
+    ]
+  }
+}

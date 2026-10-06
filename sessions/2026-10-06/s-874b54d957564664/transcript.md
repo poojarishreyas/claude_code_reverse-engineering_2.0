@@ -5,8 +5,8 @@
 | session | `s-874b54d957564664` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-06T06:32:41.424Z |
-| requests | 110 (17 errored) |
-| tokens | in 5,228 · out 53,752 · cache read 10,859,112 · cache write 270,542 |
+| requests | 111 (17 errored) |
+| tokens | in 5,230 · out 54,470 · cache read 11,021,548 · cache write 271,586 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -7695,5 +7695,84 @@ openrouter/qwen/qwen3-coder-plus -> 400 {"error":{"message":"Invalid JSON body"
 openrouter/qwen/qwen3-coder-flash -> 400 {"error":{"message":"Invalid JSON body","type":"invalid_request_error","code":"bad_request"}}|400
 openrouter/qwen/qwen3-coder-30b-a3b-instruct -> 400 {"error":{"message":"Invalid JSON body","type":"invalid_request_error","code":"bad_request"}}|400
 openrouter/qwen/qwen3-coder -> 200 {"id":"gen-1791301865-i8qLeyMcbiqFD2G31hCj","type":"message","role":"assistant","model":"qwen/qwen3-coder","content":[{"
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+The 400s were my mistake: the model names carried Windows line endings. I'll retry `qwen3-coder-next` on OpenRouter with the names cleaned.
+
+**-> tool_use** `Bash` _(toolu_01PiUx91kcZKG4v4q4AVhxaf)_
+
+```json
+{
+  "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); for m in openrouter/qwen/qwen3-coder-next; do r=$(curl -s -w \"|%{http_code}\" --max-time 90 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d \"{\\\"model\\\":\\\"$m\\\",\\\"max_tokens\\\":5,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}\"); echo \"$m -> ${r##*|} ${r:0:300}\"; r=$(curl -s -w \"|%{http_code}\" --max-time 90 http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $KEY\" -H \"content-type: application/json\" -d \"{\\\"model\\\":\\\"$m\\\",\\\"max_tokens\\\":5,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}\"); echo \"openai fmt -> ${r##*|} ${r:0:200}\"; done",
+  "description": "Probe qwen3-coder-next via OpenRouter in both API formats",
+  "timeout": 300000
+}
+```
+
+_stop `tool_use` · 7.58s (ttft 3.80s) · in 2 · out 718 · cache r162,436/w1,044_
+
+---
+
+## req-0111 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 170 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_017WF2UfBBVsFzzf51FqG4W5)_
+
+```
+openrouter/qwen/qwen3-coder-next
+openrouter/qwen/qwen3-coder-plus
+openrouter/qwen/qwen3-coder-flash
+openrouter/qwen/qwen3-coder-30b-a3b-instruct
+openrouter/qwen/qwen3-coder
+---
+openrouter/qwen/qwen3-coder-next -> 400 {"error":{"message":"Invalid JSON body","type":"invalid_request_error","code":"bad_request"}}|400
+openrouter/qwen/qwen3-coder-plus -> 400 {"error":{"message":"Invalid JSON body","type":"invalid_request_error","code":"bad_request"}}|400
+openrouter/qwen/qwen3-coder-flash -> 400 {"error":{"message":"Invalid JSON body","type":"invalid_request_error","code":"bad_request"}}|400
+openrouter/qwen/qwen3-coder-30b-a3b-instruct -> 400 {"error":{"message":"Invalid JSON body","type":"invalid_request_error","code":"bad_request"}}|400
+openrouter/qwen/qwen3-coder -> 200 {"id":"gen-1791301865-i8qLeyMcbiqFD2G31hCj","type":"message","role":"assistant","model":"qwen/qwen3-coder","content":[{"
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+The 400s were my mistake: the model names carried Windows line endings. I'll retry `qwen3-coder-next` on OpenRouter with the names cleaned.
+
+**-> tool_use** `Bash` _(toolu_01PiUx91kcZKG4v4q4AVhxaf)_
+
+```json
+{
+  "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); for m in openrouter/qwen/qwen3-coder-next; do r=$(curl -s -w \"|%{http_code}\" --max-time 90 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d \"{\\\"model\\\":\\\"$m\\\",\\\"max_tokens\\\":5,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}\"); echo \"$m -> ${r##*|} ${r:0:300}\"; r=$(curl -s -w \"|%{http_code}\" --max-time 90 http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $KEY\" -H \"content-type: application/json\" -d \"{\\\"model\\\":\\\"$m\\\",\\\"max_tokens\\\":5,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}\"); echo \"openai fmt -> ${r##*|} ${r:0:200}\"; done",
+  "description": "Probe qwen3-coder-next via OpenRouter in both API formats",
+  "timeout": 300000
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01PiUx91kcZKG4v4q4AVhxaf)_
+
+```
+openrouter/qwen/qwen3-coder-next -> 200 {"id":"gen-1791301876-b0KnacCbq4xCGmqr9y02","type":"message","role":"assistant","model":"qwen/qwen3-coder-next","content":[{"type":"text","text":"Hello! How can I"}],"stop_reason":"length","stop_sequence":null,"usage":{"input_tokens":9,"output_tokens":5}}|200
+openai fmt -> 200 {"id":"gen-1791301879-31DlEw01QH3J13W9W6my","object":"chat.completion","created":1791301879,"model":"qwen/qwen3-coder-next","choices":[{"index":0,"finish_reason":"length","message":{"role":"assistant"
 ```
 

@@ -1,0 +1,32 @@
+{
+  "id": "f684e54f6db6ad99b46506fc",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS5QgKEAgSGAI4AUIIdGhpbmtpbmcSDJKtRi+txrB8fw+0vxoMmQgHBEd0gD8TQduPIjCGVCsh7xNMjVmZmzHoItZvH6UlLRyVp6F8x0CwNOx+CRQRSMqKeDkRnNU7xg2zuZsqggg8OsE/d2odlZ41N0Iah1inhX37DjDsmWc/GcJhtAQFYDTRPs7/5bn5E+NYxirJbd1DqiLEB2Fb388GkZTYRk2qoaL2KTbVAtSJMKSVOw2IzmVtG48Nx17EculNM/4hBWfZE04gdjk6rPFcBa1gKViXOmUx+IgN//7R1OWZ8Fa1G/zMCyqv4p7cdhyTPqpWvLwM8Ikd/76y/mOoQ3h5U5nUf+WAj8WAS0hFv91oMGPXXfEI8o+WbUeyT6hhdLp/QHJDbh+dazei5T0sRMr2QP2g94mjsCCRtgONl/93q1GKRIcrFHhaBswbSmP3sK0wqNgmIaqZ8ShaVtilV9JzmeB5VU0VAepoJLLtdnjfnwig6A4g5FsM+3/4A5ptvDT7ZmoEWt+Zs73PqypzR5ZgaD+5fjHDKlN1fm4EswLjRCaZhsF8PhGQ4U1rUcDKqNmrKRIujElvhXDZD2+FK2za9nj85P80lWh4dNyFoqViJ7si+woUUNZljYRa9Yb2zqmglNAR+ZKn4IIUT0w9kdtp4/yncmbOze/fDhb46ik1ewgx4T2rkLeY1bH2XoHhBDbSfj6r0OR12XvYgihbBOtxYFnsa0Ue+trG0Q9NukOzbsz7oiNCeh6GP3RT9k6quuq7EhmwunrIO4Ul8Nz0bIhJcf76BzYTanzBmzukMAogj29GxbkByvuYV3UyRDBexD4atPD7aYa5RclOV0KR6pd7fmQMwJyDCnuhcBM0dSJYeWViEp687baiqsJkStX5sh4120aE9liwSv079EN5OelVRstDKjEnvqGW0z3lL6zZQtJSc2U9OWOwai1gyeHEH/W4nLctSr4DdfqwcVgVcke2DJ74hbqLpWwhWAxOT7EApN6QdM+3qjz3Ygww3BAi5NOZW2ml2Ct+N0tW+rsSFEqwQbIsErHn87vG/fFGr9Wh1jiTu8EcGt57G1qvrx8ptkYng6xkwkLcYg5gORXfW8grxW3duQ+Mjc17G32VtsqHdj/FPqVzKh8rzEOYmf1+lYd72T5k6dmY7dORiT+B1KK4UlTfLoyA/kLz0O22OA4qrnFNJ8Stol0HcqchCjRB6atA4Q2jSF543DoUgp8FQTlbldA43QnLtBbLizvnYNLKXNkZHvyrIvOxRcp4TcBa7C7ltpT+T7FBMCd2vRVh1Q7YPjbCgDwUtA778YFfIcKtmiaKEo+4Nt0YOeXt0cBpc7kNtDcuwql3Hdeg1bLWN3kwo7MVRiU4+pZifkcbBj+Vwv1UiSC4d/GhX9FrY+pw3wVwS8hTbZ0tbala6sUoLAHroitG4rw8OoKzFtufH0g4+DmBJwMjsAtllsd+/MBN3qOrA+e8RcLFQawevJ+tB73BJmsglPwYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "The 400s were my mistake: the model names carried Windows line endings. I'll retry `qwen3-coder-next` on OpenRouter with the names cleaned."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01PiUx91kcZKG4v4q4AVhxaf",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); for m in openrouter/qwen/qwen3-coder-next; do r=$(curl -s -w \"|%{http_code}\" --max-time 90 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d \"{\\\"model\\\":\\\"$m\\\",\\\"max_tokens\\\":5,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}\"); echo \"$m -> ${r##*|} ${r:0:300}\"; r=$(curl -s -w \"|%{http_code}\" --max-time 90 http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $KEY\" -H \"content-type: application/json\" -d \"{\\\"model\\\":\\\"$m\\\",\\\"max_tokens\\\":5,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}\"); echo \"openai fmt -> ${r##*|} ${r:0:200}\"; done",
+          "description": "Probe qwen3-coder-next via OpenRouter in both API formats",
+          "timeout": 300000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
