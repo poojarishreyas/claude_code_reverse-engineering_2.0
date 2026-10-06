@@ -1,0 +1,27 @@
+{
+  "id": "33c2a412248057802111c7bc",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS8AoKEAgSGAI4AUIIdGhpbmtpbmcSDEY/btgyLxV8mVoBexoMvtOr/n1LxLS7kJfcIjD8obVsMaWevNxYVSZkd47h62HlWZHzsB5jTKWFh0Kn06wE3WhnEp5Oj+CBtbjx3sEqjQrPLGWaBJSfyyVfTCY8wiA0bKnJalv4Uqq7tAyTgeEOBhxUErobeJs0b7t5pqnTocAXMRwJL3c28qsokCuA10kUcOtF4Y8fcUS3cN92fCeEh/7AzshyI98QPZsiwPJC2LbRfKfeAziiA9SIPaUEgRRjvwizH7qc8YURxunfIl3NNvFzji0WsOAj9KtVlJtPKKrjNtk3HUL5Mt+ictkVvHmB7+gSNrqolJVLZoL/Z+yKPcESjkZbO4rwdDPqtPlD7+CIKjQZpI6hGIbvK1G0uyA1BFeJYp13YRiVKJmqbZvuYGkmhk5OtQbSFw2Rx2JCKv9R/sUmCgwCC16Zi5GXKUiDPwx/x5mJF02oG3a6C4sG3rAyY0DUaaZx3TVOWy7pfLAwgKtfKgZpkjzSXs7Kf4NJ7HN0foRv3bISCTzFpD0FDYBHHw/tUrWU4urxPktUuatEyCt+ZY5S7SP/6vv0a84BDKHeMwMNgXB3SzjS0hLQZ1wREuqe8mI8sZvFpGuQSIe1hSXe2WCgoA+rJqfi1W/OJ3PfLszWevCrff9NJ3n5IY6Eck7mpCEKLYQnjEVWik76Qkw42itHi2D80u57G6ESvVIyzoQB0WMwt3Qf1MZT8gMt3aO07Lq9nhbr97NYuBThXgcddIJjE1cjKvz3VgRgtbmvvMybLCyVXkxRFhDkrY6IfjyibQayTMphv+5HbqQK7H67kJf25QqG0O9G17GsjEZFdPxiV9Xc5wb8oVFaRr7HpBTz7FVVmWoz0RffVw/9giqnzvk+hgt4IiZACDHzPKmhXjDzDcTgcgz8KfWhg/rd1In1DhkKPDsorthPtHCUAOrOFX82zn7eSfy5Y57Hqqno9x6RzcujByWw3tMXI16tm0w0jxQ220egpnTCkNOkwhpRKNAbIHADmdc8Eg3xT0zpmgshXzkddO4sdURcw8Ii3ixbnbzOP394IRrBAG5CviKLiqtNUd613bR6RLWo7Y/kV68uoT/j+eVSVZOGtHvkKrPh4V4PAofkxiSWHwSEhL4WmhgtEzCeiJhiKR4Ue7Jbhrktj5bZUO7afPvhEy/uoU4x161Y4rV760Qqqzh/I+F7wQThNARVU3KtN/D9NU2rYEMF0l5ek4X6Tgu03Fsqvy8sL87mpLjG0DTBlnIj00eHL6FyGi4IF2jHBvnormMBsb3+PZwGStYCdJc5yRepD2TrPgXNWSrQh5ArytA6Mz4sJrWeA9pyUYJttOt5QC33Q2p5g6+OrSAwdADzkoqGFAEQql+zdZC7uaRABm59ZKRDdUTi+wrdWnE0gjM+WBdrtN4iNx36wSM37BWAKlrSkbBrHPw7gYlTEV1mX6KinBABmFNS594XcgV7wdMFY47rGt8uT3gTJ2fgSbAQYMOrcXkvqjDLSwUdaSsldOLzWn2ZzZ9QFdZamCjfLvbzeCvomQfVR2yahXHeDzK3hOPa+TS7iOmvYs8X1W01KA6KTOGWJp/8y3aSuBeagTBWrI3AGwtb/YG85xmgOPlrWicCKvwg+4l5nr5quvpnfvhRZqMPLVCgtHQb6UoPhXpUVXxBJKZezC0TaKp525vPsmjxWo/t4rVRpsxoRcKPX9GBmpTLegeYdqD6EY9wO+ekQlIfm/cpSzkEGYvfIr42ZguQR0lAVRtWIKgJxT+5WvyTgVJRcj9QLq25BPHWYYtcU3PSixpLLQPGUGtV4RGXdiwLnkyvHa15gCd6oQUYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01YJ9GEpaCrY4kf59YQWTG3B",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; ls \"$S/upstream/.git/\"*.lock \"$S/upstream/.git/worktrees\" 2>&1 | head; git -C \"$S/upstream\" worktree add --detach \"$TEMP/dsh-eval-probe\" 1f8cdc08a1 2>&1 | tail -3; git -C \"$S/upstream\" worktree remove --force \"$TEMP/dsh-eval-probe\" 2>&1 | tail -2",
+          "description": "Test whether worktree add works now"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
