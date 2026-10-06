@@ -1,0 +1,18 @@
+{
+  "id": "c36f9bbcf7f889bfd809f8cf",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01MXSXXRy3D4FaGfc2q6wdZf",
+        "name": "Bash",
+        "input": {
+          "command": "cd ~ && KEY=$(grep -E \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | head -1 | sed -E 's/.*MYLYNX_API_KEY[^:]*:[[:space:]]*//; s/^[\"'\"'\"']//; s/[\"'\"'\"']$//'); curl -s -m 60 -o /dev/null -w \"models:%{http_code}\\n\" http://localhost:20128/v1/models -H \"Authorization: Bearer $KEY\"; curl -s -m 60 -w \"\\nmsgs:%{http_code}\\n\" http://localhost:20128/v1/messages -H \"x-api-key: $KEY\" -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":30,\"messages\":[{\"role\":\"user\",\"content\":\"Say hi\"}]}' | head -c 600; curl -s -m 60 -w \"\\nchat:%{http_code}\\n\" http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $KEY\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":20,\"messages\":[{\"role\":\"user\",\"content\":\"Say hi\"}]}' | head -c 400",
+          "description": "Check OmniRoute endpoints and HTTP status codes"
+        }
+      }
+    ]
+  }
+}

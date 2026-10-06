@@ -1,0 +1,19 @@
+{
+  "id": "f6adf210f8cd35ee631ceef9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PX6Dc6rLzRJRe1CjAjGP5J",
+        "type": "tool_result",
+        "content": "  107 scripts/eval/metrics.spec.ts\n  198 scripts/eval/metrics.ts\n  311 scripts/eval/run-eval.ts\n  146 scripts/eval/tasks.spec.ts\n  210 scripts/eval/tasks.ts\n  972 total\n31:const repoRoot = fileURLToPath(new URL('../../', import.meta.url))\n32:const DRIVER = join(repoRoot, 'packages/test-support/loader-smoke/tests/fixtures/base-driver.ts')\n33:const OVERLAY = join(repoRoot, 'scripts/eval/eval.cordis.yml')\n34:const TSCONFIG = join(repoRoot, 'tsconfig.json')\n35:const MAX_FAILURE_CHARS = 6_000\n36:const LOCALE_FILE = /(^|\\/)locales?(\\/|\\.ts$|\\.tsx$)/\n39:interface TaskResult {\n49:interface Command {\n55:function exec(command: string, args: readonly string[], cwd: string, env: NodeJS.ProcessEnv, timeoutMs: number): Promise<Command> {\n70:function runTests(workspace: string, files: readonly string[]): Promise<Command> {\n75:function tail(text: string, max: number): string {\n80:function parseDriverOutput(stdout: string): { events: EvalEvent[]; usage?: EvalUsage; output?: string } {\n103:function turnErrorOf(events: readonly EvalEvent[]): string | undefined {\n112:interface RunOptions {\n122:const HOME_FILES = ['settings.yaml', '.credentials.yaml']\n124:async function runTask(task: EvalTask, options: RunOptions): Promise<Omit<TaskResult, 'tags'>> {\n184:function markdownTable(results: readonly TaskResult[]): string {\n204:async function main(): Promise<void> {\n269:const MAX_TAGGED = 400\n270:const HARD_TAGS: readonly TaskTag[] = ['cross-package', 'indirect', 'multi-file']\n276:async function selectTasks(\n305:function countBy(values: readonly string[]): Record<string, number> {",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

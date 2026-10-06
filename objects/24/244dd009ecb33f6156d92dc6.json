@@ -1,0 +1,23 @@
+{
+  "id": "244dd009ecb33f6156d92dc6",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSxwYKEAgSGAI4AUIIdGhpbmtpbmcSDJ719ydqNDnnaMqSzBoMnM8kypJvcepseJAEIjBwVi2+1y58LJwP37R9/KNe5vDE+FgYXHmqkAdgf602nl354sEWXYjvUrDATzsfslYq5AUrvu+5TklWbpLGe3Lk1g1P9mhq/McdkMtTFTkC0jvek1dIc5QZkXAwSrOs7adk0SohsgI5Usc+LmKj2GyST86DLnpWlsNfg2gYlUcA2uANYWsv3HKXGJAb9MJ2ohA6o1f2ZnGfceX4Er1DRRIODV4eKyMKYcdMITbcFMx4QPUC0ve0VM6XXmGZ7vY4SqLIWdEy0/AgdE4zPJrXoYj97RwiLuqk9zWIUwBNXjJ/NNKQ5gb250gInECR4iUyotcqgePnQ4nmn/nhgDW5MjNJUF+Aht/Z1QeSXDEEHWrQS289y2uR3gZu8CN8z8smBoZr6by3OMlTMwshtJFI5BDmfeAz/sfUxMTO3RxvifxZ98Ju1It2YY/sA8LmB+ZalHHZRWmPSqSOOqtbR81GJQnKn97hrOl+oel9UiJzN5+hRhThcuue3ohIxyEupLQajYTef/h4/W0jN64yoIYPtzXTaRjB+gSFhaeqGStZqNfRCJbUZnic/EjK0pgvhcJspP1YK9mI9ACuQDAzIux9Pa1cU4/qOeYSqOKasHH71dS+vQNUAwgIOULrp7DNjQNV8IpM5Uy4rdZf/GJuV8bpIEvJ9enCI0QOKXGfSJU4LVs1dB0rYF20QbSq6xA95Fz6YLgzzjkQ5H7gk7ugnkJMEssovd+PgOpOUICgvNB4sgngufmApdrXmpF5Xdc5HSW+bMHsCZISrovU74JREp/r0dFVrLfD41Pk3E8/j+5kgOf7ZnX0RpioSlGJusjx4gC9Fos75t48QojmPmf3ynaNhakLh51d2Fm87AGgln3Rka8Myf5YLsQUpmlLpnr6ne1IiQl3JUistVDben7/qspaCjYgw91iCCs9DqXuep+qgyzX5K5xBYEk6o1lOVseK9n5KU3in8Dr9MurCp+GEcW8mD0hT4oF2I+uSdgr1d+arhlUDDv2JEYYrE5y1v+fjsBACZQdWfiUpHBcUJ048RHIpYoE162D6Eln0BgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01CrDx7UwgkxfrbYaJq3srqU",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-NetTCPConnection -State Listen -ErrorAction SilentlyContinue | Where-Object { $_.LocalPort -in 20128,20129,3000,8080 } | Select-Object LocalAddress,LocalPort,OwningProcess; Get-Process | Where-Object { $_.ProcessName -match 'omni|route' } | Select-Object ProcessName,Id",
+          "description": "Check whether OmniRoute is listening"
+        }
+      }
+    ]
+  }
+}

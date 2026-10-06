@@ -1,0 +1,19 @@
+{
+  "id": "c8e2f963b5d38600f905cb6c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CrDx7UwgkxfrbYaJq3srqU",
+        "type": "tool_result",
+        "content": "(PowerShell completed with no output)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
