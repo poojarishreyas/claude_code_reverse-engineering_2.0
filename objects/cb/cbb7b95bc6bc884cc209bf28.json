@@ -1,0 +1,15 @@
+{
+  "id": "cbb7b95bc6bc884cc209bf28",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01JCqSdWLeHAwNVksoR5YEnJ",
+        "type": "tool_result",
+        "content": "/**\n * Test-only direct-agent turn driver shared by assembled Loader fixtures.\n * @module @deepseek-ai/dsh-loader-smoke/agent-turn\n */\n\nimport type { Context } from '@deepseek-ai/cordis'\nimport type { Agent } from '@deepseek-ai/dsh-agent'\nimport { createUserMessage, type TokenUsage } from '@deepseek-ai/dsh-llm'\nimport type { SessionEvent } from '@deepseek-ai/dsh-session'\n\n/** Result envelope consumed only by snapshot and composition tests. */\nexport interface FixtureTurnResult {\n  readonly type: 'result'\n  readonly sessionId: string\n  readonly output: string\n  readonly usage?: TokenUsage\n}\n\n/** Options for one fixture turn against exactly one configured root agent. */\nexport interface FixtureTurnOptions {\n  readonly task: string\n  readonly onEvent?: (sessionId: string, event: SessionEvent) => void\n}\n\nfunction addUsage(total: TokenUsage | undefined, step: TokenUsage): TokenUsage {\n  const next: TokenUsage = {\n    inputTokens: (total?.inputTokens ?? 0) + step.inputTokens,\n    outputTokens: (total?.outputTokens ?? 0) + step.outputTokens,\n  }\n  for (const key of ['cacheReadTokens', 'cacheWriteTokens', 'reasoningTokens'] as const) {\n    if (total?.[key] !== undefined || step[key] !== undefined) next[key] = (total?.[key] ?? 0) + (step[key] ?? 0)\n  }\n  return next\n}\n\nfunction assistantText(event: Extract<SessionEvent, { type: 'assistant/message' }>): string | undefined {\n  const blocks = event.data.message.content.filter(block => block.type === 'text')\n  return blocks.length === 0 ? undefined : blocks.map(block => block.text).join('')\n}\n\nfunction onlyRootAgent(ctx: Context): Agent {\n  const agents = ctx.get('agents')?.roots() ?? []\n  const [agent] = agents\n  if (agent === undefined || agents.length !== 1) {\n    throw new Error(`fixture turn requires exactly one top-level agent, found ${agents.length}`)\npackages/llm/llm/src/types.ts:130: * Counts are DISJOINT: `inputTokens` is uncached input only; cached input is\npackages/llm/llm/src/types.ts:131: * reported separately as `cacheReadTokens`/`cacheWriteTokens` (billed input =\npackages/llm/llm/src/types.ts:136:  inputTokens: number\npackages/llm/llm/src/types.ts:146:  cacheReadTokens?: number",
+        "is_error": false
+      }
+    ]
+  }
+}

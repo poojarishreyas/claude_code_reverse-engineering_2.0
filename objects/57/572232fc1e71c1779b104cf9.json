@@ -1,0 +1,26 @@
+{
+  "id": "572232fc1e71c1779b104cf9",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Now updating the metrics so both harnesses report total prompt tokens the same way."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01612gmP7XQJznf1ekrCphoU",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && python - <<'EOF'\nimport re\np='scripts/eval/metrics.ts'\ns=open(p,encoding='utf8').read()\ns=s.replace(\"\"\"/** Token totals reported by the driver's result line. */\nexport interface EvalUsage {\n  readonly inputTokens: number\n  readonly outputTokens: number\n  readonly cacheReadTokens?: number\n}\"\"\",\"\"\"/** Token totals for one run; input counts are disjoint, as in `dsh-llm` usage. */\nexport interface EvalUsage {\n  /** Uncached input only. */\n  readonly inputTokens: number\n  readonly outputTokens: number\n  readonly cacheReadTokens?: number\n  readonly cacheWriteTokens?: number\n}\n\n/**\n * Every input token the model was sent, cached or not, so agents whose\n * providers cache differently compare on the same footing.\n * @param usage - one run's token totals.\n * @returns uncached input plus cache reads and writes.\n */\nexport function promptTokens(usage: EvalUsage): number {\n  return usage.inputTokens + (usage.cacheReadTokens ?? 0) + (usage.cacheWriteTokens ?? 0)\n}\"\"\")\ns=s.replace(\"\"\"  readonly medianSteps: number | null\n  readonly totalInputTokens: number\n}\"\"\",\"\"\"  readonly medianSteps: number | null\n  readonly totalInputTokens: number\n  /** Sum of {@link promptTokens} over the runs that reported usage. */\n  readonly totalPromptTokens: number\n  readonly totalOutputTokens: number\n}\"\"\")\ns=s.replace(\"\"\"    totalInputTokens: results.reduce((total, result) => total + (result.metrics.usage?.inputTokens ?? 0), 0),\n  }\"\"\",\"\"\"    totalInputTokens: results.reduce((total, result) => total + (result.metrics.usage?.inputTokens ?? 0), 0),\n    totalPromptTokens: results.reduce((total, result) => total + (result.metrics.usage === undefined ? 0 : promptTokens(result.metrics.usage)), 0),\n    totalOutputTokens: results.reduce((total, result) => total + (result.metrics.usage?.outputTokens ?? 0), 0),\n  }\"\"\")\nopen(p,'w',encoding='utf8',newline='\\n').write(s)\nEOF\ngrep -n \"promptTokens\\|cacheWrite\" scripts/eval/metrics.ts | head; grep -n \"totalInputTokens\" scripts/eval/metrics.spec.ts",
+          "description": "Add prompt-token totals to eval metrics"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
