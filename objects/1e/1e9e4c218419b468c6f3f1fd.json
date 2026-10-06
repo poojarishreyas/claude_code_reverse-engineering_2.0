@@ -1,0 +1,17 @@
+{
+  "id": "1e9e4c218419b468c6f3f1fd",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Task 8 of 10 (54fa38795f, multi-file) has started. On qwen, dsh ran out of quota on this one.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

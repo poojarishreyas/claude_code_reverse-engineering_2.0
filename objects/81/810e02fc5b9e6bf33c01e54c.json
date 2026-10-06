@@ -1,0 +1,13 @@
+{
+  "id": "810e02fc5b9e6bf33c01e54c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "I've restarted the monitor. 3 dsh tasks are left (54fa38795f, f04ad05f30, and one more); I'll report each as it lands."
+      }
+    ]
+  }
+}
