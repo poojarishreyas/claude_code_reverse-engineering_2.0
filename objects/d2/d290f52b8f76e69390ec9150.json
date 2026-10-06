@@ -1,0 +1,19 @@
+{
+  "id": "d290f52b8f76e69390ec9150",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016txfYyzKZtkR4vnt23Yv6y",
+        "type": "tool_result",
+        "content": "Free GB: 7.1 of 15.7",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

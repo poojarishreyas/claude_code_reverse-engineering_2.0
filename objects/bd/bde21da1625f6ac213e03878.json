@@ -1,0 +1,15 @@
+{
+  "id": "bde21da1625f6ac213e03878",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01GUmq7V6gWo2U8mzUR5jn4G",
+        "type": "tool_result",
+        "content": "ed34a1d7fe.json\nsummary.json\nsummary.md\n5badb15009 Merge pull request #5648 from deepseek-harness/worktree/release-dsh-0.2.1-alpha.1\ned34a1d7fe.json ran false 67 {\"inputTokens\":4372998,\"outputTokens\":7083} [ 'cross-package', 'multi-file' ]",
+        "is_error": false
+      }
+    ]
+  }
+}
