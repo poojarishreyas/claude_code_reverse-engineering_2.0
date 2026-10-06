@@ -1,0 +1,23 @@
+{
+  "id": "7b7e82294578a3a2c9523256",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS2gcKEAgSGAI4AUIIdGhpbmtpbmcSDAR+ns4lhWxxaV4DThoMPpeVlOyYHm81UpzyIjDWoYbTHqLreCUQwvLegskaFjbZKoy9jV7zFj1qVw/ic97vFNoJM4zNjJCx/YN0Lycq9wbQ4wkS98f18ZlYMWqVtU7hoLfYxq/wQCphyxtI+QACLG1WLuB/69obm6iu2prUfPhh1xkCC5XXj61sMdk2xZ9D0U4llhP/Ls+Hh/UUIH6d2GqYgUvE1YYJSiZG2MBdmQAMXqwHj9t0CnSRWm9Qe6r61/Ty00QgUPoZ6s50EQCjDo2uYWrysyg+HV1Gq8Zu5CGXJCD3NEHPnrnZNaKZzauEI/LxrAkYlPaJSU+MBMxQVw9Y23r7ZiaiI6BKVkmDr/89FXvwLecIJa0ifA2McxmWgVIWYmVNIIzFTN5oTVECzOEK6Ma/WH65+ZkrkYtMI1GcLNjYREk1j6/HTTQPBGJ8970Lt8Bk3TfboEC3/R7gSI+26HY0j1OPMgjiI48wd2vSQMaxf71FUY7RqiLIXJDxvnjZCKLli5YxkLtf1g3KKLEmzQlIAqR15WpUDicrWGXmQrTU2oJi9r54Madcn1OT+r42URBweVbZW2pgeiGlwOjUP8jCiWSuy/GhvpxtJF9R1DU5SLcONzfHdYOK0VjyfawxwW7SGkKRGcuf9UNlCbLkNmrCr1QQ7Fc3M1j9WDbkmrNfeHoatNND9gS4N1DH53Ucv8eBOA+8lpM7DFA6CzhthG0vZGVEBf27zXBJg1MO0/J2VSOk+anXCyT94wbRyTO656D3w+lRc+kVG9icD62VBhdZMzhPQPJs3JmYa+ea/pYWEUnzIZu863XeTw2OS1grxG0rMtYjoghxU1JT/UY2cgZvKWVec8d/4dAueafctWZeVTR+6xE9WG2FqHKQdDknLw0ChKd9Jwbybh/AJj2QA2Z9ANPmVrQezOms9AkGjMrYYeMlykEFxhTvP0cz/eiqCFUsX+pOF3Bdj3hqsCCHsK93oKHvAXdxDinbUwUolaz3PltSOvWuCOKoKAeXiSJ0QUA0aDLPnujoPGkpmDEdLBuctHN18DzH1GrN3YFzEyAEDznPRVGgOUWR/fwtfD/aXZBmLRCZ69aW/qNHh2maipFEeRqVq5nwukQ9oetaEdtrLL4NYw4nfPxq5nFuSdIRddEizMmOmsXtdIu0FOJCoDOnCat+ECE95Ac4NqzrATx3Rr4SvKoWe4E+kg2w44lgTEN6BmxRQZKHA8azvlSAXIbB2LM2jp+ngrfPBwNCYnl/96tsqhNno1CKf3Y/9bke22M84xgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_017qSvC5QegJydGTWoxEssyG",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness; for f in .claude/settings.json .claude/settings.local.json ~/.claude/settings.json; do [ -f \"$f\" ] && { echo \"== $f\"; grep -v -iE \"token|key|secret\" \"$f\" | head -60; }; done",
+          "description": "Show permission rules the user added to settings"
+        }
+      }
+    ]
+  }
+}

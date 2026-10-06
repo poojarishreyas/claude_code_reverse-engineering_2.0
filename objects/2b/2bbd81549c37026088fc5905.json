@@ -1,0 +1,19 @@
+{
+  "id": "2bbd81549c37026088fc5905",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01BthgeBo3qtP8WwHuzza2oh",
+        "type": "tool_result",
+        "content": "total 43\ndrwxr-xr-x 1 shrey 197609   0 Sep 29 17:16 .\ndrwxr-xr-x 1 shrey 197609   0 Oct  6 12:11 ..\n-rw-r--r-- 1 shrey 197609  37 Sep  1 18:26 .anonymous-user-id\n-rw-r--r-- 1 shrey 197609 277 Sep  1 21:21 .credentials.yaml\ndrwxr-xr-x 1 shrey 197609   0 Sep 29 17:16 profiles\ndrwxr-xr-x 1 shrey 197609   0 Sep 11 12:24 sessions\n-rw-r--r-- 1 shrey 197609 486 Sep  2 01:50 settings.yaml\ndrwxr-xr-x 1 shrey 197609   0 Sep 29 17:18 storages\n== /c/Users/shrey/.dsh/settings.yaml\nui-onboarding:\n  welcomeNoticeVersion: 2026-08-13.1\nui-theme:\n  preference: dark\npermission:\n  defaultPreset: danger-full-access\nllm-pi-ai:\n  providers:\n    mylynx:\n      displayName: omniroute\n      apiKeyEnv: <redacted>\n      api: openai-completions\n      baseURL: http://localhost:20128/v1\n      models:\n        - id: lynx harness\n          name: harness\nllm-deepseek:\n  models: []\nagent-default-model:\n  provider: mylynx\n  model: lynx harness\nui-chat:\n  transcriptView: compact\n== /c/Users/shrey/.dsh/*.yml\nsed: can't read /c/Users/shrey/.dsh/*.yml: No such file or directory",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
