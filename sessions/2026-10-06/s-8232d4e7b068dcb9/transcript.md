@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-06T06:01:24.160Z |
 | requests | 1 |
-| tokens | in 0 · out 0 · cache read 0 · cache write 0 |
+| tokens | in 7,626 · out 911 · cache read 0 · cache write 0 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -123,4 +123,47 @@ Appearance settings
         *   [Ebooks & reports](https://github.com/resources/whitepapers)
         * 
 ... [14,688 more characters in session.jsonl]
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**Laya**
+
+- **What it does:** Laya is the local model that replaces jevgrep's hosted relevance step. It decides which code is relevant on your own machine.
+- **Setup:** You install it with `uv tool install 'laya[serve]'` and run it as a server (`laya-serve`). The default endpoint is `http://127.0.0.1:8000/v1`.
+- **Configuration:** Layagrep explicitly selects Laya's "multilingual checkpoint" with "a 4096-token request budget."
+- **License:** Laya is Apache-2.0. It is installed separately and not bundled with Layagrep.
+- **Memory:** The page only says you need "enough memory for a Laya checkpoint." A CUDA GPU is optional.
+- **Model size:** Not stated on the page.
+
+**jevgrep**
+
+- It is the MIT-licensed upstream project (dzhng/jevgrep) that Layagrep forks.
+- It made relevance decisions through a hosted service, which Layagrep swaps for local Laya.
+- **Pipeline and indexing:** The page gives no details on how jevgrep works internally.
+- **Benchmarks:** jevgrep has published cost and retrieval benchmarks, but the page gives no numbers. The fork says it "has not reproduced jevgrep's published cost or retrieval benchmarks." It adds that those upstream results "do not establish Layagrep's quality."
+
+**Agent benchmark (GPT-6 Sol, 10 SWE-bench tasks, one run each, CodeGraph off)**
+
+| | Without Layagrep | With Layagrep |
+|---|---|---|
+| Officially resolved | 7/10 | 7/10 |
+| Total agent time | 20 min 19 s | 27 min 18 s |
+| Est. API cost | $2.31 | $2.63 |
+
+- "Layagrep produced no additional solves in this run."
+- Runs with the skill took "about 34% longer" and used "about 14% more model API spend."
+- `pylint-dev__pylint-4604` was inconclusive in both arms because the grader collected no tests.
+- A skill setup failure was left out of the paired results. It cost "an additional estimated $0.12."
+- Reported costs exclude local Laya compute.
+- The authors say the results don't show how Layagrep performs on other repositories or configurations.
+
+_stop `end_turn` · 8.63s (ttft 2.45s) · in 7,626 · out 911 · cache r0/w0_
 

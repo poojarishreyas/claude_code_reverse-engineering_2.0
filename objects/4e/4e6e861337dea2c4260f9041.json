@@ -1,0 +1,30 @@
+{
+  "id": "4e6e861337dea2c4260f9041",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS7AkKEAgSGAI4AUIIdGhpbmtpbmcSDMyqLQlYER7DsdO24RoM9+usExWL2lvNJFBtIjDkEqJDpqlhHaPsw0QDnYp3fP1HEtK9vVfRmj3YXyOhxm+RpcnbQDphX/E+swxhI2UqiQmVT4meAi27HSTB8+ye+lFowgyCOgCXf0kwkEWntw75cwgVu80n/Yg7w3eepPKcDQJNcMfxZ58x3KQWBXOiTt58dH9ade1yaltcPX0X7hTapRaBlFaxfIiLCyvxO6Iq+6vYpO6Fkt1M99mpap84GrP2yDhSrLQwCwVvLvqTGaj94g6sAv1uVtEOjS2NlfVj/BDSlWjno1vk+asg6dlr9UfQk06kAb9CEx3N6cWBOoefteTxjld65uh1PASfm7wZCtwXJaPQMBvbSLODYfbF+w+NvU6pQxVfpk0Dss/GDLFodQs0xNFtfx7WanEIYjIaFvkt5n5VceWbnsuyKa7czFtbgbcs/ByoJDjDwX3mA3/0DtaTQXehiRgOL0Csr8bUaVpTNVbFOEFOtPLfRXLFDEZO+jU270IFoT9HdO+UtahQ6MWMi4kIxuBfCYK1yFNhIje924TExU1X2yBhWy78NbcHXe8FZjlXG5n3ItPzaEM7lzUma9NCbA+hi3Xbxid6w/jCM2lnrr+ZAOjIOLNxx3oREiIszjBNuu5XhvUFcP2RpjggXEUDE72dcBIw18XzG89F5ey2aw+7GGK0Xw+feAOVRvwOAEfn3Vzs3pjOTWqQNbRJFOtBIVUYl/0W27xQseqEYkjbnt2EpbcGpOKwBcwwNrRGKqd15nKg69KmyqOs9JD79nUl5D3n9kIvuRI1m2hz6iw0c0ARBxk2toLuS9GxF3yoxsBtvHHzSE7f6mH0A2L7XvzWDlgPl7tFBR8pQ/geKb/poVrGY6O4DvRzHzo/oZQWbg18WGNhDFgq8GuNXf0lwl7SH8c1bAmH0g4MP4Fws3ufMYYi2t2S+/fXzm9RA9bJ8/xWmagKyrHPQnixVqIn6v0jhZywvSc7NzhFBfCstzCDwn5PIE/uF2Dgt8gvbDqJbYl1yjz+hTLc//p67mYJevTWqpFjE5wO69eRz/o33ugImV6e+F9cuQw2ioUJevMeeRXeCZ/oBoH493Dj+tboEfXOap/ZqhAdGYp7cqk22GicD1PTmZlHT7GzC4Atqn/nLcZRZen6F/U/ZrWgZOcth3tEmpuYAKpFXOB11UPmelIc9ImxngTYrzHww/poUESRoQNhEZyUxdIEPxNaK3L+wjdKPTc6JMSDD3F3JrO7VtLSCgL45mAdCZci4NXGqUFids4Hmi433nJgIF+imvr5aROx5okc0lfFr9rXE1+Ms5khQ+uUcD4MZaO+8i46HyFwMHud2TjOo7IAoszu5J3dJtQi58WdruR3vGxq1TKf8KFUmpEdk51dQHMjWwuOHBa9rEKgdPo90G9CBb42s36VPP5+Za+Pn6yZ+WTplPUFWZwV8Dl/ZML9bTXZJSmf2od5bXYFZekg45xhCcZiL5S7PJPjFDsmnB/Fumxk3dtXgn+/8cE/6RvFr+9qHOEZkiP/U8vxsRUYKzcdJZryb5GV6SvwdQl6Z5VVuk25DsjOehoQVG/VY3YgvYUtKzEfeg7ijM85t2gX2nnQw4kx98/snXd0o5mbe0otAEeRLp8NQzTv5l/o35kYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01TQH4x7ie5fdBkfnA7QmWYn",
+        "name": "WebSearch",
+        "input": {
+          "query": "Laya code retrieval graph tool coding agent"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01JKy7RacmeGNYirS64GxQDP",
+        "name": "WebSearch",
+        "input": {
+          "query": "jev code graph tool coding agent"
+        }
+      }
+    ]
+  }
+}

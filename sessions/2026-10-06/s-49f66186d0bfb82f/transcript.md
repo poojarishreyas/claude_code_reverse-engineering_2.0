@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-06T06:01:23.567Z |
 | requests | 1 |
-| tokens | in 0 · out 0 · cache read 0 · cache write 0 |
+| tokens | in 27,261 · out 1,241 · cache read 0 · cache write 0 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -63,4 +63,54 @@ Jev is not a chatbot like ChatGPT, and it is not a coding model. It does not wri
 
 You send it data and a list of typed questions. It sends back one answer per question: a yes/no probability, one option from a list you defined, or a position on a scale you defined, each with probabilities. TypeSafe 
 ... [74,842 more characters in session.jsonl]
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+## Jev at a glance
+
+**What it is:** Jev is a decision model from TypeSafe AI, which the company calls a "System One model." It doesn't write prose or code. You send it a state (text or JSON) and a set of typed questions, and it returns probabilities. The author describes it as a smart `if` statement.
+
+**Model size:** Not disclosed. TypeSafe hasn't published a paper or its architecture. The launch post calls Jev "neither small nor an LLM" and skips public benchmarks.
+
+**Latency:** TypeSafe quotes 70–500 ms end to end, with most calls around 100 ms. That's measured from the US West Coast, so expect extra network delay elsewhere.
+
+**Pricing:**
+- Input costs $0.042 per million tokens, and output is free.
+- The same rate applies through Vercel's AI Gateway (`typesafe-ai/jev`).
+- A ~300-token support ticket costs about $0.0000126.
+
+**Hosted or local:**
+- Jev is hosted only. Its weights aren't released and there's no self-hosted version.
+- The SDKs (JavaScript and Python) and the agent skill are MIT-licensed.
+- The closest local option is Cloudflare's **Clef**. It has Apache 2.0 open weights, is built on Qwen, and accepts Jev's request format. Cloudflare tested it on a single H200.
+- Hugging Face "Open-Jev" models are community projects, not Jev itself.
+
+**Tasks:** There are three question types:
+- **Noul:** a yes/no probability.
+- **Choice:** one option from up to 255, with probabilities and confidence.
+- **Score:** a position on a 2–10 level scale.
+
+Typical uses include labeling, routing, verification, re-ranking search results, and safety checks. It handles text only. It's weak at math, counting, dates, and writing.
+
+**Context limits:**
+- State plus all questions: about 64K tokens.
+- State plus the longest single question: about 32K tokens, roughly 150K characters.
+
+**Code retrieval:** The article doesn't mention "jevgrep." The closest project is **Oko**:
+- It finds candidate snippets locally, has Jev rank them, and serves them to Codex, Claude Code, or OpenCode over MCP.
+- On a public benchmark of 345 code-retrieval tasks in six languages, it scored MRR 0.39 versus 0.24 for other published methods.
+- In its authors' own benchmark, agents finished tasks 12–38% faster.
+- A `--no-jev` flag keeps everything local.
+
+A related project, **jevsearch** (site search), reports a 278 ms median and $0.26 per 1,000 uncached searches. These are the builders' own numbers, not independent measurements.
+
+_stop `end_turn` · 12.40s (ttft 4.75s) · in 27,261 · out 1,241 · cache r0/w0_
 

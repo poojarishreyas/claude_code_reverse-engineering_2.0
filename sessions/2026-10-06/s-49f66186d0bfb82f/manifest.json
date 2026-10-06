@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "s-49f66186d0bfb82f",
+  "title": "Web page content: --- A deep dive into Jev, TypeSafe's System One model [Solo Lab: make a living from your own softwa...",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-opus-5-5",
+  "credential": "558767a26377",
+  "startedAt": "2026-10-06T06:01:23.567Z",
+  "updatedAt": "2026-10-06T06:01:35.964Z",
+  "durationMs": 12397,
+  "requests": 1,
+  "errors": 0,
+  "events": 6,
+  "usage": {
+    "input": 27261,
+    "output": 1241,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": [
+    "49f66186d0bfb82fb077012f"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "s-8232d4e7b068dcb9",
+  "title": "Web page content: --- GitHub - Intelligent-Intern/layagrep: Local code retrieval for coding agents with Laya and opti...",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-opus-5-5",
+  "credential": "558767a26377",
+  "startedAt": "2026-10-06T06:01:24.160Z",
+  "updatedAt": "2026-10-06T06:01:32.796Z",
+  "durationMs": 8636,
+  "requests": 1,
+  "errors": 0,
+  "events": 6,
+  "usage": {
+    "input": 7626,
+    "output": 911,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": [
+    "8232d4e7b068dcb99843eb1f"
+  ]
+}

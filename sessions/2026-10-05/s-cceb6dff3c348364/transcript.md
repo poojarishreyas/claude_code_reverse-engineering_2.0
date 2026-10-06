@@ -5,7 +5,7 @@
 | session | `s-cceb6dff3c348364` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
-| requests | 8 |
+| requests | 9 |
 | tokens | in 618 · out 9,102 · cache read 573,080 · cache write 116,373 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
@@ -881,4 +881,158 @@ Jev is a "System One" decision model from TypeSafe AI, not a coding model. The s
 ```
 
 _stop `tool_use` · 6.80s (ttft 3.77s) · in 2 · out 406 · cache r89,115/w3,773_
+
+---
+
+## req-0009 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 18 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01TQH4x7ie5fdBkfnA7QmWYn)_
+
+```
+Web search results for query: "Laya code retrieval graph tool coding agent"
+
+Links: [{"title":"GitHub - Intelligent-Intern/layagrep: Local code retrieval for coding agents with Laya and optional CodeGraph · GitHub","url":"https://github.com/Intelligent-Intern/layagrep"},{"title":"GraphCodeAgent: Dual Graph-Guided LLM Agent for Retrieval-Augmented Repo-Level Code Generation","url":"https://arxiv.org/html/2504.10046v2"},{"title":"RANGER -- Repository-Level Agent for Graph-Enhanced Retrieval","url":"https://arxiv.org/pdf/2509.25257"},{"title":"GraphCodeAgent: Dual Graph-Guided LLM Agent for Retrieval-Augmented Repo-Level Code Generation","url":"https://arxiv.org/pdf/2504.10046"},{"title":"GraphSkill: Documentation-Guided Hierarchical Retrieval-Augmented Coding for Complex Graph Reasoning","url":"https://arxiv.org/pdf/2603.06620"},{"title":"LogicLens: Leveraging Semantic Code Graph to explore Multi Repository large systems","url":"https://arxiv.org/pdf/2601.10773"},{"title":"[2504.10046] GraphCodeAgent: Dual Graph-Guided LLM Agent for Retrieval-Augmented Repo-Level Code Generation","url":"https://arxiv.org/abs/2504.10046"},{"title":"LARGER: Lexically Anchored Repository Graph Exploration and Retrieval","url":"https://arxiv.org/pdf/2605.16352"},{"title":"Inside the Scaffold: A Source-Code Taxonomy of Coding Agent Architectures","url":"https://arxiv.org/pdf/2604.03515"}]
+
+The closest match is **Layagrep**, an open-source GitHub project (Intelligent-Intern/layagrep) that uses Laya for local code retrieval and can optionally use CodeGraph.
+
+**Layagrep**
+- **What it is:** a local code retrieval CLI for coding agents. It forks jevgrep (MIT) and replaces its hosted relevance decisions with Laya running on your machine. You ask what the code does, and Layagrep returns relevant files, source excerpts, and line references.
+- **Requirements:** Node.js 22+, Bun to build the checkout, Python 3.10+, and enough memory for a Laya checkpoint. A CUDA GPU is optional.
+- **Setup:** Install the server with `uv tool install 'laya[serve]'`, then start it with `laya-serve`. In another terminal, build and install the CLI and run queries such as `layagrep "Where is authentication checked before a request reaches a handler?"`
+- **Endpoint and security:** The default endpoint is http://127.0.0.1:8000/v1. If port 8000 is taken, you can set LAYAGREP_LAYA_URL to another port. Only loopback HTTP endpoints are accepted. No external API key is needed.
+- **Agent integration:** `layagrep skill` installs the bundled agent skill. `jg` still works as an alias for existing scripts.
+- **Caveats:** It uses Laya's multilingual checkpoint with a 4096-token request budget. The README says the fork hasn't reproduced jevgrep's published cost or retrieval benchmarks, so those upstream numbers don't establish Layagrep's quality. The README also describes a small agent benchmark, but it's cut off in the search results: one run on each of ten SWE-bench tasks, comparing results with and without the to
+... [1,222 more characters in session.jsonl]
+```
+
+**<- tool_result** _(toolu_01JKy7RacmeGNYirS64GxQDP)_
+
+```
+Web search results for query: "jev code graph tool coding agent"
+
+Links: [{"title":"GitHub - merijjeyn/jive: A terminal coding agent that plans work as executable graphs · GitHub","url":"https://github.com/merijjeyn/jive"},{"title":"GitHub - FrancoisChastel/jev-code: Jev, TypeSafe's System One classifier, as a tool inside Claude Code, Codex, Pi, and OpenCode: typed classify, check, score, rank, and ask, plus one-command setup. · GitHub","url":"https://github.com/FrancoisChastel/jev-code"},{"title":"Jev with coding agents - TypeSafe AI","url":"https://docs.typesafe.ai/introduction/coding-agents"},{"title":"GitHub - vinilana/jev-gateway: An easy way to use jev with your coding agent for tool calling reasoning · GitHub","url":"https://github.com/vinilana/jev-gateway"},{"title":"A deep dive into Jev, TypeSafe's System One model","url":"https://flaviocopes.com/jev/"},{"title":"LocAgent: Graph-Guided LLM Agents for Code Localization","url":"https://arxiv.org/pdf/2503.09089"},{"title":"What Is Jev? Inside TypeSafe's Decision-Only AI Model and Its Developer Use Cases","url":"https://www.firecrawl.dev/blog/what-is-jev"},{"title":"Schema-Agnostic Graph Reasoning Agent for Hybrid Knowledge Graphs","url":"https://arxiv.org/pdf/2608.15834"},{"title":"GraphCodeAgent: Dual Graph-Guided LLM Agent for Retrieval-Augmented Repo-Level Code Generation","url":"https://arxiv.org/pdf/2504.10046"}]
+
+Jev is a "System One" decision model from TypeSafe AI, not a coding model. The search turned up a few new open-source projects that plug it into coding agents. The closest match to "code graph" is **Jive**.
+
+## Jive: a coding agent that plans work as graphs
+- **What it is:** Jive is a terminal coding agent that plans work as executable graphs (GitHub: merijjeyn/jive, about 10 days old).
+- **How it works:** Jive replaces "Tool Calls" with "Graph Calls", where each graph is a DAG-based workflow compromising of Tool Calls and Jev Calls. The goal is for the agent to do its hard reasoning using the power of modern LLMs, capture an execution graph filled with steps and fast intuitive decisions, and prevent it from making LLM calls for just to "follow through the plan".
+- **Claimed results:** The author's own benchmark says that on the conversation_eval task, Jive finished in 3m 26s, compared with 29m 33s for Codex and 16m 48s for Claude Code. It also used far fewer LLM calls and output tokens. No one else has tested these numbers.
+
+## Other projects that use Jev with coding agents
+- **jev-code** (FrancoisChastel/jev-code): makes Jev a tool inside Claude Code, Codex, Pi, and OpenCode. It provides five tools: jev\_classify, jev\_check, jev\_score, jev\_rank, jev\_ask. One setup command detects Claude Code, Codex, Pi, and OpenCode on your machine and wires both the skill and the tool into each.
+- **jev-gateway** (vinilana/jev-gateway): a local gateway. When your agent is about to decide which tool to call, the gateway asks Jev, TypeSafe's fast decision model, instead of leaving that c
+... [1,096 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `WebFetch` _(toolu_015aWXocVpVFte6qPKCsCeAY)_
+
+```json
+{
+  "url": "https://github.com/Intelligent-Intern/layagrep",
+  "prompt": "What is Laya (model size, what it does, license, memory needs)? What is jevgrep and how does it work (pipeline, indexing, hosted?), any benchmark numbers on cost/accuracy/latency? Agent benchmark results? Quote numbers exactly."
+}
+```
+
+**-> tool_use** `WebFetch` _(toolu_014QDuyPdFxwqfoUBhkmbK7d)_
+
+```json
+{
+  "url": "https://flaviocopes.com/jev/",
+  "prompt": "What is Jev: model size, latency, pricing, hosted or local, open weights?, what tasks (classify, rank)? Context limits? Any code retrieval use like jevgrep with numbers?"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_015aWXocVpVFte6qPKCsCeAY)_
+
+```
+**Laya**
+
+- **What it does:** Laya is the local model that replaces jevgrep's hosted relevance step. It decides which code is relevant on your own machine.
+- **Setup:** You install it with `uv tool install 'laya[serve]'` and run it as a server (`laya-serve`). The default endpoint is `http://127.0.0.1:8000/v1`.
+- **Configuration:** Layagrep explicitly selects Laya's "multilingual checkpoint" with "a 4096-token request budget."
+- **License:** Laya is Apache-2.0. It is installed separately and not bundled with Layagrep.
+- **Memory:** The page only says you need "enough memory for a Laya checkpoint." A CUDA GPU is optional.
+- **Model size:** Not stated on the page.
+
+**jevgrep**
+
+- It is the MIT-licensed upstream project (dzhng/jevgrep) that Layagrep forks.
+- It made relevance decisions through a hosted service, which Layagrep swaps for local Laya.
+- **Pipeline and indexing:** The page gives no details on how jevgrep works internally.
+- **Benchmarks:** jevgrep has published cost and retrieval benchmarks, but the page gives no numbers. The fork says it "has not reproduced jevgrep's published cost or retrieval benchmarks." It adds that those upstream results "do not establish Layagrep's quality."
+
+**Agent benchmark (GPT-6 Sol, 10 SWE-bench tasks, one run each, CodeGraph off)**
+
+| | Without Layagrep | With Layagrep |
+|---|---|---|
+| Officially resolved | 7/10 | 7/10 |
+| Total agent time | 20 min 19 s | 27 min 18 s |
+| Est. API cost | $2.31 | $2.63 |
+
+- "Layagrep produced no additional solves in this run."
+- Runs with the skill took "about 34% longer" and used "about 14% more model API spend."
+- `pylint-dev__pylint-4604` was inconclusive in both arms because the grader collected no tests.
+- A skill setup failure was left out of the paired results. It cost "an additional estimated $0.12."
+- Reported costs exclude local Laya compute.
+- The authors say the results don't show how Layagrep performs on other repositories or configurations.
+```
+
+**<- tool_result** _(toolu_014QDuyPdFxwqfoUBhkmbK7d)_
+
+```
+## Jev at a glance
+
+**What it is:** Jev is a decision model from TypeSafe AI, which the company calls a "System One model." It doesn't write prose or code. You send it a state (text or JSON) and a set of typed questions, and it returns probabilities. The author describes it as a smart `if` statement.
+
+**Model size:** Not disclosed. TypeSafe hasn't published a paper or its architecture. The launch post calls Jev "neither small nor an LLM" and skips public benchmarks.
+
+**Latency:** TypeSafe quotes 70–500 ms end to end, with most calls around 100 ms. That's measured from the US West Coast, so expect extra network delay elsewhere.
+
+**Pricing:**
+- Input costs $0.042 per million tokens, and output is free.
+- The same rate applies through Vercel's AI Gateway (`typesafe-ai/jev`).
+- A ~300-token support ticket costs about $0.0000126.
+
+**Hosted or local:**
+- Jev is hosted only. Its weights aren't released and there's no self-hosted version.
+- The SDKs (JavaScript and Python) and the agent skill are MIT-licensed.
+- The closest local option is Cloudflare's **Clef**. It has Apache 2.0 open weights, is built on Qwen, and accepts Jev's request format. Cloudflare tested it on a single H200.
+- Hugging Face "Open-Jev" models are community projects, not Jev itself.
+
+**Tasks:** There are three question types:
+- **Noul:** a yes/no probability.
+- **Choice:** one option from up to 255, with probabilities and confidence.
+- **Score:** a position on a 2–10 level scale.
+
+Typical uses include labeling, routing, verification, re-ranking search results, and safety checks. It handles text only. It's weak at math, counting, dates, and writing.
+
+**Context limits:**
+- State plus all questions: about 64K tokens.
+- State plus the longest single question: about 32K tokens, roughly 150K characters.
+
+**Code retrieval:** The article doesn't mention "jevgrep." The closest project is **Oko**:
+- It finds candidate snippets locally, has Jev rank them, and serves them to Codex, Claude Code, or OpenCode over MCP.
+- On a public benchmark of 345 code-retrieval tasks in six languages, it scored MRR 0.39 versus 0.24 for other published methods.
+- In its authors' own benchmark, agents finished tasks 12–38% faster.
+- A `--no-jev` flag keeps everything local.
+
+A related project, **jevsearch** (site search), reports a 278 ms median and $0.26 per 1,000 uncached searches. These are the builders' own numbers, not independent measurements.
+```
 
