@@ -1,0 +1,13 @@
+{
+  "id": "c6fecb85d6ff0cd724537fdf",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "Perform a web search for the query: Laya code retrieval graph tool coding agent"
+      }
+    ]
+  }
+}

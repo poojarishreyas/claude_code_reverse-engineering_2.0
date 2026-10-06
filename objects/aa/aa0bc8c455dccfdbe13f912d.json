@@ -1,0 +1,13 @@
+{
+  "id": "aa0bc8c455dccfdbe13f912d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "Perform a web search for the query: jev code graph tool coding agent"
+      }
+    ]
+  }
+}
