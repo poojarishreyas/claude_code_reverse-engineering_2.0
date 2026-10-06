@@ -1,0 +1,16 @@
+{
+  "id": "d732aae1811180838172ee43",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Yes. OmniRoute can serve qwen3-coder-next to both harnesses; a Claude Code permission check is what's blocking it.\n\n**Correction to my progress update:** I said OmniRoute was down. That's out of date. It's running now, and I tested it:\n- `POST http://localhost:20128/v1/messages` (Anthropic format, the one Claude Code uses) returned **200**, and the reply came from **`qwen3-coder-next`**.\n- dsh already uses qwen3-coder-next through OmniRoute (the `mylynx` provider). So both harnesses can run on exactly the same model.\n\n**The blocker:** when I tried a small `claude -p` test run through OmniRoute, the auto-mode safety check **denied it** (\"Create Unsafe Agents\"). It doesn't allow me to start an agent with permission checks off, pointed at a custom endpoint. You have to allow it. I won't try to get around the denial.\n\n**How to unblock (pick one):**\n1. **Run it yourself** by typing this in the prompt (`!` runs it in this session). Use your OmniRoute key, the `MYLYNX_API_KEY` in `~/.dsh/.credentials.yaml`:\n   ```\n   ! ANTHROPIC_BASE_URL=http://localhost:20128 ANTHROPIC_AUTH_TOKEN=<your key> ANTHROPIC_DEFAULT_HAIKU_MODEL=\"lynx harness\" ANTHROPIC_DEFAULT_SONNET_MODEL=\"lynx harness\" ANTHROPIC_DEFAULT_OPUS_MODEL=\"lynx harness\" CLAUDE_CODE_SUBAGENT_MODEL=\"lynx harness\" CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1 pnpm run eval:file-finding -- --repo <upstream clone> --hard --limit 6 --agent claude-code --claude-model \"lynx harness\" --out eval-cc-qwen\n   ```\n   The extra model variables make Claude Code's background and subagent calls go to qwen too, not to a real Claude model.\n2. **Add a Bash permission rule** in your settings that allows running `claude` / the eval with those variables. I can then run it myself.\n\n**Two caveats:**\n- OmniRoute added about **2,900 input tokens** to a bare \"say hi\" request. That looks like its own injected prompt. It adds the same to both harnesses, so the comparison stays fair, but the absolute token counts will be inflated.\n- I haven't yet confirmed that Claude Code's **tool calls** (Read, Grep, Edit) survive the conversion through OmniRoute. The plain text reply worked. The first allowed run will show whether tool calling works.",
+        "cache_control": {
+          "type": "ephemeral"
+        }
+      }
+    ]
+  }
+}

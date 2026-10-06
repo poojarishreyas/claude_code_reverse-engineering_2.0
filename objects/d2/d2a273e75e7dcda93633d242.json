@@ -1,0 +1,13 @@
+{
+  "id": "d2a273e75e7dcda93633d242",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The Claude Code comparison mode is built and tested; no comparison results exist yet.\n\n**Done:**\n- **OmniRoute is down.** Nothing is listening on port 20128, so I couldn't test whether it can serve Claude Code.\n- **Real Claude Code output captured.** A tiny `claude -p` run (Grep → Read → Edit on a scratch file) worked, and I built the parser from its actual output. The first thing it showed: **Claude Code sends about 38k tokens of system prompt and tools on every step**, mostly read from cache.\n- **Token counting is now fair.** Our driver's `inputTokens` counts only uncached input, so the earlier 4.37M figure for the cross-package task excluded cached tokens. The eval now also reports **prompt tokens** (uncached plus cache reads plus cache writes) for both harnesses.\n- **The eval can now run Claude Code on the same tasks:**\n  - New `scripts/eval/claude-code.ts` turns Claude Code's output into the same events our metrics read: steps, reads, edits, and tokens.\n  - New `--agent dsh|claude-code` and `--claude-model` options in `run-eval.ts`. Both agents get the identical prompt and the same scoring.\n  - Claude Code runs without your user settings, hooks, plugins or MCP servers. It does run with permission checks bypassed and no sandbox; only the throwaway worktree confines it.\n- **Checks:** all 17 eval tests pass, including new parser tests built on the real output shapes, and the eval scripts have 0 type errors.\n\n**Where it stands now:** I'm checking the existing results and the upstream clone before a live run of the new mode on one real task. The only saved result from our own harness is task `ed34a1d7fe` (cross-package): failed, 67 steps.\n\n**Blockers before any number counts:**\n1. **Same model in both harnesses.** OmniRoute needs to be running, and I still have to verify that it accepts Claude Code's request format. Otherwise both harnesses must run on a Claude model.\n2. **Your Claude quota.** Runs on your subscription use it, and hard tasks can take millions of tokens each.\n3. **More tasks.** About 15–20 for a cost comparison and about 30–40 for pass rate.\n\nNothing is committed yet."
+      }
+    ]
+  }
+}
