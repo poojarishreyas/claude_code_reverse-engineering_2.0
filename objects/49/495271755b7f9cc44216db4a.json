@@ -1,0 +1,18 @@
+{
+  "id": "495271755b7f9cc44216db4a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS9AcKEAgSGAI4AUIIdGhpbmtpbmcSDCJrt/Iaggfk2ULl5BoM7i+O+e0ldmAEbZCfIjDYovPrVUzw/rOwqKXGlnuAGwCYR/HOLShEJT9ivLldreaFTVw4b2wSh3VW7KGSZt4qkQdc0LD0qgIN8wCQ3ulk4G7WoeaWpPIAwtQdfnP5JpUZ9BczgroubL4GP3BzQ7SBhana4eFnOAzQLaYQkP7kx7U4nUzgySMPSPp7aQo0zFrdWDMwyz0Aq7Kgux8fiRcSizlwZHvgIt0yK6DrMEAu1hCp5FJ9JYgTHaAwLb4mVPFTidEZ+qh4VsQ9shrKpJbaLI4/+qRxYaG47afDIcFrkw75giXmiUUz33S0uMKqRDoY9AlMMZTASfa8WSCi5S6aWBTexu+XzA/UFOjBQEBbtaruSquyKo74DvvIaUT3mQS/daNs8bg+d7baNQpIxDQmfGR8Dw+6A914CBF7wfrDPgbstCPXJcpFy/3gAYCHlGwlkMwQKleUGPnGY856WiprD8L6DMJ4G/4X9vAd62TdUNy13wRCRWgacA6aJDio9TH529HivIabtMF9ro3PEZ19G1Aw+JWHytkSVIIMj9pPAWZYOyH2Ow0nz+rlDiYzWjx/qoBrz+G415zUHOM2DlEjqjbvtbgvCNSyQ9ssmfs3pz1upYzkp3REc7Bxt+xZcpZYxUiIuIGhRvMPYrOO6GJjTNkPET9HD/7gKDoqgw9GMYm5M3UzjSs86yYdiCVEN7Yok9fZxlm9SeMI8WOcKxiXfReo3iiynRM4h9N9TEs4IoBOXzdXVgAQT2w1KlkklNdCN89N7QppIRHqSED3MrasuwNe3K+63MQLKIl0EYWF1TJW+jB9qq8VfOWY/5LxMhHBZJmxesFbJQIAi0oEezY9mXfFOWLCFUmpanRxxu4CtIh5tD04T4Q3s3ksZzqZ+5JN90ynEeLJ319wVv7ofk4ZohgiCT57K8FsDJegggjm+0/VTIQBbPSUdliJ62El72DVye40JYf+uLY/wzJkEzc/m/j81ibDJ2pm6JOg0e6XnIO56jC1sM5SjiK8QDtWp8nJGcywUPt2ska1K6+03Xy0/bVhPThdVkx7qG6dDoepvhhx06d21IRd0GENBj3HDLOb+kglI1oFGEBqDwCed0tuSDlMK2MRv8qndG5MLRmaRh1RQ7J/MwKzJfjM0LGKYL9vXEnJsbS+Ju2jdiMEcGyid39+ciaVAN6lzvtxVyzI3hyWR2X27sFBZYaVRYn8UFhungedUyocD75zTGQdUUdhFJN9QKB63bMCqbhj4xr5kIyRnWRm2X1+KfrrWR/vfrmtf916KSztR5scvgWEIk3E2nmUGAE="
+      },
+      {
+        "type": "text",
+        "text": "I've restarted the monitor, which stops after 30 minutes. dsh is on task 3 of 10 (a59beb8ae3, a multi-file fix) and has been working on it for about 30 minutes. That's slow, but not stuck: on qwen this same task used 1.7M tokens. I'll report each result as it lands."
+      }
+    ]
+  }
+}
