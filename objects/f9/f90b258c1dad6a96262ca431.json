@@ -1,0 +1,15 @@
+{
+  "id": "f90b258c1dad6a96262ca431",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PiUx91kcZKG4v4q4AVhxaf",
+        "type": "tool_result",
+        "content": "openrouter/qwen/qwen3-coder-next -> 200 {\"id\":\"gen-1791301876-b0KnacCbq4xCGmqr9y02\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"qwen/qwen3-coder-next\",\"content\":[{\"type\":\"text\",\"text\":\"Hello! How can I\"}],\"stop_reason\":\"length\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":9,\"output_tokens\":5}}|200\nopenai fmt -> 200 {\"id\":\"gen-1791301879-31DlEw01QH3J13W9W6my\",\"object\":\"chat.completion\",\"created\":1791301879,\"model\":\"qwen/qwen3-coder-next\",\"choices\":[{\"index\":0,\"finish_reason\":\"length\",\"message\":{\"role\":\"assistant\"",
+        "is_error": false
+      }
+    ]
+  }
+}

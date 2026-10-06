@@ -1,0 +1,19 @@
+{
+  "id": "42c9b1d0004696e1311c952d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_014L3BUMosqodDwzoFLWNPCz",
+        "type": "tool_result",
+        "content": "qwen/qwen3-coder-next in $/M 0.12 out $/M 0.7999999999999999 cache read $/M 0.07 ctx 262144\r\nqwen/qwen3-coder in $/M 0.3 out $/M 1.0 cache read $/M 0.09999999999999999 ctx 262144",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
