@@ -1,0 +1,15 @@
+{
+  "id": "1be0f10face8f63b26e8fa03",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01NYLxozrgoSbUM33P9bZ54z",
+        "type": "tool_result",
+        "content": " Test Files  3 passed (3)\n      Tests  17 passed (17)\n   Start at  12:03:32\n   Duration  2.26s (transform 1.88s, setup 2.15s, import 153ms, tests 1.25s, environment 0ms)",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "e86d0034c7019c64195dbaef",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_016jpcHWyNswUBZRSxVCgdV8",
+        "name": "Monitor",
+        "input": {
+          "description": "placeholder",
+          "timeout_ms": 1000,
+          "command": "true"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
