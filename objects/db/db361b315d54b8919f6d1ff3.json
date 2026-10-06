@@ -1,0 +1,19 @@
+{
+  "id": "db361b315d54b8919f6d1ff3",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01TjYZFBALswZyfVm3sSVEXE",
+        "type": "tool_result",
+        "content": "ProcessId       : 18232\r\nParentProcessId : 22088\r\nCreationDate    : 10/7/2026 12:01:34 AM\r\nCommandLine     : node   \"C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-a59beb8ae3\\node_modules\\.bin\\\\..\\vitest\\vitest.mjs\" run",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

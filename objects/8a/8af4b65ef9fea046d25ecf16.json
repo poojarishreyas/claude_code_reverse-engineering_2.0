@@ -1,0 +1,15 @@
+{
+  "id": "8af4b65ef9fea046d25ecf16",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LRsMFYzMn5DQhqipib4aWi",
+        "type": "tool_result",
+        "content": "208 C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-cc/a59beb8ae3.events.jsonl\nthe plugin and set \\u001b[1mresolve.tsconfigPaths: true\\u001b[22m in your Vite config instead.\\u001b[39m\\n\\n RUN  v4.1.8 C:/Users/shrey/AppData/Local/Temp/dsh-eval-a59beb8ae3\\n\\n\\n Test Files  2 passed (2)\\n      Tests  49 passed (49)\\n   Start at  00:13:41\\n   Duration  7.07s (transform 603ms, setup 248ms, import 639ms, tests 6.67s, environment 0ms)\"}]}}}\n{\"type\":\"step/start\",\"data\":{\"step\":70}}\n\n\r\nProcessId Name          \r\n--------- ----          \r\n    18232 node.exe      \r\n    15364 bash.exe      \r\n     3900 bash.exe      \r\n    19032 bash.exe      \r\n    18560 powershell.exe\r\n\r\n\r\n\r\n11: *     [--install \"pnpm install --prefer-offline\"] [--keep] [--dry-run] [--hard] [--only <id,...>]\n16: * `--hard` keeps only tasks where the failing test does not lead straight to\n49:  readonly task: EvalTask\n50:  readonly tags: readonly TaskTag[]\n51:  readonly status: 'valid' | 'invalid' | 'ran' | 'error'\n52:  readonly passed: boolean\n53:  readonly metrics?: RunMetrics\n54:  readonly finalText?: string\n56:  readonly model?: string\n57:  readonly note?: string",
+        "is_error": false
+      }
+    ]
+  }
+}
