@@ -1,0 +1,15 @@
+{
+  "id": "225363b6af460e1b8b8c8f05",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HBiGY7aepSDkEBgNvogtmv",
+        "type": "tool_result",
+        "content": "eval: f04ad05f30 [cross-package, multi-file] fix(user-questions): reset projection version and use brand utility\neval: f04ad05f30 -> error — Command failed: git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-f04ad\neval: 54fa38795f [multi-file] fix(experimental): drop unknown casts from the mods bridge and its tests\neval: 54fa38795f -> error — Command failed: git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-54fa3\n1f8cdc08a1.json\n54fa38795f.json\n9633724b40.json\n980b410340.json\na59beb8ae3.json\ne21ed97f29.events.jsonl\ne21ed97f29.json\ned34a1d7fe.json\nf04ad05f30.json\nsummary.json\nsummary.md\nrmdir: failed to remove 'C:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-1f8cdc08a1': No such file or directory\nrmdir: failed to remove 'C:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-9633724b40': No such file or directory",
+        "is_error": false
+      }
+    ]
+  }
+}
