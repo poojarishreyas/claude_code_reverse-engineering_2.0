@@ -1,0 +1,15 @@
+{
+  "id": "ecf9a2bb587e969a0de05c36",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XxDJdTLCwoLkFzDF1uiBHv",
+        "type": "tool_result",
+        "content": "> @deepseek-ai/dsh-root@0.2.0-rc.1 test\n> pnpm run build:native-system && vitest run packages/client/ui-user-questions/tests/browser-plugin.client.spec.ts\n\n$ tsx native/system/scripts/build.ts --host-addon-only\n\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n\n RUN  v4.1.8 C:/Users/shrey/AppData/Local/Temp/dsh-eval-ed34a1d7fe\n\n\n Test Files  1 passed (1)\n      Tests  30 passed (30)\n   Start at  12:08:34\n   Duration  3.26s (transform 1.74s, setup 310ms, import 2.46s, tests 303ms, environment 0ms)",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "e9bfd3ec80c1707acb8c7f0e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01QsjFNyAVpqZrEVoNPX1Xqd",
+        "type": "tool_result",
+        "content": " Test Files  1 passed (1)\n      Tests  30 passed (30)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
