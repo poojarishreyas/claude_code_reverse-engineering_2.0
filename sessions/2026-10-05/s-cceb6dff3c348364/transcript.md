@@ -5,8 +5,8 @@
 | session | `s-cceb6dff3c348364` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
-| requests | 55 |
-| tokens | in 2,734 · out 44,123 · cache read 6,480,512 · cache write 187,308 |
+| requests | 57 |
+| tokens | in 3,277 · out 45,476 · cache read 6,972,430 · cache write 188,411 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -5723,5 +5723,153 @@ ed34a1d7fe.json ran false 67 {"inputTokens":4372998,"outputTokens":7083} [ 'cros
 
 ```
 Free GB: 7.1 of 15.7
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+The Claude Code comparison mode is built and tested; no comparison results exist yet.
+
+**Done:**
+- **OmniRoute is down.** Nothing is listening on port 20128, so I couldn't test whether it can serve Claude Code.
+- **Real Claude Code output captured.** A tiny `claude -p` run (Grep → Read → Edit on a scratch file) worked, and I built the parser from its actual output. The first thing it showed: **Claude Code sends about 38k tokens of system prompt and tools on every step**, mostly read from cache.
+- **Token counting is now fair.** Our driver's `inputTokens` counts only uncached input, so the earlier 4.37M figure for the cross-package task excluded cached tokens. The eval now also reports **prompt tokens** (uncached plus cache reads plus cache writes) for both harnesses.
+- **The eval can now run Claude Code on the same tasks:**
+  - New `scripts/eval/claude-code.ts` turns Claude Code's output into the same events our metrics read: steps, reads, edits, and tokens.
+  - New `--agent dsh|claude-code` and `--claude-model` options in `run-eval.ts`. Both agents get the identical prompt and the same scoring.
+  - Claude Code runs without your user settings, hooks, plugins or MCP servers. It does run with permission checks bypassed and no sandbox; only the throwaway worktree confines it.
+- **Checks:** all 17 eval tests pass, including new parser tests built on the real output shapes, and the eval scripts have 0 type errors.
+
+**Where it stands now:** I'm checking the existing results and the upstream clone before a live run of the new mode on one real task. The only saved result from our own harness is task `ed34a1d7fe` (cross-package): failed, 67 steps.
+
+**Blockers before any number counts:**
+1. **Same model in both harnesses.** OmniRoute needs to be running, and I still have to verify that it accepts Claude Code's request format. Otherwise both harnesses must run on a Claude model.
+2. **Your Claude quota.** Runs on your subscription use it, and hard tasks can take millions of tokens each.
+3. **More tasks.** About 15–20 for a cost comparison and about 30–40 for pass rate.
+
+Nothing is committed yet.
+
+_stop `end_turn` · 13.95s (ttft 13.49s) · in 539 · out 786 · cache r163,694/w0_
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01NwSjK2PQDwk4noP7Z72xr1)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1 pnpm run eval:file-finding -- --repo \"$S/upstream\" --only ed34a1d7fe --agent claude-code --claude-model haiku --out \"$S/eval-cc-haiku\" > \"$S/eval-cc-haiku.log\" 2>&1; echo \"exit=$?\"; tail -30 \"$S/eval-cc-haiku.log\"",
+  "description": "Run Claude Code (Haiku) on the cross-package eval task",
+  "run_in_background": true
+}
+```
+
+_stop `tool_use` · 16.58s (ttft 15.76s) · in 2 · out 380 · cache r163,823/w578_
+
+---
+
+## req-0056 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 104 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_016txfYyzKZtkR4vnt23Yv6y)_
+
+```
+Free GB: 7.1 of 15.7
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01NwSjK2PQDwk4noP7Z72xr1)_
+
+```
+Command running in background with ID: bc5t0yfhg. Output is being written to: C:\Users\shrey\AppData\Local\Temp\claude\C--Users-shrey-Desktop-Elemental-harness\48fd0b89-0bb7-4d72-841b-60770e4d02b7\tasks\bc5t0yfhg.output. You will be notified when it completes. To check interim output, use Read on that file path.
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+While that runs (install plus agent, probably 10–20 minutes), I'll document the new mode.
+
+**-> tool_use** `Bash` _(toolu_01QnscJmhjG8qK9MeCNTTHAg)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -nE \"^#|--hard|--home-from|--only|input tokens|Metrics\" scripts/eval/README.md",
+  "description": "Outline eval README"
+}
+```
+
+_stop `tool_use` · 10.19s (ttft 8.93s) · in 2 · out 187 · cache r164,401/w525_
+
+---
+
+## req-0057 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 106 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01NwSjK2PQDwk4noP7Z72xr1)_
+
+```
+Command running in background with ID: bc5t0yfhg. Output is being written to: C:\Users\shrey\AppData\Local\Temp\claude\C--Users-shrey-Desktop-Elemental-harness\48fd0b89-0bb7-4d72-841b-60770e4d02b7\tasks\bc5t0yfhg.output. You will be notified when it completes. To check interim output, use Read on that file path.
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+While that runs (install plus agent, probably 10–20 minutes), I'll document the new mode.
+
+**-> tool_use** `Bash` _(toolu_01QnscJmhjG8qK9MeCNTTHAg)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -nE \"^#|--hard|--home-from|--only|input tokens|Metrics\" scripts/eval/README.md",
+  "description": "Outline eval README"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01QnscJmhjG8qK9MeCNTTHAg)_
+
+```
+1:# File-finding evaluation
+5:## How a task is made
+17:## Difficulty
+28:`--hard` runs only tagged tasks, taking `cross-package`, `indirect`, and `multi-file` in turn so each kind is represented. Tags appear in the log, each `<task>.json`, and `summary.md`.
+30:## Metrics
+39:| steps, tool calls, input tokens | Cost of the run |
+44:## Running it
+47:# Prepare and validate tasks only; no model key needed.
+50:# Full run; needs DEEPSEEK_API_KEY (model via DSH_EVAL_PROVIDER / DSH_EVAL_MODEL).
+53:# Edge cases only: tasks where the failing test does not lead straight to the fix.
+54:pnpm run eval:file-finding -- --repo <path-to-repo> --hard --limit 6
+56:# A model from an existing DSH home (e.g. a custom provider), and specific tasks.
+57:DSH_EVAL_PROVIDER=<provider id> DSH_EVAL_MODEL=<model id> pnpm run eval:file-finding -- --repo <path-to-repo> --home-from ~/.dsh --only <hash>,<hash>
+62:## Limits
 ```
 

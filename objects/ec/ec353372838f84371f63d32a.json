@@ -1,0 +1,15 @@
+{
+  "id": "ec353372838f84371f63d32a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01NwSjK2PQDwk4noP7Z72xr1",
+        "type": "tool_result",
+        "content": "Command running in background with ID: bc5t0yfhg. Output is being written to: C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\tasks\\bc5t0yfhg.output. You will be notified when it completes. To check interim output, use Read on that file path.",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "eb24e4c4419e9e87a1bac9a2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016txfYyzKZtkR4vnt23Yv6y",
+        "type": "tool_result",
+        "content": "Free GB: 7.1 of 15.7",
+        "is_error": false
+      }
+    ]
+  }
+}
