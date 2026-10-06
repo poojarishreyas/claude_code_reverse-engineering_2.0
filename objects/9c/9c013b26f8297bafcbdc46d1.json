@@ -1,0 +1,15 @@
+{
+  "id": "9c013b26f8297bafcbdc46d1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019BgJN5XXJpwZnygQ8YoUqA",
+        "type": "tool_result",
+        "content": "| task | difficulty | status | passed | right file edited | first seen step | first read step | steps | prompt tokens | subject |\n|---|---|---|---|---|---|---|---|---|---|\n| ed34a1d7fe | cross-package, multi-file | ran | yes | yes | 3 | 3 | 14 | 907437 | fix: keep queued question replies read-only after reload |\nran True \r\n{'steps': 14, 'toolCalls': {'read': 5, 'grep': 1, 'edit': 4, 'bash': 3}, 'firstSeenStep': 3, 'firstReadStep': 3, 'readsBeforeCorrect': 2, 'editedFiles': ['packages/client/ui-user-questions/src/client/index.ts'], 'editedExpected': True, 'extraEdits': [], 'testEdits': None, 'usage': {'inputTokens': 114, 'outputTokens': 8924, 'cacheReadTokens': 832035, 'cacheWriteTokens': 75288}}\r\nexpected: ['packages/client/ui-tool/src/client/tool/toolviews/ask-question-row.tsx', 'packages/client/ui-user-questions/src/client/index.ts']",
+        "is_error": false
+      }
+    ]
+  }
+}
