@@ -1,0 +1,32 @@
+{
+  "id": "b547774323b8f746137e2cbe",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS9hAKEAgSGAI4AUIIdGhpbmtpbmcSDN0rE03Iww0ZPN3GihoM4tQD4xUnuFxaP5kdIjA2i/Nb4zgsJGdxzSz/QPLo8ZSSycKlZzleDnISznYG6QJfj+9ee5xQpWJe3opSMU8qkxA5sEg2o5wT7g2GIBou4gxNI02d35nrtE9yqOegtFiS/C4WQO6obneJ1cTsR7wxZq8pxdzgXYVEyc/lJ9O4rKzzRcHnHlqzrOkquixrcTUyHIFcOUX85gzqVLC3ncsgZzNI5NPqKAe3KzKTa/wunzivGfRYQw9MA2OeuB9Oh4gE//bTjXwdGkDVZeYR0sO8Xh0w/TBmYDbo6BCSw4zV9xkTXIeDyAT7QkNOcw51eVE9fbbvqNhlNKobIOKBd8BRaTP1/neC4iG8uwmsxsbUQ2EXYz3sqX4WJFnjp/QAkJmkuA96mB6qBJ0gygAKlXLOtdxjAU+ctR31JOlkLCiN+2O6Uu/ld3+O4fion8rQ/PrNpggnQhxGUPGcQXs2hH0OIHUlVecxhtFPbynS+CPc36l1m2egsWx9pw0TIgefGb9K3ZExNas6bfDNG1rDocf0RofnEM1IcmKSCeCjk7Vo13SeQCoAdc3ykRRKXWFXoLGSpHuJWnkev80s+M6D3tlGwSd9e2u+Sk3op+PGDl6q/cteQS4N4rskGTtAvkrHOtg7GuGgjcK+dW8rr7mw+wx10wVUJQtp2yXJpZrNF6ieajvIMEJ5SLb6MaFBca4R1jLg6KN0BSuz688fmb6YQYUgBZk3+rfQ07TSk9/VWUuhVDbp0Xk40QJhW+6SQlYpxDoqN6yfGyloq0tUhhhNW60qhjcwfebZrymsfmsWffv0+KMlN2sYTnI8wJO6prT+qHmW2zjLgk39mYdQdQyyrOjp/xkJ5umznj21VX3mJEBPtFnkjXy5r6Gus1GE0hDu7PoYehcSIBLJOajfSmkIgks5vU9lsH/UG9NjTPBXUC5F/JPMlXOrBMniHkatDuxtoYZSV6HTwDDjBIuMf6k/0xNek6l9kOZYBOHVnX134IjrRSIRz5HX5lISG7dhzl6j/AAiFBhgM7Uvbaa3q/NLxg5kYbA2UdCmkWnoQw0mDkBnku6CiSG3qvH09ZgfXiUTcJNI52juOpW1j82A8UujCtNzRtMbwZQMEhpAzenYl6vz+lFamxsa8jcREfCm1QaIhKDjHUxSp7k+tTvW8ojS/LReEx65dQ+c/p0LNiVGn+A+qmQyMFPcGhA1rfvx7zCzH1p8xYlAWsxu8HhxEdCJvTpSOg5DOmctCWD+uV86h5tGaZ5O3JCxbh4O7kjPUNJq/cxYGSl6MDSY3/ib0Vig8oks9E0JrhfzgpZx/Cm7FxUdxXOk+paQa8AoqnvIvCgKbshtkfA07Jhd1SUAEg89RWm6axkxV37fEFNnKGQsYnl/OPft7KEZhw7D/kk4wMGZTbD2Mwu97CMQUOI8BRfmLpMRQmf5gNdR39Aef6URGCdkohD+OhBkPYmzeZZMPwq6pb7z6SibbzImbK87+Dis2qgfvB7rq+vbKPnMm3ZbVCzFhDrVH76pRNgFzOkN4mUCmhglKf3enV859KXNYJR/SKIzSAuKu4T8CNI12AViaHiFxU/we+S1ketfgaBcOR39yo3U9SSa0Gik+yf2rhD/8Gj9APeA8YYHqlCtPKy06E262EpAtxtgZQeWboDhD1ZfoP1Er6YtVpz3GiFZSzKxdb8T5ihhIJHgwCZd8FvTyGvvLxWN2ZjPT+y6alx7PNofZS1NnwAeGi3lXirJPxYyVKPI+dNjBQ7o7C+KKPAO757PMEUn8tAIsAquANyG/bd3OLnRNF6wd7IH7fVXcdqLLzOA4/eCevDq/Csa4x893C5ht6ODk2keAUVFTB5AVH9peANKszfVmiO53BmYn98qw8TQ/eQEZKTyCzM3wiKkP1QRgBlkvoKMjD/Nkzmq03KI77LKw+DpXzCrH5McNxiCxJ75yagh6uL46TkRrZHrEXeuSXcQkRYqmL26lOq2cZzlGEVqbq16DBLLvwhaZJxhSRTtWi6WXyXpeD4DakhfEyCTDxoVZS/nbvwC1CcT4gs4A8W+h4f5JurvXmsl/NP7pbPhqMy1CDElC12WATu5iolasm10oenqtUyoSb0YWccj8qipjHrIQIhbXwAQ3jebkKTDfhJBWIaxryP4m+8aFXCDrtU70xIIG+erfFD6oGgi3GatjXPANYo+uVtNqEF7B/BniWdot4e8KtJ5t3gdGtzi891u7nA+coVsyk2vnp/U16tymwqmoVWbbCEnLkhtiVkOCkBQcECo8lsRGT4I0b3HB5TZGoPvF5JpwqvAWskjwT+z2NHsjEFiSMX1QDXcuAxhf8Uk2ql4+d1amaoFKeHtxelq6BvwyEi4ZqQuIeMVnQy7yojyjp8PL2lLMQ/l/Suju4xvSObO9q6ZNREr8xFJCl0xtTqd4gxIIolBo/2sXI/PjzAtoJwOKnhT3mtpAo6BRevgibEnkgLaGH0Jy57OX3XMo6yMWaQNrH0GqjO7bPiFOuK+hIxKGdoEzFk0cLTaShG3wa6aGwDyieNfqGPzrcfq5Hw01TSNHj+gSxRZmxQTRUTaMODhwIQDbRYjJUq6uuO6gTOaL64GtPe5n/vS+s/bUQZfCkUjo3IBRP0YdYoUE/DG9er70fMbuEj/r3u00Ttx7LrrgTd0XOxidpVopk6Crh2iRyzq/WckShaUeNqzUsWovVZzuu09THTixjlygoEYZOYkZfCO3dAiv51o25apkpyR0Te1vHxgZ0O5dXGxHHvmGhkifJtMdDBoDBYZwSpDCEtqFTkjod1UtHK5EAEyA91VF2tHYyB6OPpz6mgDOVyo3u4K3uAUIHJXPHfcdMYJ4PwYAQ=="
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS4QcKEQgSGAI4AUIJbmFycmF0aW9uEgzM7u/kiNDCKIMKl1caDP5Bb7NmAKaoxlof8yIwoZlRBRDjKCz8WgSbu/z7V2tMs/NDGqwYC5ALQ3SJwCUYXvKTbgQE1LOgX75Zjvv1Kv0G4EKrNteR9WzwJt0MuEBaY07/GKH67E2Gim7ckOOt61z2DLJ8XGoEhi4X1Mgmgqt2hzcKNqPbQNVIQ8K7mj5C+xno6a5D8aQvlp0gYaqOhC5UAPEIDkBVCwg7x32MVWd5ao3F+1jDQnKrPQF2n6K6GMUrJjz3gxY+uau601C8gYrrTIlC7MEaL1Ta2qxJltWDF/1lheOwgsZaNzi6wn4eXtuQp18WBOY5DMDEy+82EfuLJszq3qumcOjGFckWwq1b/MhVfpd652fK0e3tjHZbslEhKd8p/PA2XjucsLzlyn47z5wK2AoS9UKNF5mhgcyX1tuuAiUdgjFa9W7eGG6WsBQ7dSnSzXhbtvy6uXRrVEv5/lmp68XzHbfEcF4Aez6DwsN9t9Mgc1V1GYtSrEq4SpSlWfM1p6OLIlU40ARF5x1pA4ZcYU98Ttx0RfWx3ckSi2KWHoBDCz+qmlXfJUUvxjvrWN/zHSGP5Zdw3S5HdCj7ZU+4L2qzNaUvYaIwiYTt3veekGnTLaXtj9+vwlONdtW+dAgC86ImSh4S26hxnvEQ5lHG5cQN2KXGYJN8USxvueP6sfRCgflSjWmcFFwppxackDOByDZs49GAXppdJDHaCk/t3WWB1bosZjHu8YKwIokfA3SqRFYg8p15t2/eb20EHaVfdz01Lfc/POpl+X8B3C71xeNdbKIzZZLthXJqEg7lcbbceuXhxhiU+5dcRSXfSz4R7/fTMXU0BxbXLzjXLP1geSV/qSAQ9UIPE6oQMooTUDUoyyYz3oIiH1HSMkYrSKiAFdiSwxoVXtY/064rucj+OZTATfI75kHgp2amI4Lhv89fPLTLl2J3qUvujYSUHeD9g63G63AYChnut2ixQ9Q5ejXRx/C9PDydvk7uPf0c6XMmi3vYPOgGfFcmcE39cPRhaIwVq9YSUUI1F8oX7FsSKesv0zX/xUTh5N52vWkiVWmRS9XT2rwNQ8cDi53Iyo9Vx5kZ1DROw778+ITqGicHwedxksa/SSmtfVlRIgvCTLlpgTUOk4IakR/4sHtnJAAQPrWGmL4EQFnAp0pV9wSWbWLsZktNgRD+x7LGk5I5Im/pJzJvdHrla1heA2EQzlEx5glfhZmAfuCvjM51hWBs9olz1+XcTwwuH3RzQiOchlF2D0sJD4/XbnaVpkL62Qb8+XhozmeQE5kYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Jj1FLfNunS8S22FrBAHdb1",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness; cat scripts/eval/eval.cordis.yml; grep -n \"DSH_EVAL\" scripts/eval/*.ts | head",
+          "description": "Check how the dsh eval selects its model"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

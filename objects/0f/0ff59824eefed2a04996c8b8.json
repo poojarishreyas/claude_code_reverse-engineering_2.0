@@ -1,0 +1,17 @@
+{
+  "id": "0ff59824eefed2a04996c8b8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The first try reached OmniRoute but was refused with a 429, so it isn't a pipeline bug. OmniRoute answers normally again now, so I've started a retry and will report when it finishes.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
