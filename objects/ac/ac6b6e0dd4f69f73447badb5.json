@@ -1,0 +1,23 @@
+{
+  "id": "ac6b6e0dd4f69f73447badb5",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSpggKEAgSGAI4AUIIdGhpbmtpbmcSDBUGgVELio48Zx5DdBoM81SqdOCv/L9wEKsoIjB2rzVe1YX06sMFDfbUqhVFOD31ZinFH/G67SRdOAUsBXhR/pBaSqq0dNIqLiQlut8qwwdDN8I6NyaN0fBJ1jdW/5NnCSwLKrU+sLSQAPZVISsYDKd6DEGYey9SovGg8FtIQW51MdO18H/y3DLuEr7sF8PNu2DIVw/fJd2LkMvwNT8Fl3wJYWjgHQInDsS4a+wKDj2inzn4QLsDNmopD24pUF9SsKfdtk6gFATmPmDOm4uB3QlcnNvO0zA18RdThF+v7EzSZi3RFfqRX27FVtNEnG2BKd5iQItKf/18oJcEpYN48UILSUxHg9xqr7otZu9bo0UhIds+CkHBVGIMJ2TupUjv+9gI6fjvGbRwAOZEwPRFMMm+N/VD7b4kcua4qUKXAfgB5CNJoaQsIvTt6zUhnu4yAqxgYF06r7uqIE/fHhO6E7bZp0zKoo298hnCXx3WDhlkUly/P/nt/R82G39WkSykbqBMtMEnLF9b+rhF70rrLCY41yoLy3jICdNBh5HlHgmFLhFiI0QQOdL3uaWste/aArWVfkn4ww+ayOjohiQTpKHzmbrv1AfwNnLtfnn2TyR+PO5Ol8MRiJDrQ5TDsZznGNQvLNYinX/ZTXZ/mjxN5amiEMVEqFxjybMYhKG0aI+hJkCWVJnNXhWOgJruCG3ZA4goTEB7DhCRvnPkhEm4+fpdwNp3bE+NlmzpYk5vMU1irzrQag2f2amNhIU4X7x4O8o3rOr+znT0hDGhfDiT9TSuPSaA/Qu1Tr1NHpiDaB2mQcG94snE7griwHJaOd+tyWOCYZC4J7WUgYwqp6p5Ww2sIDEWcCcJZaENn5vvCRKtKtq9NwI64At0G8d2TAnPDjLt/R0YcnhpSDxtS/0qLqu8bCLdhme5DEMuvXM24ZmleX6RecZWwlGm53zN504V4YuguCl1XU8XlO5hiUazitsDvtkmLh10t8BlehkB1TJVddninoCCNIEz2gadTCtjuhD9HXKXznqL55E+cfP94jYulfUF8a5viXPc5/shbK6d77HyipOUor5qasSuqvb6r+sHWJV06svTsNj98Yiuuuo22DRW3mAw0Zwxcy0B2uRrVpnVnzXyoQVSefpmjyb7N9vC3DArj/Gw2+WurqOcaOKiNag1Vs7Ptk+3cUxP9l1afIHtC3Lv3E050li23mXwZdKYzuVn6CPDsdH+2HDFXMJFSmCV9ZQR+er+7ooOG7gqS+nES0X9YzJKwLG8mEL1N9Tf9Xa5llS14rqqWtUaeFN9xRbXPFoMVMA4rLnv1uZpkBRm1B67GcaRIZXa8WlN9m5tlXjeqc1Rkm9iGqPnOZdhJM9hjww5hWKOgXuSmS4GVikYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01DmitU9Rw4vjCCVy79EneqY",
+        "name": "Bash",
+        "input": {
+          "command": "python -c \"\nimport json;r=json.load(open(r'C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/cmp-dsh/ed34a1d7fe.json',encoding='utf8'));m=r.get('metrics',{})\nprint({k:m.get(k) for k in ['steps','toolCalls','firstSeenStep','firstReadStep','editedFiles','usage']})\"",
+          "description": "Inspect how far dsh got before the 400 error"
+        }
+      }
+    ]
+  }
+}

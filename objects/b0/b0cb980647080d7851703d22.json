@@ -1,0 +1,15 @@
+{
+  "id": "b0cb980647080d7851703d22",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DmitU9Rw4vjCCVy79EneqY",
+        "type": "tool_result",
+        "content": "{'steps': 62, 'toolCalls': {'read': 30, 'glob': 1, 'grep': 26, 'todo_write': 2, 'edit': 1, 'job_list': 1}, 'firstSeenStep': 3, 'firstReadStep': 4, 'editedFiles': ['packages/client/ui-user-questions/src/client/index.ts'], 'usage': {'inputTokens': 3440793, 'outputTokens': 5101}}",
+        "is_error": false
+      }
+    ]
+  }
+}

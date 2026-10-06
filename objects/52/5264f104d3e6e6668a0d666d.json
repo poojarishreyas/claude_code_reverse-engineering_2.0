@@ -1,0 +1,22 @@
+{
+  "id": "5264f104d3e6e6668a0d666d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSpAgKEAgSGAI4AUIIdGhpbmtpbmcSDFK8ESSk72Dr8AFNahoM8hMyF/Ht3WnmT8x5IjAaqT/TcDvdaamCiqpcd0sSOnra4PGJ66sWc1nzUV7doSNM8xpCj0rn2TulBHt2PucqwQfHfjRvdy729AXMwPyVAayrajEiAcRbaC3tCRQkoss3N8g+gw1n3IRQZLaKg8jDhrLMn+7IhvgbnSoR40ltbZ1u+nrs5osL3yQUugD/Om/rQ/mQYYHfh0wXyCwn/gxnfOjUN7Yk9jh4E+BMUDNXGjCJ/wG1HMpcP6ADqyckl+rodQvvFhGWhtCGHfbJ3l8wvyfgL8pg3Yk1K0CMJQVZCZyxd9GINITtkcW8rpg1ExadyH+7sNrsHEuemKJP0YKRJvqIByKtPFIPvpRAT4X3UDrgwu/KJW4w99ArBrld7u8LOFWVg2lxg6MDJVxRMjNZGFvC/SjqVQ7boUQ0Tb4sWg0NmJI3FIjiw+WzFWFqdtw3qrbiDQw2hBMLB9o8yVuV64OLjPtthpwMj7qQBgsakfNqoddl/jlYPlCoV34nTHSkiEnnTCI/qJniC/dVjqkblEn1v/Hk6b8sTud34fXr4unIQTMVaWRUH6SLTmso0mc9FPlRmfTjBUTONwwzpa0sOceQyMAIiuJCwVOG2QDDFQSnYWKwJmNGhCTVCreurpD0vGYf6DjcEO9RvuUw+ALjUiWhpPFWRPkqEm+rbI9HLMtFSUQqa/s4vnQXanhzkrkrm5QAnZ6NO283JBu/OkGrxoCSELa97j6WbriEjITM8+rIRvvSOtOohxgTYXI2NOxPmCyhwF7MbaQsQkfLLETK0KhSVeMP+DdmAdN+VQrftF23HUVWfzCt+cfmEuBYtmLzMfzYGk+EnyjEXCLBRFBPQuB3m4xnxfLlHOnBn/0AwSRC2LHpem0Qm9/z8bLqN7YJNu9B2+MQDyEfmwMQ4uJt1ZRCG2Hfj3ZCLPNVkKpjqzPqYMkw9pcKOAxAW4GKHzAffrA2nLYKmGVqPT5mjSdrpmok2FkEooH/bayohWdRfywTlcwBDaDzEQ/s7jnEYWTJuBZjp4ddq6HG89PDCVs/1DjBKghQS5GCg0Iyl+0amzPfIpRZ2lTqypbavFy8uYvgoS73+Gz45Jy4ENNqGI50vW+Od0CxFWz5c4Fi6+fHR0KqjR85KGHteA1F7qGtRuQBB+daT+uaAzv6Qvk14ERKfAT8GoiYHj221fzsNV++9wruQgi+inNVnyv0h3WCAH/BrH+qaaz6RhYihB80rGYgGKBtERjAC8gnM71q0THkRRziI5PzIc/zkXk4koBOmkKZLuDdVSGZdHF7oSXuEXlM3KW5/KRXMXePqVB4OmN/Ym55NWIseZF0pVNVfNxD2v/PUO6mgSHEjk3DVONyo1rAuvqYGAE="
+      },
+      {
+        "type": "text",
+        "text": "dsh hit an error on task 7 (ed34a1d7fe, the task Claude Code passed). After 62 steps the provider rejected one of its requests with a 400 (\"Improperly formed request\"). It had found the right file early (seen at step 3, read at step 4) but made only 1 edit. Its tool calls were 26 grep and 30 read, against 44 total steps for Claude Code on the same model. I'll check after the run whether the 400 comes from context size or from a malformed request built by dsh. Either way it's a real dsh weakness, but it's scored as \"error\" rather than as a failure. 3 tasks are left.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
