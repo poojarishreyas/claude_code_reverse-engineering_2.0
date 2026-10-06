@@ -1,0 +1,27 @@
+{
+  "id": "2d9da96246c7e80ec90f7e90",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS8wcKEAgSGAI4AUIIdGhpbmtpbmcSDN/xO+J8RAMqFjo2ABoM9DlZWDNGpgbm5DjdIjB94h4+oVj9gBX8JJtdYZD43CfQyrko2yIbmjv+L5ShjibUDmCdknZ+n6HUtDecNSsqkAccO0uQ7sSCOB9THpjsV/CvrHqVDXBo0BEdZGUAjkOPTnkiuM/iEEOjy1Lrj7VqBaBkWB6hVFH+M+ePHEGoZpA5rWLalXPfF6ENS/FOyFEmIbRGcKWkLmyVrpKLtsHQbPKNbn4p3UQQdwou1R297sF2fomdpHeeg3JEZQC90Rt3DkBQwzVWGYEC2nSnxAyQl9QeVn+z6l78DqZ2zbVacHDdJ7A2eHwDvrIvotaVBBjvdGZDHmb75gYiEzo9OS0nebzPmUZ3o9ci5u7NbFmqOS1PJEmOWKvzaR9QDU9C0K617TzdVaU6RLQbmyhBfwLjGdwiLdEiLLJmx0gnuxOVY4qf39GYFrwp2Yn45p3rn+B85i2A+EaGhyFWqSKXTk0/FI59rKXBeWGMwmH5KQ7VT5dBGn3eP8+AkeU1ww21w7YP+GGLo9JTiXMmuzIFFS1XZOnmMs3PdF/q8WzG3/kBZDQko6PQe6i/y0S/1YQ+d2dLhdUB9he+W5mx2F2nrNA1JDCpbE23tnNhpK7WtsVshYvr7y2wTp3zQ6Hw0O2VL7aDmM6b9FOjkpG6gVT60/RP8MjVNcpJtGR4J789UFavdMCAjue5mDxBbLm1sEJ/0NBgmVFxkVC0T6LYPQnfo2MU68g68qKeEG8sjFN4BVKFacEMFJTe65n02FSPJLxioyShPwklCQed3qXDauwBAR9YfNc4An3wuor3etXBmXt4n6drYz28aDpSq8IiMcQXRjTNmfRSCkcW1IVi53jPoASTBzwINLy4zIEncvXlQ5uR/mnxNUadUgvQmBhaRPtHG+e5dvPj6FAyzGVL0Phb030++vOOElWry3yA6LdsPW/TkfGwL5CcB1f7i7dVDLSNGNfK5qlnZOojSYTrSOjDbHDDdxTBTTj9eM6vCLnUqOwKFmBRbt2idL+vuEuYqXNdW6JA8dP3XQgUwWhTcjS3EoKsSjbFgZIT+bWTJ7JQHAodAgIrUYG3S/Mvc78Ni1Hek0qSa2bmZZHT+gSpsPeQdQEgPLvaVMV1iSMCbXlYGnQ8aro1E/irWQk8Sr0uqiQyiDYx/F7tfvhBB2yWhWUKd1GFo/6QJnDUCLqgAEzFqofRTK1BxgeJ/cAoWosJjAgOb3ofMODvKXEPIgpqMSxW5xh2IrKHujHvybEnd1Fx+kUMqUQQ1es+02it3GowGMZ7J5v/4kSO+RM6rNYy32BWcWQpRa0YAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_011Dj13AJC4dnnhd2dRhaCE1",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness; grep -n \"refs\" packages/credentials/credentials-local/src/index.ts | head -20; grep -n \"^import\\|yaml\" scripts/eval/run-eval.ts | head -30; grep -n \"yaml\" package.json",
+          "description": "Check credential refs format and eval imports"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

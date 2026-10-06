@@ -1,0 +1,19 @@
+{
+  "id": "5378248762631f674bb360ae",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011Dj13AJC4dnnhd2dRhaCE1",
+        "type": "tool_result",
+        "content": "105: * wait is sized by the longest holder it can meet, and refs and records share\n172:  refs: Map<string, string>\n207:  if (keys.length === 0) return { refs: new Map(), records: new Map() }\n211:      + ` and nest the existing ${keys.length} ${keys.length === 1 ? 'entry' : 'entries'} under \\`refs:\\`.`\n222:    if (key !== 'version' && key !== 'refs' && key !== 'records') {\n226:  return { refs: parseRefs(fields['refs'], filename), records: parseRecords(fields['records'], filename) }\n234: * nests the original lines verbatim under `refs:` at two spaces' indent, so\n249:    // the `refs:` block; no shipped writer ever emitted one here.\n265:  return `version: ${DOCUMENT_VERSION}\\nrefs:\\n${body}${text.endsWith('\\n') ? '' : '\\n'}`\n268:/** Admit a `refs` section: POSIX-identifier keys over non-empty string values. */\n271:  for (const [key, value] of Object.entries(asSection(section, 'refs', filename))) {\n445:  if (value === undefined) deleteSectionEntry(document, 'refs', ref)\n446:  else document.setIn(['refs', ref], value)\n476:function deleteSectionEntry(document: Document, section: 'refs' | 'records', key: string): void {\n822:    this.values = document.refs\n899:      ? { refs: new Map<string, string>(), records: new Map<string, CredentialRecord>() }\n901:    const changedRefs = this.changedRefs(this.values, next.refs)\n904:    this.values = next.refs\n22:import { spawn } from 'node:child_process'\n23:import { copyFile, mkdir, rm, writeFile } from 'node:fs/promises'\n24:import { tmpdir } from 'node:os'\n25:import { join, resolve } from 'node:path'\n26:import { fileURLToPath } from 'node:url'\n27:import { parseArgs } from 'node:util'\n28:import { resolveExampleLaunch } from '@deepseek-ai/dsh-loader-smoke'\n29:import { claudeCodeArgs, parseClaudeCodeOutput } from './claude-code.ts'\n30:import { computeMetrics, promptTokens, summarize } from './metrics.ts'\n31:import type { EvalEvent, EvalUsage, RunMetrics } from './metrics.ts'\n32:import { difficultyTags, mineTasks, prepareWorkspace, readTestSources, removeWorkspace, taskPrompt } from './tasks.ts'\n33:import type { EvalTask, TaskTag } from './tasks.ts'\n132:const HOME_FILES = ['settings.yaml', '.credentials.yaml']\n147:    \"@types/js-yaml\": \"^4.0.9\",\n158:    \"js-yaml\": \"^4.2.0\",",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "4c6cd448f1a7a89b592b2206",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UXBE5T4zMaHAVVryS2BCbe",
+        "type": "tool_result",
+        "content": "version: <redacted>\nrecords:\n  client-connection/browser-session:\n    kind: <redacted>\n    payload:\n      version: <redacted>\n      secret: <redacted>\nrefs:\n  DEEPSEEK_API_KEY: <redacted>\n  MYLYNX_API_KEY: <redacted>\n11:      apiKeyEnv: (present)\n132:const HOME_FILES = ['settings.yaml', '.credentials.yaml']\n193:    for (const file of HOME_FILES) {\npackages/credentials/credentials-local/lib/types/index.d.ts\npackages/credentials/credentials-local/src/index.ts",
+        "is_error": false
+      }
+    ]
+  }
+}
