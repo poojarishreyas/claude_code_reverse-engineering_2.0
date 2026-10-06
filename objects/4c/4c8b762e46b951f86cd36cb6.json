@@ -1,0 +1,28 @@
+{
+  "id": "4c8b762e46b951f86cd36cb6",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSvQYKEAgSGAI4AUIIdGhpbmtpbmcSDFqKfsS+VAT4IKK5HxoMA+uGNTba1NnuP4DMIjDqX1oiZXrR2HbZIlt6WXjXP1SxRbzwXx1T1BuIuH1Lh0C6vS+4gGXPYKUu7hb6Qgoq2gVjCRBeFrJJVjdTAFbyejqzJudY5lAa65Ym8699nQ/60mPss6ufgSRcsBZfKtYO2L4Bo2c6n027GruXGr2PaH4M1aJxF3vi61dyym1th6ERxbJPag14NxhHCauxS9bnQbci+0PLwhKBeNWaXM2SFUTz8tqTUNK3j7Dd0S7X+8Q0wLK9z7ydW+NKnvgIIeId5SHat0mvVee7grx99m7HKYJ83OghF6k99IDs29gG2u8OGUx/0oHvQW0++is07287SnwmxJuh5OTLaLUxJL2xMehZlxXH+Y2MlUceBQ80fSzUrvX46vvC/rSpJtAgiELmhDU//VMzkv/V/gabrgU/gHBSMw+UmRoulG13+e/6WMndsc+Y869nE6YuZ8ysX49zUhlBoTC9EU6xkq1hQABP/m9hDexNJLXBoMO+LqikHpAECkOBQNpD9hX8wgZZIAkhHXv26eWLQfRLBPYI3M4NXywRmwgabGRG5REw9mCAE+nxO2hjSoqEo66JcPnmEQ5KtqKgMEm+Qn7T/kGYky/SdMxPjuGA5HHMg81mImLKjB97vkFcaYfmWuqJ8RsHbEAARUNOpOVNfEKxRmXHEb2DGNUnjDrDnRbUHs/A0FZ+0YJ9AywavUw1G0nQ/Lh5z/tBXvvMMus2zRP/PZd0hR+9PLGD/aYGwjhL/Ke2qzn6ETCZkcc1R8XYV791EfBCp7IzY8dfbCmlIVUQr4SgYcAl2TfDClDfP2WPVd9VTcTRhk82QnbhRliAkAVuwh1C20ez1TLit7TsA4Cz3pPLMWNhQkceDL1pL7qWjyfEpICkxj5LYesL9lz0qNxsoZAnxkhBv7Kg8GXqIDSUz321ru4XdhRco3RHT0SfXTTNeurMfE/pkJCY4LPIDLIUI8O0nFxdQNaTURSWeHFXAQbjf9sc4VPgDX6dw7MnO/+hjpVQFQ0VgbQmajpvaU37C5F0l84mSUPXI/r3hI7ABGwgGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01CLQBr2e8TZXu1CdeCjkep5",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && printf '{\"extends\":\"./tsconfig.json\",\"compilerOptions\":{\"noEmit\":true,\"composite\":false,\"incremental\":false},\"include\":[\"scripts/eval/*.ts\"]}' > tsconfig.evalcheck.json; npx tsc -p tsconfig.evalcheck.json 2>&1 | grep -E \"^scripts/eval\" | head -20; echo \"eval errors: $(npx tsc -p tsconfig.evalcheck.json 2>&1 | grep -cE '^scripts/eval')\"; rm tsconfig.evalcheck.json",
+          "description": "Show type errors only in eval scripts",
+          "timeout": 400000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
