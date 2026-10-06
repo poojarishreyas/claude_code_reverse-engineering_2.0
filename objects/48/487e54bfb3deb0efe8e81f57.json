@@ -1,0 +1,21 @@
+{
+  "id": "487e54bfb3deb0efe8e81f57",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "<command-name>/memory</command-name>\n            <command-message>memory</command-message>\n            <command-args></command-args>\n"
+      },
+      {
+        "type": "text",
+        "text": "<local-command-stdout>Cancelled memory editing</local-command-stdout>\n"
+      },
+      {
+        "type": "text",
+        "text": "what about using laya or jev?"
+      }
+    ]
+  }
+}

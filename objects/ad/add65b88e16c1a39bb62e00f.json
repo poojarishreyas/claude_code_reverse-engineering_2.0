@@ -1,0 +1,14 @@
+{
+  "id": "add65b88e16c1a39bb62e00f",
+  "kind": "system",
+  "value": [
+    {
+      "type": "text",
+      "text": "x-anthropic-billing-header: cc_version=2.1.282.a22; cc_entrypoint=cli;"
+    },
+    {
+      "type": "text",
+      "text": "You are Claude Code, Anthropic's official CLI for Claude."
+    }
+  ]
+}
