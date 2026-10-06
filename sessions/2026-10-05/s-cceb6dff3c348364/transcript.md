@@ -5,8 +5,8 @@
 | session | `s-cceb6dff3c348364` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
-| requests | 9 |
-| tokens | in 618 · out 9,102 · cache read 573,080 · cache write 116,373 |
+| requests | 10 |
+| tokens | in 1,126 · out 11,087 · cache read 761,004 · cache write 120,484 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -1035,4 +1035,233 @@ Typical uses include labeling, routing, verification, re-ranking search results,
 
 A related project, **jevsearch** (site search), reports a 278 ms median and $0.26 per 1,000 uncached searches. These are the builders' own numbers, not independent measurements.
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Neither is a code graph. Both are **relevance models**: you give them a question and candidate code snippets, and they score which snippets matter. In our strategy they would fill one slot: the **ranking / "meaning"** layer (Decision 4), the slot where I said "LLM reranker only if needed."
+
+## What they are
+
+| | **Jev** (TypeSafe AI) | **Laya** (via Layagrep) |
+|---|---|---|
+| Type | Hosted "decision model": classify, rank, score; it doesn't write code | Local relevance model; Layagrep is a fork of jevgrep that swaps Jev for Laya |
+| Runs where | TypeSafe's servers only, no open weights | Your machine; a GPU is optional |
+| Speed | 70–500 ms per call, about 100 ms typical (their numbers) | Depends on your hardware; its model size isn't published |
+| Cost | $0.042 per million input tokens: very cheap | Free in money, costs RAM and CPU |
+| Privacy | Your code goes to an outside service | Code stays local |
+| License | Closed model, MIT SDKs | Apache-2.0 |
+
+## The honest evidence
+- **Layagrep's own test (10 SWE-bench tasks):** 7/10 solved with it and 7/10 without, with **no extra solves**. Runs took **about 34% longer** and cost **about 14% more**. The authors say it's a small test.
+- **Oko** (local search plus Jev ranking): its authors report MRR 0.39 versus 0.24 and agents finishing 12–38% faster. These are self-reported numbers, not independent.
+- The pattern matches the papers: **a smarter ranker helps on vague questions ("where is auth checked?") but not much when there is strong evidence** like a failing test.
+
+## The trade-offs for us
+
+**For:**
+- Jev is fast and almost free per call. It would cover vague tasks with no test or stack trace, which is our weakest case.
+- Both are drop-in rerankers; we wouldn't train anything (unlike SweRank).
+
+**Against:**
+- **Jev:** it's an external dependency on a closed model; your code leaves your machine; it needs a network connection and another API key. If TypeSafe changes or shuts it down, the feature breaks.
+- **Laya:** RAM. You have 16 GB that is already tight; we had eval runs killed under memory pressure. Another local model server makes that worse.
+- **Neither fixes the failures we actually saw:** editing the test, the missed dependent file, and claiming done untested. Those need runtime, graph and history evidence plus the closed loop, not better ranking.
+
+## Recommendation
+**Don't make either one core. Make ranking a pluggable slot:**
+
+```
+candidates (runtime + graph + history + notes)
+        → RRF fusion (default, free, local)
+        → [optional reranker: none | Jev | Laya | Oko]   ← config, off by default
+```
+
+- The default stays at **zero LLM calls and zero network**, which is our cost and speed advantage.
+- Turn the slot on only when the evidence is weak, such as a vague request with no failing test. The gate decides.
+- **Prove it with our eval:** run with and without the reranker on vague tasks. Keep it only if it adds solves, which Layagrep's test did not show.
+- If we try one, **try Jev first**: no RAM cost, about 100 ms, and pennies. Use Laya only if keeping code local is a must.
+
+This also answers one of my earlier three questions. If you agree, "any LLM in retrieval?" becomes **"no by default, optional reranker for vague tasks."** Still open: TypeScript-only first, and whether to benchmark against Claude Code.
+
+Sources:
+- [Layagrep (GitHub)](https://github.com/Intelligent-Intern/layagrep)
+- [A deep dive into Jev (flaviocopes.com)](https://flaviocopes.com/jev/)
+- [Jev with coding agents (TypeSafe docs)](https://docs.typesafe.ai/introduction/coding-agents)
+- [What Is Jev? (Firecrawl)](https://www.firecrawl.dev/blog/what-is-jev)
+- [jev-code (GitHub)](https://github.com/FrancoisChastel/jev-code)
+- [jev-gateway (GitHub)](https://github.com/vinilana/jev-gateway)
+- [Jive (GitHub)](https://github.com/merijjeyn/jive)
+- [LocAgent (arXiv)](https://arxiv.org/pdf/2503.09089)
+- [LARGER (arXiv)](https://arxiv.org/pdf/2605.16352)
+- [Inside the Scaffold: coding agent taxonomy (arXiv)
+... [149 more characters in session.jsonl]
+
+_stop `end_turn` · 21.51s (ttft 13.67s) · in 2 · out 1,963 · cache r92,888/w2,148_
+
+---
+
+## req-0010 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 20 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_015aWXocVpVFte6qPKCsCeAY)_
+
+```
+**Laya**
+
+- **What it does:** Laya is the local model that replaces jevgrep's hosted relevance step. It decides which code is relevant on your own machine.
+- **Setup:** You install it with `uv tool install 'laya[serve]'` and run it as a server (`laya-serve`). The default endpoint is `http://127.0.0.1:8000/v1`.
+- **Configuration:** Layagrep explicitly selects Laya's "multilingual checkpoint" with "a 4096-token request budget."
+- **License:** Laya is Apache-2.0. It is installed separately and not bundled with Layagrep.
+- **Memory:** The page only says you need "enough memory for a Laya checkpoint." A CUDA GPU is optional.
+- **Model size:** Not stated on the page.
+
+**jevgrep**
+
+- It is the MIT-licensed upstream project (dzhng/jevgrep) that Layagrep forks.
+- It made relevance decisions through a hosted service, which Layagrep swaps for local Laya.
+- **Pipeline and indexing:** The page gives no details on how jevgrep works internally.
+- **Benchmarks:** jevgrep has published cost and retrieval benchmarks, but the page gives no numbers. The fork says it "has not reproduced jevgrep's published cost or retrieval benchmarks." It adds that those upstream results "do not establish Layagrep's quality."
+
+**Agent benchmark (GPT-6 Sol, 10 SWE-bench tasks, one run each, CodeGraph off)**
+
+| | Without Layagrep | With Layagrep |
+|---|---|---|
+| Officially resolved | 7/10 | 7/10 |
+| Total agent time | 20 min 19 s | 27 min 18 s |
+| Est. API cost | $2.31 | $2.63 |
+
+- "Layagrep produced no additional solves in this run."
+- Runs with the skill took "about 34% longer" and used "about 14% more model API spend."
+- `pylint-dev__pylint-4604` was inconclusive in both arms because the grader collected no tests.
+- A skill setup failure was left out of the paired results. It cost "an additional estimated $0.12."
+- Reported costs exclude local Laya compute.
+- The authors say the results don't show how Layagrep performs on other repositories or configurations.
+```
+
+**<- tool_result** _(toolu_014QDuyPdFxwqfoUBhkmbK7d)_
+
+```
+## Jev at a glance
+
+**What it is:** Jev is a decision model from TypeSafe AI, which the company calls a "System One model." It doesn't write prose or code. You send it a state (text or JSON) and a set of typed questions, and it returns probabilities. The author describes it as a smart `if` statement.
+
+**Model size:** Not disclosed. TypeSafe hasn't published a paper or its architecture. The launch post calls Jev "neither small nor an LLM" and skips public benchmarks.
+
+**Latency:** TypeSafe quotes 70–500 ms end to end, with most calls around 100 ms. That's measured from the US West Coast, so expect extra network delay elsewhere.
+
+**Pricing:**
+- Input costs $0.042 per million tokens, and output is free.
+- The same rate applies through Vercel's AI Gateway (`typesafe-ai/jev`).
+- A ~300-token support ticket costs about $0.0000126.
+
+**Hosted or local:**
+- Jev is hosted only. Its weights aren't released and there's no self-hosted version.
+- The SDKs (JavaScript and Python) and the agent skill are MIT-licensed.
+- The closest local option is Cloudflare's **Clef**. It has Apache 2.0 open weights, is built on Qwen, and accepts Jev's request format. Cloudflare tested it on a single H200.
+- Hugging Face "Open-Jev" models are community projects, not Jev itself.
+
+**Tasks:** There are three question types:
+- **Noul:** a yes/no probability.
+- **Choice:** one option from up to 255, with probabilities and confidence.
+- **Score:** a position on a 2–10 level scale.
+
+Typical uses include labeling, routing, verification, re-ranking search results, and safety checks. It handles text only. It's weak at math, counting, dates, and writing.
+
+**Context limits:**
+- State plus all questions: about 64K tokens.
+- State plus the longest single question: about 32K tokens, roughly 150K characters.
+
+**Code retrieval:** The article doesn't mention "jevgrep." The closest project is **Oko**:
+- It finds candidate snippets locally, has Jev rank them, and serves them to Codex, Claude Code, or OpenCode over MCP.
+- On a public benchmark of 345 code-retrieval tasks in six languages, it scored MRR 0.39 versus 0.24 for other published methods.
+- In its authors' own benchmark, agents finished tasks 12–38% faster.
+- A `--no-jev` flag keeps everything local.
+
+A related project, **jevsearch** (site search), reports a 278 ms median and $0.26 per 1,000 uncached searches. These are the builders' own numbers, not independent measurements.
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Neither is a code graph. Both are **relevance models**: you give them a question and candidate code snippets, and they score which snippets matter. In our strategy they would fill one slot: the **ranking / "meaning"** layer (Decision 4), the slot where I said "LLM reranker only if needed."
+
+## What they are
+
+| | **Jev** (TypeSafe AI) | **Laya** (via Layagrep) |
+|---|---|---|
+| Type | Hosted "decision model": classify, rank, score; it doesn't write code | Local relevance model; Layagrep is a fork of jevgrep that swaps Jev for Laya |
+| Runs where | TypeSafe's servers only, no open weights | Your machine; a GPU is optional |
+| Speed | 70–500 ms per call, about 100 ms typical (their numbers) | Depends on your hardware; its model size isn't published |
+| Cost | $0.042 per million input tokens: very cheap | Free in money, costs RAM and CPU |
+| Privacy | Your code goes to an outside service | Code stays local |
+| License | Closed model, MIT SDKs | Apache-2.0 |
+
+## The honest evidence
+- **Layagrep's own test (10 SWE-bench tasks):** 7/10 solved with it and 7/10 without, with **no extra solves**. Runs took **about 34% longer** and cost **about 14% more**. The authors say it's a small test.
+- **Oko** (local search plus Jev ranking): its authors report MRR 0.39 versus 0.24 and agents finishing 12–38% faster. These are self-reported numbers, not independent.
+- The pattern matches the papers: **a smarter ranker helps on vague questions ("where is auth checked?") but not much when there is strong evidence** like a failing test.
+
+## The trade-offs for us
+
+**For:**
+- Jev is fast and almost free per call. It would cover vague tasks with no test or stack trace, which is our weakest case.
+- Both are drop-in rerankers; we wouldn't train anything (unlike SweRank).
+
+**Against:**
+- **Jev:** it's an external dependency on a closed model; your code leaves your machine; it needs a network connection and another API key. If TypeSafe changes or shuts it down, the feature breaks.
+- **Laya:** RAM. You have 16 GB that is already tight; we had eval runs killed under memory pressure. Another local model server makes that worse.
+- **Neither fixes the failures we actually saw:** editing the test, the missed dependent file, and claiming done untested. Those need runtime, graph and history evidence plus the closed loop, not better ranking.
+
+## Recommendation
+**Don't make either one core. Make ranking a pluggable slot:**
+
+```
+candidates (runtime + graph + history + notes)
+        → RRF fusion (default, free, local)
+        → [optional reranker: none | Jev | Laya | Oko]   ← config, off by default
+```
+
+- The default stays at **zero LLM calls and zero network**, which is our cost and speed advantage.
+- Turn the slot on only when the evidence is weak, such as a vague request with no failing test. The gate decides.
+- **Prove it with our eval:** run with and without the reranker on vague tasks. Keep it only if it adds solves, which Layagrep's test did not show.
+- If we try one, **try Jev first**: no RAM cost, about 100 ms, and pennies. Use Laya only if keeping code local is a must.
+
+This also answers one of my earlier three questions. If you agree, "any LLM in retrieval?" becomes **"no by default, optional reranker for vague tasks."** Still open: TypeScript-only first, and whether to benchmark against Claude Code.
+
+Sources:
+- [Layagrep (GitHub)](https://github.com/Intelligent-Intern/layagrep)
+- [A deep dive into Jev (flaviocopes.com)](https://flaviocopes.com/jev/)
+- [Jev with coding agents (TypeSafe docs)](https://docs.typesafe.ai/introduction/coding-agents)
+- [What Is Jev? (Firecrawl)](https://www.firecrawl.dev/blog/what-is-jev)
+- [jev-code (GitHub)](https://github.com/FrancoisChastel/jev-code)
+- [jev-gateway (GitHub)](https://github.com/vinilana/jev-gateway)
+- [Jive (GitHub)](https://github.com/merijjeyn/jive)
+- [LocAgent (arXiv)](https://arxiv.org/pdf/2503.09089)
+- [LARGER (arXiv)](https://arxiv.org/pdf/2605.16352)
+- [Inside the Scaffold: coding agent taxonomy (arXiv)
+... [149 more characters in session.jsonl]
+
+#### ASSISTANT
+
+ok typescript first, no claude code benchmark, write the plan
+
+_stop `end_turn` · 3.75s (ttft 2.83s) · in 506 · out 22 · cache r95,036/w1,963_
 
