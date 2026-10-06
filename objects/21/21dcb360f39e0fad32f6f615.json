@@ -1,0 +1,15 @@
+{
+  "id": "21dcb360f39e0fad32f6f615",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Jj1FLfNunS8S22FrBAHdb1",
+        "type": "tool_result",
+        "content": "# Evaluation overlay for scripts/eval/run-eval.ts, applied over the shipped\n# base profile by the headless base driver. It changes only what an unattended\n# run needs: a model chosen by environment, workspace-write sandboxing with no\n# approval prompts (nobody is there to answer), and uncompressed session logs.\n\n- id: agent-default-model\n  name: '@deepseek-ai/dsh-agent-default-model'\n  config:\n    provider: !!js process.env.DSH_EVAL_PROVIDER ?? 'deepseek-official'\n    model: !!js process.env.DSH_EVAL_MODEL ?? 'deepseek-v4-flash'\n\n- id: sandbox-policy\n  name: '@deepseek-ai/dsh-sandbox-policy'\n  config:\n    mode: workspace-write\n    workspaceRoot: !!js process.cwd()\n\n- id: approval\n  name: '@deepseek-ai/dsh-user-approval'\n  config:\n    policy: never\n\n# The shipped presets pair workspace-write with approval prompts, and a\n# headless run cannot answer them. This preset keeps the sandbox and makes\n# every denial final instead of asking.\n- id: permission\n  name: '@deepseek-ai/dsh-permission-presets'\n  config:\n    presets:\n      eval:\n        sandbox: workspace-write\n        approval: never\n        name: eval\n        description: Sandboxed workspace writes; denials are final because no one can approve.\n    defaultPreset: eval\n\n- id: fs-sandbox\n  name: '@deepseek-ai/dsh-fs-sandbox'\n  config:\n    cwd: !!js process.cwd()\n\n- id: session-persistence-jsonl\n  name: '@deepseek-ai/dsh-session-persistence-jsonl'\n  config:\n    root: !!js dshHomePath('sessions')\n    compression: none\n\n- id: session-title-llm\n  disabled: true\n\n- insert:\n    - id: code-runtime\n      name: '@deepseek-ai/dsh-code-runtime-worker-thread'",
+        "is_error": false
+      }
+    ]
+  }
+}
