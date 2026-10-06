@@ -1,0 +1,27 @@
+{
+  "id": "abeb3730cff194a36f6ad536",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSlwcKEAgSGAI4AUIIdGhpbmtpbmcSDK8eyOP7q/4YZ3MKPBoM0vULcJZvGSkEaPTeIjB99TxbGp3ph+d0HS8BuZi1cHV2/WJWTmacaGnwUw1g1O9RK1YHqi+DnrqaYk+cagsqtAZXOXYgHkzMQlcsRWAKdiPQMU/MYSgIdk1xyGT4zwVxWhuS4qE8CLuQcISFmtZ9k4JvLWQq2cVZflNk1O7mB9npVtXCelfeImpacTKO14/3ZiFHvy1UJgcErdyh1FwyGAsgI/Fd7sqsqUUuPeO01dllbchGTbgVr+FCRm0lP9UZfVrnoZlvBpVb7XhsLOPL4dSot96IIs0MaHvG5R3m4TzZpoZ8CNavUU1Gde/aUDdxBTvwORkupu5ELGiVSQk1rPvyBACXgbr+/ezmMZD0tkhVwYXIqSOAhuqiCypYGwF7sEwlzZx3ef1rW73wJRKgXeHmak8oPveAo0mkssO2X8GRscFh78QTZidcX8UPMgbdZg+rlh437oKtX+4/TD3WqvaGNTD0H6EfZSq00HCK6vXzWJiOnZGPE2toUL6QRwzycvhtECZKOEhh9ff6gDGMRkj7ZwJ+8j6Qz/ZXHJCWXjkJLvx0BEhlv9rU1ObiBLCvW95krL051OgT0zwocRL4xYVYXWsQqkfyvAkvjkFEIbvaJnjI8Cdmbv6SlspgYD+c0ZRXpCJ5posJI/k5a/+cwfBZ6/6JcH9q02D+ywZ0oQjHNt1zo3YNpLWCbhYrlBuVVInLPtVb258aADt0/eKsBvO4yLYv2KqumNT6MCrq2EtRrEZKqNcvdd/jNgdDMJNY0OqZzlxKBrtn1fUF6kvMsnKmIjFpvF0laQpKkM7dnjDKOBnoYul9PCVsbsS9cpcs6zf4WosEycKZkEKrwvB3lrUW8kgci+jiMhi2aPcCPZhF4IgWowpeoERQwG5X5t/9uuk5s9ZdczAMjFPWbtzA798I5PXKdH+pgKbF2OUsdztAMz/nDQg0OSB0itm1WkrnUK23rIsmItTkf+9weY3BLHUG/WxawL9hHleoMQyidxvFw1y1YgU+TGMMl5+s12jd1c8leL2wiTU1I2PZZufVLpNP9wd1FD/zud4N8uY+hEMorusAnRBrhtLkikr5+4qnM48bvLha9YGv/SOj6DIG85XqY7g9FNO+MRJUY0LoEWASrCv+SeVwbfA3zT+zx2+HcbWZi+65nRNRYUR/agf6rCHhc06cGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01WwSM9iM72eVa4o6Tt3puDy",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); date; curl -s -w \"|http %{http_code}\" --max-time 90 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | head -c 600; echo; curl -s -w \"|http %{http_code}\" --max-time 90 http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $KEY\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | head -c 400",
+          "description": "Check which model now answers for lynx harness"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

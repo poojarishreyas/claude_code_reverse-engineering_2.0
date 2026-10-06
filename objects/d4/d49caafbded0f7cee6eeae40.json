@@ -1,0 +1,15 @@
+{
+  "id": "d49caafbded0f7cee6eeae40",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WwSM9iM72eVa4o6Tt3puDy",
+        "type": "tool_result",
+        "content": "Tue Oct  6 21:41:37 IST 2026\n{\"id\":\"chatcmpl-1791303104417-5ae6821a\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"gemini-3.7-flash-high\",\"content\":[{\"type\":\"text\",\"text\":\"Hello\"}],\"stop_reason\":\"length\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":78,\"output_tokens\":1}}|http 200\n{\"id\":\"chatcmpl-1791303109430-5653a499\",\"object\":\"chat.completion\",\"created\":1791303109,\"model\":\"gemini-3.7-flash-high\",\"choices\":[{\"index\":0,\"finish_reason\":\"length\",\"message\":{\"role\":\"assistant\",\"content\":\"Hello\"}}],\"usage\":{\"prompt_tokens\":78,\"completion_tokens\":1,\"total_tokens\":79}}|http 200\n\n<system-reminder>\nAttribution for git commits and pull requests you create from here on (this replaces Claude Code's own earlier attribution guidance, such as a previous copy of this reminder; the user's own instructions about these lines, such as a CLAUDE.md or memory rule, take precedence over this reminder, but do not add attribution lines this reminder leaves out):\n- End git commit messages with:\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n- End pull request descriptions with:\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n</system-reminder>",
+        "is_error": false
+      }
+    ]
+  }
+}
