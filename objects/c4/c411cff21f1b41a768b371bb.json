@@ -1,0 +1,19 @@
+{
+  "id": "c411cff21f1b41a768b371bb",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DLutMNPf3WhHM9TQ617B2W",
+        "type": "tool_result",
+        "content": "eval: 10 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\upstream\neval: 4eb53e63ff [cross-package, indirect] fix(ci): cover HMR edge cases and document strict assertions\neval: 4eb53e63ff -> invalid — tests pass without the fix:\neval: 4b9d8ad6f7 [indirect] fix(client): re-pin StateDot loaders whose animation restarts\neval: 4b9d8ad6f7 -> ran (passed)\neval: a59beb8ae3 [multi-file] fix(hmr): preserve manifest refresh with Office resolution\n$ tsx scripts/eval/run-eval.ts \"--\" \"--repo\" \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream\" \"--hard\" \"--limit\" \"10\" \"--agent\" \"claude-code\" \"--home-from\" \"C:/Users/shrey/.dsh\" \"--provider\" \"mylynx\" \"--model\" \"lynx harness\" \"--out\" \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-cc\"\neval: 10 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\upstream with claude-code\neval: 4eb53e63ff [cross-package, indirect] fix(ci): cover HMR edge cases and document strict assertions\n(node:2144) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)\neval: 4eb53e63ff -> invalid — tests pass without the fix:\neval: 4b9d8ad6f7 [indirect] fix(client): re-pin StateDot loaders whose animation restarts\neval: 4b9d8ad6f7 -> ran (passed)\neval: a59beb8ae3 [multi-file] fix(hmr): preserve manifest refresh with Office resolution\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\n[Error: EBUSY: resource busy or locked, rmdir 'C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-a59beb8ae3'] {\n  errno: -4082,\n  code: 'EBUSY',\n  syscall: 'rmdir',\n  path: 'C:\\\\Users\\\\shrey\\\\AppData\\\\Local\\\\Temp\\\\dsh-eval-a59beb8ae3'\n}\n\n4b9d8ad6f7.events.jsonl\n4b9d8ad6f7.json\n4eb53e63ff.json\na59beb8ae3.events.jsonl\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-1f8cdc08a1\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-4b9d8ad6f7\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-4eb53e63ff\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-54fa38795f\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-9633724b40\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-980b410340\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-a59beb8ae3\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-e21ed97f29\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-ed34a1d7fe\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-eval-f04ad05f30\n{\"id\":\"chatcmpl-1791319268724-13e93a05\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"gemini-3.7-flash-high\",\"content\":[{\"type\":\"text\",\"text\":\"Hello\"}],\"stop_reason\":\"length\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":78,\"output_tokens\":1}}|http 200",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

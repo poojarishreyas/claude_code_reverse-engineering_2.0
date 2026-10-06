@@ -1,0 +1,13 @@
+{
+  "id": "304230ed5df2e4fdaacc9950",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Task 1 of 10 (4eb53e63ff) is invalid for Claude Code too, as expected: its tests pass even without the fix. 9 tasks are left."
+      }
+    ]
+  }
+}

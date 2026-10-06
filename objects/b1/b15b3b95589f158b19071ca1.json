@@ -1,0 +1,27 @@
+{
+  "id": "b15b3b95589f158b19071ca1",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1QoKEAgSGAI4AUIIdGhpbmtpbmcSDLChUcsggxGAFQtDkBoMJovw3fn37KJExmIRIjBYFyJY+A5lZTVqjMkBKuJLElSEB12/yZUXxoTT/u4iBHONgappMojAN4IdWRBrRkUq8gkfMFGm66wUTBifaBVG6cpnPL4DAShgfNTCMp6Qrz2CSr8e1r5RI3RmpkXi9TNPWd79Iz7rD5Zt0BVWIvvNlJwc0D7U+7GXQESvJlx7P/ZNn+Z2QDoibfA7x1/ySkkfemIO+OOMDpQkTeKFwgD5SldMarAmnAwnEMgXSUc7OzskE4SVQB2INUyrtDSi4JT0wRtYVqVLRYxwYwKao13TmQ0KbBc3CRySIp9PVHMDTIgE2cqefEX35Lhsc2UbNrgarUklWQac8L+SAWvdvqrhrV3OK4M8016SFOzclgvSqLmOLAIGsM5gfJi1jYMa93kA7zCpsR1+3zqSdNHakF2vniI3HdEfePsDQTS69a96YQXiBTBxirBru3llLr1+NjU2X28Blot5JaQrJ89H1TLwFg6NodmWxvPRrSqQpEpos3LfzEcUUuIQrEfAXbFNkyDGy4Op8WGzj4Q2Cq0fpzxWzp31M9bE3rPdO/SxWgY0Zdt1tDbbQW6T2b8yGRqpyvhSKblr0wthD4epyRA0CCneI/YNS5f1upzYp55lKgO+tjTAKbk7kT8L22JbhQVYmmchOFDjjDf6j2d8qou65VEYHFE8czLgO37BnZPC9HQU/YUdgI+ex+GnI/Dda0iYWRWVae6aES8HSzjLC9wdb651+eNeglI/sFmRBKM0CW+v8y+XH7Vka8uvt2DA6+jsShHedNdxOmx7jvNmG1eryGDXc7OeNK+O2Xvphnz2R85ogDk65f6IU0Gyq9OLRzjLy0KT+sfa5IQSAiiqUfDelU9KXGMKV/pbMCq7VtZoZuLRZLjiAxhxCDbZHBoAiPO4p3+GVSDrhbYWK6FOZ6lMgjoA09xVQAnosyUaT4rl17mrwu2pL7/qaFNrZZHoqqw3ew9rgTooxRcMY5f9xVbn3NMM5p/8cKTb6bJsByIDzsnGfbeUmnRifCtG9N90sQKzo3b54P3lvbE2qIwfFrxxHmq5WkX+QatPF+dSZ3+qM9/sqyuQFfyKm23GYLcs0RbIS4mfe0UW9UPEW12os6psh34f66E4zVDc5n8CuGY+mrziJWYWhbvtBeGjaaDJnD0pQOsTdSRbiri+OTMriJTBuu4wg7u/c44RO5MIu5RUvKth7rAK4K40ZnphNGzkL52V2X8JIl+egTz0rv9yBJK1HlUAY9+dr2vLIyqd9fuJIFEz/ShDiPaNMVmRvMxTt7IwQ7KO49BxTEyk4gpsKcc50dDGpWwGo/zCwAgyNlJ2BfraDbOd3rcvxdim1Ivpw75VGVnisH7r9qRgPf5smkg4FCMtBaAH94soq4NIT6lHBB3qSQd4T3ScduL8pBGsag00i+AUbRdf+gcEIornRQ27oaTUf5YW6NatLWerPLwtGT0ZICcgwMVp6p46IHnVRoYWptNzrZTeMXQFunDOvHJK0LZ8nk1bBSX+l1Bn/2+wjQ1Ay8r+VhbodLNABsFi1OGFqQmzsxFIrRnU4q2zvGBLY8NwpAf75kBHGz7PVuPm7lgdx/9SZCRQZMXSniOItn3Ej/N3E7X9OfxZQcOpOFP2ctqFvm9g4YNQh+bCmGKdJhdmaEF73qEU50xcRB1pC8sTV8xF2VQAS5gZQPUt4vn6Gz208xn0aAzA4N6Qru9LkKXuXvLODsnZTIlYABWQSlREAHEnrq+Xjexih0KyXHwoby7grqY3EQIYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01DLutMNPf3WhHM9TQ617B2W",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; grep -E \"^eval: \" \"$S/gem-cc.log\" | cut -c1-160; tail -25 \"$S/gem-cc.log\" | grep -v \"^    at \" | head -20; ls \"$S/gem-cc\"; ls -d \"$TEMP\"/dsh-eval-* 2>/dev/null; free -m 2>/dev/null; KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); curl -s -w \"|http %{http_code}\" --max-time 60 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | head -c 300",
+          "description": "Check what the killed Claude Code run finished"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
