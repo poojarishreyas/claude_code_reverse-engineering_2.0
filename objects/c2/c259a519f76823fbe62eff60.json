@@ -1,0 +1,19 @@
+{
+  "id": "c259a519f76823fbe62eff60",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Exit code 1\n\n> @deepseek-ai/dsh-root@0.2.0-rc.1 test\n> pnpm run build:native-system && vitest run packages/client/ui-user-questions/tests/browser-plugin.client.spec.ts\n\n$ tsx native/system/scripts/build.ts --host-addon-only\n\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n\n RUN  v4.1.8 C:/Users/shrey/AppData/Local/Temp/dsh-eval-ed34a1d7fe\n\n ❯ |thread-safe| packages/client/ui-user-questions/tests/browser-plugin.client.spec.ts (30 tests | 2 failed) 306ms\n     × does not reopen a queued older answer after a browser reconnect 68ms\n     × ignores unrelated inbox entries and recognizes a next-turn reply 5ms\n\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯\n\n FAIL  |thread-safe| packages/client/ui-user-questions/tests/browser-plugin.client.spec.ts > apply > does not reopen a queued older answer after a browser reconnect\nAssertionError: expected false to be true // Object.is equality\n\n- Expected\n+ Received\n\n- true\n+ false\n\n ❯ packages/client/ui-user-questions/tests/browser-plugin.client.spec.ts:656:41\n    654|       b.inbox.set(queuedInbox(CALL))\n    655|\n    656|       expect(oldCard.snapshot().closed).toBe(true)\n       |                                         ^\n    657|       expect(b.pending.getSnapshot().map(card => card.callId)).toEqual…\n    658|       expect(b.panels()?.reveal(SESSION_ID, CALL)).toBe(false)\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯\n\n FAIL  |thread-safe| packages/client/ui-user-questions/tests/browser-plugin.client.spec.ts > apply > ignores unrelated inbox entries and recognizes a next-turn reply\nAssertionError: expected [ 'call-timed', 'call-other' ] to deeply equal [ 'call-timed' ]\n\n- Expected\n+ Received\n\n  [\n    \"call-timed\",\n+   \"call-other\",\n  ]\n\n ❯ packages/client/ui-user-questions/tests/browser-plugin.client.spec.ts:690:64\n    688|         'next-turn': [{ source: { kind: 'user-question-reply', callId:…\n    689|       })\n    690|       expect(b.pending.getSnapshot().map(card => card.callId)).toEqual…\n       |                                                                ^\n    691|       expect(b.panels()?.reveal(SESSION_ID, otherCall)).toBe(false)\n    692|     } finally {\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯\n\n\n Test Files  1 failed (1)\n      Tests  2 failed | 28 passed (30)\n   Start at  12:08:05\n   Duration  3.62s (transform 2.02s, setup 342ms, import 2.79s, tests 306ms, environment 0ms)",
+        "is_error": true,
+        "tool_use_id": "toolu_01Adqb4hbtYAaqnktHgoREBh",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

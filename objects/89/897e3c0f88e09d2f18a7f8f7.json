@@ -1,0 +1,14 @@
+{
+  "id": "897e3c0f88e09d2f18a7f8f7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HZ4YGAG1cHSan2Afm9utwo",
+        "type": "tool_result",
+        "content": "The file C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-ed34a1d7fe\\packages\\client\\ui-user-questions\\src\\client\\index.ts has been updated successfully. (file state is current in your context — no need to Read it back)"
+      }
+    ]
+  }
+}
