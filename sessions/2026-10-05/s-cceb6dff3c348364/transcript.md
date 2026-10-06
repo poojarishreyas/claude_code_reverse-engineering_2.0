@@ -5,8 +5,8 @@
 | session | `s-cceb6dff3c348364` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
-| requests | 23 |
-| tokens | in 2,164 · out 20,375 · cache read 2,056,286 · cache write 143,328 |
+| requests | 24 |
+| tokens | in 2,674 · out 22,163 · cache read 2,295,999 · cache write 145,129 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -2948,4 +2948,76 @@ _max_tokens 128,000 · streaming · 42 messages_
 #### USER
 
 dont just satisfy me tellme at wht percentage it will be better than claude code
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+I can't give you an honest percentage today, and any number I gave now would be invented. Here is what we actually know, what's realistic, and how to get a real number.
+
+## What we actually know
+
+| Fact | Number |
+|---|---|
+| Our harness, hard tasks measured | **3** (1 passed) |
+| Claude Code on the same tasks | **0 measured** |
+| Our strategy moves measured | **0** |
+| Claude Code moves we thought were edges but it already has | **1** (unchanged-read stub; I found it in your binary) |
+
+With 3 tasks, even a 33-point difference could be luck. **Right now nobody can say we're better.** Not me, and not any paper.
+
+## A realistic expectation (a hypothesis to test, not a promise)
+
+The papers and tools above point the same way: **better retrieval helps cost much more than it helps pass rate**, especially with strong models. Layagrep added **0 solves** and cost **14% more**.
+
+| Model in use | Pass rate vs Claude Code | Tokens / cost vs Claude Code |
+|---|---|---|
+| **Strong model** (Claude, GPT-class) | Roughly equal; maybe +0 to +10 points; **could be worse**, since Claude Code is tuned for Claude | Plausibly 20–50% fewer tokens on hard tasks |
+| **Weaker / cheap model** (qwen3-coder, DeepSeek flash) | Bigger gap possible, because seeding and verify gates do the work a weak model can't | Same or larger saving |
+
+These ranges are my judgment from the evidence, not measurements. The honest headline we can probably win is **"same accuracy, much cheaper, works well with cheap models"**, not "X% smarter than Claude Code."
+
+## How to get a real number
+
+1. **Use the same model in both harnesses**, or we're comparing models, not harnesses. Claude Code accepts a custom endpoint (`ANTHROPIC_BASE_URL`). I'd need to check whether OmniRoute offers an Anthropic-compatible endpoint. If it doesn't, we run both harnesses on one Claude model instead.
+2. **Use enough tasks.** About 30–40 hard tasks to detect a pass-rate difference of about 15 points or more. Token cost is compared per task in pairs, so 15–20 tasks show a cost difference.
+3. **Measure the same things:**
+   - pass rate;
+   - all fix files edited;
+   - test edits;
+   - steps;
+   - total tokens and dollars;
+   - wall-clock time.
+4. **Run it twice:** our harness today (baseline) vs Claude Code, then our harness after each move vs Claude Code.
+
+**The cost to find out:** hard tasks have used up to about 4M input tokens each. Roughly 20 tasks × 2 harnesses × 2 rounds is on the order of 100–300M input tokens. Cached tokens are cheaper, so the real bill depends on the provider's caching.
+
+## My recommendation
+Run the **baseline comparison first**: our harness as it is today vs Claude Code, on about 20 hard tasks, same model. It costs nothing to build, and it tells us where Claude Code is actually stronger. Then we build only the moves that close those measured gaps.
+
+Should I check whether OmniRoute can serve Claude Code, and add a "run Claude Code on the same tasks" mode to the eval?
+
+_stop `end_turn` · 23.46s (ttft 11.21s) · in 4 · out 1,772 · cache r119,843/w27_
+
+---
+
+## req-0024 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 44 messages_
+
+#### USER
+
+dont just satisfy me tellme at wht percentage it will be better than claude code
+
+#### ASSISTANT
+
+yes check omniroute and add claude code mode
+
+_stop `end_turn` · 3.54s (ttft 2.85s) · in 506 · out 16 · cache r119,870/w1,774_
 
