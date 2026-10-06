@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "s-983ed1b4bb54fc50",
+  "title": "Use the Grep tool to find 'x =' then Read a.ts, then Edit a.ts to set x to 2. Reply done.",
+  "source": "claude-cli/2.1.282 (external, sdk-cli)",
+  "model": "claude-haiku-4-5-20251001",
+  "credential": "558767a26377",
+  "startedAt": "2026-10-06T06:24:54.295Z",
+  "updatedAt": "2026-10-06T06:24:59.052Z",
+  "durationMs": 4757,
+  "requests": 1,
+  "errors": 0,
+  "events": 6,
+  "usage": {
+    "input": 10,
+    "output": 245,
+    "cacheRead": 0,
+    "cacheCreation": 38066
+  },
+  "messageIds": [
+    "983ed1b4bb54fc50e50b6302"
+  ]
+}

@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
 | requests | 32 |
-| tokens | in 2,690 · out 25,376 · cache read 3,166,664 · cache write 159,645 |
+| tokens | in 2,692 · out 26,514 · cache read 3,302,824 · cache write 160,364 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -3854,4 +3854,28 @@ _max_tokens 128,000 · streaming · 58 messages_
                                         ignoring all other MCP configurations
   --system-prompt <prompt>              System prompt to use for the session
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Claude Code exposes everything a fair headless run needs. Next I'll capture its real event stream with a tiny run, so the parser is built from actual output rather than assumptions.
+
+**-> tool_use** `Bash` _(toolu_01S6UYLhqqDEz4UmGj9m75Ks)_
+
+```json
+{
+  "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/ccprobe\"; mkdir -p \"$S\" && cd \"$S\" && printf 'export const x = 1\\n' > a.ts && timeout 300 claude -p \"Use the Grep tool to find 'x =' then Read a.ts, then Edit a.ts to set x to 2. Reply done.\" --output-format stream-json --verbose --permission-mode bypassPermissions --setting-sources project --strict-mcp-config --model haiku > out.jsonl 2> err.txt; echo \"exit=$?\"; wc -l out.jsonl; node -e '\nconst l=require(\"fs\").readFileSync(\"out.jsonl\",\"utf8\").trim().split(\"\\n\").map(s=>JSON.parse(s));\nfor(const r of l){ if(r.type===\"assistant\"){console.log(\"A\",r.message.id,r.message.content.map(c=>c.type===\"tool_use\"?`tool_use:${c.name}:${JSON.stringify(c.input)}`:c.type).join(\" | \"), JSON.stringify(r.message.usage))}\n else if(r.type===\"user\"){console.log(\"U\",r.message.content.map(c=>c.type+(c.is_error?\"(err)\":\"\")).join(\",\"))}\n else if(r.type===\"result\"){const {result,...rest}=r;console.log(\"R\",JSON.stringify(rest).slice(0,900))}\n else console.log(r.type,r.subtype??\"\") }'; cat a.ts; head -c 300 err.txt",
+  "description": "Probe Claude Code stream-json output with a tiny task",
+  "timeout": 320000
+}
+```
+
+_stop `tool_use` · 14.52s (ttft 8.53s) · in 2 · out 1,138 · cache r136,160/w719_
 

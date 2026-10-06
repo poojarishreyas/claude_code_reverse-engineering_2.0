@@ -1,0 +1,19 @@
+{
+  "id": "47f675bd232ac78b1359ebb7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LgFfprKxQeDEpHZzqtgyWb",
+        "type": "tool_result",
+        "content": "Found 2 files\nout.jsonl\na.ts"
+      },
+      {
+        "tool_use_id": "toolu_014sxZrXS2BYaThYfe6CQVLZ",
+        "type": "tool_result",
+        "content": "1\texport const x = 1\n2\t"
+      }
+    ]
+  }
+}
