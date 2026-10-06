@@ -1,0 +1,27 @@
+{
+  "id": "e7457b984b57353862160b16",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSxwgKEAgSGAI4AUIIdGhpbmtpbmcSDF2cqcqBoygeHRYKTxoMYI44Rgc7gWAjCz4GIjAT9FjVtd5qcnSjiGLq+tq8a+8RPfG8VGTKFkFJIDLCpUEtMKQnI+4/pQonc1loQrQq5Af5w5fcj2W2KkECPpUun5SsEdcVxYQ6iXj1j5HboADnAb33/nJUDXxlqF0NT0FBOHG5arMTGX17JLBWM1Qhiu9HC3P0jX9ekQMpiI9nWy/h03mA2EEmd3T36KmvFYTA9qr10IUNXEgmFCq02eAMD2V7bJdwpGOH7EREUvPSj0dDibT7SRaw+pSbYxf4JnVlSjYOYDBIqwJA886GL25OXARWvRXen35+NXKdJcdIBvzoLBxBoggX6iBkLP8m1bi39pFDC1aZL5OUBrQuGDFkak/gbsy2sgD7HYWcO7UELGgNWa8cbK4yBlSP0ZolAnseZU7/DmNyGp486X9aj6SNx2BSbWm56fd3QaE7snnZss2PvMnI4NWNQ81+4LOQfaBSg0vEPB54v9GrpAwYzuwPN3z8bXozVaGoR7B+HxH9ZlfKlEgiC3I0+fHtBINCq/SJltzLszhYAIIo20cvF1f1hl+QA1zJl/T8zCYVwpW6g74WZnSyDsy5Xwd4RG+eQZeaQEpKti09rUz3i/uwuGMmqpXNwVchXZ56/G6ZD8KBMIAXHQNwHSx8cLX0vFbjV9RwihA9KwajcMtV6QyZx3sgA3dNZlbiuifzEWRGPvHPLdgwgz82JhWDBdOEcqK5TPLDnGyEVsyKSUq73LGK906xqrebb+k5oWUmNySfIM4H9ZgU0dw3we7S4ClxAHJbpQNTgHlUoSXFgZd+JlZaKGT7MMbdYMjQxnW7YFinXj6YCk1yq2VJcuv6EL72qKDWe4++LgTJxMKcrYRisAJf0W0ZLlDPbt0CMqmtdEjQLzQM2B0SJF+UrdDcrhEhQ4JFKBWHytGykTPlBcnrduvPrnFtwAk5uDmrpo5VUZrdL+TEkPXX4Vf6sJOOK0iN6EnyP6SEJR/gPBAZTtdQF2ZOdSnISokJnkLhkhPnEg9MWwFQIEYSTA2rBUJ4eBYBIrva4nhB3inKHPs1MgP52JsshvF8xTJ6GanFdf3Hd6P/ySH6ICc8XzZCUhAI3FemtgquN8NqIQ9QuK20+lrjx/V3ju8dpjZHrMLgqH1xo4gp0jYjRxhSXj+Kd3/DZFWV0QJsh0Q3Spuc0pwjjSsFVt+2Z7DiJZ03tInCKNLA1+ri54WK5ZgaikNWrhdBxFLBUsME2G1ynWeobbHUWf3gNThDMCliLwM+ieTriE3a96rdVqqth+nSdCyPU4VBIIvMjFauIWf7e3UcMjGg+Cul0YHOPDSwfEefJxGz3HWih5D7KdpY5zKcD4nmzlLSKmb4yBBhf9Yx7BDbryuYqW183A/bJWbIzPssxfsg1IwcYzjHoVOa7Rn/BhMgzdYYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01E2QFxX1h2ZyTZwg22K6JN8",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-dsh\" && head -c 1500 980b410340.events.jsonl; echo; python - <<'EOF'\nimport json\nrows=[json.loads(l) for l in open('980b410340.events.jsonl',encoding='utf8')]\nprint(len(rows), set(r.get('type') for r in rows))\nEOF",
+          "description": "Look at the event log format"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
