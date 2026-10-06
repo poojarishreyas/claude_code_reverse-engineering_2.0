@@ -1,0 +1,15 @@
+{
+  "id": "010c340a4fad8dba88ac29a2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01C5FGfNv2YLfwYt98yb6jdU",
+        "type": "tool_result",
+        "content": "omniroute models: 401\r\nAGENTS.md\nCLAUDE.md\nREADME.md\napi\nattachment\nboot\nbundle\nclient\ncode-runtime\ncompaction\ncontext\ncore\ncredentials\nexperimental\nextensions\nfeedback\nfs\ngoal\nguard\nhooks\nhost\nidentity\ninteraction\njobs\nllm\nmcp\nplan\npreset\nruntime-diagnostics\nsandbox\nschedule\nsession\nsession-query\nsettings\nshell\nskill\nspill\nstorage\nsubagent\nsubprocess\nterminal\ntest-support\ntodo\ntypert\nutil\nweb\nwebhook\nworkflow\nworkspace\npackages/llm/\npackages/web/web-search-deepseek/package.json",
+        "is_error": false
+      }
+    ]
+  }
+}

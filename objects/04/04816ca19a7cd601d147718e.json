@@ -1,0 +1,32 @@
+{
+  "id": "04816ca19a7cd601d147718e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSnQcKEAgSGAI4AUIIdGhpbmtpbmcSDC7+lSVEXxgeNVC9PxoMICOqt6O9+NiDpZ8fIjBDUgolH/rSSPzMOlZcbTikzsq5/eye17m/1vet0MMY3B56ycdCw6CCVbENSHHKQiQqugbpprvD3YblMAimLRe2uMoKshcj6kbzWidXG+3arIFT7wlThVZE7wDZfQzIbT4KOoFx/rn9TgjaXtqPCW6G2C8rwtKcAlo5XbX24u+kNNAs/S/nj0nDrlHBChvq3a/d+sKzW+AE0mZx3mL45nAlVUb6EALjmqtLxSJ+UDQiUejO73uVDqcRzPE8zAgj4yjr8q3G7FgppPCKwOojMMA3KvDRfuLnvLPivP0a5qlcO1kQU86tuHYmsxgQESXqJvPpg48GV1KhdPxmWYoSbHf+1mp6k2HGGs+1ISiCqOH0fYlymbL24oC9herQ5j7QTkjX5hINukbWGUpqsGJn1Wg8p9rF51fZSA50AUMvpc+4Ss4ylaQw3cDDFuEpnd/4Bfsit1kb2ewRypJLCUrHpM02QTUYsFkXviQ0F1K4kunjMLFFEB2V9EFUCwtjpzOLMMQhGtPLrHr/059aqdGSkxyPpCPwd/Q97R1L6pBwGRWKPMSOxrxbOBOk8jLTPx+qSvVd2Qtv9FWMenSOjeH8y0AhBEuNwRiO44YTSQu5FrpEZa/kSWnepuuCcQcwqR8OJFaTHQZWItF1YYu5336NyW3I3093D+1O/nLw2jZXARsWX8ljgKPLMd6g9hskxspbsg12dyFCgp0ZJK3QwA1lfDVfHCJgOgnk9MDnR+WAA68KEM7YYeOu0O3rQgGxquBrFUIBQjtnmFk9KGvjozCu+6J46w078XhwNLPKgp5khPtDGDQHSbANpBCOanVs+LJI6AjpIE9yKFmvzz0HybJ1ezCcug2/gS/NLHNDMMpBAAxFQ6flmNlvGBNuzhRdCfoXs5C/0HYCSR19eqJuFafPZB3vXcyZpPniW53AqeuzNA3kGIqgZtUWb8O1ocymJmHo0z03w/RwNxoN6rZmcN9wpf6IEzcN33QMWxB70pZKDCOJPTlGmcdGuzXltinyCKGmd92UF8ilQfa5s5IqqUBAQ9R3puDltEUeQpzC9QV+WED6p00hnL+SFKeMGqrQs61vTRkW3Vno/lPs8E+5rg7sV0vgFS6UG1FknEzFqar3hELYJlW1JQlN0bLJhOWCPyp94rTBpe5mgB6bE6f+k3MJGAE="
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1QcKEQgSGAI4AUIJbmFycmF0aW9uEgzZ4Un48LvFbK3PpHAaDBmI+hS+DASNOS/0/SIwORCCfQI8OcsxCLHUrxzS5aQYe5Koiffd9qO6A54xSENwR6C3he/D9RNfjl26YoB0KvEG4T/CWkq/Vgb5kjc0jgY7j/Tw1tT4dyfoYQoHVL+0HaEoBpoGoqT2cDu4PN7JPfLRZwGeIRQ5n/z1ICeto71P32QMUqkz0Z58L5jHuK475aVdZsuGnZAhgwD0zhY6DRfqmhTGT+D7hfSR81pW77Od7LgonU6dUn2v0goWDyQfif5jR9vMVzralmv4uSLS4Ohl81wbpFF5kos5yIg/AGMTcvSMGEx/agH6dOJt0w2LERgDcCIOqSYbw3/JOZ910+EZVdQDtXHwKxMnh5eRaZrSV9DSCVOtI6F0IvUbLKGWcGhU4+XYVlxU1zOH85siJsQO4jBe+GqgsLKJksSSLilgA1hHhQV15hob5v6FMwzqbuXfBBPpXZjm+6x1jxvsoHHylqdMkylncwN/0vMtraE2rCxvkpG1MBnU4d/3/Aonj/GuU3KFok+NusncMjEl2n7Qhldwgrk2cdTtbsT0JbB5CvJha5Dis9kh18uSys4SfDSDB7vQJm/AAhZxBydx+ho6v5h6TE+2zqSylgZKvwafVSO+Vl3aiBxI4f8aaZSZOA6IHyhm4cu5DPbwI0VKu6xeSkWdPH80oljx2aZ6Cup6yD6a3ahVDVdcZXj8oFutQwriGzL0Kl4ebJ7cw2cS1VfopWVbojUxpS8+DFx260O1WrQjSM7mew2+ibL3LAOll++cGYK/dvHr1aLsDT0yosaYz+bbrmdKCiKYZnIkQS4vAtx6HeC+hDLr08NMSZd8lKe7fDUK/jLFFDWfB7dlN0oXKmXUdjt7ZOjS4vLwQ2NBQHblSBs4vU+nGPuQdJ+uYWKLDV4TlObdjb2XHujRA2RN1gZT2Ba81yhx/y6/625sPqdsoGdEzL7N7odiiU02qstRJktKm9Hz7VkZ/Azz2AFwKimqY8BlcX5Jg1tlJTqLcPX+rhoCXYVKmrEpzoUvwCY22GaVNJGom8L/j6PA0GMpF5sff3vou7TIkbIyHqtpsqGgMaw5x1Fl9zrcAXybU1xTZX/cGkxFoyNh9pgEIJToiLLO1xmTMKx0oy+FTJUbIX7abTgtZ8+YxtrguO9YZXn6eI8UIboQXgVRwb+HXhAXntXG4yfC3z85+6lRbXKYc7fpV0kGCoiDYYZ43qtjtLKwxIOSphIHnGMMpqJ9MVY+2mF46om57/VC2hsjVZ1SXu8YAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01AFaB6Keq6He2X1iZRowCZc",
+        "name": "Bash",
+        "input": {
+          "command": "cd ~; KEY=$(grep -i -A3 \"mylynx\" .dsh/.credentials.yaml | grep -oE \"(sk-|key)[^\\\"' ]*|[A-Za-z0-9_-]{20,}\" | head -1); echo \"key length: ${#KEY}\"; grep -n -i -B2 -A8 \"mylynx\" .dsh/config*.yaml .dsh/*.yml 2>/dev/null | grep -v -i \"key\" | head -30\nfor path in /v1/messages /messages /anthropic/v1/messages; do\n  code=$(curl -s -o /tmp/om.json -w \"%{http_code}\" --max-time 60 \"http://localhost:20128$path\" -H \"x-api-key: $KEY\" -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":20,\"messages\":[{\"role\":\"user\",\"content\":\"say hi\"}]}')\n  echo \"$path -> $code: $(head -c 300 /tmp/om.json)\"\ndone",
+          "description": "Probe OmniRoute for an Anthropic-format messages endpoint"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
