@@ -1,0 +1,23 @@
+{
+  "id": "aecc191e1c6a6fffb526ebdd",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01HEcMFxkSohrBK4G7Y2qWVi",
+        "name": "Monitor",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; seen=$(grep -c \"^eval: .* -> \" \"$S/gem-cc2.log\" | tr -d '\\r'); grep \"^eval: \" \"$S/gem-cc2.log\" | tail -1 | cut -c1-140; while true; do n=$(grep -c \"^eval: .* -> \" \"$S/gem-cc2.log\" 2>/dev/null | tr -d '\\r' | head -1); n=${n:-0}; if [ \"$n\" -gt \"$seen\" ]; then grep \"^eval: .* -> \" \"$S/gem-cc2.log\" | tail -n $((n-seen)) | cut -c1-220; seen=$n; fi; if [ -f \"$S/gem-cc2/summary.json\" ]; then echo \"DONE\"; exit 0; fi; if grep -q \"ELIFECYCLE\" \"$S/gem-cc2.log\" 2>/dev/null; then tail -12 \"$S/gem-cc2.log\" | grep -v \"^    at \"; exit 1; fi; sleep 20; done",
+          "description": "Claude Code gemini eval task results",
+          "timeout_ms": 1800000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
