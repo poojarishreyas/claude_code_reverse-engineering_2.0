@@ -5,8 +5,8 @@
 | session | `s-cceb6dff3c348364` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
-| requests | 40 |
-| tokens | in 2,706 · out 31,478 · cache read 4,296,299 · cache write 170,459 |
+| requests | 41 |
+| tokens | in 2,708 · out 33,132 · cache read 4,443,273 · cache write 170,808 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -4604,5 +4604,71 @@ describe('summarize', () => {
 
 ```
 ok
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Now a test built from the shapes captured in the real probe run:
+
+**-> tool_use** `Write` _(toolu_01F3q2QDpQA8Rfj3u7am4Df7)_
+
+```json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\scripts\\eval\\claude-code.spec.ts",
+  "content": "import { describe, expect, it } from 'vitest'\nimport { claudeCodeArgs, parseClaudeCodeOutput } from './claude-code.ts'\nimport { computeMetrics } from './metrics.ts'\n\nconst WORKSPACE = '/w'\nconst SOURCE = 'packages/a/b/src/a.ts'\n\n// Rows shaped like a real `claude -p --output-format stream-json --verbose` run:\n// one message id spans several rows, tool results come back as user rows.\nfunction stream(rows: readonly unknown[]): string {\n  return ['not json', ...rows.map(row => JSON.stringify(row))].join('\\n')\n}\n\nconst assistant = (id: string, content: unknown[], parent: string | null = null): unknown =>\n  ({ type: 'assistant', parent_tool_use_id: parent, message: { id, content } })\nconst toolUse = (name: string, input: unknown): unknown => ({ type: 'tool_use', name, input })\nconst toolResult = (content: unknown): unknown => ({ type: 'user', message: { content: [{ type: 'tool_result', content }] } })\n\ndescribe('parseClaudeCodeOutput', () => {\n  it('counts one step per main-thread message and maps tools onto harness names', () => {\n    const parsed = parseClaudeCodeOutput(stream([\n      { type: 'system', subtype: 'init' },\n      assistant('m1', [{ type: 'thinking' }]),\n      assistant('m1', [toolUse('Grep', { pattern: 'x =' })]),\n      toolResult(`${SOURCE}:1:export const x = 1`),\n      assistant('m1', [toolUse('Read', { file_path: `${WORKSPACE}/${SOURCE}` })]),\n      toolResult('1\\texport const x = 1'),\n      assistant('sub', [toolUse('Read', { file_path: `${WORKSPACE}/other.ts` })], 'toolu_1'),\n      assistant('m2', [toolUse('Edit', { file_path: `${WORKSPACE}/${SOURCE}`, old_string: '1', new_string: '2' })]),\n      toolResult('ok'),\n      assistant('m3', [{ type: 'text', text: 'done' }]),\n      {\n        type: 'result',\n        is_error: false,\n        result: 'done',\n        usage: { input_tokens: 26, output_tokens: 52
+... [1,494 more characters in session.jsonl]
+```
+
+_stop `tool_use` · 16.36s (ttft 4.92s) · in 2 · out 1,654 · cache r146,974/w349_
+
+---
+
+## req-0041 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 76 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01QELWHkEgA6ek2iR5qGLBh4)_
+
+```
+ok
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Now a test built from the shapes captured in the real probe run:
+
+**-> tool_use** `Write` _(toolu_01F3q2QDpQA8Rfj3u7am4Df7)_
+
+```json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\scripts\\eval\\claude-code.spec.ts",
+  "content": "import { describe, expect, it } from 'vitest'\nimport { claudeCodeArgs, parseClaudeCodeOutput } from './claude-code.ts'\nimport { computeMetrics } from './metrics.ts'\n\nconst WORKSPACE = '/w'\nconst SOURCE = 'packages/a/b/src/a.ts'\n\n// Rows shaped like a real `claude -p --output-format stream-json --verbose` run:\n// one message id spans several rows, tool results come back as user rows.\nfunction stream(rows: readonly unknown[]): string {\n  return ['not json', ...rows.map(row => JSON.stringify(row))].join('\\n')\n}\n\nconst assistant = (id: string, content: unknown[], parent: string | null = null): unknown =>\n  ({ type: 'assistant', parent_tool_use_id: parent, message: { id, content } })\nconst toolUse = (name: string, input: unknown): unknown => ({ type: 'tool_use', name, input })\nconst toolResult = (content: unknown): unknown => ({ type: 'user', message: { content: [{ type: 'tool_result', content }] } })\n\ndescribe('parseClaudeCodeOutput', () => {\n  it('counts one step per main-thread message and maps tools onto harness names', () => {\n    const parsed = parseClaudeCodeOutput(stream([\n      { type: 'system', subtype: 'init' },\n      assistant('m1', [{ type: 'thinking' }]),\n      assistant('m1', [toolUse('Grep', { pattern: 'x =' })]),\n      toolResult(`${SOURCE}:1:export const x = 1`),\n      assistant('m1', [toolUse('Read', { file_path: `${WORKSPACE}/${SOURCE}` })]),\n      toolResult('1\\texport const x = 1'),\n      assistant('sub', [toolUse('Read', { file_path: `${WORKSPACE}/other.ts` })], 'toolu_1'),\n      assistant('m2', [toolUse('Edit', { file_path: `${WORKSPACE}/${SOURCE}`, old_string: '1', new_string: '2' })]),\n      toolResult('ok'),\n      assistant('m3', [{ type: 'text', text: 'done' }]),\n      {\n        type: 'result',\n        is_error: false,\n        result: 'done',\n        usage: { input_tokens: 26, output_tokens: 52
+... [1,494 more characters in session.jsonl]
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01F3q2QDpQA8Rfj3u7am4Df7)_
+
+```
+File created successfully at: C:\Users\shrey\Desktop\Elemental_harness\scripts\eval\claude-code.spec.ts (file state is current in your context — no need to Read it back)
 ```
 
