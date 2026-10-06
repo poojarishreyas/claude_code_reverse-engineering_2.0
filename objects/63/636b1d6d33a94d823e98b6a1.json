@@ -1,0 +1,23 @@
+{
+  "id": "636b1d6d33a94d823e98b6a1",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_015JapWQdwotk2M6gTsZSNFL",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && printf '{\"extends\":\"./tsconfig.json\",\"compilerOptions\":{\"noEmit\":true,\"composite\":false,\"incremental\":false},\"include\":[\"scripts/eval/*.ts\"]}' > tsconfig.evalcheck.json; npx tsc -p tsconfig.evalcheck.json 2>&1 | grep -v TS6307 | grep -E \"error\" | head -20; rm tsconfig.evalcheck.json",
+          "description": "Typecheck eval scripts ignoring project listing errors",
+          "timeout": 300000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

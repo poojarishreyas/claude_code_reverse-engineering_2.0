@@ -1,0 +1,24 @@
+{
+  "id": "a95f828b7c04065df4ba8550",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQStgcKEAgSGAI4AUIIdGhpbmtpbmcSDNwRZTouL5H7gUUL3BoM5bCn0WNguO8KcYrSIjBHQbbYLmqWm1V9kg/NOybS4uIKS9SG79hjuDS/EoCzOtJQp6WZMKsUoMoMruL++VEq0wbRsrTxKeFRh10ICL84SkbOi2ACYFxOhlBdeL7AQUHbRgsyvM6zFAXOwftLcrgJpubhbmZYs8zv48elAuCXrYrbdEar62Q9FV7x1Z0NufO5y1LLDQpvqmfPjdraGVuGcaiCtfGs8RPya2LFxbnhUNRNa7LwFAhRLKfNkpTROoAu7ReH4HrpvISonZG4xKJcG7qC3L2ketjigQCNNWqO8uJO0/7t0daORIc6ODfOCgBU11nnVPE6gAtwNDyzBdlMmmUfagmPX/TEepjghMDrGCtn8OCc8HnYPNLaxbkFuu0msmRkTvjCC0QPdJxRSf66FD+HAuuVYw0Y6BwO/X5HxAWTUuW0OkXHEOEOXtWQo3T3CdlIjEQDAYTtL9CsgxnO9NyKp6RSO79j+tZ3/cnzkOU13PIWnmOdkpM+yy+XfvrUhOU6JUoWXICgMrMbNOWG6tNjAdzqYkJm8APG8T+BEN/m/ybQmDFdequSuLT71mlfVCmR6WRypKJIMXv5KtOvTErJwDAEmwwqVgzCbLgPcxSltMwnMVFn5qq6sPf6WcSG+dfNvRiOnBn6XDKWgxfFIYesUs1aQukhUuVER0x+A3rnpydlAwF0TTMmJLI8r9U0eMbfwQ+pKw0e9kdjslGAoIeENCMZEKoTR8iPzxjb4Ks3wak57+SHn+vKPnnNH3kvGiSfwVn+1RyX3VgoZvx6/il8Y7lzfc4Xtvm0+4NXxZOoPd3WbKMfXSdBudjHJmrQvoD/qnNKfTa9nb50cza0bQpPRuNCxxbCvaTX7NdPdFMBARE+dba2lRm+5b0Zt0TKWrkN9+ylkU4TSNmgDEE4q2gk46hJMmDYl9wNv4y8lvxgHSJYrXriCof95ii4k+KmMiky2ZNJA1AL33qGLaDUDqtvBP9jE3v9WUsgzlveRTejuJkvAjbkkRklwfH0Zq4hwxszCWdycUShy0snmNH6iTynqFYmAhCGsjA6y20PXvydyGfKT2cx6Rqqh8shzyDULoeNbZENpPTc2FelDPAuPRpBa5JAzbJ5abC3FMsdzQdPF8ssqa/jgcS4nADXwyOBGjVCkMRauPkpBu24kSqqfOwwXVr44DabisESEnUeqQr2wc/rlxKUrc1UOYRRP2E+NkD72hgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01MAEZNgicFVr1ADMKLS9mYf",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && printf '{\"extends\":\"./tsconfig.json\",\"compilerOptions\":{\"noEmit\":true},\"include\":[\"scripts/eval/*.ts\"]}' > tsconfig.evalcheck.json; npx tsc -p tsconfig.evalcheck.json 2>&1 | head -20; echo \"tsc exit=${PIPESTATUS[0]}\"; rm tsconfig.evalcheck.json",
+          "description": "Typecheck eval scripts with temp root tsconfig",
+          "timeout": 300000
+        }
+      }
+    ]
+  }
+}
