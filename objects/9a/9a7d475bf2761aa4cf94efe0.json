@@ -1,0 +1,15 @@
+{
+  "id": "9a7d475bf2761aa4cf94efe0",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Exit code 2\n/usr/bin/bash: -c: line 117: unexpected EOF while looking for matching `''",
+        "is_error": true,
+        "tool_use_id": "toolu_01LhtTeh2yA1m993nimYTxCe"
+      }
+    ]
+  }
+}
