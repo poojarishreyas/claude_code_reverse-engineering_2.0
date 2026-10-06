@@ -1,0 +1,13 @@
+{
+  "id": "82a4de24056b601f364300c4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Usually no. Claude Code normally picks up changes to `settings.json` while it's running. I'm not 100% sure that applies to every setting in your version, so check it:\n\n1. Type `/permissions` and look under **Allow**.\n2. If both new rules are listed, they're active and you don't need to restart.\n3. If they're missing, the file probably has a JSON error, such as the missing comma after `modelSettings`. Fix that, or restart Claude Code to force a reload.\n\n**There's a separate catch:** the earlier block came from the **auto-mode safety check**, not from a missing permission rule. I'm not sure an allow rule overrides that check. If the run is still denied after the rules show up in `/permissions`, you have two options:\n- Switch out of auto mode for this run (Shift+Tab cycles the permission modes) and approve the command when it asks.\n- Run the eval command yourself with the `!` prefix."
+      }
+    ]
+  }
+}

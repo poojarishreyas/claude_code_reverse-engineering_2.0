@@ -1,0 +1,13 @@
+{
+  "id": "e952f39de574ab890612f1c2",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The watch is running again. dsh has 3 tasks left."
+      }
+    ]
+  }
+}
