@@ -1,0 +1,19 @@
+{
+  "id": "043e3bd387218f5997654255",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DFE2tfxhde3CGYBnddr4b6",
+        "type": "tool_result",
+        "content": "error TS2688: Cannot find type definition file for 'node'.\r\n  The file is in the program because:\r\n    Entry point of type library 'node' specified in compilerOptions\r\ntsc exit=2",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

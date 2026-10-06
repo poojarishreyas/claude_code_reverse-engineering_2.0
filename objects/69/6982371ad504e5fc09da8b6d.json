@@ -1,0 +1,19 @@
+{
+  "id": "6982371ad504e5fc09da8b6d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01MAEZNgicFVr1ADMKLS9mYf",
+        "type": "tool_result",
+        "content": "packages/attachment/attachment/src/index.ts(4,33): error TS6307: File 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/error.ts' is not listed within the file list of project 'C:/Users/shrey/Desktop/Elemental_harness/tsconfig.evalcheck.json'. Projects must list all files or use an 'include' pattern.\r\n  The file is in the program because:\r\n    Imported via './error.ts' from file 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/index.ts'\r\n    Imported via './error.ts' from file 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/index.ts'\r\n    Imported via './error.ts' from file 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/index.ts'\r\n    Imported via './error.ts' from file 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/admission.ts'\r\npackages/attachment/attachment/src/index.ts(12,8): error TS6307: File 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/types.ts' is not listed within the file list of project 'C:/Users/shrey/Desktop/Elemental_harness/tsconfig.evalcheck.json'. Projects must list all files or use an 'include' pattern.\r\n  The file is in the program because:\r\n    Imported via './types.ts' from file 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/index.ts'\r\n    Imported via './types.ts' from file 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/admission.ts'\r\n    Imported via './types.ts' from file 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/index.ts'\r\npackages/attachment/attachment/src/index.ts(17,56): error TS6307: File 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/admission.ts' is not listed within the file list of project 'C:/Users/shrey/Desktop/Elemental_harness/tsconfig.evalcheck.json'. Projects must list all files or use an 'include' pattern.\r\npackages/attachment/attachment/src/index.ts(18,40): error TS6307: File 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/request-projection.ts' is not listed within the file list of project 'C:/Users/shrey/Desktop/Elemental_harness/tsconfig.evalcheck.json'. Projects must list all files or use an 'include' pattern.\r\npackages/attachment/attachment/src/types.ts(3,51): error TS6307: File 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/brand.ts' is not listed within the file list of project 'C:/Users/shrey/Desktop/Elemental_harness/tsconfig.evalcheck.json'. Projects must list all files or use an 'include' pattern.\r\n  The file is in the program because:\r\n    Imported via './brand.ts' from file 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/types.ts'\r\n    Imported via './brand.ts' from file 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/types.ts'\r\n    Imported via './brand.ts' from file 'C:/Users/shrey/Desktop/Elemental_harness/packages/attachment/attachment/src/index.ts'\r\npackages/core/agent/src/index.ts(12,29): error TS6307: File 'C:/Users/shrey/Desktop/Elemental_harness/packages/core/scope/src/index.ts' is not listed within the file list of project 'C:/Users/shrey/Desktop/Elemental_harness/tsconfig.evalcheck.json'. Projects must list all files or use an 'include' pattern.\r\n  The file is in the program because:\r\ntsc exit=2",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "7c53216cb68866d97cf97926",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Exit code 2\n4:  // consumers — tsx running scripts/ (no nearer tsconfig)\n8:  // single ts.Program (scripts seed tsconfig.host.json or tsconfig.client.json).\ntsconfig.base.client.json\ntsconfig.base.json\ntsconfig.client.json\ntsconfig.host.json\ntsconfig.json",
+        "is_error": true,
+        "tool_use_id": "toolu_01PeQ3TgysLc51am3LCxXsar"
+      }
+    ]
+  }
+}
