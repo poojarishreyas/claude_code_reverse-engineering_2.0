@@ -1,0 +1,19 @@
+{
+  "id": "ef1508b6ba6586a8d74a28a6",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UCLhjP6ssMHmcqQqaPAbS2",
+        "type": "tool_result",
+        "content": "# Agent Note: A file-finding evaluation gates code-navigation features\n\nStatus: implemented\n\n## Problem\n\nSeveral navigation features were proposed — symbol tools, a code graph with blast-radius queries, git co-change ranking, stack-trace seeding — each promising that the agent finds the right file faster. None could be justified or compared without evidence of how the agent performs today, and the decision was to build them only if they measurably help. The repository had no way to measure file-finding: snapshot tests replay recorded sessions and real-API tests check narrow behaviors.\n\n## Decision\n\n`scripts/eval/` mines tasks from a repository's bug-fix history, runs the agent on each, and records file-finding metrics.\n\n- **Tasks.** A qualifying fix commit changes 1–3 source files and at least one spec file within 12 changed files; locale-only fixes are skipped. The task workspace is a detached worktree at the fix commit with its source files restored to the parent, so the fix's own tests fail. A task whose tests already pass is dropped.\n- **Prompt.** The agent receives only the failing test output and an instruction not to edit tests — not the commit subject or source paths — like a CI failure report.\n- **Run.** The headless base driver used by recorded snapshots boots the shipped base profile with `scripts/eval/eval.cordis.yml`: model from `DSH_EVAL_PROVIDER`/`DSH_EVAL_MODEL`, workspace-write sandboxing, approvals `never`, uncompressed logs.\n- **Difficulty.** Each task is tagged `cross-package` (a fix file is outside every failing test's package), `indirect` (no failing test imports a fix file), `multi-file`, or `direct`. `--hard` runs the tagged kinds round-robin, because a first live run showed a `direct`-style task tells little: the agent read the right file at step 1. Of the 111 newest candidates, 43 are direct, 25 indirect, 12 cross-package, and 50 multi-file.\n- **Metrics.** Computed from the streamed session events: pass, right-file edited, first step that saw or read a fix file, reads before the correct read, steps, tool calls, extra edits, test edits, and token usage.\n\n`pnpm run eval:file-finding -- --repo <path> [--dry-run]` runs it. This repository's history is squashed to 17 commits, so tasks come from a repository with real history; a blobless clone of upstream `deepseek-ai/deepseek-harness` yields 1,751 candidates before the locale filter.\n\n## Alternatives considered\n\n**Hand-written tasks.** Fully controllable, but slow to write and biased toward what the author thinks is hard. Mined fixes come with a real answer (the diff) and real tests.\n\n**SWE-bench.** A standard benchmark, but in Python repositories unlike the TypeScript codebases this harness is used on, and it needs Docker images per task. It can be added later as a second task source.\n\n**Measuring in the web app.** Fidelity would be highest, but runs would need a browser and could not be scripted in bulk; the base driver is already the recorded-snapshot path.\n\n## Consequences\n\n- Navigation features get a before/after number on the same tasks instead of an argument.\n- A full run needs a model key and installs dependencies per task, so it is slow and costs tokens; `--dry-run` validates tasks without a key.\n- The failing test paths hint at the package, so the numbers measure finding the file within a package more than across the repository.\n- The base profile differs from the web presets in compaction mounting, so results describe the agent loop and tools more than web-specific behavior.",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
