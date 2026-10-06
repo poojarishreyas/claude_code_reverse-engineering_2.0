@@ -1,0 +1,22 @@
+{
+  "id": "a7e75214922a22dad329ad73",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_015HQDgXHvobB61fPJgfsNir",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && cat > \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/edit_readme.py\" <<'PYEOF'\np = r'C:\\Users\\shrey\\Desktop\\Elemental_harness\\scripts\\eval\\README.md'\ns = open(p, encoding='utf8').read()\ndef rep(a, b):\n    global s\n    assert s.count(a) == 1, a[:60]\n    s = s.replace(a, b)\nrep(\"| steps, tool calls, input tokens | Cost of the run |\", \"| steps, tool calls | Model responses and tool calls the run took |\\n| prompt tokens | Every input token sent, cached or not, so agents with different caching compare fairly |\")\nrep(\"\"\"DSH_EVAL_PROVIDER=<provider id> DSH_EVAL_MODEL=<model id> pnpm run eval:file-finding -- --repo <path-to-repo> --home-from ~/.dsh --only <hash>,<hash>\n```\"\"\", \"\"\"DSH_EVAL_PROVIDER=<provider id> DSH_EVAL_MODEL=<model id> pnpm run eval:file-finding -- --repo <path-to-repo> --home-from ~/.dsh --only <hash>,<hash>\n\n# The same tasks worked by Claude Code (the installed `claude` CLI), for comparison.\npnpm run eval:file-finding -- --repo <path-to-repo> --hard --limit 6 --agent claude-code --claude-model sonnet\n```\"\"\")\nrep(\"\"\"## Limits\n\"\"\", \"\"\"## Comparing with Claude Code\n\n`--agent claude-code` gives the same prompt to `claude -p` in the same prepared worktree and scores its stream-json output with the same metrics. It loads only project settings and no MCP servers, so your own hooks, plugins, and servers do not change the result. It runs with permission checks bypassed and no sandbox, confined only by working in a throwaway worktree. It authenticates however your `claude` does; set `ANTHROPIC_BASE_URL` and `ANTHROPIC_AUTH_TOKEN` to point it at another Anthropic-compatible endpoint.\n\nA comparison measures the harness only when both agents use the same model. Run each agent on the same task list, then compare the two `summary.md` files.\n\n## Limits\n\"\"\")\nopen(p, 'w', encoding='utf8', newline='\\n').write(s)\nprint('ok')\nPYEOF\npython \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/edit_readme.py\"",
+          "description": "Document Claude Code comparison mode in eval README"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
