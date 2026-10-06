@@ -1,0 +1,22 @@
+{
+  "id": "befef6309794a456a3167a2a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSiwcKEAgSGAI4AUIIdGhpbmtpbmcSDBC6idsCTdsJ92Y62RoMcGl2zXw5fDse3woYIjAlShmJ9wKmHE1D95j7BuZgImR/OExQ0LIuFccbR5s6RpCQhcLyENkhGwyu6/RxlhYqqAaE+ZPQJAecfMuijn72cc++5+/gxDgRB4aVgfuZI2QdwdGWDYt+bI1pbxe4CqLkJfAYUhtca7KraaBH3gWGBwuMB7cVuSMVHn5avphjIaILTvb4TWB1ZKvozdtNZ9enA0m1Nqz+21bO3y4bkDk5UA00DCKv0jjw+1hkU2BI7RhPITsWoKbqplzRosNQhaCGYSTTP1GQTZBaO+0XzirrfLRS/HzMkYytWcMhKIYDUFJZ38OdfRXrCg2rPPq9N27Gl6dA6lYtWIbQM3oIWjkALOibWmUb6TJ5hZhaK6kGkDTyWVhTi5vbLl73gLSe4Mt5vINEWvn25bXpC2/ymXI9oaH/2ITyBD9x2sY4uY4O04avmKZdE/dA5IsHyH7gY1naCwH8oJgx9kNX5ZUQVV8CtYDzVeFP+Eb68bUBzZibJ/1TeMsJVZPqDHkmu8I831w5CQOntSvwhBp0+HXynrbDyV4scUirnmnWJ6tr1DtK6y29JVZkywNvoSuq4vv+MGF+0wnXUjmuIOQehb4fslY0FHvw8LFPQAjU5Ts0CVQd9lyl70+0ZWZ7UwVVZugzEuLarASGYki4ATe6IDl+qVroLt6B7wpMvS8WsE8hDdWLgz0CyUb2LAXCDCviypXCYGHt3g8hXxacTohLmCu29cUsnsMF44DYQ6nX3lf4tHih7lUX2argBsv1UdOc/4baHxBjEcy2ADGz7rOpxhW08TvADvrshsm7o12vWe6yet63becDyu0ginXLwO4iQr4y7hVYV7jif1Z++AyeW4dIde12LtPtXnfGmql9O6pm2j/BoPbHJmN0n/PZ36o4VK2xWc0mYJm9D1i+wt+SxTJtTriWCA0R/xzxARbRP11/I4ZkOlcKpgfdFMmLk72IoufbhcZES4HGifMsbncwI6keHrZ4Su6DBwfM2zkf0F47Oqjux0nb3BawVQie+SgQeufWiYU9F8ixOX5lz/N2TV6+hNpDTy2ECZ/s7E5lLMinAdfYnWIRdWUhXGh9TuMhjqp4lczelqEG8pU8Buh+fD9M1pytrVQTKwBhMFBHGYDvpWmJnjzmRPuWydKXo7e9GAE="
+      },
+      {
+        "type": "text",
+        "text": "Claude Code has been on e21ed97f29 for about 30 minutes. It's the hardest task (cross-package, indirect, multi-file). The eval stops a run at 60 minutes, so this one will finish one way or the other. The monitor is restarted.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
