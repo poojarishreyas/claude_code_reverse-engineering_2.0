@@ -1,0 +1,19 @@
+{
+  "id": "92b66bc043653c7c8cc5b789",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UgzHTcyGP8vnP3mkK2rtBv",
+        "type": "tool_result",
+        "content": "51 {'todo_write': 3, 'read': 17, 'glob': 2, 'pwsh': 20, 'grep': 5, 'write': 1, 'edit': 2} 3 21 ['packages/client/ui-user-questions/src/client/index.ts', 'scripts/shim-exec.cjs'] ['scripts/shim-exec.cjs'] False 3562507 ['packages/client/ui-tool/src/client/tool/toolviews/ask-question-row.tsx', 'packages/client/ui-user-questions/src/client/index.ts']",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

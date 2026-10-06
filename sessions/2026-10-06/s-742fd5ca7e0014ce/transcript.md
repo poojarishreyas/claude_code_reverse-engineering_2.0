@@ -5,8 +5,8 @@
 | session | `s-742fd5ca7e0014ce` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-06T16:12:54.080Z |
-| requests | 33 (3 errored) |
-| tokens | in 80 · out 14,120 · cache read 2,631,903 · cache write 55,644 |
+| requests | 35 (3 errored) |
+| tokens | in 86 · out 14,810 · cache read 2,861,074 · cache write 58,153 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -2589,4 +2589,187 @@ There's a cheap fix this evidence does support: dsh spent about 40 steps figurin
 Running now: task ed34a1d7fe, 6th of 10. On qwen, this task hit a 400 error at step 62.
 
 _stop `end_turn` · 18.77s (ttft 18.75s) · in 2 · out 1,729 · cache r105,937/w7,654_
+
+---
+
+## req-0034 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 68 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01BUfWXvfC9sBPTPDptHLSr8)_
+
+````
+---
+description: "The Windows write-restriction sandbox backend for users and maintainers choosing, configuring, or debugging restricted-token process confinement on Windows."
+kind: "package-library"
+---
+
+# @deepseek-ai/dsh-sandbox-windows-acl
+
+## Summary
+
+`dsh-sandbox-windows-acl` confines Windows processes by write restriction: a child runs under a restricted token whose write access is limited to the workspace and a private temp directory, so `workspace-write` allows those writes and `read-only` allows none. It ships as the win32 rung of `dsh-sandbox-local`: mounting the local provider on Windows gives every confined bash or pwsh call this backend automatically. It can also be embedded directly through the `AclSandbox` API to spawn confined children with captured stdio. Every Win32 call is checked and failures throw, so a child is never spawned unrestricted. Enforcement is partial by design — the restricted token must retain Everyone for process initialization, and NTFS hard links can alias one file object across paths — so the backend reports `partial` and callers that need the absolute boundary can surface it.
+
+## Table of Contents
+
+- [Use this package](#use-this-package)
+- [Understand the implementation](#understand-the-implementation)
+- [Further Exploration](#further-exploration)
+- [Model Experience](#model-experience)
+- [Known Limitations and Deferred Work](#known-limitations-and-deferred-work)
+- [Dev Note](#dev-note)
+
+-----
+
+<a id="use-this-package"></a>
+## Use this package
+
+On Windows, mounting the local sandbox provider makes this backend the runner behind `ctx.sandbox` — no extra configuration. Embed the `AclSandbox` API directly when you spawn confined children outside the harness.
+
+### When to choose it
+
+Choose it for Windows compositions that confine subprocess file effects under `read-only` or `workspace-write`. Choose a different mechanism when the child must also be read-confined or network-restricted: `WRITE_RESTRICTED` intersects write accesses only, so pair this backend with a read-side policy or an AppContainer capability token for stronger confinement.
+
+### Direct API
+
+`AclSandbox` spawns a confined child with captured stdio (or inherited stdio for runner-style use). It requires an explicit private temp directory, or `tempDir: null` to disable temp writes — the ambient temp root is never an implicit grant.
+
+```ts
+import { mkdtempSync, rmSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
+import { AclSandbox, tempWriteSid, workspaceWriteSid } from '@deepseek-ai/dsh-sandbox-windows-acl'
+
+const workspaceRoot = process.cwd()
+const tempDir = mkdtempSync(join(tmpdir(), 'dsh-'))
+
+// mode selects the token's restricting-SID list (see Modes below) and must
+// match the grant shape. workspace-write requires distinct workspace and
+// private-temp identities; pass tempDir: null to disable temp writes.
+const sandbox = new AclSandbox({
+  writableDirs: [workspaceRoot],
+  tempDir,
+  writeSid: workspaceWr
+... [17,688 more characters in session.jsonl]
+````
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+The cause is already known to the dsh team. It's in the sandbox's own docs (`packages/sandbox/sandbox-windows-acl/README.md` and the 2026-08-08 design note):
+
+> named-pipe opens remaining denied, so libuv piped-stdio grandchildren fail with EPERM while inherited/ignored stdio and anonymous pipes work.
+
+In simple terms:
+- On Windows, Node connects to a child process through a *named pipe*.
+- The sandbox's restricted token isn't allowed to write to that pipe, so any child that Node starts with piped output fails.
+- Vite (`exec('net use')`), vitest's `forks` pool and tests that spawn `node` all start children this way.
+
+This isn't a bug I can patch quickly. It comes from how the restricted-token sandbox works. The obvious fix, giving the token write rights to the pipe, would also let it write outside the workspace. So for comparing against Claude Code, the honest options are:
+
+1. **Run dsh with the sandbox off** (full access, like Claude Code's `bypassPermissions`). This measures the agent loop and search fairly.
+2. **Also keep the sandboxed numbers**, because that's what a real Windows user of dsh gets.
+
+There's a cheap fix this evidence does support: dsh spent about 40 steps figuring out the EPERM error by itself. Telling the model the limit up front, or when a spawn fails with EPERM, would save those steps. I'll only propose it after the full numbers are in.
+
+Running now: task ed34a1d7fe, 6th of 10. On qwen, this task hit a 400 error at step 62.
+
+#### USER
+
+<system-reminder>
+[SYSTEM NOTIFICATION - NOT USER INPUT]
+This is an automated background-task event, NOT a message from the user.
+Do NOT interpret this as user acknowledgement, confirmation, or response to any pending question.
+No human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.
+
+<task-notification>
+<task-id>bq0uyfm96</task-id>
+<summary>Monitor event: "dsh gemini eval task results"</summary>
+<event>eval: ed34a1d7fe -&gt; ran (passed)</event>
+</task-notification>
+</system-reminder>
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01UgzHTcyGP8vnP3mkK2rtBv)_
+
+```json
+{
+  "command": "cd \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-dsh\" && python -c \"\nimport json;d=json.load(open('ed34a1d7fe.json'));m=d['metrics'];u=m['usage']\nprint(m['steps'],m['toolCalls'],m['firstSeenStep'],m['firstReadStep'],m['editedFiles'],m['extraEdits'],m['editedTests'],u['inputTokens']+u.get('cacheReadTokens',0),d['task']['sourceFiles'])\"",
+  "description": "Inspect ed34a1d7fe dsh metrics"
+}
+```
+
+_stop `tool_use` · 7.29s (ttft 7.01s) · in 4 · out 324 · cache r113,591/w1,989_
+
+---
+
+## req-0035 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 70 messages_
+
+#### USER
+
+<system-reminder>
+[SYSTEM NOTIFICATION - NOT USER INPUT]
+This is an automated background-task event, NOT a message from the user.
+Do NOT interpret this as user acknowledgement, confirmation, or response to any pending question.
+No human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.
+
+<task-notification>
+<task-id>bq0uyfm96</task-id>
+<summary>Monitor event: "dsh gemini eval task results"</summary>
+<event>eval: ed34a1d7fe -&gt; ran (passed)</event>
+</task-notification>
+</system-reminder>
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01UgzHTcyGP8vnP3mkK2rtBv)_
+
+```json
+{
+  "command": "cd \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-dsh\" && python -c \"\nimport json;d=json.load(open('ed34a1d7fe.json'));m=d['metrics'];u=m['usage']\nprint(m['steps'],m['toolCalls'],m['firstSeenStep'],m['firstReadStep'],m['editedFiles'],m['extraEdits'],m['editedTests'],u['inputTokens']+u.get('cacheReadTokens',0),d['task']['sourceFiles'])\"",
+  "description": "Inspect ed34a1d7fe dsh metrics"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01UgzHTcyGP8vnP3mkK2rtBv)_
+
+```
+51 {'todo_write': 3, 'read': 17, 'glob': 2, 'pwsh': 20, 'grep': 5, 'write': 1, 'edit': 2} 3 21 ['packages/client/ui-user-questions/src/client/index.ts', 'scripts/shim-exec.cjs'] ['scripts/shim-exec.cjs'] False 3562507 ['packages/client/ui-tool/src/client/tool/toolviews/ask-question-row.tsx', 'packages/client/ui-user-questions/src/client/index.ts']
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Task 6 of 10 (ed34a1d7fe) **passed**. On qwen, dsh errored out on it at step 62.
+
+- **Steps:** 51.
+- **Prompt tokens:** 3.56M, mostly cache reads.
+- **Files edited:** one of the two source files from the real fix, and the tests passed with that alone.
+- **Found the file at step 3, but didn't read it until step 21.** That's the same slow saw-to-read gap as on a59beb8ae3, and worth comparing with Claude Code.
+- **Extra file:** it created `scripts/shim-exec.cjs`, again a workaround for the sandbox blocking child processes. So the sandbox costs steps on almost every task.
+
+So far: **3 passed, 1 failed (sandbox blocked its test runs), 1 network error to retry**, plus 2 invalid tasks. 4 tasks are left.
+
+_stop `end_turn` · 6.85s (ttft 6.77s) · in 2 · out 366 · cache r115,580/w520_
 
