@@ -1,0 +1,8 @@
+{
+  "id": "2db0dc4143f0bc93c8edb9da",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": "[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>bq0uyfm96</task-id>\n<summary>Monitor event: \"dsh gemini eval task results\"</summary>\n<event>eval: ed34a1d7fe [cross-package, multi-file] fix: keep queued question replies read-only after reload</event>\n</task-notification>"
+  }
+}
