@@ -1,0 +1,17 @@
+{
+  "id": "098d131a34ea1d8aed8a48b8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "<system-reminder>\n[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>bh4fmw7ax</task-id>\n<summary>Monitor event: \"dsh comparison run: per-task results\"</summary>\n<event>eval: 54fa38795f -&gt; error — agent turn failed: kiro/qwen3-coder-next: model — [402]: You have reached the limit. (HTTP 402)</event>\n</task-notification>\n</system-reminder>",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
