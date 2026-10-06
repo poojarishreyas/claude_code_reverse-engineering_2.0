@@ -1,0 +1,19 @@
+{
+  "id": "9dbc1fa9bbac6aadd6c04516",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CT91XHAtZv4yAMq2qn5wF7",
+        "type": "tool_result",
+        "content": "eval: 54fa38795f [multi-file] fix(experimental): drop unknown casts from the mods bridge and its tests\neval: 54fa38795f -> ran\neval: f04ad05f30 [cross-package, multi-file] fix(user-questions): reset projection version and use brand utility\neval: f04ad05f30 -> ran (passed)\n| task | difficulty | status | passed | right file edited | first seen step | first read step | steps | prompt tokens | subject |\n|---|---|---|---|---|---|---|---|---|---|\n| 4eb53e63ff | cross-package, indirect | invalid | no | no | - | - | - | - | fix(ci): cover HMR edge cases and document strict assertions |\n| 4b9d8ad6f7 | indirect | ran | yes | yes | 3 | 5 | 47 | 2714311 | fix(client): re-pin StateDot loaders whose animation restart |\n| a59beb8ae3 | multi-file | ran | yes | yes | 2 | 13 | 82 | 6229767 | fix(hmr): preserve manifest refresh with Office resolution |\n| e21ed97f29 | cross-package, indirect, multi-file | error | no | yes | 20 | 39 | 78 | 5208256 | fix(desktop): deliver Windows console signals to CLI handler |\n| 1f8cdc08a1 | indirect, multi-file | invalid | no | no | - | - | - | - | fix(ui-chat): document dock pill replacement order and outsi |\n| 980b410340 | multi-file | ran | no | yes | 2 | 6 | 75 | 7585728 | fix(hmr): preserve native manifest behavior |\n| ed34a1d7fe | cross-package, multi-file | ran | yes | yes | 3 | 21 | 51 | 3562507 | fix: keep queued question replies read-only after reload |\n| 9633724b40 | indirect | ran | yes | yes | 3 | 6 | 35 | 1582490 | fix(app-boot): drop the retired schedule bundle from profile |\n| 54fa38795f | multi-file | ran | no | no | 2 | 24 | 79 | 6291618 | fix(experimental): drop unknown casts from the mods bridge a |\n| f04ad05f30 | cross-package, multi-file | ran | yes | yes | 2 | 3 | 33 | 1349069 | fix(user-questions): reset projection version and use brand  |\nran True ['packages/client/ui-user-questions/src/client/index.ts', 'packages/interaction/user-questions/src/projection.ts']\r\n33 {'read': 9, 'grep': 4, 'pwsh': 16, 'glob': 1, 'edit': 2} 2 3 ['packages/interaction/user-questions/src/projection.ts'] [] False 1349069",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

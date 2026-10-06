@@ -1,0 +1,22 @@
+{
+  "id": "fc193116925a8d2140c82ac4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01CT91XHAtZv4yAMq2qn5wF7",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; grep \"^eval: \" \"$S/gem-dsh.log\" | tail -4 | cut -c1-250; cat \"$S/gem-dsh/summary.md\"; cd \"$S/gem-dsh\" && python -c \"\nimport json\nfor t in ('f04ad05f30',):\n  try:\n    d=json.load(open(t+'.json'));m=d.get('metrics')\n    print(d['status'],d.get('passed'),d['task']['sourceFiles'])\n    if m: u=m['usage'];print(m['steps'],m['toolCalls'],m['firstSeenStep'],m['firstReadStep'],m['editedFiles'],m['extraEdits'],m['editedTests'],u['inputTokens']+u.get('cacheReadTokens',0))\n  except Exception as e: print(e)\"",
+          "description": "Show final dsh summary"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
