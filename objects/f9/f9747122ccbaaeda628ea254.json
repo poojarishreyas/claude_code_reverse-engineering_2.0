@@ -1,0 +1,18 @@
+{
+  "id": "f9747122ccbaaeda628ea254",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Your questions have been answered: \"kiro is still out of quota. Should I run the comparison on OpenRouter's qwen3-coder-next through OmniRoute instead? It's the same model, but it's billed to your OpenRouter account at $0.12 per million input tokens and $0.80 per million output tokens.\"=\"Wait for kiro to reset\". You can now continue with these answers in mind.",
+        "tool_use_id": "toolu_01EjqzTtgM8uGqqzffBR1txn",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
