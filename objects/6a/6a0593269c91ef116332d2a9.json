@@ -1,0 +1,19 @@
+{
+  "id": "6a0593269c91ef116332d2a9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CZKNbZikzFqacTFS4KgqKa",
+        "type": "tool_result",
+        "content": "0\n1f8cdc08a1 invalid - steps None seen None read None rightEdit None tokens 0 tests pass without the fix:\r\n\r\n RUN  v4.1.8 C:/Users/shrey/App\r\n4b9d8ad6f7 ran PASS steps 24 seen 6 read 7 rightEdit True tokens 708659 \r\n4eb53e63ff invalid - steps None seen None read None rightEdit None tokens 0 tests pass without the fix:\r\n\r\n RUN  v4.1.8 C:/Users/shrey/App\r\n54fa38795f error - steps 25 seen 2 read 3 rightEdit True tokens 871181 agent turn failed: kiro/qwen3-coder-next: model � [402]: You\r\n9633724b40 ran - steps 58 seen 3 read 4 rightEdit True tokens 3705787 \r\n980b410340 ran - steps 33 seen 2 read 3 rightEdit True tokens 1919263 \r\na59beb8ae3 ran - steps 36 seen 1 read 3 rightEdit True tokens 1696583 \r\ne21ed97f29 ran - steps 20 seen None read None rightEdit False tokens 421875 \r\ned34a1d7fe error - steps 62 seen 3 read 4 rightEdit True tokens 3440793 agent turn failed: kiro/qwen3-coder-next: model � [400]: Imp",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
