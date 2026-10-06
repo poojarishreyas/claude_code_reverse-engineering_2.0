@@ -1,0 +1,17 @@
+{
+  "id": "48ed2413dedf96e2ba3ac20c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "dsh passed task 2 (4b9d8ad6f7).",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

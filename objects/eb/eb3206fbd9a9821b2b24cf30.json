@@ -1,0 +1,22 @@
+{
+  "id": "eb3206fbd9a9821b2b24cf30",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSsQgKEAgSGAI4AUIIdGhpbmtpbmcSDKwI+2WJ9mPN4h0dzhoMibS8lF5U2OarV0o4IjCoUK5zGzKmH0JMIflHzAgpp5THeLt+TYj+Vyda5qYtx2u5PqajoB8Awihu8ZnZOwgqzgcoTXXP1UaiEah9wUnJOL1JaJ2YpCeEmwc4RNienkvo5Rk3hCZOfluC/tEFDdRikRL+v4DrMwl8Sl/zRABfTUJFP97vBdASlPIrf7BZHxa4O3RdNgLpvp4oHwJ9Ug3+U5uSABt/VmJ1INnxUx96hSEb7hsWZAFiOUKJrDEHqtojHrHuuR/hdy0EbjYDfuxJ8b2Ym99+INFVzBzt2H40hyWbIfutFtq7p9wC2vFiKjvGIf2zk4BLTNHhqpoIPs3wIFGkMlAOfYhiSC1/JLeD/O/pA8u3UgwhOLnGIQLeOxLROTWPQBMcc8vOv5qu2+cQiZZvMFYdQ4qVHFi45zcceErlwvqZVoGYRmlqyziiWCSh8WIrgtzDssVcffiu4QqdVNB+EW71+6FbShxqs427bawJM27bO5VidAlpuJ+SW+gzYYr7+eNj7S7S4BFOHtQ2YXlPb1+Wq/z37mhNM7iC6McM8BXT29B++ZfWbFOgzpjPaJX4/JitifYTYoFFmI0hyOdpQ+PRpUAJMsvXHeiTs7St6SrOfYpXnQq9MoGyj+3MZlA7Jj5BWc0Shqlb/bvH5lrIwdiZlAKUbr0AC04tiF35vmi/rBDyZtUJFNRCplGG7ZG9Fo3I+m1g4Eh/2yLy+jCEWkwKbyqnKvtSMQ2svtz+vIqdI1FeNHwpYcmUyTVSMJsmnnfkWzRipRhxHdxV76o8uWtc9RreaNdb5zMatAhzJmdNF1x4h+dXt0dStmpmS+z4vUMeFmGvIXm6xNhTHcC183GuSBkk39d5w2aj91miESNgv62Nh5vKgD6HkWDIrqEQL3d2xm1kQ2oDCJLi4YtYVLXKtUu5yfxXDzVs121KOKUm+GTFbogGDWNG2UbM5zBkWjqbqdtfQrqf/+ay71yK3ZTdjBuU85pQAOJGYNq7jIGDo8CJwtbKapNsT2SG8lOtZSzG9U3WWdf/S5I+1oGYgxetLQFZfQvWCdnbzrpHDoA2Ik9+yDyOj9pv0DgeRr3QSiW089jf1pqrwfsGRYCDLPXESozOzbRnNhlHqQgVvJ6QThjKboPS+lGAIpV1cPrVxtlC6aOJPUMw0n8QdAZs9xbz5L7PC07k2snE4cIdwEqdK9TulA5G1duT6kF9PH5byAT2ArwqNJizwXBn3ySje4SVIf/WaOfLL3vB0WP0PnEMR74RFNA9TvxCJ1Np2dT4HD/iQRzEl3yJU6IdzUHThDk6o4tLgcLRd7qEE9Bwg56ygzRogKD4kBrFbH+LmEvcUqAThL8TDxdP38mN4IYgIWXHkZRrSawf7cy79BgB"
+      },
+      {
+        "type": "text",
+        "text": "The watch timed out, so I've restarted it. It only reports tasks that haven't been reported yet. So far: 1 dropped, 1 passed. The run is on task 3.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
