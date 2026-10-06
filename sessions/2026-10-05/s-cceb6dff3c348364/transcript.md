@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-05T20:15:23.921Z |
 | requests | 3 |
-| tokens | in 98 · out 3,675 · cache read 135,785 · cache write 23,485 |
+| tokens | in 100 · out 6,265 · cache read 135,785 · cache write 107,865 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -409,4 +409,86 @@ The following skills are available for use with the Skill tool:
 - keybindings-help: Use when the user wants to customize keyboard shortcuts, rebind keys, add chord bindings, or modify ~/.claude/keybindings.json. Examples: "rebind ctrl+s", "add a chord shortcut", "change the submit key", "customize keybindings".
 - code-review: Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's review recipe covers them) at the given effort level (low/medium: fewer, high-confidence findings; high→max: broader coverage, may include uncertain findings; ultra: deep multi-agent review in the cloud (requires claude.ai account access)); with no level given, it reuses th
 ... [4,203 more characters in session.jsonl]
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+The papers split into two camps, and choosing between them is the first decision. After that come four smaller choices. For each one I give the options, the trade-offs, and what I recommend.
+
+## Decision 1: Who does the finding, the agent or the harness?
+
+| | **Pull** (the agent searches with tools) | **Push** (the harness finds candidates first) |
+|---|---|---|
+| Papers | LocAgent, SWE-agent, AutoCodeRover, Claude Code | Agentless, SweRank |
+| Good | Flexible; handles vague tasks | Cheap and predictable; works even with weak models |
+| Bad | Many steps and tokens; weak models use the tools badly | Rigid; if the first guess is wrong, the agent is misled |
+| Our evidence | qwen3-coder took 67 steps on one task | — |
+
+**Recommendation: a hybrid.**
+- **Push a small list of likely files with their evidence, and only when the evidence is strong.**
+- **Pull** gives the agent good tools for everything else.
+
+Your harness is model-agnostic, so it often runs cheaper models. Pushing helps weak models the most. Claude Code is pull-only, because it can rely on strong Claude models.
+
+## Decision 2: What evidence do we use?
+
+This is where we can be **extraordinary**, because each paper uses only one kind of evidence:
+
+| Kind | What it means | Paper | Cost | Strength |
+|---|---|---|---|---|
+| **Runtime** | Which code the failing test actually ran | AutoCodeRover | One test run | Very precise, but only when there is a failing test or a stack trace |
+| **Structure** | Imports, calls, who uses what | LocAgent, RepoGraph | One-time parse | Finds dependents across packages |
+| **History** | Files changed together before | Repository Memory | `git log`, cached | Finds hidden links the code doesn't show |
+| **Meaning** | Text similarity between the issue and the code | SweRank, embeddings | Model calls or GPU | Helps with vague issues like "the button looks wrong" |
+
+**Recommendation:**
+- **Combine runtime, structure and history** (all cheap, with no LLM call), and attach the evidence to every candidate, as SemNav does.
+- **Leave out meaning (embeddings) for now.** Add it only if the eval shows vague tasks failing.
+- No one, including Claude Code, combines all three. That's our edge.
+
+## Decision 3: How do we build the code graph?
+
+| Option | Accuracy | RAM / startup | Languages | Verdict |
+|---|---|---|---|---|
+| grep only (today) | Low for cross-package work | None | All | Not enough |
+| **tree-sitter** | Good: about 90% of links resolved (my estimate) | Small, fast | Many | **Main engine** |
+| LSP / tsserver | Exact | 1–2 GB, slow start | One server per language | **Fallback** for unclear cases only |
+| LLM-built summaries | Fuzzy | Costs tokens | All | Skip |
+
+## Decision 4: Who ranks the results?
+
+| Option | Cost | Quality | Verdict |
+|---|---|---|---|
+| **Simple fusion (RRF) plus rules** | Free, instant | Good | **Start here** |
+| Weights learned from our eval data (AIRCoder idea) | Free at runtime | Better | Later, once we have about 50+ task results |
+| LLM reranker (SweRank) | Model call per query | Best on hard cases | Only if the eval proves ranking is the bottleneck |
+
+## Decision 5: Does the job end when the right file is found?
+
+**No, and this is the part every paper skips.** Our failures happened after the agent found the right file:
+- it edited the test instead of the source;
+- it missed the dependent file;
+- it said done without running the tests.
+
+**Recommendation: a closed loop.**
+
+```
+find (evidence) → edit → impact check + type check → run tests → only then "done"
+       ▲                                                  │
+       └──────────── test still fails: re-find with new evidence (RepoCoder)
+```
+
+## The chosen strategy in one line
+
+**An evidence engine that keeps retrieval going until the tests pass:** cheap runtime, structure and history evidence; a small push of candidates when the evidence is strong; graph tools for pulling; and an impact and test check before the agent may say done. There are no LLM calls in the retr
+... [909 more characters in session.jsonl]
+
+_stop `end_turn` · 29.30s (ttft 11.12s) · in 2 · out 2,590 · cache r0/w84,380_
 
