@@ -1,0 +1,28 @@
+{
+  "id": "c0baaed74550f74fa9c94177",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSvQcKEAgSGAI4AUIIdGhpbmtpbmcSDFWzBd22sJd9OieAExoM24ohnd2VpRl8I/YLIjD76cC0xQh+wQiWgqw299e+dDn9dEg1pGssdnJwMjxtW4H7PTr7AVlwXidYaw6LnCYq2gaTFNpikgRpnfzcy6cd82SLDpx1LcLPInAY8MVL+k5lRQ3/WP6dT33AlRxr8F+t/scnEKXgvz2YgYpQekqf3rmpo6zfFkdLYwhy9sIjq0+npEN+s3rr/U0HSitSIoA3oyVKjuFlFraljX9pjLhPhpP/3icfZqM2+1fTUC9HG8W1WWeq067eghlyKnuv7LoQ2/SBusdGY+5JR4v2J1B9Kxv9lKYltYPNw5g+6y9z0qiTSVa6WBht7G1u5BI7AD0p6Vnp/j2QRbQIISNNijMUF4pMNiVD8RBRri49gF7kpXh7rDJLWx6q/6qj/Jl7C9P4a7HaTSyZsCFhY6V8jUpW/Rq0308ZR/KYxhkzO15hoyrexQcQi4WSawuZ9uA7to4sn5tEbSqq9lSRvbkV2JynfLw08Sn+iiJCV8UaJsIlbNTkxos9xaEV2AHuIUfhBiBPoSPDvzgliii7vs1CLscNoag0xYGY2nYKQGn4jBIP8J8JBaT4WcHh3m5CTAiTl3fCZF43+rZ78cPYzVLfopAR+lmIoMyEzgqNLxjDnr99jWh44ZpiTyEphfb9+hD5Jn3pBsfpz+BKeRC92axpQ3qnIEtzcEPs67OwaeLMQ/ANErXXwuRiCtj1sBrE8LcM0CJAxO5d2n5REee2ognTZmE50ey+tJyQfVu9pObqZrGBVeJLkMV+lY5NlxzgcTdQJQGPKIVt/tSSlmmsu0wtwwzF5FbAD3yI05YZs7p+YxCsL8wQW4PdjvdKVCdoUnOUkxLL5JJBHgBJsfONSA4rsFSPmDw6sy0/Lyr/RBSgpWWTkGYbIFWaXAIx+FM4ARX7CR/IK1PdArJ9kyIC1qnHvCVo49FcePes1SGHk0NE5OoAb8DjUA4nSl3UKs8qqNDSzO3gbx1uOObOXf6Oj7Zay7xgsE37kc2unsQKNyZ+gKFuAHOWn+NW0Tg8RoVjUhFWg0aE76CHR69F/xH0tPrW5OdWX7emwHSxXNgziS5abCM/I8SzXUtpOm8SbTv93ljVgylFqlzz020xxb1G3Aws7hPnBH/zA2PLpHuKiHG0wAtOXQ0LKWOSQf2w3k16qz9xU3UjxnHhUeZn9iH93eAOaYTwEFjVLivB5LSWTe9RirnL2+3cu5GWLW8HZ8N5X5sYAQ=="
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSwAcKEQgSGAI4AUIJbmFycmF0aW9uEgyeSt5KGdc52D1g1YIaDEyTXDirwYeI+Q8u3iIwSV3w2F9OtDJgvhStGlf1rywyi9mdBfarfYl54Tpeq8MrvihNS94wFB4xauKL39pcKtwGmMwlzZ0XDWbLtBv1VmoRdZSdVdToWuV2vxMHSfqcXb0Wm7EdAe0G/Ft/MwhD0NaBoHEaG4S/o9i18KETH2Xv3R4YUFF6+nI+UplMClUG64eyzXpTIsGKlFFntxgl0dMT8+JOvK5ed3CSZZeCy5yun28pTYpFlnL0ynpLhxWtzr6LItXFlXIPNvBwdnWh5MIxlEToX1GW5it5L3V40gDsAvJvMBSLuGyIr29zWf7axqaE6C90ZA9FKLPMfCof5nkT053D9Ybw7iTRAw02pzxWJyTLnZyaG/JQGtx+NEQT43ga9IKtbgEGHMoES/TCzRVFNkceTBUmyKoltctNJ/mPgISfBu+LkizW/EhbAChRcYHueZKiCUzEr/4X4Yga+lHmvWyVWZQFCqr2cm/q8CbAVb/7kJUr5ccVcZAPMFgOmJ0twJ6bKUv+hW5kWip3vJtu6c8fiEEFxF3LBW/gy0JELLwaWvoGsewmVqf0jzHC8aQ9kxWc8OY6N4glMLpHq3oQNT1HONZWk6Nu3hLuyQSw0BbmjnjZQRPHbM7d0UY9C5Hn20DcS2/2muEMEaHa5Yw2hPdYFuP+5ZdW8J2tDsLJmeZcClZiYRA0ZhKTi5Ngvv4zENH2xQWxLqdhUmsNp0C7KhCDo7XgUAoXsE98UvEaFePeBs6UblVtc6MZemH4pzf7cCoaIkc0cYZQmvCx6aEOPJ2GHuNbRSNZBM4g0MZ4C+HwsR4UhZJrhg2nRvhCR2gT6JYepBqxg+JNjvj/FAHjkv72bLNPKpho5zfLU/J7Fp5fvU7iVVYjJQ8KLgPxLrEJrNHs9/p+yURZv16FHbB+tvSoeSpYMAp1cXVpiIotQngoQU5d1ZXsVqf4KFvfQdw/0HDTG46o+Aqo3O+gXZ4LfMcReOMxoQsfNAs6FzJS8WJVwElWw36XeJQ/sw1nfmI8ATSivhqul0Ujlezb8nX4EuARjMZWw6enzyMA++aHC5Pfmeiu17gaoK8Vh3pXx8mvaVq/lvbVNqdX8zJFRW7oI7ZiYexP99lw5LRwO+PSF3X7ssUPL4OrWgXr7Y+lL64WUKas6etvkK580x4YQSLyI59IzjWBgzJbZQBVAki041JjdFh1ghxVOXrx7IYmkFa5z+pQI1eh6kqouVAYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_014FXgeUVXMHrs1BU6yQqMuV",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-dsh\" && PYTHONIOENCODING=utf8 python - <<'EOF'\nimport json,re\nrows=[json.loads(l) for l in open('980b410340.events.jsonl',encoding='utf8')]\ncalls={}\nfor r in rows:\n  d=r.get('data',{})\n  if r['type']=='tool/call': calls[d['callId']]=d\n  if r['type']=='tool/result':\n    cid=d['message']['source']['callId']; c=calls.get(cid,{})\n    if c.get('name')=='pwsh':\n      a=json.loads(c['arguments']).get('command','')[:110].replace('\\n',' ')\n      txt=''.join(x.get('text','') for p in d['message']['content'] for x in p.get('content',[]))\n      if c['step']==14: print('STEP14 FULL:\\n',txt[:1800],'\\n----')\n      m=re.findall(r'Tests +[^\\n]*',txt)\n      print(c['step'],a,'|',m[-1][:90] if m else txt[-100:].replace('\\n',' '))\nEOF",
+          "description": "Show vitest error and all pwsh outcomes"
+        }
+      }
+    ]
+  }
+}
