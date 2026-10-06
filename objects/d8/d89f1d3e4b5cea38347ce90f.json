@@ -1,0 +1,19 @@
+{
+  "id": "d89f1d3e4b5cea38347ce90f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UcwbkrBH9ENDiyaARoRmJx",
+        "type": "tool_result",
+        "content": "   Id ProcessName StartTime            CPU_s\r\n   -- ----------- ---------            -----\r\n17744 chrome      10/6/2026 2:43:00 PM     1\r\n10944 audiodg     10/6/2026 2:46:05 PM     2\r\n 2948 chrome      10/6/2026 2:47:58 PM     0\r\n17908 chrome      10/6/2026 2:48:00 PM     0\r\n23088 chrome      10/6/2026 2:51:08 PM     2\r\n15152 chrome      10/6/2026 2:51:12 PM     0\r\n11956 git         10/6/2026 2:51:33 PM     0\r\n14040 git         10/6/2026 2:51:33 PM     4\r\n11688 cmd         10/6/2026 2:51:39 PM     0\r\n22040 conhost     10/6/2026 2:51:39 PM     0\r\n11896 powershell  10/6/2026 2:51:39 PM     1\r\n\r\n\r\n\r\n\r\nProcessId       : 9716\r\nParentProcessId : 17468\r\nCmd             : \"C:\\Program Files\\nodejs\\node.exe\" C:\\Users\\shrey\\AppData\\Roaming\\npm/node_modules/pnpm/bin/pnpm.mjs \r\n                  run eval:file-finding -- --repo C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Ele\r\n\r\nProcessId       : 18512\r\nParentProcessId : 9268\r\nCmd             : node   \"C:\\Users\\shrey\\AppData\\Local\\pnpm\\store\\v11\\links\\@\\pnpm\\11.7.0\\13310dfb63588666a20ffbb7892ec\r\n                  a80e4978178e90910f66079c792a7b2dc4f\\bin\\\\..\\node_modules\\pnpm\\bin\\pnpm.mjs\" \"run\" \"eval:file-findin\r\n\r\nProcessId       : 21576\r\nParentProcessId : 22276\r\nCmd             : node   \"C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.bin\\\\..\\tsx\\dist\\cli.mjs\" \r\n                  scripts/eval/run-eval.ts \"--\" \"--repo\" \r\n                  \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Element\r\n\r\nProcessId       : 20440\r\nParentProcessId : 21576\r\nCmd             : \"C:\\Program Files\\nodejs\\node.exe\" --require C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.p\r\n                  npm\\tsx@4.22.4\\node_modules\\tsx\\dist\\preflight.cjs --import file:///C:/Users/shrey/Desktop/Elementa",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

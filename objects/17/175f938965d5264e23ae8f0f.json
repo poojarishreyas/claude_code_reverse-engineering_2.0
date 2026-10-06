@@ -1,0 +1,23 @@
+{
+  "id": "175f938965d5264e23ae8f0f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01UcwbkrBH9ENDiyaARoRmJx",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-Process | Where-Object { $_.StartTime -gt (Get-Date).AddMinutes(-40) } | Select-Object Id, ProcessName, StartTime, @{n='CPU_s';e={[int]$_.CPU}} | Sort-Object StartTime | Format-Table -AutoSize; Get-CimInstance Win32_Process -Filter \"Name='node.exe'\" | Where-Object { $_.ProcessId -in 9716,18512,20440,21576 } | Select-Object ProcessId, ParentProcessId, @{n='Cmd';e={$_.CommandLine.Substring(0,[Math]::Min(200,$_.CommandLine.Length))}} | Format-List",
+          "description": "List recently started processes and eval node command lines"
+        }
+      }
+    ]
+  }
+}
