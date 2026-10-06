@@ -1,0 +1,15 @@
+{
+  "id": "004f4ee23aa40db1cf353e9c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01F7NgTtA1nRatFpi5cJ4Gb1",
+        "type": "tool_result",
+        "content": "ProcessId       : 16292\r\nParentProcessId : 20440\r\nName            : esbuild.exe\r\nCmd             : C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.pnpm\\@esbuild+win32-x64@0.28.1\\node_modules\\@e\r\n                  sbuild\\win32-x64\\esbuild.exe --service=0.28.1 --ping\r\n\r\nProcessId       : 11956\r\nParentProcessId : 20440\r\nName            : git.exe\r\nCmd             : git worktree add --detach C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-54fa38795f \r\n                  54fa38795f18983c83cd02ea3aa334a40175509e\r\n\r\nProcessId       : 14040\r\nParentProcessId : 11956\r\nName            : git.exe\r\nCmd             : git reset --hard --no-recurse-submodules\r\n\r\n\r\n\r\neval: 9633724b40 -> ran\r\neval: 54fa38795f [multi-file] fix(experimental): drop unknown casts from the mods bridge and its tests",
+        "is_error": false
+      }
+    ]
+  }
+}
