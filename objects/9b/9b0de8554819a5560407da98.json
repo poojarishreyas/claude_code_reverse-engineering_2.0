@@ -1,0 +1,23 @@
+{
+  "id": "9b0de8554819a5560407da98",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1AYKEAgSGAI4AUIIdGhpbmtpbmcSDG9q9G5qb/Q3ub9SqhoMmqU1oVUeTQWf6AJMIjDmapAa6NNSQYRMxUVExhhuMutv2PJy6n29T85ChJ+JEfRqTkz/Z+smK4Vt0IPN03Iq8QVKmKzML9yYL79eBxDngBcsJO18wQzidgFPQxQU61Q+TGD9jeqeEejnPQOL5Gp3uQX+4EL2lucqeJImGRQ5dWVY91dHJl9aqrGfmbKDaEFzBbr31j7apWs/0cNt19ovAnhxUYCnzTbPxpt+8Y2psg0WRSegzPVTk7Pz7Sssxb6FerV3YZrhpIozJReBXrYo5T4RqP4muFvCmHxcPpy0cd/egWWDnAekH7BlBHa7TH4q4v9t9+9ig/wrkvbIivaPQ+7qzJZ351yoLzkJ38GHHLgRq92u5QfTRjMXMMJ8hhITvg/+2l3q8nuObXpJjI6Ew5uQlkZvLkfHu6e5ygQOf4PXmZ5qQO1L+4TyiIKavkOnQyQSc3F6ymKdCi3ylyM6WjoqbAZ+Aez0jbctYjq/Byg97+yWFVauOIRP/rcNhoL6ZMUJsjj+NVnPZwzvHJr+rl5E771YliUkLyIFohWFg6mtYdjjJMpCIVDP5Yviqt93G25OpYLJ3utsE7RF8SH+i0q+3pcyDSC+NH4+CxJhoiev51Rri7oVkpJXVtxcQdTJu+gVMabO2H/5Qn+ln6INLVJ6oVoGaYDoxFMjB5X8DAChr8U/HhwaItUZLv07VQpdKJgzZugFtSSs/M9he2LCdzg+/GZq/hU+QYYj17O0vh++LaIT2DjJA3xnsOD2R5Hu4BaPA74/RLORkST9n3GqK/yUm0/NSWgjmIknPrMqauTWHdqxM2ZHfTH2Y5Z3D95RkauPWjsWM9AJwsK8rhreLM+yVXYZ70XvH39IwG31VbGQ8/EsrMM89DA4pXSEomOk0Dl7kSHp13RNpQm9Nydm2Ely9PF2qWeoISHN8nzXr9u3huAuzQ1h0CwLNv/WkWlQLrtTiyU7uQ4gDBSk/Q8dsoQNGvrKfaUGwpa/x8XrMRL711Tjd7IEmD0urb7i79CYNoGdHr0QZy5mqLCB/OjV5CFoIot2IPuykK6mL+byFhcZGAIzur7CSxkJacO4q+ZiFAoYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01QD88roKDhQr6HWrApfYxCQ",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); date; curl -s -w \"\\nhttp %{http_code}\\n\" --max-time 60 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | head -c 400",
+          "description": "Check whether OmniRoute accepts requests again"
+        }
+      }
+    ]
+  }
+}
