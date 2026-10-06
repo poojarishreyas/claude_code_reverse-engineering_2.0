@@ -1,0 +1,13 @@
+{
+  "id": "73749d548c1e37dd5022a91e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The new watch is running. dsh is on task 6 of 10, with 1 passed, 2 failed and 2 dropped so far."
+      }
+    ]
+  }
+}

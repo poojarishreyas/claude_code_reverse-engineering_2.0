@@ -1,0 +1,17 @@
+{
+  "id": "c0a997b2f4ebc39029073ebd",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "dsh failed task 6 (980b410340). The tally is now 1 passed, 3 failed and 2 dropped, with 4 tasks left.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
