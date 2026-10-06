@@ -1,0 +1,15 @@
+{
+  "id": "147b31dc7a0c878bddb5ac16",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01AFaB6Keq6He2X1iZRowCZc",
+        "type": "tool_result",
+        "content": "key length: 35\n/v1/messages -> 200: {\"id\":\"chatcmpl-1791268515736\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"qwen3-coder-next\",\"content\":[{\"type\":\"text\",\"text\":\"Hi! How can I help you today?\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":2921,\"output_tokens\":7}}\n/messages -> 404: <!DOCTYPE html><html lang=\"en\" dir=\"ltr\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/25z8c9k9ehj-b.css\" data-precedence=\"next\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"l\n/anthropic/v1/messages -> 404: {\"error\":{\"message\":\"Unknown API route: /anthropic/v1/messages\",\"type\":\"not_found\",\"code\":\"unknown_route\",\"path\":\"/anthropic/v1/messages\"}}\nShell cwd was reset to C:\\Users\\shrey\\Desktop\\Elemental_harness",
+        "is_error": false
+      }
+    ]
+  }
+}
