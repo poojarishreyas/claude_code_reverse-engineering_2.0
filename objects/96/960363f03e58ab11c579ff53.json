@@ -1,0 +1,19 @@
+{
+  "id": "960363f03e58ab11c579ff53",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HsNCJrnB3cvVDrnGG7voQP",
+        "type": "tool_result",
+        "content": "\u0000\u0000�z\u000e\r\u0000exitActive\u0000\u0000\u0006\u0000\u0000�F��\u0000elided\u0000\u0000\u0002\u0000\u0000\u0000$�c\u0000\u000b� \u0000\u000e\u0000\u0000����\u0000 other active \u0000\u0000\u0007\u0000\u0000�\u0000n=\u0000setting\u0000#\u0000\u0000�_��\u0000 unchanged since your last approval\u0000\u0002\u0000\u0000\u0000v\u0004�\u0000\u0012\ne page loads any.\u000e\u0000\u0000�rVf\u0000type_file_path\u0000\u0000&\u0000\u0000\u0000K%\u0001\u0000 \u0000\u0014  \u0000s\u0000e\u0000n\u0000d\u0000 \u0000o\u0000n\u0000l\u0000y\u0000 \u0000t\u0000h\u0000i\u0000s\u0000 \u0000A\u0000r\u0000t\u0000i\u0000f\u0000a\u0000c\u0000t\u0000'\u0000s\u0000 \u0000o\u0000w\u0000n\u0000 \u0000f\u0000i\u0000l\u0000e\u0000s\u0000\u000f\u0000\u0000�\u001dDx\u0000type_file_write\u0000;\u0000\u0000����\u0000root: could not verify the publish base is unchanged since \u0000\u001c\u0000\u0000\u0000a�\u0006\u0000a\u0000p\u0000p\u0000r\u0000o\u0000v\u0000a\u0000l\u0000 \u0000\u0014  \u0000r\u0000e\u0000t\u0000r\u0000y\u0000 \u0000t\u0000h\u0000e\u0000 \u0000p\u0000u\u0000b\u0000l\u0000i\u0000s\u0000h\u0000\r\u0000\u0000��Q�\u0000root_unpinned\u0000\u0000\u0000F\u0000\u0000\u0000���\u0000a\u0000 \u0000R\u0000e\u0000a\u0000d\u0000 \u0000p\u0000e\u0000r\u0000m\u0000i\u0000s\u0000s\u0000i\u0000o\u0000n\u0000 \u0000a\u0000p\u0000p\u0000r\u0000o\u0000v\u0000a\u0000l\u0000 \u0000h\u0000e\u0000r\u0000e\u0000 \u0000\u0014  \u0000r\u0000e\u0000t\u0000r\u0000y\u0000 \u0000t\u0000h\u0000e\u0000 \u0000p\u0000u\u0000b\u0000l\u0000i\u0000s\u0000h\u0000 \u0000s\u0000o\u0000 \u0000i\u0000t\u0000 \u0000c\u0000a\u0000n\u0000 \u0000b\u0000e\u0000 \u0000a\u0000s\u0000k\u0000e\u0000d\u0000�\u0000\u0000\u0000\u0013��\u0000f\u0000i\u0000\n_design_scopes\u0000S\u0000\u0000����\u0000Claude Design returned a text/event-stream response; this client only handles JSON.\u0000\u001b\u0000\u0000�$T�\u0000design_tool_sse_unsupported\u0000\u000e\u0000\u0000����\u0000Mcp-Session-Id\u0000\u00006\u0000\u0000�Q[d\u0000The operation catalog is unchanged since the earlier \ndited to verify \\u2014 Edit/Write would have errored if the change failed, and the harness tracks file state for you.`,mLn=\" (file state is current in your context \\u2014 no need to Read it back)\",h=\"File unchanged since last read. The content from the earlier Read tool_result in this conversation is still current \\u2014 refer to that instead of re-reading.\n\",l=\"Wasted call \\u2014 file unchanged since your last Read. Refer to that earlier tool_result instead.\nShell cwd was reset to C:\\Users\\shrey\\Desktop\\Elemental_harness",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

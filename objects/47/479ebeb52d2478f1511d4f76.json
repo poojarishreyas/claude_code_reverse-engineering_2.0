@@ -1,0 +1,8 @@
+{
+  "id": "479ebeb52d2478f1511d4f76",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "\n\n<pasted_content id=\"ca8e\">\n3. Never pay for the same tokens twice (working-set memory)\n\n- Idea: the harness already tracks what the agent has read (fs-observation-policy). Use it:\n  - Re-reading an unchanged file returns one line: \"unchanged since step 5.\"\n  - Re-reading after an edit returns only the diff.\n  - Ruled-out files are remembered: \"checked X at step 8, not relevant\", so the agent doesn't loop back.\n- Why it wins: our failure had 29 reads, and many were repeats. This costs nothing to run. I'd need to check how far Claude Code's Read tool already goes with \"unchanged\" stubs before claiming an edge here.\n</pasted_content id=\"ca8e\">\n\n doesnt model halucinate?"
+  }
+}
