@@ -1,0 +1,17 @@
+{
+  "id": "399a0459768bc20530f4ff5b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "you are a professional agentic ai architect and top 1% llm archbitect think like an innovative ideatring human where our goal is to make our harness better than claude code not in terms of useless or complex or quantity of feature but focus on quality we need to make our hatrness efficient,accurat and cheap , now our focusiing domain is seraching or retriving files and content",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
