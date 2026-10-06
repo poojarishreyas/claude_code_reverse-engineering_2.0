@@ -1,0 +1,17 @@
+{
+  "id": "fc18ddeca8a8801859e8ca4e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "go i have changed the providr in omniroute",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
