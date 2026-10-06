@@ -1,0 +1,15 @@
+{
+  "id": "8e948077b9d24b1e18f4ff6d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01E2QFxX1h2ZyTZwg22K6JN8",
+        "type": "tool_result",
+        "content": "{\"type\":\"agent/inbox/spliced\",\"seq\":3,\"time\":1791306764145,\"data\":{\"target\":\"next-turn\",\"start\":0,\"inserted\":[{\"content\":[{\"type\":\"text\",\"text\":\"These tests fail in this repository:\\n\\n- packages/boot/hmr/tests/package-manifest-dispatch.spec.ts\\n- packages/boot/hmr/tests/package-manifest.spec.ts\\n\\nTest output:\\n```\\n[... 2166 earlier characters omitted ...]\\nes/boot/hmr/tests/package-manifest-dispatch.spec.ts:108:19\\n    106|   file(join(f.pkg, 'package.json'), manifest('a', 'dep-2'))\\n    107|   await f.emit(join(f.pkg, 'package.json'))\\n    108|   expect(f.trace).toEqual(['start:json:./dep-1.mjs', 'stop:json', 'sta…\\n       |                   ^\\n    109| })\\n    110|\\n\\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/8]⎯\\n\\n FAIL  |thread-safe| packages/boot/hmr/tests/package-manifest-dispatch.spec.ts > requests a host reload for a changed manifest in the host module graph\\nAssertionError: expected \\\"exit\\\" to be called once, but got 0 times\\n ❯ packages/boot/hmr/tests/package-manifest-dispatch.spec.ts:120:16\\n    118|   file(filename, manifest('a', 'dep-2'))\\n    119|   await f.emit(filename)\\n    120|   expect(exit).toHaveBeenCalledOnce()\\n       |                ^\\n    121|   expect(f.trace).toEqual(['start:json:./dep-1.mjs'])\\n    122| })\\n\\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/8]⎯\\n\\n FAIL  |thread-safe| packages/boot/hmr/tests/package-manifest.spec.ts > package manifest invalidation > refreshes\n895 {'turn/end', 'todo/write', 'request/context', 'assistant/message', 'turn/start', 'session/title', 'step/start', 'user/message', 'step/end', 'request/header', 'tool/result', 'assistant/chunk', 'agent/inbox/spliced', 'tool/call'}",
+        "is_error": false
+      }
+    ]
+  }
+}
