@@ -1,0 +1,18 @@
+{
+  "id": "9d8ad2b82e85c526372fee78",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_015Dkj1WkjkJMnGwfeFvwmRe",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-dsh\" && python - <<'EOF'\nimport json\nrows=[json.loads(l) for l in open('980b410340.events.jsonl',encoding='utf8')]\nfor t in ('tool/call','tool/result'):\n  r=next(r for r in rows if r['type']==t); print(json.dumps(r)[:600])\nEOF",
+          "description": "Show tool call/result event shapes"
+        }
+      }
+    ]
+  }
+}

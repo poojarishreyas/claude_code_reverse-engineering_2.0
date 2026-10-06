@@ -1,0 +1,22 @@
+{
+  "id": "708ea8a767d4cc1c2ac81e3f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01MZpeuD36Nxcwa2ki6FaMb8",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-dsh\" && python - <<'EOF'\nimport json,re\nrows=[json.loads(l) for l in open('980b410340.events.jsonl',encoding='utf8')]\ncalls={}\nfor r in rows:\n  d=r.get('data',{})\n  if r['type']=='tool/call': calls[d['callId']]=d\n  if r['type']=='tool/result':\n    cid=d['message']['source']['callId']; c=calls.get(cid,{})\n    if c.get('name')=='pwsh':\n      a=json.loads(c['arguments']).get('command','')[:140].replace('\\n',' ')\n      txt=''.join(x.get('text','') for p in d['message']['content'] for x in p.get('content',[]))\n      m=re.findall(r'Tests +[^\\n]*',txt)\n      print(c['step'],a,'|',m[-1][:90] if m else txt[-120:].replace('\\n',' '))\nEOF",
+          "description": "List pwsh commands and test outcomes"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

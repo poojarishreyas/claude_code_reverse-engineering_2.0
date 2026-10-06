@@ -1,0 +1,15 @@
+{
+  "id": "4d7f54196c53654cc8d4d2fe",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Exit code 1\n11 pnpm --filter @deepseek-ai/dsh-hmr test |  platform: wanted: {\"cpu\":[\"x64\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"win32\",\"cpu\":\"x64\",\"libc\":\"unknown\"}) \r\n14 pnpm exec vitest run packages/boot/hmr/tests/ | f01ebaca2b/node_modules/vitest/dist/chunks/cli-api.BfdDOPPI.js:14205:18) {   errors: [Getter/Setter] }    [exit code: 1]\r\n18 node -e \"console.log('node works')\" | node works \r\n20 node node_modules/vitest/vitest.mjs run packages/boot/hmr/tests/ | f01ebaca2b/node_modules/vitest/dist/chunks/cli-api.BfdDOPPI.js:14205:18) {   errors: [Getter/Setter] }    [exit code: 1]\r\n21 node --import \"data:text/javascript,import cp from 'node:child_process'; const orig = cp.exec; cp.exec = function(cmd, ...args) { if (typeof | f01ebaca2b/node_modules/vitest/dist/chunks/cli-api.BfdDOPPI.js:14205:18) {   errors: [Getter/Setter] }    [exit code: 1]\r\n22 node --import \"data:text/javascript,import cp from 'node:child_process'; const orig = cp.ChildProcess.prototype.spawn; cp.ChildProcess.proto | Tests  no tests\r\n23 node --import \"data:text/javascript,import cp from 'node:child_process'; const orig = cp.ChildProcess.prototype.spawn; cp.ChildProcess.proto | Traceback (most recent call last):\r\n  File \"<stdin>\", line 13, in <module>\r\n  File \"C:\\Users\\shrey\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\encodings\\cp1252.py\", line 19, in encode\r\n    return codecs.charmap_encode(input,self.errors,encoding_table)[0]\r\n           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nUnicodeEncodeError: 'charmap' codec can't encode characters in position 8-14: character maps to <undefined>",
+        "is_error": true,
+        "tool_use_id": "toolu_01MZpeuD36Nxcwa2ki6FaMb8"
+      }
+    ]
+  }
+}
