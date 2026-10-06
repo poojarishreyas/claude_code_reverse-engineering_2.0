@@ -1,0 +1,19 @@
+{
+  "id": "c384c215f7d87b9645e70829",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CbmHEEcWxK6bz235r4ht4t",
+        "type": "tool_result",
+        "content": "35 {'todo_write': 2, 'read': 16, 'grep': 4, 'pwsh': 9, 'edit': 3} 3 6 ['packages/boot/app-boot/src/profile.ts'] [] False 1582490 ['packages/boot/app-boot/src/profile.ts']",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
