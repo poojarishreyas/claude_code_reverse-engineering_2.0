@@ -1,0 +1,17 @@
+{
+  "id": "7b78542617e118bff39d3dd4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "dont just satisfy me tellme at wht percentage it will be better than claude code",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
