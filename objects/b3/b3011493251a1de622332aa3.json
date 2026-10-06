@@ -1,0 +1,27 @@
+{
+  "id": "b3011493251a1de622332aa3",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjQcKEAgSGAI4AUIIdGhpbmtpbmcSDAnWovGyidtOstqKSBoMyK/HP34PguGI1IxHIjBs8+rwYi6OFEIiPQythioc7Mu7DviTtp3I8w2v4CpQHh6wvk+8jkWaRl7BsxVJxAEqqgbk6k7DpUxhRlZ74jBYRLqBH7UcO++wybVO/6evWmH87gR5IfnqfAvaG1LzCmH0YLaF5IkCBq7CWZsDruVfleqTriNU54udZQfxVz+WM0x7L9gUmaWq5qfTRf24EMjsVvdelOIb3iPs4GpRRixKlcYQUiZ0DzLSuvyD1mDp1mG9DJzOPxTQ3tix2JKD58x89YsOtemS9YUy1w9Kir7Jv9C0bsoom1Vn0PWU9JVePIhyktja9ZiXO95PC6jpOrz87S+i5xPjOEAazBBZHdDhZnFVzIcdIpVN6KjOzbO+hmk8+oYKH4Oj3gVEiUuCxsNwogSFFB9PU/haYL335nQMMg96T4RN/9d2tMGxnG8N1FEq/nAsGYfs1UoojgWc9aS0xySr4r6SeVrMGLOAhgUE5Utpx3WY4uzVs77BtZhCc7aui8J7gXhMg2SYeXwBEiGjqZONthMGZwn2Vo4pHUQ8mv2L54IZWkXssVGDYhzsU19ZxRYG3Wg8FQrLwF3dn/oCwlYTJPDokwo6teDfaiYVoWZCXF0QNxzlD/x5VkP6hRQQ5SsanwTW30uBLocyNJ+7uNv2Hav408/6jcF+SeXCF+D3VhqryHMZRfnFo/lyOTjvRYR0aAbAnbBPf7dvr8CmthtUYSK27kBi1KfMuhwdpAqBNqG0lVOHdm0p8np7ogKtlVLbq1u3XVG1MOrMuD87V+rsSHDgjYC2CMO//ZMKmcI0Yr54GM2Nb1mYjC1fOiJVUJoDYMr0b1X2OLYI8G2rjcknICDMOanO5i/n4hhtpKjnamoziSHC0fo0WrBSTyq39nRXHgarWE2x7c6Jx8bYkATRgco7Ogche+1VyGtLFj6Y1/PvdZBlnv0klBd3hbcIiudrBxKxMJ0xZnTsM3W1OhsliZi4+PXW5ODEIsXszyh4/KFwB2pNVp5FMufCnnOtucPTo0dl98OBR3FoFRctcXwEX3daUm51a05J8RyQOsc/0hZPG7TSC3lpmYZg+pr/2WEmyalXeNplm08mzmMVFU39jR1LaR6l6wlnEzHTQ0Zvni/YRhKUWWe81egI4jAZ72HrSEeJJlf/jmkYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01RFwGdDfK8gdY16k4fotGWV",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; grep \"^eval: \" \"$S/gem-dsh.log\" | cut -c1-200; cd \"$S/gem-dsh\" && python -c \"\nimport json,glob\nfor f in sorted(glob.glob('*.json')):\n  if f=='summary.json': continue\n  d=json.load(open(f));m=d.get('metrics')\n  if m: u=m['usage'];print(f[:10],d['status'],d.get('passed'),m['steps'],m['firstSeenStep'],m['firstReadStep'],m['editedFiles'],m['editedTests'],u['inputTokens']+u.get('cacheReadTokens',0))\n\"",
+          "description": "Show dsh progress and per-task metrics"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

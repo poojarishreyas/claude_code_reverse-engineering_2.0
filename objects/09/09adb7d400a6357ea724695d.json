@@ -1,0 +1,18 @@
+{
+  "id": "09adb7d400a6357ea724695d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS3AYKEAgSGAI4AUIIdGhpbmtpbmcSDO8hBivbMCwot5rAxxoMCK2okcmfquHHo7JtIjCjnCJUjWIDLq5DDhgGcRyKVUhZyFhxX0t7FglSVsDSUIPdbo+O3kS4kPMwqpw4gGQq+QWIM0iy+0C7CRRuJaVPBKU8bJl4A7l0yJ8+njKlr964J7ND6din9BZ58iSgpFHeYS3P3hdjl2Aw7BnzZtKimEfKSw88ky9fUojUOfmWX3neRCm6cyMzZRV8WrLrQUVXkUK4PeW7tbyamcNzHyG8G65XA38HbILvTYvb1A9Ov00hebSqAyGW4IcnSkk81XXPBqG1EjCGg3n5ZMS/eVEGVzMayHZdWDfAh0urR6Hblknu2pkInMEyfj9VWujKnI5VeoGkV6+MjRt31wWasqj9uGwpYKJCUiROVSa8IKAItTGsetrmoJLVJluoSWrp1VtX6/KU0Q2zjyWAwfTvQuY/jYN+pZKpmSgu0epAtkwIQM/h/IdARhjRmDW2NXXaJUl/qIUqX4CIkjpKc84ezM5K2oRh++C3Zz7QR1i8M0FwQSG4Iq3pQRtIOyH9/b+eBKMdJRTguYahBXVhy/k24BxBL6C2noDJXumYtlSfs4JuXP4/monNkcEI5eJ6jxu7UOHlPegetj9h9J/njfYqXgT9u6iZsBqJUZqmlqrnybTs2GJO6cyY4b8lUUuts8IXcj8l4gavHIsYJlcFgPtwnLGabP8h2S7emEVwjGeQXV4q5aKGfArfRNYkiBAgOk08iLsEXZDyv1NjbXvodJApf4vTaVT28B3B3yrKw8CkKytU1m+tGlvyfgPFFFXchZaU+mI3zTN9YcC4g9wfYesNTlIRrpZobl29zFOj+23q8X1Dm8DkBoHo3ct3meAKjAVOq20JiPRP3cmF7uS4XPppB/FcetArazAh/cqAet1en+KwsVyQej7s2JcTsOpbq7N7Htzwb1srDesAKLE92tghamft6kf4AcRYodK4XY1yu7TUUgIT7t71HTf0z38AMK1v+eJ8SHNkMD2EtDhMUlmyHWhCNXYoH8skY5NUjCsUOwkXHxxMuK9ljDexpTtcxuQc08PalHb5DKSF3+95N4TKgjARNAZMPsfTFuD52es/J6uZH810TTaZ1y+rk/fkzhgB"
+      },
+      {
+        "type": "text",
+        "text": "Task 3 of 10 (a59beb8ae3, multi-file) **passed**. On qwen, dsh failed this task.\n\n| | Value |\n|---|---|\n| Files edited | both right files, nothing extra |\n| First saw / first read the file | step 2 / step 13 |\n| Steps | 82, of which 54 were `pwsh` calls (mostly running tests and commands) |\n| Prompt tokens | 6.2M, of which 5.7M were cache reads |\n\nIt noticed the file at step 2 but didn't open it until step 13. That's the one weak spot here, and the Claude Code run on the same task will show whether that's normal.\n\nSo far dsh on gemini has passed 2 of 2 valid tasks. Running: task 4 of 10."
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "1940395c00bbfc4e92348a3a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01FjbA7YFay54Zx1tZj4We91",
+        "type": "tool_result",
+        "content": "82 {'todo_write': 3, 'read': 13, 'pwsh': 54, 'grep': 3, 'glob': 3, 'edit': 5} 2 13 ['apps/desktop-host/src/office-engine.ts', 'packages/boot/hmr/src/package-manifest.ts'] [] False {'inputTokens': 499571, 'outputTokens': 45366, 'cacheReadTokens': 5730196}",
+        "is_error": false
+      }
+    ]
+  }
+}
