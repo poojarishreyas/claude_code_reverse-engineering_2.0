@@ -1,0 +1,19 @@
+{
+  "id": "5a0fcb5aa3cfc2f1f16e9a8e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01MXSXXRy3D4FaGfc2q6wdZf",
+        "type": "tool_result",
+        "content": "models:000\r\n\nmsgs:000\n\nchat:000\nShell cwd was reset to C:\\Users\\shrey\\Desktop\\Elemental_harness",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
