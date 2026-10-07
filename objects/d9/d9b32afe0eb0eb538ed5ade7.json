@@ -1,0 +1,23 @@
+{
+  "id": "d9b32afe0eb0eb538ed5ade7",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01CoUBLrRWGSWd1FwqZoPsKx",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\llm\\llm-pi-ai\\src\\stream.ts",
+          "offset": 25,
+          "limit": 60
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

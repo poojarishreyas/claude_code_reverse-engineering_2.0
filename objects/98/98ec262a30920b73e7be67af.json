@@ -1,0 +1,17 @@
+{
+  "id": "98ec262a30920b73e7be67af",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "Contents of C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\CLAUDE.md:\n\nAGENTS.md",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
