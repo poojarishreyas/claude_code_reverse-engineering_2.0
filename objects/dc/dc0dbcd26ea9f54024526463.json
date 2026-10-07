@@ -1,0 +1,15 @@
+{
+  "id": "dc0dbcd26ea9f54024526463",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DRFWABbL3u9dsGArnfhU5E",
+        "type": "tool_result",
+        "content": "6: * commit in a detached worktree and restores the source files to their\n91:export async function mineTasks(repo: string, limit: number, rules: MiningRules = DEFAULT_RULES): Promise<EvalTask[]> {\n131:function importName(path: string): string {\n160:export async function readTestSources(repo: string, task: EvalTask): Promise<string[]> {\n166: * Create a detached worktree at the fix commit with its source files reverted\n171: * @param dir - new worktree directory; must not exist.\n173:export async function prepareWorkspace(repo: string, task: EvalTask, dir: string): Promise<void> {\n174:  await run('git', ['worktree', 'add', '--detach', dir, task.fixCommit], { cwd: repo })\n183: * Remove a task worktree.\n185: * @param dir - the worktree directory.\n187:export async function removeWorkspace(repo: string, dir: string): Promise<void> {\n188:  await run('git', ['worktree', 'remove', '--force', dir], { cwd: repo })\n---\n11: *     [--install \"pnpm install --prefer-offline\"] [--keep] [--dry-run] [--hard] [--only <id,...>]\n37:import { difficultyTags, mineTasks, prepareWorkspace, readTestSources, removeWorkspace, taskPrompt } from './tasks.ts'\n137:  readonly install: string\n148:  const workspace = join(tmpdir(), `dsh-eval-${task.id}`)\n150:  const home = join(tmpdir(), `dsh-eval-home-${task.id}`)\n154:    await prepareWorkspace(options.repo, task, workspace)\n155:    const [installCommand = 'pnpm', ...installArgs] = options.install.split(' ')\n156:    const install = await exec(installCommand, installArgs, workspace, process.env, 30 * 60_000)\n157:    if (install.code !== 0) return { task, status: 'error', passed: false, note: `install failed: ${tail(install.stderr, 800)}` }\n190:    if (!options.keep) await removeWorkspace(options.repo, workspace).catch(() => rm(workspace, { recursive: true, force: true }))\n303:      install: { type: 'string', default: 'pnpm install --prefer-offline' },\n356:      install: values.install,",
+        "is_error": false
+      }
+    ]
+  }
+}

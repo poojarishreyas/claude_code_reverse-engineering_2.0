@@ -1,0 +1,15 @@
+{
+  "id": "ea1fdfd464b840584d78e2e5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LegVcm7PFzM6C7jweM2Avd",
+        "type": "tool_result",
+        "content": "gem-cc2\\e21ed97f29.events.jsonl 11 ['git diff HEAD', 'git diff with HEAD', 'git log -n 5 --oneline', 'git show e21ed97f29', 'git log -n 10 --oneline']\r\ngem-cc3\\ed34a1d7fe.events.jsonl 0 []\r\ngem-cc4\\ed34a1d7fe.events.jsonl 10 ['git diff', 'git diff of modified files', 'git diff --cached', 'git diff', 'git log -p -n 3']\r\ngem-cc\\4b9d8ad6f7.events.jsonl 4 ['git log -n 2 -p', 'git diff packages/client/ui-primitives/src/StateDot.tsx', 'git diff --cached', 'git restore --staged packages/client/ui-primitives/src/StateDot.tsx && git status']\r\ngem-cc\\a59beb8ae3.events.jsonl 12 ['git diff', 'git diff for modified files', 'git log -n 5 -p', 'git show a59beb8ae3', 'git log -n 10 --oneline']\r\ngem-dsh\\4b9d8ad6f7.events.jsonl 13 ['git diff', 'git diff', 'git diff --cached', 'git diff', 'git diff']\r\ngem-dsh\\54fa38795f.events.jsonl 6 ['git diff', 'git diff', 'git diff', 'git diff --staged', 'git diff HEAD']\r\ngem-dsh\\9633724b40.events.jsonl 6 ['git log -n 5 --oneline', 'git show 9633724b40', 'git diff', 'git diff --cached', 'git diff']\r\ngem-dsh\\980b410340.events.jsonl 2 ['git diff', 'git diff']\r\ngem-dsh\\a59beb8ae3.events.jsonl 6 ['git diff HEAD', 'git diff against HEAD', 'git diff HEAD', 'git diff', 'git diff']\r\ngem-dsh\\e21ed97f29.events.jsonl 9 ['git log -n 5 --oneline', 'git show e21ed97f29', 'git diff', 'git diff --cached', 'git log -n 1 --stat e21ed97f29']\r\ngem-dsh\\ed34a1d7fe.events.jsonl 4 ['git diff HEAD', 'git diff from HEAD', 'git diff', 'git diff --staged']\r\ngem-dsh\\f04ad05f30.events.jsonl 11 ['git diff --staged', 'git log -n 5', 'git show HEAD', 'git diff --no-ext-diff HEAD', 'git diff']",
+        "is_error": false
+      }
+    ]
+  }
+}
