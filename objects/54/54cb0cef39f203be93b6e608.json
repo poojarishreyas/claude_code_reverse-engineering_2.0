@@ -1,0 +1,22 @@
+{
+  "id": "54cb0cef39f203be93b6e608",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSxQcKEAgSGAI4AUIIdGhpbmtpbmcSDOA2Dl1gdI9XC55dUBoMWIU1o6ztCqyP1IcOIjBPB9Sw3HslVVrfNxhe2SbJFV7dEY0CPvu9WxBnDICGMWp0mgO0oBfPd3wQPOEoVk0q4gb4jT9GC7zhbWRkpx3p+6Pf6BCDBE62p6MDnrHakDx96G5qETG43a6ZcNjGQdhECXCavQ/foeGC9ka6NRNJtNmXAZer/7bTZsVdI0IK4vicvkEw3uaacbaTbM/OYbtaKGJZg9x0H+P0GQkNWrDdppoxaAly1B3TPF0N9Kh+AC2DKOmAmwZlBi6945Ywn0zKEhMkdEcfZdcsI1eoRzIsOMTWBSezmRNbyijuMjRi/WvRfPU7p4qXs+RUfbWYcju+hq1ZrdkDZSdyIdzDcP6UxRBqgT/Bld7QwJ/8w1DM00azBsGNXR/YXZT9iewqjuLlNpOLs74yjujBY7AHnIOiJPsHM/Ej1gfUD61iYx1+0SWqYfsKhANmeLy0hnt9phikrtpVJDneH3iJq4QjaOahoGKaWjOc74Uiqd5s5IAsHrFTvs839IC59z3FL/sIwmO0WN8hdpVWtTMRzlKGFvIwqW7dKWsEBbMK5G33f6Q+OmOfFBjAZ2vV6X7NLatSNZwZa30Ei0kpGRMqylhRhwa44wp4XJSUx6u15S1IPCJJqbCWqMhImWngBUf7xTTt8qXLL3UaLISdJ00+m9Q/14yi3xH0tOjegQa0fMA79w7wkJZnZJBHGuwwChPPSEUI2qnANaLVb14WdEzeojyeq3DtvrFzIKMPUvFcjSuiIOfe9Rit5jTvegjJJlS9G+TTdoH1zwlGB3zwnJnpEHcFSfIgmPW6/BNbJWdNdhwneNRDWAeh2nARKpRcck0tV5SY8vyrZS7fBEwYu2lS4HqLCARyEmiD5OBnvs3lkTW0iXZdNaf+QuxWu6rcpCDdcIL9K0RVxxceVvdjdlX8llIlCfp9dUvo8lVK+H8j3ADYL82xECp+Mx7UinbG+9cTaQ5qaaXK7CcPs0TGynNn3UA8SyUytDEWOcBNWQAJr2BZ5aQiiiWq9vSTdXe3RKbSU9F3Ydf+9Xrzv3E1mhPXy0/3bH7DIyBo1tG1JDJIAFfR2Qi+go5Z66YmgyNQICpZTX2Wu/QtfqgxAyrBUgnpJinLoze54g3nMFVqLWXUtO7uwCb+RmryHjospKJp22GdyXYVBGEesCiwajqCGnRej3/8VrCNJT2diDyMZFz+Euk0E81sYSak1buNR4vQzYluKzd5dUsVGyMi+hgB"
+      },
+      {
+        "type": "text",
+        "text": "The batch is running normally. Claude Code has been on task 4b9d8ad6f7 since 13:20, and 6.3 GB of memory is free. The monitor is set up again, so each result will show up here as it finishes.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
