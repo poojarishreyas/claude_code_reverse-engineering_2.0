@@ -1,0 +1,19 @@
+{
+  "id": "117390a001e93ca10e5ff779",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0139g78F517SLqhmJedvE9tF",
+        "type": "tool_result",
+        "content": "6808 brave.exe 831MB \"C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe\" --type=renderer --enable-distillability-service --origin-tria\r\n3760 node.exe 670MB node   \"C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-980b410340\\node_modules\\.bin\\\\..\\vitest\\vitest.mjs\" run\r\n5596 node.exe 545MB \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppData/Local/Temp/dsh-eval-980b410\r\n3356 Memory Compression 523MB \r\n18356 node.exe 476MB \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppData/Local/Temp/dsh-eval-980b410\r\n6068 node.exe 469MB \"C:\\Program Files\\nodejs\\node.exe\" --dns-result-order=ipv4first --max-old-space-size=4096 C:\\Users\\shrey\\AppData\\Roaming\\npm\\node_\r\n5168 MsMpEng.exe 468MB \r\n21392 brave.exe 395MB \"C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe\" --type=gpu-process --gpu-recent-crash-count=0 --no-pre-read-m\r\n23652 node.exe 349MB \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppData/Local/Temp/dsh-eval-980b410\r\n17004 claude.exe 347MB \"C:\\Users\\shrey\\AppData\\Roaming\\npm\\\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe\"    \"--resume\"\r\n8928 node.exe 332MB \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppData/Local/Temp/dsh-eval-980b410\r\n10188 node.exe 320MB \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppData/Local/Temp/dsh-eval-980b410\r\n19308 msedge.exe 274MB \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --extension-process --renderer-sub-type=extension -\r\n9392 explorer.exe 272MB C:\\WINDOWS\\Explorer.EXE\r\n13900 node.exe 260MB \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppData/Local/Temp/dsh-eval-980b410",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

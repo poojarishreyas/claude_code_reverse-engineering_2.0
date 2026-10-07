@@ -1,0 +1,8 @@
+{
+  "id": "e7b7368c25e6f1821658a4d4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "<system-reminder>\n[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>bab2oi0vz</task-id>\n<summary>Monitor event: \"free RAM below 2.5 GB during eval\"</summary>\n<event>LOW RAM: 2414 MB free at 19:06</event>\n</task-notification>\n</system-reminder>"
+  }
+}

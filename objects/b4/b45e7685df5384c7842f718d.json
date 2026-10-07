@@ -1,0 +1,17 @@
+{
+  "id": "b45e7685df5384c7842f718d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The low-memory alert timed out, so I restarted it for another 30 minutes. Claude Code is still on 980b410340.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
