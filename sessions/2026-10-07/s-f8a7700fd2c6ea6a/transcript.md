@@ -5,8 +5,8 @@
 | session | `s-f8a7700fd2c6ea6a` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T04:57:05.789Z |
-| requests | 210 (13 errored) |
-| tokens | in 11,774 · out 85,313 · cache read 23,176,727 · cache write 296,495 |
+| requests | 212 (13 errored) |
+| tokens | in 11,778 · out 86,301 · cache read 23,458,241 · cache write 299,478 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -13590,5 +13590,213 @@ const t=db.prepare("select name from sqlite_master where type=\"table\"").all().
 
 Error: no such column: "table" - should this be a string literal in single-quotes?
 Shell cwd was reset to C:\Users\shrey\Desktop\Elemental_harness
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01LrcpqtH5EeiYJ3pWabNkQ4)_
+
+```json
+{
+  "command": "cat > \"$TEMP/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/om.cjs\" <<'EOF'\nconst { DatabaseSync } = require('node:sqlite')\nconst db = new DatabaseSync(require('os').homedir() + '/.omniroute/storage.sqlite', { readOnly: true })\nconst tables = db.prepare(\"select name from sqlite_master where type='table'\").all().map(r => r.name)\nconsole.log(tables.join(' '))\nfor (const t of tables.filter(n => /log|request|usage|call/i.test(n))) {\n  console.log('==', t, db.prepare(`select count(*) c from \"${t}\"`).get().c)\n  console.log(db.prepare(`pragma table_info(\"${t}\")`).all().map(c => c.name).join(','))\n}\nEOF\nnode \"$TEMP/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/om.cjs\" 2>&1 | grep -v ExperimentalWarning | head -30",
+  "description": "Inspect OmniRoute's request log tables (read-only)"
+}
+```
+
+_stop `tool_use` · 7.57s (ttft 6.67s) · in 2 · out 495 · cache r140,559/w396_
+
+---
+
+## req-0211 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 180 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01HCufgCpkFGQBQetqaht56x)_
+
+```
+[eval]:3
+const t=db.prepare("select name from sqlite_master where type=\"table\"").all().map(r=>r.name); console.log(t.join(" "));
+           ^
+
+Error: no such column: "table" - should this be a string literal in single-quotes?
+Shell cwd was reset to C:\Users\shrey\Desktop\Elemental_harness
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01LrcpqtH5EeiYJ3pWabNkQ4)_
+
+```json
+{
+  "command": "cat > \"$TEMP/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/om.cjs\" <<'EOF'\nconst { DatabaseSync } = require('node:sqlite')\nconst db = new DatabaseSync(require('os').homedir() + '/.omniroute/storage.sqlite', { readOnly: true })\nconst tables = db.prepare(\"select name from sqlite_master where type='table'\").all().map(r => r.name)\nconsole.log(tables.join(' '))\nfor (const t of tables.filter(n => /log|request|usage|call/i.test(n))) {\n  console.log('==', t, db.prepare(`select count(*) c from \"${t}\"`).get().c)\n  console.log(db.prepare(`pragma table_info(\"${t}\")`).all().map(c => c.name).join(','))\n}\nEOF\nnode \"$TEMP/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/om.cjs\" 2>&1 | grep -v ExperimentalWarning | head -30",
+  "description": "Inspect OmniRoute's request log tables (read-only)"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01LrcpqtH5EeiYJ3pWabNkQ4)_
+
+```
+provider_connections provider_nodes key_value combos api_keys db_meta usage_history sqlite_sequence call_logs proxy_logs domain_fallback_chains domain_budgets domain_budget_reset_logs domain_cost_history domain_lockout_state domain_circuit_breakers semantic_cache quota_snapshots _omniroute_migrations mcp_tool_audit a2a_tasks a2a_task_events routing_decisions combo_adaptation_state proxy_registry request_detail_logs registered_keys provider_key_limits account_key_limits model_combo_mappings webhooks memories skills skill_executions version_manager upstream_proxy_config context_handoffs memory_fts_data memory_fts_idx memory_fts_docsize memory_fts_config sync_tokens files batches eval_runs eval_suites eval_cases reasoning_cache compression_analytics compression_cache_stats compression_combos compression_combo_assignments hourly_usage_summary daily_usage_summary session_account_affinity command_code_auth_sessions tier_config tier_assignments leaderboard user_levels badge_definitions user_badges xp_audit_log token_ledger invite_tokens community_servers cloud_agent_credentials session_model_history middleware_hooks middleware_logs key_groups group_model_permissions key_group_members relay_tokens relay_rate_limits relay_logs free_proxies webhook_deliveries api_key_token_counters api_key_token_limit_reset_logs discovery_results plugins quota_consumption provider_plans agent_bridge_state agent_bridge_mappings agent_bridge_bypass inspector_custom_hosts inspector_sessions inspector_session_requests memory_vec_meta playground_presets quota_pools quota_allocations quota_pool_connections quota_groups plugin_metrics plugin_analytics api_key_context_sources model_intelligence cli_access_tokens quota_allocation_model_caps provider_quota_reset_events model_context_overrides batch_item_checkpoints proxy_assignments proxy_scope_rotation model_capability_overrides free_proxy_sync_errors reasoning_routing_rules auto_candidate_overrides proxy_subscriptions radar_feed_cache radar_settings ccr_blocks connection_runtime_state radar_referrals_cache radar_offers_cache radar_intel_cache jobs job_runs provider_quota_state radar_local_model_state agentic_conversations conversation_turn_nodes exclusive_connection_leases config_audit_log model_capabilities audit_log log_export_destinations server_tool_executions xp_action_counts request_cost_ledger api_key_quota_limits api_key_quota_counters quota_schedules api_key_token_limits compression_run_telemetry memory_fts
+== usage_history 2531
+id,provider,model,connection_id,account_key,account_label,account_label_priority,api_key_id,api_key_name,tokens_input,tokens_output,tokens_cache_read,tokens_cache_creation,tokens_reasoning,service_tier,status,success,latency_ms,ttft_ms,error_code,timestamp,combo_strategy,endpoint,cpa_auth_index
+== call_logs 2337
+id,timestamp,method,path,status,model,requested_model,provider,account,connection_id,duration,tokens_in,tokens_out,tokens_cache_read,tokens_cache_creation,tokens_reasoning,tokens_compresse
+... [2,125 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01HUavyi5iX5XRmGYe5ng5T6)_
+
+```json
+{
+  "command": "cat > \"$TEMP/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/om2.cjs\" <<'EOF'\nconst { DatabaseSync } = require('node:sqlite')\nconst db = new DatabaseSync(require('os').homedir() + '/.omniroute/storage.sqlite', { readOnly: true })\n// Calls since this afternoon's batch started, grouped by API style and what was served.\nconst since = new Date('2026-10-07T16:28:00+05:30').toISOString()\nconsole.log(db.prepare(`select path, source_format, requested_model, model, provider, reasoning_effort_requested req_eff, reasoning_effort_upstream up_eff, count(*) n\n  from call_logs where timestamp >= ? group by 1,2,3,4,5,6,7 order by n desc`).all(since))\nEOF\nnode \"$TEMP/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/om2.cjs\" 2>&1 | grep -v -i experimental",
+  "description": "Group OmniRoute calls by API style and model served"
+}
+```
+
+_stop `tool_use` · 6.59s (ttft 5.56s) · in 2 · out 493 · cache r140,955/w2,587_
+
+---
+
+## req-0212 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 182 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01LrcpqtH5EeiYJ3pWabNkQ4)_
+
+```
+provider_connections provider_nodes key_value combos api_keys db_meta usage_history sqlite_sequence call_logs proxy_logs domain_fallback_chains domain_budgets domain_budget_reset_logs domain_cost_history domain_lockout_state domain_circuit_breakers semantic_cache quota_snapshots _omniroute_migrations mcp_tool_audit a2a_tasks a2a_task_events routing_decisions combo_adaptation_state proxy_registry request_detail_logs registered_keys provider_key_limits account_key_limits model_combo_mappings webhooks memories skills skill_executions version_manager upstream_proxy_config context_handoffs memory_fts_data memory_fts_idx memory_fts_docsize memory_fts_config sync_tokens files batches eval_runs eval_suites eval_cases reasoning_cache compression_analytics compression_cache_stats compression_combos compression_combo_assignments hourly_usage_summary daily_usage_summary session_account_affinity command_code_auth_sessions tier_config tier_assignments leaderboard user_levels badge_definitions user_badges xp_audit_log token_ledger invite_tokens community_servers cloud_agent_credentials session_model_history middleware_hooks middleware_logs key_groups group_model_permissions key_group_members relay_tokens relay_rate_limits relay_logs free_proxies webhook_deliveries api_key_token_counters api_key_token_limit_reset_logs discovery_results plugins quota_consumption provider_plans agent_bridge_state agent_bridge_mappings agent_bridge_bypass inspector_custom_hosts inspector_sessions inspector_session_requests memory_vec_meta playground_presets quota_pools quota_allocations quota_pool_connections quota_groups plugin_metrics plugin_analytics api_key_context_sources model_intelligence cli_access_tokens quota_allocation_model_caps provider_quota_reset_events model_context_overrides batch_item_checkpoints proxy_assignments proxy_scope_rotation model_capability_overrides free_proxy_sync_errors reasoning_routing_rules auto_candidate_overrides proxy_subscriptions radar_feed_cache radar_settings ccr_blocks connection_runtime_state radar_referrals_cache radar_offers_cache radar_intel_cache jobs job_runs provider_quota_state radar_local_model_state agentic_conversations conversation_turn_nodes exclusive_connection_leases config_audit_log model_capabilities audit_log log_export_destinations server_tool_executions xp_action_counts request_cost_ledger api_key_quota_limits api_key_quota_counters quota_schedules api_key_token_limits compression_run_telemetry memory_fts
+== usage_history 2531
+id,provider,model,connection_id,account_key,account_label,account_label_priority,api_key_id,api_key_name,tokens_input,tokens_output,tokens_cache_read,tokens_cache_creation,tokens_reasoning,service_tier,status,success,latency_ms,ttft_ms,error_code,timestamp,combo_strategy,endpoint,cpa_auth_index
+== call_logs 2337
+id,timestamp,method,path,status,model,requested_model,provider,account,connection_id,duration,tokens_in,tokens_out,tokens_cache_read,tokens_cache_creation,tokens_reasoning,tokens_compresse
+... [2,125 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01HUavyi5iX5XRmGYe5ng5T6)_
+
+```json
+{
+  "command": "cat > \"$TEMP/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/om2.cjs\" <<'EOF'\nconst { DatabaseSync } = require('node:sqlite')\nconst db = new DatabaseSync(require('os').homedir() + '/.omniroute/storage.sqlite', { readOnly: true })\n// Calls since this afternoon's batch started, grouped by API style and what was served.\nconst since = new Date('2026-10-07T16:28:00+05:30').toISOString()\nconsole.log(db.prepare(`select path, source_format, requested_model, model, provider, reasoning_effort_requested req_eff, reasoning_effort_upstream up_eff, count(*) n\n  from call_logs where timestamp >= ? group by 1,2,3,4,5,6,7 order by n desc`).all(since))\nEOF\nnode \"$TEMP/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/om2.cjs\" 2>&1 | grep -v -i experimental",
+  "description": "Group OmniRoute calls by API style and model served"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01HUavyi5iX5XRmGYe5ng5T6)_
+
+```
+[
+  [Object: null prototype] {
+    path: '/v1/chat/completions',
+    source_format: 'openai',
+    requested_model: 'antigravity/gemini-3.7-flash-high',
+    model: 'gemini-3.7-flash-high',
+    provider: 'antigravity',
+    req_eff: null,
+    up_eff: null,
+    n: 302
+  },
+  [Object: null prototype] {
+    path: '/v1/messages',
+    source_format: 'claude',
+    requested_model: 'antigravity/gemini-3.7-flash-high',
+    model: 'gemini-3.7-flash-high',
+    provider: 'antigravity',
+    req_eff: null,
+    up_eff: null,
+    n: 112
+  },
+  [Object: null prototype] {
+    path: '/v1/chat/completions',
+    source_format: null,
+    requested_model: 'lynx harness',
+    model: 'lynx harness',
+    provider: 'lynx harness',
+    req_eff: null,
+    up_eff: null,
+    n: 6
+  },
+  [Object: null prototype] {
+    path: '/v1/messages',
+    source_format: null,
+    requested_model: 'lynx harness',
+    model: 'lynx harness',
+    provider: 'lynx harness',
+    req_eff: null,
+    up_eff: null,
+    n: 5
+  },
+  [Object: null prototype] {
+    path: '/api/providers/test',
+    source_format: 'test',
+    requested_model: null,
+    model: 'connection-test',
+    provider: 'antigravity',
+    req_eff: null,
+    up_eff: null,
+    n: 2
+  },
+  [Object: null prototype] {
+    path: '/api/providers/test',
+    source_format: 'test',
+    requested_model: null,
+    model: 'connection-test',
+    provider: 'kiro',
+    req_eff: null,
+    up_eff: null,
+    n: 2
+  },
+  [Object: null prototype] {
+    path: '/api/providers/test',
+    source_format: 'test',
+    requested_model: null,
+    model: 'connection-test',
+    provider: 'opencode',
+    req_eff: null,
+    up_eff: null,
+    n: 2
+  },
+  [Object: null prototype] {
+    path: '/api/providers/test',
+    source_format: 'test',
+    requested_model: null,
+    model: 'connection-test',
+    provider: 'openrouter',
+    req_eff: null,
+    up_eff: null,
+    n: 2
+  },
+  [Object: null prototype] {
+    path: '/api/providers/test',
+    source_format: 'test',
+    requested_model: null,
+    model: 'connection-test',
+    provider: 'nvidia',
+    req_eff: null,
+    up_eff: null,
+    n: 1
+  },
+  [Object: null prototype] {
+    path: '/v1/chat/completions',
+    source_format: 'openai',
+    requested_model: 'antigravity/gemini-3.6-flash-tiered',
+    model: 'gemini-3.6-flash-tiered',
+    provider: 'antigravity',
+    req_eff: null,
+    up_eff: null,
+    n: 1
+  }
+]
 ```
 

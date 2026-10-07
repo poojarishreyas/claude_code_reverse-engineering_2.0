@@ -1,0 +1,22 @@
+{
+  "id": "4dfe165ef5372cbbaa8e3da2",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01HUavyi5iX5XRmGYe5ng5T6",
+        "name": "Bash",
+        "input": {
+          "command": "cat > \"$TEMP/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/om2.cjs\" <<'EOF'\nconst { DatabaseSync } = require('node:sqlite')\nconst db = new DatabaseSync(require('os').homedir() + '/.omniroute/storage.sqlite', { readOnly: true })\n// Calls since this afternoon's batch started, grouped by API style and what was served.\nconst since = new Date('2026-10-07T16:28:00+05:30').toISOString()\nconsole.log(db.prepare(`select path, source_format, requested_model, model, provider, reasoning_effort_requested req_eff, reasoning_effort_upstream up_eff, count(*) n\n  from call_logs where timestamp >= ? group by 1,2,3,4,5,6,7 order by n desc`).all(since))\nEOF\nnode \"$TEMP/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/om2.cjs\" 2>&1 | grep -v -i experimental",
+          "description": "Group OmniRoute calls by API style and model served"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
