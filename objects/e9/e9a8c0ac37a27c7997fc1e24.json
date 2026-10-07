@@ -1,0 +1,18 @@
+{
+  "id": "e9a8c0ac37a27c7997fc1e24",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01KmBbe9Zv9um88E9kQxD7Fy",
+        "name": "Bash",
+        "input": {
+          "command": "taskkill //PID 24200 //T //F; S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; git -C \"$S/upstream\" worktree remove --force \"C:/Users/shrey/AppData/Local/Temp/dsh-eval-9633724b40\" 2>&1; git -C \"$S/upstream\" worktree prune; git -C \"$S/upstream\" worktree list",
+          "description": "Kill orphaned vitest and remove leftover worktree"
+        }
+      }
+    ]
+  }
+}

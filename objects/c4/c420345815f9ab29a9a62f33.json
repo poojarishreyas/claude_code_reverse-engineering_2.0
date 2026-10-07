@@ -1,0 +1,15 @@
+{
+  "id": "c420345815f9ab29a9a62f33",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01KmBbe9Zv9um88E9kQxD7Fy",
+        "type": "tool_result",
+        "content": "SUCCESS: The process with PID 24200 (child process of PID 6776) has been terminated.\r\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream 5badb15009 [master]",
+        "is_error": false
+      }
+    ]
+  }
+}
