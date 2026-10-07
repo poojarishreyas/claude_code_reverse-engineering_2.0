@@ -1,0 +1,19 @@
+{
+  "id": "ef6c6d4fa58e6ed901557f88",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01AMftWcS7TPJ4rC8o9SJNMV",
+        "type": "tool_result",
+        "content": "{\"id\":\"gen-1791350528-vaCAWmN8DW9N78x0Y2Mz\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"anthropic/claude-fable-5\",\"content\":[{\"type\":\"text\",\"text\":\"Thinking about a simple greeting approach...\\n\\n\"}],\"stop_reason\":\"length\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":8,\"output_tokens\":5}}|http 200",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

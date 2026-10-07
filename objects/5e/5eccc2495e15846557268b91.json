@@ -1,0 +1,15 @@
+{
+  "id": "5eccc2495e15846557268b91",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01H2TZEPfyoU5zvAUr6UskYX",
+        "type": "tool_result",
+        "content": "{\r\n \"poolSize\": 1,\r\n \"attempted\": 0,\r\n \"excluded\": [],\r\n \"attemptOrder\": [],\r\n \"terminalReason\": \"all_targets_skipped\",\r\n \"recovery\": {\r\n  \"action\": \"switch-combo\",\r\n  \"next_step\": \"Every target was skipped before dispatch (capability pre-filter narrowed the pool and the remaining targets were all quota-exhausted/unavailable). Check the provider's quota in /dashboard/providers, r\"\r\n },\r\n \"skippedTargets\": [\r\n  {\r\n   \"reason\": \"model_not_in_catalog\",\r\n   \"targets\": [\r\n    \"antigravity/gemini-3.7-flash-high\"\r\n   ]\r\n  }\r\n ]\r\n}\r\n['auto/best-coding', 'auto/best-reasoning', 'auto/best-fast', 'auto/best-vision', 'auto/best-chat', 'auto/best-coding-fast', 'auto/pro-coding', 'auto/pro-reasoning', 'auto/pro-vision', 'auto/pro-chat', 'auto/pro-fast', 'auto/coding', 'auto/fast', 'auto/chat', 'auto/cheap', 'auto/offline', 'auto/smart', 'auto/claude-opus', 'auto/claude-sonnet', 'auto/claude-haiku', 'auto/best-free', 'auto/subscription', 'auto/thrifty', 'auto/best-chaos', 'auto/chaos', 'auto/coding:fast', 'auto/coding:cheap', 'auto/coding:free', 'auto/coding:pro', 'auto/coding:reliable', 'auto/reasoning', 'auto/reasoning:pro', 'auto/vision', 'auto/multimodal', 'auto/glm', 'auto/minimax', 'auto/mimo', 'auto/zai', 'auto/gemma', 'auto/llama', 'auto/gemini', 'auto/kimi', 'auto/qwen', 'auto/deepseek', 'auto/gpt', 'lynx harness', 'lynx harness-copy', 'kr/claude-sonnet-5', 'kiro/claude-sonnet-5', 'kr/claude-sonnet-4.5', 'kiro/claude-sonnet-4.5', 'kr/claude-haiku-4.5', 'kiro/claude-haiku-4.5', 'kr/deepseek-3.2', 'kiro/deepseek-3.2', 'kr/minimax-m2.5', 'kiro/minimax-m2.5', 'kr/minimax-m2.1', 'kiro/minimax-m2.1', 'kr/glm-5']",
+        "is_error": false
+      }
+    ]
+  }
+}

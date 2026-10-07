@@ -1,0 +1,27 @@
+{
+  "id": "e1aca48155f5f1e347d9a6d1",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSyQgKEAgSGAI4AUIIdGhpbmtpbmcSDJRc8TAuOdHVAmtXwRoMa7XsNwVXah/fhvY5IjBEB9raiziGBLo54u07XKpRu5iPAKjyB9uckeT0DWzFrBs+sn53sC7cXjq8Et9v4aUq5gek+BzYN12bpCYpWjMkIg287MqiX4t6k9i8yaTD5DVbBloWj+JiMeu64BSrzTxf28jnUeqUK5zmfmdZH40ROeX5zeEIOkEY/0PfWN1NftoqTJIu21m0UZWNR/wyz+0s8AtD8tniqf5/4OW6BrKUq5TLeJLvZoa1KlkTluKrzNecXREZwL5PwFUm4tjiJ/5KZkRWc34dGLbp3qUUhTaYkeCHLnnZ+9LXqkMJrzTRSP9/3AS7gMgLDQnhJqa+s1B5ws0wiB6IlYTH8JwmgtzvF4nXx2XQ9z7oeCsOj9RaG1P+ZBB6qr50Lo7f05u/dWNGIs+xVy5q2kWkpNgv849pNxlEunXOIVvZ9DCHN1la6iVRGFJi4hS7+w/JlOlmwF+jxBawlybvc3Sp6K8IpWLwSzjeZmlAZZij2CKC27D7U4XyOSTOhECurbniEFqvAq3Lk3sgoTWVxC6QJ7Am7F6HbojY6849uDMP4wd/dB7D/3GtfpoiVDsuHLy4hrPjNbNKjulp/UMp/aLfxg6EvC7PquiDSd1L+/3C9IOmNPzxinXe4BJp0sVtDsgc39einvJjyN+2AOLV//gxgCsXSsxaew+VTuYpN1n2ZXk5QwKu/g2j9LcMZCiDv6inV9AsYEo71rozSaUrDnKtW0n/UPOl1mh4r6qv/EFT/K7Ah5ukdFF+b8mEAc9YIH4LxyvkPxwOrfCJ2bI1mySicZNTg7Pq+AuM1qddHqBgatO7/voRVAKoVTjcxzeQ18gZNN/O1LX65KQoVdP5kakLY17EhIQdsKrhDvjTzsgw0cr06PeKw3a8zbCaPbg3ilLhgpraka1tF/LFqltU+efoJ47D54OCxEsf/e4Y82MM2HZCSmgd+ppw1SxubXLAmONTpOBgoH4TxyiVTrEhRWuNe2aM536qnHueBJdljh38rmjcUrd+8t7orDcXRe+6CI4Mx0qqmenyi9f7sljQjAN16aiTlZxrlQRlR/vNsAs4wCL+sc4Pyg3WwOOHCCZU2tgp7TtCa8GAIpuWg2FegSo07Zzbq6FTJSy4Hb8j3HDddcPYvkh0ojV7wHvK3gCTpWXLa51b2PL439kuDttlptt7FfP5R9Ux52Kl8zJf5IlvlDt6T/XBvx30hd2nSsqFzkefTuI1rfxabzIl9oXHjSba7YY0Oal9ss9uHbUV9LImgd9xZ1DrbydQAY6cCnCHxmL+CpPna3EmMFHLEbhG9cXSXQx991n8dMP8it0DqJ6Fs76EH/oWOSVob2R4s/XMaca+uHOBHgCxEvjjEKLKs+/01Y0d6CtBcupya/gkZU2VxWBWYKGsYEHoMj9B8mg9cBgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01AMftWcS7TPJ4rC8o9SJNMV",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); curl -s -w \"|http %{http_code}\" --max-time 90 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness-copy\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | head -c 600",
+          "description": "Probe the lynx harness-copy combo"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
