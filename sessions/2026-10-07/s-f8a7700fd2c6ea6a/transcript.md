@@ -5,8 +5,8 @@
 | session | `s-f8a7700fd2c6ea6a` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T04:57:05.789Z |
-| requests | 95 (3 errored) |
-| tokens | in 3,018 · out 43,531 · cache read 11,426,268 · cache write 212,439 |
+| requests | 96 (3 errored) |
+| tokens | in 3,114 · out 43,603 · cache read 11,592,214 · cache write 213,499 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -7356,4 +7356,20 @@ It's mostly the repo being tested, not the agents. Here's what I measured while 
 If memory keeps being a problem, the simplest fix is in the eval, not the agents: make sure each task's leftover processes are killed before the next task starts. I haven't made that change. So far the leftovers caused one crash, but not the reaps; the reaps came from the type-check.
 
 _stop `end_turn` · 13.02s (ttft 6.58s) · in 4 · out 1,058 · cache r165,931/w15_
+
+---
+
+## req-0096 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 182 messages_
+
+#### USER
+
+yeah why it consumes that much resource?
+
+#### ASSISTANT
+
+We're testing whether dsh finds and fixes files better than Claude Code on the same model, re-running from scratch after closing a hole that let both agents read the answer from git. Next is your "go" to run the remaining tasks.
+
+_stop `end_turn` · 3.57s (ttft 2.26s) · in 96 · out 72 · cache r165,946/w1,060_
 
