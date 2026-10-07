@@ -1,0 +1,27 @@
+{
+  "id": "9218a08193e635f642d5850c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSgQcKEAgSGAI4AUIIdGhpbmtpbmcSDIWJNIKrgME8a8lY0hoMr4Fl6Di3k1anim+HIjAH34XSTCIBMP0VBqG/NmoENfsnddkkZL/hAIrz+07k3uBvXhAeTdF3iDpR93eWxj8qnga4Qntu2biHFLVaP7EbY3RCc2G4EfOdxB+27tou0KYRQTfDu3O7ikX5xIk5AIZ1Qfc3gqvd8zkUzH8hDsAwP4lXXAl7IqmpibRruFRU7MnstGTeciNk7uFy/Uesw3PXlKTHR9e0RzKyYy69vRNCAjZI4Iy7qicSgmpK83bNT1X3AvuqJ4hbB7xN1vfuRl7Qpb3+AnKy6H61IBmEd/YZ8DLqL4g4+mWJCo3pFfdO81Ok9znanzynW/9aSQJhAVssCleALiDGUhhqMaCHCnD/BaGdJOH70KtNSGa08obsb0cJe+CLXfJ59STsufzc/a2BC2gACVOznG/gsRZVzIjSP0RMO0NfpKv6bmmDMrd82zqcsvTkD06zeMU9Ku4tqmLa1EWrOAMt9Fld3f0sFMKy66RvTGN7SQajv2dlCiwSqYHNPaaikSQaNzBhlpl0UPVgUUmpAe9qE2YLsXyJIIHPqm+cVqntDHne6/LDXc/y06B37Y3Ci2PiM2MqREaf2zhngclbyUym8/VOz9+p+XcKyR1Qi4vFakk2fkprxTI4cdDLAV7AupcjZMXPtKnmKdu3gc/s1J1PSolOScqXt47a+4ZIC+a2olaZ+FblYmjl1L12MPGVwDXNuq2Nv85dS7T+3o1B7xA1+ASvCZ2iGaP+Exg6qrAtJJIxkuGP1QHw8SP51BNoREW83QnzGAOCY3/q7+IEfPzJ3fkIzG//KLsahIG2DHji+3NzF8o5ABQGTN6FFcLW1oyKQgTcd7zRhB5cep39NYJVAfhr/flwPyeRYuHYhH0p2VaYzxxqQIOSz2onxQ//AkrXdeZZnpr74vqCS9yJa12PWrwvi122VK4oa4/B2OQzSEiGA/KcL7BTl+50f0autEkmrLP3BuEJRx5KdZn+1S8bGT3G3in9B+4dwro7NiRN9uvW55G80pl8YARiCaw7CkT17xME9tAEO771YfR/oFfA/42pAZd2ps2Xs5fWY2/Sm5TXK/eS8H/3dnxiu6Ny4iYS0m6K1keox0eUMbmYORnKTPApT36UaoOhOU1YxkLeP6qErnEyuAXgtM0YAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01EN92eFtW5ay5fyCg6aaVAh",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'probe' } | ForEach-Object { $pp = Get-CimInstance Win32_Process -Filter \"ProcessId=$($_.ParentProcessId)\"; \"PID $($_.ProcessId) $($_.Name) started $($_.CreationDate)`n  path: $($_.ExecutablePath)`n  cmd: $($_.CommandLine)`n  parent: $($_.ParentProcessId) $($pp.Name) $($pp.CommandLine)\" }",
+          "description": "Find probe.exe processes, their path and parent"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "725c74b70ce39ee54bc04e78",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CWFArXs1ZGpLJm7kMVjzmS",
+        "type": "tool_result",
+        "content": "20:35\n== dsh\n4b9d8ad6f7 error  36 agent turn failed: [antigravity/gemini-3.7-flash-high] [504]\n54fa38795f ran  53 \n9633724b40 ran PASS 98 \n980b410340 error  49 agent turn failed: [antigravity/gemini-3.7-flash-high] [502]\na59beb8ae3 ran PASS 49 \ned34a1d7fe ran PASS 55 \nf04ad05f30 ran PASS 38 \n== claude-code\n4b9d8ad6f7 ran PASS 27 \n54fa38795f ran PASS 94 \n980b410340 ran PASS 42 \na59beb8ae3 ran PASS 51 \ned34a1d7fe ran PASS 39 \nf04ad05f30 ran PASS 20 \neval: e21ed97f29 [cross-package, indirect, multi-file] fix(desktop): deliver Windows console signals to CLI handlers",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ea81d98081bfd33743b7ef3a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "hey new terminal is opening automaically probe.exe did u made that?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

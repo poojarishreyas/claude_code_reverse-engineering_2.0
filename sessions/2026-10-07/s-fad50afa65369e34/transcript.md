@@ -5,8 +5,8 @@
 | session | `s-fad50afa65369e34` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T14:21:49.743Z |
-| requests | 22 |
-| tokens | in 60 · out 7,760 · cache read 1,836,378 · cache write 33,953 |
+| requests | 24 |
+| tokens | in 66 · out 8,442 · cache read 2,020,925 · cache write 35,045 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -1782,4 +1782,139 @@ It's 13 of 16 runs done (8 tasks, each run by both agents). dsh is on e21ed97f29
 - **I'm leaving 54fa38795f out of the comparison**, as I explained earlier, because it can't be fairly scored on Windows.
 
 _stop `end_turn` · 8.33s (ttft 8.32s) · in 2 · out 723 · cache r91,235/w665_
+
+---
+
+## req-0023 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 50 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01CWFArXs1ZGpLJm7kMVjzmS)_
+
+```
+20:35
+== dsh
+4b9d8ad6f7 error  36 agent turn failed: [antigravity/gemini-3.7-flash-high] [504]
+54fa38795f ran  53 
+9633724b40 ran PASS 98 
+980b410340 error  49 agent turn failed: [antigravity/gemini-3.7-flash-high] [502]
+a59beb8ae3 ran PASS 49 
+ed34a1d7fe ran PASS 55 
+f04ad05f30 ran PASS 38 
+== claude-code
+4b9d8ad6f7 ran PASS 27 
+54fa38795f ran PASS 94 
+980b410340 ran PASS 42 
+a59beb8ae3 ran PASS 51 
+ed34a1d7fe ran PASS 39 
+f04ad05f30 ran PASS 20 
+eval: e21ed97f29 [cross-package, indirect, multi-file] fix(desktop): deliver Windows console signals to CLI handlers
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+It's 13 of 16 runs done (8 tasks, each run by both agents). dsh is on e21ed97f29 now. After that come Claude Code on e21ed97f29, then a dsh rerun of 4b9d8ad6f7.
+
+| Task | dsh | Claude Code |
+|---|---|---|
+| f04ad05f30 | pass, 38 steps | pass, 20 steps |
+| ed34a1d7fe | pass, 55 steps | pass, 39 steps |
+| a59beb8ae3 | pass, 49 steps | pass, 51 steps |
+| 9633724b40 | pass, 98 steps | pass, 79 steps * |
+| 980b410340 | error: proxy 502 at step 49 | pass, 42 steps |
+| 4b9d8ad6f7 | error: proxy 504 at step 36 (rerun queued) | pass, 27 steps |
+| 54fa38795f | fail, 53 steps | "pass" by skipping a test, 94 steps |
+| e21ed97f29 | running | waiting |
+
+\* Claude Code's 9633724b40 result came from an earlier run, so it isn't saved in the same folder as the others. I'll check that it used the same clean setup before counting it.
+
+**So far:**
+- **Every real run passed.** On the 4 tasks where both finished, both passed, and Claude Code used fewer steps on 3 of them.
+- **dsh's two errors weren't its own mistakes.** In both, the proxy (OmniRoute) returned an error and dsh gave up retrying after about 8 seconds. Claude Code kept going through the same kind of proxy errors.
+- **I'm leaving 54fa38795f out of the comparison**, as I explained earlier, because it can't be fairly scored on Windows.
+
+#### USER
+
+hey new terminal is opening automaically probe.exe did u made that?
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `PowerShell` _(toolu_01EN92eFtW5ay5fyCg6aaVAh)_
+
+```json
+{
+  "command": "Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'probe' } | ForEach-Object { $pp = Get-CimInstance Win32_Process -Filter \"ProcessId=$($_.ParentProcessId)\"; \"PID $($_.ProcessId) $($_.Name) started $($_.CreationDate)`n  path: $($_.ExecutablePath)`n  cmd: $($_.CommandLine)`n  parent: $($_.ParentProcessId) $($pp.Name) $($pp.CommandLine)\" }",
+  "description": "Find probe.exe processes, their path and parent"
+}
+```
+
+_stop `tool_use` · 5.24s (ttft 3.13s) · in 4 · out 326 · cache r91,900/w747_
+
+---
+
+## req-0024 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 52 messages_
+
+#### USER
+
+hey new terminal is opening automaically probe.exe did u made that?
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `PowerShell` _(toolu_01EN92eFtW5ay5fyCg6aaVAh)_
+
+```json
+{
+  "command": "Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'probe' } | ForEach-Object { $pp = Get-CimInstance Win32_Process -Filter \"ProcessId=$($_.ParentProcessId)\"; \"PID $($_.ProcessId) $($_.Name) started $($_.CreationDate)`n  path: $($_.ExecutablePath)`n  cmd: $($_.CommandLine)`n  parent: $($_.ParentProcessId) $($pp.Name) $($pp.CommandLine)\" }",
+  "description": "Find probe.exe processes, their path and parent"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01EN92eFtW5ay5fyCg6aaVAh)_
+
+```
+(PowerShell completed with no output)
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01SgxSANRJip4yyPNCCBzqDi)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/AppData/Local/Temp/dsh-eval-e21ed97f29 2>/dev/null && { git status --porcelain | head; grep -rl --include=*.ts --include=*.cjs --include=*.js --include=*.rs -i \"probe\" . 2>/dev/null | grep -v node_modules | head; find . -iname \"*probe*\" -not -path \"*/node_modules/*\" 2>/dev/null | head; }; S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; grep -i probe \"$S\"/*.sh \"$S\"/*.ps1 2>/dev/null | head",
+  "description": "Look for probe in the current task workspace and my scripts"
+}
+```
+
+_stop `tool_use` · 6.21s (ttft 5.60s) · in 2 · out 356 · cache r92,647/w345_
 

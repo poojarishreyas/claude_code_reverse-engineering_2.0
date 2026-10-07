@@ -1,0 +1,22 @@
+{
+  "id": "17e2fd323799499ede59c3ea",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjQkKEAgSGAI4AUIIdGhpbmtpbmcSDNR0yrN87g8i5RDbQRoMfTKV9xft85xnlNTKIjDw7Jgj1SpkzWX8ey0KMKQ6VrWok8NWOr4/6uwH7IanqRWt0msuAbhHx/FfHsxG4OQqqghdw5mwW7Ee9ydtUiiqSNHjsp/NPvSldMAH0dvg/Jy2lkfIz0RXgcsUtYDB/FcC4bm51hBAnhkmKnu2LI/7ibKz41hLLSaMy1QcwhGEZx9c69hZ7dBAZwgsccquIW9BuUXD5u3r9533qGAnVDJnqg30t78WRndgKsPVSImtXeqrPkOcDw1gILBhvBgA9CJtR3SntIzW69FA2IqQ6bowRbmGjiS/PTy+g/hsYpDK5AvzodOG/vKKs1cj6+4FU8h63Lkrqmn+obPS10FhG09LahFLhhABsag6UG48rtcxS1p+xju+Wh++4Ef9MZzN6r4Srgh8H/lm5epNvTZ90IF4MlqOE+sSzwotLCnr+9/+C5L7FlcOlEWe5f1O22z5F8dT7i4wwJsWULRwVwSu6yp3Y3s17GqTSA/6CkNE7gxdP8FfCz1IFDkeoySCjZYfi3LN89kdVeMf3SDxYEHaROTPle/45O3hKh1JIpnkTPdYN+kAbkud5jm5h9xU3UV6NPa3n74Sc9bnwk/eyYUk6VrzZKIqc2XftSQlRkgXZdAxcwuzcb5G4bstVISxHuCB30T8PFO8lRfrm+PdxiDpTHUVmW5N9W0uAs0kroLOvSwhdtekPnW6NGrwbi9gQCC7AacDeqcPKYw/exdbkEcmBbBwJi4qqC4dTR3EslVq2AwyT0aupbk1nZuEdiDMOyeMJpdohZZcvr0ImMahpESLeOtd4ggZUioT5rjR4XXLEFky+OzuEgfXTPq4Bp9xr+3JJGX5z24Tkarv8UeXpwtjXe/MWkOY/i/XQ62aS9e1ANzdlQDw5Sw9/PVK20ffvIYAeX6Ecx7E86H4OMya4V1FYfJpAZM8/sOUQTp3rHZryPPGPnGG3BScb91DLKdzNxUayhJgu7dAr25uftv1HA9DZtge7D0spPwHPC4Sz0mh+hr94Qo6eSR7xHWUzxALwAt5+o+64fdIEzYWwxi+EBHwnq9bYdKd8NJ32srceX/RfD/RhDUfs2O2hQNW7glAaQVXFDZZ/6ed9RknEnCl3N14J7MOpc+vb19K9lPvJf/5Bzf5Skj+rFb0a34767lXRmtMDKbVZDXUbJhvCwfogfut7M1IUi3+SrOtLWRNuyK8tDrmRnwjrzraNpYojoSJEabYHS0kCkIP28ExAykTIWR3a+94WI0L/pdRdf3/iQIkhDxMA/rKOfuJZQ/8aupiR19UzJ2TlOo68fgjI56Y2HsyOdt+5WzNqXXULf6hNZyl6uWzx1AIcv8rU6TykLKTkxXN4+PRdYwcbmXIyMGjzkoDucwOh99cwdahJrEfq2A0IneINqC0WTI4eOMWxZRjLhvcrtziKC2LovElTl0WSiUwT+GsCm+wUj661Y7KgAueEGOkgFwzZ5GyBhAy9P1/xW+8pxw+YcFjTJ+nRPibqZjhGAE="
+      },
+      {
+        "type": "text",
+        "text": "It's 13 of 16 runs done (8 tasks, each run by both agents). dsh is on e21ed97f29 now. After that come Claude Code on e21ed97f29, then a dsh rerun of 4b9d8ad6f7.\n\n| Task | dsh | Claude Code |\n|---|---|---|\n| f04ad05f30 | pass, 38 steps | pass, 20 steps |\n| ed34a1d7fe | pass, 55 steps | pass, 39 steps |\n| a59beb8ae3 | pass, 49 steps | pass, 51 steps |\n| 9633724b40 | pass, 98 steps | pass, 79 steps * |\n| 980b410340 | error: proxy 502 at step 49 | pass, 42 steps |\n| 4b9d8ad6f7 | error: proxy 504 at step 36 (rerun queued) | pass, 27 steps |\n| 54fa38795f | fail, 53 steps | \"pass\" by skipping a test, 94 steps |\n| e21ed97f29 | running | waiting |\n\n\\* Claude Code's 9633724b40 result came from an earlier run, so it isn't saved in the same folder as the others. I'll check that it used the same clean setup before counting it.\n\n**So far:**\n- **Every real run passed.** On the 4 tasks where both finished, both passed, and Claude Code used fewer steps on 3 of them.\n- **dsh's two errors weren't its own mistakes.** In both, the proxy (OmniRoute) returned an error and dsh gave up retrying after about 8 seconds. Claude Code kept going through the same kind of proxy errors.\n- **I'm leaving 54fa38795f out of the comparison**, as I explained earlier, because it can't be fairly scored on Windows.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
