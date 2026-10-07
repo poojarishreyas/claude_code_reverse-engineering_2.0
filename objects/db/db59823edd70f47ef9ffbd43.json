@@ -1,0 +1,17 @@
+{
+  "id": "db59823edd70f47ef9ffbd43",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The watch on the eval log expires every 30 minutes, so I restarted it. It reports only new lines, so you won't get repeats of results already reported. dsh on f04ad05f30 is still running.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
