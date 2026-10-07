@@ -1,0 +1,17 @@
+{
+  "id": "8ed5b47836ad4a141117d7b8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The watch on the eval log timed out after 30 minutes, so I've started a new one. Claude Code is still running 980b410340.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

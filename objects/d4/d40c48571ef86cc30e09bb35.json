@@ -1,0 +1,19 @@
+{
+  "id": "d40c48571ef86cc30e09bb35",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01J4q6s9nnmeqPBSj4YveCfy",
+        "type": "tool_result",
+        "content": "   Id ProcessName            MB\r\n   -- -----------            --\r\n22732 OneDrive.Sync.Service 729\r\n 6808 brave                 693\r\n 6736 node                  659\r\n 7752 node                  561\r\n 5168 MsMpEng               497\r\n11596 node                  490\r\n21392 brave                 461\r\n 6068 node                  443\r\n 3356 Memory Compression    387\r\n17004 claude                344\r\n\r\n\r\n\r\n6068 443MB \"C:\\Program Files\\nodejs\\node.exe\" --dns-result-order=ipv4first --max-old-space-size=4096 C:\\Users\\shrey\\AppData\\Roaming\\npm\\node_modules\\om\r\n11596 490MB node   \"C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-ed34a1d7fe\\node_modules\\.bin\\\\..\\vitest\\vitest.mjs\" run\r\n6736 659MB node   \"C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-a59beb8ae3\\node_modules\\.bin\\\\..\\vitest\\vitest.mjs\" run\r\n7752 561MB node   \"C:\\Users\\shrey\\AppData\\Local\\pnpm\\store\\v11\\links\\@\\pnpm\\11.7.0\\13310dfb63588666a20ffbb7892eca80e4978178e90910f66079c792a7b2dc4f\\bin",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
