@@ -1,0 +1,27 @@
+{
+  "id": "42160a85aecf8b08cc05518c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS8QYKEAgSGAI4AUIIdGhpbmtpbmcSDCdKP4vawmfci3U7kBoMy1PJVTdHoKEV8yunIjDOsob9wojwhvSQ+BpPA+W4TMXXGgYqQfV4wtbE9YDWPqNQPvI9hmzQA1WENpg3Dj4qjgZPWblYRH5jCciuYNh3MLzYxAxa6nMpo5G65yEQMoGW8Ww+vme6bORgohzwxfwF4RfMcHcVI5M1zg6h46lhGFSMEBAhgtuwLSQKG0a8tLNtEOitJCX2UhAoGJVQlCxIPrAprvKFwEAJDR6UtUZMr6eRVMF+oUrd84xLcV2kZY79MtyBrllOa0wS9ADFv8R7ia2xdiReehVZggaSkRrHi82ffBw3562yzH+GI74hiB1kkObBRofK4lWrsPk/9/RXLFI/Eywd3HY4VfEbMXhffIOk9mjg4BIMvqaRPXX7ucFqaMi9wFpQfj04q1JfK59aTTtNc2Ptgldm4Vm+3XMyerah3fsTGqv7x+ZyyISy1eRtqp/0S78pNyzfLWxeZdekYijrEgII0J1FE1wlO9MRBJJChiV1W6YrWfeLHTbZ8Mk7+OSqJqtuJr8A0Xx1GP/fvgLgHXpVXZgpoHxN+Mn9wURgoEY9BZnSmSHV83o48cUgVEh4/y03R07wzQCHkdTJ0ESvcT1SYam5VzflB3PIHcn+A/Apr9SOJxuaXnq0X1XwEuupSqG4vKIiue2tygYXBoIJ+b8CDzHDobzSlwy1T15e2e1PaTXmRaNNTX77Dg0WPYQj69PMqS/X1iG48l5zSDd1eTzS5KnEHZQlVkr+Tdjxp6KQrzMxVBvNPR8S32NJcZlOvys77b3iGGfgSz1sk6cXxdpQJibXO+qlYoZ6NYc6C3TTvrPGEALmm5Dyb/VreSiO2W9N7zUMeVUSHMV0CFEnYkK1lnE3rQJFs6iWdHElj8kRQLXCfC6KouN2qMey5TNtRn22HkyzkTrkFr0OH88F9/AkDZKj1JcoROHEYDHjwfjFRlbthBO6r6AAFjkIYv52csE+EUH6cTzmZTyLJjaHXf6oRqFgHSgC0vVpIcz+x1adCxa6VqgWEzviwCK6VgJj0V9lL0wrvUcPL6ThXUhdYyFzCWCJ8WkkHy1j9cofA7PYDiYD9Gy6mWrz+6Q+C+X+kGdtrRqcYbGLgBdoYd2XrPkH7E6MTghnbW8jDhgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Ai1uKsoGVvtXoHBGa5DxZp",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-CimInstance Win32_Process | Where-Object { $_.Name -in 'node.exe','claude.exe','esbuild.exe' } | Select-Object ProcessId,ParentProcessId,CreationDate,@{n='MB';e={[math]::Round($_.WorkingSetSize/1MB)}},@{n='cmd';e={$_.CommandLine.Substring(0,[math]::Min(150,$_.CommandLine.Length))}} | Format-Table -AutoSize | Out-String -Width 260",
+          "description": "List node processes in the eval tree"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

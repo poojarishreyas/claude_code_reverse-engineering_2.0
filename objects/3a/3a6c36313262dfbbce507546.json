@@ -1,0 +1,15 @@
+{
+  "id": "3a6c36313262dfbbce507546",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Ai1uKsoGVvtXoHBGa5DxZp",
+        "type": "tool_result",
+        "content": "ProcessId ParentProcessId CreationDate          MB cmd                                                                                                                                                   \r\n--------- --------------- ------------          -- ---                                                                                                                                                   \r\n    16788           14604 10/6/2026 9:15:43 PM 102 \"C:\\Program Files\\nodejs\\node.exe\" C:\\Users\\shrey\\AppData\\Roaming\\npm/node_modules/shrey-cli/src/index.js --resume                                    \r\n    17004           16924 10/6/2026 9:15:44 PM 362 \"C:\\Users\\shrey\\AppData\\Roaming\\npm\\\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe\"    \"--resume\"                                             \r\n    16940           15816 10/6/2026 9:16:44 PM  41 \"C:\\Program Files\\nodejs\\node.exe\" C:\\Users\\shrey\\AppData\\Roaming\\npm/node_modules/omniroute/bin/omniroute.mjs                                        \r\n     6068           16940 10/6/2026 9:16:51 PM 610 \"C:\\Program Files\\nodejs\\node.exe\" --dns-result-order=ipv4first --max-old-space-size=4096 C:\\Users\\shrey\\AppData\\Roaming\\npm\\node_modules\\omniroute\\di",
+        "is_error": false
+      }
+    ]
+  }
+}
