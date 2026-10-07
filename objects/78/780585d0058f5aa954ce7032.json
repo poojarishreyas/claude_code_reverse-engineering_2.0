@@ -1,0 +1,15 @@
+{
+  "id": "780585d0058f5aa954ce7032",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_018GZidnvn2ToEdict17Qe32",
+        "type": "tool_result",
+        "content": "3\nnew pid 10413",
+        "is_error": false
+      }
+    ]
+  }
+}

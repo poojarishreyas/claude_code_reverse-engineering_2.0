@@ -1,0 +1,17 @@
+{
+  "id": "42f7fd723aa4bcfb8eb5a3b0",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "skip that compiler",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

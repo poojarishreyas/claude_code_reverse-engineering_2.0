@@ -1,0 +1,8 @@
+{
+  "id": "68401c25e6f17c86e3644804",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "skip that compiler"
+  }
+}
