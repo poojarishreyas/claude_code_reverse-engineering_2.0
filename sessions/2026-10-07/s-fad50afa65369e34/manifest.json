@@ -6,16 +6,16 @@
   "model": "claude-opus-5-5",
   "credential": "c3aa2db0733d",
   "startedAt": "2026-10-07T14:21:49.743Z",
-  "updatedAt": "2026-10-07T16:55:29.347Z",
-  "durationMs": 9219604,
-  "requests": 80,
+  "updatedAt": "2026-10-07T16:56:11.799Z",
+  "durationMs": 9262056,
+  "requests": 81,
   "errors": 21,
-  "events": 280,
+  "events": 284,
   "usage": {
-    "input": 154,
-    "output": 25854,
-    "cacheRead": 5963958,
-    "cacheCreation": 71715
+    "input": 158,
+    "output": 25983,
+    "cacheRead": 6093620,
+    "cacheCreation": 72527
   },
   "messageIds": [
     "fad50afa65369e3490aa7d84",

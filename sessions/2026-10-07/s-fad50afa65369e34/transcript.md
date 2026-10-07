@@ -5,7 +5,7 @@
 | session | `s-fad50afa65369e34` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T14:21:49.743Z |
-| requests | 80 (21 errored) |
+| requests | 81 (21 errored) |
 | tokens | in 154 · out 25,854 · cache read 5,963,958 · cache write 71,715 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
@@ -5111,4 +5111,12 @@ _max_tokens 128,000 · streaming · 130 messages_
 _[no new input since the previous request]_
 
 > **Error** (connect) — fetch failed
+
+---
+
+## req-0081 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 130 messages_
+
+_[no new input since the previous request]_
 
