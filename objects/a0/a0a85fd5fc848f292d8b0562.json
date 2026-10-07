@@ -1,0 +1,23 @@
+{
+  "id": "a0a85fd5fc848f292d8b0562",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01K8xGLSuU7SBnYQS1BL8w1b",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\llm\\llm-pi-ai\\tests\\convert.spec.ts",
+          "offset": 790,
+          "limit": 30
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
