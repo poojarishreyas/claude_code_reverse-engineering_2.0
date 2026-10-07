@@ -1,0 +1,19 @@
+{
+  "id": "5f183ef996614ff385611415",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019diVLBLxp8Ns3y76KGkrWv",
+        "type": "tool_result",
+        "content": "18:44\n{\"steps\":49,\"seen\":2,\"read\":6,\"edited\":[\"packages/boot/hmr/src/index.ts\",\"packages/boot/hmr/src/package-manifest.ts\"],\"usage\":{\"inputTokens\":256024,\"outputTokens\":31655,\"cacheReadTokens\":2862786}}\n\"type\":\"llm/retry\",\"seq\":558,\"time\":1791378517405,\"data\":{\"retryId\":\"c4e20ada-c678-45a3-894d-30fd44ec7886\",\"turn\":1,\"step\":47,\"provider\":\"mylynx\",\"mode\":\"normal\",\"policyKey\":\"[\\\"normal\\\",5,[\\\"EMPTY_RESPONSE\\\",\\\"RATE_LI\n\"type\":\"llm/retry-started\",\"seq\":559,\"time\":1791378517964,\"data\":{\"retryId\":\"c4e20ada-c678-45a3-894d-30fd44ec7886\",\"turn\":1,\"step\":47,\"retry\":1\n\"type\":\"llm/retry\",\"seq\":562,\"time\":1791378518048,\"data\":{\"retryId\":\"c4e20ada-c678-45a3-894d-30fd44ec7886\",\"turn\":1,\"step\":47,\"provider\":\"mylynx\",\"mode\":\"normal\",\"policyKey\":\"[\\\"normal\\\",5,[\\\"EMPTY_RESPONSE\\\",\\\"RATE_LI\n\"type\":\"llm/retry-started\",\"seq\":563,\"time\":1791378519136,\"data\":{\"retryId\":\"c4e20ada-c678-45a3-894d-30fd44ec7886\",\"turn\":1,\"step\":47,\"retry\":2\n\"type\":\"llm/retry\",\"seq\":566,\"time\":1791378519230,\"data\":{\"retryId\":\"c4e20ada-c678-45a3-894d-30fd44ec7886\",\"turn\":1,\"step\":47,\"provider\":\"mylynx\",\"mode\":\"normal\",\"policyKey\":\"[\\\"normal\\\",5,[\\\"EMPTY_RESPONSE\\\",\\\"RATE_LI\n\"type\":\"llm/retry-started\",\"seq\":567,\"time\":1791378521344,\"data\":{\"retryId\":\"c4e20ada-c678-45a3-894d-30fd44ec7886\",\"turn\":1,\"step\":47,\"retry\":3\n\"type\":\"llm/retry\",\"seq\":570,\"time\":1791378521465,\"data\":{\"retryId\":\"c4e20ada-c678-45a3-894d-30fd44ec7886\",\"turn\":1,\"step\":47,\"provider\":\"mylynx\",\"mode\":\"normal\",\"policyKey\":\"[\\\"normal\\\",5,[\\\"EMPTY_RESPONSE\\\",\\\"RATE_LI\n\"type\":\"llm/retry-started\",\"seq\":571,\"time\":1791378525178,\"data\":{\"retryId\":\"c4e20ada-c678-45a3-894d-30fd44ec7886\",\"turn\":1,\"step\":47,\"retry\":4\n10",
+        "is_error": false
+      },
+      {
+        "type": "text",
+        "text": "The user sent a new message while you were working:\ncontinue\n\nThis is how Claude Code surfaces messages the user sends mid-turn — within the running turn, often alongside the next tool result, rather than as a separate conversation turn. Address the message above as you continue this turn."
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "a8370aafe332a5a084de57ce",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": " is claude code is also running in gemini?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

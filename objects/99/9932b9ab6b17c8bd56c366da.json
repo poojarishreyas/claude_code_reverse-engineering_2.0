@@ -1,0 +1,19 @@
+{
+  "id": "9932b9ab6b17c8bd56c366da",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01GYFqWckwE1mfT31fCvprZu",
+        "type": "tool_result",
+        "content": "33:import { claudeCodeArgs, claudeCodeEnv, parseClaudeCodeOutput } from './claude-code.ts'\n337:    : claudeCodeEnv(process.env, await readProvider(homeFrom, provider), model)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

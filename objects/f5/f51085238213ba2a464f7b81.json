@@ -1,0 +1,23 @@
+{
+  "id": "f51085238213ba2a464f7b81",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1wcKEAgSGAI4AUIIdGhpbmtpbmcSDDDvE6VVGIflBZtJWBoMVb9KiZhLJoIEIwHfIjCG19tkb720zv/BXXQP/BqjILDold46+VelIU7bvrrwI5HakyOBskw0zZsRCwu3ikcq9AZy7PLf1cvyKOSskVrDoHAO1+vb5b7tYZL0MYxZIy0Zmb7n9H1PJbO0l87E980GoHsEJXkEUEQxn/M+kHrpQ2duvb6U98EZ+HGc4AKVbr1jTJZ+8uPLsBZubgeJusNri0Rf5zKEAuHkIwmTXyGKfeuLT4rjyVxvMMees5cmX2quaaKA/6TDRW3sumGUYHiAvOkuZSuPO1tPzKgn+c7xjmDOwQ7t+4ShEUuPzEpSfhu35K3PDorKp+dO4+lejTt+X3x+TrhDlxb2+mClAzz0ZI55IBaZuMp9AFR+tMzRH4/3gkDpaFD97HIfNfb1H3BVaZWkedAr2jXcwyEFJEuwIISkGf9maEzBfHONmEZwwYmE56hTj4wE3P8g2Jw82H75M512s0DUIyOnGDrg3eOUKppR36pxWArqxjgm5akTws8vFYZ2wtzZ/y+SatTkAEM676fGB9PWgmOJBn/d+BH3Rnt0w5wucBYraszgzKFIKkfKRsfJZJxfTa8DPtGzPSOM1GVXDJHYaNikFVRF1RLL+oVSXHb8+GuOupG4V9/doawoVtYX1ZM5RGs/sZMY+iPl1gvZrDEG9s1a5Aaiv8QIZ9MlQxiBwzd4HskqF+XpXhUAM7dtoKzKEaX8tVg0RVckudUR79B2DtTb8Zu2P2wNv417AB/96doDckH+j9GSYQXSlYzBaaV1+lrOBIkf+R2UE+a1C8j1LvyqIhKOouC8QSUwvK9kQJ8IoWNMVFsbf3aZ2F6oYOdb297TS+Kg+rOuA/T3MQwxaPC3u9MV/magFB169Kh+OwT9oA8ZYMbMzzC2w4VlYXLMtDqAZxSx5czQDUzk43tQcvE+AnN3X4Bv5e4/WTVO9AIIB+lvUcNSSBn8EMo0LHyAnvO4z8qQ8ETQlY2UYp79CAtXWPLyVKIjlMcTXjplA98O8He7SFDFjAuUlYZGWxCyLvxckzzQJpcoxDWTMJXvqa1KVNeWMigwACKP0cvaQfjLxrJVreZ860QW040U6+53cLBwM1xkd9rwXFoyEeANg3MElCKPYTfZ0T96E1+sFo7rjEX2aHRCrBIVe51vu/KuvJ51ntxP752Y7KEBD2CIqbVn8LbppjRylX4fhJoy6q1qO06wCEQCYRizTMj8BPwjOVD3N4+i2/DCPN9giOkFSxq5xf9farNNuC+2cEi1hxgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01GYFqWckwE1mfT31fCvprZu",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; grep -n \"ANTHROPIC\\|claudeCodeEnv\" /c/Users/shrey/Desktop/Elemental_harness/scripts/eval/run-eval.ts | head; grep -oE \"\\\"model\\\":\\\"[^\\\"]+\\\"\" \"$S/clean-claude-code/a59beb8ae3.json\" \"$S/clean-claude-code/a59beb8ae3.events.jsonl\" | sort | uniq -c | head",
+          "description": "Check which model Claude Code runs on in the eval"
+        }
+      }
+    ]
+  }
+}
