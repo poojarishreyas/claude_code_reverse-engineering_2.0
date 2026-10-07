@@ -1,0 +1,19 @@
+{
+  "id": "c2e8b0424271219e7e0b6e17",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01KxcFRzboBMAt2ywhE8kdZc",
+        "type": "tool_result",
+        "content": "killed leftover 23344 node.exe\r\nkilled leftover 23124 node.exe\r\nkilled leftover 14116 node.exe\r\nkilled leftover 14896 node.exe\r\neval: 1 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d7\neval: 980b410340 [multi-file] fix(hmr): preserve native manifest behavior",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
