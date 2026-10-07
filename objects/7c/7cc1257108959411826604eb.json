@@ -1,0 +1,15 @@
+{
+  "id": "7cc1257108959411826604eb",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_013tQuzSXrkGKbWmvQWYWUgA",
+        "type": "tool_result",
+        "content": "{\"error\":{\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"service_unavailable\",\"code\":\"ALL_TARGETS_SKIPPED\"},\"diagnostics\":{\"poolSize\":1,\"attempted\":0,\"excluded\":[],\"attemptOrder\":[],\"terminalReason\":\"all_targets_skipped\",\"recovery\":{\"action\":\"switch-combo\",\"next_step\":\"Every target was skipped before dispatch (capability pre-filter narrowed the pool and the remaining targets were all quota-exhausted/unavailable). Check the provider's quota in /dashboard/providers, r\"},\"skippedTargets\":[{\"reason\":\"model_not_in_catalog\",\"targets\":[\"antigravi\nWed Oct  7 10:50:12 IST 2026",
+        "is_error": false
+      }
+    ]
+  }
+}
