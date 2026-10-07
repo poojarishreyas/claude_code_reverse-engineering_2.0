@@ -1,0 +1,27 @@
+{
+  "id": "85685299da992dba16f035e1",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSgAYKEAgSGAI4AUIIdGhpbmtpbmcSDER+5OTan+TSu3hLahoM4bnbmDqTP4DqRvLrIjB6hqK1GfgQ6BJynyLvloGh2TQBq/86MJRDrhngwzkkmsBitjLjOosnFPQwq5RaIYAqnQWTFGUKONHDyUSNHv/dhQUfEccyTA6ct2HPKw+tExz5JilXDjtlsAiwOuaygiKhSOdnyavrt11RZHglTQTTKjGD1Xn77Wf8rYMsLu7yuOaD3miJ7DnVskCea5D5h/ZuKk3IKS+2hAzsrA/Z1DIvvQvvaPkwd/WTTNrcwUUsAsmOMbUC+kFv4hW5St0NXXUBW4EbCfWrtG3T7xe/1XpPZMGA6sx2RE+efX3pIFbDQTzqovRBUQM0QbzZ1c3kSxi9rGQAYa4DKmYnKINoUCA7oNWA2sSLwJ9r4q7BwmF4bhlSSR0UpTO6cF4uL+PwzX6Ax3rSbPx6kFA2+oCfjjAEzMAd6rcJmgkutdFk9w9bnsikmmqg2ZRwMTy5YQI884NFPAkJrKHYStvn7CMrDqdpCdDIZcuAs9OxNSbKYRa4gZRpl65gUJYEhqBvwCYV88XklgY6yGvleIT/dwFZqOmI51s7/jjdO7nQ+i0WjchYR1X6u3vJiYNMEm1FtpHhaK0UWXJg1onc20NAvXZH68sVvsJHmogGQys0QCyOPRrwS1jM3GCNaQ2RTBarKOQcW6kl/YrGFZieHQox/QXB6W5C50hgZQ5R2QYzQCHL00dyRXKKS7y4PyBP3NnKpps0olJ7eElPFdNQekTVFb2ROXesdeMhu1akkWmdRweOg1/yaqZVSvtZ5OmSpUMFJZ3AivmykjPSv/r7hyBeXWxnkzQYoCMkOalD6sStyglgkjdubxli3jL9orUbkNgp8XA8orsfniBCDoTqPwM1SkNzIEm5/hwRtY97fYmaoQNz0ZiH8NpK8pkNN/D1w8TOXiUaj2TFunFpZn8b1DpTBXU46uWEac19tWYulr4vQ1QHCNc287EPh58o9vxGR/XK0hdJMisYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01VXN3y4fUq6D7EEeLUKNorq",
+        "name": "PowerShell",
+        "input": {
+          "command": "foreach ($d in 'dsh-eval-4eb53e63ff','dsh-eval-ed34a1d7fe') { $p = Join-Path $env:TEMP $d; \"$d GB: \" + [math]::Round(((Get-ChildItem $p -Recurse -File -Force -ErrorAction SilentlyContinue | Measure-Object Length -Sum).Sum)/1GB,2) }; $store = (pnpm store path); \"pnpm store: $store GB: \" + [math]::Round(((Get-ChildItem $store -Recurse -File -Force -ErrorAction SilentlyContinue | Measure-Object Length -Sum).Sum)/1GB,2)",
+          "description": "Measure leftover workspaces and pnpm store size"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
