@@ -1,0 +1,22 @@
+{
+  "id": "49856df5fcef2ad78561bc62",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01FW29nebezFzJ8Khr2wr29A",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness/packages/llm; cat llm/src/retry-policy.ts | head -80; grep -n -i \"retry\\|retryable\\|status\" llm-pi-ai/src/adapter.ts | head -40",
+          "description": "Read dsh's retry policy and pi-ai adapter error mapping"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

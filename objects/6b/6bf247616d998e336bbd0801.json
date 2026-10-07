@@ -1,0 +1,14 @@
+{
+  "id": "6bf247616d998e336bbd0801",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01M4NPT2SKsp3bkFH5nNaPrJ",
+        "type": "tool_result",
+        "content": "Found 25 files\npackages\\test-support\\llm-replay\\src\\index.ts\npackages\\test-support\\llm-mock-server\\src\\index.ts\npackages\\test-support\\llm-mock-server\\src\\cli.ts\npackages\\llm\\token-meter\\src\\turn-usage.ts\npackages\\llm\\token-meter\\src\\usage-projection.ts\npackages\\llm\\token-meter\\src\\surface-fold.ts\npackages\\llm\\token-meter\\src\\index.ts\npackages\\llm\\llm\\src\\types.ts\npackages\\llm\\llm\\src\\error.ts\npackages\\llm\\llm\\src\\index.ts\npackages\\llm\\llm\\src\\invariant.ts\npackages\\llm\\llm\\src\\retry-policy.ts\npackages\\llm\\llm\\src\\adapter-failure.ts\npackages\\llm\\llm-retry\\src\\history.ts\npackages\\llm\\llm-retry\\src\\index.ts\npackages\\llm\\llm-retry\\src\\invariant.ts\npackages\\llm\\llm-retry\\src\\types.ts\npackages\\llm\\llm-retry\\src\\brand.ts\npackages\\llm\\llm-pi-ai\\src\\stream.ts\npackages\\llm\\llm-pi-ai\\src\\index.ts\npackages\\llm\\llm-pi-ai\\src\\adapter.ts\npackages\\llm\\llm-pi-ai\\src\\config.ts\npackages\\llm\\llm-deepseek\\src\\files-api.ts\npackages\\llm\\llm-deepseek\\src\\index.ts\npackages\\llm\\llm-deepseek\\src\\adapter.ts"
+      }
+    ]
+  }
+}

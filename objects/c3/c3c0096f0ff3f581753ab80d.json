@@ -1,0 +1,17 @@
+{
+  "id": "c3c0096f0ff3f581753ab80d",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\llm (was C:\\Users\\shrey\\Desktop\\Elemental_harness)",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
