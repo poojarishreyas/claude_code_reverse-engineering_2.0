@@ -1,0 +1,28 @@
+{
+  "id": "e8e146027f228e3833fc9c09",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSgAcKEAgSGAI4AUIIdGhpbmtpbmcSDHIhqD03ADQv47km+hoMUlD4HYXVImjz7LKiIjD6C5QVnQiKDtkrSOOKNs5l0JVw/ntDH/SiZ/rgM+1ovKxRifQPTYGM7nlZ8A2vKjoqnQYfpKkxj7Q3hzj70YR/7gQwc18XX/gVhNmwPyEJYC4XLdEAJngFu++pgFDd0SR6TQxY++0QedfLcZPJUATedH4/m3tYm+fucm4UVBPCEGqL5mvtMKtQ8iD9gK/OwVVxYz/VX1XBrRwFbmYCL4v7LkfmBbUivt8MHAuQ0rA/rJ67bvsHm7duTJHrBJQ1CiR78vOV1yLsyJevpaq3xlrySsIrhHlk2dQD/LlaMvAPVV9DyL1HkJ+GS6TglMg673kInkrPK8+cZJ/4oT/BJlwWQruwJ1DzjJUvdlHvTMvuXF/iRcJof1B/R6f/uOm0NaIRq/2RKQoE5wwRwVYHBI2yGp/b+TxItfWEskJbx0qNbj61wysXsSeL5NmP6B/I0yzVOeSRZcELMD6jDOBGmIRkN9cpfIhZeIFSgmGJXfGp81PiBl/NDxIGhhZXZ9zHd73ztFkHqibnZAva3NjEG7Bj3BGqVcgewZZETGnd0hcd+u2JVwwvCwqeH3U2xOLWW7LwVWv8jSO5GQqBhL9DaJLmV4UiMCKWLNya03h3+xp9e5haEnhMznMcSJkQaY9xdwvWRPLjCzvhwB6zlF6QRxMmZWe3wfEikjh7p9gawXTRddKrTGqW7BhgLc1KMqkeQr0Qw7iAdy+YVs5H4H+4dE9mIX+05MIjlrCgmdkxnuSqvR7pk7nBirgr5WuPc6i0BVzKuyyEi1RdmnF7eZF9sksZbqwunZEGFWuErhOLZDeQV3N7+LDf+KFunDCEScLEC10TyMP6GyvgLFMnvGgwknB2qtU+1MlpsMRBBlrssAf/ulz5KjpcnPccu6/JJB1GIFFKlWATVkYfuyqGdcn32Ltk/KmPxLQwsauZa88GdKVJJvS0BS+534+4QYgWt3TPoRoDgj1ZwHEOPWYCXlTg7SBG4OMlUrHNLg2cZpTO/PLs8eNfzdsUX7DMdSoe174DGPZZadWFQg8r+fEMJEgyBLmB/MaYG9pp8yGjnETgbmXiL5/drt8uqio85iLV3uuf5i0ybFmH8i8uIhN3BsbG74CgXqihEJHwv9NKLM0Bhnkr0RgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01H8TqYAK1bxQXqTWK5tSyRm",
+        "name": "Monitor",
+        "input": {
+          "command": "while true; do f=$(powershell -NoProfile -Command \"[math]::Round((Get-CimInstance Win32_OperatingSystem).FreePhysicalMemory/1024)\" 2>/dev/null | tr -d '\\r'); if [ -n \"$f\" ] && [ \"$f\" -lt 1500 ]; then echo \"LOW RAM: ${f} MB free\"; sleep 60; fi; sleep 10; done",
+          "description": "free RAM below 1.5 GB during eval",
+          "timeout_ms": 1800000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

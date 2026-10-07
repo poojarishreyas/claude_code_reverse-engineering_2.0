@@ -1,0 +1,15 @@
+{
+  "id": "bcec02b69b65d42b88742d7e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CeXhLpkk1f54A36Xh65dAb",
+        "type": "tool_result",
+        "content": "check ok\nnode.exe                     16788 Console                    1    103,452 K\nnode.exe                     16940 Console                    1     42,700 K\nnode.exe                      6068 Console                    1    515,552 K",
+        "is_error": false
+      }
+    ]
+  }
+}
