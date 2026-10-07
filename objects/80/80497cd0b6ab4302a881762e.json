@@ -1,0 +1,27 @@
+{
+  "id": "80497cd0b6ab4302a881762e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSuQcKEAgSGAI4AUIIdGhpbmtpbmcSDLEf/WVC6Gq+SPuovBoMYsG1AsDWAtwVRTi3IjB6FoWYccVabz33mGEdMHAWIxSwSVjVWiMbTXySoP5mTCyLLWtK2H0KuaajsnCl+icq1gaKRK7TgNrSFaasDvwjJDRoFlwOR7O3I0CSoHp+6WmtKagkCdfjCmh/ZPuSUtihe8Bbl27BAB+tPAk1yJ7eSqymTYchaz7w/ft1chT+BKD9NjBXn8tSDJB1hJ4iY9pZ7VmA0Yxac83p84694viSfO9ehvXpEbmSs7eu353JRaaDNyhg3T610LvBSF/Exxvb7iPKqHksUNWhSeE6s+17vNC57t9lCDXXOAqF9SwrM10m61+JzgkZRcw+//VDek1dSGcqJSa8knymW9I1a4Z7ceGn2vOI4+a8aE8IPy9Zw2eNABytPXcCdBiBcs5duFZzTQCZDgSVJhsoVEeE7l8KS6ZDfN2YYeNOBLZ3cWOftI85jygX9nlzNptYz36Hepj4AZsq+r28KwbX9qgn47TqgJ/rSjk5+VtbpzZCQb1ZbdUoBTTQi6JzElvebS71lR3th3ph10seXpAPCVLrmU+CcEYAfz+7mS4AcgfzYM4JSnW8IEmTjZxHiu5tRAda89QKrZDlJZk4bbdYwF/18MtLDjiGRguXB8lwnvyuDukTeXLViOiVZM8S9SxseufLCtqoe0NqosSSlGPV2eUu/n3lOXn16runeM87bZyKhWCTqTFJ6pbozhzalP4Fl6QTqEAwEbaTe15PFzMzc7SRPiTEQa28F7T5Hnvucjbzmhqqykd+rfYcV3UEVWWWcYhXdtbrQy4nwwAtutc+KLQGd3cK0Rm2dr8/A/fF8mcGPw2hP+aVe0kV0E2rVqW2B3rVzAh/BReDizDmbnIMZwuyqyLEdbbSk5SvcOgjYL1Ldcd6lwQmpiTotZRCp0DglvO8qD9tum11+kTOgTLwWbezXgr6yOKVkzRRbDm6HbQxclwG7bcI0wV4LVBqDafVF54PFOypfWSwpewG85PWLtx8zCLcr7MsIAf7RUnXWUTXQbWngYWAm/emZqgpVOWCF+gkpeJOF1SCQuqbJ6+oyyjoKRfDgH6tIZMN1elpsWTdhx9sn4a9voxqBwTqfRsURd14z39YfLV22yNbRU3KA16nmBWkj/pLA54ttz0ncVx3yF3l7ITiRIthY0wMFI9cKqVU4PBkCY+72dyYVFGI66jLwDXa1iSVtJnfbzRAB6w7xRZmIfdyun/8edJOGBgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01CD6A6Zr6iYvmpWw4CyMz1E",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; sed -n 55,80p /c/Users/shrey/Desktop/Elemental_harness/scripts/eval/claude-code.ts; cat \"$S/clean-claude-code/summary.json\" | head -8; grep -m3 -oE \"\\\"modelUsage\\\":\\{[^}]{0,200}|\\\"model\\\":\\\"[^\\\"]*\\\"\" \"$S/clean-claude-code/a59beb8ae3.events.jsonl\" | head -3",
+          "description": "Read Claude Code env setup and recorded model"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "b10b58779d8d8530ce0e029a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS+ggKEAgSGAI4AUIIdGhpbmtpbmcSDIY6tnzyNNa5NUbephoMI5Z4vpjHBZKIQXt5IjBKaDCBny80FK3lkrV51jZ86pwVBxb5RiG2PKIMB3VSxJsd6PIKjd6WBsGD4cRqH08qlwgxItoRz5rs8BoolDEFrJ9CODPdQrePFUYe1jtHi17OUHfpEZkYHARZsiQax8gZo5AiHav+dx+NkuW7h+HfFQvk0GKLfaW7EpgTEBzJ8WaLAEMScSetfa9Kr0+jPPAwPMBuFji0njktKT86qjRWs9DrHDte+QXa29YNF1xGR4kRZzU5YpA+/DnwQz0KWH/X/njMPqbxmx7nhErWhqJ1AkcAk2cREErrSOeO3WMZ94HfMiPQ4XBKjhOYjoRaClA3Hg58+NuABUk6gTPUAFjqs3z6p3WjS8CuXwFl9F8yNXIVV78tTSanJBWa1rzEXJ1rtLSIzAFDkGqzfR/JYnkfKWYlRwwCnXMr6Hc2e4XOG/HefQe7EdxQybK2Fstpexrh8NdXUAXnZu+DPnY1POE2W5CBlMViGP2L/4oRB4UZotqeDIKrKucYfPswppGPDvZ2SRQMmhPKi4xRqPp25z/+XPxtFE6/Zv1D64rccc0dz0zXnHUvCJyYXwjkj6S4RLt2lFUuDOgNuhCyIxixWyGx2qTp0HG2UksN6K6uPEVdK78dgUmaBEVtBncIkSUZhuWIz8eG+LX4fv/zM3Soa+X0Wrb8CWN6fJbX2vZ1XWih76J3lmMZWzFs7SUBxx2GRrXylRezwGsEnjmMneztQZ1FBb12dJDGcJxSgzPfdEIGtcNadQCsr7+txcXHV3qJcNh8ytYI4frGCbzCGxLe0q1zsulzgTpXzV0yU1cnNjqyn5lwENW3lig1jwigIN6mhpADX5a6A2Vo89IwIxgOwBRxuQAjfyE18bM16vJ+l8XvG57ziUMunJ4a1zv8+vkHYwrOTfHoHhtz4v59/F+e9Gk2gecQCZOlBszB6vaHmF04IMRdCKWsGqkueGigcphIHRb7NpOPn7wfkT21GIsesdq3wxD4+d26hhrBTsTXvHJa+E4MXzPoYALIh9Ixq9IuoYEbEaLcMzQhakYgYP9eDZLD4OE6RuYSDkBk2IUoIezyur/QRq7JORcoNjWOiBk9L6oypu5DBhb5cpuWPDGn646DwP/q+1P9lfnVapaA2QwdQW5OmRBj23fWAnL7t7pHAEQ1VAkgVBwj8dnDT39/DO94Im94hjtgDaw2UM874pPu86evz2sA+YNaqnklqenVw3xU072JrnyROSdPor5vpHQpWn1gD0FpzZeHQaT2dO9Y1cWiKAT6SHsrHJJlNtvgDH60BoY99VCgTOwc4YJmtKTkOuwQPS349WD/iXxF4NQq5C31xH3XTjKXmwXBMNtIJgZ6LbxRdcDosnwhWIZ+Emeqeh4Njq13ST9gBTe0qsV0sFYOMi1MUa/OKBeFpPZxmI6o8RT0gjqYtlZOwJW9SP4KySxxUdMWsfehvVyooWnIZ4w7jvRXAyFX0BEYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01HxL8EFdxMdvxuKx9ABWhyX",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; grep -h -oE \"\\\"(model|models)\\\":[^,}]*\" \"$S/clean-claude-code/\"*.json \"$S/clean-dsh/\"*.json | sort | uniq -c",
+          "description": "List the models recorded in both agents' results"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

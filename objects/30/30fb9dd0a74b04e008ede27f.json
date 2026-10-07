@@ -1,0 +1,19 @@
+{
+  "id": "30fb9dd0a74b04e008ede27f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CD6A6Zr6iYvmpWw4CyMz1E",
+        "type": "tool_result",
+        "content": " * not skewed by Claude Code moving side work to a smaller model.\n * @param base - the environment to start from, usually `process.env`.\n * @param provider - the endpoint and key to use.\n * @param model - the provider's model id.\n * @returns a new environment; `base` is not changed.\n */\nexport function claudeCodeEnv(base: NodeJS.ProcessEnv, provider: ClaudeCodeProvider, model: string): NodeJS.ProcessEnv {\n  const env: NodeJS.ProcessEnv = {\n    ...base,\n    ANTHROPIC_BASE_URL: provider.baseURL.replace(/\\/v1\\/?$/, ''),\n    ANTHROPIC_AUTH_TOKEN: provider.apiKey,\n    ANTHROPIC_DEFAULT_OPUS_MODEL: model,\n    ANTHROPIC_DEFAULT_SONNET_MODEL: model,\n    ANTHROPIC_DEFAULT_HAIKU_MODEL: model,\n    CLAUDE_CODE_SUBAGENT_MODEL: model,\n    CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1',\n  }\n  // An API key outranks the auth token and would send the run to Anthropic.\n  delete env.ANTHROPIC_API_KEY\n  return env\n}\n\ninterface StreamRow {\n  readonly type?: string\n  readonly parent_tool_use_id?: string | null\n  readonly message?: { readonly id?: string; readonly model?: string; readonly content?: unknown }\n{\n  \"agent\": \"claude-code\",\n  \"tasks\": 1,\n  \"byStatus\": {\n    \"ran\": 1\n  },\n  \"runs\": 1,\n  \"passed\": 1,",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

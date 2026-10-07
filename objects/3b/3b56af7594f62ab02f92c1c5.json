@@ -1,0 +1,19 @@
+{
+  "id": "3b56af7594f62ab02f92c1c5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HxL8EFdxMdvxuKx9ABWhyX",
+        "type": "tool_result",
+        "content": "      4 \"model\": \"gemini-3.7-flash-tiered\"",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

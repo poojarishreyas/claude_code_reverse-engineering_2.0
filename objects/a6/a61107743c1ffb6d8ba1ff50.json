@@ -1,0 +1,15 @@
+{
+  "id": "a61107743c1ffb6d8ba1ff50",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01AHYyTdF6Xm5LisnpvbcL9n",
+        "type": "tool_result",
+        "content": "64:ANTHROPIC_BASE_URL\n65:ANTHROPIC_AUTH_TOKEN\n66:ANTHROPIC_DEFAULT_OPUS_MODEL\n67:ANTHROPIC_DEFAULT_SONNET_MODEL\n68:ANTHROPIC_DEFAULT_HAIKU_MODEL\n73:ANTHROPIC_API_KEY\n{\n  \"tags\": [\n    \"multi-file\"\n  ],\n  \"task\": {\n    \"id\": \"a59beb8ae3\",\n    \"fixCommit\": \"a59beb8ae301ff84472dd7a50ecabdeb8dac8c23\",\n    \"parentCommit\": \"b1c5f861b6644b9fe61bc703ac89ece473728a89\",\n    \"subject\": \"fix(hmr): preserve manifest refresh with Office resolution\",\n    \"sourceFiles\": [\n      \"apps/desktop-host/src/office-engine.ts\",\n      \"packages/boot/hmr/src/package-manifest.ts\"\n    ],\n    \"testFiles\": [\n      \"apps/desktop-host/tests/office-engine.spec.ts\",\n      \"packages/boot/hmr/tests/package-manifest.spec.ts\"\n    ]\n  },\n  \"status\": \"ran\",\n  \"passed\": true,\n  \"metrics\": {\n    \"s",
+        "is_error": false
+      }
+    ]
+  }
+}
