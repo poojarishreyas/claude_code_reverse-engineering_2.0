@@ -5,8 +5,8 @@
 | session | `s-f8a7700fd2c6ea6a` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T04:57:05.789Z |
-| requests | 94 (3 errored) |
-| tokens | in 3,014 · out 42,473 · cache read 11,260,337 · cache write 212,424 |
+| requests | 95 (3 errored) |
+| tokens | in 3,018 · out 43,531 · cache read 11,426,268 · cache write 212,439 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -7315,4 +7315,45 @@ Say "go" and I'll start the remaining runs: dsh on 4b9d8ad6f7 and 9633724b40 aga
 go
 
 _stop `end_turn` · 1.87s (ttft 1.87s) · in 506 · out 3 · cache r165,551/w380_
+
+---
+
+## req-0095 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 180 messages_
+
+#### USER
+
+yeah why it consumes that much resource?
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+It's mostly the repo being tested, not the agents. Here's what I measured while the last batch was running:
+
+| Process | Memory | Why |
+|---|---|---|
+| `tsc -b tsconfig.host.json` | **2.9 GB** | Type-checks the whole monorepo |
+| vitest (the task's tests) | ~750 MB | 200 MB runner plus a 550 MB test worker |
+| OmniRoute | ~530 MB | The model proxy, always on |
+| Windows Defender | ~480 MB | Scans the files each `pnpm install` writes |
+| Claude Code (the agent) | ~260 MB | |
+| Eval runner | ~100 MB | |
+
+**The big one is the type-check.** Claude Code's agent decided to check its fix with the repo's typecheck command (`pnpm run typecheck`). That builds every package in a repo of about 14,000 files. The repo's own script allows it up to 4 GB (`--max-old-space-size=4096` in `package.json`), so 3 GB isn't a malfunction, just an expensive check. Nothing in the eval asks for it.
+
+**Leftover processes add to it.** When Claude Code finishes, it can leave the commands it started running, like that vitest. They hold memory, and they're what caused the EBUSY crash. I killed them by hand afterwards.
+
+**dsh uses less on Windows, but for a bad reason.** Its sandbox blocks spawning child processes (`spawn EPERM`), so dsh often can't run the heavy commands at all. That keeps memory down but costs it steps and failures, as we saw earlier.
+
+If memory keeps being a problem, the simplest fix is in the eval, not the agents: make sure each task's leftover processes are killed before the next task starts. I haven't made that change. So far the leftovers caused one crash, but not the reaps; the reaps came from the type-check.
+
+_stop `end_turn` · 13.02s (ttft 6.58s) · in 4 · out 1,058 · cache r165,931/w15_
 

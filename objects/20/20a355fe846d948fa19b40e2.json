@@ -1,0 +1,17 @@
+{
+  "id": "20a355fe846d948fa19b40e2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "yeah why it consumes that much resource?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
