@@ -1,0 +1,17 @@
+{
+  "id": "55502078820f8c9b51762d8f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The quota is still out. The dsh rerun of 4b9d8ad6f7 hasn't started.\n\nThe quota check had also stopped running: its last check was at 22:34. The PC was probably asleep, which pauses the 10-minute timer. I restarted the check at 00:44 and the quota was still out. I also cleaned up two old log watchers that were left running.\n\nThe rerun will start on its own when the quota comes back, but only while the PC is awake. If you're going to leave it, set sleep to \"Never\" for now, or just tell me \"now\" when you're back and I'll check right away. RAM watching is off, since nothing heavy is running.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
