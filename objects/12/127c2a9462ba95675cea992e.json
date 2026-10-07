@@ -1,0 +1,15 @@
+{
+  "id": "127c2a9462ba95675cea992e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CQ7ygheeNXiiWkejbTc2oH",
+        "type": "tool_result",
+        "content": "C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-claude-code/4b9d8ad6f7.json\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-claude-code/a59beb8ae3.json\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-claude-code/ed34a1d7fe.json\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-claude-code/f04ad05f30.json\n0",
+        "is_error": false
+      }
+    ]
+  }
+}

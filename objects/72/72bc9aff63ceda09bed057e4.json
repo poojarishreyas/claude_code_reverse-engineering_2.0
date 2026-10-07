@@ -1,0 +1,15 @@
+{
+  "id": "72bc9aff63ceda09bed057e4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HxL8EFdxMdvxuKx9ABWhyX",
+        "type": "tool_result",
+        "content": "      4 \"model\": \"gemini-3.7-flash-tiered\"",
+        "is_error": false
+      }
+    ]
+  }
+}
