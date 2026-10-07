@@ -5,8 +5,8 @@
 | session | `s-f8a7700fd2c6ea6a` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T04:57:05.789Z |
-| requests | 122 (3 errored) |
-| tokens | in 6,284 · out 62,757 · cache read 13,862,599 · cache write 256,801 |
+| requests | 123 (3 errored) |
+| tokens | in 6,792 · out 63,535 · cache read 14,064,572 · cache write 257,812 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -9382,4 +9382,85 @@ you are still in 0 what u did tilll now?
 16:24
 quota: still out at 16:24
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+You're right that the clean comparison is still close to zero. I've finished 4 clean runs, but only Claude Code's 2 tell us anything:
+
+| Task | dsh | Claude Code |
+|---|---|---|
+| 4b9d8ad6f7 | Failed: the model proxy returned a 504 at step 36 | Passed |
+| 9633724b40 | Failed: the model was rate-limited at step 70 | Passed |
+
+Both dsh failures came from the model proxy, not from dsh's searching. So there's no real dsh-versus-Claude-Code result yet.
+
+**What I did get done:**
+- **Built the eval itself.** It takes real bug fixes from the repo's history, undoes them, gives the same task to dsh and to Claude Code on the same model, and measures pass/fail, steps, tokens, and when the agent first found the right file.
+- **Found the answer was leaking.** Both agents could see the fix through `git diff` and `git show`, and both used it. So every result before today was invalid and I threw them out. Each task folder now has no git history, which closes that leak.
+- **Fixed a dsh bug the eval exposed.** dsh didn't retry OmniRoute's "cooling down" message; the fix and its test are in `stream.ts` and `convert.spec.ts`. This is why dsh failed 9633724b40.
+- **Fixed the eval losing results.** Leftover processes could crash the eval's cleanup and lose a finished result. The eval now keeps the result, and the run script kills the leftovers between tasks.
+
+**What's blocking it:** the free Gemini quota through OmniRoute keeps running out. It ran out again at 16:14, and it was still out at 16:24. Every run needs it, so nothing can move until it resets.
+
+The batch is waiting and starts on its own when the quota returns. The other way to get results now is a route you pay for, and you said no to that earlier, so I haven't used one.
+
+_stop `end_turn` · 9.37s (ttft 9.34s) · in 2 · out 768 · cache r100,865/w243_
+
+---
+
+## req-0123 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 53 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01RtE3GM2tL2SqRF6tCvG8jw)_
+
+```
+16:24
+quota: still out at 16:24
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+You're right that the clean comparison is still close to zero. I've finished 4 clean runs, but only Claude Code's 2 tell us anything:
+
+| Task | dsh | Claude Code |
+|---|---|---|
+| 4b9d8ad6f7 | Failed: the model proxy returned a 504 at step 36 | Passed |
+| 9633724b40 | Failed: the model was rate-limited at step 70 | Passed |
+
+Both dsh failures came from the model proxy, not from dsh's searching. So there's no real dsh-versus-Claude-Code result yet.
+
+**What I did get done:**
+- **Built the eval itself.** It takes real bug fixes from the repo's history, undoes them, gives the same task to dsh and to Claude Code on the same model, and measures pass/fail, steps, tokens, and when the agent first found the right file.
+- **Found the answer was leaking.** Both agents could see the fix through `git diff` and `git show`, and both used it. So every result before today was invalid and I threw them out. Each task folder now has no git history, which closes that leak.
+- **Fixed a dsh bug the eval exposed.** dsh didn't retry OmniRoute's "cooling down" message; the fix and its test are in `stream.ts` and `convert.spec.ts`. This is why dsh failed 9633724b40.
+- **Fixed the eval losing results.** Leftover processes could crash the eval's cleanup and lose a finished result. The eval now keeps the result, and the run script kills the leftovers between tasks.
+
+**What's blocking it:** the free Gemini quota through OmniRoute keeps running out. It ran out again at 16:14, and it was still out at 16:24. Every run needs it, so nothing can move until it resets.
+
+The batch is waiting and starts on its own when the quota returns. The other way to get results now is a route you pay for, and you said no to that earlier, so I haven't used one.
+
+#### ASSISTANT
+
+ok wait for quota then
+
+_stop `end_turn` · 1.81s (ttft 1.17s) · in 506 · out 10 · cache r101,108/w768_
 
