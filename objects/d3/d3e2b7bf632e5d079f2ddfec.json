@@ -1,0 +1,8 @@
+{
+  "id": "d3e2b7bf632e5d079f2ddfec",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "progresss how many tasks done?"
+  }
+}

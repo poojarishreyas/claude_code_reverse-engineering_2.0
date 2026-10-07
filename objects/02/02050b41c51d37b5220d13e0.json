@@ -1,0 +1,17 @@
+{
+  "id": "02050b41c51d37b5220d13e0",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "progresss how many tasks done?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
