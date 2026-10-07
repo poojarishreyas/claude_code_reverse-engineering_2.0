@@ -1,0 +1,15 @@
+{
+  "id": "0e3fca4cc70ae20043206816",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01KLcTnUGwoF9VxQqaNPrBmU",
+        "type": "tool_result",
+        "content": "total 354\ndrwxr-xr-x 1 shrey 197609      0 Oct  7 14:47 .\ndrwxr-xr-x 1 shrey 197609      0 Oct  7 13:17 ..\n-rw-r--r-- 1 shrey 197609 104202 Oct  7 13:54 4b9d8ad6f7.events.jsonl\n-rw-r--r-- 1 shrey 197609   1940 Oct  7 13:54 4b9d8ad6f7.json\n-rw-r--r-- 1 shrey 197609 233716 Oct  7 14:47 9633724b40.events.jsonl\n-rw-r--r-- 1 shrey 197609    267 Oct  7 13:54 summary.json\n-rw-r--r-- 1 shrey 197609    301 Oct  7 13:54 summary.md\n    triggerUncaughtException(\n    ^\n\n[Error: EBUSY: resource busy or locked, rmdir 'C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-9633724b40'] {\n  errno: -4082,\n  code: 'EBUSY',\n  syscall: 'rmdir',\n  path: 'C:\\\\Users\\\\shrey\\\\AppData\\\\Local\\\\Temp\\\\dsh-eval-9633724b40'\n}\n\nNode.js v24.19.0\n[ELIFECYCLE] Command failed with exit code 1.\n10372 node   \"C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-9633724b40\\node_modules\\.bin\\\\..\\vitest\\vitest.mj\r\n20332 \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppDa\r\n4856 \"C:\\Program Files\\Git\\bin\\bash.exe\" -c \"source /c/Users/shrey/.claude/shell-snapshots/snapshot-bash-\r\n13264 \"C:\\Program Files\\Git\\bin\\..\\usr\\bin\\bash.exe\" -c \"source /c/Users/shrey/.claude/shell-snapshots/sna\r\n21008 \"C:\\Program Files\\Git\\bin\\..\\usr\\bin\\bash.exe\" -c \"source /c/Users/shrey/.claude/shell-snapshots/sna\r\n5844 C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -Command \"Get-CimInstance Win32",
+        "is_error": false
+      }
+    ]
+  }
+}
