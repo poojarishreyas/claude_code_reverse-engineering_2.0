@@ -1,0 +1,19 @@
+{
+  "id": "40eced0dedc6bfec6ebb28fb",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HDvGtnwaFZ6sJRn5Tyw5tR",
+        "type": "tool_result",
+        "content": "17:05\n{\"passed\":true,\"steps\":20,\"seen\":3,\"read\":4,\"readsBefore\":1,\"editedExpected\":true,\"edited\":[\"packages/interaction/user-questions/src/projection.ts\"],\"extra\":[],\"editedTests\":false,\"usage\":{\"inputTokens\":117951,\"outputTokens\":2730,\"cacheReadTokens\":470014,\"cacheWriteTokens\":0},\"tools\":{\"read\":5,\"grep\":5,\"bash\":8,\"edit\":1}}\n3",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

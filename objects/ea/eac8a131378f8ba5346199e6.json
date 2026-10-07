@@ -1,0 +1,19 @@
+{
+  "id": "eac8a131378f8ba5346199e6",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01NaSE38aKiQSjrWFWTwqmno",
+        "type": "tool_result",
+        "content": "\"command\":\"git log -n 5 --stat\n\"command\":\"git diff\n\"command\":\"git status",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
