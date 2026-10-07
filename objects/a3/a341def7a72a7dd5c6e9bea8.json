@@ -1,0 +1,19 @@
+{
+  "id": "a341def7a72a7dd5c6e9bea8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01G6UpgzwK6z9jx41sf3jz9y",
+        "type": "tool_result",
+        "content": "free MB: 8537 of 16108\r\n\r\nName                  Id  MB\r\n----                  --  --\r\nnode                6068 428\r\nMsMpEng             5168 411\r\nclaude             17004 301\r\nexplorer            9392 285\r\nmsedge             17048 189\r\nMemory Compression  3356 172\r\nTaskmgr            22704 169\r\nmsedge               716 138\r\nOneDrive           14188 119\r\ndwm                 1912 108\r\n\r\n\r\n\r\n\r\nProcessId Name          \r\n--------- ----          \r\n     6200 bash.exe      \r\n    17248 bash.exe      \r\n    10544 bash.exe      \r\n    22720 powershell.exe",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

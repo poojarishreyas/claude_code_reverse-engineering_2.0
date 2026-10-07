@@ -1,0 +1,22 @@
+{
+  "id": "e99c178fbdbf69910a890d64",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01G6UpgzwK6z9jx41sf3jz9y",
+        "name": "Bash",
+        "input": {
+          "command": "powershell -NoProfile -Command \"\\$o=Get-CimInstance Win32_OperatingSystem; 'free MB: ' + [int](\\$o.FreePhysicalMemory/1024) + ' of ' + [int](\\$o.TotalVisibleMemorySize/1024); Get-Process | sort WorkingSet64 -desc | select -first 10 Name,Id,@{n='MB';e={[int](\\$_.WorkingSet64/1MB)}} | ft -auto | Out-String\"; powershell -NoProfile -Command \"Get-CimInstance Win32_Process | ? { \\$_.CommandLine -match 'dsh-eval' } | select ProcessId,Name | ft -auto | Out-String\"",
+          "description": "Check free memory and top memory users"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
