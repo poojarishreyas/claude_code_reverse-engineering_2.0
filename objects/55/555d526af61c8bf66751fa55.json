@@ -1,0 +1,22 @@
+{
+  "id": "555d526af61c8bf66751fa55",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_0183RuAp5ww8bLVsPf2KXno7",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); date; curl -s -w \"|http %{http_code}\" --max-time 90 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | head -c 500; echo; powershell -NoProfile -Command \"\\$o=Get-CimInstance Win32_OperatingSystem; 'free MB: ' + [int](\\$o.FreePhysicalMemory/1024)\"",
+          "description": "Check OmniRoute model, quota and free memory"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

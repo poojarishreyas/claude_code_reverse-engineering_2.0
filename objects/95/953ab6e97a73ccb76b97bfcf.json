@@ -1,0 +1,15 @@
+{
+  "id": "953ab6e97a73ccb76b97bfcf",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0183RuAp5ww8bLVsPf2KXno7",
+        "type": "tool_result",
+        "content": "Wed Oct  7 10:25:59 IST 2026\n{\"error\":{\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters (chat_20706 100% conn:30d884a8; chat_23310 100% conn:30d884a8)\",\"type\":\"service_unavailable\",\"code\":\"ALL_TARGETS_SKIPPED\"},\"diagnostics\":{\"poolSize\":1,\"attempted\":0,\"excluded\":[{\"provider\":\"antigravity\",\"model\":\"antigravity/gemini-3.7-flash-high\",\"reason\":\"quota:chat_20706 100% conn:30d884a8\"},{\"provider\":\"antigravity\",\"model\":\"antigravity/gemini-3.7-flash-high\",\"reason\":\"quota:chat_23310 100% \nfree MB: 8605",
+        "is_error": false
+      }
+    ]
+  }
+}

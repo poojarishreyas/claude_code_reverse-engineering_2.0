@@ -1,0 +1,27 @@
+{
+  "id": "11fed2ab633ddd19e999c70b",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSoAcKEAgSGAI4AUIIdGhpbmtpbmcSDCWzi4s3Y7p5dALy8BoMvTdGqVaIANeHNajBIjCgF/1j6tYXIiqNu3ksfZTCPAnYsDPj6dRFBGAdfPTqi63saewSVHSu77eytvPFqfkqvQYz+O6vWyjTaefnceEEXdWEirVvlsiVnMU7JcOAlXYhX2bZwBpPu7TfNLxotG7uquVUi/HcVFJCP3QFi/weNYedQ0Yw9MkUfgrfAXWeV+nuKSqey95l6G8d6TCkTGPsJJ9sH7elEYmbjiLlwq98Ed2/ozsgVFJny7cCXNaZVYJaLrDqI7TzTi+EQ0UXC6oww8PCtrUBObUZ4srCwE29c18fJMcU8wLHFbDxsog7SiByWO8sQhOFZHW9oulHqeVlK+HDsUCe4E+lE69+UxPQcpXecshD3l5aUzE5jIq0OkbhkeALwDDKr189tktR0xert+TOTJeOQVllwfCtj2JRhqcBD2ZKms/LpVLRLpgkRBU1L/BPmpEdbD/1a23mAnYe6JqS1g+VeZyB9E0e6NTdJdnPL3kPPjmb8i6U8qecwXviKDlC+RvhbD+1Gr7xhmCiBkw8bgGTZ6cmAoKOvKla3kc4PJrmw7OytQvNPGJsisbWFS0kfTKSrlawyjYDoCx8N1jP5bxi6HqUR84jqqaUJUaza+2g1ozxN6rkmSCGoU76CWNrgJExvWfmcLcxe/AmqobHOpR0f4hAh/2XMkIPojJZWjlXkcBRCXNl5fMX4FznacBDPrBsmZaAQ4DX+gJ8VaeZqMYTxR4kTUqSiAKFHFXKFKcSJAhxUCWAqANgxAqO1uwOUvrAS9lLSwUqNs4zk+DcPMGR0kmxjuAPN8PW3hSXFRwYp9jgq15ijZd+03DQqhm/illKCBVg6/3A+QDRKk7hpSqcLCdwEqCIxdSAVvnZZhJI2Z+uBoeAj6LtrAi+jLSldfeJhpxo4VSJuzq5CwpKGKzDWnsRuxthvZSkEYdZBSafYBBGKwizfxNaGsVdUwM5FIP0z+HCUliQF6tAtQAoNVxLAMeLPHoI2CRFA2NWns75F2mywkrRNIJ38wWvLs8evigxLn9zXr8fzGim3/tJKWAxyrSe1RFrNwwYWJi7VViq2Aq8Ki49FrJPYzHmx7lE0Q3t/nsb1C5iK0faYwgwUc3RhfwiLh7ZEZN1/voxBhSm1W7KLG6hCDobiArLOhqHLjzB+2x1MFCS4ZtxM5uws8BCydaMbSW6ucETGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Nc71QAp8DujitJD6MPKuLv",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); curl -s --max-time 90 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | python -c \"import json,sys; d=json.load(sys.stdin); print(json.dumps(d.get('diagnostics'),indent=1)[:1500])\"",
+          "description": "Look for the quota reset time"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

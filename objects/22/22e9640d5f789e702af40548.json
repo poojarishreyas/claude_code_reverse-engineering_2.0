@@ -1,0 +1,19 @@
+{
+  "id": "22e9640d5f789e702af40548",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Nc71QAp8DujitJD6MPKuLv",
+        "type": "tool_result",
+        "content": "{\r\n \"poolSize\": 1,\r\n \"attempted\": 0,\r\n \"excluded\": [\r\n  {\r\n   \"provider\": \"antigravity\",\r\n   \"model\": \"antigravity/gemini-3.7-flash-high\",\r\n   \"reason\": \"quota:chat_20706 100% conn:30d884a8\"\r\n  },\r\n  {\r\n   \"provider\": \"antigravity\",\r\n   \"model\": \"antigravity/gemini-3.7-flash-high\",\r\n   \"reason\": \"quota:chat_23310 100% conn:30d884a8\"\r\n  }\r\n ],\r\n \"attemptOrder\": [],\r\n \"terminalReason\": \"all_targets_skipped\",\r\n \"recovery\": {\r\n  \"action\": \"switch-combo\",\r\n  \"next_step\": \"Every target was skipped before dispatch (capability pre-filter narrowed the pool and the remaining targets were all quota-exhausted/unavailable). Check the provider's quota in /dashboard/providers, r\"\r\n },\r\n \"skippedTargets\": [\r\n  {\r\n   \"reason\": \"model_not_in_catalog\",\r\n   \"targets\": [\r\n    \"antigravity/gemini-3.7-flash-high\"\r\n   ]\r\n  }\r\n ]\r\n}",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
