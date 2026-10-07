@@ -1,0 +1,15 @@
+{
+  "id": "441f8ad6fe043358ff783526",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RQggCzTaw3eCTvkZ5urqs8",
+        "type": "tool_result",
+        "content": "17:27\n{\"passed\":true,\"src\":[\"packages/client/ui-tool/src/client/tool/toolviews/ask-question-row.tsx\",\"packages/client/ui-user-questions/src/client/index.ts\"],\"steps\":55,\"seen\":3,\"read\":4,\"readsBefore\":1,\"editedExpected\":true,\"edited\":[\"packages/client/ui-user-questions/src/client/index.ts\",\"scripts/win-pipe-shim.cjs\"],\"extra\":[\"scripts/win-pipe-shim.cjs\"],\"editedTests\":false,\"usage\":{\"inputTokens\":291259,\"outputTokens\":23760,\"cacheReadTokens\":4398182},\"tools\":{\"todo_write\":3,\"read\":20,\"glob\":1,\"grep\":5,\"pwsh\":22,\"write\":1,\"edit\":2}}",
+        "is_error": false
+      }
+    ]
+  }
+}

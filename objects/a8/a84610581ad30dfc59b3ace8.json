@@ -1,0 +1,17 @@
+{
+  "id": "a84610581ad30dfc59b3ace8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The watch on the eval log expired again and I restarted it. dsh on ed34a1d7fe is running.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
