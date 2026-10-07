@@ -1,0 +1,19 @@
+{
+  "id": "cbc8064d404be20e3aab747a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_014xf7av8PnxBrayEXxnrgE9",
+        "type": "tool_result",
+        "content": "PID 21020 claude.exe started 10/07/2026 21:04:26\n  cmd: claude -p \"These tests fail in this repository:\n\n- apps/desktop/tests/windows-cli-signals.spec.ts\n\nTest output:\n```\nRUN  v4.1.8 C:/Users/shrey/AppData/Local/Temp/dsh-eval-e21ed97f29\n\nstdout | apps/desktop/tests/windows-cli-signals.spec.ts > Windows E\n  parents: 15804 node.exe <- 8408 node.exe <- 23024 cmd.exe <- 9072 node.exe <- 2768 cmd.exe <- 23172 node.exe <- 22076 sh.exe <- [21500 gone]\r\nPID 10968 winget.exe started 10/07/2026 21:56:36\n  cmd: C:\\Users\\shrey\\AppData\\Local\\Microsoft\\WindowsApps\\winget.exe install --id Microsoft.VisualStudio.2022.BuildTools --override \"--passive --wait --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64\" --accept-package-agreements --accept-source-agreem\n  parents: 11656 bash.exe <- 19448 bash.exe <- 6060 bash.exe <- 21020 claude.exe <- 15804 node.exe <- 8408 node.exe <- 23024 cmd.exe <- 9072 node.exe\r\nPID 7964 vs_BuildTools.exe started 10/07/2026 21:56:38\n  cmd: \"C:\\Users\\shrey\\AppData\\Local\\Temp\\WinGet\\Microsoft.VisualStudio.2022.BuildTools.17.14.41\\vs_BuildTools.exe\" --passive --wait --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64\n  parents: 10968 winget.exe <- 11656 bash.exe <- 19448 bash.exe <- 6060 bash.exe <- 21020 claude.exe <- 15804 node.exe <- 8408 node.exe <- 23024 cmd.exe\r\nPID 18520 vs_setup_bootstrapper.exe started 10/07/2026 21:56:44\n  cmd: \n  parents: 7964 vs_BuildTools.exe <- 10968 winget.exe <- 11656 bash.exe <- 19448 bash.exe <- 6060 bash.exe <- 21020 claude.exe <- 15804 node.exe <- 8408 node.exe\r\nPID 6080 setup.exe started 10/07/2026 21:57:10\n  cmd: \n  parents: 18520 vs_setup_bootstrapper.exe <- 7964 vs_BuildTools.exe <- 10968 winget.exe <- 11656 bash.exe <- 19448 bash.exe <- 6060 bash.exe <- 21020 claude.exe <- 15804 node.exe\r\nPID 3760 setup.exe started 10/07/2026 21:57:33\n  cmd: \n  parents: 6080 setup.exe <- 18520 vs_setup_bootstrapper.exe <- 7964 vs_BuildTools.exe <- 10968 winget.exe <- 11656 bash.exe <- 19448 bash.exe <- 6060 bash.exe <- 21020 claude.exe\r\nPID 10888 msiexec.exe started 10/07/2026 21:57:39\n  cmd: \n  parents: 1348 services.exe <- 1272 wininit.exe <- [920 gone]",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

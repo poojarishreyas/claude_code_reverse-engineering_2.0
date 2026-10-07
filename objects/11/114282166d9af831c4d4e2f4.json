@@ -1,0 +1,17 @@
+{
+  "id": "114282166d9af831c4d4e2f4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "vs installler is installing who installed it dsh or claude code",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
