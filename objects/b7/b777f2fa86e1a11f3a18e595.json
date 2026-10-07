@@ -1,0 +1,22 @@
+{
+  "id": "b777f2fa86e1a11f3a18e595",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSmgcKEAgSGAI4AUIIdGhpbmtpbmcSDCHLNnOxghsdnDwXqBoMgWXVaQ34Xj8AdX/WIjDGvfohkldwu/uVxgvzmEWdJyfbltA486Nqkp0rW34o6s++aUEtKpP8OAj5yxrlBjYqtwaoYsHIGwG/QdO6TWDD6t3jFId07/cqk5XTCk5K1oTTE17oP1MNMzbbunpe22TfXYEOyqCT6O+GaqmrXS3V0n6LelK3qcyjVPQPGjDFxY5alap1NOkkwaQpHVJRg3EhTJAsM+4HULUjBYAT+UdmeVxTSAG+Wpd6nEK1uJSr0XW5lJXeN3rYuOSjGvdfVwtnH4j6Y1j+6XN6G/N0LGb0/iNLB/ztBX/XX8G4aQloTOHQIX4zW/BtxFdfWEc2aNGu0ffQZffTAFpxout/UAhPZlnO0SvJKC1+rrGma574LoaTF3815AtCuSMH2Rap8YYZFRMB6aZI0PF3oOoJxJxtPcc6ml7pM6EwXweXgTYvingIt0OKN5KShyr5uX9OYWTvxnBE9eMqE75dhHkCG/nenILX87V+WK4dAKZWEIJr1c0DcO9hKAV/DljHxzyyjBziUYdKqMhsEvdLYOUCS2d+8EwLuFxerqMIHmnTaEUt62jVJESe23ry8LqbRFHe4aia67uzraCchIQMw9X8PI+Z9913aurA0cbqLxPKQ52SaXyyZVPf7JCz9zFn6G+BGD6HEiyAe8TaqbimkW2Fxv5T/y3m9Mr221gP6yppBlU4eGKVLIiiSefDn/+jTx5SzWf+7Y/yF40jKNxd8EXWbN4BIHrEUDqT31usxIrpIL4pD6vXMDYH7UwyvJHAnQiZUH4GUD26iBG7I0obfZ1J5voTs2ySQ6AtWZbeNOhJuj9E9SC8XQXOWHRKxwTTfG1KeyipY2QzQqIT9GhoVoP9yhDwOQf2rPd6A8ITDHTwHygCm8Mi0BT5c5XLdRPYFRN7EcdK+l5xydF2a2NFYtwznFM6nRlItkC3LSoX2gAaz4I/iaZlrZNBi8GwG09krqIxI3dAsaNojK+cQQktz6gl8AHge5Ous363l12ZMVq2S5FoQ2wIdHkUYaWjDfy8t8RVfBGnyqsn13ow5q+HVF1RLv0nSvnKQS3zX8ITVpElj6HHseD6aW3u/PBm0GQ7/DCnbtKMInzCYl8zDzNGcniBFx+NeKXD9kfOslV2j34lWclVdtp5MtPEE7PMQzrqPMvxVQ2fNDO1oqdOA0uJGAE="
+      },
+      {
+        "type": "text",
+        "text": "The main batch has finished, so I've let its result watch lapse. The other watch is still on and covers the last run left, the dsh rerun of 4b9d8ad6f7. That run is waiting for the model quota to come back.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
