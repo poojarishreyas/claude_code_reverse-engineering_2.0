@@ -1,0 +1,24 @@
+{
+  "id": "8299bc7a2db5b3348f295cb2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WiJHFNH5P7Wq93hoeitfVF",
+        "type": "tool_result",
+        "content": "{\"message\":\"Successfully stopped task: b20kd22qa (KEY=$(grep \\\"MYLYNX_API_KEY\\\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\\\"'\\\"'\\\"']//g'); for i in $(seq 1 144); do r=$(curl -s --max-time 90 http://localhost:20128/v1/messages -H \\\"Authorization: Bearer $KEY\\\" -H \\\"anthropic-version: 2023-06-01\\\" -H \\\"content-type: application/json\\\" -d '{\\\"model\\\":\\\"lynx harness\\\",\\\"max_tokens\\\":5,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}' 2>/dev/null); if echo \\\"$r\\\" | grep -q '\\\"type\\\":\\\"message\\\"'; then echo \\\"READY $(date) $(echo \\\"$r\\\" | grep -o '\\\"model\\\":\\\"[^\\\"]*\\\"')\\\"; exit 0; fi; sleep 300; done; echo \\\"still exhausted after 12h\\\"; exit 1)\",\"task_id\":\"b20kd22qa\",\"task_type\":\"local_bash\",\"command\":\"KEY=$(grep \\\"MYLYNX_API_KEY\\\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\\\"'\\\"'\\\"']//g'); for i in $(seq 1 144); do r=$(curl -s --max-time 90 http://localhost:20128/v1/messages -H \\\"Authorization: Bearer $KEY\\\" -H \\\"anthropic-version: 2023-06-01\\\" -H \\\"content-type: application/json\\\" -d '{\\\"model\\\":\\\"lynx harness\\\",\\\"max_tokens\\\":5,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}' 2>/dev/null); if echo \\\"$r\\\" | grep -q '\\\"type\\\":\\\"message\\\"'; then echo \\\"READY $(date) $(echo \\\"$r\\\" | grep -o '\\\"model\\\":\\\"[^\\\"]*\\\"')\\\"; exit 0; fi; sleep 300; done; echo \\\"still exhausted after 12h\\\"; exit 1\"}"
+      },
+      {
+        "tool_use_id": "toolu_01PkwJLShw93RcPgM4c9MgpM",
+        "type": "tool_result",
+        "content": "C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream 5badb15009 [master]\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-4b9d8ad6f7\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-4eb53e63ff\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-9633724b40\nC:\\Users\\shrey\\AppData\\Local/Temp/dsh-eval-ed34a1d7fe\n6101",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

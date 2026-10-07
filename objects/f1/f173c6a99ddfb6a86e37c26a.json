@@ -1,0 +1,15 @@
+{
+  "id": "f173c6a99ddfb6a86e37c26a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HF5PzcuSwihteQNgtL9xsr",
+        "type": "tool_result",
+        "content": "{\"id\":\"chatcmpl-1791350614380-88be085d\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"gemini-3.7-flash-high\",\"content\":[{\"type\":\"text\",\"text\":\"Hello\"}],\"stop_reason\":\"length\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":78,\"output_tokens\":1}}|http 200\nWed Oct  7 10:53:34 IST 2026",
+        "is_error": false
+      }
+    ]
+  }
+}
