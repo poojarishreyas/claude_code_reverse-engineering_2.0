@@ -1,0 +1,23 @@
+{
+  "id": "cd65c46efe42cc9193160231",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01Qa2Gttpk5EzHJzi7dUuroS",
+        "name": "Monitor",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; tail -n 0 -f \"$S/clean-run3.log\" | grep --line-buffered -E \"^eval: .* -> |quota out|ALL-DONE|ENOMEM|heap out\"",
+          "description": "eval results in clean-run3.log",
+          "timeout_ms": 1800000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
