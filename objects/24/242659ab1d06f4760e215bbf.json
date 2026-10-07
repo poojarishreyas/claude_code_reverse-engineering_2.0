@@ -1,0 +1,27 @@
+{
+  "id": "242659ab1d06f4760e215bbf",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSuAgKEAgSGAI4AUIIdGhpbmtpbmcSDPKuBHBVyIV2Qz4TTxoMiSt/0d+yP+31lGdUIjD63RoPh/FWtOptSDAHc2AYWJzYf0f2+FMzOL171fCyIDvjmsm5BhQs8H4Jj3jmdawq1QfOFb9cPsHR8nHCdzYPQEi2+cY5B/JJiQC4Z1z2Y77PcWzGrMe7AL1noeo88NcgagsWEBD7s11SUO4f9HjqKZJUOjJ97HCCfYR7ABFFZJ/xWjR7qex7smS8134lvsNJsXN7qBdcsSnnU4hRrzTi+Ao0Uf/Bl48YIJ8ZQ5uWmxFyG+l13VAUnzKdXHNREWN/nagKx+pFbIDT6XBmkpP/BAGOpDr+CSOQsMKNMj9BQxm3xZ2/20daZrw1kMoD+ciPpnX9DWjM+Jr1j1M/PLlIn/xUWQqtPsa4C3oWq8zMdu5DbKBAtssW2JviasH/7r5QeQr7p+BXlqd8xRpwLMM4vIh0E86ldMmtgkbFoBv8z18ned52Y2BDbkszvPoQVC+utYgR1GMQ5p8LVB4z2PlB5pigGbjkNLjZeSDdpVYZxnGdWkXWGQUc3xV0xbkUPFYFADsVTQHXgdYalZL1NTJBuZGoRIg1j7ir4p15Sz+iYvI2Ig6jSRMsBMc5EOyqSiAyKR6aoCtDoJh7VvvYG5TcYXbrP0J1y4quR+5dlGCBR7DutG/FrFrISVcLmhmNjVvMA7FQS3xZuxgXEcSARqL/uzFxe7qU4hYOAO+dTQfgNqIeft8xhXtT0Rq9RX5CH34DK6QsI8Jf1KAgaE18FkVIKJedJNj5lUlYG0yMOEPivU1tkEtALTY/TvNbA6IQ6hLQ4V+a3vdKKXe/gP90ZLmQkYiRJX4B+x0qU8UBLr4bEYe4bYa3nLcQsFo2sG2/jr3mGyPiIS4h8pcNAPFO/EyIDY10tW5jSfI+bAyNeUn2H4Gyb07kAwr54R0jIE8oK70zp2jxY9H6VjaevsipEq9eNusceHdh7XGv/76X++e4kdmtl+PcMQdd3GAOXaFuEE7OjVKM8mj2q1NZu+eLSaH8G4AFM1PnaVIrk3tktJnx+HrEUgTOfmsQziW4Et6OrkB2ijPOdTKp7my18swAcWT5gzmV0k4gbn3UdQSjhV7NNfR0332Qn/v8DzkbQrq4m9+r8YcL1mo2mDfWNKoLNR9Cnjf78Wc5riHeFhUS4uO0Ed7hzF0+W6g0WpMf2Nb8gNeQnYXNvF3TF3eTx4/TiXlJ92SQOv0gbgdW8lVXIRO+woM5DOS2n6zQXIm+qDzLADfPQ6GRlfQb1prXUsm/ECo+3YSBSBirslUH7n67qs4OpC/02ETPHLAvl5ekzUC/2jr8XxdhJLWj9+5Ir/S4Sr4oe+8wvgMj6IL67UVoDYb4ttqB/BgxQVjLC1y1y+36rrGvS3//QvvYyZJIyX5mRAs8wdHt+MHtFbwYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01CXudzVX7banRPwnhiP9Q8d",
+        "name": "PowerShell",
+        "input": {
+          "command": "function kids($id, $d) { Get-CimInstance Win32_Process -Filter \"ParentProcessId=$id\" | ForEach-Object { ('  ' * $d) + \"$($_.ProcessId) $($_.Name) $($_.CreationDate) $(if ($_.CommandLine) { $_.CommandLine.Substring(0,[math]::Min(140,$_.CommandLine.Length)) })\"; kids $_.ProcessId ($d+1) } }; kids 21020 0; Set-Location C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-e21ed97f29; git status --porcelain",
+          "description": "Show what Claude Code is running and its workspace changes"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
