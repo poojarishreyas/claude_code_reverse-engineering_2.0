@@ -1,0 +1,19 @@
+{
+  "id": "ec632337040f01329de20a38",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RmK671SDSLeVGmkfKdiima",
+        "type": "tool_result",
+        "content": "{'steps': 70, 'firstSeenStep': 4, 'firstReadStep': 7, 'editedFiles': ['node_modules/.pnpm/vite@8.0.16_@types+node@22._5ea841fc71cf25963294184b8c3a523d/node_modules/vite/dist/node/chunks/node.js', 'packages/boot/app-boot/src/profile.ts']}\r\n{\"id\":\"chatcmpl-1791363364649-fc640bd6\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"gemini-3.7-flash-high\",\"content\":[{\"type\":\"text\",\"text\":\"Hello\"}],\"stop_reason\":\"length\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":78,\"output_tokens\":1}}|http 200\nWed Oct  7 14:26:04 IST 2026",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

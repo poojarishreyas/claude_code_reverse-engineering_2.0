@@ -1,0 +1,17 @@
+{
+  "id": "e96b81dd6bd40152439a9d0f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "I set up the monitor again. dsh is still working on task 9633724b40, and I'll report each result as it finishes.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
