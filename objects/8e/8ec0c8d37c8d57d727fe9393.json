@@ -1,0 +1,19 @@
+{
+  "id": "8ec0c8d37c8d57d727fe9393",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01YJyixKEbPjEYvjRZw8hX6a",
+        "type": "tool_result",
+        "content": "{\n \"passed\": true,\n \"steps\": 98,\n \"tools\": {\n  \"read\": 28,\n  \"grep\": 14,\n  \"pwsh\": 41,\n  \"glob\": 7,\n  \"write\": 2,\n  \"edit\": 5\n },\n \"seen\": 29,\n \"read\": 30,\n \"edited\": [\n  \"apps/desktop-host/src/cli.ts\",\n  \"apps/desktop-host/src/windows-cli-signals.ts\",\n  \"scripts/test-proxy-environment.ts\",\n  \"scripts/test-windows-toolchain.ts\"\n ],\n \"extra\": [\n  \"scripts/test-proxy-environment.ts\",\n  \"scripts/test-windows-toolchain.ts\"\n ],\n \"editedTests\": false,\n \"usage\": {\n  \"inputTokens\": 558368,\n  \"outputTokens\": 81051,\n  \"cacheReadTokens\": 9031819\n },\n \"src\": [\n  \"apps/desktop-host/src/cli.ts\",\n  \"apps/desktop-host/src/windows-cli-signals.ts\"\n ]\n}",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
