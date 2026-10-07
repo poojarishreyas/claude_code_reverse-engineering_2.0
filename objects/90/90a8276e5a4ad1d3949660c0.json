@@ -1,0 +1,28 @@
+{
+  "id": "90a8276e5a4ad1d3949660c0",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1AkKEAgSGAI4AUIIdGhpbmtpbmcSDM29dixXvHcmfNk9LBoMNppeUY3xwzeVR6WgIjAfNLtxicnV7lGT5RmNYg6onFP0SvCJt8Bjm3HAOIDyoMT71aphpClRrPdR5pCPVIoq8Qgy0KEwAenZTmULyOFeWniyXoys5cVgxxZp2vIiAgTvljpl+IeA7kapJeX41slxa3lRT5LaUr/gqZXFgUIg3SszY+K9WBKM1FEeR0WF7YLtpZeoo7WzAQyWTYxqMFMTaWFoiCq21MdhdKWa5Rb66Wbak8IbNQEKss4kkCSoMqDsnZFk33Bg71BZrzow0zwcTgjOmIhBTMPJ9RgsnW1uassro0M5aYB4gJEHPi9LeFy71DnRQAZDbyPAppCVo56szv5tQD8JBRGXkH2ep+ocMb92iYSXovKU13OlJTMob+jHvIcyYqUjW74o+1QCpOhTm7ewEPkWhfxQnZoM8JbKxQyWV61KxPDXVLV1F7MvvcwJxLZXqz56nlPZkFWst0NxlPM92/0RIVRw9/PrjzcEluA9/FDUkEipv5LzOza97U9c8zidpva8iEP7wlZbmRv0DklSU8CmP9y0t4C8TXaLLR1fGbG9dzYgD21Ox7U2IRMW4GNHt+VvUD5HwwzmpDmWN9jfpZDNYbr1Qt5QPgRaAez2wMgKwqKNBvOnDV2OpOUBLO6kei0uRbv0f+C+HoMR/1kLZlBpLOtZQ67iOeul5paYG4sRVTMMMC3b1Q/dp9FIP2s9HGt3SYmF/8D/boVD13EdkYXh2opYfERYMw7fGPVE7ywTRIjrBfQ1AGgjBznGEEZklZQisXct5rjojLKJHLOW6OjcFr2RiVU7zCrjcD4aPfkUKrgaBN/AQyi7t1nAcgmBYsMsEWPCyPLBmb7WrS9LRDRGzHrAz7YAsJc0Z+mnPfRLRSEtd8KRzmBeR+vfsrUupVw8N36fRDhPZWN2+7rsgF07OnDx0Iq01MXnKrLocIgisYyT97WkEwdxDVvz/YeolRIJCbu/eMLT1JbrZkTN7jeI1poKpgI2tdjcwjhknQBEMREnMGnZN8opjk4hhvPKH+MdfPyu1fAl15M3dfaCgpNBtGrrkgq0FNCbogDIMHbB6g25yRkp/CVu2tfFH6qcNiZ4cCQcJXq2eKnZtWsyCgnKvD765Jj7nxYH55TYCw1ijCmZG4MLNrGA8wGXZYnE1xQDtoz6hZiTw0FFyESwR6WWUUNT/Ui6HF1qA46xmt1F0BrJSGnVOqyPoXZ1AVpNpBIttZyr1BKj5Ct8bPrIYP9ROe4FMsTiJal+vPKV+oMYIW+kAq7GUsnFvHw9utiBZOfA7CAQmlE0W8ejqywTenohjKLBBMhn4g4vYZoaEomvW+cA5dRV25+9yPaVCKbWA8EAK0JlbSLo6CwZ12zlN0SYvi/c1B1R+Oq7NRkbWxpg3Dbxv/al/8NZTpmAz9Bfq6srC2B0mNxGc8PwTEYIfcInaAvfdtMVtAvzv8ddHVo1aGZatg6VNGe2nJsBp4ygAHO6xpoEykc4XooGcbrITgBz6qodoEDhjrLxCQJXQT3Cv+M/TYmeucab6sBwbre+z4aKwSCXXfEZs4eYq2mOBPu9tQGj32v5HT5YUXgkuLhmwqbljqUyMWdOmAHB2hUYAQ=="
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS6gcKEQgSGAI4AUIJbmFycmF0aW9uEgwcEl9VuKAYstSc25MaDCQOu+EJZtoC5Q5dliIw3PE50c+JyZwun7g8r2xbbYmGV5gHHWrFhFxuLrX+J9XzVx3F6a/nlBUeuixFrDbFKoYHSIrUyP4IdwIU2OxSvBnKignzZJaGxT10psg0lsMPRn1shlyWqat6dQJArdPiTY/LwVMeTtGnJVqgpQsH3RfTAieAWLCqIhl7tCKtdi60+PKCGEQ4EMuLcDgE54YvZbZn18UU0QJUOacuatUGagBHlO/ZC3z7GsKfPTEWMsDZ6Ut1TM8N/N90jpN2T27B+3AFTVxPIqLmZs+P8urT/sGc1U93MABb0OqMpp7pCOVHaYftTtNDwnstPrHJ1YBlzo3et4GTvRf9qI0qsgd+z7AzMm8aGPULlVwbknuCEbbciM+NL0Orhy+GA9JYMcgQtmeCUwEjTIHOTaZwg5hc9Aw/VvHjTona8I5yQJG/ShPjjJxFsXrUN+XaRof4QYTTzvCZf9qRPykF8Zn7XQiiSoQ0yB/CGTmKyszYhe8AU2/GOqkAGM7t6Utc9UfQYAYS+/HhpgjRi0miHNtX1F5rD+4zb4Ua4BCQnThPjmSHTNxkb89fyv0RzgrTzHTBPsp4icJIwJQFPyZbokeKB/4y4u0ILQ2H958zlc8q2Eq6FLJjVInU45e0qRl1j18FHZ5Byq0aRldasGiZmzvenLdP/m/mffmm3H14BDFr1RijJONu/PjZQEESRezaL3dVIl/3c2qJVh1cNjUhrYwwl8ArdSEy0cXM29887atdrXF4YAbCiyAH6i9yYjeD4xpTd7gYsh45N7wY14q/Y7DxO8UZqOjBabi9UTVm8P3bbGFcnQ2/cwB58lU2pYmK5TsSek0yMCwE3ueK5l5EzMHSX/UTv7sAicCoQY5HOxnIdHGermEtgNvCbwbcNYpB9D/zGwLHSp3sU7R/Xp3CykRTdaB3Jx2BWuPvL9QJLJ/l6PaL2jRAi1vdCWW0Cacyd4DoLVorewWwfX7GNcEVTKURNz5V01G3LGKfz9QZcUKNxQmLqLJR43+OPH7wBa2qmwY5ZT6+MVDyLHrbMRwxkolyIh6bd/tm0ikx+LHeIqYVu6LocqrP8kmWf0qbxewGzI5Vf931054tEQBbDl4xuViJ5vEl4RL2ezBLBApD2pKYEZMqaJCydEiFU1PO9PFMy30s8/LM9QZNEgyvkux52HIfHVFHWiHasW1H7u4BZjwVwlTtkE2wkSAQpZH8N2rWo5bikF4TLRuiAOnA6im4SokOdETyLNVObymeS93grS5TFA/3vDOmyZggWoi9uvUYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01WSaenr5fKirF3TPXp7aaHN",
+        "name": "PowerShell",
+        "input": {
+          "command": "foreach ($id in 19000, 6068) { $p = Get-CimInstance Win32_Process -Filter \"ProcessId=$id\"; \"{0} parent={1} start={2}: {3}\" -f $id, $p.ParentProcessId, $p.CreationDate.ToString('MM-dd HH:mm'), $p.CommandLine.Substring(0, [math]::Min(220, $p.CommandLine.Length)) }",
+          "description": "Identify the largest node processes"
+        }
+      }
+    ]
+  }
+}

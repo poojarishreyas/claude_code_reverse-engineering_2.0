@@ -1,0 +1,27 @@
+{
+  "id": "20e0db43caf7b75fc142b0cd",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS+wgKEAgSGAI4AUIIdGhpbmtpbmcSDENr6Vin375jQhJHVxoMwo1mRz2mMryyja4UIjANmAGEcrcEGbCSlRLRkHSxzrfavWl71aDflgAJho6oV5bclID33N7EiJWetaL3sisqmAjhQKMonjGh43IPZT0EAlva1bPiBpaZzmBsfgzh7xDeKrc8JE7TEPZfZICvkNPb4LGHBQlWhxXVSHPNWOmnZNoUcy7SwBxGYHx6ax6meDO3kll6r/zFmlPoCDQsrKcyFDVHLsOZtDGU1G4gAgMYbYpt4qsOXUuW2mVJmwsII0Cm1B9NQvx9eiYuehg2XK7AaC2+gIuw/VNMM9exRrXZngNT4IOoiWbfAOtpUQGWjTwE1RyDas2xoi1HH+Dbv6CLa42nZS5/wTfKHyU1mO1lqIo1T5ywQ7gjROc9i4Ay9rJ/T62Lrx5GeeWxD5Qg796CeF0QLWJEaICPOtSg44n/29Iau2kJZHGChtUN/ChbD1mdW8KIzbD+d21d5ClXi41QRnX/eBby5F/LRsYRg9aNDepOtnfr1xr/cNKk6sTws5GGnwmmOvKfqC81bn8ngn/sZlWK+EWBPPbvA6ajFVsQDGkpMMIVyxpwxkY2lgPbNdZ/Lxj7YEHcRUIu0DGKzDHJOyuqhrYJDcIqaG+dDnV7gCjdL0X+ssEjsKVWaTqqa8nbrMqUqx/+WK6c31ZselsqP1b3GAs7W0zrOHrauniXr6TAneP0sKsC7Kwix5SsuS56CL1nvgWgUtjeNTSv+UPlgCXaZ1PZCR+a9SJ5vR4OPrY0vBvkWXZPH6QfyQJkVszPSN/sFWwfQW+iUn6+Z+R7oV9xul3wOU6DuK1/tfjmAxT6iuJnhGjamZdike/9eQmkQkreNi01onrPqR+jrbG17mvlTCodaSewj5GiiOCjszwXzuWTnsrw/tPyO9/HKArVvFfSBo6Gpt/lSPIUl61ss7r96we8JXSjHMXOFqVfcxJETH7BGI1oktbRHW0gaM5dQVqXiIz/lYvlIM37tXvCSwQnYQGfWBHNQqE0DWTjfFX0rHqdbWhUOWM0SFtpQS60XNtkbRi6HUtE9FFGWBsdDpI6mYos4USy2kJXYU9+ibV8qHxCT7lauvR4xgljUjDHz4mSC6Z/yTe3cjk3NOlMB1PUPTU7HlCs/C+XuZJcHwotnerwYGvvfiyNvoUN77JrrwqfC+0yro6E2J7TJVvkVGhoL52lk99RsT14S2wyGSqNxvCMFuZ0EuXwT2WPREsecyTemym5PCcxazdLyBl/jiX1V4Ofvm1KEjvoAHUturakEe+ymYTvzrsNCukFs6iDI0HRP+0ewbzch+szAmIqLuG+5C8wEjJe8jl7qJKK0HN/1wEuJsrsZzvaVaqzS5x6oEmfk9OP3Iza/C6gTiJvjLFo3/5JinxHvR/ej0orADjOpJJ6IqyTOKJz7sk4nIB1wUOXK/L5O0C10CiqMW//CRX8vZtQtfhKeqKv7JzfZZ0lohqKJmgruRD8LoAuhGTIfVwaL/eGDZ5/GAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01UMHF8jP81Hg12VrRQdHYxw",
+        "name": "PowerShell",
+        "input": {
+          "command": "$id = 19000; for ($i = 0; $i -lt 6; $i++) { $p = Get-CimInstance Win32_Process -Filter \"ProcessId=$id\"; if (-not $p) { \"($id gone)\"; break }; \"{0} {1}: {2}\" -f $p.ProcessId, $p.Name, $p.CommandLine.Substring(0, [math]::Min(140, $p.CommandLine.Length)); $id = $p.ParentProcessId }",
+          "description": "Trace the tsc process's parent chain"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

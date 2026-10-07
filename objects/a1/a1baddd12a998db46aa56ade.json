@@ -1,0 +1,15 @@
+{
+  "id": "a1baddd12a998db46aa56ade",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WSaenr5fKirF3TPXp7aaHN",
+        "type": "tool_result",
+        "content": "19000 parent=17504 start=10-07 14:44: node  --max-old-space-size=4096 ./node_modules/typescript/bin/tsc -b tsconfig.host.json \r\n6068 parent=16940 start=10-06 21:16: \"C:\\Program Files\\nodejs\\node.exe\" --dns-result-order=ipv4first --max-old-space-size=4096 C:\\Users\\shrey\\AppData\\Roaming\\npm\\node_modules\\omniroute\\dist\\server-ws.mjs",
+        "is_error": false
+      }
+    ]
+  }
+}

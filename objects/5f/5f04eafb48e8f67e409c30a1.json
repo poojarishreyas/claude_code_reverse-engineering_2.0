@@ -1,0 +1,19 @@
+{
+  "id": "5f04eafb48e8f67e409c30a1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UMHF8jP81Hg12VrRQdHYxw",
+        "type": "tool_result",
+        "content": "19000 node.exe: node  --max-old-space-size=4096 ./node_modules/typescript/bin/tsc -b tsconfig.host.json \r\n17504 cmd.exe: C:\\WINDOWS\\system32\\cmd.exe /d /s /c node --max-old-space-size=4096 ./node_modules/typescript/bin/tsc -b tsconfig.host.json && tsdown --env.\r\n16376 node.exe: node   \"C:\\Users\\shrey\\AppData\\Local\\pnpm\\store\\v11\\links\\@\\pnpm\\11.7.0\\13310dfb63588666a20ffbb7892eca80e4978178e90910f66079c792a7b2dc4f\\bin\r\n23908 cmd.exe: C:\\WINDOWS\\system32\\cmd.exe /d /s /c \"C:\\Users\\shrey\\AppData\\Local\\pnpm\\store\\v11\\links\\@\\pnpm\\11.7.0\\13310dfb63588666a20ffbb7892eca80e49781\r\n23304 node.exe: \"C:\\Program Files\\nodejs\\node.exe\" C:\\Users\\shrey\\AppData\\Roaming\\npm/node_modules/pnpm/bin/pnpm.mjs run build:lib:host\r\n2496 sh.exe: \"C:\\Program Files\\Git\\usr\\bin\\sh.exe\" /c/Users/shrey/AppData/Roaming/npm/pnpm run build:lib:host",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
