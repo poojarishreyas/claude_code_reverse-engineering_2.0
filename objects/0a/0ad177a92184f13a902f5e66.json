@@ -1,0 +1,18 @@
+{
+  "id": "0ad177a92184f13a902f5e66",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01J4q6s9nnmeqPBSj4YveCfy",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 10 Id,ProcessName,@{n='MB';e={[math]::Round($_.WorkingSet64/1MB)}} | Format-Table -AutoSize | Out-String; Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'node.exe' -and $_.WorkingSetSize -gt 300MB } | ForEach-Object { \"$($_.ProcessId) $([math]::Round($_.WorkingSetSize/1MB))MB $($_.CommandLine.Substring(0,[math]::Min(140,$_.CommandLine.Length)))\" }",
+          "description": "Find what is using memory right now"
+        }
+      }
+    ]
+  }
+}
