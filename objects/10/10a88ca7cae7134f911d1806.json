@@ -1,0 +1,18 @@
+{
+  "id": "10a88ca7cae7134f911d1806",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_013iahrvtX5CbTx26DCYRaaU",
+        "name": "PowerShell",
+        "input": {
+          "command": "$id = 2496; for ($i = 0; $i -lt 6; $i++) { $p = Get-CimInstance Win32_Process -Filter \"ProcessId=$id\"; if (-not $p) { \"($id gone)\"; break }; \"{0} {1}: {2}\" -f $p.ProcessId, $p.Name, $p.CommandLine.Substring(0, [math]::Min(160, $p.CommandLine.Length)); $id = $p.ParentProcessId }",
+          "description": "Continue tracing who started the build"
+        }
+      }
+    ]
+  }
+}

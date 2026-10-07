@@ -1,0 +1,15 @@
+{
+  "id": "5f0e03107e4eda1af2a88f9e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_013iahrvtX5CbTx26DCYRaaU",
+        "type": "tool_result",
+        "content": "2496 sh.exe: \"C:\\Program Files\\Git\\usr\\bin\\sh.exe\" /c/Users/shrey/AppData/Roaming/npm/pnpm run build:lib:host\r\n(19540 gone)",
+        "is_error": false
+      }
+    ]
+  }
+}

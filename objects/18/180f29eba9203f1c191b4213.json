@@ -1,0 +1,15 @@
+{
+  "id": "180f29eba9203f1c191b4213",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017YQADXqKFoqswunjyfA4eY",
+        "type": "tool_result",
+        "content": "SUCCESS: The process with PID 3820 has been terminated.\r\nSUCCESS: The process with PID 23704 has been terminated.\r\nSUCCESS: The process with PID 24012 has been terminated.",
+        "is_error": false
+      }
+    ]
+  }
+}

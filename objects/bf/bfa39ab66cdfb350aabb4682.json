@@ -1,0 +1,27 @@
+{
+  "id": "bfa39ab66cdfb350aabb4682",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_017YQADXqKFoqswunjyfA4eY",
+        "name": "Bash",
+        "input": {
+          "command": "for p in 3820 23704 24012; do taskkill //PID $p //F 2>&1 | head -1; done",
+          "description": "Kill orphaned tail processes from expired monitors"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
