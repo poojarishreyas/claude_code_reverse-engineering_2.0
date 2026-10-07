@@ -1,0 +1,15 @@
+{
+  "id": "70c126b67cef1f77d6897ece",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_014dBqiPkxn7fGM6A87TT5jr",
+        "type": "tool_result",
+        "content": "scripts/eval/metrics.spec.ts:92:1: error @stylistic(max-len): This line has a length of 183. Maximum allowed is 140.\nscripts/eval/metrics.ts:204:1: error @stylistic(max-len): This line has a length of 147. Maximum allowed is 140.\nscripts/eval/claude-code.ts:106:1: error @stylistic(max-len): This line has a length of 148. Maximum allowed is 140.\ntsconfig.host.json\ntsconfig.json",
+        "is_error": false
+      }
+    ]
+  }
+}

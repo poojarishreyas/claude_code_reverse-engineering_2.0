@@ -1,0 +1,19 @@
+{
+  "id": "8f96dfb46b1d806ef36aa8a3",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0129NiFs6ZrbhmnKEbqUNmbz",
+        "type": "tool_result",
+        "content": "      { passed: true, metrics: { ...base, editedExpected: true, firstReadStep: 2, steps: 5, usage: { inputTokens: 10, outputTokens: 1, cacheReadTokens: 100, cacheWriteTokens: 5 } } },\n\n    editedExpected: results.filter(result => result.metrics.editedExpected).length,\n    medianFirstReadStep: median(results.flatMap(result => result.metrics.firstReadStep ?? [])),\n    medianSteps: median(results.map(result => result.metrics.steps)),\n    totalInputTokens: results.reduce((total, result) => total + (result.metrics.usage?.inputTokens ?? 0), 0),\n    totalPromptTokens: results.reduce((total, result) => total + (result.metrics.usage === undefined ? 0 : promptTokens(result.metrics.usage)), 0),\n    totalOutputTokens: results.reduce((total, result) => total + (result.metrics.usage?.outputTokens ?? 0), 0),\n  }\n\n *   and the model the endpoint says answered, which shows whether a run really used the model asked for.\n */\nexport function parseClaudeCodeOutput(stdout: string): { events: EvalEvent[]; usage?: EvalUsage; output?: string; error?: string; model?: string } {\n  const events: EvalEvent[] = []",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

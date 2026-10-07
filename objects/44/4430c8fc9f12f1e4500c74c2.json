@@ -1,0 +1,31 @@
+{
+  "id": "4430c8fc9f12f1e4500c74c2",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS6gcKEAgSGAI4AUIIdGhpbmtpbmcSDL1+lgdEzBB/Hvec7hoMMTmNsOxhvxKWmK/wIjA+KrVW00tKvB9anKZa6+CYaZh++gVL7w1fh9UoDwuPVfjYStvsKOe8JZN+UPZL8Goqhwd8zGoW6xHMIHGwlvGWGrLvcS4oANiI0VKRWwRfXTnmM7X/D//VMAW72ImwEG4x8eHKQ806gzC6PAjhS+aYNcq7pmGVlVMurQiZhwH6NUK0Eytm9Wjy1xv4NhMdb3/H8tBF9AOLh7IVVhJsdxQo2kXUS3FVVZ8DRvnb1Eo0etECWxrMnSfg+eqS6KukOkeowua3/wju6Y9che6oMlR3otabiC3VSO2vCo+oci5CWknmn35zwWn9yFpekAQF4mhuANkMFf9rguWthDl0w7LYF1SBK+0VIMRt/gJVMex9INeHLuSoWT+A4OI5v6GcX34L/DVHkaOmeWaWJXID3RsGGk8gG8GbZjSjs3uCQfuKHj+Iu8eSQEbDxRIyd4pfjOZbPP6i6JpHB+Uw24egsWfuM9PEUeX4F8cepPzDnkvtY69abpTkYb2OeH9wRHXd5Z/uo1xZ/ufA3VDRDJhyuxmcrtdoXwJt1JrPzbE2zFHLJ3H7Qw1Qqq9wOjcTkU7++qhCMsDn673aB5BGKnryrEZIQYCWhhKvrjauu+B3Z6FiLdM3+HOsEehPYjS+hwvP9qCXB8DR/t1Bimgkl8VsQeVZXeRcwPj76J858WXz78sR9ct5/h9p3K7RYX1sMJskyYOOgi1Ew2QTc2VB6V3ETTJReBZWozkry8bnX/JVaVYOGBk/7fV5ZJmxXpJAwxV3zCmYR/hcYGDraaTj/4oxfOWRzeu67BznB6fVs1RmwltspjYTUE+pEE2r/Qzrasu2YF1TGQjODd7RwVI6XeEZst7GtTQdFSVT1yIGX23/GQAAkg8lJSCDBbdCcX07/DFGOQxGqCK5KqaBHSabQQUXyzDbZvsQeLtZsHptZJ8WGajFzXGPhswNF0PFvdCxvkNiRlfZgYP36hvo4CQIUOfgu4BSMJM8VXGgyqyd4nbf2dvQJdiecGOdsaiIyedBgZ5cpAe1bxNQiuqEvl3esTlQsZr4N10lsBoiOUzmBrIFDKVXEHnpynkIwdF1Wi4E6a5pNlYyzPZhL7NDgUg+0uL3IFVzC4cKPXCVaIcinCnU99pBsS4zHtFFTsWC3w/UTkXg0ChAVP4YTG13r8E/8819vO2L5FJUHJP3YxznSjwi5BEIinsAyz5yh7XmH4iZxTBqfnFZuulA2IUbOCtkTMgdxnWDbsk7zgGbXQCDCngGTnHlsSyqEKnYUA83EuEYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Lint finds three lines that are too long. They're in code I wrote earlier this session, so I'll fix them now:"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_0129NiFs6ZrbhmnKEbqUNmbz",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness; sed -n 92p scripts/eval/metrics.spec.ts; echo; sed -n 200,206p scripts/eval/metrics.ts; echo; sed -n 104,107p scripts/eval/claude-code.ts",
+          "description": "Show the over-long lines"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

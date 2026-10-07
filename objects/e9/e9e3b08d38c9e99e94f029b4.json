@@ -1,0 +1,15 @@
+{
+  "id": "e9e3b08d38c9e99e94f029b4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0163G9n4p4GthyJM2857V4JE",
+        "type": "tool_result",
+        "content": "tsconfig.base.client.json\ntsconfig.base.json\ntsconfig.client.json\ntsconfig.host.json\ntsconfig.json\n27:    \"typecheck\": \"npm run build:lib:host && npm run typecheck:contracts-ready\",\n28:    \"typecheck:contracts-ready\": \"tsc -b tsconfig.client.json\",\n29:    \"lint\": \"npm run build:lib:host && npm run lint:contracts-ready\",\n30:    \"lint:contracts-ready\": \"tsx scripts/run-oxlint.ts .\",\n31:    \"lint:fix\": \"npm run build:lib:host && npm run lint:fix:contracts-ready\",\n32:    \"lint:fix:contracts-ready\": \"tsx scripts/run-oxlint.ts --config .oxlintrc.staged.json packages/typert/generator/tests/fixtures/type-model --fix && tsx scripts/run-oxlint.ts . --fix\",\n54:    \"check:all\": \"tsx scripts/run-gates.ts check-all\",\n55:    \"check:ci\": \"tsx scripts/run-gates.ts ci-primary\",\n56:    \"check:ci:linux-primary\": \"tsx scripts/run-gates.ts ci-linux-primary\",\n57:    \"check:ci:static\": \"tsx scripts/run-gates.ts ci-static\",",
+        "is_error": false
+      }
+    ]
+  }
+}
