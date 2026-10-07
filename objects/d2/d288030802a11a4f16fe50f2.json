@@ -1,0 +1,15 @@
+{
+  "id": "d288030802a11a4f16fe50f2",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RtE3GM2tL2SqRF6tCvG8jw",
+        "type": "tool_result",
+        "content": "16:24\nquota: still out at 16:24",
+        "is_error": false
+      }
+    ]
+  }
+}
