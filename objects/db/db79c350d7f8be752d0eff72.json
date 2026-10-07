@@ -1,0 +1,18 @@
+{
+  "id": "db79c350d7f8be752d0eff72",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Aq5187dBnxN2PCTWRVhL4c",
+        "type": "tool_result",
+        "content": "llm-pi-ai\\src\\stream.ts:45:  if (/\\b429\\b|rate.?limit/i.test(message)) return 'RATE_LIMIT'\nllm-pi-ai\\src\\stream.ts:67:  return 'PI_AI_ERROR'\nllm-pi-ai\\src\\stream.ts:78: *   to non-retryable `PI_AI_ERROR` failures.\nllm-pi-ai\\src\\stream.ts:113:      failure: { message: `pi-ai stream for model \"${message.model}\" ended pending`, code: 'PI_AI_ERROR' },\nllm-pi-ai\\src\\stream.ts:117:      failure: { message: `pi-ai deferred response for model \"${message.model}\" is not supported`, code: 'PI_AI_ERROR' },",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
