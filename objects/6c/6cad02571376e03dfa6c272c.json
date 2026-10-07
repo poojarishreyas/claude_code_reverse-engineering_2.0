@@ -1,0 +1,22 @@
+{
+  "id": "6cad02571376e03dfa6c272c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_011m7pANSMmZFg7JSu4Nn3GW",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness; grep -n \"runTests\" scripts/eval/run-eval.ts | head -3; grep -n \"function runTests\" -A14 scripts/eval/*.ts",
+          "description": "Find the eval's test-run command"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

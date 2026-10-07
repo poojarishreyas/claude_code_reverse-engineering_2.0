@@ -1,0 +1,23 @@
+{
+  "id": "f68fdfc42b50161a7ff08cd7",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01M4NYUb2duzp4FMuZFEpvsv",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"$LOCALAPPDATA/Temp/dsh-eval-9633724b40\"; timeout 600 npx vitest run --maxWorkers=1 packages/boot/app-boot/tests/profile.spec.ts 2>&1 | grep -E \"Test Files|Tests |FAIL\" | head; echo \"exit=${PIPESTATUS[0]}\"; git diff --stat",
+          "description": "Re-run the task's tests on Claude Code's edits",
+          "timeout": 620000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

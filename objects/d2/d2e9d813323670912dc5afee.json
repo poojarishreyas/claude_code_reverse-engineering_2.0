@@ -1,0 +1,15 @@
+{
+  "id": "d2e9d813323670912dc5afee",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01VfFMYMSnHpZvUcFzr9KWk9",
+        "type": "tool_result",
+        "content": "SUCCESS: The process with PID 20332 (child process of PID 10372) has been terminated.\r\nSUCCESS: The process with PID 10372 (child process of PID 4772) has been terminated.\r\nERROR: The process \"20332\" not found.\r\n M packages/boot/app-boot/src/index.ts\n M packages/boot/app-boot/src/profile.ts",
+        "is_error": false
+      }
+    ]
+  }
+}

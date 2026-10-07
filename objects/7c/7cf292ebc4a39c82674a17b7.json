@@ -1,0 +1,19 @@
+{
+  "id": "7cf292ebc4a39c82674a17b7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011m7pANSMmZFg7JSu4Nn3GW",
+        "type": "tool_result",
+        "content": "81:function runTests(workspace: string, files: readonly string[]): Promise<Command> {\n159:    const baseline = await runTests(workspace, task.testFiles)\n176:    const after = await runTests(workspace, task.testFiles)\nscripts/eval/run-eval.ts:81:function runTests(workspace: string, files: readonly string[]): Promise<Command> {\nscripts/eval/run-eval.ts-82-  // One worker: a task runs only a few spec files, and parallel workers can exhaust memory on a laptop.\nscripts/eval/run-eval.ts-83-  return exec('npx', ['vitest', 'run', '--maxWorkers=1', ...files], workspace, process.env, 15 * 60_000)\nscripts/eval/run-eval.ts-84-}\nscripts/eval/run-eval.ts-85-\nscripts/eval/run-eval.ts-86-function tail(text: string, max: number): string {\nscripts/eval/run-eval.ts-87-  return text.length <= max ? text : `[... ${text.length - max} earlier characters omitted ...]\\n${text.slice(-max)}`\nscripts/eval/run-eval.ts-88-}\nscripts/eval/run-eval.ts-89-\nscripts/eval/run-eval.ts-90-/** Parse the driver's JSONL stdout into session events and the final result row. */\nscripts/eval/run-eval.ts-91-function parseDriverOutput(stdout: string): { events: EvalEvent[]; usage?: EvalUsage; output?: string } {\nscripts/eval/run-eval.ts-92-  const events: EvalEvent[] = []\nscripts/eval/run-eval.ts-93-  let usage: EvalUsage | undefined\nscripts/eval/run-eval.ts-94-  let output: string | undefined\nscripts/eval/run-eval.ts-95-  for (const line of stdout.split('\\n')) {",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

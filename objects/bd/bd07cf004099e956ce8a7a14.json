@@ -1,0 +1,19 @@
+{
+  "id": "bd07cf004099e956ce8a7a14",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01M4NYUb2duzp4FMuZFEpvsv",
+        "type": "tool_result",
+        "content": " Test Files  1 passed (1)\n      Tests  35 passed (35)\nexit=0\n packages/boot/app-boot/src/index.ts   |  1 +\n packages/boot/app-boot/src/profile.ts | 31 ++++++++++++++++++++++++++++++-\n 2 files changed, 31 insertions(+), 1 deletion(-)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
