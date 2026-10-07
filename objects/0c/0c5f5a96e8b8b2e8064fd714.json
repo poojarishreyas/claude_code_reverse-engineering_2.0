@@ -1,0 +1,28 @@
+{
+  "id": "0c5f5a96e8b8b2e8064fd714",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_018qqEjn4DHGiYCVgQ3xjaok",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\scripts\\eval\\run-eval.ts",
+          "offset": 95,
+          "limit": 70
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
