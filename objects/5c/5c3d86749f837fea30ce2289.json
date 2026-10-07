@@ -1,0 +1,33 @@
+{
+  "id": "5c3d86749f837fea30ce2289",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSsgkKEAgSGAI4AUIIdGhpbmtpbmcSDAcjlxsnzao8tluvCxoMHnpB30/lGsv0GEe+IjA2d98Xu2auuXbWEKdT1AefMw0Gy4/ZGg4yYWMXjtQVw8g6u5NaWILrLkloz4blg2AqzwgkwkaC+Ayk7zkf22YBOA4mrMcuqMKmYWmaBepgCzOoy5wkHzNTX6OxoKfPlQutwnaCtqYd4d+Z62PhRSicuf6L9JcSkCNE5dBjcSiII6CxUik0c2a7/qPo223E7NEq1eL7723QW9w9P+Y/wm/XiHiVBZSow4x0dRme6KIh9ixPfw+ppa9rWIE7XE2zoSDQXRqxFjnVGZOTIbakZPcl9vkrbW3AoDIz0bABcMTFoDPO0crmttkPPeyQLhUnd0CN/puPSv5R8c4wp1yrD5gKTLVmwzZnPIlXDe4ARHZkYCo0EAVgEMkr6Z7ZHAXU6RzUh6nPZpFC/DyTjl3TFP/hw294diTSeaaA9qhRvxNrFnu/CVpHaElQtvafxBey1ASymHB5mX000sfEpORFGO5FTnwQGxwZMSR1lbqZwu7bHDkzEi7CaoWsslQbsk0ybvM7Wcwn8tN7AabODYVnCx2m+gSshoGahmeJMdPoRLOFnoF0/MQb/21cOxgsCn69rp8QCmBswU+4mLWSBe3Gfpgx7p2VKy/ikz6gaMxIdU5hEZHSF988WyA9PXij5bH/d8dRAtWa6z5Lvr3eGh9EERYbtjxOCxXCUsG48IuprH2ka44EFhNId0fnmjTPAxuwrhs4ascOc9gL8t/nNScUz7BnmYui4y+Is3Y+69Tt5yGy9jo1TPNuFDupG3OQQ93+Q7mnTrjStRTxDcN6aNU6ajFPKUmRmmDcdJW8zWQ5JXkJrGkVwB+/kMl1C5FkiBJ1DEKz86TfzEirs9TgjahZMG38ZdqAcEDEJ1N6/rEKHNhzT8vEDF3almm+xZPeGao3/LyPdgDnrPhM7lZMhc/5bj1945m3EDfV4ZAwClD5+qgutU+XjHLadPNsOG+r/RNfLkeucXUmxC7L32plZB7fktR1Kr7AxLHtKC6J3a5pO3W1NhooRqvGPVq0UPHfSNPVqkfTKvZXhTcuhnO5VyWX0pp0P3b9GZv4vu6GOeT6zOfnak175yvIYavMwytceyBHeSRgyCq1d0sfP6MS6S6hXdRa52UqVzcnS89rbZL5AOiZ5b4HqM2ZGom3uN3uPNKZ03WhNBHgUrG2XR+CkFmROb+K68mruUAIrnjxrhHADpzc66n3CF8wx4hiKsztpTKe8Jqp4+e/W8YVIDtOFaR1XcdxlcNlW5GGkpu8glqnRTGLNws4RQxGdtiFuuzTa6lqf06QbfVKhfIQ8AjTUFW5mRQIWYnhI9je9x1e/OVKWMoRgatsthntCMChp6y9uCWVNGnK2ne9z3T1EEZuvKmLgih7Sl1ezgmNj4m9lNhvN6QrWJ2tV2miasw/aZk80i33iuzeXNkPdIXpBL9jANZfjph1X/7OTu9CBoXBtSOljSCLbuvJxVZppLs99KPoVlqwyEXRiSsP5xLXJkdx58/Y7QVcd57Tga3SyhwsndX/cX0hOTkyi9TuIFbGLlQWcpXt7LD78RgB"
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSlwgKEQgSGAI4AUIJbmFycmF0aW9uEgy4Jtj1tUW65/CTCAMaDCKiwRHZ7St+a/cwmyIwMer+P443ng0jXBoaTQ2EXa2T/2xA709jnAz1Oi/L6J/E1vmxILEY8ILvvH9GXHPEKrMHn4iclZEVRon4WCAPNbs9wqDOYlb0NvelspEgadrTgi4Bwxh/iQHlaGxV1A0RnwGq9zzTgOegjbIS77mvJ2dYyvFYA1ZaiYK+35+tZRclnyuiKqq6Btuhw7lD30JcoKAfyOoGXmyOcxo/HsKerE7+GZm+rt2v7jLWDPg6xQdRspyXs7KkGy90pRbSKHGqaLs56aZRE6w3weIi5Ro3fdK7c9vrZG2rNKFVkW1H/EQkP0KQ15GnLAp1ph/mzDDyET659rSXhVkAdiyI/GTPP9vqgP37wTEMygXL1KK6uLNtuO51FQIW4sW0asC9PEjJTg1gQU+pRi5gMLAexTMVdmRpSvRqwtaPI8vSf1Bb3lR9aoQEC27kPjSB5rrnv5vhfbRVCqy866po0VGbWAQIhcSNzLqa0Cz27j/7PFm7vNaUBQ/5vxfyblUCYFYpM/YlRnrZ1yHPyYLBUehekLMuujgEZO6mWUGmQ5rQiXn0c3c35ajDPxFcN1fftgi5NIkZnFF2Q/8HtHvFWWn4c8DB2CoqHISB+7akfLG7fs4WhpgHOYeMiTquvxhxHCx/bfbCsSNIlbCJXJ0x708SscNYVryYxFVZHxeibzFXSdGf+ZB8PWBZAqbS754eRQswUI2fQKEBXuTmGN2cVMGbF2kZaW5LauhrA+pCqhR/NKJRWlpcEKqwi8ORJ/EGrmcaohLB2/X5MfN5wY2Ep66cr2HSgj+Haxi0qnrmCbO3PRaso4bE59R1I68J0dZWqEmGf79rmR4lZoRaAIaAnrs6Pp/L3UU9Xo8HHjt0G8rr3w4E3xqZBMTZEg1iyXcGy+BzXMaG4RJ26o+ouXeHRBeKoXrE/3jx2wALW370AssUfB8hkHdC98QMEdsyyQbnFUNIq1IbnRBE9mfipw0QLSxHeKYkF6eOs7TIvTmWLZClrWEkxmRB0smt/wyGxRE4bXIBICNr8tqsFpAmeKsED+WOaUugNxsx1akaslk3M0FKwmULiO8cJnP/BnIASu0jcaA/7dQiKlPzlOG9Jxzf7di0qCSUhSDE1n+3rU5o+IskjuqYYrfNFEidDfgSPA67xkdXzNXPX6inlPeKphVHBI02yQEk9nKqY70Gy9JcHqr1T+ykJPptZRP6iWTXg/F27LatRib4hY7V8e+8IVIS7kuBBS8oaQT9p+5LZYRmxsxkJOFeV+CzhloJqXXUAF3ejNnS292HqCNY+YNQu8DK/pOx5vaWNzEuDAb5K7ckIrT0XbmCtw7KffekU9gYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01J9LUECGRCB6FU82iZrZWKb",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); for i in $(seq 1 144); do r=$(curl -s --max-time 90 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' 2>/dev/null); if echo \"$r\" | grep -q '\"type\":\"message\"'; then echo \"READY $(date) $(echo \"$r\" | grep -o '\"model\":\"[^\"]*\"')\"; exit 0; fi; sleep 300; done; echo \"still exhausted after 12h\"; exit 1",
+          "description": "Wait until OmniRoute answers again",
+          "run_in_background": true
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
