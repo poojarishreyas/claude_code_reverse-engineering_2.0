@@ -1,0 +1,19 @@
+{
+  "id": "a01a91dec4fe1e2c1efbf59b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011Rd5eUFM6TC6UQu8Kdp9Ti",
+        "type": "tool_result",
+        "content": "6540 12:51 \"C:\\Program Files\\Git\\bin\\bash.exe\" -c \"source /c/Users/shrey/.claude/shell-snapshots/snapshot-bash-1791301567443-jppacr.sh 2>/dev/null || true && exp\r\n6776 12:51 \"C:\\Program Files\\Git\\bin\\..\\usr\\bin\\bash.exe\" -c \"source /c/Users/shrey/.claude/shell-snapshots/snapshot-bash-1791301567443-jppacr.sh 2>/dev/null || \r\n14256 13:17 \"C:\\Program Files\\Git\\usr\\bin\\sh.exe\" /c/Users/shrey/AppData/Roaming/npm/pnpm run eval:file-finding -- --repo C:/Users/shrey/AppData/Local/Temp/claude\r\n19804 13:17 \"C:\\Program Files\\nodejs\\node.exe\" C:\\Users\\shrey\\AppData\\Roaming\\npm/node_modules/pnpm/bin/pnpm.mjs run eval:file-finding -- --repo C:/Users/shrey/Ap\r\n14940 13:17 C:\\WINDOWS\\system32\\cmd.exe /d /s /c \"C:\\Users\\shrey\\AppData\\Local\\pnpm\\store\\v11\\links\\@\\pnpm\\11.7.0\\13310dfb63588666a20ffbb7892eca80e4978178e90910f6\r\n14672 13:17 node   \"C:\\Users\\shrey\\AppData\\Local\\pnpm\\store\\v11\\links\\@\\pnpm\\11.7.0\\13310dfb63588666a20ffbb7892eca80e4978178e90910f66079c792a7b2dc4f\\bin\\\\..\\node_\r\n22488 13:17 C:\\WINDOWS\\system32\\cmd.exe /d /s /c tsx scripts/eval/run-eval.ts \"--\" \"--repo\" \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Eleme\r\n23764 13:17 node   \"C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.bin\\\\..\\tsx\\dist\\cli.mjs\" scripts/eval/run-eval.ts \"--\" \"--repo\" \"C:/Users/shrey/AppDat\r\n8060 13:17 \"C:\\Program Files\\nodejs\\node.exe\" --require C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.pnpm\\tsx@4.22.4\\node_modules\\tsx\\dist\\preflight.cj\r\n18400 13:20 claude -p \"These tests fail in this repository:\n\n- packages/client/ui-primitives/tests/state-dot.client.spec.tsx\n\nTest output:\n```\nRUN  v4.1.8 C:/User\r\n14844 13:23 \"C:\\Program Files\\Git\\bin\\bash.exe\" -c \"source /c/Users/shrey/.claude/shell-snapshots/snapshot-bash-1791301567443-jppacr.sh 2>/dev/null || true && exp\r\n3340 13:23 \"C:\\Program Files\\Git\\bin\\..\\usr\\bin\\bash.exe\" -c \"source /c/Users/shrey/.claude/shell-snapshots/snapshot-bash-1791301567443-jppacr.sh 2>/dev/null || \r\n13:27",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

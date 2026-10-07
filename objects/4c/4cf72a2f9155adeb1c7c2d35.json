@@ -1,0 +1,27 @@
+{
+  "id": "4cf72a2f9155adeb1c7c2d35",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSlwkKEAgSGAI4AUIIdGhpbmtpbmcSDJ3WEUbTYz8cb1NIcRoMk0Fa/P6egEFICxZ1IjAeHBLRWFVuxihQjatg+4xMyYSrnfXfQtBtJ+EqaQsnTXV9/mMRvOXN0z3J+pVDSVcqtAgvCoWkfYTa52XvH6QMyW0S+INxrcZxzWlt26z9/GaL490+H0+9taS0Iisn/FAxBFsN0wMqrFR956opI5sHYvYNHe8Df5c8t6Jq3uo4FSJLzNWLa6D3dz21Lpd31AmyTwq6WFQgyt9bPPvW6+rleCNsbsJW8H4KuViDm3p62c2lMUmYWDJQ8pm47J7/y9/lM5f/wu2IQfeW1UH8x09DH0nhdfBc5EffLQDWp1iyVuY6iE/NxXZ9kQkcUTOcEgc8bksumrnmt6yh+Z2qXgi25phb3UFrv6DPo1Bo/MCvDp/z/CdtZPSZHTBbvQYQFLY3OOvaBRuGIojzMm9E0gmlqCYjHUHELgnGZJFS/+OLFc4xvZPXvJGmQZughtr/aIM/6XtF1Xq9Rf0CLx511+rxhpLmYx4KIS06PvtWJUj6+GJCm2qgQzhwaoRyR1Wx3wX/oV6u4Xz6NpZlWlR5Hg119mMmtYayYAMu7MZHbc5KJuckTUr5G16sLgXBFoH+64vDYWnu/riHFRfQS8cibLM6iO/MmpaR1MFm0Z0tcRJYxXIQpzPtDh16Pa9NkYLeYoPPUiq3cBDhWib8uVe0SB4wxOVG4WdJ5lc2fGVcqOzftSzYWHVUZGZj3325QZExhmz8yOW2RHabjWlyzFaJcK9f3jQDOkfV/GQqmPrAQDT5/ONlHJx4skElr5BY0LZCyFdMNMltwjfqzU8JbMyILRlJriyjDjZB/vsfWFEhwJOBLuNsOJnh//H/Oy8X2q02Bo6J6w4eK0ST2pBqXyaucNsKwNA67y8lLWAjENyWOFAmO21pP60pGiS53Sgb2ApbdwJFY7g8YJtWDabSdI3EUCS64TwHeUdI0cAxRnJvE7IyxojCYVU0YES5Dg9bBuBb29vFhDTKX3lF4Ier6/vBjtePMpfxe8Ymn6AUIXXFc4NmRvvYnM6xj2ut6NHr1Mpui6wl+gnbm/UET8rSgcTMl0mjb7OitzId4S8JEKSdA0hnCNjigIyxgXAWwRSMht7nUg/8qnv2slGvg8D9nTrUIPIdOyufol3D9t3fR+pF4DDJm1YFxSrQhX4IiEhFxS660CxtA1WNs+OxLUeiGBmwq9HYZpRKxNy0sRqbsYfF2zNEYvvuTXSRMzP6fU5OUQoGrY/Ne2dlTzm2r6HOSs9Gfqq7OeZE7syEYVPbYUqQ+anJ8WVTeCSN+/AjU33la68JvXQdjbtkvHTYDeyB+WfLHoroB3/WSVv6SDHi0fQ9869tIyM+z3JpgJoMuhDKM/FLmAAcrtLsnXpuiLH8AhGKHoZ2ITIPC5LDqz9CXo/xfIybSeVxH6NCtrWRVGr7VOewbVrgiM00Nfaq4EsUJK3Ch5z9VXFM8f0St+bmdyqy22HphFvtBVYMRg7csg6StK2uVke7YNp2CeQ7GxWKePOV5eKfNLC43kF0dBgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_011Rd5eUFM6TC6UQu8Kdp9Ti",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'run-eval|dsh-eval-|claude.*-p|pnpm' -and $_.ProcessId -ne $PID } | ForEach-Object { \"{0} {1} {2}\" -f $_.ProcessId, $_.CreationDate.ToString('HH:mm'), $_.CommandLine.Substring(0, [math]::Min(150, $_.CommandLine.Length)) }; Get-Date -Format HH:mm",
+          "description": "List running eval processes"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
