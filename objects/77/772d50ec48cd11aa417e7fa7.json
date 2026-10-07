@@ -1,0 +1,15 @@
+{
+  "id": "772d50ec48cd11aa417e7fa7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HvYg8r8GRukPdZ6FWjHnbR",
+        "type": "tool_result",
+        "content": "  \"totalPromptTokens\": 0,\n  \"totalOutputTokens\": 0\n}\nALL-DONE\nstart at 22:04\nquota: still out at 22:04",
+        "is_error": false
+      }
+    ]
+  }
+}

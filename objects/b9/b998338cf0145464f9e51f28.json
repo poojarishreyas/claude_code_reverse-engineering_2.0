@@ -1,0 +1,27 @@
+{
+  "id": "b998338cf0145464f9e51f28",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS9AYKEAgSGAI4AUIIdGhpbmtpbmcSDO8nfedyl2SV+PzbNBoM5Om7zJRSSM5AdizEIjB1/9GhdwOlQfynfpNffAd1ENRv1/CppHt8c8YL5Y5OKmVAZ5NdOhggXL8xg7nvI/0qkQZTOXwzkwzhAMLpwbhzcQMGPyo1tEWBoY2D94RVyrB3W5l2MU1/slpy0jvPisoaL4WaxFgK9+5x3sCxfBKagsv+8D4t3bKGTaKiRxAfkbtnHtQB7mbhd1r3G4MWOreRLllig/nexbph0jEB4++GhQ6Yh6uPzqaxgUYiKdl0fHN6fFWKTnJ1Vn7mzA2IoSFaqQ3PXHFnf9zGabUuKqPfiygsaCMsf8sGtHF/onZOkYQ/BNTQs+aqgeNclv4/Pp4EIAQ2/AlApPbTM4z2HSLQepF8I1Rst50ffFPhgv3CUXdF2+ascXHiM9T5DK86L5hB3lAsubAhAPFUiMGatFv3i8ffWI6+CSz5eW6VLlAXR2fumuGFJFGO5qrllsVCIJtIuoFpM4CRPJceOgDaXNNxJWFYzo0AwVO2Z+XSmGNwoG/9zjRnXINwuJvWnSfXKa+sBIUuVqoEHhhUTr3rnxbH57PBzkQmQ0EgiOzr7iYQPW7k7emCNnOXNKU05DsDt+ewDy9bEUmOX29hOe2CCRjxV21wWYX3+iqkVwPLcH3W/+bSWnXgATG3ccx6qAgO8YadgMHCVjI3SReg+34upyc+KxCYNrsl2O3nhUKGHqE0Kq64AU6SEWOG4CnH9vIKzPAhpuhrvjtydqi67jr3dw5SkSzYHP1bWxKmmc9/sx/6TbZ6KRYe/aAkP8cx4m5J2WjisgW6eyuR+K8IWs/fX66aTKPT/k2m6QB7WHoecDz8AQdFinOnA7uP+HjC+gLvJHw++v7bJ385uiZpfsmCb8kKwSPpFhZzPR9fUOk9UKPSruAzlS4gCzFlTbL94Ak2XrAWbc2/BE5MNutLSR7rmdZ/klTLQudbt472lwhHqNB5fPTPM2jZuPKUPCEXC4QwLzxiQQAnwgs4n9F5Kp+EsWSW2NHFF36EJy0kxG2qBSJpD9V2woUJ9gscMBZDktgJD21iiSLuB10IDwsZLToFHrGRO1DuvpDApJ/k7JiGvF/PoKK2F50TuiC+4i9T23X+486+tc9n5eh9Zh4W+ta+xHytsb/NkxgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01HvYg8r8GRukPdZ6FWjHnbR",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; sleep 20; tail -4 \"$S/clean-run3.log\" | cut -c1-200; cat \"$S/clean-run4.log\"",
+          "description": "Check the batch moved on after stopping the run"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
