@@ -1,0 +1,15 @@
+{
+  "id": "325f376ac9d13bf13dae6005",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01MZBXaJ9C11QitMEqXotXrU",
+        "type": "tool_result",
+        "content": "19:20\n{\"passed\":true,\"src\":[\"packages/boot/hmr/src/index.ts\",\"packages/boot/hmr/src/package-manifest.ts\"],\"steps\":42,\"seen\":1,\"read\":5,\"readsBefore\":2,\"editedExpected\":true,\"edited\":[\"packages/boot/hmr/src/index.ts\",\"packages/boot/hmr/src/package-manifest.ts\"],\"extra\":[],\"editedTests\":false,\"usage\":{\"inputTokens\":237187,\"outputTokens\":35020,\"cacheReadTokens\":2715377,\"cacheWriteTokens\":0},\"tools\":{\"grep\":6,\"bash\":23,\"read\":7,\"edit\":5}}\nkilled leftover 14556 node.exe\nkilled leftover 1016 node.exe\nkilled leftover 848 node.exe\nkilled leftover 21004 node.exe\nkilled leftover 18764 node.exe\n5422",
+        "is_error": false
+      }
+    ]
+  }
+}
