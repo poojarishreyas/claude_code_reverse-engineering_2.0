@@ -1,0 +1,17 @@
+{
+  "id": "f9eb7989e114c373537d2cfb",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "RAM is fine again: 3.5 GB free, so you don't need to close anything. Claude Code is still working on e21ed97f29.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
