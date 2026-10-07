@@ -1,0 +1,19 @@
+{
+  "id": "fd3618eecc1a05b23faf63c0",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01442hXmJhNBKLH6syUdinrc",
+        "type": "tool_result",
+        "content": "/**\n * Prepare a lightweight Windows toolchain shim for tests when Visual Studio is not installed.\n */\n\nimport { execFileSync } from 'node:child_process'\nimport { existsSync, mkdirSync, writeFileSync } from 'node:fs'\nimport { tmpdir } from 'node:os'\nimport { join } from 'node:path'\n\n/**\n * Ensure a Windows compiler toolchain (vswhere + cl probe builder) is available for tests.\n */\nexport function ensureTestWindowsToolchain(): void {\n  if (process.platform !== 'win32') return\n  const currentProgramFiles = process.env['ProgramFiles(x86)']\n  const vswhereExisting = currentProgramFiles === undefined ? undefined : join(currentProgramFiles, 'Microsoft Visual Studio', 'Installer', 'vswhere.exe')\n  if (vswhereExisting !== undefined && existsSync(vswhereExisting)) return\n\n  const shimRoot = join(tmpdir(), 'dsh-test-toolchain')\n  const progFiles = join(shimRoot, 'ProgramFilesX86')\n  const vs = join(shimRoot, 'vs')\n  const installer = join(progFiles, 'Microsoft Visual Studio', 'Installer')\n  const vcvarsDir = join(vs, 'VC', 'Auxiliary', 'Build')\n  const binDir = join(vs, 'bin')\n\n  mkdirSync(installer, { recursive: true })\n  mkdirSync(vcvarsDir, { recursive: true })\n  mkdirSync(binDir, { recursive: true })\n\n  const csc = join(process.env.SystemRoot ?? 'C:\\\\Windows', 'Microsoft.NET/Framework64/v4.0.30319/csc.exe')\n  if (!existsSync(csc)) return\n\n  const vswhereExe = join(installer, 'vswhere.exe')\n  if (!existsSync(vswhereExe)) {\n    const vswhereCs = `using System;\nclass Program {\n    static int Main(string[] args) {\n        Console.WriteLine(@\"${vs.replaceAll('\"', '\"\"')}\");\n        return 0;\n    }\n}`\n    const vswhereCsFile = join(installer, 'vswhere.cs')\n    writeFileSync(vswhereCsFile, vswhereCs)\n    execFileSync(csc, ['/nologo', '/target:exe', `/out:${vswhereExe}`, vswhereCsFile], { windowsHide: true })\n  }\n\n  const vcvarsBat = join(vcvarsDir, 'vcvars64.bat')\n  if (!existsSync(vcvarsBat)) {\n    writeFileSync(vcvarsBat, `@echo off\\r\\nset \"PATH=${binDir};%PATH%\"\\r\\n`)\n  }\n\n  const probeTemplate = join(binDir, 'probe-template.exe')\n  if (!existsSync(probeTemplate)) {\n    const probeCs = `using System;\nusing System.IO;\nusing System.Runtime.InteropServices;\n\nclass ConsoleProbe {\n    [DllImport(\"kernel32.dll\", SetLastError = true)]\n    static extern bool FreeConsole();\n\n    [DllImport(\"kernel32.dll\", SetLastError = true)]\n    static extern bool AllocConsole();\n\n    [DllImport(\"kernel32.dll\")]\n    static extern IntPtr GetConsoleWindow();\n\n    [DllImport(\"user32.dll\")]\n    static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);\n\n    [DllImport(\"kernel32.dll\", SetLastError = true, CharSet = CharSet.Unicode)]\n    static extern bool SetEnvironmentVariableW(string lpName, string lpValue);\n\n    [DllImport(\"kernel32.dll\", SetLastError = true)]\n    static extern IntPtr CreateJobObject(IntPtr lpJobAttributes, string lpName);\n\n    [DllImport(\"kernel32.dll\", SetLastError = true)]\n    static extern bool SetInformationJobObject(IntPtr hJob, int JobObjectInfoClass, IntPtr lpJobObjectInfo, uint cbJobObjectInfoLength);\n\n    [DllImport(\"kernel32.dll\", SetLastError = true, CharSet = CharSet.Unicode)]",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

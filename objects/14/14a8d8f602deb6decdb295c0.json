@@ -1,0 +1,27 @@
+{
+  "id": "14a8d8f602deb6decdb295c0",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01442hXmJhNBKLH6syUdinrc",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; node -e \"\nconst lines=require('fs').readFileSync('$S/clean-dsh/e21ed97f29.events.jsonl','utf8').split('\\n').filter(Boolean).map(JSON.parse);\nconst e=lines.find(e=>e.type==='tool/call'&&e.data.name==='write'&&/test-windows-toolchain/.test(e.data.arguments));\nconsole.log(JSON.parse(e.data.arguments).content)\" | head -80",
+          "description": "Show dsh's toolchain shim file"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
