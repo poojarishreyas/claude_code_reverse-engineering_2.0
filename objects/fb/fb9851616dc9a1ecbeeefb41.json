@@ -1,0 +1,22 @@
+{
+  "id": "fb9851616dc9a1ecbeeefb41",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01RRWXJEP9XvQBuQXp9KUyT5",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; PYTHONIOENCODING=utf8 python -c \"\nimport json\nd=json.load(open('clean-claude-code/4b9d8ad6f7.json'));m=d['metrics'];u=m['usage']\nprint(d['status'],d['passed'],d.get('model'),{k:m.get(k) for k in ('steps','firstSeenStep','firstReadStep','editedFiles','extraEdits','toolCalls')}, 'prompt', u['inputTokens']+u['cacheReadTokens']+u['cacheWriteTokens'])\nfor l in open('clean-claude-code/4b9d8ad6f7.events.jsonl',encoding='utf8'):\n  e=json.loads(l)\n  if e.get('type')=='tool/call':\n    d=e['data'];a=d['arguments'];a=a if isinstance(a,str) else json.dumps(a);print(' ',d['name'],a[:130])\n\"",
+          "description": "Show Claude Code's clean run on 4b9d8ad6f7"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
