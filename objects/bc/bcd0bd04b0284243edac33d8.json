@@ -1,0 +1,15 @@
+{
+  "id": "bcd0bd04b0284243edac33d8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01AKgkRaGEfjuiQV2t5zqMS3",
+        "type": "tool_result",
+        "content": "SUCCESS: The process with PID 19152 (child process of PID 23268) has been terminated.\r\nERROR: The process \"15324\" not found.\r\nERROR: The process \"15792\" not found.\r\nERROR: The process \"18144\" not found.\r\nnode.exe                     16788 Console                    1    104,316 K\nnode.exe                     16940 Console                    1     39,996 K\nnode.exe                      6068 Console                    1    478,152 K\n4b9d8ad6f7.events.jsonl\n4b9d8ad6f7.json\n9633724b40.events.jsonl\n9633724b40.json\nsummary.json\nsummary.md",
+        "is_error": false
+      }
+    ]
+  }
+}
