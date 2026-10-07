@@ -1,0 +1,23 @@
+{
+  "id": "7649bfe742c8688a723dc8fb",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSwwYKEAgSGAI4AUIIdGhpbmtpbmcSDEOMDeFb5U8yKJpe7RoMWY9qiuvAFtExwLDEIjD6MHuVSJMIgJJx087Q5qw+LnamP0jZShTvBHS0Fo2sO0DulqUoaGLiN68qZh/xaZUq4AUNlrL4JHdHNJ1Rig31HCpExcx8BkfSb9U16kKOMl84dm5I2Y2Tpj9xkIY5rsg/MlglT0n4tyMQ8Yy94oYnPnHNcPHGpoUQRPy9jAP98rfEHxii3xBbRneVX31ffaVmDBTwMjgghw4hzlAWOrhucs/pcQoVACRehZfQub82OhfAgnkEubcW+xldWBbXiGxyjicRvCM/getOH/nDegCZvux5wp8+AP2bL1A+D01XLLfuWn1c6cleODj6SiwOgE0xHLQdsDYs/PFR7wpV48wtA8ws34DBVaY/ls+Lu9kT6ykUj1o5odGHn6wEsaLAmKi416zPFoXMV7xilukA2XEv/UC4UQMuWTdW79IhmhfoX8YNh2ALGoSztapkh5+eimpN0JLhvXFoOzURWeAYuSaVZlzSsjlMRix+s6o/pQn1KSCscWY5yf5OsYynyCdv+61b/prgIyrM4AzDI896zya9oHygx0TSoBKs3PhZxkSerYp9w/pdjYBVCXf/+oLfwAfzSoC6FWlItgKlUrcdNkCCDb/jm3onmJjfx0cwP9P4m9cfzFoeaohpxPtmo65V9EEdo1/hFlHazg7TTV55t/xvQQKnlUGyo1N2pB8HLHLTGBNSH1TLZwYneJWVs8nN7U+VDoSYhNn32sxPH7Jdm0TAjRh7GWbOMNJyWwsRluUypQCXpyasQFLYukmpjEQgSoYA5+dlnRFXti9sHl785B4TvtK5FBwPLf/IzVLUJc/T1ICoH43f+plgTwKlolR742kfsTKxB1yOwg2HjQFp/45qu999MZvq6kS5C+2n/tdFZR8c+PzSGQGT8uqj4iRZP1tXCA4hMuClaH3r7hv+iEqCmbhhw7NxPC7xpEo8I2L7twJrOWjGS7Z5Apa8SBTwaYQo1chZ9t4Om99SEsvBvNi8h3Ywnf2NmQrMywRHV4NACoIl5x9c12D5deDpjmeVHfqLnp7WehJUtZCLgFpoapQkwE+TGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_017wM27B9UUEUmPkdrbZHDDM",
+        "name": "Bash",
+        "input": {
+          "command": "cat \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-cc4.log\" | grep -v Deprecation | head -30",
+          "description": "Show gem-cc4 log so far"
+        }
+      }
+    ]
+  }
+}

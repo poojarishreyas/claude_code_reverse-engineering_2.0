@@ -1,0 +1,19 @@
+{
+  "id": "35897870dbf268f3c0c33ba3",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UTWQTmPfzTkViCVCAeRj1z",
+        "type": "tool_result",
+        "content": "{'tags': ['cross-package', 'multi-file'], 'task': {'id': 'ed34a1d7fe', 'fixCommit': 'ed34a1d7fe1110f675527bce4fbfc386d0d9ee28', 'parentCommit': '1c6c46263361e6bcdcfafe39e98c50a96fea96d1', 'subject': 'fix: keep queued question replies read-only after reload', 'sourceFiles': ['packages/client/ui-tool/src/client/tool/toolviews/ask-question-row.tsx', 'packages/client/ui-user-questions/src/client/index.ts'], 'testFiles': ['packages/client/ui-user-questions/tests/browser-plugin.client.spec.ts']}, 'status': 'ran', 'passed': True, 'model': 'gemini-3.7-flash-tiered'}\r\n{\"steps\": 20, \"toolCalls\": {\"bash\": 15, \"read\": 3, \"TaskStop\": 1}, \"firstSeenStep\": 2, \"firstReadStep\": 9, \"readsBeforeCorrect\": 1, \"editedFiles\": [], \"editedExpected\": false, \"extraEdits\": [], \"editedTests\": false, \"usage\": {\"inputTokens\": 94601, \"outputTokens\": 3856, \"cacheReadTokens\": 420749, \"cacheWriteTokens\": 0}}",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "620eb36c11732f9b2863f247",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017wM27B9UUEUmPkdrbZHDDM",
+        "type": "tool_result",
+        "content": "$ tsx scripts/eval/run-eval.ts \"--\" \"--repo\" \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream\" \"--hard\" \"--limit\" \"10\" \"--only\" \"a59beb8ae3,980b410340,ed34a1d7fe,9633724b40,54fa38795f,f04ad05f30\" \"--agent\" \"claude-code\" \"--home-from\" \"C:/Users/shrey/.dsh\" \"--provider\" \"mylynx\" \"--model\" \"lynx harness\" \"--out\" \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/gem-cc4\"\neval: 6 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\upstream with claude-code\neval: ed34a1d7fe [cross-package, multi-file] fix: keep queued question replies read-only after reload\n(Use `node --trace-deprecation ...` to show where the warning was created)\neval: ed34a1d7fe -> ran (passed)\neval: 9633724b40 [indirect] fix(app-boot): drop the retired schedule bundle from profile manifests",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

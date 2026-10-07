@@ -1,0 +1,27 @@
+{
+  "id": "4da7b1ef7332e1ecc907540e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1AcKEAgSGAI4AUIIdGhpbmtpbmcSDFwk7Vu20NVR0V/DPBoMVpU27rOmHSE6/IprIjCK8iHZHI966VBj8v9uFxSg495XtGYqRIgpEk55N8ED4dZSTvxvT2sxXwdInwK77lEq8QaMrPi+9/eUhCVQAALbQFWVwXTqOYhpH+g9rGT3vnSpNHo89/dGhiXypc12BD5QbgTLt1UqxpN9+u4Nw1K7kgnWIwXD9JyfdlBNaAIX1G5Ht2iOrBrwzaZiLHCN+BsHicOjTkLz4jBEgHlxnimWFODhS30ukImqD72djrKXzVEPn5v/lckFadxsdbBofG8/4fHMhaURhqXoTJvkHvGKqe1iahyFRc2rPaZDMg5UfQc5rNz2pnFiB61lVCa2Y2MMDSMP3qiZr6n+eyihOS8+3yRn7oSgKzuhMoSoe+qOQ15W4hp9QdEa+uu2BXfK/HDc806/tmVrCbMLwOePSMzFVBxucWLC/gsLD738dfsinWjEhrLVcuYQAO95wO7YPIOewF9TubSYbJsGrwbWnbG4V3j+kHYUqUx6pDp+pgLxa+Tx5Kqropq8zTtJIkOYitvs1RRtEe4Crayhknr4J2fN0XujBjmYjHIYxgeGCetDDWUXH+I7uG5dDRmMplA3DHpzbiAYYjloVwKImA2NdRKG0c84+55uoEeB/bPCGSJx2hBO3vr+z7K7eEq5f1/yd2nTWk5qEwox2uDAczFpvH+Xcu89NDwHtPt0FJav1UAQQPCaGHwdsDrCmbOCqsyyWBg4zhmm535ciH+qgeD9B6ATdY7fzYy0mUoL++cHGmaLY74M3SXtnGFr+Fym8LIjVH9bZC+ttEZFMUQlANyOdSJpVOSBoVodQYwq6iF4rWRbHK3RLG3/OQF+0HTAc7/F6dX3DfcgowkXxtsPCUbMBKAKBkPVTVn0TU/NUpqez6upNqxRuJQMOTaXSBZfV+uQwz5wVHFsJBo1z1KOBceCl4gBcS2nG4eZwfmuetgLO0BT37Z48ovWtlccxDNSE3oYqCsbWsdXxO/ZGzzqtvYNzL/SO1Hcxr0F31R68E8uoNdv+jAW/Ng6p2bO6RxezF4cZpPW7hQgw5mR/tzeAynsrGV+mabxBaz7PQqrmj3LGi3REO4jI8+nsqKPfsDjoME/mokVEWFje2iLqhaIHssFTYWEqMmNtzYyPDs3z4vSlDnTylnqLxXgY4gZ3IP1K3q12RnlncP/RgmjZXcvDCJ7174gIrXg2M+Wyj4T1f62jZdbGEis3pH/IrNP5P6bo182buCKfUHM2kevBt+XIl8BcwUr8E4SqRgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01MLgy3CyXdSJmenYw6bLmF8",
+        "name": "Bash",
+        "input": {
+          "command": "cd \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; PYTHONIOENCODING=utf8 python -c \"\nimport json\nfor l in open('gem-cc4/ed34a1d7fe.events.jsonl',encoding='utf8'):\n  e=json.loads(l)\n  if e.get('type')=='tool/call' or e.get('kind')=='tool/call' or 'tool/call' in json.dumps(e)[:80]:\n    d=e.get('data',{}); print(d.get('name'), str(d.get('arguments'))[:300])\n\"",
+          "description": "List Claude Code tool calls for ed34a1d7fe"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
