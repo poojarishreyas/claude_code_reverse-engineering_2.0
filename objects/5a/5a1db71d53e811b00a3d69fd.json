@@ -1,0 +1,35 @@
+{
+  "id": "5a1db71d53e811b00a3d69fd",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjAsKEAgSGAI4AUIIdGhpbmtpbmcSDKw3AsOp7mTz3NdFLhoMK7UnSR9f6ufURnwVIjDy6OjyGUl2AGqAwcF7XY6Vgejb70hEfbAEtTmb8j5qDE6uHU93lbhNA2gChSQXywsqqQpi3Cre4uqw3drds7ZngTsyAykjheAJQ2Kx8UzKd6rSY2SvF6CHcechUCr2TiHpUgggReZ509rce0jxxqyMukmEyM5VTFk5yhgOI8XQHPYQG8y7uEMr87cmzJbsVbbeEOQ1gtfahlSwYGG6EKYbvCN10PbFG4cS+9uJHTxt4BV+BqA/8BXnuQzOcsP+J7znj6iLhheW6DpgvltD3EeysKqghMmmkSzNX3dxF46kZBbLkWGwB0+FgdlQSQR3tXCbIHvVDUa1oFl3OHCaE0MlonPo79U1D+638S4BRtttl61cff6GTmaKXF/RTbJsH0hMTVTx3bHWxmcwKpduQLQ42C9eHaxEpe2pz/cOoyF530G6mSH8ATzmW8wv5l5/F7lYUvMNyB6fEaHEQx3jo7Uvht2O3HUk73PiHOzgTsvVTC0Jasx0CyL16/S6ib2BCfLIHj+rd//RlkOiDBy9xU9W7Ooy3xXAK1qjGsd8MbaxVpVtErHXTWr6j+HbLuDrNAjykCnHCLlC9Tb1fW/idq2jyuNv5t9Zg6gzZ41nvGJ7puR+yNxlRnl1TTrw5/xy/s/aKZ5sJr5y1Xm7KQY94MJd901HwQohYpVjACw3ICB5AvyUviAI+fPA88isboK6+IyEjzCWuD96fSbiTlFZXTPVr0662ivpxsZGCUjj0C8q1aSqx9Yg19R+IcpUm+kiwbq8qiCUPhybFn+GSUiI/0zAH2vnx9dM1SQVbFFZzf9ncigApOKR+CV6ALK5K51hKCeqBhxwZosfZVlQ0wENqgh+B6oUs9qR9KgklgbS9LHuezvLOqy/UcZa17pt1oCPyfw1KjYj7S6mW4gcDRftWO40ul+44QVeGAK/lmP9q3oLGx2IcrgXfFB/1V+mQScZUcg6Om7z+GJq+61SB6WdDnuc49Q1ry+nuqCxsf5pbLpojW64BtwAZ8hBiA8fJba0r9N9P8CmAerCc1gkFx0CQ5Ww596N05MoAcl8q2W56YmM5GYFkUustddXrbJK6uV9EP+8uZRoqbzRHj4j+9mPGJqmo0tnex5NSvBaxlftOgEUT/aB/ypqF5JW/I9hVPjmHRPNaXEa7BR4+XwoOznjViZJctP8TzYEiGb/cs1Tphz1tIggpHEGt9ARbHCRLeqdkLi8g1zIgIJipSv1aCBHpJ3M1WXmQvwBcs7TeyNYZIz/SUvb4+eljBlJya6fWMXO1gfkdbO+FLoNmddqFCBE9zOoRF7O9/Foo/XtRT8u3l3N7DSX6b/jLlNyL8XgvXnMyXyF+Ytmh010LcY1Lu1SqKcuMxjBoG5qjGT84qGnudJL2UnuRK6K2mCCTaN+rEIbSXz3qJ4hQjqkwZ/kU7BOsn/alhpgWhxUYlaAKcfWJuARcPuQqPYVFW0GqIiuf3imBsEUL04BhqAa0UPnW1wNytjZqMYIEldMjdljyL+93MJVIDBfBJGStO151UfckvpfWhysB/D3insMT2R81wbGGD1z/DgdI0EGD2+5vWp06/YVnarZ/ufEV38l9iyqwDWH3P8yEkcyjaJ++Sr7aaqScBcwA5XUaiywGzAnHqvWOYCNuXF9dKJ2566eu2P3C5TnUF+n1YP+s+EmeSXjQwUFcCSpthFMzWDeMVXvvZUr0037HSq8WOcHl0yp0C0T4+l9MLoY8jpgXguX+qLzGbvqF5zjNYYrTRhuqRJR/iqN+PcxvET93fI/UfNA0XXYLYdmgdVlx2jLLwkhxVzS+ZYnvW0q9ByoBTq6GCQzAtLmGAE="
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSrQgKEQgSGAI4AUIJbmFycmF0aW9uEgykUNScPGamtH8FSCUaDEPVvzMEOOYYY9ppZyIwqFhTiLCpa0E7JuIpRJgMbFHzS9os2p42AUtjVb0Ovh+7/8Gjs5tbTXCSk2sGhNLYKskHZCMmWC+tWJ0NV3mfU8LZ4lkQithEHT3YP3RPvysQanUaWcovrA7FgVeLS7EfNxGoCv+dvriEhqSWqIiyH06E9iLQORe6ExaqbkPUT0WiNsU0qSl1uNek7wGEzFFBaaMEgzi3Xyr8U3U0+3ulXpWICk1kPXqvfL+vaJ6/MKsB3FOFdrK0S4ZFoS/MECqKGMy7rfMUikbYj2foIq76d7QG1ttLZqnh4YSXxS1CckB0mI9x8eg6fDBCOTEPy7EFJVvxMQ5aVijAbmoWedYH/MZzVYrMLZSR35esiVZTsLxyhKPfdvlLpRRu77ukZt78TpkT0SRgy6j6xSdOFvG1HJ3FQDr/FaBoSzONpm4qDbD5RzfV4h/iBFLyIf40yGQwv9j5SA0Fgbov3wgVi68Drd82hhZSsjRIsw9LW3XGVrh+5xF6aeY2Zdv9NSaLDTTN9wjw9wv9y27anmghq1fKU9BarxJOiEV+py2QsuPjg8twiL0FqRuE2/jFamMSBHMA8hSUEjDhR6z0FpLwRZmBFEvr2Td0y/P+wdfxF7uOeIh0Ajk6QnuNQsJPCz8RzuR+Jfbr78qTad/kGyZAEwy8ygbNSuNvUsHfAC+bLwNxSPJ0+Q8jdpqY6NchFaSo0Xtwy3lFLGYkSsxYl9DkksnbrZVg0oQoEj1tKwbURvYl1RHVTjly8LcJpvASBdOZUS8TmAZa2BM26AsMhoT68TwQmTV5Ht49ZRnuJKrVnsTZsdsjMxscWS78KU3Mibw94/kXLptkki9hnV3sTfFl7FiJFlD3yxmbk9GYqvSvQ1sRPsGO+yanjZRCItw6vf8LVQcUl8JOGy+GLTf6De84pb9fJj1Vfo1jsx8xXZIqISj2nE0bL6TQhE+GoX7PlZ4fDdKkGGnT9iauK7I4ErK7XWxSMRK7IZadxkX/yVB0klu3TV613NaO7IjxjsY5AjQjNWIPyw2joq9dmiEPhcixRIwQf0mtPOMjrh4e+pKGoFuzDc7hQnK1oODngSawAowXFjcocrnXkyLpT7nKFp/g7Ueuf8DyX1nb/T1PjYywsr0+a5ROwN7DtelCOc9N15+QplmGXUgXj1kL0jZdY5Yz3x3HzLUTmfTPBnHJqjaZ0IH6FwN9hP9VmFigc39md1L3iF5CiGu10yYpKrUvqFwZW1qtPtQWLUccryzTrdCUQ6CKiau9O+weGYbMoohIPRymu6ZBqKfc+idF8uEJVS4H10qEL1bcAknraX734DlTZ1QPphrBDiRGIZwJUUzO7OLt026d/mIse5/bzFXxLCSaGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01M4NPT2SKsp3bkFH5nNaPrJ",
+        "name": "Grep",
+        "input": {
+          "pattern": "retry|retries|backoff",
+          "path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages",
+          "glob": "**/llm*/**/src/**/*.ts",
+          "-i": true,
+          "output_mode": "files_with_matches"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
