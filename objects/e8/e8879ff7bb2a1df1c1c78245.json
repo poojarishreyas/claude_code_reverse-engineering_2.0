@@ -1,0 +1,24 @@
+{
+  "id": "e8879ff7bb2a1df1c1c78245",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Brk5jKYXmqPbPhLb8GJEEx",
+        "type": "tool_result",
+        "content": "File created successfully at: C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\clean-run4.sh (file state is current in your context — no need to Read it back)"
+      },
+      {
+        "tool_use_id": "toolu_01DxrsofjeP3D5aJe7uMpYLf",
+        "type": "tool_result",
+        "content": "pid 10311",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
