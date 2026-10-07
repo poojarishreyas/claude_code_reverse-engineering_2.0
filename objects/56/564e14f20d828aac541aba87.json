@@ -1,0 +1,23 @@
+{
+  "id": "564e14f20d828aac541aba87",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSzQYKEAgSGAI4AUIIdGhpbmtpbmcSDMnODZOeJDg9Ufn0+xoMwJvuwCoAvLjvUZFZIjB7Y0+RxakP7G7ZTbbLRL4YD2bqDDA0LSFsPsXpKIgxJRw5l1emy4sk5tfmz2UEt+oq6gU3McEFoX+J4Vy83MdbkpEhlWa+FcIOpkIVXvVWhuIDgK8xF2O1C+Fy+T0sApmDXzD9JXVMYHJYSavtRXq2frimZsr92VAAyQZCH9NT/6mARWtTA0iYBUxAA6XoKwNUG/DJJPAjf4Yj9rOa0PLR/IrM23VT0TVbISqCuB92igdWVLnOzD67Z5NrPQWTJGhKz66Zn98iHhFQF0G0pxiZBZgPKlfIo180UTJhxpc/0lxlQpSGcjcyXNmdMz7RUsY8hgT6jQ8AfI3WqOy824Of2n35vt5hGZ8Dnf0bxYWmMOCQNtnTgB1Fb3e+QIhWScNXlfXiXvytGzori84A+Ai15gqZ6OfOSKxFjTyM8A4U46NOcPUz7lb3eIuK8Xd8l1hR/nXL4BvogdOCv08GLftZXl9AHnH3wZ2RnCuM9tGDSVH0ny/XmzZigQNlrYYpzf/SC6hWuG6AHsW+18xHQKjufc+Vn+hD/TP8d7KMYEY/46VD5Lkh4+GjlqTFs4LLy3S7ZTao0saZcHAMdVwa56CXSRKX58dXpRovaBQnQKUPDTeppeGW3RyWVUzVK464OE+JFJtO8tTzO8I7qXA2iAy55IvbMloZ/JczPzGvKRmXgPL0DlZaCbzIVS1RvSn5oaQyKigr9InYymDKT9Tn7nVaEItxU76r3m3Ff/k89kteD9Is5UD2KxeJEc59o592iU6GZdXs2jp2vvJbAgrrxOD74Ti+B03euRvBpoxtWrPjG71Mcjl5LZmNmHJxBCLfRo76iZNqrNCaVN6Iarq81/JCRk8PBe5j6Af6FHhrG+5ltaWOG9lgD/hyJNyXHMIkGD2r9fAdasXOS2LJvjKjfa2c1Ipl6UB7uDhRGvFlYSUM+ruYMUM65xKkfH3E2g0oC1exxKpBl4IzJjxITtVbL2udFtX7u/s3+H9K2sq9IQsfX96VEt0OkdpBfZxUL1phriuSa0ubL+a+p9nrKm/iJ0atm/+exC5bbnVjq75rxRgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01JaBtxRvphCTUJN6GbwEDW4",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/AppData/Local/Temp/dsh-eval-e21ed97f29; sed -n 1,80p apps/desktop/tests/windows-cli-signals.spec.ts | grep -n -i -E \"spawn|console|windowsHide|detached|skipIf|it\\(\" | head -20; ls -la --time-style=+%H:%M /c/Users/shrey/AppData/Local/Temp/console-probe.exe /c/Users/shrey/AppData/Local/Temp/dsh-cli-console-G6V4NO/ /c/Users/shrey/AppData/Local/Temp/dsh-N82hsb/ 2>/dev/null",
+          "description": "Check how the probe is launched and when it was built"
+        }
+      }
+    ]
+  }
+}

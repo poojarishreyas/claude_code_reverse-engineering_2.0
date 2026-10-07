@@ -1,0 +1,27 @@
+{
+  "id": "6048f970e49974e3ed55f6d6",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQShwkKEAgSGAI4AUIIdGhpbmtpbmcSDFwMnqvyn2BpwOpx6BoMH4oTkQT9cPip1IBMIjAde8aeaDnkF2e0AqeytBONtykUVwQEuY+2gUhBOaWy9TIGryH3nxBi6mPUhwZh86MqpAgxxVDydtdVJHh/+6N4NbBH+54u0Q7VBC+PRuufxL7IAPfys+FB/NAaZwAsUBoz5smgvmW9sRfKig4ykUcvltLIvwToLdIBPm5cHd3AWPTuEDyUuoriujfe/8ywEX2RPOBsY7MTpPDxUTr2BXzrphSoTv6QRQEVJJeXeAP+xDuZ6P3XffKgrRxdar+HMjvLle73ZJmOT8RdYRR580+ALtuRQGoMfc2QL0906jW/DpK033Li/Ks7qvMNV0Ej7jPfrvAi+7eAmk46M+Attc38WvP1D7ORz/OmqTBx/huASRP1+jkSExVE3/JegsTUcnCW5JzxslQdhI8NmDwWL1MHaiR3Xot65sUlxbftkIJovZVfGckznoCzFbmCXrCFF4psXEPhK7e9GeELALxJn7ONGCqF5wGgWOWZ8702gf1LYYPEv4qWo0rzYvE6axR51GloKduU1RY812uI1fUbN3qvWViRjOs6Kudch0K2EXUlrFlTQJO+MmQMPSHEuSCOE2xZPBNYBgg6/K7lpXn0ovoe4BtFf13NYNDensGATaYvcRPsK7gec7bUQ/66dvAMTZ/HIBGYNmvI0Q852Rniz0uLr0icUkt2BAC2ZMxVOWEbU+hObhVXKGGaZdWjGN0FoVMvzTtS8sOAjZqlKBvZdmYxnqT9Wej6CX/iKfot651qQTQDwJlb5wbXW0wGAHxZ+EEK+RG6QeHmarpWYSvWzXllun2eh6eszjwd4DBJbEo3dfyiLjksDNqoWduOpWPAI+t+5UPXb5jWpAt/MYv1EIbXrqbyHN6Bk16LE+4x5CWtAIWUkSycV6XxSyX54MJNyVgWkDxEYTVXdPxp6gWdJ1wxtmp4U/vbLPjwwRnPmehnBV+o8X/GIf5Z+ant1GExrLnsU/dudARb2h56pIBi88Ffp2MQlW3Qs3uz7J2a+2+ZKxGSPB39YMscVgyHJgMnbKuU9wexiOHo1fr2aWoZKnIEF9mHqpf9h1tUM6KPLVlfMMxCJOxq99gkozQMmNpsmBrgbhnobVzwTc6cWMIWMebsiTPlLEL1EloZ4pGioTxz/droCCffjB1jbhf0pR1AgKxVsqI5ndN5PYuxLsFNZ0ubHGAza31JgaKNXHSWdbOJnOCOJMa8uLPIJ9U8dp3tdV6gY/I3Y8Y43hfnyT/dINfC013Ug6zOYAMK4zQxr/8Lo4RGxPLRRd4DJQxz9pcAxnqQ31KphRqtw42D7Mq2ZDcSYo5c0WJSbNz4YeWkirpo6iTGo43G3op94z6SFzmghwl8G2T8pXsFGeYQ7WmHIs5g1gRsLPp4OXLhVaRw3q6QHBHpa9IZdw1Mds4mKi8u6ILvCff3/XeTkNbbujW/6ilPzJuc2ffbQfZKxgwbkEM9oR50DsseaI03XQR4fF8BDpD0SECAalx4GAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_0187XSicRquwXzD5Ti4tYDyK",
+        "name": "Bash",
+        "input": {
+          "command": "grep -n -i -E \"AllocConsole|CREATE_NEW_CONSOLE|CreateProcess|GenerateConsoleCtrlEvent|FreeConsole|Process.Start|DllImport\" /c/Users/shrey/AppData/Local/Temp/dsh-N82hsb/ConsoleProbe.cs | head; head -5 /c/Users/shrey/AppData/Local/Temp/dsh-N82hsb/ConsoleProbe.cs",
+          "description": "Check what dsh's ConsoleProbe program does"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
