@@ -1,0 +1,17 @@
+{
+  "id": "93b1a62dac6cab6f20b51f34",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "i accepte it cancell if u want",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
