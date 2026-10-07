@@ -1,0 +1,15 @@
+{
+  "id": "81556670a2712604c07220d9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WxXSZRx1D6kyYpYnaWemtR",
+        "type": "tool_result",
+        "content": "16:31\nquota: still out at 16:24\nquota: back at 16:28\neval: 4b9d8ad6f7 -> error — install failed: \nquota: back at 16:30\n7327\r\ndsh-eval-4eb53e63ff\ndsh-eval-9633724b40\ndsh-eval-ed34a1d7fe\n7",
+        "is_error": false
+      }
+    ]
+  }
+}
