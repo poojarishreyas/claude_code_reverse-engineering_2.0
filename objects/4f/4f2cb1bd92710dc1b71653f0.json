@@ -1,0 +1,19 @@
+{
+  "id": "4f2cb1bd92710dc1b71653f0",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PjnRy7bmNdpwBwBbF3RumT",
+        "type": "tool_result",
+        "content": "  \"passed\": 0,\n  \"editedExpected\": 0,\n  \"medianFirstReadStep\": null,\n  \"medianSteps\": null,\n  \"totalInputTokens\": 0,\n  \"totalPromptTokens\": 0,\n  \"totalOutputTokens\": 0\n}\n\nreal\t4m52.795s\nuser\t0m0.775s\nsys\t0m1.465s\ne3a661e Task baseline\nstatus-lines=0\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream 5badb15009 [master]",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
