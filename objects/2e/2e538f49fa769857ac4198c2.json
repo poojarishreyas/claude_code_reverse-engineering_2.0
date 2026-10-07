@@ -1,0 +1,17 @@
+{
+  "id": "2e538f49fa769857ac4198c2",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The low-memory alert expired with no alerts, so I restarted it. Claude Code is still running a59beb8ae3.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
