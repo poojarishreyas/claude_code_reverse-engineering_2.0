@@ -1,0 +1,19 @@
+{
+  "id": "bd9996262a147c75b38bc948",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CEBrbSV4dJQLSR1DiUfkz5",
+        "type": "tool_result",
+        "content": "{'steps': 36, 'firstSeenStep': 4, 'firstReadStep': 4, 'editedFiles': ['packages/client/ui-primitives/src/StateDot.tsx'], 'toolCalls': {'read': 10, 'todo_write': 1, 'glob': 1, 'grep': 5, 'pwsh': 15, 'edit': 3}}",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
