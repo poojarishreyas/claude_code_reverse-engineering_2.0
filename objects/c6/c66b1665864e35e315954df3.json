@@ -1,0 +1,15 @@
+{
+  "id": "c66b1665864e35e315954df3",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017ddE9ufwn2UUk9jPHGV7MF",
+        "type": "tool_result",
+        "content": "const { DatabaseSync } = require('node:sqlite')\nconst db = new DatabaseSync(require('os').homedir() + '/.omniroute/storage.sqlite', { readOnly: true })\n// Calls since this afternoon's batch started, grouped by API style and what was served.\nconst since = new Date('2026-10-07T16:28:00+05:30').toISOString()\nconsole.log(db.prepare(`select path, source_format, requested_model, model, provider, reasoning_effort_requested req_eff, reasoning_effort_upstream up_eff, count(*) n\n  from call_logs where timestamp >= ? group by 1,2,3,4,5,6,7 order by n desc`).all(since))",
+        "is_error": false
+      }
+    ]
+  }
+}

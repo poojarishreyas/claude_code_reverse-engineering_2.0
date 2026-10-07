@@ -1,0 +1,15 @@
+{
+  "id": "dc85cea4aeb308aaae53c0a8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CXudzVX7banRPwnhiP9Q8d",
+        "type": "tool_result",
+        "content": "Shell cwd was reset to C:\\Users\\shrey\\Desktop\\Elemental_harness",
+        "is_error": false
+      }
+    ]
+  }
+}
