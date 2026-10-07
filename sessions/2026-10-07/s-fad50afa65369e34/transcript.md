@@ -5,7 +5,7 @@
 | session | `s-fad50afa65369e34` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T14:21:49.743Z |
-| requests | 50 (11 errored) |
+| requests | 51 (12 errored) |
 | tokens | in 102 · out 14,094 · cache read 3,448,748 · cache write 51,905 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
@@ -3333,4 +3333,14 @@ No human input has been received since the last genuine user message in this con
 <event>[Monitor expired after 30m with no events delivered. Re-arm it if you still need the watch — and widen the filter if silence was unexpected.]</event>
 </task-notification>
 </system-reminder>
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0051 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 84 messages_
+
+_[no new input since the previous request]_
 
