@@ -1,0 +1,17 @@
+{
+  "id": "3d4a139b73e71ad4f59dfcef",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": " 6.6 gb is free right?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

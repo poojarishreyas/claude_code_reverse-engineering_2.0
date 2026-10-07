@@ -1,0 +1,18 @@
+{
+  "id": "c97253f1308e3df38659d1f3",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_018TcAXtD8ehXq3gnNCQr26N",
+        "name": "PowerShell",
+        "input": {
+          "command": "$os = Get-CimInstance Win32_OperatingSystem; \"free MB: {0} of {1}\" -f [math]::Round($os.FreePhysicalMemory/1024), [math]::Round($os.TotalVisibleMemorySize/1024); Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 6 Name,Id,@{n='MB';e={[math]::Round($_.WorkingSet64/1MB)}} | Format-Table -HideTableHeaders",
+          "description": "Check current free memory"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "db8d171317faffc8ea50d008",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_018TcAXtD8ehXq3gnNCQr26N",
+        "type": "tool_result",
+        "content": "free MB: 6733 of 16108\r\n\r\nnode      6068 534\r\nMsMpEng   5168 476\r\nbrave     7464 408\r\nclaude   17004 313\r\nchrome   12360 298\r\nexplorer  9392 290",
+        "is_error": false
+      }
+    ]
+  }
+}
