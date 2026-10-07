@@ -1,0 +1,19 @@
+{
+  "id": "d0fdb21058f3de2b4f72d947",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01447tZYAL5ziCdnUc2becGE",
+        "type": "tool_result",
+        "content": "--- Anthropic-style /v1/messages (what Claude Code uses):\n\"model\":\"gemini-3.7-flash-high\"\n--- OpenAI-style /v1/chat/completions:\n\"model\":\"gemini-3.7-flash-high\"\n12:      api: openai-completions\n13:      baseURL: http://localhost:20128/v1",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

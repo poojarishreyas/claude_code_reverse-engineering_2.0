@@ -5,8 +5,8 @@
 | session | `s-f8a7700fd2c6ea6a` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T04:57:05.789Z |
-| requests | 206 (13 errored) |
-| tokens | in 11,768 · out 84,191 · cache read 22,761,362 · cache write 293,501 |
+| requests | 207 (13 errored) |
+| tokens | in 11,770 · out 84,712 · cache read 22,898,927 · cache write 294,497 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -13289,4 +13289,73 @@ C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harnes
 ```
 
 _stop `tool_use` · 10.57s (ttft 6.62s) · in 2 · out 879 · cache r136,694/w871_
+
+---
+
+## req-0207 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 172 messages_
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01447tZYAL5ziCdnUc2becGE)_
+
+```json
+{
+  "command": "K=$(grep -i \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | head -1 | sed -E 's/.*:[[:space:]]*\"?([^\"]*)\"?.*/\\1/'); echo \"--- Anthropic-style /v1/messages (what Claude Code uses):\"; curl -s -m 60 http://localhost:20128/v1/messages -H \"x-api-key: $K\" -H \"Authorization: Bearer $K\" -H \"anthropic-version: 2023-06-01\" -H \"Content-Type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | grep -oE \"\\\"model\\\":\\\"[^\\\"]*\\\"|\\\"error\\\".{0,150}\"; echo \"--- OpenAI-style /v1/chat/completions:\"; curl -s -m 60 http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $K\" -H \"Content-Type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | grep -oE \"\\\"model\\\":\\\"[^\\\"]*\\\"|\\\"error\\\".{0,150}\"; grep -n \"api:\\|baseURL\\|baseUrl\" ~/.dsh/settings.yaml | head",
+  "description": "Compare the model OmniRoute serves to each API style"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01447tZYAL5ziCdnUc2becGE)_
+
+```
+--- Anthropic-style /v1/messages (what Claude Code uses):
+"model":"gemini-3.7-flash-high"
+--- OpenAI-style /v1/chat/completions:
+"model":"gemini-3.7-flash-high"
+12:      api: openai-completions
+13:      baseURL: http://localhost:20128/v1
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Both API styles get `gemini-3.7-flash-high` for a simple request. So `tiered` must come from something in Claude Code's real requests. I'm checking OmniRoute for what `tiered` means.
+
+**-> tool_use** `Bash` _(toolu_015PA588WTi2Tvo17CCFt9wf)_
+
+```json
+{
+  "command": "D=\"$APPDATA/npm/node_modules/omniroute\"; grep -rl \"flash-tiered\\|\\-tiered\" \"$D\" --include=*.js --include=*.mjs --include=*.json 2>/dev/null | grep -v node_modules/omniroute/node_modules | head -5; ls ~/.omniroute 2>/dev/null | head; grep -rhoE \".{120}-tiered.{160}\" \"$D\" --include=*.js --include=*.mjs 2>/dev/null | grep -v \"/node_modules/omniroute/node_modules\" | head -4",
+  "description": "Search OmniRoute for what the tiered model name means"
+}
+```
+
+_stop `tool_use` · 25.93s (ttft 22.90s) · in 2 · out 521 · cache r137,565/w996_
 
