@@ -1,0 +1,15 @@
+{
+  "id": "63536a57d001e9fedfbed227",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01P3rH5EMHwPavda4ZjyrV2U",
+        "type": "tool_result",
+        "content": "woke 17788\r\nquota: still out at 16:24\nquota: back at 16:28",
+        "is_error": false
+      }
+    ]
+  }
+}

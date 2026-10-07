@@ -1,0 +1,17 @@
+{
+  "id": "00eff3b780123843a5c0bc61",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The quota came back at 16:28, so the batch is running again. dsh's re-run of 4b9d8ad6f7 has started. It installs packages first, which takes about 5 minutes, and then the agent works on the fix.\n\nI'll report each result as it finishes. If the quota runs out again, the batch waits and then re-runs that task, so no runs are lost to it.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

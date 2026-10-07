@@ -1,0 +1,15 @@
+{
+  "id": "04d3e170b900cb11d43855f4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Q7Va1AV1TdRoqP8NmePZbE",
+        "type": "tool_result",
+        "content": "{\"id\":\"chatcmpl-1791370703458-04bebee7\",\"object\":\"chat.completion\",\"created\":1791370703,\"model\":\"gemini-3.7-flash-high\",\"choices\":[{\"index\":0,\"finish_reason\":\"length\",\"message\":{\"role\":\"assistant\",\"co",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "a234115267711b62ac4b321e",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>bmgl2hk52</task-id>\n<summary>Monitor event: \"eval results and quota return in clean-run3.log\"</summary>\n<event>quota: back at 16:28</event>\n</task-notification>",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
