@@ -5,8 +5,8 @@
 | session | `s-f8a7700fd2c6ea6a` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T04:57:05.789Z |
-| requests | 106 (3 errored) |
-| tokens | in 5,146 · out 56,344 · cache read 12,464,551 · cache write 240,749 |
+| requests | 107 (3 errored) |
+| tokens | in 5,242 · out 56,411 · cache read 12,549,748 · cache write 240,993 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -8350,4 +8350,26 @@ My first version of that cleanup matched too broadly and killed three of my own 
 I'm watching the log for each task's result and an alert for free RAM below 1.5 GB. Each task takes about 5 minutes for setup plus the agent's own run time, so the whole batch will take a few hours. I'll report results as they come in.
 
 _stop `end_turn` · 3.85s (ttft 3.85s) · in 2 · out 244 · cache r84,755/w442_
+
+---
+
+## req-0107 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 25 messages_
+
+#### ASSISTANT
+
+The clean batch is running now. That's 14 runs: dsh again on the first 2 tasks, then dsh and Claude Code on each of the other 6.
+
+Before I started it, I added a cleanup step that runs after each task and kills any node or esbuild process still running from that task's folder. Those leftovers caused the earlier EBUSY crash.
+
+My first version of that cleanup matched too broadly and killed three of my own shell processes. No eval was running then, so no results were affected, and I narrowed it before starting.
+
+I'm watching the log for each task's result and an alert for free RAM below 1.5 GB. Each task takes about 5 minutes for setup plus the agent's own run time, so the whole batch will take a few hours. I'll report results as they come in.
+
+#### ASSISTANT
+
+We're testing whether your harness (dsh) finds and fixes files better than Claude Code, using the same model for both. The clean 14-run batch is running now; next I'll compare each task's results once it finishes.
+
+_stop `end_turn` · 2.50s (ttft 1.52s) · in 96 · out 67 · cache r85,197/w244_
 
