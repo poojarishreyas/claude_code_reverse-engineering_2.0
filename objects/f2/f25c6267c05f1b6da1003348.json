@@ -1,0 +1,15 @@
+{
+  "id": "f25c6267c05f1b6da1003348",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01D6Lx3acRYovnrhRqMzYeZT",
+        "type": "tool_result",
+        "content": "adapter.e2e.ts\nadapter.spec.ts\nassemble.ts\nauth-double.ts\nauth.spec.ts\ncatalog.spec.ts\nconfig.spec.ts\ncontext.spec.ts\nconvert.spec.ts\ndiscovery.spec.ts\ndynamic-config.spec.ts\nfixtures\nloader-composition.spec.ts\nlogin.spec.ts\nmock-server.ts\nprovider-apis.e2e.ts\nsdk-options.spec.ts\ntests/adapter.spec.ts:382:    [429, 'RATE_LIMIT'],\ntests/adapter.spec.ts:966:  it('lets a concurrent caller abort classify a pre-dispatch adapter failure', async () => {\ntests/convert.spec.ts:778:  it('classifies a completed stop with no content as an EMPTY_RESPONSE error', () => {\ntests/convert.spec.ts:802:      .toMatchObject({ kind: 'error', failure: { code: 'RATE_LIMIT' } })\ntests/convert.spec.ts:814:      .toMatchObject({ kind: 'error', failure: { code: 'TRANSPORT' } })\ntests/convert.spec.ts:854:      .toMatchObject({ kind: 'error', failure: { code: 'TRANSPORT' } })\ntests/convert.spec.ts:857:  it('uses pi-ai provider-specific overflow classification without losing rate-limit exclusions', () => {\ntests/convert.spec.ts:865:    }))).toMatchObject({ kind: 'error', failure: { code: 'RATE_LIMIT' } })\n../../core/agent-loop/tests/cancel.spec.ts:473:    // The marker must have been reset after the cancelled turn — a fresh prompt",
+        "is_error": false
+      }
+    ]
+  }
+}
