@@ -1,0 +1,22 @@
+{
+  "id": "099af136e6761a5d94729ec5",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "text",
+        "text": "Nothing has finished yet. 0 of the 14 runs are done.\n\n- **Running now:** dsh on 4b9d8ad6f7, the first task. It started at 16:14 and it's 16:22 now.\n- **Where it is:** still in setup. A `pnpm install` is running and no agent process has started yet. Setup usually takes about 5 minutes, so this one is running a bit slow.\n- **Why the log is empty:** the `grep` filter in my script holds back each run's lines until that run ends. So results show up all at once when a run finishes, not as they happen. I'm still notified when each run finishes.\n- **Memory:** 5.4 GB free. No low-memory alerts and no leftover processes so far.\n\nI'll report each result as it comes in.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
