@@ -1,0 +1,27 @@
+{
+  "id": "ef539563af02955eb1a758f9",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSzgoKEAgSGAI4AUIIdGhpbmtpbmcSDMT9VqGf/t0IwnMc8RoMH6LO7PdQCBG8nApBIjBidjcxxBLTJhsOUAoj4q39ja46zvCjHcky0ZbQ9qwRauuhxh0vOgznXMdKaVgDe90q6wkiZj3cc/73fPOLdxfOJOZkKWTPAQ+DDlU6HnfYvmod/NGeNi+nSwQ26D8vQq38Pt4pY+grwAeatcK6oVVoc+mW/f5eEIDiwwbOFQqWeS2f6fhRqd0HMdbrzHf/ev914I1vWuU3gsmy8XRTrf+LkIK4y5vt5K7m66f31uxsRz+KBhRsPVy7dnfnqcJ9bmIUO5iO3swWnrmqgIGS5EUnvknSHnYptY5wM6RF+bXulFP6iHA0UedZXA6iv9KC3oZkChjpokWJc05rnqBL7pG0m47OGkG12EN8v8v4oqYK1dGO1PNCPIC3enzZD6v5tVKEa0fEpe54ROMLj/9epzS9SWnvv2isvMven65S/oBj+kl5+d6+jTMkC0dKtvoaWhcXxEkQ3WpKetk+1cgoS9yyo673pbj1ukaB9KCPk/cGLWlhbuG4TjumG+D52syymfQZ9n+CzG9o+UVZPB3gTWBAprqzlqjweEITjpiFbHC9JzOOBffWRxZ4fYfyWsSI2OijaT48iadrT+GN7R2tqp353fAPbhs1xrvPAyhVkLm48mNBO7iMiS/ODQTX1dN2HFGrgRm/YDMpl8y/qiMXGCizsPIaYfnqnLeRhGTgiQMs/DnJ9Mm7AlwH+Jig2Qqt1CQoy4PVkFht0j+KAkRKvgn2RklIighLZL7LtXvf50ZzUMpj6ARkcTqo0/PomzXLNdiN49+0bImD226eSdHzCtjckG5erUXsDU5Ojaf3igkwFEJQq7afQbjRk6suoLGR8g7uiANvyp+xuZuJ4Cbaf3VXkqklWZYFzaOWaLLqawg+eJHNZva0FOnKOz6cCi/miEC64EGJ5hT3ktUlA+1IkWslVH0uxvIFdZVCYtPrWpUkZVm6ER0bBX1rwgB7Lt8Rqhx4ewRSSciyGCmfagJ8rBElQvMadfopIIcEFMeUxCPUMSk2FiTKSSvnnMhvihJ5zn80dKyLFiPwalsWoydyftNScFhH1HubF3MHXmcaFL4cNrxmoEoDAAIpwKnL62sLc9QB6mHfvXNJluU9+K3LaQ7RMt1Gljm99OqT0QPBTefONrqvOrXHX/1E2MOLafuffEaZkIQixhsPqHXt1GuFmyOqPFfbz3ikiT+i68eCP1FJW4gvMuOh494X++ux+Q9VmHL96MJLDzbhZCYPIdN3ZTbgR8J9iu7t+h/zD2TDE2X4IQLUawPaO6v3hO2wXIbcNbNxusYSdBs9UJo2ke4g1OFVI1/GeTfNMfKycavsJHw0ToQUcufCFfEMSjHqmpnQT1DWcaM4NVIOAx7Yyar4fXyNuGAZJo97e1NYdaohosfR6IYbIKva/iEe4+7GmY44bq2uhVlIAYfKxJLPlrt/19Cdf6RMqjti3MnPH2FAX1wccREhUL0dMpHfH1Mfn07kEsLrXYE303iiDwZVPYD9wErJu9QHxfD9gfuG6m6OONl5MXEmhit+5/yCOgucVW7XQn9kujr4xa55uRRVAxdHPej+l+7yXOqvaz5S+F+gCkSaneWwrTUTbCyFVKAdPJe4f2ivwi4M7ZIqoDKLTrTR7AXnlNhzlpMNxB1rPUbi+jaMdJXH0ywknUpcxh5HMnFzFEJImpCkKbEAG1xi9AWQvl6yD68ap41KvtrFEkPFJY+y92f2yMB/u8Bh7EsXHEo4go81toW3ecuqbVOj8ZTtihgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01SN859Eh34EhxwqdcbvfEyq",
+        "name": "PowerShell",
+        "input": {
+          "command": "\"free MB: \" + [math]::Round((Get-CimInstance Win32_OperatingSystem).FreePhysicalMemory/1024); Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'run-eval|dsh-eval-|clean-run|claude -p' -and $_.ProcessId -ne $PID } | ForEach-Object { \"{0} {1} {2}MB {3}\" -f $_.ProcessId, $_.CreationDate.ToString('HH:mm'), [math]::Round($_.WorkingSetSize/1MB), $_.CommandLine.Substring(0, [math]::Min(110, $_.CommandLine.Length)) }; Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 8 Name,Id,@{n='MB';e={[math]::Round($_.WorkingSet64/1MB)}} | Format-Table -HideTableHeaders; Get-Date -Format HH:mm",
+          "description": "Check memory and whether the eval survived"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
