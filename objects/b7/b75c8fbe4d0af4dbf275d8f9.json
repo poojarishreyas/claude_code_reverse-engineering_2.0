@@ -1,0 +1,19 @@
+{
+  "id": "b75c8fbe4d0af4dbf275d8f9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Ag8nTF3jHPGasfKGoZs9wJ",
+        "type": "tool_result",
+        "content": "\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n\u001b[33mThe plugin \"vite-tsconfig-paths\" is detected. Vite now supports tsconfig paths resolution natively via the \u001b[1mresolve.tsconfigPaths\u001b[22m option. You can remove the plugin and set \u001b[1mresolve.tsconfigPaths: true\u001b[22m in your Vite config instead.\u001b[39m\n\n RUN  v4.1.8 C:/Users/shrey/Desktop/Elemental_harness\n\n\n Test Files  3 passed (3)\n      Tests  18 passed (18)\n   Start at  12:41:26\n   Duration  3.18s (transform 1.74s, setup 1.87s, import 288ms, tests 2.16s, environment 0ms)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
