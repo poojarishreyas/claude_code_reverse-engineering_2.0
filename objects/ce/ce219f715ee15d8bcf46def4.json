@@ -1,0 +1,22 @@
+{
+  "id": "ce219f715ee15d8bcf46def4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01VBQPqFn1sBP2VsTB6rydg7",
+        "name": "PowerShell",
+        "input": {
+          "command": "$p = 'dsh-eval-([0-9a-f]{10})'; Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match $p } | ForEach-Object { [void]($_.CommandLine -match $p); \"$($_.ProcessId) $($_.Name) $($Matches[1]) $([math]::Round($_.WorkingSetSize/1MB))MB\" }; foreach ($n in 'chrome','brave','OneDrive.Sync.Service') { $c = Get-Process $n -ErrorAction SilentlyContinue | Measure-Object WorkingSet64 -Sum; if ($c.Count) { \"$n $([math]::Round($c.Sum/1MB))MB\" } }; \"free $([math]::Round((Get-CimInstance Win32_OperatingSystem).FreePhysicalMemory/1024))MB\"",
+          "description": "Check memory users during low-RAM alert"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
