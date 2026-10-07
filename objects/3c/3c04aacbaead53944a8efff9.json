@@ -1,0 +1,27 @@
+{
+  "id": "3c04aacbaead53944a8efff9",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSzQcKEAgSGAI4AUIIdGhpbmtpbmcSDAuUijlJlxqby8XTjBoMsbovS4fP/fVqAcrMIjAGjwUFzR8HtJ4wc54P4LtDowQufA2kWwpj+5jWrGTVEix9osVy998L9+SO6s+cjLwq6gZZjqoPIbnKrtaozTm7fukom8tqyROdVh2LOX89ZQS7Jo0YHz78wvZXJ4Xa7iLnFg8kfCpgmvvkW1UxdNUlercCeE8UTroiDkEQn/vEi1oodPg7kDAO3WHwTOLSuLv84zRuIDy4bXbY3jrWZXSH/qzU6+mFnbTc2LCT6/7oHl1edYoR69emPB6QURAsibyOCUeMNtdMPg3QOprW8F+Q5u/JgEbP6pDKbR4RSXWUxv8KzYh3dhP3sl5nsS71YrAUSp/duy+KDRvZiko6w3/cR2qvxUJ5rHl0KHSJg2spRjElve4Gl+VA/zObe2+eqYNXGrrGX9jaDlagT4mppLISrMmuETnqUoFFJjv69tOvTbONkZaeE1p+3eXk7ekoP6KNaGi+7jGwCNGZA59jdyEQcqG0ATeJ4vwDMRXaXmV/B7L1QO3Br3YIukAMfGgnrHaBacVmazvuNeWqYMOtphbcyHPipV39IqyJ7hTTaLQLLKLhRousUCWw/3vvdkIeIcHRa2FFAS/nhv3LoslmtNQFt1GB1eceXzRgMSKPrf3nIOcABycQkmJSSGQTnn8pop4RJ+YIhO61i4fPp38Y6nOe9kt6+PW/lsra6JVRRb7IuE8gJPM4si9PbBMrXbVjqY1wV4YFL2eXvWav+X3DDorS3TuvJ9klpxVSKOd+WFNZUnpOSlAqYZEkJaVzsXRMRPDqq1c9zl9NGBTga75GD728B4aekKx3jc7QF2SCLcGVKIHZkp6nvhcfy97MTq938+WciT2PgywCqNhc+2oSLUWy0Jwad2ezCkJYzxX74wROs6A4uefZSurza+juPs+ZfGqikYIGZ6s9JTZwauh2nVCZQpqbUC1vsiCYxq6cteUAKnmBVHrZtaGQgd0YXtZlsIi9DfTQyXJNHStuUrrkyltUS+v+7L8bzKAvFwhfQK4vLP6vOQAE5q+Qre0+RdtxvDtgX+qy0Xn22e9Zl8QjDDBnhUMJSEJDAk69HNAgkYeTIEa2d39/s3rRDO6ySG0rDkF5BQsLIDd4slZwhFi+dK6IUoNvzapu025JvewjNGmqhQDeJblVpjXEKM7YxgOwhjgotqtFTwibjJMwmstCxY4FlQVJLrbyzHCgAKBWxlN1SzeWmkb3p9nTv/bQ5f1iABp5gwCX5QQ5rWvNdoFgGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01RXhm15vvJhWRbm3ru7F1QD",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-CimInstance Win32_Process | Where-Object { $_.ProcessId -in 19152,15324,15792,18144 } | Select-Object ProcessId,ParentProcessId,@{n='cmd';e={$_.CommandLine.Substring(0,[math]::Min(160,$_.CommandLine.Length))}} | Format-Table -AutoSize | Out-String -Width 250",
+          "description": "Identify remaining node processes"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

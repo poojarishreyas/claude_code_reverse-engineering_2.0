@@ -1,0 +1,15 @@
+{
+  "id": "780d7a9c44304bf1e771eea9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RXhm15vvJhWRbm3ru7F1QD",
+        "type": "tool_result",
+        "content": "ProcessId ParentProcessId cmd                                                                                                                                                             \r\n--------- --------------- ---                                                                                                                                                             \r\n    19152           23268 \"C:\\Program Files\\nodejs\\node.exe\" C:\\Users\\shrey\\AppData\\Roaming\\npm/node_modules/pnpm/bin/pnpm.mjs run eval:file-finding -- --repo C:/Users/shrey/AppData/Loca\r\n    15324            2648 node   \"C:\\Users\\shrey\\AppData\\Local\\pnpm\\store\\v11\\links\\@\\pnpm\\11.7.0\\13310dfb63588666a20ffbb7892eca80e4978178e90910f66079c792a7b2dc4f\\bin\\\\..\\node_modules\\pn\r\n    15792            2004 node   \"C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.bin\\\\..\\tsx\\dist\\cli.mjs\" scripts/eval/run-eval.ts \"--\" \"--repo\" \"C:/Users/shrey/AppData/Local/Te\r\n    18144           15792 \"C:\\Program Files\\nodejs\\node.exe\" --require C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.pnpm\\tsx@4.22.4\\node_modules\\tsx\\dist\\preflight.cjs --import",
+        "is_error": false
+      }
+    ]
+  }
+}
