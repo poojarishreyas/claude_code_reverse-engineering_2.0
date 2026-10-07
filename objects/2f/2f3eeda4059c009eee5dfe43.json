@@ -1,0 +1,15 @@
+{
+  "id": "2f3eeda4059c009eee5dfe43",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017VhyDYS2got8SSVN2ZRBAe",
+        "type": "tool_result",
+        "content": "16:57\n{\"passed\":true,\"src\":[\"packages/client/ui-user-questions/src/client/index.ts\",\"packages/interaction/user-questions/src/projection.ts\"],\"steps\":38,\"seen\":3,\"read\":3,\"readsBefore\":1,\"editedExpected\":true,\"extra\":[],\"editedTests\":false,\"usage\":{\"inputTokens\":209689,\"outputTokens\":8216,\"cacheReadTokens\":1819896},\"tools\":{\"todo_write\":3,\"read\":11,\"grep\":3,\"pwsh\":17,\"glob\":1,\"edit\":2}}\n6574",
+        "is_error": false
+      }
+    ]
+  }
+}
