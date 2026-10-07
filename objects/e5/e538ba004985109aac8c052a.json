@@ -1,0 +1,15 @@
+{
+  "id": "e538ba004985109aac8c052a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01C17sQpY2G16ovCpJJK6hoC",
+        "type": "tool_result",
+        "content": "SUCCESS: The process with PID 21208 has been terminated.\r\n\r\n12160 claude\r\n15620 node  \r\n\r\n\r\nfree MB: 4949",
+        "is_error": false
+      }
+    ]
+  }
+}

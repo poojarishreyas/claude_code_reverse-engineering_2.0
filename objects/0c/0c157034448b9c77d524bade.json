@@ -1,0 +1,23 @@
+{
+  "id": "0c157034448b9c77d524bade",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01Mi1jUewh3F3YfPjh9NouUT",
+        "name": "Bash",
+        "input": {
+          "command": "until ! powershell -NoProfile -Command \"if (Get-Process -Id 15620 -ErrorAction SilentlyContinue) { exit 0 } else { exit 1 }\"; do sleep 20; done; S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; grep -E \" -> \" \"$S/clean-run.log\" | tail -2; ls \"$S/clean-claude-code\"",
+          "description": "Wait for the current Claude Code task to finish",
+          "run_in_background": true
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
