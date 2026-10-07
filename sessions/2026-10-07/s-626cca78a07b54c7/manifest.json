@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "s-626cca78a07b54c7",
+  "title": "import { execFile } from 'node:child_process' import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promis...",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-opus-5-5",
+  "credential": "3a5f647c6c82",
+  "startedAt": "2026-10-07T10:42:01.394Z",
+  "updatedAt": "2026-10-07T10:42:02.674Z",
+  "durationMs": 1280,
+  "requests": 1,
+  "errors": 0,
+  "events": 5,
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": [
+    "626cca78a07b54c7ec7bd934"
+  ]
+}
