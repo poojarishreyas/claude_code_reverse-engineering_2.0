@@ -1,0 +1,17 @@
+{
+  "id": "38df03037a5ddb2bbf696c10",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "I stopped the batch because the model quota ran out. dsh's re-run of 4b9d8ad6f7 failed at its very first model call with `ALL_TARGETS_SKIPPED`, and every later run would have failed the same way. A one-word test request to OmniRoute just now got the same error, so the quota is still out. OmniRoute doesn't say when it resets.\n\n- **Stopped:** I killed the batch, including the second run that had already started its install. No leftover processes are running.\n- **Earlier result kept:** I put back the earlier dsh result for 4b9d8ad6f7 (failed with a 504 at step 36). Without that, the useless step-1 failure would have replaced it.\n- **New batch (`clean-run3.sh`):** it's running now, sends a one-word request every 10 minutes, and starts the eval when the quota is back. If a run fails with the quota error, it re-runs that task instead of recording it as a failure, because that's the gateway's fault, not the agent's.\n- **Log fix:** each run's lines now appear in the log as they happen instead of all at the end.\n\nI'm watching the log and will tell you when the quota is back and as each result comes in.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

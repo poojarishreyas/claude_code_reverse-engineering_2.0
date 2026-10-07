@@ -1,0 +1,17 @@
+{
+  "id": "6503787ffe864155b94b4af9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "you are still in 0 what u did tilll now?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

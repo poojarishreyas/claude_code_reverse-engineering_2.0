@@ -1,0 +1,39 @@
+{
+  "id": "8f2af1168cc3951e1edec16a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS4gcKEAgSGAI4AUIIdGhpbmtpbmcSDPWimPdwjCVoWI7mExoM20lJirQxs4wRm2HwIjAayYWufzbNCzsBmpzSMZ8gLiKtYypYOBlnte7VCnkq4yNOPaMBmpbOzON4CG5Y/9Iq/wZdMCyKvcGejsYo+vq4eIOpsEZAFcdhCG0JpbD6pSWTOEBwOaOlel0H2S+2E6qTGRJUIaUksFlL+LT4xArMY4MK7x2oWfLHv3/swuBE9o+7X6qyf35ZxJ7oxw1/1jGMnTjC5LSd9AaHNOR9LKptbeKXlUANMffGqkxNHM9uuiSSMn5pZ0VmfHcQTYEDDD5F1O0jqqLROkzqHeVmpQAdk/d0ufgrvaJ9LxgwQ/nsb4YNVhUkMYeI7JXl6887/glDEheDovIZOtqFucqRDeLzaQDF328LTFlhK3aG9+x+2Ww1BSLKgyxfdUk4/8hiDRgYv1TJ30t8w692/VXXtyHR3zGW0bKis7JKSqjnaqavdQgWV9oSe0orT8tD3uOXzdcgtf5S06AEdyMXoV5uVfwo+HseEUWBAwc78Yc00nQfrcdpiHSJ82wfL50munaBu8d1XumRAYZqsLHjKpHTVkRP1vBwJ12y/MU5EPOAZGUH48/erKpoSeH1O8uigEBS4bkHnJn6yexGsMbhbyzd72niYXB3/xscC8GVtRqJQMkbcUmDmmjAvq2oOZSvc70G2WUj/GzROqdabllgKXSJpRtGcUU+7Oyn2/FBVywyYQJqIqr4b2IIlOHoY2NaojEfTdgDmhrms/xyNqcdN7YCao7liwXuGHzx/7t1ETc/dIlg/Qq9N++JUW1IGhDdfUCskOyG/2OgRLMr9FZilOD58wYDIu2vw6O2yor+ZMJ0EbshnNaB5VqVPXHPHsoUcYD3C/bn/fCavuD3ZF65R7ODEw8kbkF9OtLwVfkxhENoHw+usdrxm78jj9uqVIiAhulhANXR94R1F2HbjSrGIp93iF5D4zWLYgj027kPl/FkyVtlQlSst7n1g5CXWP0N1OJnHG9qOPSVFNuOlNGARWlR4oyOS6uNrQB+wQ7vGTHPFbvefQTny4/W0N/3fntqho8hI8Rj+ECv1O5ZiDbaNhiaWCFwxJsKu8I9PR7SyJTx4ei1zv8vx6M6Slt3HRoBoLvrHiZiPn+N1Y2uLSrOsTRTYp8XD1YFQw8TfAKyXygIUHMnyPdgsUMGpc7v9nsMtuZ/KoKkGRzqyI0O01C9lHSgq9yJbCMvQrTfH4UlStFmB0BhuSGHyYBcsbJm2qFQg0AmCVwjza/W0WfRQ09UhiK8eR2KHlgY2n7IenDcSJkLLuX7a6i+GAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01PZHNv9GDpA47EY9sFXFY4L",
+        "name": "TaskStop",
+        "input": {
+          "task_id": "bt561g73q"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01U6Qah1JW3JK3azsivw125D",
+        "name": "TaskStop",
+        "input": {
+          "task_id": "binpvcb8a"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_017fnxF2Po86zS4SSVqKUafD",
+        "name": "Bash",
+        "input": {
+          "command": "K=$(grep -i \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | head -1 | sed -E 's/.*:[[:space:]]*\"?([^\"]*)\"?.*/\\1/'); curl -s -m 60 http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $K\" -H \"Content-Type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | head -c 400",
+          "description": "Probe the model proxy once to see if quota is back"
+        }
+      }
+    ]
+  }
+}
