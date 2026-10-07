@@ -1,0 +1,19 @@
+{
+  "id": "55e8df6932927b08fbc80689",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01QhL4Hcx3quq29Mmqqzr1pM",
+        "type": "tool_result",
+        "content": "   Id Name    StartTime\r\n   -- ----    ---------\r\n10888 msiexec          \r\n\r\n\r\n\r\nC:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

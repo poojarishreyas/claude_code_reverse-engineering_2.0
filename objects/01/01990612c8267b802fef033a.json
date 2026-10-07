@@ -1,0 +1,19 @@
+{
+  "id": "01990612c8267b802fef033a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Exit code 1\nclaude.exe 21020 stopped",
+        "is_error": true,
+        "tool_use_id": "toolu_01DeTaxBfm8o8EVYjXqBLrbL",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

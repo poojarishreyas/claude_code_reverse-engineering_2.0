@@ -1,0 +1,15 @@
+{
+  "id": "f51ba4ce50c15082fc0c9d4e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01MFq8PToKwwSBULfqV4gbTE",
+        "type": "tool_result",
+        "content": "   shrey   10323   10321 ?        22:01:19 tail -n +1 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run4.log \n   shrey   10413       1 ?        22:03:17 bash C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run4.sh",
+        "is_error": false
+      }
+    ]
+  }
+}

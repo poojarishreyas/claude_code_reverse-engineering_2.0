@@ -1,0 +1,23 @@
+{
+  "id": "28d5dee318b8019ab3d05527",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS4wcKEQgSGAI4AUIJbmFycmF0aW9uEgwys9FO735+KoEEPQYaDBlbQxaodTJ41pKPGyIwxeXgHU5dvq2QespicSIRpT8KMXye6rHCOmvngNiCDMC+i+MrMiXxgxlEH3RB+5AUKv8Ggp7FJz3KVc11Sg3AqIxKl8a/5v/Ogt6vjqdJEhNiwLJ1h52nXoYuJH6a2wwo6z6vNZKoz0Gpyxmg2tEQhcbKteKqjVT/WQ9JYnqrI9bdzd34BgxeIXLSfcvDHK8M1smoASDw0lRmhYHSojI/wZxpD9XqoRYDC8kstT+GXYGdiX2beLCwPTN8YFod9SsUzKHJMLq3cd0ll+Se4MIcHM7skeCwVlziBaW0J0os97ig4+icMt12tQgHqnwFz8WCqa2xZUvPRdxDCN3h32rhWcNKuNxpryR3xguoTuzTqWKs54u0v1csFd3lcKwkELybZsT0qeoXEV/m48pL7IEnHEyBNHPgk9ZdhbsThd8+64f1fqzfe63d37Df3AYgyJ0Um1jJbT5QT+lNrHZqs5c0VWI49FscL8NUt6IlcITfDgYJE94M1Ru20vmBNQYHphDrdjU0hJWHJSzRmMh9bGWCeqVFuaOsNRBDVUxKEERnYkvptrAdfYXpi1lwHN0IknLTOOZ9VvKLpQ7hnzaw1x48bCFcFdxmojhKelYvhfJl+eH6yUFGIIXCw/IOUva+8Oxt1pCOm9Lt3hFBx8bi4KfAUqkRJu666k6V8uJ09hQRanl+xr+87nh6Fymlq1HRSHYln2TGfgvXzX3Ye/PD8yXWB1cWgxRtkowRZ62BKvB9Exd8liTJFT6LzT/RTthrdXZ7B902wDFxFja+USsy9dQx/IJLGe+6HK7YHOhDtF5QGhQ4UNnE4SqYV9m5LuqjP2aI4GYsM6UUicnp5coe+s1ACHJUeL+10SYXqhf7hKBiOrlncnDyXiRUU7o0yUk+r/LGs4g4QgaZtGPuaYmS0jSGJq02ttbPhCec5ksD0IkF1c/JY5yRekt8/M9jZO0qoBCZMdcBq+ltIJAJfxYCJKxeam6M8Skl+qFgkPJ5Tx7TDhaT2OI3TGv2ZGa6fb/JRTc8LMJwC+ca1ve8G5JJQKLAJL5k6K3eNh6ZJNnEUGqcyuu9mz99eEzaJWu1OFMrF5ZnWWio8ztbeXN7OJJ5wirRg2r5fFdDL5UL2OGmJHmmI3knH1HPDWoCbuqMiVVJf049DmwdaiMkHcVIOj7Jw64yWiDUcVS9tior9oBuO7nkYDE1KTsC5wF58Oqoakm/qFoZMXmfqtYBxvpj+jfMCwjnCaUrw7RE9m65udFYdREh9YZI6xgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01DeTaxBfm8o8EVYjXqBLrbL",
+        "name": "PowerShell",
+        "input": {
+          "command": "Stop-Process -Id 21020 -Force -Confirm:$false; Start-Sleep 2; if (Get-Process -Id 21020 -ErrorAction SilentlyContinue) { \"still running\" } else { \"claude.exe 21020 stopped\" }; Get-Process winget,vs_BuildTools,setup -ErrorAction SilentlyContinue | Select-Object Id,Name | Format-Table -AutoSize | Out-String",
+          "description": "Stop only Claude Code's e21ed97f29 run"
+        }
+      }
+    ]
+  }
+}
