@@ -1,0 +1,15 @@
+{
+  "id": "1a85ec471591bdda92191191",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01VXN3y4fUq6D7EEeLUKNorq",
+        "type": "tool_result",
+        "content": "dsh-eval-4eb53e63ff GB: 0\r\ndsh-eval-ed34a1d7fe GB: 0\r\npnpm store: C:\\Users\\shrey\\AppData\\Local\\pnpm\\store\\v11 GB: 2.87",
+        "is_error": false
+      }
+    ]
+  }
+}

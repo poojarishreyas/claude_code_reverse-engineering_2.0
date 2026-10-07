@@ -1,0 +1,19 @@
+{
+  "id": "e18d90fb20bf052714369d45",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01AaVYdj6qVsno67R6hBmG1d",
+        "type": "tool_result",
+        "content": "cd /c/Users/shrey/Desktop/Elemental_harness\nfor t in 4b9d8ad6f7 9633724b40 f04ad05f30 ed34a1d7fe a59beb8ae3 980b410340 54fa38795f e21ed97f29; do\n  for a in dsh claude-code; do\n    pnpm run eval:file-finding -- --repo \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream\" --hard --limit 10 --only $t --agent $a --home-from \"C:/Users/shrey/.dsh\" --provider mylynx --model \"lynx harness\" --out \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-$a\" 2>&1 | grep -v -i deprecat\n  done\ndone\necho ALL-DONE\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-claude-code:\n4b9d8ad6f7.events.jsonl\n4b9d8ad6f7.json\n9633724b40.events.jsonl\nsummary.json\nsummary.md\n\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-dsh:\n4b9d8ad6f7.events.jsonl\n4b9d8ad6f7.json\n9633724b40.events.jsonl\n9633724b40.json\nsummary.json\nsummary.md\nnode.exe                     16788 Console                    1     99,700 K\nnode.exe                     16940 Console                    1     42,700 K\nnode.exe                      6068 Console                    1    515,552 K",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
