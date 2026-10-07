@@ -5,8 +5,8 @@
 | session | `s-f8a7700fd2c6ea6a` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T04:57:05.789Z |
-| requests | 212 (13 errored) |
-| tokens | in 11,780 · out 87,094 · cache read 23,601,783 · cache write 301,018 |
+| requests | 214 (13 errored) |
+| tokens | in 11,786 · out 87,397 · cache read 23,893,013 · cache write 302,450 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -13824,4 +13824,218 @@ The eval points Claude Code at OmniRoute and sets all of its model names (Opus, 
 The batch is still running Claude Code on 980b410340.
 
 _stop `end_turn` · 9.55s (ttft 9.54s) · in 2 · out 793 · cache r143,542/w1,540_
+
+---
+
+## req-0213 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 184 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01HUavyi5iX5XRmGYe5ng5T6)_
+
+```
+[
+  [Object: null prototype] {
+    path: '/v1/chat/completions',
+    source_format: 'openai',
+    requested_model: 'antigravity/gemini-3.7-flash-high',
+    model: 'gemini-3.7-flash-high',
+    provider: 'antigravity',
+    req_eff: null,
+    up_eff: null,
+    n: 302
+  },
+  [Object: null prototype] {
+    path: '/v1/messages',
+    source_format: 'claude',
+    requested_model: 'antigravity/gemini-3.7-flash-high',
+    model: 'gemini-3.7-flash-high',
+    provider: 'antigravity',
+    req_eff: null,
+    up_eff: null,
+    n: 112
+  },
+  [Object: null prototype] {
+    path: '/v1/chat/completions',
+    source_format: null,
+    requested_model: 'lynx harness',
+    model: 'lynx harness',
+    provider: 'lynx harness',
+    req_eff: null,
+    up_eff: null,
+    n: 6
+  },
+  [Object: null prototype] {
+    path: '/v1/messages',
+    source_format: null,
+    requested_model: 'lynx harness',
+    model: 'lynx harness',
+    provider: 'lynx harness',
+    req_eff: null,
+    up_eff: null,
+    n: 5
+  },
+  [Object: null prototype] {
+    path: '/api/providers/test',
+    source_format: 'test',
+    requested_model: null,
+    model: 'connection-test',
+    provider: 'antigravity',
+    req_eff: null,
+    up_eff: null,
+    n: 2
+  },
+  [Object: null prototype] {
+    path: '/api/providers/test',
+    source_format: 'test',
+    requested_model: null,
+    model: 'connection-test',
+    provider: 'kiro',
+    req_eff: null,
+    up_eff: null,
+    n: 2
+  },
+  [Object: null prototype] {
+    path: '/api/providers/test',
+    source_format: 'test',
+    requested_model: null,
+    model: 'connection-test',
+    provider: 'opencode',
+    req_eff: null,
+    up_eff: null,
+    n: 2
+  },
+  [Object: null prototype] {
+    path: '/api/providers/test',
+    source_format: 'test',
+    requested_model: null,
+    model: 'connection-test',
+    provider: 'openrouter',
+    req_eff: null,
+    up_eff: null,
+    n: 2
+  },
+  [Object: null prototype] {
+    path: '/api/providers/test',
+    source_format: 'test',
+    requested_model: null,
+    model: 'connection-test',
+    provider: 'nvidia',
+    req_eff: null,
+    up_eff: null,
+    n: 1
+  },
+  [Object: null prototype] {
+    path: '/v1/chat/completions',
+    source_format: 'openai',
+    requested_model: 'antigravity/gemini-3.6-flash-tiered',
+    model: 'gemini-3.6-flash-tiered',
+    provider: 'antigravity',
+    req_eff: null,
+    up_eff: null,
+    n: 1
+  }
+]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Yes, Claude Code is running on Gemini too, and it's the same model dsh uses. OmniRoute's own request log shows this for every call since the batch restarted at 16:28:
+
+| Who | API style | Model OmniRoute sent the request to | Calls |
+|---|---|---|---|
+| dsh | `/v1/chat/completions` (OpenAI style) | `antigravity/gemini-3.7-flash-high` | 302 |
+| Claude Code | `/v1/messages` (Anthropic style) | `antigravity/gemini-3.7-flash-high` | 112 |
+
+The eval points Claude Code at OmniRoute and sets all of its model names (Opus, Sonnet, Haiku and subagents) to "lynx harness". It also removes any Anthropic API key from Claude Code's settings for the run, so nothing goes to Anthropic.
+
+**About the "tiered" name:** Claude Code's result files record `gemini-3.7-flash-tiered`. That's the name in the responses it received, and the eval saves it. OmniRoute's log shows every request was routed to `gemini-3.7-flash-high`, so I think "tiered" is just the name Google's side puts in its replies. dsh doesn't save the reported name, so I can't show the same field for its runs. The routing is identical, though, so the comparison is fair.
+
+The batch is still running Claude Code on 980b410340.
+
+#### USER
+
+<system-reminder>
+[SYSTEM NOTIFICATION - NOT USER INPUT]
+This is an automated background-task event, NOT a message from the user.
+Do NOT interpret this as user acknowledgement, confirmation, or response to any pending question.
+No human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.
+
+<task-notification>
+<task-id>bcl7ujul9</task-id>
+<summary>Monitor event: "eval results in clean-run3.log"</summary>
+<event>[Monitor expired after 30m with 1 event delivered. Re-arm it if you still need the watch.]</event>
+</task-notification>
+</system-reminder>
+
+#### ASSISTANT
+
+**-> tool_use** `Monitor` _(toolu_012UMb3KCM57NUJwsqzngMe7)_
+
+```json
+{
+  "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; tail -n 0 -f \"$S/clean-run3.log\" | grep --line-buffered -E \"^eval: .* -> |quota out|killed leftover|ALL-DONE|ENOMEM|heap out\"",
+  "description": "eval results in clean-run3.log",
+  "timeout_ms": 1800000
+}
+```
+
+_stop `tool_use` · 6.17s (ttft 5.48s) · in 4 · out 260 · cache r145,082/w1,066_
+
+---
+
+## req-0214 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 186 messages_
+
+#### USER
+
+<system-reminder>
+[SYSTEM NOTIFICATION - NOT USER INPUT]
+This is an automated background-task event, NOT a message from the user.
+Do NOT interpret this as user acknowledgement, confirmation, or response to any pending question.
+No human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.
+
+<task-notification>
+<task-id>bcl7ujul9</task-id>
+<summary>Monitor event: "eval results in clean-run3.log"</summary>
+<event>[Monitor expired after 30m with 1 event delivered. Re-arm it if you still need the watch.]</event>
+</task-notification>
+</system-reminder>
+
+#### ASSISTANT
+
+**-> tool_use** `Monitor` _(toolu_012UMb3KCM57NUJwsqzngMe7)_
+
+```json
+{
+  "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; tail -n 0 -f \"$S/clean-run3.log\" | grep --line-buffered -E \"^eval: .* -> |quota out|killed leftover|ALL-DONE|ENOMEM|heap out\"",
+  "description": "eval results in clean-run3.log",
+  "timeout_ms": 1800000
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_012UMb3KCM57NUJwsqzngMe7)_
+
+```
+Monitor started (task blo1tg9b1, expires in 30m unless the source ends first; you get one notice at expiry — re-arm if you still need the watch). You will be notified on each event. Keep working — do not poll or sleep. Events may arrive while you are waiting for the user — an event is not their reply.
+```
+
+#### ASSISTANT
+
+The watch on the eval log timed out after 30 minutes, so I've started a new one. Claude Code is still running 980b410340.
+
+_stop `end_turn` · 2.74s (ttft 2.73s) · in 2 · out 43 · cache r146,148/w366_
 

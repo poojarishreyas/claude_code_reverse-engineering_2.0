@@ -1,0 +1,22 @@
+{
+  "id": "b8e331f3741b7c23a096bafe",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "text",
+        "text": "Yes, Claude Code is running on Gemini too, and it's the same model dsh uses. OmniRoute's own request log shows this for every call since the batch restarted at 16:28:\n\n| Who | API style | Model OmniRoute sent the request to | Calls |\n|---|---|---|---|\n| dsh | `/v1/chat/completions` (OpenAI style) | `antigravity/gemini-3.7-flash-high` | 302 |\n| Claude Code | `/v1/messages` (Anthropic style) | `antigravity/gemini-3.7-flash-high` | 112 |\n\nThe eval points Claude Code at OmniRoute and sets all of its model names (Opus, Sonnet, Haiku and subagents) to \"lynx harness\". It also removes any Anthropic API key from Claude Code's settings for the run, so nothing goes to Anthropic.\n\n**About the \"tiered\" name:** Claude Code's result files record `gemini-3.7-flash-tiered`. That's the name in the responses it received, and the eval saves it. OmniRoute's log shows every request was routed to `gemini-3.7-flash-high`, so I think \"tiered\" is just the name Google's side puts in its replies. dsh doesn't save the reported name, so I can't show the same field for its runs. The routing is identical, though, so the comparison is fair.\n\nThe batch is still running Claude Code on 980b410340.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

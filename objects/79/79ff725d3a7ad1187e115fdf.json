@@ -1,0 +1,15 @@
+{
+  "id": "79ff725d3a7ad1187e115fdf",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01HUavyi5iX5XRmGYe5ng5T6",
+        "type": "tool_result",
+        "content": "[\n  [Object: null prototype] {\n    path: '/v1/chat/completions',\n    source_format: 'openai',\n    requested_model: 'antigravity/gemini-3.7-flash-high',\n    model: 'gemini-3.7-flash-high',\n    provider: 'antigravity',\n    req_eff: null,\n    up_eff: null,\n    n: 302\n  },\n  [Object: null prototype] {\n    path: '/v1/messages',\n    source_format: 'claude',\n    requested_model: 'antigravity/gemini-3.7-flash-high',\n    model: 'gemini-3.7-flash-high',\n    provider: 'antigravity',\n    req_eff: null,\n    up_eff: null,\n    n: 112\n  },\n  [Object: null prototype] {\n    path: '/v1/chat/completions',\n    source_format: null,\n    requested_model: 'lynx harness',\n    model: 'lynx harness',\n    provider: 'lynx harness',\n    req_eff: null,\n    up_eff: null,\n    n: 6\n  },\n  [Object: null prototype] {\n    path: '/v1/messages',\n    source_format: null,\n    requested_model: 'lynx harness',\n    model: 'lynx harness',\n    provider: 'lynx harness',\n    req_eff: null,\n    up_eff: null,\n    n: 5\n  },\n  [Object: null prototype] {\n    path: '/api/providers/test',\n    source_format: 'test',\n    requested_model: null,\n    model: 'connection-test',\n    provider: 'antigravity',\n    req_eff: null,\n    up_eff: null,\n    n: 2\n  },\n  [Object: null prototype] {\n    path: '/api/providers/test',\n    source_format: 'test',\n    requested_model: null,\n    model: 'connection-test',\n    provider: 'kiro',\n    req_eff: null,\n    up_eff: null,\n    n: 2\n  },\n  [Object: null prototype] {\n    path: '/api/providers/test',\n    source_format: 'test',\n    requested_model: null,\n    model: 'connection-test',\n    provider: 'opencode',\n    req_eff: null,\n    up_eff: null,\n    n: 2\n  },\n  [Object: null prototype] {\n    path: '/api/providers/test',\n    source_format: 'test',\n    requested_model: null,\n    model: 'connection-test',\n    provider: 'openrouter',\n    req_eff: null,\n    up_eff: null,\n    n: 2\n  },\n  [Object: null prototype] {\n    path: '/api/providers/test',\n    source_format: 'test',\n    requested_model: null,\n    model: 'connection-test',\n    provider: 'nvidia',\n    req_eff: null,\n    up_eff: null,\n    n: 1\n  },\n  [Object: null prototype] {\n    path: '/v1/chat/completions',\n    source_format: 'openai',\n    requested_model: 'antigravity/gemini-3.6-flash-tiered',\n    model: 'gemini-3.6-flash-tiered',\n    provider: 'antigravity',\n    req_eff: null,\n    up_eff: null,\n    n: 1\n  }\n]",
+        "is_error": false
+      }
+    ]
+  }
+}
