@@ -1,0 +1,27 @@
+{
+  "id": "8b0381ed27a562ef3223ed31",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS2QoKEAgSGAI4AUIIdGhpbmtpbmcSDNmw22mJq+aw/jPZtBoMfJ6e1c7zqRlrGVPKIjAJEwcfSnSWhYPTxPB7IJMHEIRwmtvXiCkLLgpXEzKzvOjMKwK5Mzb6t3NNpXkbwEwq9gm6S2YM+n+Zgt+PeYw3eIeIEWnWofHT69td/1MlX1hVjGIVxGCakexsiEFLixmyrHw+rHPt0qD8V1L0DO/SsPsQ4/FNwNt8vMFT56r/4LH1MtuL/kfFST6EWpzpuDnCmK22tuRqdWKv/NvI0DHnr0y8u14I5K94kpAaGbrShNM0L0nmNofx2ISOsUfYTXlrUkpvqsiTqCQnEMNzdhk2SKgzbiZhHWEtTUda4Q8KGoKs/NBInO4gpG9kwXRuxIWyfi5z7RehARqVryDEpgh4z8gDAKTROM9isUolpVB9cjaEqItC5vouMoTInQ3eEwqkHnHDEI6HtFCzyjT6SzsiRnResmjQ4iqkRAT5KqxPLu2oUvHntZ8uDFr6IV4mIocSEBa80Y49RhV42UMCzIRkJyhw46u4toxZr+gqu0kyq2Rv8tOJi9nr3i49oV0gmNt01T1dgATuyEu9+B+eL2KD1uN/r76DOsHErmep3GIehXQ8GLdprmp47Zk2sHDG6K7GBGP9AdIhTrEG5WImmziSnk+JeO3KT+rX9x1+S+fZg7zR6+wuK6pz7uOkUD8C1ScTUQcc1oI+I3IqTnh1SDm2FNMHOx8az3PIs1EekYjOY6oEfequStkHuislb5FXJt9MZK7p99dX+gXgGgNKqu8MOU4+cTDOsGuwfU1Ahzi7KuQI+Mj2miDQkTf11Ft9Zyju/+FrhETuHI41HimQEqixgYxjCpRnZeOA1whLuRm+hG/7XWrqIaOPwDRJivPR+grLAE+7l3+eikmEuhMRcgyRT8se1bijDGpkqOX6yqnvkfL3N6jHUCMGK0Ect6bT6yRUaG80lLSkZ4epSUdUdJSxN+az3aDFFR6ieTcrYbn/PpiYPxEoOSM17USQeUovV6n2rT5b0zrJR9c8ImtmzjalMw0iFoZjw2l2Lbi4dA1wE3YLXcCe3UFZIieUV7iYJfpznRkSgSDgmJXt6muCezhw2LjwuFRsIjlJMICZvckNqqpfT0XkMPjUsveiCPkHnCS83MSdDbW5AV0Mpm7gu35e3fA0ZnXFRVNJuyeB/z57QWKfmGHE/3AVF/c2pvX0O5l0om0qmrhXv9JDDAZtqlKwX3gUj0hEjcQ1WL/yPYnEzLPc6EC3bCbLmMg2qHhaulXNMnGsuGM1wqzASBP/QJ10qyeqdROyigcBE8IkB+4RlTij0sR3iNH1TAHkkks2flc//IIgEg+/LvaicKTicFQXEeoVoEH7ek0MXHDKywpA4G1x56PbqkpzPjwoHlpJmbSKXrgkvxSB7sKZ5HCAhsLahBHHUrNTuH3S/6bBXbzw89jp65QyRpFLIniRorktjPKB0YdtkG9+MtNrnoGX1gnX0atLNDjzAjWprrLp8sr62AxoPSo18uVFPI0pC7TTqkDv6gDHfPQ7KDk6AppYVHB5IQ8i/NsUfmRht2740HCPzE8F+JX9RlOM7zMjh3eeHCQCG3qS74qP1VnOqJn8RKHi+e0tzJeUrtzyNxs1pJP1I9iTPh0wkWo6077xMq4Lpoi2+MIyiVExULnZQFGZStA1NEB/y5EdAfe7OM5YRiWCvrjjzfc1+h1Xc0iHJz6eqjX9bXFj2qUEzIreNhFFDr3tsEA8kH3FysVHe5mfbxOLCK48BRDCBSHPRJQoIx2ySBp0IgZYWukhNIRRRLe3e6kJqqGNuW4ipJVEGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_016Bg6Suh3FnDxmaNvKRk5di",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'node.exe' -and $_.CommandLine -match 'pnpm' } | Select-Object ProcessId,ParentProcessId,CreationDate,@{n='cmd';e={$_.CommandLine.Substring([math]::Max(0,$_.CommandLine.Length-120))}} | Format-Table -AutoSize | Out-String -Width 250",
+          "description": "List running pnpm processes with start times"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "0ed43908238c2e7622b3346a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016Bg6Suh3FnDxmaNvKRk5di",
+        "type": "tool_result",
+        "content": "ProcessId ParentProcessId CreationDate         cmd                                                                                                                     \r\n--------- --------------- ------------         ---                                                                                                                     \r\n    22460           20368 10/7/2026 4:30:36 PM ata/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-dsh\r\n    24332           20680 10/7/2026 4:30:38 PM ta/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-dsh\"\r\n     6796           13176 10/7/2026 4:30:39 PM ata/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-dsh",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
