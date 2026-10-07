@@ -1,0 +1,17 @@
+{
+  "id": "a293f4b21625a5537ed0c605",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\Desktop\\Elemental_harness (was C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\llm\\llm-pi-ai)",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

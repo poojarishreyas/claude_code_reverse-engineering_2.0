@@ -1,0 +1,14 @@
+{
+  "id": "d6341428f9231956140f8a43",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01K8xGLSuU7SBnYQS1BL8w1b",
+        "type": "tool_result",
+        "content": "790\t      .toEqual({ kind: 'stop' })\n791\t  })\n792\t\n793\t  it('defaults the error message when pi-ai omits it', () => {\n794\t    expect(mapStopReason(assistant({ stopReason: 'error' })))\n795\t      .toEqual({ kind: 'error', failure: { message: 'pi-ai stream error', code: 'PI_AI_ERROR' } })\n796\t  })\n797\t\n798\t  it('maps routable HTTP-ish error messages to stable codes', () => {\n799\t    expect(mapStopReason(assistant({ stopReason: 'error', errorMessage: 'HTTP 401: bad key' })))\n800\t      .toMatchObject({ kind: 'error', failure: { code: 'AUTH' } })\n801\t    expect(mapStopReason(assistant({ stopReason: 'error', errorMessage: 'HTTP 429: rate limit' })))\n802\t      .toMatchObject({ kind: 'error', failure: { code: 'RATE_LIMIT' } })\n803\t    expect(mapStopReason(assistant({ stopReason: 'error', errorMessage: 'HTTP 429: insufficient_quota' })))\n804\t      .toMatchObject({ kind: 'error', failure: { code: 'QUOTA' } })\n805\t    expect(mapStopReason(assistant({\n806\t      stopReason: 'error',\n807\t      errorMessage: 'OpenAI API error (429): You exceeded your current quota, please check your plan and billing details.',\n808\t    }))).toMatchObject({ kind: 'error', failure: { code: 'QUOTA' } })\n809\t    expect(mapStopReason(assistant({ stopReason: 'error', errorMessage: 'HTTP 500: backend down' })))\n810\t      .toMatchObject({ kind: 'error', failure: { code: 'SERVER' } })\n811\t    expect(mapStopReason(assistant({ stopReason: 'error', errorMessage: 'provider timed out' })))\n812\t      .toMatchObject({ kind: 'error', failure: { code: 'TIMEOUT' } })\n813\t    expect(mapStopReason(assistant({ stopReason: 'error', errorMessage: 'ECONNRESET socket closed' })))\n814\t      .toMatchObject({ kind: 'error', failure: { code: 'TRANSPORT' } })\n815\t    expect(mapStopReason(assistant({\n816\t      stopReason: 'error',\n817\t      errorMessage: 'HTTP 400: input exceeds the model context window limit',\n818\t    }))).toMatchObject({ kind: 'error', failure: { code: CONTEXT_WINDOW_EXCEEDED_CODE } })\n819\t    expect(mapStopReason(assistant({"
+      }
+    ]
+  }
+}

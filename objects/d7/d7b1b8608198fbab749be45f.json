@@ -1,0 +1,8 @@
+{
+  "id": "d7b1b8608198fbab749be45f",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\Desktop\\Elemental_harness (was C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\llm\\llm-pi-ai)"
+  }
+}
