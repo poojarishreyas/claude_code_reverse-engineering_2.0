@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T04:57:05.789Z |
 | requests | 212 (13 errored) |
-| tokens | in 11,778 · out 86,301 · cache read 23,458,241 · cache write 299,478 |
+| tokens | in 11,780 · out 87,094 · cache read 23,601,783 · cache write 301,018 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -13799,4 +13799,29 @@ id,timestamp,method,path,status,model,requested_model,provider,account,connectio
   }
 ]
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Yes, Claude Code is running on Gemini too, and it's the same model dsh uses. OmniRoute's own request log shows this for every call since the batch restarted at 16:28:
+
+| Who | API style | Model OmniRoute sent the request to | Calls |
+|---|---|---|---|
+| dsh | `/v1/chat/completions` (OpenAI style) | `antigravity/gemini-3.7-flash-high` | 302 |
+| Claude Code | `/v1/messages` (Anthropic style) | `antigravity/gemini-3.7-flash-high` | 112 |
+
+The eval points Claude Code at OmniRoute and sets all of its model names (Opus, Sonnet, Haiku and subagents) to "lynx harness". It also removes any Anthropic API key from Claude Code's settings for the run, so nothing goes to Anthropic.
+
+**About the "tiered" name:** Claude Code's result files record `gemini-3.7-flash-tiered`. That's the name in the responses it received, and the eval saves it. OmniRoute's log shows every request was routed to `gemini-3.7-flash-high`, so I think "tiered" is just the name Google's side puts in its replies. dsh doesn't save the reported name, so I can't show the same field for its runs. The routing is identical, though, so the comparison is fair.
+
+The batch is still running Claude Code on 980b410340.
+
+_stop `end_turn` · 9.55s (ttft 9.54s) · in 2 · out 793 · cache r143,542/w1,540_
 
