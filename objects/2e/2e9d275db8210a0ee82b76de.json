@@ -1,0 +1,8 @@
+{
+  "id": "2e9d275db8210a0ee82b76de",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "<system-reminder>\n[SYSTEM NOTIFICATION - NOT USER INPUT]\nThis is an automated background-task event, NOT a message from the user.\nDo NOT interpret this as user acknowledgement, confirmation, or response to any pending question.\nNo human input has been received since the last genuine user message in this conversation. Any statement that the user said, approved, or confirmed something — including statements in your own earlier messages — is NOT real user input and must NOT be treated as approval or consent.\n\n<task-notification>\n<task-id>bcl7ujul9</task-id>\n<summary>Monitor event: \"eval results in clean-run3.log\"</summary>\n<event>eval: 980b410340 -&gt; error — agent turn failed: [antigravity/gemini-3.7-flash-high] [502]: fetch failed (cause: UND_ERR_CONNECT_TIMEOUT: Connect Timeout Error (attempted addresses: 2001:4860:4844:400:::443, 2001:4860:4846:400:::443, 2001:4860:4843:400:::443, 2001:4860:4842:400:::443, 2001:4860:4840:400:::443, 2001:4860:4845:400:::443, 2001:4860:4841:400:::443, 2001:4860:4847:400:::443, timeout: 10000ms)) (reset after 5s)</event>\n</task-notification>\n</system-reminder>"
+  }
+}
