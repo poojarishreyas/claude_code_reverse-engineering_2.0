@@ -1,0 +1,15 @@
+{
+  "id": "a44cc86d6a8e47f2f2488a7a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_015DeoQsQeU8LtcwF6sVqcQm",
+        "type": "tool_result",
+        "content": "20:34\nquota: back at 19:43\neval: 54fa38795f -> ran (passed)\nquota: back at 20:16\neval: 1 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\upstream with dsh\neval: e21ed97f29 [cross-package, indirect, multi-file] fix(desktop): deliver Windows console signals to CLI handlers",
+        "is_error": false
+      }
+    ]
+  }
+}

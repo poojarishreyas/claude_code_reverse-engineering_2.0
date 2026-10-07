@@ -1,0 +1,23 @@
+{
+  "id": "b54ca59ccdc35f31797338bb",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01BiHnuth2C8BqcVAU2PDdun",
+        "type": "tool_result",
+        "content": "Monitor started (task b34jh053h, expires in 30m unless the source ends first; you get one notice at expiry — re-arm if you still need the watch). You will be notified on each event. Keep working — do not poll or sleep. Events may arrive while you are waiting for the user — an event is not their reply."
+      },
+      {
+        "tool_use_id": "toolu_0191cYd6wwJSBF4Kjzh6ztfH",
+        "type": "tool_result",
+        "content": "Monitor started (task br7ipmlp5, expires in 30m unless the source ends first; you get one notice at expiry — re-arm if you still need the watch). You will be notified on each event. Keep working — do not poll or sleep. Events may arrive while you are waiting for the user — an event is not their reply.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
