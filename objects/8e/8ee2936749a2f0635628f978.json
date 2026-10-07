@@ -1,0 +1,27 @@
+{
+  "id": "8ee2936749a2f0635628f978",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjAcKEAgSGAI4AUIIdGhpbmtpbmcSDJ3tp8Y3Zg3036Q0oxoMYUThJvQnxlYiGpHeIjB5JuvucuEYVR/Ym3YI8+kvHPLQ9VBzr4nUiRewXD5UIwk37IRDVhGbM3UKVgOYNwUqqQZprqEX1xr65Q5tzsoM9zFdivhtyybWKu9z4zya7OLUQ1JR46sAFapWAYCGGneQZ8UX605nkkuOq7GqcoBI67Eq1kKeGMrf3AGTx3K3sM0wwDQmt0Yp6yoObLW1kPJLHyfObj4XeEeycEbd8QZXCJJ8pv+aVR2C5iqQqyPihnt4IQY582QV+rE4t7aMrfqLIDC5dlt2fUTbiUvFr/0Mplp5q8xv1xRNgQsZFB91wy9zOJcyeSEimiPOAEg0dCBFwBrDZzuaWX7/oeRuhDWLAcL/DQQ+6F2XfKLOx0lUgSRbKjUwxqKoUi6GobV5nRWnPkw1s2+xCVqjbaPjtyqKhOiIoon60lRRcCGzxn21orpAE18wxmi7QCZLbRooETpteD6yG7ZBH/gQ1IHrPFCX57NMFhswf1oJOpYqsfTHkYJstyrpZ6dteliwgjko/jIcomU9ODymX0mKi/BoPnOAufNkb3h6/dion6UJHEOK2O+UJRKZp5sQZWaet2Fur/ojTrxo5JXGcClIaFm+3xK3MCBejDu0APF7zp54gx8A+WzUVSRcOD2ZmnjDwyCcIAUVOwO1Nf00ECtcWJgsG33PWcC/L+84fXC7eHGwzcpXpjAZFSSzUcAHEUOh45npMhODjzVHLgXcgpxpIUlN0DJm9liipXtu9Hk0e1GrQ5tz5jlshpReaq11sUi6vdSJwLNTeXf7JZLIiVje+CLrI6tV7uSqIgnf0m/1XMbNyoUEdB/T/M6dxB69JLGfph04LDckOBOhkza6SYKl6MyZhjjKzFvrToECSKrVlsRrQSSCDI6/+gN+KrKjkXeC9GNXEoDibyb9u7mBMGNRO0Xfu3lGAaAK1ptxWGdmNDzyZET7k6FU91v0lHuZbVsSKThk/GQMJyVPkhBQU3TK7bXCVRGs0sS4+kos/N43FNRqfQtoG6GYfDclRojPIMuxoyGNwuReU4s2PHyfX8dUPx+d8EvT9GTKMjmb6wtWbd2pu1+CHK0QxW16t7AoCIUSyK0RkpcVEuFrieHtw48nDYwyCKGMhYbMoLILfN/xZddPx2gnncdfc1r0jLbup5gaqxgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01A8fxdZ3bTYNxwjkXmM79wE",
+        "name": "Bash",
+        "input": {
+          "command": "powershell -NoProfile -Command \"Get-CimInstance Win32_Process | ? { \\$_.CommandLine -match 'run-eval|dsh-eval|eval:file-finding' -and \\$_.Name -ne 'powershell.exe' -and \\$_.Name -ne 'bash.exe' } | select ProcessId,Name,@{n='cmd';e={\\$_.CommandLine.Substring(0,[Math]::Min(120,\\$_.CommandLine.Length))}} | ft -auto | Out-String -Width 250\"",
+          "description": "Find leftover eval processes"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

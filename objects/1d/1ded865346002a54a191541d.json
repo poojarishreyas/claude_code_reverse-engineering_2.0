@@ -1,0 +1,19 @@
+{
+  "id": "1ded865346002a54a191541d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019ouZaC9BNLG9XneFvkifQw",
+        "type": "tool_result",
+        "content": "eval: 6 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\upstream with claude-code\neval: ed34a1d7fe [cross-package, multi-file] fix: keep queued question replies read-only after reload\neval: ed34a1d7fe -> error — agent turn failed: API Error: 503 Service temporarily unavailable: all targets were skipped by pre-dispatch filters (chat_20706 100% conn:30d884a8; chat_23310 100% conn:30d884a8). This is a server-side issue, usually temporary — try again in a moment. If it persists, \neval: 9633724b40 [indirect] fix(app-boot): drop the retired schedule bundle from profile manifests\n1 agent turn failed: API Error: 503 Service temporarily unavailable: all targets were skipped by pre-dispatch filters (chat_20706 100% conn:30d884a8; chat_23310 100% conn:30d884a8). This is a server-side issue, usually temporary — try again in a moment. If it persists, check your inference gateway (localhost:20128).\r\n{\"error\":{\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters (chat_20706 100% conn:30d884a8; chat_23310 100% conn:30d884a8)\",\"type\":\"service_unavailable\",\"code\":\"ALL_TARGETS_SKIPPED\"},\"diagnostics\":{\"poolSize\":1,\"attempted\":0,\"excluded\":[{\"provider\":\"antigravity\",\"model\":\"antigravity/gemini-3.7-flash-high\",\"reason\":\"quota:chat_20706 100% conn:30d884a8\"},{\"",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

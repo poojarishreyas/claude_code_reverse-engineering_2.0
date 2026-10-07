@@ -1,0 +1,19 @@
+{
+  "id": "3eab86fc3417882c4389a818",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01A8fxdZ3bTYNxwjkXmM79wE",
+        "type": "tool_result",
+        "content": "ProcessId Name     cmd                                                                                                                     \r\n--------- ----     ---                                                                                                                     \r\n    19324 sh.exe   \"C:\\Program Files\\Git\\usr\\bin\\sh.exe\" /c/Users/shrey/AppData/Roaming/npm/pnpm run eval:file-finding -- --repo C:/Users/s\r\n     8060 node.exe \"C:\\Program Files\\nodejs\\node.exe\" C:\\Users\\shrey\\AppData\\Roaming\\npm/node_modules/pnpm/bin/pnpm.mjs run eval:file-findi\r\n     9804 cmd.exe  C:\\WINDOWS\\system32\\cmd.exe /d /s /c \"C:\\Users\\shrey\\AppData\\Local\\pnpm\\store\\v11\\links\\@\\pnpm\\11.7.0\\13310dfb63588666a2\r\n    19568 node.exe node   \"C:\\Users\\shrey\\AppData\\Local\\pnpm\\store\\v11\\links\\@\\pnpm\\11.7.0\\13310dfb63588666a20ffbb7892eca80e4978178e90910f6\r\n    24312 cmd.exe  C:\\WINDOWS\\system32\\cmd.exe /d /s /c tsx scripts/eval/run-eval.ts \"--\" \"--repo\" \"C:/Users/shrey/AppData/Local/Temp/claud\r\n     9840 node.exe node   \"C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.bin\\\\..\\tsx\\dist\\cli.mjs\" scripts/eval/run-eval.ts \"--\" \"\r\n    18936 node.exe \"C:\\Program Files\\nodejs\\node.exe\" --require C:\\Users\\shrey\\Desktop\\Elemental_harness\\node_modules\\.pnpm\\tsx@4.22.4\\node",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
