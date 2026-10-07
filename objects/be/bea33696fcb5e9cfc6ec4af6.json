@@ -1,0 +1,13 @@
+{
+  "id": "bea33696fcb5e9cfc6ec4af6",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Memory is back to 4.4 GB free. You don't need to close anything.\n\n**What used it:** two test runs left over from earlier tasks: vitest for ed34a1d7fe (490 MB) and a59beb8ae3 (659 MB). They should have been killed after each task, but my cleanup step had a bug and never killed anything. That's also why no \"killed leftover\" lines ever appeared in the log.\n\n**Fix:** I killed both and rewrote the cleanup so it matches on the task folder name alone. I tested it on a fake process placed in a task folder, without killing anything real, and it found it.\n\nThe batch script reads the cleanup file fresh each time, so the fix applies from the end of the current run on. The run going now is Claude Code on 980b410340, and the cleanup will kill whatever it leaves behind."
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "d1758c5f17f455cd587a353b",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSxAcKEAgSGAI4AUIIdGhpbmtpbmcSDGlAMvTZTuPsVLAzDBoMR5XJjmOWhzMUcdDnIjDewqxvztz0N1ID70NPQmhF8Uedv+TwYv9fAcDR3bGaMrAVkU2kKLVR2o4lOQFVbZ0q4QYcorPhtmYNaMCCVNeVAf+uro97FaoifMDI4R6MuO2TuVJNSV0TVQQNdXmGuyTNqCVg2YUKxWnFDvMnJdF05vHKqQ0MqU0oSot75QqfoyHe3w/Cp/2bxYDBQAH+gAKNABtxkm4l/EdOs8BH+G8whlHi3XGNBjRFERG30q1AU2TYWkC5I/hrDzm7M/vNgCt5/UYepQhjKje6S5OCp3RBV63/X0+iA8fETsBn38CqugzJJvg2HrymzMKOa1Qbx4z0O4S7il5LypKain1Rpq/pQ3BkPAhzm2UNWiEv2hgjF5EGARPGSOTiPwLYRSfQUa0btMvE+F44AhYQwrUwPy7RfsGwMz/IdNT1wxObBP5WdbdAk4XZqk45BLRbRPq68TnimSFpQ5aAIG6TSp7/J0ac/a3X7MuQM4WHzxQVL+wiFtbxvvKoCTT99/NvwAPDMfa+IjV3flPA4vKG8l0rXQXWNASJiUvKUt04W8nU4W1RtcshJJ4E99fpF5K/kJWRCBFd5zPaDlVoCbV2Qr/lSkqbJ45WFQHX+pmUDJb/+PRRik5mwilWVhjwv8fAp1smzrromtQfAKF35xs21kPb9tr/0o7DYXEMkYOQAp8a6LHdBom6XD12Lykr+nAB/pUPt38eeViaWBa5AsGkZR/ONXeahE1CZYH/D49DFgWgMhbdmya2X8fc5eW+ZoozCKLPHd5TGE4WpOAX83L+Mpp2LA3IC7W8ZxMb3CEHnzYpqUTMUvxSvAT8V/zDDQNszad1OxF5NbSe/4eRqucbOouLU3u5uhPobSYmT5K2KuStxPTltifJMRggKXnGyZs3HzvtrCJ4RYhIrFdB9FAO/sIQ5H6/CMwXPR/DPS8902SxKHo4nhIA0BJXSMIQywsElbjdl/CfcFHKj9tz8QT3RFn0v09eCCCw4CNrDNTAeAn5+NE5sS4i15IsNLVi/bvFH8x/qAWDk5dmkcYCDND90wanDL9MbHjsczGbN/wBNXpPQmkHmbNqUelds0JnwJMb1vqtpyQxgIsbN1nxaQugUUT5rQHQceIhXBdIaWoCS/zJl1ezvH+q64WoVnQ26EWdM54Bj0Ww0lhYFs96Dbb7GjHVUFL53hKFvNdqb51KQqSsY1zHwygD6Z9QBoT/q2qUB4U6PBoX1rpDGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01LuVigx83JQXb43xMoJQsZJ",
+        "name": "Bash",
+        "input": {
+          "command": "taskkill //PID 23344 //F; taskkill //PID 14116 //F; powershell -NoProfile -Command \"[math]::Round((Get-CimInstance Win32_OperatingSystem).FreePhysicalMemory/1024)\"",
+          "description": "Remove the test processes and check free RAM"
+        }
+      }
+    ]
+  }
+}

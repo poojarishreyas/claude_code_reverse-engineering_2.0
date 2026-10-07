@@ -1,0 +1,15 @@
+{
+  "id": "7ceba014e8e21ddb4c66b469",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LuVigx83JQXb43xMoJQsZJ",
+        "type": "tool_result",
+        "content": "SUCCESS: The process with PID 23344 has been terminated.\r\nERROR: The process \"14116\" not found.\r\n4435",
+        "is_error": false
+      }
+    ]
+  }
+}
