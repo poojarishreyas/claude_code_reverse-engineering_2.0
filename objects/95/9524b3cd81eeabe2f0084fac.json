@@ -1,0 +1,27 @@
+{
+  "id": "9524b3cd81eeabe2f0084fac",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSrAcKEAgSGAI4AUIIdGhpbmtpbmcSDCgTeRuJyZ3q8/pbxhoMxAHtIZ5L1sAIW5FKIjAaYtWLBJ5iyd5y8KL0C/LLMUeVwxCRqYMXvFlkJRmROWbY4vWBnaYu+PCCBS+a9bQqyQa/oGFpp69QsqDvepGdt5sgrbMx4FTJG+i3XH3PyVz6TKvC3E5Fm1bu23Z5abQcjlhi3Ea3Cs8aIgbx5gesxKWC1NesyAlnZRToDCqe7TCPxjHN9AnCrKA1vUMrhBTw1JvGE0OBAW55bnVELqStZWg/Od1Nsrt5wdGOVsSlkvc7ZYtHD8bd1/wxKh+tqlepS6N571FOEc4fwzVVhYxylm5IoUZLuSCOItKyI5oGqYr2qAjdEvHAXhfeTZdikk2vpU3ILwifSjd6Io4pnFMk/3u0kkwUoj9I5Jxb1UjR5NmcY3CZYVF5b7sxiI94aTjeAI3c9Y2Pab+8HzQxZ555n6E+jJIWRb1TJD0duBT4I7fH9CpHH73GL6OhhAfsaSzJ+61iWw2HeWFDiesMuind1M/V/mFW43YO4dZzdNfatuEshZ0ACsuomshdr9/gfMJztfMJFpQnMAiYpehPjZp/LQk0+oktuZCpB1Ag+1ic70fREj4MAyRv3wGBUBBST/gVmDaqNbuSVjTsWpSd90PoGN/t++4PClgMFfFPbLXNigugRtEB13DKPdPjBXBzL6mV/mUHon10uGiVo4ARXI6+8vlZbI8XvC/bSUEJdF8i1HQUnsCaKaRn25WETMw1JO7Y5nyvk0bFE9ifUkgVNzhzt7iRpwr8ttmmk+qnZQKtWpHMjm+Gs8wPEUaSaLB3AGp1hkkVB13K0/1XFscuTlOKlPUl4/N+TjA0rXVBWa4w5dw9RjQ6B2y9Balvs6KX5IqqpyfcKKBanwUdpdnEPZSJ5GtVuLEO2WEo1cLWzKda7CZvVrrmEp5DBZraGnkU1dan4jI+39tTV7xVCTvIJ3vgi4glqS9s5Fuscj8jq5zp+cGZG1dbFBiqh3HHM1jCbsIgjwYVIgtrV0N0psi2a/GqiCShALKN9wUGHOfdXlKaLY18ivBkXY+Cy6gEqsZKUduetlTC7yf1ekp/Jbogpbm8mKtrWyF3V2gIa7Ff3ypYVKtUfUyNxo8ehiT1u4f7OjZMIYi6ZMAfjrX3sM0WlAuCwdcpuZgPwILUA3ZZNXwMtVg8E1eg+KhzpJk1e+AAtKszI6XAR4mI3ROPnlRFKUFPRM7TMc5bSwg2LaFVGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01H2TZEPfyoU5zvAUr6UskYX",
+        "name": "Bash",
+        "input": {
+          "command": "KEY=$(grep \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | sed -E 's/.*:[[:space:]]*//; s/[\"'\"'\"']//g'); curl -s --max-time 90 http://localhost:20128/v1/messages -H \"Authorization: Bearer $KEY\" -H \"anthropic-version: 2023-06-01\" -H \"content-type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | python -c \"import json,sys; d=json.load(sys.stdin); print(json.dumps(d.get('diagnostics'),indent=1)[:2500])\"; curl -s --max-time 20 http://localhost:20128/v1/models -H \"Authorization: Bearer $KEY\" | python -c \"import json,sys; d=json.load(sys.stdin); print([m.get('id') for m in d.get('data',[])][:60])\"",
+          "description": "Show full OmniRoute diagnostics and model list"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

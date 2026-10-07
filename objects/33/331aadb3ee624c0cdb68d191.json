@@ -1,0 +1,19 @@
+{
+  "id": "331aadb3ee624c0cdb68d191",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01EEgSoJd93KDWwPiyFBsvVn",
+        "type": "tool_result",
+        "content": "{\"error\":{\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"service_unavailable\",\"code\":\"ALL_TARGETS_SKIPPED\"},\"diagnostics\":{\"poolSize\":1,\"attempted\":0,\"excluded\":[],\"attemptOrder\":[],\"terminalReason\":\"all_targets_skipped\",\"recovery\":{\"action\":\"switch-combo\",\"next_step\":\"Every target was skipped before dispatch (capability pre-filter narrowed the pool and the remaining targets were all quota-exhausted/unavailable). Check the provider's quota in /dashboard/providers, r\"},\"skippedTargets\":[{\"reason\":\"model_not_in_catalog\",\"targets\":[\"antigravity/gemini-3.7-flash-high\"]}]},\"recovery_hint\":{\"action\":\"switch-combo\",\"next_step\":\"Every target was\nWed Oct  7 10:51:52 IST 2026",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
