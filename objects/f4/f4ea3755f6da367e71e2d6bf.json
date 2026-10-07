@@ -1,0 +1,17 @@
+{
+  "id": "f4ea3755f6da367e71e2d6bf",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The low-memory alert timed out, so I restarted it for another 30 minutes. dsh is still running 54fa38795f.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "ce7ecf873b98aaa57e44e015",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01AqtrSqDTKt6srzKLm5igqC",
+        "type": "tool_result",
+        "content": "19:43\n{\"passed\":false,\"src\":[\"packages/experimental/claude-code-mods/src/host-ops.ts\",\"packages/experimental/claude-code-mods/src/index.ts\",\"packages/experimental/claude-code-mods/src/manifest.ts\"],\"tests\":[\"packages/experimental/claude-code-mods/tests/chain.spec.ts\",\"packages/experimental/claude-code-mods/tests/host-ops.spec.ts\",\"packages/experimental/claude-code-mods/tests/loader-composition.spec.ts\",\"packages/experimental/claude-code-mods/tests/module.spec.ts\"],\"steps\":53,\"seen\":1,\"read\":12,\"editedExpected\":false,\"edited\":[\"vitest.config.ts\"],\"extra\":[\"vitest.config.ts\"],\"editedTests\":false,\"usage\":{\"inputTokens\":305441,\"outputTokens\":23271,\"cacheReadTokens\":4141738},\"tools\":{\"glob\":4,\"read\":30,\"pwsh\":5,\"grep\":12,\"edit\":1},\"note\":\"\"}",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
