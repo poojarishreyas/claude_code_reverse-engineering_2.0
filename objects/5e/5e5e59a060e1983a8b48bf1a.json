@@ -1,0 +1,24 @@
+{
+  "id": "5e5e59a060e1983a8b48bf1a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSlggKEAgSGAI4AUIIdGhpbmtpbmcSDAaEEIz0j+x5uMDbYBoM7bpfGgKfhrKG+FtwIjB7Wdn+KmjTWbh+gbNaaTQUPgMXES2d3+ht8mTLAd1zm6S+1zmDPCYtWFEnPTR/24kqswe2nAe+P8tN0YwFCg+n9byvTjQSHoUOb9DSahEqUOVvUVNBVebHPU7SZNVUdJi86IqMEWrq817w17WZaf0aM0feBn352xY9Ekj2naKhEmG0AoJLPWrEOEfsE3GOKVZiA3GGYVJVh5edL4V0mgsvfrT8I2jJ9dFrcZ2mplcvym+bsijf9qH1VUHJm46YDPj0vPzdQcB7Rhmv+/wYJoMlh/e7oHkTktnNQOTsQRanrf7vxrWRS4+eeAtltDEsPn2XuzXsxYudHn6RQCYpSC8XCFJYumK7hHSIwCpYer9xQJgocZlAsdpGxcTLoBzzuqmXSVBBJBsFnGhI7YeAyiP2AHAV470CSDT+YceaCjax5VMZGnaG+sh7bAggsIHJdOGa/Ehnuzpk2iZM21Aly6UYXlnyUDc+K/+vgi3TSCBLG4n4swWZyi82PZHixur7aSdHsaxxPqCy2wWzXhT04abpu+ihKGHiN+521kXH+ofm3vnBj9wW9RegAc1Cui0R9gnnb/1iosia5RPdiLxaoZePN6ufjAwhUEQzNCJnnYgwqGxKSxpcae43p5c5kjOEqhW/bqLDyHOgJH0noYrES8l4/SL/6mvzUZmiD+/Y5zcxe6eo4hG9siQglmyp3PVbenU+xeXuFu47rS8TqcxpRyZjwCSSapmwnsN1CBjUhG9YweDFC9Uguw2Xv/fyX0OzMmML6O+JYgCWHB6rAeLqS0LursPwSvSFZP+YjJF5aO/60Z2DW7ZnYRxTWozKh8zpf1qy0yHa8a+AwhadLlzFZ/2CgD4RXNytQYC7/s7SCp0t3BUp72XcTLX55Qg41nai8J3fAeh64IxaVv3p01yxlaGgEl1q0Yh4/NfOW58B6XjU3xuQqG+XaPBH3eyNpO8COJ9iuNagqIqvmXEbYGyJQD3kfmwyj3RDmvGEd66HPyIgwPmEiqPuPTY9Sr6aHTf3+5DyPLOISv56Qzj4tTg23eTDIxst3jxJWspbZ5dgjtIcYIXmt4r3BC0HTRdIpnMSioT6dRA5chadJFdSChyitOiY5J4pg5DDPopiw9ahTfC05rcN9AWkDsa5pBdO3QL+8LJHUAxV97ROeNNvwuOn+jmpNSLVl0MtUOeV5y2CsaZC9sZKovDYyqPjISx2Y48v41Cp/2FB+IvplUMnhJrJbl2GxqN4V4/Z3l4kECP3rQ7nH0iGv0jI4sGwwyExkSPYUcsTVCrZ6bvnaUvtxYCfBKBsHUDoxa5+zGpSyrqCp7F6wkMOMsb5MxgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01TkNMYZrhdEqLAhRGfQBvVj",
+        "name": "Monitor",
+        "input": {
+          "command": "low=0; while true; do f=$(powershell -NoProfile -Command \"[math]::Round((Get-CimInstance Win32_OperatingSystem).FreePhysicalMemory/1024)\" 2>/dev/null | tr -d '\\r'); if [ -n \"$f\" ]; then if [ \"$f\" -lt 2500 ] && [ $low -eq 0 ]; then echo \"LOW RAM: ${f} MB free at $(date +%H:%M)\"; low=1; elif [ \"$f\" -gt 3500 ] && [ $low -eq 1 ]; then echo \"RAM ok again: ${f} MB free\"; low=0; fi; fi; sleep 10; done",
+          "description": "free RAM below 2.5 GB during eval",
+          "timeout_ms": 1800000
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "7b221a00f3392c6423c5dcd4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "I'll tell you when free memory drops below 2.5 GB. I check it every 10 seconds. I picked that number because the last batch was killed at 1.9 GB free, so you'd have some time to close Brave or Chrome first.\n\nIf I tell you to free memory, closing the browsers gets back about 700 MB. I'll also tell you when free memory is back above 3.5 GB.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

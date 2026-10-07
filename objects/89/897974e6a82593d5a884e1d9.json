@@ -1,0 +1,17 @@
+{
+  "id": "897974e6a82593d5a884e1d9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "tell me when to free ram",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
