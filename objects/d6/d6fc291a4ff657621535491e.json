@@ -1,0 +1,27 @@
+{
+  "id": "d6fc291a4ff657621535491e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS7AYKEAgSGAI4AUIIdGhpbmtpbmcSDMeW+ZPdhEC7D9oAXxoMf+vrxqR1NVxQlPDsIjAkpZyNxSSDDoj9+Ubs3V5+AE2MnFtSOJztI7jDeb4fs6xdiEiMy/LlXOnpdbd+CY4qiQYDQ+HHu46bA4x5U2eLVQVYQEG2mUTbwQKZ2eRoba3g85wO7GaACwqXvBEITYLBLzqRTi2GrWcuBBHBRYLjL0U324km/dDLyiqQqbkP60UXfBw6Y1HXLz4lvNZKTAwJspTL9lTser6zNPlJnpDstEid8SDcH6ls0TY3s88yCkuXuPhemnkubCZPh5xqNS/20JgEepVwWsTCPAm45yP4qfAHk/E0sams0jcYdjUAb0mslGGbjZYB+jV/ZcXvytQice/kbTQtJO5CaJN5WuDs1pq9s3ywKZTiXVL4P9+qboM7QBcangdGf/+mDrSoy9XYsZU77xqSie74kP/vzubQZTgwCoDnrUpl8k0CrW2YlUzD7yHO0+XbFsCanCm172mkve4sL/tRI4DKr6ExX3WJVfTQapPrkFBDkEWrk3m9sDkr8NUoYgdHLO5z4t1ICpwtOWAsJkHqYCegmKDAZkMzRo3rRg6xQtm2/v6RPG+AtmWMeMzR3OwSwkGtGl8iJ7HhujoWR4vXYB3HaqrfBZ0Mypx38J5pFCkm3VANqoIVdENwa9+jmfDgbLiye6eauuo0PE6GueHD+C/r4P55SagsFIzvCLHkBY+GbVZKuyXOz+ZBsjqfM0E4psrC3+2f73T3J+VKVosIm7V2HbbE/nR1siTj/d0xZiBLVVNSS3pjsLZnPZzq5Ws7ztw3fJgZDP8+55zjz9dsNgRQTbMtTXjMfzYRUIBdBxlwXB7khzuM6I+z4wORPsOcw7BfVgnHvu2+7jRIW6zZ1vZKv5RbQR1qyjv0mhdWQNHNzhBCBGnnqfJrDVIePIh2oOcc/tidRgFnM2hawWoT8TaOsXprC75JnfiqkUhWgBl+4UEZS+/4QWPIZpivadmN0IpXlaEPpHd/Hp320f6snHybWvpvgYTsAl3COjjMuX4Kzw2Y0IasPiOH/xtfme9ojQEAgn5IQl+GGjJ5X9o95QgJLj7oTSL3EXBg8V/YBOqiyQqleze7NCXtlJoQFcYtpsyOGRP7FSPdLJOrazSMhreVchcYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_015MEHjSFLquxoidNa48vXhU",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness; grep -n \"console\\.\\|process.stderr.write\\|process.stdout.write\" scripts/eval/run-eval.ts | head",
+          "description": "See how the eval logs messages"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

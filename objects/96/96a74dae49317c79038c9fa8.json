@@ -1,0 +1,19 @@
+{
+  "id": "96a74dae49317c79038c9fa8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_015MEHjSFLquxoidNa48vXhU",
+        "type": "tool_result",
+        "content": "344:  process.stdout.write(`eval: ${tasks.length} task(s) from ${repo} with ${agent}${dryRun ? ' (dry run)' : ''}\\n`)\n348:    process.stdout.write(`eval: ${task.id} [${(tags.get(task) ?? []).join(', ')}] ${task.subject}\\n`)\n363:    process.stdout.write(`eval: ${task.id} -> ${result.status}${result.passed ? ' (passed)' : ''}${result.note === undefined ? '' : ` — ${result.note.split('\\n')[0]}`}\\n`)\n372:  process.stdout.write(`${JSON.stringify(summary, null, 2)}\\n`)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "3e80c5abf915f6a49852a18d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Th13FpfF1T9AmMHT2RxFr1",
+        "type": "tool_result",
+        "content": "186\t  } catch (error: unknown) {\n187\t    return { task, status: 'error', passed: false, note: error instanceof Error ? error.message : String(error) }\n188\t  } finally {\n189\t    await rm(home, { recursive: true, force: true })\n190\t    if (!options.keep) await removeWorkspace(workspace)\n191\t  }\n192\t}\n193\t"
+      }
+    ]
+  }
+}

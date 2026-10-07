@@ -1,0 +1,33 @@
+{
+  "id": "e92c3b5ee7acdd9a464f1fb6",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS9wcKEAgSGAI4AUIIdGhpbmtpbmcSDDDzbO3zWYo30lkzHRoMlIIHL1o4hZITy1ZPIjAigHx1URj7Ushzdi/4ZIRRoJD10vhOIb9QCqCWWMg3GY06l9uu7/5sj3049rgDwdoqlAfxrsjU8XbE9nFQz8A0zvJmVAzVK+2y+8+lOAUWzw+hAAHjJsUOHNUfEeCmqHOmu5ITk5nTMxvdBLJMKgEtfajPGXCa1ePOu03oM7Uy4rSWfDK8q4vewp2MME43tXPRhNM7LbGe7yV0YiUw14HeOKBF+vUiwtm0jmi0QZfSkxUutS8X8ca8Ik+38ohmNId7JRZhZVmOmXtYqxnLzHJcJ/gc1GYKxMQWt2GyijDtF8DLC0pML1tUbPcozJse1kPjl3P2EjgxEASzLTZx/WBa96CI0XdeHexZnqvpcrCTTAfLSFj3jWsG4bFnVGUtx8E0C0DOI8IgL0BJDzwEP2b0AKFr2+Qj5megD3A07s/SGPfS1A6EPYI21FGXoYgmrXkMA6xzJQ97nJTrWBNbIJcp4szze0k4E0cFbi+Ag+OLA2XLF6+Cijlyo4GEEfOTLjrlyVeDDNqCYvGuqhq5VsMQVba1os5CcDbj8XgUHWFlvlmJjKxucCg444j8zPrKMlZ3UApwxoZjIVdnR8HqOPasK+XvANuUInCS2mowzDmUnduIb6pWc1rjt+iNMFHc7enJy54lZr9UX2wF3LzzeLpf90/kXzhSXnZHjOtT9lzoe8xyzaNIv3dAcax0gQeWw/Bg3jMXu95YgKXA9WD7TRLVUIE2oTqwjSOxqs/bEtgN90AU0vMb39XLHB0I/H4hQ3fFzXgGP/s1Drp/w37EkkQPEGDfYHOHdNeIk4R93yTwT+C2TA4TiD8KI96GC8wXwEbwnX+bls9VwuAcAfK7+xAJ9u8GEGOm36JFmBcxP2dnvPLMR9h0+sDS3k29mo7q/vpUhbtWQFUWZbpn9wvC+Zs2TPXid4r12WLOTjKAZAbgmMdsky4dj4bZGRKpCy3+9KU/yxPxxkl+qPgCnStBTUFQ12wFhUYBRS3TFZ9t2o0TOwbUER0PvfypX/K1lVwxdMhmwVdp8MrdRNb1F3gE1i6YwLqLuVTc5Gc9gc0PZV4cO0n7O4bB/FLyiLgDITzhvgRPWnGPpYroXzNV4xma9KatgPqSDuJoQD2ZWEWvgWagkerI5rSC4Re7n8Gm/1WDBY8jZ/CAdY52ZF8y2SGPP1cP9wycioHrtFmDuDaFGOdHWu+5goFr6K2cjCRdOZooCfv4qaWSg4Joonpu9hXs5IV6K/+EIMyOjj6XshWhtUnZMDnWfxWbE/KexztwAaxu4XG9DD56TQfjGAE="
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS/QcKEQgSGAI4AUIJbmFycmF0aW9uEgxb05kFOlV7PqUjOGcaDH8EPy45Pi/J6YJGYyIwJ9htzbnhsZhXXBnFVITIX7zpigo65vqW5YnKsC4siJaDNxWtdgnaZD/nPDhLlle1KpkHC2qJirk5B8zbl3j/desoNO8SP8A7blkYZQYDJzM4os6+AA2+ZEgzIO86R96T30qWh4bPXSQfYXMx2yOZXC/mwxOYD7KvgwLMqjhLVI/9yz88oy4DfG3jNMDigoLSWhB1oLTEl9LsFlmDk0AURENGl5a5O055MorUdA9TM0GMBdE06WF6BwGYPGjGoMUpGhV83HKBksjyTcum39Un3a6+GL2aMTjKVxE8Uqd0PqD1LjlbBdWS+4mA0ucUdxe8NRuCAN0zYHEXqC33X67Kwhd3a9dEcL+HiuAlV2S3aAdo5QLVzDrK2cTG0bM2s6Tu2Wp9PZuiaTCwceWNW66Nv3hf1cJxs8J3lZwZcDVIRy6RWthH9ioa0gXQnoNcN34fXd+Mv1swhHPt1DYlpPKNpsMWDixebD3pDN5xWdScWkOySouvtUwSrxeiBwWlolrKxjQLg6/eOx5bEqMzwpxD9jioATAFcIwHopA2i75MG1gUMaEEGLIfGzDj9ZXr/n61yKVaFEJGixpDBkCfHUj/oFu2eWdACar/R6O44ATMIsP+Fk7Uc/IyypU2+tBq/rAAgb1B6UMfj0/YYbrJ7D4M98oxPHmfMcDZSckGr1KnNrZ0U8BLICzPYXOdvq6EwMm58THLZczL7L5aRRCSc8ITPhhA/VKwQ4MMbYwX/3R7PwXHZAY/MniJdTReJF/f+BuwjKjje1SnlmVwhXxPItzasQzavCfjXy351oaPF8eyCZ3E8Q3Sav/j3xW23dQA5USqUzOaQTr04/n+Qj6VsL5602UBlz+JqoD8k3r1gCNMstfHwl/GJviFKt9k1fAOMmsPZ4msJLq6dExIHVJNYl4S+W4l4QL7KBoNdBYcgFFs0PrAUSvUoHcac+vHaIRc7nHtKh275R0qKGU/6bz5DN2HIL7kU8xWqI2iEyYw6MNHFBApGNW2xCb8O2/0BTSV5gVNxpggO2kFLXayNMnCRlfXDH4TYJM3oFzLLGISFQyUhCBIHYe+NW+SgkV90HTTroc/8c1yFOmXoXburMbryubsGuOoam2+2LN2nW+/PdxO+nautPik5LtO+bCogZK/P6AiYpBMSBd4+Z3zco4tkvjjUcNiY4BwINc2Hzz8fXfyA+mBPGgVixP1D6D7upLa1n+QKizaZt13z1aR/EfEKGWkXf8/Rd2oni1lBkmUkBQL0qKWZkWN22H7Qm9zjlJrmbVjWtdjTWZGgktX8KI0GAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Th13FpfF1T9AmMHT2RxFr1",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\scripts\\eval\\run-eval.ts",
+          "offset": 186,
+          "limit": 8
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

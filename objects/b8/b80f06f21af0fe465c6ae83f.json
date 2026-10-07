@@ -1,0 +1,19 @@
+{
+  "id": "b80f06f21af0fe465c6ae83f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_014e6H3MuatTmgetZ7UsUzFo",
+        "type": "tool_result",
+        "content": "76:export function computeMetrics(\n77-  events: readonly EvalEvent[],\n78-  expected: EvalExpectation,\n79-  usage?: EvalUsage,\n{\"steps\":79,\"toolCalls\":{\"read\":32,\"grep\":17,\"bash\":19,\"glob\":3,\"edit\":5,\"TaskStop\":2},\"firstSeenStep\":4,\"firstReadStep\":5,\"readsBeforeCorrect\":2,\"editedFiles\":[\"packages/boot/app-boot/src/index.ts\",\"packages/boot/app-boot/src/profile.ts\"],\"editedExpected\":true,\"extraEdits\":[\"packages/boot/app-boot/src/index.ts\"],\"editedTests\":false}",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
