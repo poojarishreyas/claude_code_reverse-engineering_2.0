@@ -1,0 +1,15 @@
+{
+  "id": "77415885838ad5c9bbab5dbc",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_018mPMDsByzzBCEZuvMnY2wW",
+        "type": "tool_result",
+        "content": "\"model\":\"gemini-3.7-flash-high\"\n|http 200\n4550\r\nwritten",
+        "is_error": false
+      }
+    ]
+  }
+}

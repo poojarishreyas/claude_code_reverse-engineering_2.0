@@ -1,0 +1,24 @@
+{
+  "id": "db9b52293f814116264cc5b1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01N6fWbYWs43x3rsMNDrP6pb",
+        "type": "tool_result",
+        "content": "Command running in background with ID: bcly6ximg. Output is being written to: C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\tasks\\bcly6ximg.output. You will be notified when it completes. To check interim output, use Read on that file path.",
+        "is_error": false
+      },
+      {
+        "tool_use_id": "toolu_01JzuETG92Rz9rEbkuRB6onN",
+        "type": "tool_result",
+        "content": "Monitor started (task b818qactj, expires in 30m unless the source ends first; you get one notice at expiry — re-arm if you still need the watch). You will be notified on each event. Keep working — do not poll or sleep. Events may arrive while you are waiting for the user — an event is not their reply.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
