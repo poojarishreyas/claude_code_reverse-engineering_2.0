@@ -1,0 +1,19 @@
+{
+  "id": "7feb8b6b2a2ced6dbd7917bc",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01P4GgnwRPXzAvjmjtXQPPe4",
+        "type": "tool_result",
+        "content": "quota: still out at 22:34\nTerminated                 sleep 600\nquota: still out at 00:44",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
