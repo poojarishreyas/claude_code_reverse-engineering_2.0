@@ -1,0 +1,15 @@
+{
+  "id": "17aecfaebc2726b9abd6c808",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XK7TKdj9EwVshnzeo4JgYi",
+        "type": "tool_result",
+        "content": "{\n  \"tags\": [\n    \"indirect\"\n  ],\n  \"task\": {\n    \"id\": \"4b9d8ad6f7\",\n    \"fixCommit\": \"4b9d8ad6f7be67a020962ac670f8124c319cba21\",\n    \"parentCommit\": \"e1c49269b21abfd66bd1af85d4277d2c7a314880\",\n    \"subject\": \"fix(client): re-pin StateDot loaders whose animation restarts\",\n    \"sourceFiles\": [\n      \"packages/client/ui-primitives/src/StateDot.tsx\"\n    ],\n    \"testFiles\": [\n      \"packages/client/ui-primitives/tests/state-dot.client.spec.tsx\"\n    ]\n  },\n  \"status\": \"error\",\n  \"passed\": false,\n  \"metrics\": {\n    \"steps\": 1,\n    \"toolCalls\": {},\n    \"firstSeenStep\": null,\n    \"firstReadStep\": null,\n    \"readsBeforeCorrect\": 0,\n    \"editedFiles\": [],\n    \"editedExpected\": false,\n    \"extraEdits\": [],\n    \"editedTests\": false,\n    \"usage\": {\n      \"inputTokens\": 0,\n      \"outputTokens\": 0\n    }\n  },\n  \"note\": \"agent turn failed: 503: {\\\"message\\\":\\\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\\\",\\\"type\\\":\\\"service_unavailable\\\",\\\"code\\\":\\\"ALL_TARGETS_SKIPPED\\\"}\"\n}\n$ tsx scripts/eval/run-eval.ts \"--\" \"--repo\" \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream\" \"--hard\" \"--limit\" \"10\" \"--only\" \"4b9d8ad6f7\" \"--agent\" \"dsh\" \"--home-from\" \"C:/Users/shrey/.dsh\" \"--provider\" \"mylynx\" \"--model\" \"lynx harness\" \"--out\" \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-dsh\"\neval: 1 task(s) from C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\scratchpad\\upstream with dsh\neval: 4b9d8ad6f7 [indirect] fix(client): re-pin StateDot loaders whose animation restarts\neval: 4b9d8ad6f7 -> error — agent turn failed: 503: {\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"service_unavailable\",\"code\":\"ALL_TARGETS_SKIPPED\"}\n{\n  \"agent\": \"dsh\",\n  \"tasks\": 1,\n  \"byStatus\": {\n    \"error\": 1\n  },\n  \"runs\": 0,\n  \"passed\": 0,\n  \"editedExpected\": 0,\n  \"medianFirstReadStep\": null,\n  \"medianSteps\": null,\n  \"totalInputTokens\": 0,\n  \"totalPromptTokens\": 0,\n  \"totalOutputTokens\": 0\n}",
+        "is_error": false
+      }
+    ]
+  }
+}

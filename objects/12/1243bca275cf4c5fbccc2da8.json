@@ -1,0 +1,15 @@
+{
+  "id": "1243bca275cf4c5fbccc2da8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_013sMFheLB576ZchWRBE2Bzo",
+        "type": "tool_result",
+        "content": "SUCCESS: The process with PID 10580 (child process of PID 2308) has been terminated.\r\nERROR: The process \"4436\" not found.\r\nnode.exe                     16788 Console                    1    103,516 K\nnode.exe                     16940 Console                    1     39,996 K\nnode.exe                      6068 Console                    1    483,996 K\nnode.exe                     19152 Console                    1    167,440 K\nnode.exe                     15324 Console                    1    126,124 K\nnode.exe                     15792 Console                    1     67,708 K\nnode.exe                     18144 Console                    1    182,892 K",
+        "is_error": false
+      }
+    ]
+  }
+}
