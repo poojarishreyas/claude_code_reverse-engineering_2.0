@@ -1,0 +1,39 @@
+{
+  "id": "b6b45849f32c3a8c77ef332d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjQ0KEAgSGAI4AUIIdGhpbmtpbmcSDDYnZzsKgeeXIgTFKBoMOzAz0Vf4jAc+jwc4IjCsOL/H0THkZIINu38quLgBt4fvfLb6wqcTd+EnWxjeZ0FCxnTdg34pAmIrxwcl48Uqqgx5OvDA9VYC2hL4HEksocWIUR0NaX6ig1AGim2OW+iEMJAiBDPm3pfgDbepxRNGzAjXu1G3ejRWGFoX4nnSgcS6wJxRVzllTRursVzdjHovf5SWkxV3s8AKSvgvM1PIXjMcVui1p/o8IVe/4rIIQj/ni2pS1WT0YxgMsEL/b8EVwb+Sxxp3TRmeUrV/NSxtqNPGydeQ/WJgmVYiTiU9cXdoSFkofC3ey23LlHnZnWI6j1cS2KSme+KT6voWUIkrpXISrmCsiGIYu62SwcxgfGX5kKKN3I1Z6vaK3CsIp1q/uajjUPa5vXzjyv53sVueHYDypr0l0jSrSuWGeYI2uTyzsQOETmd0DgSyy8lwULLtXjP4G+EJ6oozjYYTirBFjmRjb0VzokDNXUgnJpQuRY7AeaV07pqISys8KM7LR3Jyo8bHY0rNS33A+wlG4767X8Nu2yn29dsyym3u8lP/PfYsc/SFIHs1s53QVcUCyxd+zE25yun1FQsY0DbLhkGnASDOcCIfBKJG3h6709XL6XlWu+22Ke5rBiMpT3CmshFjYS+Jrtcfr60zzeeYzBAp9xZYSwtzYBL7zt0+r3WScZ9hfO7SB8hop4BsYHD9D4frP7z9z+lvERxr/baqjbo8q897FKyJsYLWvQEhPQ5Kk/Rc8Icoyt9mkSH47nLQ75RtDy03Xqtf6NdcBoHOGhG4d3W2Y+s7UtX9DnnBfxPKWy7a+qcrsGNIV5YvNGBfXfe43f5i92Qy0NTJXoPErTULgEDqtkXuYAZixfB7A+5TjAUvn19ZdbW+5MOzIkrfjgBa1BDwXz9Lt36gj7oV6Qr1iHC4y7z3/PgCcV3es+LmyY/cXYO7HOaBbRcvtnlWKKnr01l5rSG4+ROUV4cFil+wUcpFPVMczM2EYCUSlHAdpgIPxeN/bIO1ugvYHxjE2BPGa9KAJid+TNlU9jNryKf4Z7Ca19F30r2ZRzVEw12vvdQkfYkv/vkdHxds74idlAlhFptiThyxhVC78jlbZqCqRFdgCBwABZOIflwda7iIPg5vpbHYLljKlhT38jGxc94TjSjS0DWj5o2O8WaM0+u41Y9cnnjILhOdtZlPVIBEAtmB1j0DvsEw7PAuwf/I46V8V/z6hbQoHTAiEOQr2Icz8CeTogSxpY6rN7PjDfLSjeh/IFKmKe2YF+IXvLcpDzaHb8PpM8cSBBd0/rwoWHr2LtOdKHiI456bAC4NtppoTiZPH13d7hWqo1UQNX8tFB2yNO8kIO4ardwH4S9QH3IokJmJb05yVSuKt5f9UalQvoaYAkORlfmBOHgND8S/Y68fB1w16YzMFg2YcWfNnSIxxk3yk+4WHFHzBceiiQz1qUe/rBtVwfxe+SY8VQuOY1s0K4NbGKQ49vZv9Z8Q8slKequapNLalR165+s1fLXv9pSdftAZoadJ2a2kgPSjF1PBHFfbRdvLST43vpQMvcoSdx58v+qKNKWgd0MjQL6OCfl60gBxfgfsJlhG+Ra2j0k8EV+x6mMHXcJB/mMCxeIhK2pfE3jvH0sAh4FfIwC5q0QJXhZV53Pk16XK1w5baPnQKDTTfQTziJ70kVp1fSqLq2aKu4u9yS7KTXTk1K8nb2+B5pdNqaCe1+Ei4x/yZRa0K/GoX5gUBjjr9PSQ1ozhCHjC1SZOUG9FNzAtZnGSrCvHm+fJGu5O40D2i7QOAHOQ236S1H3fGtcLlYGB5NYD1Xpe2Dp6algZDEHv8/TyMOPMWo2ebjcM4yUJqYwG+w6/u16yEUC5IwyVskM6izlfFF6vnJozmJtyZi+yEXAOa13VRGHkCPdvh7pJ965FxpKDNvCTCnCYR8MWQbYWEIt1lbxYz2XbxmKBxpb6RWGXkMuqj6CvEQ9ADkUjghnEZuzsGS6YzWPQdaAw6/WC36cZdQb1NU4SjT8bCMMzuDksa/c4DqJVgZE/cHiEPCv8IDoAao7HjXh8ThvLYnNMhWYr2xMm50a67qi2n6pbsbT/bmG7DT5+FYuWc1kF+PR0dcbr7hnUkWRcViuX4braS4Skg6CUFcBuwkp8tZaT8q0PjQIsF2u09Fjltfp0WY2k+UVQULHjGGvc/gGqroUYAQ=="
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS3AgKEQgSGAI4AUIJbmFycmF0aW9uEgwuuQCTogo65iOjvDYaDNbuMqZ1EKD98a74/CIwmc4nL7kvDz/lSNfjcHz+EKJ97EbxlvPEZ24zWP8gscwyAoE0gZ+46/wNDPQBVdtLKvgHRQoPBYjhzqIEZdAjzNPERFYPRqV83ob6HXTYmi9SP1sZf7cBK9Xq6h8b9Et+PfJ7uksEsqaGws2Ytn5vGvfkitKNjCNaB16nFkfERMN8V4C8SqrI5Gq8egy6jMdqg9yEu7YtTCvraSe1GqW7Rw13PMyuBLYVPCoz9UaFj5Jv4cgV+wPH419ZRDIHhqXybV9EckwUmGtl6MfZ5oBTM3FUurJ7TZ3/2a84KQMAGJW2itmMbPsZB/xrR8NGdqNAmvnsqPyCcLY3wnHbq8zXmdz3teF9I8m3ytt07iWQ5dimYwCa5mOGthQV8SdIdGGXS9bf7oDberny30zXH8YVuByg3uoK3F+3SJT+gFhjSzxtfSXtncKcTG9KIaagQYm9vQLymn8YNa0aPCixVAoe50kIrNKh4elwYpWDuu1WNPQN9xLqEuEBqg9XvZP2p0oGdXhB6YdgmLZ7S1rSHW+eRWz4mQufrgq1HCar4E/KY4rwyUjTljnHGTHlzR2VF7g0i4Qo+d/TsvPRiQUrWUQYq3q0bQE/0vhBRTPZRuTiBXdAdfDrCXYO8Pmvep83WdyVd0ow2Pbtm1/HEyV3fiBQuR2LVNxObjJ94xNK4QFfTFuSLmK9Db9CR6zh8XETRMPdChXPNmx06G+ngkrYU+1OsB9IKz8hvn9wAs7fs0HcmeV4AkIoh4/icSNKjuW6dTtGtgmQPI8F/x82RmG+c5Mbiqpz5l6PZ8l1x2YS5TqnFmY45nvFbMg/a8GlrE4rSSYnphloKrGlinzULgaI//TjbTNX43WSEicmdJTsrXLK5jVc1Jd1lCP69dvJlCttSJ+93CbnmpuSpkVUpJpDKh9sm1hpMzfTxgwb7Xl8x34qAnkhwtz48IWFnW0ndZndVr8z7j9/YnLJ/gYwVvPIFE8+iSnCIwlBCVuIVexzldm009hWsfBMz9l82cCML2TIvCj3RCn2YRLouPTUhQNkiJOC21srURE/XQJsGaZtvrXXd9sVQ+YS6qJP4zvaZ7S4SUwtnmMCdELE6ZRJt5fFwYdlwWZD5sU5jYMAn7fWN8iiF8Jg+C0l0U2C/aqjv7LoDIYj3/dgXhsBfMVawZ98xo0g0imdcU221Vx/opjsYxxsW1650UbYVddo0y9YeEzbR5pGccZnLqH4UY9R94axcrgPxT67rw9h4Wf5xMp9trFB6C+348t/bBL5x4ZrQgUeULP0Xxr9LwvUTN0eYbFiCXYLFyOl6Ta3mCyrbDfQgIrIq+s0SjHzz4R6AqIhHBBcjBYhO7RwERwowG4okwIcOINMKV9KZoxuUhwr1INu9vJOAIcmJIGmp1SKxTsZ6zNcwmKnvMLTWEZIV/tPD5oYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01N7iWkh8rT5iajiY8hLf8CA",
+        "name": "TaskStop",
+        "input": {
+          "task_id": "b61xn67uj"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01AvatNWQ5fL7PiXJP26gCWZ",
+        "name": "TaskStop",
+        "input": {
+          "task_id": "b7htxdlbb"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

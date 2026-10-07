@@ -1,0 +1,15 @@
+{
+  "id": "ab5f067a4209d04abe9b3f97",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Exit code 1\n\r\n    22468 cmd.exe       \r\n     2988 node.exe      \r\n    13092 node.exe      \r\n    24200 node.exe      \r\n    15144 bash.exe      \r\n    21860 bash.exe      \r\n    21896 bash.exe      \r\n    15332 powershell.exe\r\n\r\n\r\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream 5badb15009 [master]\nC:/Users/shrey/AppData/Local/Temp/dsh-eval-9633724b40                                                                                      9633724b40 (detached HEAD) prunable\n---scan for git peeking in all runs---\nTraceback (most recent call last):\r\n  File \"<stdin>\", line 10, in <module>\r\n  File \"C:\\Users\\shrey\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\re\\__init__.py\", line 177, in search\r\n    return _compile(pattern, flags).search(string)\r\n           ~~~~~~~~^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\shrey\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\re\\__init__.py\", line 350, in _compile\r\n    p = _compiler.compile(pattern, flags)\r\n  File \"C:\\Users\\shrey\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\re\\_compiler.py\", line 762, in compile\r\n    p = _parser.parse(p, flags)\r\n  File \"C:\\Users\\shrey\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\re\\_parser.py\", line 973, in parse\r\n    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)\r\n  File \"C:\\Users\\shrey\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\re\\_parser.py\", line 460, in _parse_sub\r\n    itemsappend(_parse(source, state, verbose, nested + 1,\r\n                ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n                       not nested and not items))\r\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\shrey\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\re\\_parser.py\", line 568, in _parse\r\n    raise source.error(\"unterminated character set\",\r\n                       source.tell() - here)\r\nre.PatternError: unterminated character set at position 3",
+        "is_error": true,
+        "tool_use_id": "toolu_01NXTyrJkaxG5aqBEEP5d4zd"
+      }
+    ]
+  }
+}
