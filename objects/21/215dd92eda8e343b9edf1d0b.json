@@ -1,0 +1,27 @@
+{
+  "id": "215dd92eda8e343b9edf1d0b",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQShAoKEAgSGAI4AUIIdGhpbmtpbmcSDEDEtU3Nwwq+3rGYlRoMqgXwzX+M43nTwC/BIjDUkvU1dn5St5qvNUcnreQolFE9Tuj3o1bvYQdbhDcaoBcIFwO8IIaRTPx2acPQYuUqoQk2L9hGm900VHBqlvRrLSTgFxlmM3+EqFv4znbWNA2h+lYatx5sayCgtLcW6jh+EuhnnSsdeU1NLVK51o1Y4gx8GiVbwdvmcJh0R7kRk6WfE99FEvysEwikt1pr9jOPbOdP9FmJsiRKYGtkOKgrxLt/kompCvNFBKCzl3zz7wYRARb4t+S6w1dZCS0UAk3Ydh5epCMWre4DP4sl5P9wilWlyR+RkHkq9kadOVcccFuZ+MRba52U7Fqu1jnL5aQrg5lBGB8uCeKMDgmjJ8LG3NoFI0abRa+8ie2OLxctTWo56BCrRuLFaq4YhejIUJ/0HrBRTeZrlJ4wZJPNDvhAeeaLjACciPl2arhtjPPJYOw7NYhNbHeWCZPlXHCJy1F3MvUWENGdqk3dbM/FTqbBBUZS7DHfgAe9k0VibxN2JTqS5JvR0Hu3/VWEaY6lWzqi+dtwXX5c/QiVN8X2TN25yYJF+E2TKzdhooBio2pjVIvM9ps9xOIjBiDd6iQhcwlLvbpzoaHh9xOVbsNDyQchjsze0HevdNTO23cIiTMzauOJ02xIE/SiyS/L9HMX/628d62gsBZPze6BVP7iHCpy+u36Pghh5LnOzznng5Ko+WMvZFumwGlZqqGcqr+ruhh5c5fa8TMQORKW7hlQQVjMLgoWU7iy+n+wlhUfjr7Jp3T2cPLjKZzieQ0KKQsmSQ/O/XHvsgV0RHTBAyf0nLBVr81B7EpAzE0tNgvin9xAi/rARvfIjmCmYsK4x2FL1J1C+/tme+oaY0jrNcrd06kcYdNY1XOpqkP1xAudIbhOUyiO3dc1HNof9kfBpu0yqA5blHaDjmfjm2Zqn7rO/uTx0ysS9KpAJOk5QrtZPAWkzeEgNN8/SBrkxasg4k9lO1IBfjgcPrTqCsrfxFcbkMnFdV9DY+8Yo6P0n/blZe+7bj19CqQJtoh9yURpGTawxmSa3aZBkWe0mU/J0FkFG4+k62drNUcVU3NQRG+0UTacmMEVVh2uXu+WX7fMg04SnAy32aEAtiGAK/cWzCCG0+czOxYKQMYOsh6bWd9TnhkgoYqrDO8O1wCBlYVj5gHUI8iagklVGcNraSaqtWroY61uYzX8Fs0bZT+Q/mcs1CuRkg4GWrM1NIa8sWGtpsEJWdkbOaya68YDX6hUNRqzNmnfKrG8GYlnfdx3eWpkr5gRVEzEcBvfGNpez9/3IOs5U0lsHGyiCxJ+z4YS1/ibc2h2f8rJ0cQ8xF35s5rDzab4EeYlkwyKPht7vKUeJOsMSnCsW+dC0+ZBvE4zJET9W7Ovf4fb8wCf1A3/pB13XuCHsiKQmbU4+z5GqGD/cERZzc3MkhmO5sqyP6ICpZ7yBIgFkURjYC8CmYuV3LUU4HWyLzi+MKiq6kKhAIabvKJyHQ/y77a02A68hQ2gBa86pRaFPdqCoYq94hFAAhyYEMwDyL1VVmZviS/pVSUyjPQVZF1EJb8c4rY5KaqfTsf+Jf3zNQtL7segm2MQASj05q0m8IxVHhVe5Swf3XelHUH5wRJ3ZvuhzrjcbYAWJrmBNEwZ6KeLfAlDp8WaM171oE5xyrxtIU8YAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Both API styles get `gemini-3.7-flash-high` for a simple request. So `tiered` must come from something in Claude Code's real requests. I'm checking OmniRoute for what `tiered` means."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_015PA588WTi2Tvo17CCFt9wf",
+        "name": "Bash",
+        "input": {
+          "command": "D=\"$APPDATA/npm/node_modules/omniroute\"; grep -rl \"flash-tiered\\|\\-tiered\" \"$D\" --include=*.js --include=*.mjs --include=*.json 2>/dev/null | grep -v node_modules/omniroute/node_modules | head -5; ls ~/.omniroute 2>/dev/null | head; grep -rhoE \".{120}-tiered.{160}\" \"$D\" --include=*.js --include=*.mjs 2>/dev/null | grep -v \"/node_modules/omniroute/node_modules\" | head -4",
+          "description": "Search OmniRoute for what the tiered model name means"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "7b1d17965035cd2c28dd9626",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSqAcKEAgSGAI4AUIIdGhpbmtpbmcSDJc5DL5gEdpWQZBmJRoMll6UUikH1v/hqPz3IjBffFO2UYnQrGZSPjq6yjOeejUGN8r7rlyuVk3QBfblcria4YOKrXiQramPNT9Xhn8qxQZ3+XztblkIV7gEuVvFpvHNC6nsX31IwYmzNLvpw39A8Urv0pTqINgjIQ6Z0wsZBT7zYXNsqXbfqgYva1u2JMkHJVWKqQkiOwGyykgwfkfP5ltuG77cLZtno0VXAa9sYHjZqKt/W3sNv2mur4m4ONGQNNOeYVl3zFHe5ITEPsn+adAYWdwVdAL6TCsESkznCAISDUYmCKyfGe4uvDHUfkOpw1LxoDkeTNeztl2IBWlkTzTIXhPvNEGGouqoZ1wvQngnYUeRK8Z3PXA6XHX7mEwEoDSoCn7DkELr2u7w8DNRfHBeFYmq8PRadUazwQsd0OWN+CzgsfyZqV3UKOy4ECcUmjPu5wk311jrXA8/IcC+qrBfx23SZXzxcCfO5eosCNJWWVmd3zKmQKM/Ga2R+1ae9u73IsBcuguQsLrJreMj9QJj9KpKyonr5IA2MgjW7HLak65qd917HaifTpZUbs2wewP2HnKBO3lBcmJZwgxixMB6AsakbyBMsz4QIQadbxiBRSe6d1SxmcH869TQcjoEVfUhfPsOO9XJLEIFArK2yHaoyQjww7lKIY22mE01FUMlAgyA6CzRr1gshDi269UYlDkTbSkRuS+2bilx9kNPyr6/90WOPukeE0KP2pGW+G2VJmPlQiqY3lVYvjc0KmtR5emX7nQ9R8sSh7LbdaVYAb7oEbMmrmk1ePAfb82gNpbS+mioFK7P6kN/p5wyx04WXLR2oHce7WzFZOoiu6gN4poVmx+qcyIwYTxQOQ8M7SK+TByqbR+ZdOYyXHFJuwIvLXN4DuGeGsnKvLv3B0C8XvXN10ZZgTCgvreCbjAGzFv2+up7gmPUX7CoeVDeLHDPNCNNBsFgVs0i13VHmQwS5j+RgZfmhvgKL+I32Y460MDN6q1KGQ5r6xEIuVSUviTuU9ed2ICjgH6bkOZYzYEbOMnGUr2KL5hjLzgnZlbEU/21AVdUN856O4ZZoDd/rNQvH5H6AH1qrxDcgqDSwfoW+HiMhh4sZN3KllGqdA5t46l9fheOdt/RPDUibgnrN5VuFP4XoySxB8XL9xQfVwvrv8twF0XlJkIxvWhppzkNCmMSsMhKxxS8XIq7ZUncTq0JCHS06KMYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01MgwM6DQZYxDbvZiPaU2wka",
+        "name": "TaskStop",
+        "input": {
+          "task_id": "bxz3szli4"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01KBnhSEFEGJBgKVAdngWQ8U",
+        "name": "Bash",
+        "input": {
+          "command": "ls -d ~/.omniroute ~/AppData/Roaming/omniroute ~/AppData/Local/omniroute ~/.config/omniroute 2>/dev/null; for d in ~/.omniroute ~/AppData/Roaming/omniroute ~/AppData/Local/omniroute; do [ -d \"$d\" ] && ls -la \"$d\" | head -20; done",
+          "description": "Find OmniRoute's data directory"
+        }
+      }
+    ]
+  }
+}

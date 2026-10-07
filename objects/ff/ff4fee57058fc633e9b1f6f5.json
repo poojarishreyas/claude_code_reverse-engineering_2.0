@@ -1,0 +1,27 @@
+{
+  "id": "ff4fee57058fc633e9b1f6f5",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSqAcKEAgSGAI4AUIIdGhpbmtpbmcSDG6ArJCbUNmcPw7/NxoMxS64pkuQ/2l/17mNIjACASHvjLQ1FpJjGJssuzb/xIESLTtM14MW+FpYDhiaxJbMDVbbxfLPxF8choNWNbYqxQZZNrjHbychaWAJKLy9BAY3zEY4gzGBCkxFngCfCiBH+6DSjX5IxgLhGTSUUzHKuX0e1vCRiM+Mr5grjcuNi+RoS2xKuRf+Lm9SUK1NUDhKXQ9m09/gQuZ03fOSWAUDlSFxHFBaiCF97/74SBZ2T6p9keBqb6JFC9cpqwHvpCPnZz2P+Yu4Fd1WpYt14Ok7r2+umt6maGrv+CJAPvArzUAlIhqS3yvI/HsWoxzHBe1fzso04nCoWLZAiqImUttGHsjBdgCKu3Zowg6Yt2UxMzkNETvrI3dmnMtXBonKIXFWvl+Wi7La3R9/ga0Uu/mkiBY8e0JJHXC2arGVNZ5mf80EVRarSlFGAYh7Kj+aWohxNEt9Ua17IJ25bBV6d0AxCtlNBa2ErTxDcqGnO5xV+zNK6H4opZC75Va0862+B+NkIQ9S9wogsjKj+wL4hazvmuw6YFG5G9so9HcyEDiVIMg1jKNpVE0BxHDDovSfNHgejOUQQktv2/cK/GyzFZZdw08jMPqB407Xes0De7MhIsq6IciqREsYiSRO2aQ8y5tR1FrhHTQ4v8jk5LJ0+MP0ZsElZGDumrhq5BrEhah3apFng+8V1+Y4SiTgDIo6YhavT+nq1Se/OMohp4oy1X7zcPM1eHSf5UfOfehIWM39Nc5pCT8bHMtmcsrqlgqdJPinTY8UtLc0q1CjKJf0Ww3nw//+wtP7uBOj5lUXEvRHPdj8OisYYlfaz3a4dT5+fm1BUI3QF5PlnXvCOctm2/KoqrkjDjI2RtKuBHlLXtVZuUY4KBSqqOFfNy3bHu0l6QR1339M0jMNBg/P5dU92dXeCBtSdLdGDNhy+LYK5bd4FYPhE/07z3/+Vbeki94HW/APyhYZ83oC8jteK3EkLq3kVpVRGKe3TaG4+hpD5DgLj5ROIRkFgHID30wThCeks/C2b+OQ9ggYP04XfuSkjnx6Oe8CkDcAmsZNQPmH986sOdag8+YhQpJjAn/uydMRZ7MtGhfehmNaW+2RiCcV2CVOgOB7PBu/s4oWcPyg/LkarTVPrTH6G0b0HFFvOnuSIgMYE18Sb5HeZyjCjMsuITUrbAlzlETSakkIAAv9sXIJsNPnrUO15ygYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01HCufgCpkFGQBQetqaht56x",
+        "name": "Bash",
+        "input": {
+          "command": "cd ~/.omniroute && node -e '\nconst {DatabaseSync}=require(\"node:sqlite\"); const db=new DatabaseSync(\"storage.sqlite\",{readOnly:true});\nconst t=db.prepare(\"select name from sqlite_master where type=\\\"table\\\"\").all().map(r=>r.name); console.log(t.join(\" \"));\n' 2>&1 | head -5",
+          "description": "List OmniRoute database tables (read-only)"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "7c023f056d3adc4d793726a3",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSuAoKEAgSGAI4AUIIdGhpbmtpbmcSDA1irogi1dSGslorHBoM8W03yD3xdVU+9sUTIjBxjNNcQdm1/lHjq8TupMjwtdcr2BRa2I1UQTXc5dGO8byIPM0yRDBnYKXG4J+Bi1Yq1Qlvp0NmIEJW8LpxRgG5ImAp3Fy8sitg6cHnLUWcg6yejQK2SUbwmSRc+5m2dtwOQghFH1pKJ6VZ/974gW3Tcnfyv4dRTrf7PhUrBW8u3AFIN0T1kedKGm3bNcjKcUo9AxjUaDpVQsLrCo+gzXJ/wTLwyLoSCEwmJf/JoXchiT/ujF5iUEgTwU8nFnm3xD1rqyhOgY5TrYWdTmTkW7X6E8Vjja1SfcrTsYFzME+Ivej0jJUyDRMmBbIQbutyGN2doEaEuat2FCBLJWkK2Zq5uSvqCC9wwEPmUAl4KDi0Fhi55RmYiho/IiC1yfbrDl21fK4m0k334iU+ZO0cReAot6ZaV5PkgD+uO0bpC6RLcxtP2AQekfKI8m7lD2jOtbvvlKhUyz6osOFBXH0EjAD62iYCUQDyBOlKp5feaPbC9qWN2UXtfv+KQZJV+3JczaPMrLdYPRw5e1UAJOCrtYajn2JPH4URW3RNP9UHwD/Sb3Xtf9r2pF4uFGnCB7zgFStgHsgbfZPV49iVYaWIbz4CBTyQGxcgP/VqxEGfG5dyWG20DAKn4qeBRBJUQB0RmgHZgMI0gjHvGx12pnHDX3NOO21ewMYQpaNkxcy51Fwoc+kNrsQ6se0Gm+Wcp2WNdFC4RShx6Hj6T9yx2TpzaXACGr32wv/ZuHCIxbH4KJ7U95HDE8JgvOWn3MvX44xs1qF3A8FhOSfKeKuCN5DsTi+ejhzLR1bZg9nEisSms4X65VgoZdPYnNzcYHwJ6ArW00kewqHSMZ3U7y8u7CvzYKjiqYq9QUKWb5FS8oOZ5CJsLP4vk0kXNdYcYiqLo5G3/d9FHi++/RJkwdolegZchqR3vKPIpQYQbrVd3JRvyl7B/T3dUjqtLWrbXNsxUz0IPa3wCg6PzyTGiAVRNjUtT1MO93K7dYFBbtQ8f/+8+jzbtW0V8JRWeb9YifwRj/Kx9/ClbC+oqAjPL/66lb0lUeCnTSNggGPd+Jrgg4o+t2JmCV6i/HJ0LFV8ARSG8/qSN0fpSgbeEJgSVKmKsP8YnWg2QqpKdjX/qkoPKuNC+ZzN1k+9ASd/6BH1bpD3T4Nd50zd4xXDs+fvgJciiUKTXLLYVoDercPA2cn0px/azmA2OQcKR57VYgxlJmEaqdXDwL7hL6jc/xT7R34xPNvRab1Hv7/PxU8KYK4Yx5PlTzbxt/+Tn5H2USQC8rSqY+45onJL8xms6r6JL69tLsboBglq1GsWQBrJ094i9FBygSdL19kK8k/f8rwajyeqzWF/bKV2Gm08fME6GdTGDnqIlrf66oRonGyYrkZc1eY+E88lNnN8kykeuIo6P81lEKVoikFVOcToaQbHOgMsUTtUErj0XUI6JzYSugm4SImQM5IkK9Ql2B0YQQQ6FI/AjdMza1kqOaqYEZrHY/Eqpxgmqi37hpIc/PuT6DKkSW9kkgp1GJ180TV8kqf9wZpYyn22ROqsgA/Grzvp+KjLwvBCCmy/BnteofG8whRd0BbTB7YgKIaO9SNCwUdacP4jOrTVsqt+37e60ahlV6lvE02+0UUt3UGrcoFFgdbTWQ8evw2BWax0JYhCVfzFffSrSJugMieEnTfs1Vx9C6lOIY+XxarYQKECRmgY+oMOpDfboflDTPqsuV0Cv7sRGAE="
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSwwgKEQgSGAI4AUIJbmFycmF0aW9uEgxbETf6tOr4OUENVq8aDKN3lBEjhSfQEYaB3iIwSMNHdygIcB7mSK3iI+OzAKVQgq+adHgLWA24tovWR9QZpibHAlT9e0bj/RcFJ0IyKt8HWNUHD2ZXx3zjZslWnO+kPVCWFIUHLVjrqlWGG3m+cAiBA6ccse/Qf4DMgNWO9BPIznoxuyg0hf+tl64tXlxK5jwlkhhpySdmQ8m9eoUoXrrfO6FokqWZ5yqQBD6+s5gAbkLBNcrkVa1au2TQbiOWU8VGcp0guFLgOppkJ7TfIkhFd9Osf+T2g45qulLaLmQbUkeQGaYtVKDAOJ5KSZ+oeAU95Ul43s1a+A0loMl1f9Kau/EqK0hn5Tn9/NEHnBBNC7GhwnmVMGlHK/wdktju5ybBYU4gm2bge754iDC9wM9QJ2DKt4zuzO4PeavPBWTc3D80vFaLJkLRsbKmvRh3QynnsICOfko8/1dNVQ2ggnRWqjT7IvefrXLeNWq0Y6JLHvcUzbHmyswjGZBK39MQb5OJLMOJWLjUqSWGEnHRvZsOOmrIRrS/M6n6Io5jhWY1R8ontN2K8FAeb3vuYtn6MPSIXQgFTmA6Uj7J+OGJhv7uHEdVVQZjk+ZEKgPxIamrBGTp6lMM343LWzTEZP6wn5cagCVIl2ibsxXA4gmh6bQhrEsw/U1vQWJe+t4AM0UZrJ4RFep/WJZsddkWJJDnixdAeM+xCh+U7KL5niXwU7R/B4k1vlReWdcbcCHmKCle5SrO24rkQ2yqx0LXjiUiwnNEn83EZkCGgiCvoOBRobAeoXNwCpI12roCmsLlhjfSaDJE6GrHVEBExLCJuUlvE+hB1uRbiTF0lNLGOL2rW3qGFl2V7C3VvBliUFzzrNmt5o739yCZ8dHB3wrU8sroMstPnKBUiXungt/nTB8ThjqYOBFm6v181qWRqJ3npCg0YzRHGLGkxWvrPRZaWztESvLZf9Km9u6l95I1HFP8OdRQoNhsRs2olDjGb4rhIxevi+6+dzbIU0I5V8alHPKeurMA89NIvRQm6a7LH5F3oOGDV3ACqphqFmKEZn/EM4YJ+QR4Gx8e/kFFDtXbH8W5ZxZIpKqlrsPpCKDhn9tX34gxTWAL3sajYRxsWxFHQ6JjgwHlSqCX8uqPjkG88AmUi6gXpZB2h1yHZ+/6pn2Ta1YiUOsQ+cjGPDFh7/RvO8T57wjvGsZCAIWxhLpvFXgxjrlIzVafVq7t4IS2yEjBJDvsVK3nT2EJ8HN9cvSuJI9DuijNnYS8e1SV7Gsta7J4T7vIoLcsZzbk8Pq51ClhRbh3ublCm7NcD2FRE488XKG5sQvEFNg5y/Uy8sKm9biWN7gTxyMIj1nNU7/wxuWWEV4BEDBoGRHbpi5r6LmJTn+K9CL59nT2CHS8FOlMQOiQB8esblIVHBx8Nvfd8+cDSxgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01447tZYAL5ziCdnUc2becGE",
+        "name": "Bash",
+        "input": {
+          "command": "K=$(grep -i \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | head -1 | sed -E 's/.*:[[:space:]]*\"?([^\"]*)\"?.*/\\1/'); echo \"--- Anthropic-style /v1/messages (what Claude Code uses):\"; curl -s -m 60 http://localhost:20128/v1/messages -H \"x-api-key: $K\" -H \"Authorization: Bearer $K\" -H \"anthropic-version: 2023-06-01\" -H \"Content-Type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | grep -oE \"\\\"model\\\":\\\"[^\\\"]*\\\"|\\\"error\\\".{0,150}\"; echo \"--- OpenAI-style /v1/chat/completions:\"; curl -s -m 60 http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $K\" -H \"Content-Type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | grep -oE \"\\\"model\\\":\\\"[^\\\"]*\\\"|\\\"error\\\".{0,150}\"; grep -n \"api:\\|baseURL\\|baseUrl\" ~/.dsh/settings.yaml | head",
+          "description": "Compare the model OmniRoute serves to each API style"
+        }
+      }
+    ]
+  }
+}

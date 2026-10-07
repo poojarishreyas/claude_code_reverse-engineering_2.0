@@ -1,0 +1,20 @@
+{
+  "id": "0e0d89d01a32336d9098f012",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01MgwM6DQZYxDbvZiPaU2wka",
+        "type": "tool_result",
+        "content": "{\"message\":\"Successfully stopped task: bxz3szli4 (D=\\\"$APPDATA/npm/node_modules/omniroute\\\"; grep -rl \\\"flash-tiered\\\\|\\\\-tiered\\\" \\\"$D\\\" --include=*.js --include=*.mjs --include=*.json 2>/dev/null | grep -v node_modules/omniroute/node_modules | head -5; ls ~/.omniroute 2>/dev/null | head; grep -rhoE \\\".{120}-tiered.{160}\\\" \\\"$D\\\" --include=*.js --include=*.mjs 2>/dev/null | grep -v \\\"/node_modules/omniroute/node_modules\\\" | head -4)\",\"task_id\":\"bxz3szli4\",\"task_type\":\"local_bash\",\"command\":\"D=\\\"$APPDATA/npm/node_modules/omniroute\\\"; grep -rl \\\"flash-tiered\\\\|\\\\-tiered\\\" \\\"$D\\\" --include=*.js --include=*.mjs --include=*.json 2>/dev/null | grep -v node_modules/omniroute/node_modules | head -5; ls ~/.omniroute 2>/dev/null | head; grep -rhoE \\\".{120}-tiered.{160}\\\" \\\"$D\\\" --include=*.js --include=*.mjs 2>/dev/null | grep -v \\\"/node_modules/omniroute/node_modules\\\" | head -4\"}"
+      },
+      {
+        "type": "tool_result",
+        "content": "Exit code 1\n/c/Users/shrey/.omniroute\ntotal 40249\ndrwxr-xr-x 1 shrey 197609        0 Oct  7 02:00 .\ndrwxr-xr-x 1 shrey 197609        0 Oct  7 18:43 ..\n-rw-r--r-- 1 shrey 197609       88 Sep  1 20:10 .env\ndrwxr-xr-x 1 shrey 197609        0 Oct  7 09:29 call_logs\ndrwxr-xr-x 1 shrey 197609        0 Sep 30 23:48 db_backups\ndrwxr-xr-x 1 shrey 197609        0 Sep  1 20:44 logs\ndrwxr-xr-x 1 shrey 197609        0 Sep 22 21:23 runtime\ndrwxr-xr-x 1 shrey 197609        0 Sep 30 23:57 server\n-rw-r--r-- 1 shrey 197609 35565568 Oct  7 18:51 storage.sqlite\n-rw-r--r-- 1 shrey 197609    32768 Oct  7 02:00 storage.sqlite-shm\n-rw-r--r-- 1 shrey 197609  5467272 Oct  7 18:52 storage.sqlite-wal\ndrwxr-xr-x 1 shrey 197609        0 Sep  1 20:43 supervisor",
+        "is_error": true,
+        "tool_use_id": "toolu_01KBnhSEFEGJBgKVAdngWQ8U"
+      }
+    ]
+  }
+}
