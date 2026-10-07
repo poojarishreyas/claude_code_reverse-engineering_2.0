@@ -1,0 +1,15 @@
+{
+  "id": "5f26fefffccb2cd0cba68c9b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01TbaFZBVdc7mYYDGceXtu8o",
+        "type": "tool_result",
+        "content": "16:28\nquota: still out at 16:24\nquota: still out at 16:24",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "5f73af1c6fcfd74c39c3c727",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSkwcKEAgSGAI4AUIIdGhpbmtpbmcSDMAsEQU+8XOTTbvDnhoMFdk71xmnQ7ilM4JlIjB8vzbRM0w9Ej9QVJjuWl5l2FndYayIKQZkl++WiDbV3UFblNGUX+QtXUHbys46FB8qsAZcVzkh7Hxh6r0AODSjGk/YAxoLN+NIoDMFsHP6E44Ax9Fe/3WcSaJnrAgwdRXNlU4FRr+yZuhgJ9t6gwgsNTf5Dn9HI88M6Fx5A8+7ZGGK1zSIHwIAbhDBwWOYL8NggKw0nbhA+ffLkKO4wJUt9rzNK4DJ2pcJG6iUk253VSfaWd/tWEE2EmeHaSkCW3Ec7+ruYKqPfFQs2LoZohC0cw/4ixqddz/3THx8W5msCbMIAe0Vdy1yjWCXdKRVhpSFD6N+0AU58Q4xgrK7gkezkvSyGyp8bxe4o4zXzIPs904xQnmnJ6iMWUcRoJOoXZ7DSh6MhWamJnmWUJSeoJ/QR/9VyI8PjRIqc+yOytaXOEpvplLQgIjsn45q/ESgDsawaxu3ZhmlRoFTGPZLBQzOtyUKMd9BsOiPBmoHeJLRgKwrEx8E7SvruGP2diAJWVVAR9g39JKJ4ZS8wSrg1PqVrxzFeC51NMYADSEsJ8z6OsYAsse+JRKjGEOubKvHhV1cwCKjUWAc6nAfB7TNl2EEyEWImIRNLCFWbHf5Lqp7ZXhyQlw8waaMtY1p3k2xV3tnFaQyDty/0TE5syy30Z8t0UO5jukEch6HZOZS8Y4+5h59Ux2EDvWciCqM2uDLFPHtw7gx78PmMIq9ubWICebRNsTSMPE4mWkpgGnIhOOxruja3yLwo3jc+vn9IUpZC8e1etgFvyd3DP7fpcW3uIgZq9nGQb4ILilAWNiNGjHf6l1VzFzBMsBQ1rR60p9i5w+lRzvFqj28LsnDb1ipbWqxsY/BrP5vAXK+aMTI1bZNp7KOWKfKlbX9ij816Xr3gmkGy2r4aq2mhmRKkUwYL+gBirqXATro4xe5MHd4aOQZq7Ib6dT57F8pjEY72raRENm6m7Vwjc8fkWsYe3Xfw3Zi5hBRpvKKJ2p8qQ+ON/1gW8sTRsfOcQs0kWWb6DoKhKNEI6Dm9vv/aQ3Xq5zBTOVUnCnTKaVVTCu151FWnlhtbugvqwXgUib0p6tk+WG74Ol0eY+WZGaZyATZyCWkBkHHocCH9E0Gf1JY5y+m7dPvYiFnG+7omExmlhUmwikLHIAdbc0YAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Q7Va1AV1TdRoqP8NmePZbE",
+        "name": "Bash",
+        "input": {
+          "command": "K=$(grep -i \"MYLYNX_API_KEY\" ~/.dsh/.credentials.yaml | head -1 | sed -E 's/.*:[[:space:]]*\"?([^\"]*)\"?.*/\\1/'); curl -s -m 60 http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $K\" -H \"Content-Type: application/json\" -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}' | head -c 200",
+          "description": "Probe the model proxy for quota right now"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

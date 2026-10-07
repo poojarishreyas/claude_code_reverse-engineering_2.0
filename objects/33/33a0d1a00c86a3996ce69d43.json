@@ -1,0 +1,18 @@
+{
+  "id": "33a0d1a00c86a3996ce69d43",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS8wgKEAgSGAI4AUIIdGhpbmtpbmcSDLTdxHA5IqTdd0GIURoMT/9R7qcYPMv3Bo8AIjA58QJsDtxiG19Hra2dcj0wNTuiabRi4iew9KKU0i8pAdhhzCbyQdCRm9UdWsYos4IqkAguFDLYdbSjZmbJ1GSH554iyB3/O6bFD8voouUWr/xEukGR4F/NlTHPTWgBrDxl53ADs4M9D9x/1+lJCOfWlLtdZKapQQDQrcCkPl2xsZL44Ivi75mfVwz9nYM5yUMkfEFz6/OQVodTbrhbi010eeYN0OnUQmNxh2f/j6CPn6iOoED2EkF5UBC4ZvUD6pWWqTHRYI5ov+m2NcGNUmUlvY7mMombQDz+H1FXgkYXkAWkWTrQbcemh2KMzhoobbGu65R/Zms3Lf/IpBCmRfhC8JwAHZNfUKaGxVbL6FVMe/IuACKjbg7Zz6p+mPQ0HxqMyY95dJrPgj9TL7ogZH2+Kk2++Y1X8LkeMs4z3gIrp7amyjB+hMKD/viRXEPxM+8W4eZ/eVDwrMTRL2ujS+lODyyuKHT7fK0thxegRX3XdLAEBLkg+NzRJqgmAoBWaECXXRs3l//n0PCHHRHDyIMaJayMsS1u134YPd2qWG9czL1ZODmAGc2aGb/eZ+9NUyRJXO6PNS3sT4LIMwHKhbZ4XWdj3Slt6bvZ4tR4SVFnQf5usKRTd/8WrwK81GZdCE2TDfcWNjsY/LDM1yY/L/OnooeYCVpotDytiQJD2KTYaJ53DRbEHyUJ8bO1Gt2ORDZh5Lph7eZBH/DzmDsIoAL7udFVY9LLfPWGmuFhQmIv6hcQAiaa2VRvn2/DPniWWJbi5e7NwhJRVxEAVx/e5DCKCGYwxcPwhYzOjO8xDHtr7nrDQV48ntAhfkSNsTj2AgyPo2shX+3UHAAqr8jmL5uQUUhSiuDwJmeOrSn+aUFGeg/rYU6RsVh3qOQsUlk+qO+ZGCgw8i4kmjOmSOCcR8Y2eI9Mj5r1iKygu37ZwTGdnGi5tdLCZe5vd9TyH91Ghb55e4PPDp2CvVe9BOU0qyM/c7uDq3/o3eN6k1TMK1JL19UItg3oxYcx2gdzQpuogDgrdf5KSdyg7MuTi+73J0oITbM/JaQfmpxGm/zHmU1Zmpzxwn8fKY98JnEaI9QiR/T5/05nQqSVBmVEQFDpakQpSDD9fICrNljcu2Un5k69MWzYIy6cOSzYiCSz4MifdFGThGIRpEwNQDjNw4SkdYpJS+7Sn+CfYP9iOp5q4EnzBA0kGrfD+STJ4aEQ4jKWhiUUZN4y8F3qHnU9Hyh6Blw/N+S17JCjEFQwvILPbWtNPUq6JBM07R9bU3dazC13uOHwtaPdsNK/c5X8maxZQaqY5Vn7W0oV2BSP181YxNXRwNy/runERNPQVEMYnbH1ye0DbqA9gdPpePTM/QJ0J8WYx5r1LbK3nv7qmyMcBWBHJ/TBomFHqH5653diFKEcX7GJ/zLiVBCLCbCXyAinHKzhsm97rN0MQDO2H8c6Rm+41HaeyhgB"
+      },
+      {
+        "type": "text",
+        "text": "You're right that the clean comparison is still close to zero. I've finished 4 clean runs, but only Claude Code's 2 tell us anything:\n\n| Task | dsh | Claude Code |\n|---|---|---|\n| 4b9d8ad6f7 | Failed: the model proxy returned a 504 at step 36 | Passed |\n| 9633724b40 | Failed: the model was rate-limited at step 70 | Passed |\n\nBoth dsh failures came from the model proxy, not from dsh's searching. So there's no real dsh-versus-Claude-Code result yet.\n\n**What I did get done:**\n- **Built the eval itself.** It takes real bug fixes from the repo's history, undoes them, gives the same task to dsh and to Claude Code on the same model, and measures pass/fail, steps, tokens, and when the agent first found the right file.\n- **Found the answer was leaking.** Both agents could see the fix through `git diff` and `git show`, and both used it. So every result before today was invalid and I threw them out. Each task folder now has no git history, which closes that leak.\n- **Fixed a dsh bug the eval exposed.** dsh didn't retry OmniRoute's \"cooling down\" message; the fix and its test are in `stream.ts` and `convert.spec.ts`. This is why dsh failed 9633724b40.\n- **Fixed the eval losing results.** Leftover processes could crash the eval's cleanup and lose a finished result. The eval now keeps the result, and the run script kills the leftovers between tasks.\n\n**What's blocking it:** the free Gemini quota through OmniRoute keeps running out. It ran out again at 16:14, and it was still out at 16:24. Every run needs it, so nothing can move until it resets.\n\nThe batch is waiting and starts on its own when the quota returns. The other way to get results now is a route you pay for, and you said no to that earlier, so I haven't used one."
+      }
+    ]
+  }
+}
