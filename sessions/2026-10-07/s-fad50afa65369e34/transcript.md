@@ -5,7 +5,7 @@
 | session | `s-fad50afa65369e34` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T14:21:49.743Z |
-| requests | 74 (14 errored) |
+| requests | 79 (20 errored) |
 | tokens | in 154 · out 25,854 · cache read 5,963,958 · cache write 71,715 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
@@ -5049,4 +5049,56 @@ No human input has been received since the last genuine user message in this con
 _max_tokens 128,000 · streaming · 130 messages_
 
 _[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0075 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 130 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0076 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 130 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0077 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 130 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0078 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 130 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0079 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 130 messages_
+
+_[no new input since the previous request]_
+
+> **Error** (connect) — fetch failed
 
