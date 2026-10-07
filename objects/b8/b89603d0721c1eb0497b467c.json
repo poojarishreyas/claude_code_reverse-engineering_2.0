@@ -1,0 +1,27 @@
+{
+  "id": "b89603d0721c1eb0497b467c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSzwgKEAgSGAI4AUIIdGhpbmtpbmcSDBrjfhWndjBs1UH2OhoMA7v1oyzO+i8l6up2IjDdCIUXWDBSgVTS0rvPI3EUl90GAdW0pFPHLQTHBsl4EwU//9vtBtBK8L0OWZyRS2Uq7AfJ9QlrKbQnb8EqsJOyDs5dLnTp1e0i3mA9VeE+tyrApJ1lMDwmlIntV6X81Nn+6giKZOqBTXS0YRa7D+jB2DoDT2rVFAfG5nVzjFWr2+WZM9bbcWBt7VAhrS0zNtRCTq1A8xkLUHcOwJe4ab58eQR3e1wWCUjcZIOZSNqmRQTVkh210Q7po7e+gu4jiH+9uroMlZ+kREIlNuVhkxSJkidQ5YnDiWBh8KmhLdeAB/e7sgNjgZMsAv7wXz5rPIs1QlWiVmbzai6pu/pYuUCq57VzDCa5osl3mO4IdlS5UqeUtrNo7GwwXZwXK7wEyEWUlitP8CWjg1aEkKqaEyP44NsUCF0Za1s5dMJ4yVJ5z92sKyvA4t6ytebF7KVC4zPqmAM/578N8j7KEGUCUwOtCBmay7SFJqcxMEKswyeAQR4TvFIj/BAxpmadnUmCLI6eHp+lDCPe45zxDdVMRudWhVrr8TDYOiiYTQjaVqDXRMnP9le3+I89nM5NEZjmQu85W54CD944xv6Z7jzs3JVzzl4efXUtFoxCQzMuOERrWv2jTgu2XM8AMzqoDLGVA71ZKdNHPGkEcYV5JyzCkAsmSLgiwHsvmk8aoEnuMe00+3dyxxyNuI31UDBJaXp1xbCROZPVMU7zLIS24I6vtreymHdH2kC46Zxi3FRNpyXKKSjxdsWeeHMnYL+Y9oP8AyCYtNwKf9KvpYRstnw33Im/ukDmGW/l1OomDhMYYqfBaI+F/LoxIE9E75DM7EVF5eoZx3hiHEqG7YmoscM++PKcCFzZtWPaHf25crgXyeLgxbqfcHKDFBNalhkkANHJspACQLBQty1CXAl/1trHrzluOFZXtw4ePxl/r/xnzph+sziKY+Gdb7/gNog+tEIkSh36DxbFvhWWv1HiQBGjhCYF4EKPH2UF+Fz/DCEew9Q19KJOlyYYBI7X4DC1V26eeKjnTmdjqZZtiMHFEx28UmlryTAEkbhjCBgou9oIYwKSgWN+nhAwJB8DbrZQ7O2XZltjgBXIKR74TVNDZeU24h22W3itX8eOiu5ztS9YlzhHp5f0mH6d8D56Y6leqwmkKinyJyJJ0L91XH7k9yzYnKcI3ui3sp1//cR2IpUChWi03JT1PmLeFQMRi8T2+PzcZGRyOfgqOwvVzsOndeMlkoCa/RdMjFudQ+Mdg1USk3wZuKLyKwiNNSU52R1B7B6IYThhGltP8DsdghLXaktAhttTnjohoMmjOFrCyOmMW+dZVFaZWPP+3nmIX+0qGCZdWeSotm6qa+ht3ugQSzu7Quae9xYRDuEacb9wjksuIXqR3KuxWe/ek3Iyh1WzX62kARgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01CYGwbbxxH3AG9LjcWmv864",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/AppData/Local/Temp/dsh-eval-54fa38795f && git diff vitest.config.ts; powershell -NoProfile -Command \"\\$p=Get-CimInstance Win32_Process -Filter 'ProcessId=16164'; \\$p.CommandLine; \\$pp=Get-CimInstance Win32_Process -Filter \\\"ProcessId=\\$(\\$p.ParentProcessId)\\\"; \\\"parent: \\$(\\$pp.ProcessId) \\$(\\$pp.Name) \\$(\\$pp.CommandLine)\\\"\"; S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; ls -la \"$S/clean-claude-code/\" | grep -i 54fa",
+          "description": "Show Claude Code's config edit and the long-running vitest parent"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

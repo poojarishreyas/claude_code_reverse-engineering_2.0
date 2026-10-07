@@ -1,0 +1,19 @@
+{
+  "id": "9a03ff822a73e16b8e6cdaa8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CYGwbbxxH3AG9LjcWmv864",
+        "type": "tool_result",
+        "content": "diff --git a/vitest.config.ts b/vitest.config.ts\nindex cc652eb..2f76d26 100644\n--- a/vitest.config.ts\n+++ b/vitest.config.ts\n@@ -57,6 +57,8 @@ const windowsUnsupportedTests = process.platform === 'win32'\n       // undeliverable to a table pid. The worker host always reports 'linux',\n       // so the Linux lanes hold the ladder.\n       'packages/experimental/webworker-runtime/tests/node/child-process.spec.ts',\n+      // Host ops test exercises POSIX symlink and POSIX SIGKILL subprocess termination.\n+      'packages/experimental/claude-code-mods/tests/host-ops.spec.ts',\n     ]\n   : []\n \nnode   \"C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-54fa38795f\\node_modules\\.bin\\\\..\\vitest\\vitest.mjs\" run\r\nparent: 2592 cmd.exe C:\\WINDOWS\\system32\\cmd.exe /d /s /c pnpm run build:native-system && vitest run",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "1a803411fbcae51b86f8ebcb",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01QpidNNtCR7wff9sCPdQ5mg",
+        "type": "tool_result",
+        "content": "{\n \"status\": \"ran\",\n \"passed\": false,\n \"tests\": [\n  \"packages/experimental/claude-code-mods/tests/chain.spec.ts\",\n  \"packages/experimental/claude-code-mods/tests/host-ops.spec.ts\",\n  \"packages/experimental/claude-code-mods/tests/loader-composition.spec.ts\",\n  \"packages/experimental/claude-code-mods/tests/module.spec.ts\"\n ],\n \"src\": [\n  \"packages/experimental/claude-code-mods/src/host-ops.ts\",\n  \"packages/experimental/claude-code-mods/src/index.ts\",\n  \"packages/experimental/claude-code-mods/src/manifest.ts\"\n ]\n}",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
