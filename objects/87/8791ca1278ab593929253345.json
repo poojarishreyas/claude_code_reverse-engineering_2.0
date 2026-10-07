@@ -1,0 +1,23 @@
+{
+  "id": "8791ca1278ab593929253345",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01DfEcPTYSNKrkdyK35v3rUc",
+        "name": "Monitor",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; tail -n 0 -f \"$S/clean-run4.log\" | grep --line-buffered -E \"quota: back|^eval: .* -> |quota out|ALL-DONE|ENOMEM|heap out\"",
+          "description": "follow-up batch in clean-run4.log",
+          "timeout_ms": 1800000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
