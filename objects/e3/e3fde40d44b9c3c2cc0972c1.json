@@ -1,0 +1,19 @@
+{
+  "id": "e3fde40d44b9c3c2cc0972c1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01X5iTFkmxQwJiJ2YoywsMqx",
+        "type": "tool_result",
+        "content": " M packages/client/ui-primitives/src/StateDot.tsx",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

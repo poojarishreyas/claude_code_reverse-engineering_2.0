@@ -1,0 +1,27 @@
+{
+  "id": "ac7bf668a0432e0d9aee6e56",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS+QgKEAgSGAI4AUIIdGhpbmtpbmcSDCgyOtEBq7zHRSl2sRoMAtZWrAGBqskFzb31IjD7Vdo1WLoVC89qdkIH0yfqRpgQf/i2AWBIrxTCXpjXU1ZQzM0CR0xsQup8aPM3X+kqlgiNz55PnDlcfT1PpaiSGrUjKDohvS5p+h/LUhkPFgGGGVP9+dw3Aq288xeqgg2X89b6ahADPPGSiPNyIAi1KHbzxHwAhcWYCcTnRogO3yAH04QLbiyjUvxQEwE4LxUFrb97aMvZ2YJ1cNCah5JMg85UccqYKkyu6nwCRq/GGR9Ie5luFRf/OMMF0wGDeQ5JepWwDIuP6+zgfQ/JqHEc/CDAzDDdxTD1o+D0pTKRXQwe6pu2AiWtJlsBb+4pbCWaZO/4GUF9DZsenDzWrcmDpk91zdQcLaQbq7KCRtW4ZecND6O6Jlr8B/qH5slCS8z46HpY95FvDOP5tzlqvYvMfs0IZtLQwWh4HrQH31eTxtLDWO6/fl2NrVVIRJPVOqjLq7sX4w6+Y2P6IYAcnPilHlieHMUMYTRw7lmLXK/1KY7FVQ1NKLv7b+6r/tpdEKvIRh9P5DlKVCi5IXThS0zB494o1s2FKBMYJnwK9OnOJUacUgSALtZ8XC6N7mHiQcWouvVtj6Md3XjRPdkT/KR52ip/0BfTLrz2ILN9zJ+63vylp4rJUwgxxddQfhlZ07X8OMhe/ycEOIk6BgvK1ip1Fy0At5Atj4NUbxcbeYMHaLN5wYa0BJMj9aYvJP6/FX3uPP+WJw3Fgm8cQPTfHTYySXRnHDG3qUK0Koqo/aslW0SF9uU+FgQ2EADSq19cgQ75fmRJ4c9tu2xWM5U/0GFkGDxaR9ioxjSrwu/xQNOsNk/dTAv+H5S+u5KfBhkB819RD9osS64+YRLZcThKNe++wWY6Qr9U5Nzf4m0lRqYZUphtDttfKKBI7i6ziOWv4ATfWIQczodb49x8u36Ies/D5S54dCr8YpaU4VpooOo/kMiuyay/OA0h6DAGjWHceubrUqsd3VtzVHzi3yPnMaruks5mRzUPr+Dk08N9GRID+yKnvEVqGZ0dVWCokh2O4CsKVg4uGbFwPNb2GQBan7wtnTaYfmCoc3zhykcDn6WKMkq9USDZdjgZXQPihnhkvJeBeOqh3ma6NeSbVKuLJ9YCnyz2gLsC568iux81WOyvzcAI0jA+tc/lrrCZzr1C3GZnIvVb6xt1Id/ujPP1t9JhknngFdibCd365vnT+dl+yi67nCIXA9sIjC0TRciUHhidxCuKbxH/obDA2iVuTFdIjT+NUBPnnP74jroY21l9zSxOucBa8QYf+5bgjk+qBfE95xx3Ke0Vzqdwqkldnis4inicyRSz+W8tFVLjDt91V71wz9oKPsohnSuPuplvgON1le6zbqHpfQbqPXwF8fLWWrRERmh42FU3OnkzanYup/ySwW2djiVqR4Tfe8loj6U2ScSfqM1IGMAZKMD/zwCcffY3G8HQiAavPBY5haUwW469VaUT7NT3BBgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01X5iTFkmxQwJiJ2YoywsMqx",
+        "name": "PowerShell",
+        "input": {
+          "command": "function Kids($p, $d) { Get-CimInstance Win32_Process -Filter \"ParentProcessId=$p\" | ForEach-Object { \"{0}{1} {2} {3}\" -f (' ' * $d), $_.ProcessId, $_.CreationDate.ToString('HH:mm'), $_.CommandLine.Substring(0, [math]::Min(140, $_.CommandLine.Length)); Kids $_.ProcessId ($d + 2) } }; Kids 18400 0; git -C \"$env:LOCALAPPDATA\\Temp\\dsh-eval-4b9d8ad6f7\" status --porcelain",
+          "description": "Show what Claude Code is running and its edits"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
