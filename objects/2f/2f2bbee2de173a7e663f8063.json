@@ -1,0 +1,19 @@
+{
+  "id": "2f2bbee2de173a7e663f8063",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01GALVF4HixJHZJhbbNBnbYr",
+        "type": "tool_result",
+        "content": "17:58\n{\"passed\":true,\"src\":[\"apps/desktop-host/src/office-engine.ts\",\"packages/boot/hmr/src/package-manifest.ts\"],\"steps\":49,\"seen\":2,\"read\":4,\"readsBefore\":2,\"editedExpected\":true,\"edited\":[\"apps/desktop-host/src/office-engine.ts\",\"packages/boot/hmr/src/package-manifest.ts\",\"scripts/patch-exec.cjs\"],\"extra\":[\"scripts/patch-exec.cjs\"],\"editedTests\":false,\"usage\":{\"inputTokens\":280730,\"outputTokens\":36595,\"cacheReadTokens\":3374143},\"tools\":{\"todo_write\":3,\"read\":13,\"pwsh\":24,\"grep\":4,\"write\":1,\"edit\":3}}",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
