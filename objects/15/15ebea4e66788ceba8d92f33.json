@@ -1,0 +1,15 @@
+{
+  "id": "15ebea4e66788ceba8d92f33",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01X5iTFkmxQwJiJ2YoywsMqx",
+        "type": "tool_result",
+        "content": " M packages/client/ui-primitives/src/StateDot.tsx",
+        "is_error": false
+      }
+    ]
+  }
+}
