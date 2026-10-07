@@ -1,0 +1,15 @@
+{
+  "id": "f0340cc31bc86e2ebe18333a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01NZiMraSuxECh9hQ7KHEghS",
+        "type": "tool_result",
+        "content": "async function runHarness(prompt: string, workspace: string, home: string, { homeFrom, provider, model }: RunOptions): Promise<AgentRun> {\n  await mkdir(home, { recursive: true })\n  if (homeFrom !== undefined) {\n    for (const file of HOME_FILES) {\n      await copyFile(join(homeFrom, file), join(home, file)).catch((error: unknown) => {\n        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error\n      })\n    }\n  }\n  const launch = resolveExampleLaunch({\n    srcBin: DRIVER,\n    libBin: DRIVER,\n    mode: 'src',\n    tsconfigPath: TSCONFIG,\n    configArgs: [JSON.stringify([OVERLAY]), prompt],\n    env: {\n      DSH_HOME: home,\n      DSH_TELEMETRY_DISABLED: '1',\n      ...provider === undefined ? {} : { DSH_EVAL_PROVIDER: provider },\n      ...model === undefined ? {} : { DSH_EVAL_MODEL: model },\n    },\n  })\n  const agent = await exec(launch.command, launch.args, workspace, { ...process.env, ...launch.env }, 60 * 60_000)\n  const parsed = parseDriverOutput(agent.stdout)\n  const error = turnErrorOf(parsed.events)\n  return { code: agent.code, stderr: agent.stderr, ...parsed, ...error === undefined ? {} : { error } }\n}\n\nasync function runClaudeCode(prompt: string, workspace: string, model: string | undefined, env: NodeJS.ProcessEnv): Promise<AgentRun> {\n  // No shell: the prompt holds quotes and newlines a shell would mangle.\n  const agent = await execDirect('claude', claudeCodeArgs(prompt, model), workspace, env, 60 * 60_000)\n  return { code: agent.code, stderr: agent.stderr, ...parseClaudeCodeOutput(agent.stdout) }\n}\n\nfunction execDirect(command: string, args: readonly string[], cwd: string, env: NodeJS.ProcessEnv, timeoutMs: number): Promise<Command> {\npackages/test-support/loader-smoke/src/index.ts:109:export function resolveExampleLaunch(options: ExampleLaunchOptions): ExampleLaunch {\npackages/test-support/loader-smoke/src/index.ts-110-  const mode = options.mode ?? resolveExampleMode()\npackages/test-support/loader-smoke/src/index.ts-111-  const configArgs = options.configArgs ?? []\npackages/test-support/loader-smoke/src/index.ts-112-  const env: NodeJS.ProcessEnv = { ...options.env }\npackages/test-support/loader-smoke/src/index.ts-113-\npackages/test-support/loader-smoke/src/index.ts-114-  if (mode === 'src') {\npackages/test-support/loader-smoke/src/index.ts-115-    if (options.tsconfigPath === undefined) {\npackages/test-support/loader-smoke/src/index.ts-116-      throw new Error(\"resolveExampleLaunch: 'src' mode needs tsconfigPath for the workspace paths map.\")\npackages/test-support/loader-smoke/src/index.ts-117-    }\npackages/test-support/loader-smoke/src/index.ts-118-    const tsxLoader = options.sourceImport === 'tsx/esm'",
+        "is_error": false
+      }
+    ]
+  }
+}
