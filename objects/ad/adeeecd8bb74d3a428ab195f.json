@@ -1,0 +1,13 @@
+{
+  "id": "adeeecd8bb74d3a428ab195f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Both agents passed ed34a1d7fe:\n\n| | dsh | Claude Code |\n|---|---|---|\n| Passed | yes | yes |\n| First saw the right file | step 3 | step 2 |\n| First read it | step 4 | step 3 |\n| Total steps | 55 | **39** |\n| Extra files | `win-pipe-shim.cjs` | none |\n| New input tokens | 291K | **181K** |\n| Tokens from cache | 4.4M | **2.0M** |\n| Output tokens | 24K | 22K |\n\nBoth edited the same file, `index.ts`, and neither touched the tests.\n\n**Clean comparisons so far: 3 tasks with both agents.** Both passed all 3.\n\n| Task | Steps (dsh / Claude Code) | First read (dsh / Claude Code) |\n|---|---|---|\n| 9633724b40 | 98 / **79** | **4** / 5 |\n| f04ad05f30 | 38 / **20** | **3** / 4 |\n| ed34a1d7fe | 55 / **39** | 4 / **3** |\n\n- **Finding the file is a tie.** Each agent read the right file within a step of the other on every task.\n- **Claude Code finishes in fewer steps and tokens** on every task. On the two tasks with token data for both, it used about 40–75% less new input.\n- **dsh's extra cost comes after it finds the file.** It goes to working around the Windows sandbox, and two of the three tasks left workaround files behind.\n\nThat points to the Windows sandbox, not the search, as the first thing to fix. It's only 3 tasks, so I'll wait for the other 4 before recommending anything. dsh on a59beb8ae3 is next."
+      }
+    ]
+  }
+}
