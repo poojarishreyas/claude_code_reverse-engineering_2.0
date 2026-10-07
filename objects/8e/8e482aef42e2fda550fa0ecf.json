@@ -1,0 +1,18 @@
+{
+  "id": "8e482aef42e2fda550fa0ecf",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01MUGs6DPxi71C7WBP6y95ZA",
+        "name": "PowerShell",
+        "input": {
+          "command": "$p = 'dsh-eval-([0-9a-f]{10})'; Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match $p } | ForEach-Object { [void]($_.CommandLine -match $p); \"$($_.ProcessId) $($_.Name) $($Matches[1]) $([math]::Round($_.WorkingSetSize/1MB))MB\" }; $c = Get-Process chrome -ErrorAction SilentlyContinue | Measure-Object WorkingSet64 -Sum; \"chrome $([math]::Round($c.Sum/1MB))MB\"; \"free $([math]::Round((Get-CimInstance Win32_OperatingSystem).FreePhysicalMemory/1024))MB\"",
+          "description": "Check what is using memory during the low-RAM alert"
+        }
+      }
+    ]
+  }
+}
