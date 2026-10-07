@@ -1,0 +1,23 @@
+{
+  "id": "add207d735b96a3e83cc2e86",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS/gcKEAgSGAI4AUIIdGhpbmtpbmcSDBvXgDyTm5mjF7if/xoML6E9ZX1oOsPq04OJIjAXpfa+aiyD/KLiorcoRHY0tzMujS6c23ZdxDd7RKJB5+F0jXQOdh2vk/74g/olT8wqmwePlqmWXxUgqbF1Y89cl8LoNDFwzBZASGNwMX9qq0GGpVTcoYnLuDN4eglrjMBNoaTmjNNObcnxfIIf9p4yQ0F+00hGOfYnc1DEG6TYkl2F8zwJTGHoRSRqTDxk0pIEee/IE1sOK0mpNGo9w9UXxCU5wmCTHE5g66j7+vAy5lxqr926jb2ALuxi7aMczF/Fpw2aJDiNUMgzEZBMzp43RyyL4pdYTWSd8dQlmSffOSDSmxuMewyPvN1nswzCNa84LW4RMGNcucen3mTn/TzdVm54R5opUqcgbbgWbdUF9JT3FrQtf6afdZ9BB4j89tKfBTVBoDubF2Ovh6j6be1iskzL/diNoNT0N/gkQJd1xbSJloxuF64PL4AnGCnu+1KXAY+anKdmGmXS63B2oWmNM7kJwjn7Ik5mjRGOprJoMhM32DQLK1WnJ9TYbhzuPO90N8dJ+gIgLyHTICkKyes4D0cLQ1fyzsqy/Qbr0m4pJBY6FHvJLmCDKmfQ3wvxMzR7yFeSRje3c3UEzCgnX7CeXgWNP/bipPPgNfsXSJ8WzgVfn6HccnVqB+6ycaJYCZQ3INblEbmLjBVndAsPuBNF891endpZchePFuc6TIQeiFxIPxr0wJrb07OvO9HZQdIgW9Yw98VrIt8trIlel8faZhlVtJnRIx6ep/oFctMApKdnlivC/i7+hw3CYQVqqfwNECv0nRf31dh3RD4w13xzOElkvhh9ZHj8hN+/xQw2Uy8MRQP05DMXM9GRM78LXWl6rlXuk/OpXjrzWpsJnRkrv4Hg7z952CW5kirJC+ro8stz5DZ1Owo0U7ORjebVoMa/AnRBGuVX/PMkN77LZzy9ypK1R07hX8HVLPoU1jE3g4/eFfJ2/MuTqvS+AZhaKHBjFAD+8H1Z4H2+AOnt9kwEzcNDA9PUtMMBAcRRlXOolCb1o1tK8XUKC+5zBIH6kCTBX/24PGinHLtvwBmvRJa1Uj8bF/9BrgCgoD6rXMrHeWdmaerA6BJw3iccvTfRIotRYIHczl7vl5kyqLTlDl7ByWYC7KDNyLaaaHaam8Ee7DwVsoGE9i4LP1eNuIcpm7Kwqi5JfeYqcLuZ+I/QJQSXtkkyy2MoVz36AlUqWGGXsikHAGDJ8nAphbyP24Pnd09ZHZCboYJKC6Z8uF/dhqVRIkj3ZX3LOxnODLXG/5Z6HpghSHhw0gVVqg3SzKy1yY/SOCqXp1eabKGM3e2ssRgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01NaSE38aKiQSjrWFWTwqmno",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; grep -oiE \"\\\"command\\\":\\\"[^\\\"]*git (log|show|diff|status)[^\\\"]{0,80}\" \"$S/clean-claude-code/f04ad05f30.events.jsonl\" | head",
+          "description": "Show the git commands Claude Code ran"
+        }
+      }
+    ]
+  }
+}
