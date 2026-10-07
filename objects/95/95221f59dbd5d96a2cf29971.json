@@ -1,0 +1,19 @@
+{
+  "id": "95221f59dbd5d96a2cf29971",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01EBBSd9kXDMTVDexJyFKVhF",
+        "type": "tool_result",
+        "content": "apps/desktop/tests/cli-native.spec.ts:19:      join(import.meta.dirname, 'cli-lease-probe.cpp'), '-o', join(prepared, 'lease-probe')])\napps/desktop/tests/windows-cli-signals.spec.ts:30:    probe = join(root, 'console-probe.exe')\napps/desktop/tests/windows-cli-signals.spec.ts:34:      'cl /nologo /std:c++17 /EHsc /MT /W4 /WX ' + quote(join(import.meta.dirname, 'fixtures/cli-console-probe.cpp'))\napps/desktop/tests/windows-cli-signals.spec.ts:35:        + ' /Fo' + quote(join(root, 'console.obj')) + ' /Fe' + quote(probe), '',\napps/desktop/tests/windows-signing-preflight.spec.ts:35:it.skipIf(process.platform !== 'win32')('compiles a real unsigned probe without executing it or accessing a token', async () => {\napps/desktop/tests/windows-signing-preflight.spec.ts:42:  const bytes = await readFile(join(options.runDirectory, 'signing-preflight/probe.exe'))\napps/desktop/tests/windows-signing-preflight.spec.ts:79:  expect(options.sign).toHaveBeenCalledExactlyOnceWith({ path: join(options.runDirectory, 'signing-preflight/probe.exe'), hash: 'sha256', isNest: false })\napps/desktop/tests/windows-signing-preflight.spec.ts:82:  expect(events).toContain('\"probeExecuted\":false')\napps/desktop/tests/cli-native.spec.ts:19:      join(import.meta.dirname, 'cli-lease-probe.cpp'), '-o', join(prepared, 'lease-probe')])\napps/desktop/tests/windows-cli-signals.spec.ts:30:    probe = join(root, 'console-probe.exe')\napps/desktop/tests/windows-cli-signals.spec.ts:34:      'cl /nologo /std:c++17 /EHsc /MT /W4 /WX ' + quote(join(import.meta.dirname, 'fixtures/cli-console-probe.cpp'))\napps/desktop/tests/windows-cli-signals.spec.ts:35:        + ' /Fo' + quote(join(root, 'console.obj')) + ' /Fe' + quote(probe), '',\nC:\\Users\\shrey\\AppData\\Local\\Temp/console-probe.exe\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-cli-console-G6V4NO/console-probe.exe\nC:\\Users\\shrey\\AppData\\Local\\Temp/dsh-N82hsb/ConsoleProbe.exe\n/c/Users/shrey/AppData/Local/Temp/console-probe.exe\n/c/Users/shrey/AppData/Local/Temp/dsh-cli-console-G6V4NO/console-probe.exe\n/c/Users/shrey/AppData/Local/Temp/dsh-N82hsb/ConsoleProbe.exe\nShell cwd was reset to C:\\Users\\shrey\\Desktop\\Elemental_harness",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

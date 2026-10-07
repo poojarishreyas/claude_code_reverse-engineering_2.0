@@ -1,0 +1,19 @@
+{
+  "id": "54fc38efb7b3c020d66a1f04",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01SgxSANRJip4yyPNCCBzqDi",
+        "type": "tool_result",
+        "content": "./apps/cli/tests/built-bin.e2e.ts\n./apps/cli/tests/github-webhook-real.e2e.ts\n./apps/cli/tests/profiles/acp/tests/escalation.e2e.ts\n./apps/cli/tests/profiles/headless/tests/coding-task.e2e.ts\n./apps/cli/tests/profiles/headless/tests/headless.expected.e2e.ts\n./apps/cli/tests/profiles/headless/tests/profile-resolution.ts\n./apps/cli/tests/profiles/headless/tests/ptc.e2e.ts\n./apps/cli/tests/profiles/headless/tests/source-tool.built.e2e.ts\n./apps/cli/tests/profiles/headless/tests/subagent-inheritance.expected.e2e.ts\n./apps/cli/tests/profiles/web/tests/web-best-effort-startup.expected.e2e.ts\n./.agents/notes/archived/simplification/2026-08-28-windows-only-absent-probe-repair.i18n.yaml\n./.agents/notes/archived/simplification/2026-08-28-windows-only-absent-probe-repair.md\n./.agents/notes/archived/simplification/2026-08-28-windows-only-absent-probe-repair.zh.md\n./.agents/notes/implemented/bug-fix/2026-09-14-windows-lock-release-probe.i18n.yaml\n./.agents/notes/implemented/bug-fix/2026-09-14-windows-lock-release-probe.md\n./.agents/notes/implemented/bug-fix/2026-09-14-windows-lock-release-probe.zh.md\n./apps/desktop/tests/cli-lease-probe.cpp\n./apps/desktop/tests/fixtures/cli-console-probe.cpp\n./apps/web/tests/support/listen-probe.mjs\n./packages/client/ui-plugin-manager/tests/registry-probe.host.spec.ts\nShell cwd was reset to C:\\Users\\shrey\\Desktop\\Elemental_harness",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

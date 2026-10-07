@@ -1,0 +1,27 @@
+{
+  "id": "63590c75f4ac2a6f10391af5",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS7ggKEAgSGAI4AUIIdGhpbmtpbmcSDG4+5NaBJBM0ekwsmBoM9wTZaC4E2O5bRoXQIjAhucQp3AOZYsgue0v1PpQVXmwDn+YIttZeF8wZ5YxumI+kZWm9ulx0ms/I+cJcqBEqiwhR63spvY+BEXzSNpA7SMpfbfUpw+ot+UOB8o/m0EzTzK7s5ViAMmDr+QZwqXCPLvGEI/dlciJGKAEEGzqDvkjbIBOfsIf882yTQ1Id3NlEHzBRyf111jHX2XSOtYa5icAF+m9aibPYtzsPtlQTAzqZX33gY3IpkY1fV3SxrK+G0bu66vcKtT/SCSmFtwnCQvfsAheYX/QfjWRHvheuZBVwa0jd9wQylflvmytPMsy5ggPkOUZJQrKJnvxMmKuysLmBBiGQMtvW11Tus2WoMv5xFEXfO4zhd4zQGJxTCZofUKZaZPKeAnrxh6akx6AIgfrGKI+HJyLbuE6h4Re+970TuCYqZ22mR+ouZdUqdQo48v/NwevFS4BFOeTRWz//SmQbpYjN4Of1zV1WZ50oqX4DYyLDqgDx9Ax0eUh7/r60rouWYAH7wRLRABpwFj6UBh4aT8pkkbWTCz2j8aTGIWnPLz0tDrH+gVqNAKxwqZoANk5KXEplTr0ysxeXuxjKIh9FKms7lMhamJ9AnwKYJWgi4R4va48rF75z0YJbksMilo8PtYow6KWJKfFpGx0VngB5uWMJy6tmlEROLUs5iw4AB9mRm05+Ct2D2ey0sfQJHsGrPrTDqRCdtDpgaDvysMynxkosoZi/jlqx31YqJeqsunyLu0wMn6aDf1xOL/Gv2Jj4M0mtoPjwn+LW2WUGkiEIgzyE51bnqNUwTEk7TPEwqJUKkvoLP7Kt8xv2xzmhYNlTr8zVQi3N1pZoCPF6jPlyatwHvJ5vV4hZh9AO4A5Q8LkKExLzADpX7tOU9NeARUOAT6PA2PgfGYYICu8eCBWh85VeWQqcIBpVXtkv/P5vO86/ygpFdkIYmMR2ei2Ayfy1sJliGRUyXElFuMlTwU7FM4C7boBfwrvxmGo+WTcaU478vvJFQov5i8m/trMcXyZmxjVYjIpKP6v1mQIcZU3klS7Imdor1ffBQA/PeqiuQ+d3sNII26B/SyenY80zUyfkG2H0boUyLR4HTtGbJNJmPyXlm7AWe0E13Ok3jhzEHbl4wHgThypHUAp3H8Dgv6o1Tic4YL+QapQSmettcgBZuo88CRB7J+aP/qTxDjZ+er5gwoI72zWdNcZrYLOcbolaNdqb2jPinC0nTz85XOvl83CV7vCN6K8Co4bDN23LgASU1xYLjwxguteFPofqftAbC0T4CEmNhyMh9XQrIEvyKKJb4yh/x7grlb1qFRXxoMp2plcWyO+74xB48SEXbElz2U6U15K3LNp3rS3JxsKCR8E+H8oGEZiFJAUH1yW9k3rJEio1NsPu4Qk5oiktgONakO5zNG5b2g9wQUC0hzxV7Y6Lmhsi85lfJczOj/35Ts1hQnbMaYIfWpsYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01EBBSd9kXDMTVDexJyFKVhF",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/AppData/Local/Temp/dsh-eval-e21ed97f29; grep -rn -i \"probe\\|CREATE_NEW_CONSOLE\\|new_console\\|detached\" apps/desktop/tests/*.spec.ts apps/desktop/tests/*.ts 2>/dev/null | grep -i -E \"probe.*exe|console|cpp\" | head -12; find / -maxdepth 0 >/dev/null; find \"$TEMP\" /c/Users/shrey/AppData/Local/Temp -maxdepth 3 -iname \"*probe*.exe\" 2>/dev/null | head",
+          "description": "Check how the task's tests build and launch the probe"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
