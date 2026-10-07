@@ -1,0 +1,18 @@
+{
+  "id": "7b38db0643eec02141d110af",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0134ho6QC1sEhimojhA1LRtH",
+        "type": "tool_result",
+        "content": "74\t\n75\t  it('mines the fix and prepares a worktree with the source reverted and the tests kept', async () => {\n76\t    root = await mkdtemp(join(tmpdir(), 'dsh-eval-tasks-'))\n77\t    const repo = join(root, 'repo')\n78\t    await mkdir(repo)\n79\t    await git('git', ['init', '-q'], { cwd: repo })\n80\t    const src = 'packages/core/math/src/add.ts'\n81\t    const spec = 'packages/core/math/tests/add.spec.ts'\n82\t    await commit(repo, { [src]: 'export const add = (a, b) => a - b\\n', 'README.md': 'x\\n' }, 'Add math')\n83\t    await commit(repo, { [src]: 'export const add = (a, b) => a + b\\n', [spec]: 'test\\n' }, 'fix(math): add adds')\n84\t\n85\t    const tasks = await mineTasks(repo, 10)\n86\t    expect(tasks).toHaveLength(1)\n87\t    const [task] = tasks\n88\t    expect(task).toMatchObject({ subject: 'fix(math): add adds', sourceFiles: [src], testFiles: [spec] })\n89\t    expect(await mineTasks(repo, 0)).toEqual([])\n90\t\n91\t    const workspace = join(root, 'workspace')\n92\t    await prepareWorkspace(repo, task!, workspace)\n93\t    // Git may check files out with CRLF line endings on Windows.\n94\t    const text = async (path: string): Promise<string> => (await readFile(join(workspace, path), 'utf8')).replaceAll('\\r\\n', '\\n')\n95\t    expect(await text(src)).toBe('export const add = (a, b) => a - b\\n')\n96\t    expect(await text(spec)).toBe('test\\n')\n97\t    await removeWorkspace(repo, workspace)\n98\t    await expect(readFile(join(workspace, src), 'utf8')).rejects.toThrow()\n99\t  })\n100\t\n101\t  it('deletes a source file the fix created instead of failing to restore it', async () => {\n102\t    root = await mkdtemp(join(tmpdir(), 'dsh-eval-tasks-'))\n103\t    const repo = join(root, 'repo')\n104\t    await mkdir(repo)\n105\t    await git('git', ['init', '-q'], { cwd: repo })\n106\t    const src = 'packages/core/math/src/add.ts'\n107\t    const created = 'packages/core/math/src/sum.ts'\n108\t    const spec = 'packages/core/math/tests/add.spec.ts'\n109\t    await commit(repo, { [src]: 'old\\n' }, 'Add math')\n110\t    await commit(repo, { [src]: 'new\\n', [created]: 'sum\\n', [spec]: 'test\\n' }, 'fix(math): add sum')\n111\t\n112\t    const [task] = await mineTasks(repo, 10)\n113\t    const workspace = join(root, 'workspace')\n114\t    await prepareWorkspace(repo, task!, workspace)\n115\t    expect((await readFile(join(workspace, src), 'utf8')).replaceAll('\\r\\n', '\\n')).toBe('old\\n')\n116\t    await expect(readFile(join(workspace, created), 'utf8')).rejects.toThrow()\n117\t    await removeWorkspace(repo, workspace)\n118\t  })",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "d67b85c8f17cec77fe57a601",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016mVMVbbCTNJcgn1c5boU1g",
+        "type": "tool_result",
+        "content": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 65, in <module>\r\n  File \"<stdin>\", line 4, in edit\r\nAssertionError: ('scripts/eval/tasks.spec.ts', \"    expect(await text(spec)).toBe('test\\n')\\n    await removeWorkspace(repo, works\")\r\nscripts/eval/claude-code.ts:28: * run is confined only by its working directory being a throwaway worktree.\nscripts/eval/run-eval.ts:4: * For each task mined from a repository's bug-fix history: prepare a worktree\nscripts/eval/tasks.spec.ts:75:  it('mines the fix and prepares a worktree with the source reverted and the tests kept', async () => {\nscripts/eval/README.md:11:1. checks out the fix commit in a detached git worktree and restores the source files to the parent commit, keeping the fix's tests;\nscripts/eval/README.md:67:This repository's history is squashed, so mine a repository with real history, such as a clone of the upstream `deepseek-ai/deepseek-harness`. A blobless clone (`git clone --filter=blob:none`) is enough. `--install` overrides the dependency command, and `--keep` leaves worktrees in place for inspection.\nscripts/eval/README.md:71:`--agent claude-code` gives the same prompt to `claude -p` in the same prepared worktree and scores its stream-json output with the same metrics. It loads only project settings and no MCP servers, so your own hooks, plugins, and servers do not change the result. It runs with permission checks bypassed and no sandbox, confined only by working in a throwaway worktree. It authenticates however your `claude` does, unless `--provider` names a provider from the `--home-from` DSH home: then it uses that provider's base URL and key, and every model tier and subagent runs `--model`. The provider must also serve the Anthropic Messages API (`/v1/messages`), as OmniRoute does. `<task>.json` records the model the endpoint reported answering.",
+        "is_error": false
+      },
+      {
+        "type": "text",
+        "text": "Your claude.ai usage limit has reset. Continue the task you were working on when the limit was reached; do not repeat work that is already complete."
+      }
+    ]
+  }
+}
