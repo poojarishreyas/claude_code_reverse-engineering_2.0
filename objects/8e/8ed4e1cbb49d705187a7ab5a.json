@@ -1,0 +1,17 @@
+{
+  "id": "8ed4e1cbb49d705187a7ab5a",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "I've turned the low-RAM alert back on; it warns you if free RAM drops below 2 GB. The dsh rerun of 4b9d8ad6f7 is still waiting for the model quota to come back.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
