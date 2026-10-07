@@ -1,0 +1,19 @@
+{
+  "id": "4c1c2b9b62b108c1d5de424e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012S4tfpLGNbo2NdUFPXPBD7",
+        "type": "tool_result",
+        "content": "   shrey   10462   10413 ?        22:04:18 bash C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/wait-quota.sh \n   shrey   10323   10321 ?        22:01:19 tail -n +1 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run4.log \n   shrey   11078   11076 ?        22:33:00 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run4.log \n   shrey   11120   10462 ?        22:34:20 sleep 600 \n   shrey   10413       1 ?        22:03:17 bash C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run4.sh \n# Block until the mylynx model answers a one-word request.\nK=$(grep -i \"[key line hidden]\nwhile true; do\n  r=$(curl -s -m 60 http://localhost:20128/v1/chat/completions -H \"Authorization: Bearer $K\" -H \"Content-Type: application/json\" \\\n    -d '{\"model\":\"lynx harness\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}')\n  echo \"$r\" | grep -q '\"choices\"' && { echo \"quota: back at $(date +%H:%M)\"; break; }\n  echo \"quota: still out at $(date +%H:%M)\"\n  sleep 600\ndone",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
