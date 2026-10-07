@@ -1,0 +1,15 @@
+{
+  "id": "5bdb942c5d88a7155d28cf29",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RyaJwmEUaD5ZPwLWL8sowd",
+        "type": "tool_result",
+        "content": "23344 61MB es\\nodejs\\node.exe\" -e setTimeout(()=>{},60000) C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-0123456789\\fake.mjs\r\n14116 61MB es\\nodejs\\node.exe\" -e setTimeout(()=>{},20000) C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-0123456789\\fake.mjs",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "6103281daa857488c94912aa",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSzQgKEAgSGAI4AUIIdGhpbmtpbmcSDB+K7qStzrB0ZachdRoMrAJyhhyZPcRY0U9vIjAnIlwFoOAhnT3tNEpXzG70rokh9QvSaw1yxg5uw3vUKPZUFWDkPQAbIP5FNFErGgQq6gcXgjI9iRzvbEuVsjSIaNZuQOmK8ZsATzACxohG4jCK2IqejbPaQ4Gz/oH7b5pZqDaLwNrJmy3VZtPUssdOvQ4URCOtttbB9BvKzSS71eeIXCTkryWWN6Z/E91sjveOAvRHArReyIwnYc4eIDL5JpMChPI4o+72/UescoGKJbqe7rpTiqmsHceP8R3B6mHBivoHNfvO+j/nEGejksFis4+Dg0Co2SkWGIGkMPZCh5EYT4Dh9MKqwzyJP70x5nmFpW60ODxnJ/Ue3O2/4Y6/u4vnmIE3Zd/6Mg4++dgJPXNwO08upUn+HMSB0SgK+VE/liCMZsPiaFZm8L3nziEzQaSRVFhnaOweDzsplM2zf1WEF308vriI9Ptn18DDuOfTEXAPkKRXG1QkxRafElmM12+5YE/cKJoaT3rLFbC6KyeFkcAV0BXVq8G6fUlK/MmOElGTrFz6nLc0TYEOlbpmhKuSlQdyNLZkRy7Rj8UdqSZZU0Iaaj0dSoTtJptleLoDeOijSaZHX5D5Vsos91qqhAlulb1zYuhKNn7nLx3JcFSPz6UsKid982DweqIgztPY2uzrlUQTJt1Vzs47QCGBdEFyAha7lycIuEmTxF2Ik9uf076AO4ZTBYottm7+TcogQ7D4KpEgQSExFa2Rvp7KX1fIMSYRSVflqbR9c998VfJBB84gl3NpBGHcWMHOXdXgoXYVystMSPESZOY2yu54nTw/glLQJJdVoB/KcnMraELAG1oa3WZ8NvHd/RyrAZjuUVlbR57Cm7OBbV9j/Jb1Ck6rDilMITjOUdK51DqelKzM/QZqYHW8BbQTxUeQwjjepFB3KjS7gMWp50bQp9WyPfhIP08hTSN42X/3n7CgBCRx7bc/q5F050FiGUQADkO5+Rig6nW2XAnt/akXlrigP1C+WiTvcTsJD3y6rHOB1dUVnI47Zuw5iV0oLtsxZJxGFMoZDC1yOp04Umef6lCJrDZYbG452/18Pteh3k3gXEuKXVVk6LMcqaMmQNqKYfALTdakpdNUe6PCkft4vAcUyoqObu9QUT+Tgt8FtGyD0Hsmc/qVs9TWKTyE/tk+KGvjcnlrBgkA09tgMhGPnujofSgscUpiGjVBoZrH8v0d3ge3idqxzJPtPKio41oHTnm0FCp8JvRitvvA/XWXSjPT7y2sJh9Sh4mlSmgcObL1ElWA+S6gA1mbwpBfHqFFsxqezt9hGM7EJfmUSSmosFRoLrOB7Ote1H1uTrsMt6zlLXiQ6bkl9LMtC6R6cUlPAQ6crBl8YC0q5BH0b2STUhtAil5Z+tMTseeNdxrndo8HLq64K8lu91ILr/PUWosYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01RyaJwmEUaD5ZPwLWL8sowd",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-CimInstance Win32_Process | Where-Object { $_.ProcessId -in 23344,23124,14116,14896 } | ForEach-Object { \"$($_.ProcessId) $([math]::Round($_.WorkingSetSize/1MB))MB $($_.CommandLine.Substring([math]::Max(0,$_.CommandLine.Length-110)))\" }",
+          "description": "Show what the dry run matched"
+        }
+      }
+    ]
+  }
+}
