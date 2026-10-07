@@ -1,0 +1,19 @@
+{
+  "id": "096bcc79d067f8f05a195033",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011HnMErWWR2FoHnHSRe173y",
+        "type": "tool_result",
+        "content": "SUCCESS: The process with PID 9804 (child process of PID 8060) has been terminated.\r\nSUCCESS: The process with PID 8060 (child process of PID 19324) has been terminated.\r\nSUCCESS: The process with PID 19324 (child process of PID 9584) has been terminated.\r\nERROR: The process \"8060\" not found.\r\n0\r\nremoved C:/Users/shrey/AppData/Local/Temp/dsh-eval-9633724b40\nC:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/upstream 5badb15009 [master]",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
