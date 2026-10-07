@@ -1,0 +1,27 @@
+{
+  "id": "e86e37a9a070c8369aff435f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS7wYKEAgSGAI4AUIIdGhpbmtpbmcSDIhE8nvLV0JofYAnqhoMyWNTlLuQIB8y/WzhIjBP/pK4tFS0VUWt3fys4XGw81iwTbHVK00xONU/UI1iMfy/pEvSHLbdmFljDMDti3IqjAbIUxJT2iAO8fypKNX57EzdPS475glx0mQUeDPtWk8LT6nOM+rY4Wx/8umrZ/HGp8MLmxn1/eXP82iwsb6UxsDThwNQ7kzEyzGKbXyRWONC2NB79dhvZnpsm2IMjIpXSo8S/unRHCRxENwrlhjyJRNV3aj8lg47ERyfm8/bcEYXBib3s4mV/lp1sHqBA7++sdX08GBLdAmeWrLkbPsLH4qC4Q2KJks6QYOjQtlN4LPk2jkVSj3hNZDSbidYfF0WxTsgVFpzKRxpt3jmgY8gIiole8Ry3d0xEg0JXByq5JhXcz6gmTCvluzuRgV1o1gUgqRN172eZcUNviGjBhQAwOF/AmqS8o9c7xc1P8029zL8OtrO2vE9zxNhevh3ygahG0kb5VHr/z9UgVOrh5gzzMAbYnqsgvFDXcaU/AbQM19Q4n8iB2aHEskJe1Fjfc1i7MsnfiAzI6I7GrDYpydYavh4qT+6qG7LPkUH/4P2Afm4/MBk6trRXD44uYwbGXhB1oIpUv3XA/5MHeQqBTo/TwDFoxIkHQqJp9+OhZwSpiDpZUMnDPOnBlVPDUsvb1H+yFsbbgHr+GTQWehNyCVD2bSlWu9A0TKHxcqgZq5LiFxKGVALMs+0cp2IOTwFUST6vJAWSoiRG2G/wqyxLyseuJX5mE27Km76KwFYbEUxqaOkvOXlmojkD+x/7kCgWj6L72HWSj6yamYWUwNDrLtpLQuAbxJNmWEld/pmeR1e7Rcii7cbaYbSzpkdR3u3WeLImeX5RmhuBaNYaxRfIUo4UgPD5PwZbuNQM2wS4Cv4A+bjt8oCh8/iKv5M92chMPJTgQ3qaZxAO3o4Jpp4l8oUYw0BBpGdfbSVOetWEqJ7jIWQ8mN2b3VBacYHOxLMB10fLkGhDT8kZCqD9TsPclBMjB8ATkMlDPq0ExmsuMNiVDHX2u3uaVe16VBsm7vvtxSR4467+GHVJ+x7Umr+I9J9Io57p7Z0aq9CkJ77xvtXmparJPBN3QVlIFvAxLi+almchHgFsxQ/7LsKhEEFlUcYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01BF9ae2xFgoiZmKhdBHTEK4",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/AppData/Local/Temp/dsh-eval-54fa38795f && git status --porcelain | head -20; git diff --stat | tail -5; powershell -NoProfile -Command \"Get-CimInstance Win32_Process | Where-Object { \\$_.CommandLine -match 'dsh-eval-54fa' -or \\$_.Name -eq 'claude.exe' } | ForEach-Object { \\\"\\$(\\$_.ProcessId) \\$(\\$_.Name) \\$([math]::Round(\\$_.WorkingSetSize/1MB))MB \\$(\\$_.CreationDate)\\\" }\"",
+          "description": "See what Claude Code has changed in the workspace"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "6a32bf1c89615d8a8fd84610",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01EsWEBBQDmP8tBGEqM1jVic",
+        "name": "Monitor",
+        "input": {
+          "command": "low=0; while true; do f=$(powershell -NoProfile -Command \"[math]::Round((Get-CimInstance Win32_OperatingSystem).FreePhysicalMemory/1024)\" 2>/dev/null | tr -d '\\r'); if [ -n \"$f\" ]; then if [ \"$f\" -lt 2500 ] && [ $low -eq 0 ]; then echo \"LOW RAM: ${f} MB free at $(date +%H:%M)\"; low=1; elif [ \"$f\" -gt 3500 ] && [ $low -eq 1 ]; then echo \"RAM ok again: ${f} MB free\"; low=0; fi; fi; sleep 10; done",
+          "description": "free RAM below 2.5 GB during eval",
+          "timeout_ms": 1800000
+        }
+      }
+    ]
+  }
+}
