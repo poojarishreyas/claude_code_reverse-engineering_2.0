@@ -1,0 +1,19 @@
+{
+  "id": "8c50fbe84c62e1adde1d21b6",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01CeXhLpkk1f54A36Xh65dAb",
+        "type": "tool_result",
+        "content": "check ok\nnode.exe                     16788 Console                    1    103,452 K\nnode.exe                     16940 Console                    1     42,700 K\nnode.exe                      6068 Console                    1    515,552 K",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
