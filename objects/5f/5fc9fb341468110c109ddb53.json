@@ -1,0 +1,15 @@
+{
+  "id": "5fc9fb341468110c109ddb53",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01VBQPqFn1sBP2VsTB6rydg7",
+        "type": "tool_result",
+        "content": "21020 claude.exe e21ed97f29 198MB\r\nchrome 3816MB\r\nOneDrive.Sync.Service 842MB\r\nfree 2644MB",
+        "is_error": false
+      }
+    ]
+  }
+}

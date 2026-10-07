@@ -1,0 +1,20 @@
+{
+  "id": "4dc4daaf16b90682961e1aac",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_014RMxUZzGShWyGSbGistD9b",
+        "type": "tool_result",
+        "content": "Monitor started (task b6qqmmckq, expires in 30m unless the source ends first; you get one notice at expiry — re-arm if you still need the watch). You will be notified on each event. Keep working — do not poll or sleep. Events may arrive while you are waiting for the user — an event is not their reply."
+      },
+      {
+        "tool_use_id": "toolu_017gSgG5LjZfN1X4HRhZBHjd",
+        "type": "tool_result",
+        "content": "21:05\neval: e21ed97f29 -> ran (passed)\nquota: back at 21:00\neval: e21ed97f29 [cross-package, indirect, multi-file] fix(desktop): deliver Windows console signals to CLI handlers",
+        "is_error": false
+      }
+    ]
+  }
+}
