@@ -1,0 +1,15 @@
+{
+  "id": "48ab505a54ea6e42f60cf423",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_015jqic1dadyBTJU78YEVciP",
+        "type": "tool_result",
+        "content": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe\r\nBuildTools size: 1.63 GB\r\nC: free 36.1 GB",
+        "is_error": false
+      }
+    ]
+  }
+}
