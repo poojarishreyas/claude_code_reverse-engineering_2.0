@@ -1,0 +1,19 @@
+{
+  "id": "183edb1f1357a68ce947f827",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_014cxj1tAaU9fqMf5NCTNMgc",
+        "type": "tool_result",
+        "content": "ok\r\nlint-exit=0\n Test Files  3 passed (3)\n      Tests  18 passed (18)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

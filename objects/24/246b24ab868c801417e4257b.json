@@ -1,0 +1,15 @@
+{
+  "id": "246b24ab868c801417e4257b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Vko6i1voRKG2p9pVVWhB9s",
+        "type": "tool_result",
+        "content": "ok\r\nscripts/eval/metrics.spec.ts:94:1: error @stylistic(max-len): This line has a length of 167. Maximum allowed is 140.\ntsc-done",
+        "is_error": false
+      }
+    ]
+  }
+}
