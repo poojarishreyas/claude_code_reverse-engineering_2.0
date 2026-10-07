@@ -1,0 +1,17 @@
+{
+  "id": "69c6dd390c3420ab7a8f0945",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "The quota is still out: checks at 22:04, 22:14 and 22:24 all failed. The dsh rerun of 4b9d8ad6f7 will start on its own as soon as the quota comes back. I'm watching for that and will tell you when the run starts and when it finishes.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
