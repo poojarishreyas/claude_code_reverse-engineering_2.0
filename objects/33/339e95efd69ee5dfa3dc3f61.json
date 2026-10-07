@@ -1,0 +1,15 @@
+{
+  "id": "339e95efd69ee5dfa3dc3f61",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_018VJRRv6Agir9GsLUKzfS72",
+        "type": "tool_result",
+        "content": "{\"timestamp\":\"2026-10-07T16:18:47.389Z\",\"path\":\"/v1/messages\",\"status\":504,\"model\":\"lynx harness\"}\n{\"timestamp\":\"2026-10-07T16:18:47.334Z\",\"path\":\"/v1/messages\",\"status\":504,\"model\":\"gemini-3.7-flash-high\"}\n{\"timestamp\":\"2026-10-07T16:14:55.599Z\",\"path\":\"/v1/messages\",\"status\":503,\"model\":\"lynx harness\"}\n{\"timestamp\":\"2026-10-07T16:14:53.513Z\",\"path\":\"/v1/messages\",\"status\":503,\"model\":\"lynx harness\"}\n{\"timestamp\":\"2026-10-07T16:14:52.303Z\",\"path\":\"/v1/messages\",\"status\":503,\"model\":\"lynx harness\"}\n{\"timestamp\":\"2026-10-07T16:14:51.681Z\",\"path\":\"/v1/messages\",\"status\":503,\"model\":\"lynx harness\"}\n{\"timestamp\":\"2026-10-07T16:14:51.566Z\",\"path\":\"/v1/messages\",\"status\":504,\"model\":\"lynx harness\"}\n{\"timestamp\":\"2026-10-07T16:14:51.497Z\",\"path\":\"/v1/messages\",\"status\":504,\"model\":\"gemini-3.7-flash-high\"}\n{\"timestamp\":\"2026-10-07T16:12:11.223Z\",\"path\":\"/v1/messages\",\"status\":200,\"model\":\"gemini-3.7-flash-high\"}\n{\"timestamp\":\"2026-10-07T16:09:41.224Z\",\"path\":\"/v1/messages\",\"status\":504,\"model\":\"lynx harness\"}\n{\"timestamp\":\"2026-10-07T16:09:41.166Z\",\"path\":\"/v1/messages\",\"status\":504,\"model\":\"gemini-3.7-flash-high\"}\n{\"timestamp\":\"2026-10-07T16:06:56.125Z\",\"path\":\"/v1/messages\",\"status\":503,\"model\":\"lynx harness\"}\ncount since 21:00: [\n  [Object: null prototype] { path: '/api/providers/test', n: 4 },\n  [Object: null prototype] { path: '/v1/chat/completions', n: 1 },\n  [Object: null prototype] { path: '/v1/messages', n: 57 }\n]",
+        "is_error": false
+      }
+    ]
+  }
+}

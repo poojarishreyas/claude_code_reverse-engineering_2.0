@@ -1,0 +1,15 @@
+{
+  "id": "c1abfc95e9fcd66327d2eb9b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RCXVk9uDURcvZEwBoSGFY1",
+        "type": "tool_result",
+        "content": "[\n  [Object: null prototype] {\n    status: 200,\n    model: 'gemini-3.7-flash-high',\n    n: 31,\n    first: '2026-10-07T15:34:42.450Z',\n    last: '2026-10-07T16:12:11.223Z'\n  },\n  [Object: null prototype] {\n    status: 499,\n    model: 'gemini-3.7-flash-high',\n    n: 1,\n    first: '2026-10-07T15:54:13.319Z',\n    last: '2026-10-07T15:54:13.319Z'\n  },\n  [Object: null prototype] {\n    status: 504,\n    model: 'lynx harness',\n    n: 5,\n    first: '2026-10-07T15:54:13.745Z',\n    last: '2026-10-07T16:18:47.389Z'\n  },\n  [Object: null prototype] {\n    status: 502,\n    model: 'gemini-3.7-flash-high',\n    n: 2,\n    first: '2026-10-07T15:56:21.298Z',\n    last: '2026-10-07T16:06:51.592Z'\n  },\n  [Object: null prototype] {\n    status: 502,\n    model: 'lynx harness',\n    n: 2,\n    first: '2026-10-07T15:56:21.357Z',\n    last: '2026-10-07T16:06:51.656Z'\n  },\n  [Object: null prototype] {\n    status: 503,\n    model: 'lynx harness',\n    n: 12,\n    first: '2026-10-07T15:56:21.489Z',\n    last: '2026-10-07T16:14:55.599Z'\n  },\n  [Object: null prototype] {\n    status: 504,\n    model: 'gemini-3.7-flash-high',\n    n: 4,\n    first: '2026-10-07T15:59:01.899Z',\n    last: '2026-10-07T16:18:47.334Z'\n  },\n  [Object: null prototype] {\n    status: 429,\n    model: 'gemini-3.7-flash-high',\n    n: 1,\n    first: '2026-10-07T16:21:59.256Z',\n    last: '2026-10-07T16:21:59.256Z'\n  },\n  [Object: null prototype] {\n    status: 429,\n    model: 'lynx harness',\n    n: 1,\n    first: '2026-10-07T16:21:59.292Z',\n    last: '2026-10-07T16:21:59.292Z'\n  }\n]\ncols: id,timestamp,method,path,status,model,requested_model,provider,account,connection_id,duration,tokens_in,tokens_out,tokens_cache_read,tokens_cache_creation,tokens_reasoning,tokens_compressed,cache_source,request_type,source_format,target_format,api_key_id,api_key_name,combo_name,combo_step_id,combo_execution_key,error_summary,detail_state,artifact_relpath,artifact_size_bytes,artifact_sha256,has_request_body,has_response_body,has_pipeline_details,request_summary,correlation_id,model_pinned,session_tag,reasoning_source,reasoning_chars,response_id,error_type,video_content_removed,ttft_ms,added_wait_ms,added_wait_cause,reasoning_duration_ms,reasoning_effort_requested,reasoning_effort_upstream,reasoning_encrypted,has_content,usage_provenance,resilience_actions\n504 [504] [antigravity/gemini-3.7-flash-high] [504]: Antigravity upstream did not return response headers within 80000ms: https://cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse (reset after 5s)\n504 [504]: Antigravity upstream did not return response headers within 80000ms: https://cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse\n503 [503] Service temporarily unavailable: all targets were skipped by pre-dispatch filters",
+        "is_error": false
+      }
+    ]
+  }
+}
