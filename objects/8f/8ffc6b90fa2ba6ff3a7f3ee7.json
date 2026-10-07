@@ -1,0 +1,27 @@
+{
+  "id": "8ffc6b90fa2ba6ff3a7f3ee7",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSsAcKEAgSGAI4AUIIdGhpbmtpbmcSDFvN17LEu4pt1fzNYxoMXmfCDILfMPFUwr+9IjD/h85fcEsqvVrPgzA62TTOGsGqeyFx1G8AFRIz4NvUbArMK+Z89nFmm+cAmpm45LgqzQaAocR1y/TaBzWLWgBll2dbf+7oEj3n9LIsUA+tiiF36Guyop7Cav+7fJGLqX3Dlu0kGYxUshhkV4L5VhPAPk+UBtVAR/t4CmzL1Bd7dE5T5dIpRjAQaqJqxLTjh8F+pE+xJiD3auANVHFR7rTq9Rq0pguAXRHZhByzJxKuGWVLmolEnXE3kFzdPg6VG8R9zw5GVpjm3dwwQvWLMGbSHUsZrCdDsIH9m1RiB5kbiMfmvhKHYCGla2+ALWskSP60uue1MuVEqITe/8Y5i/r9w3AKNQSMjHhmihYPux3Jtu/fHIKb+pBpktcjtclZ5pQ6Huwk8ABrBZxzLuioqXvDm6rHk0rGV9++nO14y6MmzjG8SeTRCrDx/f1Q5eSg0fJMGMqKmm9BeMo+MiroBtRMlGR8EeF6NlR+x/5c5jL1fXif1KTrNQp04G3lYv5e6PNE6uHkhHetKwFkSbSSv4VXfYFbL266beTn8fw0GmEj8L5G6g8hCuyWWwS1FUsYoM49/1pvBF96u9ekIxGYW+SdKUC/u/H88viAWFMQU0NblMozeIFJ4IikD8j/IJL5NT/U4T4z4u3BlxIIIAAzKHEZS4VOZyavkYKwb3aIoEGwI+vpUO2V2cn5y0lcBEBkkRiVbnuCeg1xGDv1vPx2zSUhR2LJynSi0sxVsHm0TUg+l9boV1WiOhyvnTC91+4lbQRRjaXWIut45UJ4SRD37QerzAmMHC+1SBeVfAJQ+uG9hbQB+e/1Jc1AMydGk+ytwrjEgiXao5NT/RvZD3KwLNDPoyXK2RAnVGpzvRkSuY8wnTWbRsGkukRuX8SSl31j+lnXENbUXPUHYS7xIjYV6sBeH1+WdEtoJ+dYfrLC6bzkiJ+XONbI2FbVbq5B3R8kvUbsZ2WsWExS+lFuUy86FsKQaL6nLuMi8aeGhJqPCrnf2Lb946NyREfRZX7yvNJ9eTJEi2ST3DcZAJKp6FHuZiB1N9yYk0EQ/T7Z2Uhx9c4tqXvT3cR0yIWBqfWGvcSW0Cr1kUNPVHBBBhTZlrvT5CtAxPLYjhsyD59ifdrnwQVv1LQYIkJIwDI7NZvkplV4UCDRUeYXtCCx8wEa8lsksGD9BWt2OvUlUcyJPbjvFuIIsxgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01SB8ibUFAixLqXwsuKFQDcC",
+        "name": "PowerShell",
+        "input": {
+          "command": "$p = 'dsh-eval-([0-9a-f]{10})'; Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match $p } | ForEach-Object { [void]($_.CommandLine -match $p); \"$($_.ProcessId) $($_.Name) $($Matches[1]) $([math]::Round($_.WorkingSetSize/1MB))MB\" }; $c = Get-Process chrome -ErrorAction SilentlyContinue | Measure-Object WorkingSet64 -Sum; \"chrome total $([math]::Round($c.Sum/1MB))MB in $($c.Count) procs\"; \"free $([math]::Round((Get-CimInstance Win32_OperatingSystem).FreePhysicalMemory/1024))MB\"",
+          "description": "Group eval processes by task and total Chrome memory"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "3bce07bcec7de64c360f9240",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01SB8ibUFAixLqXwsuKFQDcC",
+        "type": "tool_result",
+        "content": "21768 claude.exe 54fa38795f 214MB\r\n16164 node.exe 54fa38795f 543MB\r\nchrome total 3288MB in 21 procs\r\nfree 4219MB",
+        "is_error": false
+      }
+    ]
+  }
+}
