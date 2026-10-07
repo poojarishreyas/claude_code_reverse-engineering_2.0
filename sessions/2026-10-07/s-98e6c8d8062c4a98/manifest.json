@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "s-98e6c8d8062c4a98",
+  "title": "/** * File-finding evaluation runner. * * For each task mined from a repository's bug-fix history: prepare a workspac...",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-opus-5-5",
+  "credential": "c3aa2db0733d",
+  "startedAt": "2026-10-07T14:21:44.640Z",
+  "updatedAt": "2026-10-07T14:21:48.646Z",
+  "durationMs": 4006,
+  "requests": 1,
+  "errors": 0,
+  "events": 5,
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": [
+    "98e6c8d8062c4a98a359e51e"
+  ]
+}

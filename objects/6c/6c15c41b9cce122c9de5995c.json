@@ -1,0 +1,22 @@
+{
+  "id": "6c15c41b9cce122c9de5995c",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01RmBepYHhinBTfHe5AM9dhR",
+        "name": "PowerShell",
+        "input": {
+          "command": "Get-CimInstance Win32_Process | Where-Object { $_.WorkingSetSize -gt 250MB } | Sort-Object WorkingSetSize -Descending | ForEach-Object { \"$($_.ProcessId) $($_.Name) $([math]::Round($_.WorkingSetSize/1MB))MB $(if ($_.CommandLine) { $_.CommandLine.Substring(0,[math]::Min(120,$_.CommandLine.Length)) })\" }",
+          "description": "Find what is using memory now"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

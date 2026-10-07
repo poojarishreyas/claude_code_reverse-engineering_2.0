@@ -1,0 +1,15 @@
+{
+  "id": "49c1c29cfc6d8e63a0166747",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RmBepYHhinBTfHe5AM9dhR",
+        "type": "tool_result",
+        "content": "22732 OneDrive.Sync.Service.exe 777MB \"C:\\Users\\shrey\\AppData\\Local\\Microsoft\\OneDrive\\26.173.0906.0008\\OneDrive.Sync.Service.exe\" /silentConfig\r\n14720 node.exe 587MB \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppData/Local/Temp/dsh-ev\r\n16164 node.exe 552MB node   \"C:\\Users\\shrey\\AppData\\Local\\Temp\\dsh-eval-54fa38795f\\node_modules\\.bin\\\\..\\vitest\\vitest.mjs\" run\r\n5168 MsMpEng.exe 480MB \r\n6068 node.exe 449MB \"C:\\Program Files\\nodejs\\node.exe\" --dns-result-order=ipv4first --max-old-space-size=4096 C:\\Users\\shrey\\AppData\\Roaming\r\n17056 node.exe 363MB \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppData/Local/Temp/dsh-ev\r\n10736 node.exe 345MB \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppData/Local/Temp/dsh-ev\r\n17004 claude.exe 343MB \"C:\\Users\\shrey\\AppData\\Roaming\\npm\\\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe\"    \"--resume\"\r\n21496 chrome.exe 338MB \"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=renderer --no-pre-read-main-dll --video-capture-use-gpu-m\r\n18620 chrome.exe 337MB \"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=gpu-process --gpu-recent-crash-count=0 --no-pre-read-main\r\n22100 node.exe 329MB \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppData/Local/Temp/dsh-ev\r\n3356 Memory Compression 319MB \r\n10048 chrome.exe 303MB \"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=renderer --no-pre-read-main-dll --video-capture-use-gpu-m\r\n11192 chrome.exe 298MB \"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" \r\n20548 chrome.exe 297MB \"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=renderer --no-pre-read-main-dll --video-capture-use-gpu-m\r\n20592 node.exe 282MB \"C:\\Program Files\\nodejs\\node.exe\" --experimental-import-meta-resolve --require C:/Users/shrey/AppData/Local/Temp/dsh-ev\n\n<system-reminder>\nAttribution for git commits and pull requests you create from here on (this replaces Claude Code's own earlier attribution guidance, such as a previous copy of this reminder; the user's own instructions about these lines, such as a CLAUDE.md or memory rule, take precedence over this reminder, but do not add attribution lines this reminder leaves out):\n- End git commit messages with:\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n- End pull request descriptions with:\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n</system-reminder>",
+        "is_error": false
+      }
+    ]
+  }
+}
