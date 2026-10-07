@@ -1,6 +1,6 @@
 # Session index
 
-_44 captured sessions, newest first. Updated 2026-10-07T12:55:20.601Z._
+_44 captured sessions, newest first. Updated 2026-10-07T12:55:36.984Z._
 
 | updated | session | model | reqs | in | out | cache read | title |
 | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
