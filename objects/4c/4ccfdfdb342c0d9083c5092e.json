@@ -1,0 +1,15 @@
+{
+  "id": "4ccfdfdb342c0d9083c5092e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01QkktVK8oA513Zzr2bV1RSo",
+        "type": "tool_result",
+        "content": "\"arguments\":\"{\\\"pattern\\\":\\\"animationstart|getAnimations|onAnimationStart\\\"}\n\"arguments\":\"{\\\"path\\\":\\\"node_modules/vite/dist/node/chunks/node.js\\\",\\\"pattern\\\":\\\"windowsSafeRealPathSync\\\"}\n\"arguments\":\"{\\\"pattern\\\":\\\"exec\\\",\\\"path\\\":\\\"scripts\\\"}\n\"arguments\":\"{\\\"pattern\\\":\\\"StateDot\\\"}\n\"arguments\":\"{\\\"path\\\":\\\"packages/client/ui-primitives/src\\\",\\\"pattern\\\":\\\"addEventListener\\\"}\n\"arguments\":\"{\\\"path\\\":\\\"scripts\\\",\\\"pattern\\\":\\\"vitest\\\"}\n===CC\n\"arguments\":{\"pattern\":\"StateDot\",\"path\":\"C:/Users/shrey/AppData/Local/Temp/dsh-eval-4b9d8ad6f7/packages/client/ui-primitives\"}\n\"arguments\":{\"pattern\":\"getAnimations|animationstart|startTime\",\"path\":\"C:/Users/shrey/AppData/Local/Temp/dsh-eval-4b9d8ad6f7\"}\n\"arguments\":{\"pattern\":\"getAnimations\",\"path\":\"C:/Users/shrey/AppData/Local/Temp/dsh-eval-4b9d8ad6f7/packages\"}\n\"arguments\":{\"path\":\"C:/Users/shrey/AppData/Local/Temp/dsh-eval-4b9d8ad6f7/packages/client/ui-primitives/src\",\"pattern\":\"getAnimations\"}\n\"arguments\":{\"path\":\"packages/experimental/claude-code-mods\",\"pattern\":\"path\"}\n\"arguments\":{\"pattern\":\"posix\",\"path\":\"packages\"}\nid,timestamp,method,path,status,model,requested_model,provider,account,connection_id,duration,tokens_in,tokens_out,tokens_cache_read,tokens_cache_creation,tokens_reasoning,tokens_compressed,cache_source,request_type,source_format,target_format,api_key_id,api_key_name,combo_name,combo_step_id,combo_execution_key,error_summary,detail_state,artifact_relpath,artifact_size_bytes,artifact_sha256,has_request_body,has_response_body,has_pipeline_details,request_summary,correlation_id,model_pinned,session_tag,reasoning_source,reasoning_chars,response_id,error_type,video_content_removed,ttft_ms,added_wait_ms,added_wait_cause,reasoning_duration_ms,reasoning_effort_requested,reasoning_effort_upstream,reasoning_encrypted,has_content,usage_provenance,resilience_actions",
+        "is_error": false
+      }
+    ]
+  }
+}
