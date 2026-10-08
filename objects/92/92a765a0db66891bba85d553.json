@@ -1,0 +1,22 @@
+{
+  "id": "92a765a0db66891bba85d553",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSlQcKEAgSGAI4AUIIdGhpbmtpbmcSDOOgrpF8QOmYNSCWvxoMcmEBxU3DiASf3cUBIjBouIWkdgyZaKx6BdfE1sqkiCrlqaH5ppkfwrvXFxHaMKESoYr6Y131qxV7qWOatmIqsgZlFIvwgg40djN8zpdwVttIkh+xgX3ZRKKFNMjH2y1lsMkgqWgA0zlWzngS5NsEcF8b4SQ4bWy9mvSCSSMIUESkRp4bXIxHxVMT1kleGQvi6zUt/aliaPrBgRr9uUQNvmR231hewVFmX4bJl3dxE2monbctU5B9e6zNeDwl6Sx/FYCrkbT9zdRBcgxQ8nA38yOWhtVUIBIH61CyS2KqO9ZNAYbkfd0G1fi/0Ce/mwqVimwJUTkICuN98fBxQkDpgdGefn7cqTqvNx/ETNpEIVG81y9Gwb54zk5kTx2YpebWr6DPNiz+vr+NjfKw7ia95e+m69HvQq1jKBsaLGMfchihzjWgS/hdtEif8NbCllz3XH3aDYq5k8dueGAQ7s7RFy+D1qHW13b53jyBoZ5CRrKG7WtsmrokGEyB5GX0pkqSAyJ6xs3+vju7npLgnUoGUxPaBcfnb5bpa6kSR3jQ/JEDmeJIbFV3/Zhy/aI3VbASiboDIsRsA6nNf8HpnEUeTuT901ynB2pGc+SPAx88PGMAdnKDT1GENcYkxILxBxRAmDgvQRtF93cikGOs7uxQbi6WQ/up4bsDVLG95GKwXoyAFYuigNu0J52yXKGNwB+MuqGV3uY9O6HfY3Z2ApewizMjBkJ3P5AHWSVJHSy0k4RSF1riD1txC2HpHzaA8Z6hPcIMsyUDsixZ8ibl88xOlGuXrhYYrnwUlakj8CNsNGg2nfLGELFAYWq24yDTeEbnYlmE2YiDT4X8YvycgpSbe+Ss51wkNP+Djfg8BmmQ3SCm96vkz2w0ywD8ZHPoMAD2aj7oa2e8iEiUh09FcGQaEzBTvVN1qPwICPBl+ggucaGQzXFznVNklmzV9OblSfr9PVDo7I6qVZBmeCltpLjQyvAYnBSGjd9CpTyNBVPsPzivnl3aWB0nRIAQPIvZtZ3U2EGRjcGLQ/URN5cekvlxXLvuR5TKjpu08zk5iIZY2m968rLN5UODhM9BD2XGU8j6MO1jfX8VHMHiaz+xf5WBvTIUjHaRYqAQZvuT1tbMYsQo5uHfLGu+fs3qnTMqcQ/fes4ffmX6ry5N4cMgRfMJdy0QLxgB"
+      },
+      {
+        "type": "text",
+        "text": "**Final verdict: on this evidence, dsh is not yet better than Claude Code.** At the core skill you care about, finding the right files, they tie. Claude Code wins on cost and reliability. Everything is stopped now; I cancelled the last dsh rerun.\n\n**The numbers.** Both used the same model, Gemini 3.7 Flash through OmniRoute, which I confirmed in OmniRoute's logs. 8 hard bug-fix tasks:\n\n| | dsh | Claude Code |\n|---|---|---|\n| Passed (of 6 usable tasks) | 4 | 6 |\n| Lost to proxy errors | 2 (gave up after ~8 s) | 0 (waited out the same kind of errors) |\n| Step it first saw the right file | 2, 3, 3, 2 | 4, 3, 2, 1 |\n| Steps, 4 tasks both passed | 240 | 189 (about 21% fewer) |\n| Input tokens, 3 tasks both passed | 782K | 563K (about 28% less) |\n\nThe other 2 tasks are left out because they couldn't be tested properly on Windows. Both agents cheated around missing tools there: they skipped a test, faked a compiler, or installed one.\n\n**What's worth fixing.** Each of these is backed by the runs:\n1. **Retry for longer on proxy errors (502/503/504).** This is the biggest gap: it cost dsh 2 of 8 runs, and on both it had already found the right files. It's a small change to dsh's retry settings.\n2. **Cut the overhead from dsh's Windows sandbox.** Tests started by dsh fail with permission errors, so on most tasks dsh wrote helper files just to get tests running. That's most of its extra steps and tokens.\n3. **Make the eval stricter.** Treat edits to test config files (like `vitest.config.ts`) as editing tests, and stop the agent installing system software during a run.\n\n**What not to build:** new search or retrieval features. Finding files already ties, so there's no evidence they would help. Per your rule, they'd be garbage features.\n\n**Limits:** only 4 tasks gave a direct comparison, on one model and on Windows only. That's enough to set priorities, not enough to claim a precise margin.\n\n**Left on your PC:**\n- My eval-script changes are uncommitted; I'll commit only if you ask.\n- Visual Studio Build Tools (about 1.6 GB, installed by Claude Code during its run). You can uninstall it from Settings, then Apps.\n- dsh's fake compiler folder at `%TEMP%\\dsh-test-toolchain`. It's safe to delete.\n\nI can start on fix 1 if you want.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
