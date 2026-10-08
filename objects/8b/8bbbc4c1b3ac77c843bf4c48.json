@@ -1,0 +1,27 @@
+{
+  "id": "8bbbc4c1b3ac77c843bf4c48",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSzgYKEAgSGAI4AUIIdGhpbmtpbmcSDFzwXYmHlmPyDhHboBoMiBIn+6Xtwy1hq97bIjAynogthc8pjLxapzuZUIZPGWvzdMqRXXlPZn69kZgR1LNal981fn2IzBNDsA/XMFgq6wXoB30631kDlDbeQUiQPQIO7cEUqq4N/WPkvZG56KGVOJyKOvDGfrzj2oTaa6cIkSw/7B+eFI4W+ThH+SMfaJhbcgdqDpzdt1RzbEPIvKqqQOO1S6b4AwATRWn0C8C0812vjsvp8aAJN7hW0OHtTaYz0p376+AH2xY22VZHaPcnmLUWsEgEm2qpahR2153tkxSnptfQgTjLzOsTPLsBzWFc3/vaWkH2Lny8vjfWMzCOJfXZ3daaDNOm1R2EGQSv5DKGZkMgKtwaoxdg0+hGgeO2XDgLx9M8fnwBpqoh+DBYPiCq87ZVJOQiTCPZqjL0hJCZPDw5Cwgu4E+a+wVPHSMAcjNE9vZM/f0Oe2YfCSmAIP9/RptPjSraXhg5SCnzTIIlqkxZgZo1xk0cwLKjO+9o1fOq8jHfGgLAIfsg7Oz5ihlSCFGnCyTctSJdIwpubOoibddrhADXyzm+km+ad07UyVSTbVRQDI8+vc6TSddQc1x2iR1mfULbQj59+rbjk/EOMuT8UaGnbs91qcrnL9nzlerskk/6eA+d//6xgU/tBaJKqOe+2wdXIEqkKIoYPUXdeTIBh3fFnF8lkehHcDCnl8gUHGc8O8fPHky5FfyEFm1Vz58VNgwCiE7yeVnyQTEnL07DM4U822q1pQS7LiSzVJTjyaHvYu3N36bQFvckfiYhJDMzOcYscF1rWloIHKFf6A3+znCokbSrJelevm9Dp9GyuB0+qM6k6zY8epU6jUVtcPBzFXEhQLKBRXZ9KkOViW7Eu1CSwx5XVvD0WHNo2AIU5oyEe0XpAVfZ2DrquKor8mlg2qDTZTrGQAD+aTztW1xfIWc9RiCebZ+EQ3N7MQ/ifncd6eB35jlztJLwLB/7A7WY7N7jyRSy/yhZ2V2tG4IU/HrQrA7P5gKbPnQeDPLDAG4xS0Ru9DU0G8nspREw+PIsoi5bEhzF/FMY1PMBaT8FBusqbpzLukgThooRn+68osh/bVDZgjEYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01FkaDx3mt5WJwZBCHNNMXtU",
+        "name": "Bash",
+        "input": {
+          "command": "S=C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad; cd $S; for f in clean-claude-code/980b410340.json clean-claude-code/4b9d8ad6f7.json clean-dsh/980b410340.json clean-dsh/4b9d8ad6f7.json; do echo \"$f: $(grep -oE '\"(durationMs|wallMs|elapsedMs|status|steps)\":[^,}]*' $f | tr '\\n' ' ')\"; done",
+          "description": "Read run durations from the result files"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

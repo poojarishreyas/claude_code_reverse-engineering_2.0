@@ -1,0 +1,15 @@
+{
+  "id": "886ee479c25d05a8c82cb043",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01FkaDx3mt5WJwZBCHNNMXtU",
+        "type": "tool_result",
+        "content": "clean-claude-code/980b410340.json: \"status\": \"ran\" \"steps\": 42 \nclean-claude-code/4b9d8ad6f7.json: \"status\": \"ran\" \"steps\": 27 \nclean-dsh/980b410340.json: \"status\": \"error\" \"steps\": 49 \nclean-dsh/4b9d8ad6f7.json: \"status\": \"error\" \"steps\": 36",
+        "is_error": false
+      }
+    ]
+  }
+}
