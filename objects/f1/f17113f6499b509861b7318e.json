@@ -1,0 +1,19 @@
+{
+  "id": "f17113f6499b509861b7318e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012z9ke9fVoH2CqAkvPnebZ5",
+        "type": "tool_result",
+        "content": "packages/llm/llm/src/index.ts:162:  readonly retryPolicy: ResolvedRetryPolicy\npackages/llm/llm/src/index.ts:429:      const retryPolicy = adapter.providerRetryPolicy(provider)\npackages/llm/llm/src/index.ts:430:        ?? resolveRetryPolicy(undefined, `llm: provider \"${provider}\" retryPolicy`)\npackages/llm/llm/src/index.ts:434:        retryPolicy,\npackages/llm/llm/src/index.ts:647:    return this.registration(provider).retryPolicy\npackages/llm/llm/src/index.ts:910:      retryPolicy: registration.retryPolicy,\npackages/llm/llm/src/index.ts:1082:  readonly retryPolicy: ResolvedRetryPolicy\npackages/llm/llm/src/retry-policy.ts:41:  maxRetries?: number\npackages/llm/llm/src/retry-policy.ts:69:  readonly maxRetries: number\npackages/llm/llm/src/retry-policy.ts:89:  maxRetries: z.number().step(1).min(0).max(Number.MAX_SAFE_INTEGER).default(DEFAULT_MAX_RETRIES),\npackages/llm/llm/src/retry-policy.ts:106:  'mode', 'maxRetries', 'retryableCodes', 'backoff',\npackages/llm/llm/src/retry-policy.ts:111:  'mode', 'maxRetries', 'retryableCodes', 'backoff',\npackages/llm/llm/src/retry-policy.ts:156:      maxRetries: DEFAULT_MAX_RETRIES,\npackages/llm/llm/src/retry-policy.ts:165:      const maxRetries = config.maxRetries ?? DEFAULT_MAX_RETRIES\npackages/llm/llm/src/retry-policy.ts:167:      if (!Number.isSafeInteger(maxRetries) || maxRetries < 0) {\npackages/llm/llm/src/retry-policy.ts:168:        throw new Error(`${path}.maxRetries must be a non-negative safe integer`)\npackages/llm/llm/src/retry-policy.ts:181:        maxRetries,\npackages/llm/llm-deepseek/src/adapter.ts:111:  retryPolicy: ResolvedRetryPolicy\npackages/llm/llm-deepseek/src/adapter.ts:366:    return this.config.options().retryPolicy\npackages/llm/llm-deepseek/src/index.ts:163:  retryPolicy?: RetryPolicyConfig\npackages/llm/llm-deepseek/src/index.ts:196:  retryPolicy: RetryPolicySchema,\npackages/llm/llm-deepseek/src/index.ts:401:    retryPolicy: resolveRetryPolicy(config.retryPolicy, 'llm-deepseek: retryPolicy'),\npackages/llm/llm-deepseek/src/index.ts:477:  let registeredPolicy = options().retryPolicy\npackages/llm/llm-deepseek/src/index.ts:479:    const policy = options().retryPolicy\npackages/llm/llm-pi-ai/src/adapter.ts:130:    maxRetries: 0,\nprofiles\nsessions\nsettings.yaml\nstorages\n/c/Users/shrey/.dsh/settings.yaml:9:    mylynx:\n/c/Users/shrey/.dsh/settings.yaml-10-      displayName: omniroute\n/c/Users/shrey/.dsh/settings.yaml-12-      api: openai-completions\n/c/Users/shrey/.dsh/settings.yaml-13-      baseURL: http://localhost:20128/v1\n/c/Users/shrey/.dsh/settings.yaml-14-      models:\n--\n/c/Users/shrey/.dsh/settings.yaml:20:  provider: mylynx\n/c/Users/shrey/.dsh/settings.yaml-21-  model: lynx harness\n/c/Users/shrey/.dsh/settings.yaml-22-ui-chat:\n/c/Users/shrey/.dsh/settings.yaml-23-  transcriptView: compact",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

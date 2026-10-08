@@ -1,0 +1,15 @@
+{
+  "id": "6d0015edc5993f83825b8f51",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019L9bzuAB4DZxJHaZ5ptQb5",
+        "type": "tool_result",
+        "content": "    \"typecheck\": \"npm run build:lib:host && npm run typecheck:contracts-ready\",\n    \"typecheck:contracts-ready\": \"tsc -b tsconfig.client.json\",\n    \"lint\": \"npm run build:lib:host && npm run lint:contracts-ready\",\n    \"lint:contracts-ready\": \"tsx scripts/run-oxlint.ts .\",\n    \"lint:fix\": \"npm run build:lib:host && npm run lint:fix:contracts-ready\",\n    \"lint:fix:contracts-ready\": \"tsx scripts/run-oxlint.ts --config .oxlintrc.staged.json packages/typert/generator/tests/fixtures/type-model --fix && tsx scripts/run-oxlint.ts . --fix\",\n    \"check:all\": \"tsx scripts/run-gates.ts check-all\",\n    \"check:ci\": \"tsx scripts/run-gates.ts ci-primary\",\n    \"check:ci:linux-primary\": \"tsx scripts/run-gates.ts ci-linux-primary\",\n    \"check:ci:static\": \"tsx scripts/run-gates.ts ci-static\",\n    \"check:ci:lint:contracts-ready\": \"tsx scripts/run-gates.ts ci-lint-contracts-ready\",\n    \"check:ci:coverage\": \"tsx scripts/run-gates.ts ci-coverage\",\n    \"check:ci:snapshot\": \"tsx scripts/run-gates.ts ci-snapshot\",\n    \"check:ci:artifacts\": \"tsx scripts/run-gates.ts ci-artifacts\",\n    \"check:ci:consumers\": \"tsx scripts/run-gates.ts ci-consumers\",\n    \"check:windows-wine\": \"bash scripts/wine-windows-gates.sh\",\n    \"check:ci:windows-blocking\": \"tsx scripts/run-gates.ts ci-windows-blocking\",\n    \"check:ci:windows-complete\": \"tsx scripts/run-gates.ts ci-windows-complete\",\n    \"check:ci:windows-observational\": \"tsx scripts/run-gates.ts ci-windows-observational\",\n    \"check:node-compat\": \"tsx scripts/run-gates.ts node-compat\",\ntsc=0\n\nFrom ESLint v9.0.0, the default configuration file is now eslint.config.js.\nIf you are using a .eslintrc.* file, please follow the migration guide\nto update your configuration file to the new format:\n\nhttps://eslint.org/docs/latest/use/configure/migration-guide\n\nIf you still have problems after following the migration guide, please stop by\nhttps://eslint.org/chat/help to chat with the team.\n\neslint done",
+        "is_error": false
+      }
+    ]
+  }
+}

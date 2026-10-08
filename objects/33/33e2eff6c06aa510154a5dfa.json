@@ -1,0 +1,19 @@
+{
+  "id": "33e2eff6c06aa510154a5dfa",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Ksoi17BjKU4PPt7RrRbL9R",
+        "type": "tool_result",
+        "content": "packages/llm/llm-pi-ai/src/adapter.ts:56:  ResolvedRetryPolicy,\npackages/llm/llm-pi-ai/src/adapter.ts:267:  override providerRetryPolicy(provider: string): ResolvedRetryPolicy | undefined {\npackages/llm/llm-pi-ai/src/adapter.ts:268:    return this.current().profiles.get(provider)?.retryPolicy\npackages/llm/llm-pi-ai/src/config.ts:22:import { resolveRetryPolicy, RetryPolicySchema } from '@deepseek-ai/dsh-llm'\npackages/llm/llm-pi-ai/src/config.ts:23:import type { ResolvedRetryPolicy, RetryPolicyConfig } from '@deepseek-ai/dsh-llm'\npackages/llm/llm-pi-ai/src/config.ts:178:  retryPolicy?: RetryPolicyConfig\npackages/llm/llm-pi-ai/src/config.ts:183:  extends Omit<PiAiProviderProfile, 'apiKeyEnv' | 'retryPolicy' | 'models' | 'displayName'> {\npackages/llm/llm-pi-ai/src/config.ts:199:  retryPolicy: ResolvedRetryPolicy\npackages/llm/llm-pi-ai/src/config.ts:336:  retryPolicy: RetryPolicySchema,\npackages/llm/llm-pi-ai/src/config.ts:447:    const { apiKeyEnv, retryPolicy, models: _models, displayName: _displayName, ...rest } = source\npackages/llm/llm-pi-ai/src/config.ts:457:      retryPolicy: resolveRetryPolicy(retryPolicy, `llm-pi-ai: provider \"${provider}\" retryPolicy`),\npackages/llm/llm-pi-ai/src/index.ts:20: *         retryPolicy:\npackages/llm/llm-pi-ai/src/index.ts:107:      retryPolicy: profile.retryPolicy,\n  const enabledReasoning: ThinkingLevel | undefined = reasoning === 'off' ? undefined : reasoning\n  return {\n    ...apiKey === undefined ? {} : { apiKey },\n    ...enabledReasoning === undefined ? {} : { reasoning: enabledReasoning },\n    ...profile.thinkingBudgets === undefined ? {} : { thinkingBudgets: profile.thinkingBudgets },\n    ...profile.cacheRetention === undefined ? {} : { cacheRetention: profile.cacheRetention },\n    ...profile.transport === undefined ? {} : { transport: profile.transport },\n    ...profile.timeoutMs === undefined ? {} : { timeoutMs: profile.timeoutMs },\n    ...profile.websocketConnectTimeoutMs === undefined ? {} : { websocketConnectTimeoutMs: profile.websocketConnectTimeoutMs },\n    // The agent recovery layer owns visible attempts; one adapter call is one SDK attempt.\n    maxRetries: 0,\n  }\n}\n\n/**\n * The profile default this exact model can actually take, for DESCRIBING it.\n * A configured level the model does not support yields none rather than\n * throwing: `resolveModel` builds the model catalog, and a catalog that fails\n * takes its whole provider out of every picker — so one mis-set profile field\n * would hide every model on the route, including the ones that support the\n * level. The request path still refuses, which is where a bad configuration",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
