@@ -1,0 +1,15 @@
+{
+  "id": "bdc198e3511b609a71a41385",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0134vg8DVVbbAk7Y4UmR3ha4",
+        "type": "tool_result",
+        "content": "step/end: {\"turn\":1,\"step\":49}\nturn/end: {\"turn\":1,\"reason\":{\"kind\":\"error\",\"error\":{\"message\":\"[antigravity/gemini-3.7-flash-high] [502]: fetch failed (cause: UND_ERR_CONNECT_TIMEOUT: Connect Timeout Error (attempted addresses: 2001:4860:4844:400:::443, 2001:4860:4846:400:::443, 2001:4860:4843:400:::443, 2001:4860:4842:400:::443, 2001:4860:4840:400:::443, 2001:4860:4845:400:::443, 2001:4860:4841:400:::443, 2001:4860:4847:400:::443, timeout: 10000ms)) (reset after 5s)\",\"code\":\"INVALID_REQUEST\"}}}\ntypes near end: step/start,assistant/chunk,assistant/message,tool/call,tool/result,step/end,turn/end\n\nstep/end: {\"turn\":1,\"step\":36}\nturn/end: {\"turn\":1,\"reason\":{\"kind\":\"error\",\"error\":{\"message\":\"[antigravity/gemini-3.7-flash-high] [504]: Antigravity upstream did not return response headers within 80000ms: https://cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse (reset after 5s)\",\"code\":\"SERVER\"}}}\ntypes near end: assistant/chunk,llm/retry,llm/retry-started,step/end,turn/end",
+        "is_error": false
+      }
+    ]
+  }
+}
