@@ -1,0 +1,15 @@
+{
+  "id": "7c4481e7a12fd0d64a8fde89",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Du7FfJHLhCgHKKsi5fChJd",
+        "type": "tool_result",
+        "content": "/v1/chat/completions calls 425 | smallest request 78 p5 14677 median 135103 | median output 139 median reasoning 60\n/v1/messages calls 261 | smallest request 78 p5 29702 median 107805 | median output 119 median reasoning 0",
+        "is_error": false
+      }
+    ]
+  }
+}
