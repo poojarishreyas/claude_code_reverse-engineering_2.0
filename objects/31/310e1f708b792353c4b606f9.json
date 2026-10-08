@@ -1,0 +1,19 @@
+{
+  "id": "310e1f708b792353c4b606f9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019cuUmM4r3VJP6Eu7YepDgf",
+        "type": "tool_result",
+        "content": "   shrey    2057    2050 ?        16:24:32 tail -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run3.log \n   shrey    5377    5375 ?        18:26:09 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run3.log \n   shrey    6182    6180 ?        18:56:15 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run3.log \n   shrey    7871    7869 ?        19:56:49 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run3.log \n   shrey    7072    7070 ?        19:26:37 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run3.log \n   shrey    9549    9547 ?        21:05:22 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run3.log \n   shrey    1764    1758 ?        16:14:58 tail -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run2.log \n   shrey    4409    4407 ?        17:54:50 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run3.log \n   shrey   10052   10048 ?        21:52:15 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run3.log \n   shrey    8760    8756 ?        20:34:56 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run3.log \n   shrey    3603    3601 ?        17:24:46 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run3.log \n   shrey    1323    1321 ?        14:24:26 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run.log \n   shrey   11164   11162 ?        00:44:38 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run4.log \n   shrey    2784    2782 ?        16:54:37 tail -n 0 -f C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-run3.log",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
