@@ -1,0 +1,19 @@
+{
+  "id": "c01b6760ede8396cbdcbfdff",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01NA1rbr2CeEvmXbsmi23G5z",
+        "type": "tool_result",
+        "content": "/** Current bounded transient retry behavior for one provider route. */\nexport interface NormalRetryPolicyConfig {\n  /** Retry only configured transient failure codes. */\n  mode: 'normal'\n  /** Maximum eligible retries after the first request (default 5). */\n  maxRetries?: number\n  /** Stable failure codes eligible for this policy. */\n  retryableCodes?: string[]\n  /** Local exponential-backoff and jitter configuration. */\n  backoff?: BackoffConfig\n}\n\n/** Unbounded retry behavior for every model-request failure on one provider route. */\nexport interface AlwaysRetryPolicyConfig {\n  /** Retry every model-request failure until success, cancellation, or disposal. */\n  mode: 'always'\n  /** Local exponential-backoff and jitter configuration. */\n  backoff?: BackoffConfig\n}\n\n/** Provider-owned model-request retry policy configuration. */\nexport type RetryPolicyConfig = NormalRetryPolicyConfig | AlwaysRetryPolicyConfig\n\n/** Fully resolved backoff shared by both retry modes. */\nexport interface ResolvedRetryBackoff {\n  readonly initialDelayMs: number\n  readonly maxDelayMs: number\n  readonly jitterRatio: number\n}\n\n/** Fully resolved bounded transient retry policy. */\nexport interface ResolvedNormalRetryPolicy extends ResolvedRetryBackoff {\n  readonly mode: 'normal'\n  readonly maxRetries: number\n  readonly retryableCodes: readonly string[]\n}\n\n/** Fully resolved unbounded retry policy. */\nexport interface ResolvedAlwaysRetryPolicy extends ResolvedRetryBackoff {\n  readonly mode: 'always'\n}\n\n/** Immutable provider policy captured when its adapter route is registered. */\nexport type ResolvedRetryPolicy = ResolvedNormalRetryPolicy | ResolvedAlwaysRetryPolicy\n\nconst backoffSchema: z<BackoffConfig> = z.object({\n  initialDelayMs: z.number().max(MAX_TIMER_DELAY_MS).default(DEFAULT_INITIAL_DELAY_MS),\n  maxDelayMs: z.number().max(MAX_TIMER_DELAY_MS).default(DEFAULT_MAX_DELAY_MS),\n  jitterRatio: z.number().min(0).max(1).default(DEFAULT_JITTER_RATIO),\n})\n\nconst normalPolicySchema: z<NormalRetryPolicyConfig> = z.object({\n  mode: z.const('normal').required(),\n  maxRetries: z.number().step(1).min(0).max(Number.MAX_SAFE_INTEGER).default(DEFAULT_MAX_RETRIES),\n  retryableCodes: z.array(z.string()).default([...DEFAULT_RETRYABLE_CODES]),\n  backoff: backoffSchema,\n})\n\nconst alwaysPolicySchema: z<AlwaysRetryPolicyConfig> = z.object({\n  mode: z.const('always').required(),\n  backoff: backoffSchema,\n})\n\n/** Cordis schema embedded by each concrete provider configuration. */\nexport const RetryPolicySchema: z<RetryPolicyConfig> = z.union([\n *   config:\n *     providers:\n *       # Catalog route: everything but the credential comes from pi-ai.\n *       openai:\n *         apiKeyEnv: OPENAI_API_KEY\n *         retryPolicy:\n *           mode: normal\n *           maxRetries: 2\n *       # Catalog route with the catalog narrowed and one capacity corrected.\n *       anthropic:\n *         apiKeyEnv: ANTHROPIC_API_KEY\n *         models:\n *           - id: claude-sonnet-4-5\n *             contextWindow: 200000\n *       # Hand-declared route: pi-ai ships nothing under this key.\n *       acme-gateway:",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

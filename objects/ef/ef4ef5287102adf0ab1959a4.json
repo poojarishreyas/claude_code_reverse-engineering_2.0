@@ -1,0 +1,18 @@
+{
+  "id": "ef4ef5287102adf0ab1959a4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01Ksoi17BjKU4PPt7RrRbL9R",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -n \"providerRetryPolicy\\|retryPolicy\\|RetryPolicy\" packages/llm/llm-pi-ai/src/*.ts | head -20; sed -n 120,140p packages/llm/llm-pi-ai/src/adapter.ts",
+          "description": "Check whether pi-ai providers accept a retry policy"
+        }
+      }
+    ]
+  }
+}

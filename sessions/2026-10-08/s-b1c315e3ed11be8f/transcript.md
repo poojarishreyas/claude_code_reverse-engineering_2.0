@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 8 |
-| tokens | in 14 · out 5,141 · cache read 533,218 · cache write 25,920 |
+| requests | 9 |
+| tokens | in 18 · out 6,258 · cache read 702,383 · cache write 29,067 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -969,4 +969,213 @@ packages/llm/llm-pi-ai/src/index.ts:107:      retryPolicy: profile.retryPolicy,
  * would hide every model on the route, including the ones that support the
  * level. The request path still refuses, which is where a bad configuration
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01NA1rbr2CeEvmXbsmi23G5z)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 35,100p packages/llm/llm/src/retry-policy.ts; sed -n 15,30p packages/llm/llm-pi-ai/src/index.ts",
+  "description": "Read the retry policy config shape"
+}
+```
+
+_stop `tool_use` · 4.07s (ttft 2.83s) · in 2 · out 333 · cache r83,867/w1,431_
+
+---
+
+## req-0009 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 22 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01Ksoi17BjKU4PPt7RrRbL9R)_
+
+```
+packages/llm/llm-pi-ai/src/adapter.ts:56:  ResolvedRetryPolicy,
+packages/llm/llm-pi-ai/src/adapter.ts:267:  override providerRetryPolicy(provider: string): ResolvedRetryPolicy | undefined {
+packages/llm/llm-pi-ai/src/adapter.ts:268:    return this.current().profiles.get(provider)?.retryPolicy
+packages/llm/llm-pi-ai/src/config.ts:22:import { resolveRetryPolicy, RetryPolicySchema } from '@deepseek-ai/dsh-llm'
+packages/llm/llm-pi-ai/src/config.ts:23:import type { ResolvedRetryPolicy, RetryPolicyConfig } from '@deepseek-ai/dsh-llm'
+packages/llm/llm-pi-ai/src/config.ts:178:  retryPolicy?: RetryPolicyConfig
+packages/llm/llm-pi-ai/src/config.ts:183:  extends Omit<PiAiProviderProfile, 'apiKeyEnv' | 'retryPolicy' | 'models' | 'displayName'> {
+packages/llm/llm-pi-ai/src/config.ts:199:  retryPolicy: ResolvedRetryPolicy
+packages/llm/llm-pi-ai/src/config.ts:336:  retryPolicy: RetryPolicySchema,
+packages/llm/llm-pi-ai/src/config.ts:447:    const { apiKeyEnv, retryPolicy, models: _models, displayName: _displayName, ...rest } = source
+packages/llm/llm-pi-ai/src/config.ts:457:      retryPolicy: resolveRetryPolicy(retryPolicy, `llm-pi-ai: provider "${provider}" retryPolicy`),
+packages/llm/llm-pi-ai/src/index.ts:20: *         retryPolicy:
+packages/llm/llm-pi-ai/src/index.ts:107:      retryPolicy: profile.retryPolicy,
+  const enabledReasoning: ThinkingLevel | undefined = reasoning === 'off' ? undefined : reasoning
+  return {
+    ...apiKey === undefined ? {} : { apiKey },
+    ...enabledReasoning === undefined ? {} : { reasoning: enabledReasoning },
+    ...profile.thinkingBudgets === undefined ? {} : { thinkingBudgets: profile.thinkingBudgets },
+    ...profile.cacheRetention === undefined ? {} : { cacheRetention: profile.cacheRetention },
+    ...profile.transport === undefined ? {} : { transport: profile.transport },
+    ...profile.timeoutMs === undefined ? {} : { timeoutMs: profile.timeoutMs },
+    ...profile.websocketConnectTimeoutMs === undefined ? {} : { websocketConnectTimeoutMs: profile.websocketConnectTimeoutMs },
+    // The agent recovery layer owns visible attempts; one adapter call is one SDK attempt.
+    maxRetries: 0,
+  }
+}
+
+/**
+ * The profile default this exact model can actually take, for DESCRIBING it.
+ * A configured level the model does not support yields none rather than
+ * throwing: `resolveModel` builds the model catalog, and a catalog that fails
+ * takes its whole provider out of every picker — so one mis-set profile field
+ * would hide every model on the route, including the ones that support the
+ * level. The request path still refuses, which is where a bad configuration
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01NA1rbr2CeEvmXbsmi23G5z)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 35,100p packages/llm/llm/src/retry-policy.ts; sed -n 15,30p packages/llm/llm-pi-ai/src/index.ts",
+  "description": "Read the retry policy config shape"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01NA1rbr2CeEvmXbsmi23G5z)_
+
+```
+/** Current bounded transient retry behavior for one provider route. */
+export interface NormalRetryPolicyConfig {
+  /** Retry only configured transient failure codes. */
+  mode: 'normal'
+  /** Maximum eligible retries after the first request (default 5). */
+  maxRetries?: number
+  /** Stable failure codes eligible for this policy. */
+  retryableCodes?: string[]
+  /** Local exponential-backoff and jitter configuration. */
+  backoff?: BackoffConfig
+}
+
+/** Unbounded retry behavior for every model-request failure on one provider route. */
+export interface AlwaysRetryPolicyConfig {
+  /** Retry every model-request failure until success, cancellation, or disposal. */
+  mode: 'always'
+  /** Local exponential-backoff and jitter configuration. */
+  backoff?: BackoffConfig
+}
+
+/** Provider-owned model-request retry policy configuration. */
+export type RetryPolicyConfig = NormalRetryPolicyConfig | AlwaysRetryPolicyConfig
+
+/** Fully resolved backoff shared by both retry modes. */
+export interface ResolvedRetryBackoff {
+  readonly initialDelayMs: number
+  readonly maxDelayMs: number
+  readonly jitterRatio: number
+}
+
+/** Fully resolved bounded transient retry policy. */
+export interface ResolvedNormalRetryPolicy extends ResolvedRetryBackoff {
+  readonly mode: 'normal'
+  readonly maxRetries: number
+  readonly retryableCodes: readonly string[]
+}
+
+/** Fully resolved unbounded retry policy. */
+export interface ResolvedAlwaysRetryPolicy extends ResolvedRetryBackoff {
+  readonly mode: 'always'
+}
+
+/** Immutable provider policy captured when its adapter route is registered. */
+export type ResolvedRetryPolicy = ResolvedNormalRetryPolicy | ResolvedAlwaysRetryPolicy
+
+const backoffSchema: z<BackoffConfig> = z.object({
+  initialDelayMs: z.number().max(MAX_TIMER_DELAY_MS).default(DEFAULT_INITIAL_DELAY_MS),
+  maxDelayMs: z.number().max(MAX_TIMER_DELAY_MS).default(DEFAULT_MAX_DELAY_MS),
+  jitterRatio: z.number().min(0).max(1).default(DEFAULT_JITTER_RATIO),
+})
+
+const normalPolicySchema: z<NormalRetryPolicyConfig> = z.object({
+  mode: z.const('normal').required(),
+  maxRetries: z.number().step(1).min(0).max(Number.MAX_SAFE_INTEGER).default(DEFAULT_MAX_RETRIES),
+  retryableCodes: z.array(z.string()).default([...DEFAULT_RETRYABLE_CODES]),
+  backoff: backoffSchema,
+})
+
+const alwaysPolicySchema: z<AlwaysRetryPolicyConfig> = z.object({
+  mode: z.const('always').required(),
+  backoff: backoffSchema,
+})
+
+/** Cordis schema embedded by each concrete provider configuration. */
+export const RetryPolicySchema: z<RetryPolicyConfig> = z.union([
+ *   config:
+ *     providers:
+ *       # Catalog route: everything but the credential comes from pi-ai.
+ *       openai:
+ *         apiKeyEnv: OPENAI_API_KEY
+ *         retryPolicy:
+ *           mode: normal
+ *           maxRetries: 2
+ *       # Catalog route with the catalog narrowed and one capacity corrected.
+ *       anthropic:
+ *         apiKeyEnv: ANTHROPIC_API_KEY
+ *         models:
+ *           - id: claude-sonnet-4-5
+ *             contextWin
+... [102 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+I fixed the bug that lost one of the two dsh runs. I did not make the retry window longer, because nothing I have shows that change would help.
+
+**The bug:** when dsh gets an error, it reads the message text to decide whether to try again. It treated any "400" anywhere in the text as "your request was wrong, don't retry". On task 980b410340, OmniRoute sent a 502 (a temporary gateway error worth retrying), but the error text listed Google IPv6 addresses like `2001:4860:4844:400::`. dsh saw that "400", marked the error as not retryable, and stopped without a single retry.
+
+**The fix** (`packages/llm/llm-pi-ai/src/stream.ts`): a number now only counts as a status code if it stands alone. Digits right after `:` or `.` belong to an address or version, so they're ignored. The real error from that run is now classed as a server error and gets retried. Real 400, 401 and 429 errors are classed the same as before. I added that exact error message as a test in `convert.spec.ts`. All 338 tests in the llm-pi-ai and llm-retry packages pass, and type-check and lint are clean.
+
+**The retry window:** on the other lost run (4b9d8ad6f7), dsh did retry 5 times over about 6 minutes. Four quick 503s used up 4 retries in under 8 seconds, then the gateway's 504s took minutes each, and it gave up. More retries spaced further apart might have saved it, but it might not have: the gateway was failing for minutes at a time. So I didn't change the code defaults, which would affect every provider.
+
+You can try a longer window just for OmniRoute through settings. No code change is needed, and you can delete the lines to undo it. In `~/.dsh/settings.yaml`, under `mylynx:`, you'd add:
+
+```yaml
+      retryPolicy:
+        mode: normal
+        maxRetries: 8
+        backoff:
+          initialDelayMs: 2000
+          maxDelayMs: 30000
+```
+
+That stretches the retries over about 2–3 minutes of waiting instead of about 15 seconds. Say if you want me to add it. Only the next eval run that hits gateway errors would show whether it helps.
+
+Nothing is committed.
+
+_stop `end_turn` · 9.17s (ttft 8.93s) · in 2 · out 784 · cache r85,298/w1,716_
 
