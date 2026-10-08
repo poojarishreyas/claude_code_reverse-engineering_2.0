@@ -1,0 +1,25 @@
+{
+  "id": "6cf19123ff820c5f5ee405c1",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS5QYKEAgSGAI4AUIIdGhpbmtpbmcSDLq6hTh6fLpeBuWS9RoMDmLV/sWgUI0mMoOuIjBnF3qfBc5CztzJTB4huu+FCmbLxmHbFHGwOkbQ91sA42u3MLZYu1KozYOalzI+JkEqggbBelvZdzUePVvvY8PjZtWkiIzWV9Go5lmBG548twapTZk1tx4bz+D0dYJb8M5+9JbFeuPMv9IOGjEUx5XA5hse67qehQRrn44HfCTM82LTYZaPxV7mCBA6I3BAu8BXZUhCHugEDgn1SLKvRjVcgmkCwD8l6B0YhOgJ4jF5WmX9/VDeNhcvQDJidr24n9rwkhyiBdzCqlrnJronB6YCbmpLRXLLbAeCUM6KOWV9pUS9oOjFXFEINirMpmo+x3Dx0Ug41h+sjI0uC2lM5ueAA4aePZIzPhTqcs7B91tl82dui2ielqfY79RzmI1VwP9DRNDGCQ6BNr8lloRlTaiX4OgKIc1/ys6nXPNr7u6SL4+/6trhArkw5o5Ix1tmq0oDtuUlzDqkKKwfBAtKDcR+WpRRiNTkn8aPsweODJYrMc6WxOFVskejIl+GmRGYp3bpU3EReKJcs+UDXfYgTeWi8Hh2lkNAYDZnnN8rYTiA8+/P4m21NcD6OW/OgnhjyuseylZzG77c6MD0pWtH3rhxKoci0oPEw9KUlzJfIxx5oXwtRZelaBmmwBr6qo7gjkx9F7YyF8/vvY6JdPxBu3Dybkzw5kAULJTROCoa0yY6m2yfVpDdZS2ljdioYunkxTNlawCiYkmm9sjTxYhvnol+kEUpKgdHpQIALg4/OsoWejew7SFxLx9WUtSxxh7mH2v3eHHiiHASaRys7GadlBjxgAaQGHCqEOOy5EoU57TSlTKKdYM40p3DvbO2XjdMflDSx3RQTNsGgL6QVjqi3ZWkxVGfXqqHDc4sxKHhcKjYSQAUF55vPurtUaU6QN0yS6WW+xfO0gEfqDyPnk5ChgiZFUP0HOzbUu6rON4vruhUYWakQFWPkjr6o6OuR2Az1KeZquzfMcPQ7OOBrCkQDLc9i8mwIqP2az1Pa8cfCODS0EfUij32sO/HaBbjuHAKsP963jcsEt/Lgn3yvxt4Zc/N07gb9n4aEtpjpM1ptYKvK+6U4b7W7H4mXdDbqd0ELX8hB6SO2RgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_017xEP2tNd7kVuNM5GEGnVqE",
+        "name": "Grep",
+        "input": {
+          "pattern": "maxDelay|initialDelay|maxRetries|maxAttempts",
+          "path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages",
+          "glob": "*.ts",
+          "output_mode": "files_with_matches"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "5abf2555e0bab85e5d166859",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01MZNp4b7THwkdu6V8ZHo1jw",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\llm\\llm\\src\\retry-policy.ts"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01FFnu1qQBdvbbhhbJ5Vcvk1",
+        "name": "Read",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\llm\\llm-retry\\src\\index.ts"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

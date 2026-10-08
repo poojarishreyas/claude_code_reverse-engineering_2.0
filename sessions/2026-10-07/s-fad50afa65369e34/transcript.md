@@ -5,8 +5,8 @@
 | session | `s-fad50afa65369e34` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T14:21:49.743Z |
-| requests | 118 (38 errored) |
-| tokens | in 808 · out 33,894 · cache read 8,549,083 · cache write 354,261 |
+| requests | 120 (38 errored) |
+| tokens | in 810 · out 34,068 · cache read 8,693,925 · cache write 355,587 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -6541,4 +6541,329 @@ ok fix retry window
 ```
 
 _stop `tool_use` · 3.36s (ttft 2.21s) · in 4 · out 217 · cache r144,833/w9_
+
+---
+
+## req-0119 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 170 messages_
+
+#### USER
+
+ok fix retry window
+
+#### USER
+
+**<- tool_result** _(toolu_017xEP2tNd7kVuNM5GEGnVqE)_
+
+```
+Found 43 files
+packages\extensions\tool-cordis\src\api-catalog.ts
+packages\util\atomic-write\tests\atomic-write.spec.ts
+packages\test-support\llm-replay\tests\llm-replay.spec.ts
+packages\subagent\tool-subagent-control\tests\tool-subagent-control.spec.ts
+packages\subagent\subagent\tests\list-children.spec.ts
+packages\subagent\subagent\tests\continuation.spec.ts
+packages\session\session-projection-cache\tests\cache.spec.ts
+packages\session\session-persistence\tests\write-behind.spec.ts
+packages\session\session-persistence\src\write-behind.ts
+packages\session\session-persistence\src\coordinator.ts
+packages\mcp\mcp-client\tests\reconnect.spec.ts
+packages\mcp\mcp-client\tests\mcp-client.e2e.ts
+packages\mcp\mcp-client\tests\apply.spec.ts
+packages\mcp\mcp-client\src\connection.ts
+packages\mcp\mcp-client\src\index.ts
+packages\llm\token-meter\tests\token-usage-projection.spec.ts
+packages\llm\llm\tests\service.spec.ts
+packages\llm\llm\tests\retry-policy.spec.ts
+packages\llm\llm\src\retry-policy.ts
+packages\llm\llm-retry\tests\loader-composition.spec.ts
+packages\llm\llm-retry\tests\retry.spec.ts
+packages\llm\llm-retry\tests\transport-recovery.spec.ts
+packages\llm\llm-retry\src\index.ts
+packages\llm\llm-retry\src\invariant.ts
+packages\llm\llm-retry\src\types.ts
+packages\llm\llm-retry\tests\invariant.spec.ts
+packages\llm\llm-pi-ai\tests\sdk-options.spec.ts
+packages\llm\llm-pi-ai\tests\dynamic-config.spec.ts
+packages\llm\llm-pi-ai\tests\adapter.spec.ts
+packages\llm\llm-pi-ai\src\index.ts
+packages\llm\llm-pi-ai\src\adapter.ts
+packages\llm\llm-pi-ai\src\config.ts
+packages\llm\llm-deepseek\tests\dynamic-config.spec.ts
+packages\llm\llm-deepseek\tests\adapter.spec.ts
+packages\host\directory-picker-auto\tests\loader-composition.spec.ts
+packages\experimental\agent-team\tests\persistence.spec.ts
+packages\compaction\compaction-basic\tests\compaction-loop-repro.spec.ts
+packages\client\ui-trajectory\tests\conversation-definitions.client.spec.ts
+packages\client\ui-trajectory\src\client\trajectory-assistant-definition.ts
+packages\client\ui-conversation\src\client\contract\request-inspection.ts
+packages\client\ui-chat\tests\conversation-node-definitions.client.spec.ts
+packages\client\connection\src\client\fixture.ts
+packages\api\session-controller\tests\event-script.client.ts
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Read` _(toolu_01MZNp4b7THwkdu6V8ZHo1jw)_
+
+```json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\llm\\llm\\src\\retry-policy.ts"
+}
+```
+
+**-> tool_use** `Read` _(toolu_01FFnu1qQBdvbbhhbJ5Vcvk1)_
+
+```json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\llm\\llm-retry\\src\\index.ts"
+}
+```
+
+_stop `tool_use` · 3.08s (ttft 2.61s) · in 2 · out 174 · cache r144,842/w1,326_
+
+---
+
+## req-0120 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 172 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_017xEP2tNd7kVuNM5GEGnVqE)_
+
+```
+Found 43 files
+packages\extensions\tool-cordis\src\api-catalog.ts
+packages\util\atomic-write\tests\atomic-write.spec.ts
+packages\test-support\llm-replay\tests\llm-replay.spec.ts
+packages\subagent\tool-subagent-control\tests\tool-subagent-control.spec.ts
+packages\subagent\subagent\tests\list-children.spec.ts
+packages\subagent\subagent\tests\continuation.spec.ts
+packages\session\session-projection-cache\tests\cache.spec.ts
+packages\session\session-persistence\tests\write-behind.spec.ts
+packages\session\session-persistence\src\write-behind.ts
+packages\session\session-persistence\src\coordinator.ts
+packages\mcp\mcp-client\tests\reconnect.spec.ts
+packages\mcp\mcp-client\tests\mcp-client.e2e.ts
+packages\mcp\mcp-client\tests\apply.spec.ts
+packages\mcp\mcp-client\src\connection.ts
+packages\mcp\mcp-client\src\index.ts
+packages\llm\token-meter\tests\token-usage-projection.spec.ts
+packages\llm\llm\tests\service.spec.ts
+packages\llm\llm\tests\retry-policy.spec.ts
+packages\llm\llm\src\retry-policy.ts
+packages\llm\llm-retry\tests\loader-composition.spec.ts
+packages\llm\llm-retry\tests\retry.spec.ts
+packages\llm\llm-retry\tests\transport-recovery.spec.ts
+packages\llm\llm-retry\src\index.ts
+packages\llm\llm-retry\src\invariant.ts
+packages\llm\llm-retry\src\types.ts
+packages\llm\llm-retry\tests\invariant.spec.ts
+packages\llm\llm-pi-ai\tests\sdk-options.spec.ts
+packages\llm\llm-pi-ai\tests\dynamic-config.spec.ts
+packages\llm\llm-pi-ai\tests\adapter.spec.ts
+packages\llm\llm-pi-ai\src\index.ts
+packages\llm\llm-pi-ai\src\adapter.ts
+packages\llm\llm-pi-ai\src\config.ts
+packages\llm\llm-deepseek\tests\dynamic-config.spec.ts
+packages\llm\llm-deepseek\tests\adapter.spec.ts
+packages\host\directory-picker-auto\tests\loader-composition.spec.ts
+packages\experimental\agent-team\tests\persistence.spec.ts
+packages\compaction\compaction-basic\tests\compaction-loop-repro.spec.ts
+packages\client\ui-trajectory\tests\conversation-definitions.client.spec.ts
+packages\client\ui-trajectory\src\client\trajectory-assistant-definition.ts
+packages\client\ui-conversation\src\client\contract\request-inspection.ts
+packages\client\ui-chat\tests\conversation-node-definitions.client.spec.ts
+packages\client\connection\src\client\fixture.ts
+packages\api\session-controller\tests\event-script.client.ts
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Read` _(toolu_01MZNp4b7THwkdu6V8ZHo1jw)_
+
+```json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\llm\\llm\\src\\retry-policy.ts"
+}
+```
+
+**-> tool_use** `Read` _(toolu_01FFnu1qQBdvbbhhbJ5Vcvk1)_
+
+```json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages\\llm\\llm-retry\\src\\index.ts"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01MZNp4b7THwkdu6V8ZHo1jw)_
+
+```
+1	/**
+2	 * Provider-owned request-retry policy configuration and resolution.
+3	 *
+4	 * Adapters expose one resolved policy per registered provider route; the
+5	 * optional dsh-llm-retry plugin executes it on the agent's failed-step extension point.
+6	 *
+7	 * @module @deepseek-ai/dsh-llm/retry-policy
+8	 */
+9	
+10	import z from '@deepseek-ai/schemastery'
+11	import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
+12	import { EMPTY_RESPONSE_CODE } from './error.ts'
+13	
+14	const DEFAULT_MAX_RETRIES = 5
+15	const DEFAULT_INITIAL_DELAY_MS = 500
+16	const DEFAULT_MAX_DELAY_MS = 10_000
+17	const DEFAULT_JITTER_RATIO = 0.1
+18	const DEFAULT_RETRYABLE_CODES = Object.freeze([
+19	  EMPTY_RESPONSE_CODE,
+20	  'RATE_LIMIT',
+21	  'SERVER',
+22	  'TIMEOUT',
+23	  'TRANSPORT',
+24	])
+25	
+26	/** Bounded exponential backoff with symmetric jitter around each local delay. */
+27	export interface BackoffConfig {
+28	  /** Initial local exponential-backoff delay in milliseconds (default 500). */
+29	  initialDelayMs?: number
+30	  /** Maximum locally scheduled or accepted provider delay in milliseconds (default 10000). */
+31	  maxDelayMs?: number
+32	  /** Symmetric random multiplier range around one (default 0.1). */
+33	  jitterRatio?: number
+34	}
+35	
+36	/** Current bounded transient retry behavior for one provider route. */
+37	export interface NormalRetryPolicyConfig {
+38	  /** Retry only configured transient failure codes. */
+39	  mode: 'normal'
+40	  /** Maximum eligible retries after the first request (default 5). */
+41	  maxRetries?: number
+42	  /** Stable failure codes eligible for this policy. */
+43	  retryableCodes?: string[]
+44	  /** Local exponential-backoff and jitter configuration. */
+45	  backoff?: BackoffConfig
+46	}
+47	
+48	/** Unbounded retry behavior for every model-request failure on one provider route. */
+49	export interface AlwaysRetryPolicyConfig {
+50	  /** Retry every model-request failure until success, cancellation, or disposal. */
+51	  mode: 'always'
+52	  /** Local exponential-backoff and jitter configuration. */
+53	  backoff?: BackoffConfig
+54	}
+55	
+56	/** Provider-owned model-request retry policy configuration. */
+57	export type RetryPolicyConfig = NormalRetryPolicyConfig | AlwaysRetryPolicyConfig
+58	
+59	/** Fully resolved backoff shared by both retry modes. */
+60	export interface ResolvedRetryBackoff {
+61	  readonly initialDelayMs: number
+62	  readonly maxDelayMs: number
+63	  readonly jitterRatio: number
+64	}
+65	
+66	/** Fully resolved bounded transient retry policy. */
+67	export interface ResolvedNormalRetryPolicy extends ResolvedRetryBackoff {
+68	  readonly mode: 'normal'
+69	  readonly maxRetries: number
+70	  readonly retryableCodes: readonly string[]
+71	}
+72	
+73	/** Fully resolved unbounded retry policy. */
+74	export interface ResolvedAlwaysRetryPolicy extends ResolvedRetryBackoff {
+75	  readonly mode: 'always'
+76	}
+77	
+78	/** Immutable provider policy captured when its adapter route is registered. */
+79	export type ResolvedRetryPolicy = ResolvedNorm
+... [5,288 more characters in session.jsonl]
+```
+
+**<- tool_result** _(toolu_01FFnu1qQBdvbbhhbJ5Vcvk1)_
+
+```
+1	/**
+2	 * Provider-routed model-request retry policy on the agent loop's request
+3	 * recovery extension point. Each scheduled retry is durable before its cancellable wait.
+4	 *
+5	 * @module @deepseek-ai/dsh-llm-retry
+6	 */
+7	
+8	import { randomUUID } from 'node:crypto'
+9	import type { Context, Events } from '@deepseek-ai/cordis'
+10	import z from '@deepseek-ai/schemastery'
+11	import { z as zod } from 'zod'
+12	import type { Agent, RequestErrorAction } from '@deepseek-ai/dsh-agent'
+13	import type { LlmFailure, ResolvedRetryPolicy } from '@deepseek-ai/dsh-llm'
+14	import type { } from '@deepseek-ai/dsh-session-projection'
+15	import { RetryId } from './brand.ts'
+16	import type { LlmRetryEventData } from './types.ts'
+17	
+18	export type { LlmRetryEventData, LlmRetryStartedEventData } from './types.ts'
+19	export { RetryId } from './brand.ts'
+20	
+21	export const name = 'llm-retry'
+22	export const inject = ['agents', 'sessionProjections']
+23	
+24	/** This policy executor has no config; providers own `retryPolicy`. */
+25	export type Config = Readonly<Record<string, never>>
+26	
+27	/** Runtime schema for {@link Config}. */
+28	export const Config = z.object({}) as unknown as z<Config>
+29	
+30	function validateConfig(config: Config): void {
+31	  const [key] = Object.keys(config)
+32	  if (key === undefined) return
+33	  if (key === 'retryPolicy') {
+34	    throw new Error('llm-retry: retryPolicy belongs under each provider configuration')
+35	  }
+36	  throw new Error(`llm-retry: unknown key "${key}"`)
+37	}
+38	
+39	/** Non-serializable hooks used to make timing policy deterministic in tests. */
+40	export interface RetryInternals {
+41	  /** Random sample in the inclusive zero-to-one range used for jitter. */
+42	  random?: () => number
+43	}
+44	
+45	type DownstreamOutcome =
+46	  | { readonly type: 'decision'; readonly decision: RequestErrorAction }
+47	  | { readonly type: 'error'; readonly error: unknown }
+48	
+49	async function settleDownstream(
+50	  next: () => Promise<RequestErrorAction>,
+51	): Promise<DownstreamOutcome> {
+52	  try {
+53	    return { type: 'decision', decision: await next() }
+54	  } catch (error: unknown) {
+55	    return { type: 'error', error }
+56	  }
+57	}
+58	
+59	function localDelay(config: ResolvedRetryPolicy, retry: number, random: () => number): number {
+60	  const exponent = Math.min(retry - 1, 1024)
+61	  const exponential = Math.min(config.initialDelayMs * 2 ** exponent, config.maxDelayMs)
+62	  const jitter = 1 - config.jitterRatio + 2 * config.jitterRatio * random()
+63	  return Math.min(exponential * jitter, config.maxDelayMs)
+64	}
+65	
+66	function retryPolicyKey(policy: ResolvedRetryPolicy): string {
+67	  return policy.mode === 'always'
+68	    ? JSON.stringify([policy.mode, policy.initialDelayMs, policy.maxDelayMs, policy.jitterRatio])
+69	    : JSON.stringify([
+70	      policy.mode,
+71	      policy.maxRetries,
+72	      [...policy.retryableCodes].sort(),
+73	      policy.initialDelayMs,
+74	      policy.maxDelayMs,
+75	      policy.jitterRatio,
+76	    
+... [7,196 more characters in session.jsonl]
+```
 
