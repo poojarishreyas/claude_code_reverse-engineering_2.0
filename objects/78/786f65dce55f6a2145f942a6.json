@@ -1,0 +1,15 @@
+{
+  "id": "786f65dce55f6a2145f942a6",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01GBNxnGZB8yPE5tJinRsQDC",
+        "type": "tool_result",
+        "content": "rror=wYe;yS.toFile=Vr;class qL extends yS{constructor(){super(...arguments);this.completions=new f5e(this),this.messages=new qW(this),this.models=new Rt(this),this.beta=new hS(this)}}qL.Completions=f5e;qL.Messages=qW;qL.Models=Rt;qL.Beta=hS;function KL(e,r,n=32000){let s=Math.min(500*Math.pow(2,e-1),n),o=Math.round(s+Math.random()*0.25*s);if(r){let i=parseInt(r,1\nwarmCanonicalWcRoot();let r=eve.of(j().host);try{await r.start(e,n)}finally{if(!r.firstStorePullOwed)tUn()}}import{homedir as To,tmpdir as dN}from\"os\";import{basename as js,dirname as ti,isAbsolute as cN,join as Ln,relative as uN}from\"path\";function KL(e,n,r,s){var g=e.length,h=r+(s?1:-1);while(s?h--:++h<g)if(n(e[h],h,e))return h;return-1}var Bw=KL;function V\n===\nm\u0000a\u0000x\u0000i\u0000m\u0000u\u0000m\u0000 \u0000d\u0000u\u0000r\u0000a\u0000t\u0000i\u0000o\u0000n\u0000 \u0000\u0014  \u0000t\u0000h\u0000e\u0000 \u0000l\u0000o\u0000o\u0000p\u0000 \u0000h\u0000a\u0000s\u0000 \u0000e\u0000n\u0000d\u0000e\u0000d\u0000;\u0000 \u0000d\u0000o\u0000 \u0000n\u0000o\u0000t\u0000 \u0000r\u0000e\u0000-\u0000i\u0000s\u0000s\u0000u\u0000e\u0000.\u0000\r\u0000\u0000�\u0007=�\u0000 (clamped to \u0000\u0000\u0000\u001c\u0000\u0000��Jm\u0000s from your requested value)\u001a\u0000\u0000����\u0000Next wakeup scheduled for \u0000\u0000\u0005\u0000\u0000�\"��\u0000 (in \u0000\u0000\u0000q\u0000\u0000\u0000�\u001f\b\u0000.\u0000 \u0000N\u0000o\u0000t\u0000h\u0000i\u0000n\u0000g\u0000 \u0000m\u0000o\u0000r\u0000e\u0000 \u0000t\u0000o\u0000 \u0000d\u0000o\u0000 \u0000t\u0000h\u0000i\u0000s\u0000 \u0000t\u0000u\u0000r\u0000n\u0000 \u0000\u0014  \u0000t\u0000h\u0000e\u0000 \u0000h\u0000a\u0000r\u0000n\u0000e\u0000s\u0000s\u0000 \u0000r\u0000e\u0000-\u0000i\u0000n\u0000\n\u0000\u0000���\u0000mimeTypes\u0000\u0000\u0000\u000f\u0000\u0000���\u001c\u0000parkedAtRestart\u0000\u0019\u0000\u0000�gn�\u0000max_retries_clamp_warning\u0000\u0000\u0000\u0018\u0000\u0000��lc\u0000CLAUDE_CODE_MAX_RETRIES=\f\u0000\u0000��r�\u0000 clamped to \u0017\u0000\u0000�ؐ�\u0000CLAUDE_CODE_MAX_RETRIES\u0000@\u0000\u0000���+\u0000Cannot destructure property 'relay' from null or undefined value\u000b\u0000\u0000����\u0000installable\u0000a\u0000\u0000�\u000bm\u001f\u0000The plugin archive could not be downloaded from claude.ai. Check yo\n\u0000claudeai_marketplace_catalog\u001f\u0000\u0000�A��\u0000tengu_bash_command_clamp_denied\u0000u\u0000\u0000�N��\u0000 has been denied: this agent's Bash use is clamped to a fixed set of command forms (per-spawn bashCommandClamp), and \u0000\u0000\u00002\u0000\u0000�R$-\u0000the command has structure the clamp cannot verify \u0000\u0000>\u0000\u0000\u0000�ץ\u0000(\u0000s\u0000u\u0000b\u0000s\u0000t\u0000i\u0000t\u0000u\u0000t\u0000i\u0000o\u0000n\u0000,\u0000 \u0000c\u0000o\u0000n\u0000t\u0000r\u0000o\u0000l\u0000 \u0000f\u0000l\u0000o\u0000w\u0000,\u0000 \u0000o\u0000r\u0000 \u0000a",
+        "is_error": false
+      }
+    ]
+  }
+}

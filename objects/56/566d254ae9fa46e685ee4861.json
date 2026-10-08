@@ -1,0 +1,32 @@
+{
+  "id": "566d254ae9fa46e685ee4861",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSpAsKEAgSGAI4AUIIdGhpbmtpbmcSDKfHjw9eqC1cbuT+8BoMUGM47YTwl4Fde8DGIjCB5w7DG88HBlhqWR13o52YfVqVTjBHPdg4Ho19pqi/8Kd/ZcNnFEJ2s7KggyDIRCwqwQpOrTyvz8jbdcXFfA9Dnt6kdbFNvK7aBddlmC+dLQ16VNw9fibqD9y1WkrrwhLfw6K3daOEnyqMxiUND7RRrzH6v7xAvXGypBQRYw7nQ145qCzL23ITTxr8jGukeGuMijv66FnC0jAsdBBqsw/Ij9QNrEuqvv0uP4aReo84tAx4i2iyl8dDSNaB5IBAlTCkQDnXf/M+HXC63rIIO7kQogtnPvb+NSWTZpPiVN9exkZv0Mwbf4A2COuG4OD993/OR5YAGwl//6iDPZjXsBZ8ywHJNfW9pxOZxUUQL5xkrTivSpQ/aITCLK9hlf1g8u086KHyEWKFzryOtbKDCh5QEvuHk5NwEs6o2cNbf3MRlzE8iXsGOSFk+J+3fgqmmAgS19yaUNOu/N2K2gHDYi8IEZ4pwH49Fg6uojueN79QSRqQ/2u2xuoCsW/zfQhlGByYYSN1Z99FaDPZTDmhlxDYZfZf14JC/lffroVIdE8XKniut/tmmyYzQzQhHlNNg2QmMVbvgvyt3Aw7iEwOtA3WQivkQ5wplzN/mcGI6UoU1oGDi2BwCC039DZEeaQhZGi6hCLh28zp2Q3F5kWshLTADOoboilfKpoKp1QGCurR5SsE4FpM0HNGk9vT63msHTHCOonPLR7X90S9G2SJmNfvno1eF3IDzvpfvIDrzhdLsu32TxBcX0CqRA/Uo/RD0yEXro4C3RxpbF3ywC+OvZHMnPDrfD4nRAwq1qu+VF/rSLM+Tv8sZIejSjhIDJVwK0YRxkTs+4ilgyAbM5Y0dI5n6NUIc1EgAo5nFSOJmQ/wMcait/zXUc3vc7jRbrE9I4XDriiN2H+Ewv+AbBEExqlcTlE7IcVmj9rm7hYCt7yTctdEDi5HkWzYvcRfmvVWaj3t2bMdiRxMvapb9TFhMKlXaSaegIEzeR/kC0GQ7DeW5xVMh38d2l1JRA0msKDeJl7o3RBl0Fo6RE4vMxKL+NLXFY1T2Grvfp5XgRmsgbMd1toSk5c8wD9ejQR3ITz4/qOBaRbCcxRjBvSTb1FNKzmEhpuVbDteXcD5wewglg/5sIacBYGwi1/PwuGsrKhtrHOJjizhXdko7ADKgqIoW3B4Pk2Q+fYWpOOAS1ozQxo7yVieslY6WnQMR+x5GDuiyRJALsRF9R/zvjNxMmIyHVTRV8ea9ga6RjOOeoGhLdKloX23JRPv8yPyFEUdSceL1dw50loBMQpwJinTqLfLTlNzyemXXzhL+0rTsbCogStzLTpX0KZ64DPtBPVXYMXYyMJv/WTKYXwdV7EubDqDGd17nD/Iho7ji4Frx6n6s0ZdrgsEX7oY5m7ZxhRKMDgUn1G+wHskGcTeLxYvY+94RexK+aGq4c4U+yiyn/0vK6QBKU4YDpRZkJU9Enov3HVEFyvOzLbY4iNwB2pNqWi7ZoKqxkpLUpjTQN1ZdfzWF5d+BVRE9YFFYOHRxYyjKF3d1VBatazNRPYBL0PYcOmLVhQt4Q1vH8Je95bAOhXcJ+Dxi2EtK9ievgnux6QKBkSBi9EXKI7aQzOgqhVv1jsk6bOU4bUF6YCiy55il3dCbVGlqKFnNIc3y2abR/GKiGffOxk9OXkMm8OJRLEXpAvHIvWSYHiiE4i8ZWqumpw8G6VV3LDXUGjBFLPNMhBZoNvd8Esqk1mIk2fFgv5wuWUt7AOtCXcLXPJVLOqsc46nRz2kFu1go/JCPaIOzmc0x6jfeOczAhOpLRhE7vpl+wIb8fowyentsHDcQ6hl9Onpq1xLtXyGJgDhxEWccuehS79FSNzlPqcgGAE="
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSwwcKEQgSGAI4AUIJbmFycmF0aW9uEgxbw2Q28ic/BPtlUIEaDC82fL/46w8POLmkIyIwfdS2u+XwQo5vtC4FE7TnC9keux4uzgrHqHZp3sqBKOxiFLpAqSwCkbEOHt1Dl5k6Kt8GGMXxp3k9xHo414kUMt2kPAxn30qMMaj17YMHUzGfslm3aePKew+yDVA6ckHlDcmGNmgu3kQMYuNpXFfwb7I2SNMAB6bH/wr1dK5SfX+j6lwNZRUI3advBcWQei8ALbq/hWlvhDMQb5Pjz1jAwFMJBdFXgamhunCH2rjJtm1YRXjfE86FkCFcwl/4Fa9bLwhZyrqylmn+w0bNgMyKE40P/wvDcgpnCKfR3FIb5RFjJC9Eep1c/P4uSZ/8ZCd91v4j4XQZTsbfi72otzB4imu4+Lb/QLGz1tzjNIdcYM9Di3/gQSekbTx+a3uOwSZQWdLz0Z5zhg3araOHRkmmD+03FgkAuLmR9C2gDOSSw5lAc0RnsQhFpzFLL+KjVcXActw5PWXODR8UBgPYZhcJdZWDGzmcGUC+Mew6HwVbXFuT3/5aalHH+RaK05h9BIf3fHrt5RHCqVbbAohBRljsEDMP0bmvAN6bZ97/cd027TL36U4nyAENSYhWgl2hdjmgnMcgRxPIdY0nFZwamBHMF7aD4jfjz7NLV2PLfQcToUTV44B2e+O2pe0VTGBILBiwbqYahzAG6TLB0jJ8hccZeO05WKqCNaaq2glDm3K2wsg5ihFkzLmPQRJ1SsqObookpWE7bEdVXqkdoc7Py8w55hYTgko9SqBxWdHudVcBJVd4GK4rQXjPPZovak8Bc6c6oddJHACad1cSq6Up6TMlU9mPSif4kgRV3e7dJ4qMOsGBpiO2nYrmRW/Dcvs9aNYHGxV02sEL+JlxxKzeDWWMIgV/7CEtFnMBVS8RANRJFjS4k2BS1fPT93+yxN7+2HlM6r8TjSTR2Zi2pocHEVOaNOQSrW1J/ZL3L9sdwixCSQ/PjQUEIvbYjLzfZ9FyGu1a/mezsGk31py2COpaOmV4hIZY1GxxjnGtWolFIwohhDlKlNczAtuyK/9SdUfynVVkPApgXRbiqabKAHKMVApCenHGBXGhHxuaxX8G8H0smV07sEy2giEijYpaTppM6i9JB9CQFvVCa8bn3IlWy3xQeDIpsTHajk0Mu2MybpyDuUkvC0hJzw4KJ18lgeGhVaOR0v+IXX/P+oynaNZ9kkIs4T6DgRREGkHIxMdg3lSnkE6Ah7W/NbyDIBFw8sZDDTmCvmIYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01RQm1CzfzmA7gbjvjTyfsPD",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 1,80p packages/llm/llm/tests/retry-policy.spec.ts; sed -n 215,230p packages/llm/llm/tests/service.spec.ts",
+          "description": "Read the tests that assert the retry defaults"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

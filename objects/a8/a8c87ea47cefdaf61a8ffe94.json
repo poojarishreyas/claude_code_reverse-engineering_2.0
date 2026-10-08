@@ -1,0 +1,24 @@
+{
+  "id": "a8c87ea47cefdaf61a8ffe94",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS6AcKEAgSGAI4AUIIdGhpbmtpbmcSDEujJPUEyZMY9itEfBoMCqgteDUtqSod0NRnIjBTFZTVke8z0smtpbNVbVrWsBY6D+ZF+BP7XDxGJh4M0Kyh1keiWohSmXEmy5nnPA0qhQcQMkTMF1PODen4tOYaGaGLG9CyDYUM4HFXNwc6DJo8IWFBLj4AsHakNl2SCUuDzAbh0K3wTTDr6FXXCuSzTkRX2qffuXK4hMBBMcZvOacjp7RIiyJBEjohoXU60ckaOnLBYCrJjOmaNPBhCcG19t5T/fNYp4hrAta/6X82hr0i5+xsrwTNEh+iaSRohXO71Kbr4pXKhaEXUY306l7DfBUmHByG39fj8zZLciH6T/SFdd4ycW+L81qjHnf4ju8/s5h3hXZQtKN8fxArB06DId7xk97t/YsDwXOStc2Zh4hAIFUNiJFB4tqIFxBnpAe9COaX7tYfZ2SmyNAsKwb0VwmHyb3PJD9UCEh3o3FppB3oC5JfZF6yoZP0U1gZ0Huxz7afoH4tXxbJzSzAwY8int3Zxv90wTPVDATR+db9RcN1xZxcehL7nLpxibpGiDVGKbnQiveYCCJezZRkSKsCzcnBxmc5qvIC118mNByW8+jE+cZgHA4zRrGQ8W7Edf6K2q8pE+XFoTz15sSsVGjBaMtFt6zR+tQB+jipXTx+Tfmjd4y/65FqYPsLNoWTDhuie7escrnZTO/t7RPkIRBNCbd2oOSDS4HhIHqdGueKIK2T9Q+J/ri59xLRvkk1M2BscFih7XAAnLM+wEi3ken4cbwRfTd0zAu76A9lPrVxxuao9i67u3xYllowMArRcKd/utXwN6ws4xz3q0AhpkqawpRN8TYUMaaW+bVWfow4jv9aCkYfklI+apmCLpknmmSKUFUlYTzL2eBxojy7uS1L9TzGLQYd/VY1++XZ7WVO+LCX0tdPCWOBSblz4HPAEixgiF2BjKrbEOuotDUNxncZ0D3gtipTNqyGtD/x0KBgpKYG110MmKdvAr0Q0RZeqJ2/CxcwSyacNxVTtUhsdea1Xub7Yb9KnNtgmXhSHI3q7zP4tshpnN3/3e8RjazguTV0WIvMP2yPmwMgeZCrsjukAfIyZcujoQz3EylcbnFii/Bfr6yXq4nVkXwMeBSE4P2+mJOvPSqWM5poON2IT9++24ohqs/VyrYDwJgBWPLHblRSw3aNseMJ34C0sX/cQorgtCKrDNN5XIsTTCh41jEF5v/Hn59iQ5nO2LD76Fb38mvMqoss4FaatFStb1js0NbecxPEh48qta5JJGXIryf8fFpvCqZUtvspB5AbQirxZ5yM1K3GEWUqGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01PwHRmnwaSy96bHfbbbHf1g",
+        "name": "Bash",
+        "input": {
+          "command": "f=/c/Users/shrey/AppData/Roaming/npm/node_modules/@anthropic-ai/claude-code/bin/claude.exe; grep -a -o -E '.{0,200}max_retries_clamp_warning.{0,200}' \"$f\" | tr -cd '[:print:]\\n' | grep -v 'mimeTypes' | head -3; echo ===; grep -a -o -E '.{0,150}(MAX_RETRIES|maxRetries)[^;]{0,40}\\?\\?\\s*[0-9]+.{0,80}' \"$f\" | tr -cd '[:print:]\\n' | head -5",
+          "description": "Search for Claude Code's default retry count",
+          "timeout": 120000
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "dab2a41c52ee942f7fefa908",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PwHRmnwaSy96bHfbbbHf1g",
+        "type": "tool_result",
+        "content": "message.includes(\"exceeded_limit\")?ISo.exec(e.message)?.[1]:void 0;return r!==void 0&&qAt.has(r)}function cAe(){let e=sY(),n=a.CLAUDE_CODE_MAX_RETRIES;if(n!==void 0&&n>=0){if(n>eAe&&!e){if(Gi().once(\"max_retries_clamp_warning\"))t(`CLAUDE_CODE_MAX_RETRIES=${n} clamped to ${eAe}`,{level:\"warn\"});return eAe}return n}return e?uSo:cSo}function DSo(e){return e.maxRetries??cAe()}var LSo=1800000,nAe=20000,NSo=600000;function FSo(\n===\nlogLevel,\"ClientOptions.logLevel\",__(this))??$r(O(\"ANTHROPIC_LOG\"),\"process.env['ANTHROPIC_LOG']\",__(this))??Ct,this.fetchOptions=i.fetchOptions,this.maxRetries=i.maxRetries??2,this.fetch=i.fetch??Eo(),fr(this,Pn,xo,\"f\"),this.middleware=[...i.middleware??[\n.response).then((R)=>E.setCredentialFeature(R,\"CREDENTIALS_HTTP\",\"z\"))}catch(d){throw new m.CredentialsProviderError(String(d),{logger:e.logger})}},e.maxRetries??3,e.timeout??1000)};export{H as fromHttp};\ntream-end\"};case\"timeout\":return{kind:\"timeout\",timeoutMs:t}}}async function _o(e,t){let r=e.probe.timeoutMs??t.defaultTimeoutMs,s=Math.max(0,e.probe.maxRetries??0),a=e.kind===\"pin\"?[e.version]:e.modernVersions,n=e.kind===\"auto\"&&e.fallbackAva",
+        "is_error": false
+      }
+    ]
+  }
+}

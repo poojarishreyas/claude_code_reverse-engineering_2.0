@@ -1,0 +1,19 @@
+{
+  "id": "3106f990faae668b24201cd4",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01VuqCM1C4oHsgjqR4cbPaC5",
+        "name": "Bash",
+        "input": {
+          "command": "f=/c/Users/shrey/AppData/Roaming/npm/node_modules/@anthropic-ai/claude-code/bin/claude.exe; grep -a -o -E '.{0,10}(cSo|uSo|eAe)=[0-9a-zA-Z_.]{1,12}[,;]' \"$f\" | tr -cd '[:print:]\\n' | head -6",
+          "description": "Read the values of Claude Code's retry constants",
+          "timeout": 120000
+        }
+      }
+    ]
+  }
+}
