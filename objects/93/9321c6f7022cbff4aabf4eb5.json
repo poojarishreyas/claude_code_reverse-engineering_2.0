@@ -1,0 +1,14 @@
+{
+  "id": "9321c6f7022cbff4aabf4eb5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016NC35bqcio61AL8h7FXEcB",
+        "type": "tool_result",
+        "content": "packages\\llm\\llm-pi-ai\\tests\\adapter.spec.ts:381:    [400, 'INVALID_REQUEST'],\npackages\\llm\\llm-pi-ai\\tests\\adapter.spec.ts:382:    [429, 'RATE_LIMIT'],\npackages\\llm\\llm-pi-ai\\tests\\adapter.spec.ts:383:    [500, 'SERVER'],\npackages\\llm\\llm-pi-ai\\tests\\convert.spec.ts:802:      .toMatchObject({ kind: 'error', failure: { code: 'RATE_LIMIT' } })\npackages\\llm\\llm-pi-ai\\tests\\convert.spec.ts:806:    }))).toMatchObject({ kind: 'error', failure: { code: 'RATE_LIMIT' } })\npackages\\llm\\llm-pi-ai\\tests\\convert.spec.ts:814:      .toMatchObject({ kind: 'error', failure: { code: 'SERVER' } })\npackages\\llm\\llm-pi-ai\\tests\\convert.spec.ts:830:    }))).toMatchObject({ kind: 'error', failure: { code: 'INVALID_REQUEST' } })\npackages\\llm\\llm-pi-ai\\tests\\convert.spec.ts:832:      .toMatchObject({ kind: 'error', failure: { code: 'INVALID_REQUEST' } })\npackages\\llm\\llm-pi-ai\\tests\\convert.spec.ts:836:    }))).toMatchObject({ kind: 'error', failure: { code: 'INVALID_REQUEST' } })\npackages\\llm\\llm-pi-ai\\tests\\convert.spec.ts:869:    }))).toMatchObject({ kind: 'error', failure: { code: 'RATE_LIMIT' } })"
+      }
+    ]
+  }
+}
