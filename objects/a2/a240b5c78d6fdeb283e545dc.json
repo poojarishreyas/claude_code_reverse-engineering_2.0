@@ -1,0 +1,15 @@
+{
+  "id": "a240b5c78d6fdeb283e545dc",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011DgjTS26ff26wRnEL4bPsb",
+        "type": "tool_result",
+        "content": "#0 system 4245 chars: You are an AI agent powered by DeepSeek Harness. Non-zero exits are reported as `[exit code: N]` markers; investigate failures before moving on. On Windows a k\n#1 user 3398 chars: These tests fail in this repository: - packages/boot/app-boot/tests/profile.spec.ts Test output: ``` RUN v4.1.8 C:/Users/shrey/AppData/Local/Temp/dsh-eval-96\n#2 user 18279 chars: <system-reminder> The following workspace instructions may be relevant to your work. Use them as guidance when applicable. More specific instructions take prece\n#3 user 522 chars: Current runtime context. This snapshot supersedes earlier runtime-context snapshots. Current DSH file policy: workspace-write. Any available operation enforced\n#4 user 6677 chars: <system-reminder> A skill is a reusable set of task-specific instructions. The following skills are available in this session: <available_skills> - `archify`: \n#7 user 6710 chars: <system-reminder> Additional instructions from: packages\\AGENTS.md These instructions apply to work under `packages`. Use them as guidance when relevant; more",
+        "is_error": false
+      }
+    ]
+  }
+}
