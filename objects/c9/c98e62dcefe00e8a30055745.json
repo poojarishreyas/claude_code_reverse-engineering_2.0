@@ -1,0 +1,17 @@
+{
+  "id": "c98e62dcefe00e8a30055745",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "what may b the reason claude consumes less token",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

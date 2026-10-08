@@ -1,0 +1,15 @@
+{
+  "id": "159ca5bf36a57bbdd025f4c5",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XTCJVE9SQqWXk39iem8mJV",
+        "type": "tool_result",
+        "content": "== clean-dsh\n    221 \"type\":\"assistant/chunk\"\n     38 \"type\":\"step/start\"\n     38 \"type\":\"step/end\"\n     38 \"type\":\"assistant/message\"\n     37 \"type\":\"tool/result\"\n     37 \"type\":\"tool/call\"\n      5 \"type\":\"user/message\"\n      4 \"type\":\"agent/inbox/spliced\"\n      3 \"type\":\"todo/write\"\n      1 \"type\":\"turn/start\"\n      1 \"type\":\"turn/end\"\n      1 \"type\":\"session/title\"\n== clean-claude-code\n     20 \"type\":\"step/start\"\n     19 \"type\":\"tool/result\"\n     19 \"type\":\"tool/call\"\n{\"type\":\"assistant/chunk\",\"seq\":20,\"time\":1791372144586,\"data\":{\"turn\":1,\"step\":1,\"chunk\":{\"type\":\"usage\",\"usage\":{\"inputTokens\":14098,\"outputTokens\":408,\"totalTokens\":14506}}}}\n{\"type\":\"assistant/message\",\"seq\":22,\"time\":1791372144593,\"data\":{\"turn\":1,\"step\":1,\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"reasoning\",\"text\":\"The failing test involves a projection within the user questions package, specifically related to how a session question is inherited by a fork. The assertion failure indicates an unexpected value (4 instead of 1), suggesting a mismatch in data ha\n{\n  \"tags\": [\n    \"cross-package\",\n    \"multi-file\"\n  ],\n  \"task\": {\n    \"id\": \"f04ad05f30\",\n    \"fixCommit\": \"f04ad05f302c3d9c6e22e14513170a83ce95c317\",\n    \"parentCommit\": \"511b18e3227bda29a17dac7d5cf25a66a109d558\",\n    \"subject\": \"fix(user-questions): reset projection version and use brand utility\",\n    \"sourceFiles\": [\n      \"packages/client/ui-user-questions/src/client/index.ts\",\n      \"packages/interaction/user-questions/src/projection.ts\"\n    ],\n    \"testFiles\": [\n      \"packages/interaction/user-questions/tests/projection.spec.ts\"\n    ]\n  },\n  \"status\": \"ran\",\n  \"passed\": true,\n  \"metrics\": {\n    \"steps\": 20,\n    \"toolCalls\": {\n      \"read\": 5,\n      \"grep\": 5,\n      \"bash\": 8,\n      \"edit\": 1\n    },\n    \"firstSeenStep\": 3,\n    \"firstReadStep\": 4,\n    \"readsBeforeCorrect\": 1,\n    \"editedFiles\": [\n      \"packages/interaction/user-questions/src/projection.ts\"\n    ],\n    \"editedExpected\": true,\n    \"extraEdits\": [],\n    \"editedTests\": false,\n    \"usage\": {\n      \"inputTokens\": 117951,\n      \"outputTokens\": 2730,",
+        "is_error": false
+      }
+    ]
+  }
+}

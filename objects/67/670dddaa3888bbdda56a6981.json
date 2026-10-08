@@ -1,0 +1,8 @@
+{
+  "id": "670dddaa3888bbdda56a6981",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": "what may b the reason claude consumes less token"
+  }
+}
