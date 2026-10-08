@@ -1,0 +1,18 @@
+{
+  "id": "94d031f92b36780919dc9839",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017xEP2tNd7kVuNM5GEGnVqE",
+        "type": "tool_result",
+        "content": "Found 43 files\npackages\\extensions\\tool-cordis\\src\\api-catalog.ts\npackages\\util\\atomic-write\\tests\\atomic-write.spec.ts\npackages\\test-support\\llm-replay\\tests\\llm-replay.spec.ts\npackages\\subagent\\tool-subagent-control\\tests\\tool-subagent-control.spec.ts\npackages\\subagent\\subagent\\tests\\list-children.spec.ts\npackages\\subagent\\subagent\\tests\\continuation.spec.ts\npackages\\session\\session-projection-cache\\tests\\cache.spec.ts\npackages\\session\\session-persistence\\tests\\write-behind.spec.ts\npackages\\session\\session-persistence\\src\\write-behind.ts\npackages\\session\\session-persistence\\src\\coordinator.ts\npackages\\mcp\\mcp-client\\tests\\reconnect.spec.ts\npackages\\mcp\\mcp-client\\tests\\mcp-client.e2e.ts\npackages\\mcp\\mcp-client\\tests\\apply.spec.ts\npackages\\mcp\\mcp-client\\src\\connection.ts\npackages\\mcp\\mcp-client\\src\\index.ts\npackages\\llm\\token-meter\\tests\\token-usage-projection.spec.ts\npackages\\llm\\llm\\tests\\service.spec.ts\npackages\\llm\\llm\\tests\\retry-policy.spec.ts\npackages\\llm\\llm\\src\\retry-policy.ts\npackages\\llm\\llm-retry\\tests\\loader-composition.spec.ts\npackages\\llm\\llm-retry\\tests\\retry.spec.ts\npackages\\llm\\llm-retry\\tests\\transport-recovery.spec.ts\npackages\\llm\\llm-retry\\src\\index.ts\npackages\\llm\\llm-retry\\src\\invariant.ts\npackages\\llm\\llm-retry\\src\\types.ts\npackages\\llm\\llm-retry\\tests\\invariant.spec.ts\npackages\\llm\\llm-pi-ai\\tests\\sdk-options.spec.ts\npackages\\llm\\llm-pi-ai\\tests\\dynamic-config.spec.ts\npackages\\llm\\llm-pi-ai\\tests\\adapter.spec.ts\npackages\\llm\\llm-pi-ai\\src\\index.ts\npackages\\llm\\llm-pi-ai\\src\\adapter.ts\npackages\\llm\\llm-pi-ai\\src\\config.ts\npackages\\llm\\llm-deepseek\\tests\\dynamic-config.spec.ts\npackages\\llm\\llm-deepseek\\tests\\adapter.spec.ts\npackages\\host\\directory-picker-auto\\tests\\loader-composition.spec.ts\npackages\\experimental\\agent-team\\tests\\persistence.spec.ts\npackages\\compaction\\compaction-basic\\tests\\compaction-loop-repro.spec.ts\npackages\\client\\ui-trajectory\\tests\\conversation-definitions.client.spec.ts\npackages\\client\\ui-trajectory\\src\\client\\trajectory-assistant-definition.ts\npackages\\client\\ui-conversation\\src\\client\\contract\\request-inspection.ts\npackages\\client\\ui-chat\\tests\\conversation-node-definitions.client.spec.ts\npackages\\client\\connection\\src\\client\\fixture.ts\npackages\\api\\session-controller\\tests\\event-script.client.ts",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

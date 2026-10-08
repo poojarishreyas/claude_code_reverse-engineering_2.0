@@ -1,0 +1,17 @@
+{
+  "id": "dc167aae7a11ae009095be0a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "ok fix retry window",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
