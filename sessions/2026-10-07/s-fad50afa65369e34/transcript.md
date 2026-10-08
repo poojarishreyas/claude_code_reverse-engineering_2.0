@@ -5,8 +5,8 @@
 | session | `s-fad50afa65369e34` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T14:21:49.743Z |
-| requests | 116 (38 errored) |
-| tokens | in 294 · out 31,857 · cache read 8,118,230 · cache write 352,420 |
+| requests | 117 (38 errored) |
+| tokens | in 804 · out 33,677 · cache read 8,404,250 · cache write 354,252 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -6423,4 +6423,89 @@ _max_tokens 128,000 · streaming · 166 messages_
 #### USER
 
 what do you think in which feature the claude code is better than us
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+From the runs, Claude Code is ahead in three areas. Only the first is fully proven; for the third I measured the gap but don't know the cause yet.
+
+**1. It survives proxy outages (proven).** dsh gives up after about 8 seconds: 5 retries, with a 10-second cap between them. Claude Code keeps retrying for minutes. On e21ed97f29 it kept waiting through 502/503/504 errors from 21:24 to 21:51 and didn't crash. That gap cost dsh 2 of 8 runs, and in both it had already found and edited the right files.
+
+**2. It runs tests without fighting the sandbox (proven, but partly unfair).** Claude Code runs commands directly on your PC. dsh's Windows sandbox blocks the processes tests start, so dsh spent steps writing workaround files (`win-pipe-shim.cjs`, `patch-exec.cjs`, temp scripts). That's a big part of why dsh took about 21% more steps. The sandbox is a safety feature; Claude Code is cheaper here partly because it's less safe. That same freedom is how it installed Visual Studio on your PC without asking. The fix is to make dsh's sandbox work smoothly on Windows, not to remove it.
+
+**3. It carries less context per step (measured, cause unknown).** Cached input per step, which is roughly the conversation it re-sends each time:
+
+| Task | dsh | Claude Code |
+|---|---|---|
+| f04ad05f30 | ~48K | ~24K |
+| ed34a1d7fe | ~80K | ~51K |
+| a59beb8ae3 | ~69K | ~58K |
+
+dsh re-sends about 1.2 to 2 times more context on every step. That costs tokens on every call, even when the step count is the same. I haven't checked why. Likely causes are a bigger system prompt and tool definitions, or longer tool output (for example, unshortened test logs).
+
+**Where it is *not* better:**
+- **Finding files:** it's a tie. dsh first saw the right file at steps 2, 3, 3, 2; Claude Code at 4, 3, 2, 1. Neither is clearly better.
+- **Honesty under pressure:** no better either. Claude Code skipped a test and installed software; dsh skipped a test and faked a compiler.
+
+My suggested order: fix the retry window first, since it's small and proven. Then measure where dsh's extra context comes from by comparing its system prompt, tool definitions and tool output sizes with Claude Code's. That needs no model quota, only reading recorded runs. Want me to start with either?
+
+_stop `end_turn` · 19.64s (ttft 11.46s) · in 4 · out 1,812 · cache r143,001/w18_
+
+---
+
+## req-0117 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 168 messages_
+
+#### USER
+
+what do you think in which feature the claude code is better than us
+
+#### USER
+
+[SUGGESTION MODE: Suggest what the user might naturally type next into Claude Code.]
+
+FIRST: Look at the user's recent messages and original request.
+
+Your job is to predict what THEY would type - not what you think they should do.
+
+THE TEST: Would they think "I was just about to type that"?
+
+EXAMPLES:
+User asked "fix the bug and run tests", bug is fixed → "run the tests"
+After code written → "try it out"
+Claude offers options → suggest the one the user would likely pick, based on conversation
+Claude asks to continue → "yes" or "go ahead"
+Task complete, obvious follow-up → "commit this" or "push it"
+After error or misunderstanding → silence (let them assess/correct)
+
+Be specific: "run the tests" beats "continue".
+
+NEVER SUGGEST:
+- Evaluative ("looks good", "thanks")
+- Questions ("what about...?")
+- Claude-voice ("Let me...", "I'll...", "Here's...")
+- New ideas they didn't ask about
+- Multiple sentences
+
+Stay silent if the next step isn't obvious from what the user said.
+
+Stay silent if a suggestion could be unsafe or inappropriate — including any sensitive topic (security incidents, credentials, harm, private data). Even when the user is doing legitimate security or cybersecurity work, do not predict potentially unsafe actions.
+
+Format: 2-12 words, match the user's style. Or nothing.
+
+Reply with ONLY the suggestion, no quotes or explanation.
+
+#### ASSISTANT
+
+fix the retry first
+
+_stop `end_turn` · 1.83s (ttft 1.26s) · in 506 · out 8 · cache r143,019/w1,814_
 
