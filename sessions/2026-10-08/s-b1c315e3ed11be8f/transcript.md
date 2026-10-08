@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 33 |
-| tokens | in 162 · out 18,135 · cache read 3,172,175 · cache write 61,138 |
+| requests | 35 |
+| tokens | in 166 · out 18,428 · cache read 3,291,260 · cache write 61,142 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -3656,4 +3656,115 @@ The user stepped away and is coming back. Recap in under 40 words, 1-2 plain sen
 You're making dsh better than Claude Code at finding files, and I fixed the bug that stopped dsh retrying some gateway errors (tests pass, not committed). Next, you decide whether I add the longer OmniRoute retry setting to your settings file.
 
 _stop `end_turn` · 6.22s (ttft 5.04s) · in 96 · out 83 · cache r87,798/w0_
+
+---
+
+## req-0034 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 69 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01LAb4ixt5J2ojK5NbRRQSJQ)_
+
+```
+packages/llm/llm-retry/tests/retry.spec.ts:135:      maxDelayMs: 10_000,
+packages/llm/llm-retry/tests/retry.spec.ts:147:      maxDelayMs: 10_000,
+packages/llm/llm/tests/retry-policy.spec.ts:65:      maxRetries: 5,
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > registers the deepseek provider and unregisters on dispose (HMR safety)
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > owns the deepseek provider and advertises the default models
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > uses the default model catalog when apply is called directly
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > falls back to deepseek_API_KEY and deepseek_BASE_URL env vars
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > loads keyless, keeps the catalog browsable, and fails the request actionably
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > defaults to the public base URL without config or env
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/dynamic-config.spec.ts > request-level dynamic configuration > re-registers the route in place when the captured retry policy changes, without an empty-registry window
+      Tests  7 failed | 373 passed (380)
+ packages/llm/llm/src/retry-policy.ts | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+```
+
+continue
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Those 7 deepseek failures happen with or without my change, because of the earlier "deepseek → Lynx" renaming. Next I'll check the last two spots that mention 10 000, then run the full set.
+
+**-> tool_use** `Bash` _(toolu_018KVvM9jyhwZ5n9653GqPgm)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 128,150p packages/llm/llm-retry/tests/retry.spec.ts",
+  "description": "Read the retry executor test that uses 10000"
+}
+```
+
+_stop `tool_use` · 7.04s (ttft 5.85s) · in 4 · out 293 · cache r119,085/w4_
+
+---
+
+## req-0035 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 71 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01LAb4ixt5J2ojK5NbRRQSJQ)_
+
+```
+packages/llm/llm-retry/tests/retry.spec.ts:135:      maxDelayMs: 10_000,
+packages/llm/llm-retry/tests/retry.spec.ts:147:      maxDelayMs: 10_000,
+packages/llm/llm/tests/retry-policy.spec.ts:65:      maxRetries: 5,
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > registers the deepseek provider and unregisters on dispose (HMR safety)
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > owns the deepseek provider and advertises the default models
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > uses the default model catalog when apply is called directly
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > falls back to deepseek_API_KEY and deepseek_BASE_URL env vars
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > loads keyless, keeps the catalog browsable, and fails the request actionably
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > defaults to the public base URL without config or env
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/dynamic-config.spec.ts > request-level dynamic configuration > re-registers the route in place when the captured retry policy changes, without an empty-registry window
+      Tests  7 failed | 373 passed (380)
+ packages/llm/llm/src/retry-policy.ts | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+```
+
+continue
+
+#### USER
+
+**<- tool_result** _(toolu_018KVvM9jyhwZ5n9653GqPgm)_
+
+```
+  const { backoff, ...policy } = overrides
+  return {
+    mode: 'normal',
+    maxRetries: 2,
+    ...policy,
+    backoff: {
+      initialDelayMs: 500,
+      maxDelayMs: 10_000,
+      jitterRatio: 0,
+      ...backoff,
+    },
+  }
+}
+
+function alwaysConfig(backoff: BackoffConfig = {}): AlwaysRetryPolicyConfig {
+  return {
+    mode: 'always',
+    backoff: {
+      initialDelayMs: 500,
+      maxDelayMs: 10_000,
+      jitterRatio: 0,
+      ...backoff,
+    },
+```
 

@@ -1,0 +1,23 @@
+{
+  "id": "b16094d360ad8cc0970518e7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01LAb4ixt5J2ojK5NbRRQSJQ",
+        "type": "tool_result",
+        "content": "packages/llm/llm-retry/tests/retry.spec.ts:135:      maxDelayMs: 10_000,\npackages/llm/llm-retry/tests/retry.spec.ts:147:      maxDelayMs: 10_000,\npackages/llm/llm/tests/retry-policy.spec.ts:65:      maxRetries: 5,\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯\n FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > registers the deepseek provider and unregisters on dispose (HMR safety)\n FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > owns the deepseek provider and advertises the default models\n FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > uses the default model catalog when apply is called directly\n FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > falls back to deepseek_API_KEY and deepseek_BASE_URL env vars\n FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > loads keyless, keeps the catalog browsable, and fails the request actionably\n FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > defaults to the public base URL without config or env\n FAIL  |thread-safe| packages/llm/llm-deepseek/tests/dynamic-config.spec.ts > request-level dynamic configuration > re-registers the route in place when the captured retry policy changes, without an empty-registry window\n      Tests  7 failed | 373 passed (380)\n packages/llm/llm/src/retry-policy.ts | 8 ++++----\n 1 file changed, 4 insertions(+), 4 deletions(-)",
+        "is_error": false
+      },
+      {
+        "type": "text",
+        "text": "continue",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bae313efd985472b7c26aa25",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS6AcKEAgSGAI4AUIIdGhpbmtpbmcSDK3t4ER4ZHVXjgVKmRoMCbBpeXC9lKbrMo2nIjAeRNM+G6XPXEBo/H+hKEocRr1E2vqYZKtt1MRpBuALk1NZhtZYCS7jRj+wANdCevQqhQdSIytlt8E1Ke/xLXcnDFby3hF7RKO9xcOC2H0fQLIhcJqDFhGjLGE/x4MHh7Y5WwgREJl1QuhK65urBDMTwCl1Izese2b8fmbYodARofPb7KiYEjEim2XJcCphmvWLFl1vOGtJshpL/RqKnv3rqv7WAF87U/mSLSpCDvTafSAiu4oMDCFwt5RmmALn1kWlICkRhq2oW8+xs4leEonFUo2ndRF+j0LkrTm2YfZifHouglyglY0H6emOWgTeb4SZh+Sc9SgosVeQ4VxDAxvHJbh1k7LMROkprBZWHhic2s2Vy7p92FYV35hu3/4XA3mqLN2sYHYxZs8rM4+LeJw1cctev/eD41lwoAzSO8veS0j/BgDld0aZbPS/BCFxJhrmkj9V2B5QPtBgCLnA5CGIHcGRi6Rkly203kZbPMPvwwwxVilmkoQKrJ3QFf9M7zoF1myf6JbeyqysK2rq2sqrcYt8oy/phvwRKgZkbA2RS1Dud+LtiqPW24Zsg08M8M1+V3GoNKbQu6UNoofosdUNFT5hKtq4s9v5i18QwPe8ys9s5S2r58beRGfLgJWhPf2kD7w7BPW0NXtulzVEOGq49gbL9MZf+tNrni478aRoiz3GdlIuEbp35mYS/4ZAY5rf0ZJ74UCI2OXVOC5cRBkcMjt+zQ8HXRsB2LLW9ofboFhoKsdhouwjwVl+gtdG8aELu+1Z/8x8IUEsk4WNZurdql/0SASik2NdQd++8l4+s6VyUQkWAvOH5MSuPTbJWuv5Jzu443ihOQzBezgB4FM/k8VYKIbfDSRnvkeEY3S3kvcP7PXFVGHwPQaS5h/WnaCZ5MEvrtXgWN+qNOjMLj+OUcqahHDiik9kal8/8QcgH7gA+u15Fns5NaXwEd7LAn29xiWGfrEeFyfzFPHUz8xCRICPp+8u1Amw4JyGt1uzbQBJeEj08vwwYO/kVdb20Shi+goqoFuUHSFxHt4U4/laMO3cBpD6+fi38qltG+yPxJzEOvdYCWoA5zNPhythauTjZknPqFeLCmZrGp+asojjrIbq0+YQLvMaWKCZmLYvtOZtOxrw+SaNjrkgiWoW+YpQFE+ayFVtC9yk4oNI63dOWlPC4larK8YV9Cm33J2lVqq1rG/ibcBBNZlb67/M+ON/TUx94ywWwSa6gykRWL2BFl0ndh10TqVkuWliwe+mGobxm8WydWNwGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01LAb4ixt5J2ojK5NbRRQSJQ",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -rn -E 'maxRetries: ?5\\b|maxDelayMs: ?10_?000' packages/llm/*/tests packages/llm/*/src 2>/dev/null; git stash push -q -- packages/llm/llm/src/retry-policy.ts && npx vitest run packages/llm/llm-deepseek 2>&1 | grep -E 'Tests |FAIL' | head -10; git stash pop -q && git diff --stat packages/llm/llm/src",
+          "description": "Find remaining old-default asserts and test deepseek without my change",
+          "timeout": 300000
+        }
+      }
+    ]
+  }
+}

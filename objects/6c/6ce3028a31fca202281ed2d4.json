@@ -1,0 +1,19 @@
+{
+  "id": "6ce3028a31fca202281ed2d4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_018KVvM9jyhwZ5n9653GqPgm",
+        "type": "tool_result",
+        "content": "  const { backoff, ...policy } = overrides\n  return {\n    mode: 'normal',\n    maxRetries: 2,\n    ...policy,\n    backoff: {\n      initialDelayMs: 500,\n      maxDelayMs: 10_000,\n      jitterRatio: 0,\n      ...backoff,\n    },\n  }\n}\n\nfunction alwaysConfig(backoff: BackoffConfig = {}): AlwaysRetryPolicyConfig {\n  return {\n    mode: 'always',\n    backoff: {\n      initialDelayMs: 500,\n      maxDelayMs: 10_000,\n      jitterRatio: 0,\n      ...backoff,\n    },",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
