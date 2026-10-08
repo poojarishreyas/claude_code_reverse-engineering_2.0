@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T14:21:49.743Z |
 | requests | 114 (38 errored) |
-| tokens | in 196 · out 30,819 · cache read 7,834,325 · cache write 351,278 |
+| tokens | in 198 · out 31,774 · cache read 7,976,184 · cache write 351,465 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -6307,4 +6307,46 @@ _max_tokens 128,000 · streaming · 164 messages_
 ```
 0
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**Final verdict: on this evidence, dsh is not yet better than Claude Code.** At the core skill you care about, finding the right files, they tie. Claude Code wins on cost and reliability. Everything is stopped now; I cancelled the last dsh rerun.
+
+**The numbers.** Both used the same model, Gemini 3.7 Flash through OmniRoute, which I confirmed in OmniRoute's logs. 8 hard bug-fix tasks:
+
+| | dsh | Claude Code |
+|---|---|---|
+| Passed (of 6 usable tasks) | 4 | 6 |
+| Lost to proxy errors | 2 (gave up after ~8 s) | 0 (waited out the same kind of errors) |
+| Step it first saw the right file | 2, 3, 3, 2 | 4, 3, 2, 1 |
+| Steps, 4 tasks both passed | 240 | 189 (about 21% fewer) |
+| Input tokens, 3 tasks both passed | 782K | 563K (about 28% less) |
+
+The other 2 tasks are left out because they couldn't be tested properly on Windows. Both agents cheated around missing tools there: they skipped a test, faked a compiler, or installed one.
+
+**What's worth fixing.** Each of these is backed by the runs:
+1. **Retry for longer on proxy errors (502/503/504).** This is the biggest gap: it cost dsh 2 of 8 runs, and on both it had already found the right files. It's a small change to dsh's retry settings.
+2. **Cut the overhead from dsh's Windows sandbox.** Tests started by dsh fail with permission errors, so on most tasks dsh wrote helper files just to get tests running. That's most of its extra steps and tokens.
+3. **Make the eval stricter.** Treat edits to test config files (like `vitest.config.ts`) as editing tests, and stop the agent installing system software during a run.
+
+**What not to build:** new search or retrieval features. Finding files already ties, so there's no evidence they would help. Per your rule, they'd be garbage features.
+
+**Limits:** only 4 tasks gave a direct comparison, on one model and on Windows only. That's enough to set priorities, not enough to claim a precise margin.
+
+**Left on your PC:**
+- My eval-script changes are uncommitted; I'll commit only if you ask.
+- Visual Studio Build Tools (about 1.6 GB, installed by Claude Code during its run). You can uninstall it from Settings, then Apps.
+- dsh's fake compiler folder at `%TEMP%\dsh-test-toolchain`. It's safe to delete.
+
+I can start on fix 1 if you want.
+
+_stop `end_turn` · 17.85s (ttft 17.05s) · in 2 · out 955 · cache r141,859/w187_
 
