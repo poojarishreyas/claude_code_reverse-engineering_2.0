@@ -1,0 +1,15 @@
+{
+  "id": "a2867764018ebac60d00247b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01KyUurJ8hx36tvR3we5cb5s",
+        "type": "tool_result",
+        "content": "07:41:08\n07:41:16\n07:43:22\n07:43:30\n07:47:21\n11:05:00 /v1/chat/completions 200 5s\n11:05:11 /v1/chat/completions 200 7s\n11:05:16 /v1/chat/completions 200 5s\n11:05:23 /v1/chat/completions 200 7s\n11:05:28 /v1/chat/completions 200 5s\n11:05:38 /v1/chat/completions 200 9s\n11:05:46 /v1/chat/completions 200 7s\n11:05:52 /v1/chat/completions 200 5s\n11:05:58 /v1/chat/completions 200 5s\n11:06:05 /v1/chat/completions 200 6s\n11:06:14 /v1/chat/completions 200 5s\n11:06:22 /v1/chat/completions 200 7s\n11:06:29 /v1/chat/completions 200 7s\n11:06:34 /v1/chat/completions 200 5s\n11:06:42 /v1/chat/completions 200 8s\n11:06:49 /v1/chat/completions 200 6s\n11:06:58 /v1/chat/completions 200 9s\n11:07:03 /v1/chat/completions 200 4s\n11:07:12 /v1/chat/completions 200 9s\n11:07:18 /v1/chat/completions 200 6s",
+        "is_error": false
+      }
+    ]
+  }
+}
