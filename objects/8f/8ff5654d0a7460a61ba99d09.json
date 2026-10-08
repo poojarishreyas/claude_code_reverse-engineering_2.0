@@ -1,0 +1,18 @@
+{
+  "id": "8ff5654d0a7460a61ba99d09",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSrQYKEAgSGAI4AUIIdGhpbmtpbmcSDO32saFMBAWjzqOiExoMLq56Ue08Lzl6J/O/IjCvwqQlTsaLEkN+JmL0yjzqAYW9yGaJxOk8HL9gmpqJ+dNPoRVf10nNWQ9h2Ta5rBoqygVYA43PPPdGoS5NCWkFerpTWwTl/QRmYbRjFHcAafLBBx0g3aZgACeO6Ueb/YOs3misQYe/vDK759/HEbPvynVaaMdnHv6MLLmvZ8XnA44v9DFqR+wPUOEAPBxo0+31sqmodjE/GjgwS3fVvxazvAh0inuiEsFgPoeWkLTXLQfFJevpvoIC2MfbM3f/XNswzTvLoIxPseGnLd+IkD35vQpS/egjl67OyClu46D/C/hZjy9hfQRbKISfC0ssEL587+x3H9vtVoj0ypZQXyVJQneg5YU1qrQSyvjzwL2uH7WDrYakUP3MwrmEOVc3m4YOYNjM+QjrFttWDOgFd/RvO3w6TVudVa1wWq2ZzZMrjdM2+p+WH7pECR8VfBbpi4gzu6+BPM3WyG/2JG5FFUEBFIke00L5iWymBMFpGZE0B/JTFUkHzNXLR+L8loEOWkXjdgIu4hVPvvx+CdGx26k9DMxvputxiT478orOdpOjzItGpUZ+NHUU/e+KdBB5Y+PTt8+Wsv7kDI269RsYqr9pnbT5JaPaHyZvIpZiHd3kFXZzsGgNPcDCZUCIhJBqEyRQQIX/JzOrcj4vM5sOzI4ZnRSynG7s59E5DcjcC4JEVonb9vLqJpQVccg/Ixmbgd9BQ5UB+bkJw77DdKAABBIz/LvMTZ14ygd50xN2sGB6m2ShoAj0qZtm7zWjEnF/UQ1Bbxa4V1cBl0ebAG/DM92c4STom89KYEhC2JyLHrQl3zTywhgFgYQxWXEm9qzEfKFKzDlSIewsMOJSguxkXRFnviTNTO5CwC0NKt1pk6PqGTGFBwMrZOhEzjMETRBemilbuMubBDXwUHPqEeEk7eTQkuERuifITnPOFUwWymxTYLO3IVGkU+NjTYeRkyq1sDH0a6KwmS1Sfd195qrcaMbo3G0yXCAsPI3XwSdZrz4nluUI41nVetecLIWFgZoYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "Yes, Claude Code survived the same OmniRoute errors. dsh now retries the same way it does.\n\n**What happened in the two runs:**\n- **dsh (07:38–07:47 UTC):**\n  - It got a 504, then three quick 503s, then two 504s that each took 2–4 minutes.\n  - That used up all 5 retries, so it gave up at 07:47.\n  - The gateway was working again by 07:51: Claude Code's next run started then and succeeded.\n- **Claude Code:**\n  - At 08:00 it got a 504 that took 5 minutes. It retried and succeeded.\n  - At 08:22 it got a 502, then four quick 503s. It kept retrying and succeeded 20 seconds later.\n\n**Claude Code's actual retry settings,** read from the copy installed on this PC: up to 10 retries. The wait starts at 0.5 s, doubles each time, and stops growing at 32 s.\n\n**What I changed:**\n1. **The \"400\" bug** (from before): a server error whose text contained \"400\" inside an IPv6 address was treated as \"don't retry\". It now gets retried.\n2. **Retry settings now match Claude Code:** 10 retries instead of 5, and the longest wait between retries is 32 s instead of 10 s. Together that's about 2.5 minutes of waiting before dsh gives up, instead of about 15 seconds. The change is in `packages/llm/llm/src/retry-policy.ts`, with the matching tests and docs updated.\n\nWill this rescue every failure like 4b9d8ad6f7? Probably, but I can't promise it. dsh needed 3–4 more minutes that time. 5 extra retries would very likely cover that, because each slow 504 itself takes minutes. Only another run that hits gateway errors will prove it.\n\n**Checks:** type-check and lint are clean. 1066 tests pass and 7 fail. Those 7 fail with or without these changes. They expect model names like \"deepseek-V4-Pro\", but the code now says \"Lynx-V4-Pro\" after the earlier renaming. I didn't touch them; say if you want them updated.\n\nNothing is committed."
+      }
+    ]
+  }
+}
