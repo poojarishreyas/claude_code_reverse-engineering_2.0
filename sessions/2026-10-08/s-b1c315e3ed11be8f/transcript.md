@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 27 |
-| tokens | in 56 · out 16,487 · cache read 2,502,440 · cache write 55,409 |
+| requests | 28 |
+| tokens | in 58 · out 16,904 · cache read 2,615,796 · cache write 58,163 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -3209,4 +3209,93 @@ Defaults changed. Now I'll check for docs or generated schemas that repeat the o
 ```
 
 _stop `tool_use` · 4.78s (ttft 2.36s) · in 2 · out 398 · cache r112,532/w824_
+
+---
+
+## req-0028 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 61 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01Xe5RXMz2wdQYa5RVLpjJVE)_
+
+```
+import { EMPTY_RESPONSE_CODE } from './error.ts'
+
+const DEFAULT_MAX_RETRIES = 10
+const DEFAULT_INITIAL_DELAY_MS = 500
+const DEFAULT_MAX_DELAY_MS = 32_000
+const DEFAULT_JITTER_RATIO = 0.1
+const DEFAULT_RETRYABLE_CODES = Object.freeze([
+30:  /** Maximum locally scheduled or accepted provider delay in milliseconds (default 32000). */
+40:  /** Maximum eligible retries after the first request (default 10). */
+ packages/llm/llm/src/retry-policy.ts        | 8 ++++----
+ packages/llm/llm/tests/retry-policy.spec.ts | 8 ++++----
+ packages/llm/llm/tests/service.spec.ts      | 2 +-
+ 3 files changed, 9 insertions(+), 9 deletions(-)
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Defaults changed. Now I'll check for docs or generated schemas that repeat the old numbers, then run the tests.
+
+**-> tool_use** `Bash` _(toolu_01Po2HkJBobTa7S6j4Cd5h1w)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && git grep -n -E 'maxDelayMs|maxRetries' -- '*.md' '*.json' '*.yaml' ':!**/node_modules/**' | grep -E '10000|10_000|10 ?s|\\b5\\b' | head; npx vitest run packages/llm 2>&1 | grep -v tsconfig-paths | grep -E 'FAIL|✗|×|Test Files|Tests ' | head -20",
+  "description": "Look for stale docs and run all llm package tests",
+  "timeout": 600000
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01Po2HkJBobTa7S6j4Cd5h1w)_
+
+```
+.agents/notes/implemented/feature/2026-07-24-provider-retry-policies.md:24:        maxDelayMs: 10000
+.agents/notes/implemented/feature/2026-07-24-provider-retry-policies.md:63:Adapter tests validate nested policies at provider load, prove explicit profile policies reach registration, prove omission resolves to five retries, and retain the serving policy across in-flight route replacement. LLM service tests prove adapter policies are captured and omission uses the shared five-retry behavior. Resolver tests prove always mode ignores retained normal-only fields but returns a pure always policy. Unit tests select policies from the failed request's serving registration, separate provider and changed-policy histories, exercise always mode beyond the normal budget, pin jitter and delay caps, prove downstream recovery ordering, prove cancellation and disposal drain delegated recovery before reaching quiescence, and prove both abort active backoff waits. Request-level coverage compares the complete messages of failed and retried attempts and rejects both provider error text and discarded partial output. A keyless headless `stream-json` snapshot runs failure, retry, and success through the assembled app, pins the complete `llm/retry` record, and rejects any model-message change between attempts. The shipped Web composition snapshot pins omitted DeepSeek and pi-ai policies at five retries, then proves settings can write `{ mode: 'always', maxRetries: 5 }` and obtain a pure always policy. A JSONL test round-trips an always event without `Infinity`; invariant tests bind provider identity to the request header, validate failure and mode-specific timer bounds, and bind retry numbers to provider-policy keys; TUI tests render finite and infinite limits.
+docs/engine-book/25-failures-and-retry.md:106:Defaults (`:14-24`): `maxRetries = 5`, `initialDelayMs = 500`, `maxDelayMs = 10_000`, `jitterRatio = 0.1`, and
+docs/engine-book/25-failures-and-retry.md:192:| `maxRetries` | `5` | `normal` only |
+docs/engine-book/25-failures-and-retry.md:193:| `initialDelayMs` / `maxDelayMs` | `500` / `10_000` | Exponential backoff bounds |
+docs/engine-book/_condensed/05-io-context.md:73:**Policy is pure data** (`retry-policy.ts:14-24`): `maxRetries = 5`, `initialDelayMs = 500`, `maxDelayMs = 10_000`, `jitterRatio = 0.1`, `retryableCodes = [EMPTY_RESPONSE, RATE_LIMIT, SERVER, TIMEOUT, TRANSPORT]`. Note what is **absent**: `AUTH`, `INVALID_REQUEST`, `QUOTA`, `CONTEXT_WINDOW_EXCEEDED` — retrying those unchanged would fail identically. Overflow is retryable only *after something changes the history*, which is why compaction owns that path.
+docs/engine-book/_condensed/07-appendices.md:89:| retry `maxRetries` / delays / jitter | `5` / `500`–`10_000` ms / `0.1` | `retry-policy.ts:14-24` |
+docs/engine-book/_notes/config.md:50:| `maxRetries` | `5` | `llm/src/retry-policy.ts:14-24` | `normal` mode only; `always` mode retries indefinitely. |
+docs/engine-book/_notes/config.md:51:| `initialDelayMs
+... [2,655 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Eight tests still expect the old defaults. I'll check that this is the only reason they fail.
+
+**-> tool_use** `Bash` _(toolu_01PUWuwKJfD36tQbCRUaAsHv)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && npx vitest run packages/llm/llm-deepseek packages/llm/llm-pi-ai/tests/adapter.spec.ts 2>&1 | grep -v tsconfig-paths | grep -E '^\\s*[-+] |AssertionError|Error:' | sort | uniq -c | head -20; grep -n -E 'maxRetries: 5|maxDelayMs: 10_?000|DEFAULT_RETRY|retryPolicy\\(' packages/llm/llm-deepseek/tests/adapter.spec.ts packages/llm/llm-deepseek/tests/dynamic-config.spec.ts packages/llm/llm-pi-ai/tests/adapter.spec.ts | head -20",
+  "description": "Show why the remaining tests fail",
+  "timeout": 300000
+}
+```
+
+_stop `tool_use` · 4.63s (ttft 1.83s) · in 2 · out 417 · cache r113,356/w2,754_
 

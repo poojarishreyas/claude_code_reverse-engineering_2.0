@@ -1,0 +1,32 @@
+{
+  "id": "02a55c87b637f4acd32692fb",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSsgYKEAgSGAI4AUIIdGhpbmtpbmcSDJLufTWwQBHiacAw6xoMm04ZTXY5ZfZGcBjHIjDq/iMGEauQsjuzTKYYGbQpHdiQtcXI6J2OU+nWv9co2EEzCtTgA7EHAG2ldhfjFegqzwUDOjaXNEg1uxwaUI19Mgj8R9X+rZcn95FDHJa/zbbJ2usSaYgW0gaZFAd1yIKvW/LiIiMygfJNuTHG18eF3WxuhlGrpvSffIHESHipgG1aSUUTaAbEbh+kuHQP/EqHGlRm3qC4DLa6cNXCftO2tVvJTOqzXnzsP4ypVghclUhcOKTYJ0+z9l3n0vGjcgqON3KvdbCL9jMVVz6qDbsepvi7C8JboW2MNEQqnr98QcWEK+tvK5e0yaXl4AVeG+Sn92TNDO3VMpgu6tr8jCXUk+f5zEUbtnmhRP8chIFINb8cU1K3CKIRmrh68YqZC93tSpS7Lcc5+0hkdJ0AuXSIf8S/XI3mnswHHLyw1gm7TEN3R8+2KjhY7NhjRK4IoQtGX05dP1ZQTLymVv4XmYDGNv+lKuybMpZxX7f31rVLD1FQWf6Xyg74ElelswghUSLPJlR1vB2JrDo++YRz8LY8iS0qmc2OB89K/Id62O4qPCwORk+5rs+OxVivPtU4NrYuQaUnW7EOtZUMS3T5Hbe/X8/+3SwuFBoRuZU3+HaY/fmHTYlMn9k75Jb4UrkUSHzQbCMXaXSJvncaN6oW6ap6v3kTYTPqEhsexZ6fm2OBSY0UEH9HeyAYtQJlopCyrv/Xzqt9K207uIyB3XTmtf12reXYmCyLIj/2C6HYeqLKDu6KdFGflXWlC//l5CFcLjUJTsBMHCi0mG/yRbSK/SjKL23sbPWt9LD8gljs/IDGtDPf+L1qmBCHkqPCq4vVrrkzcN6Nud1/WrDB91hww2nTXAoEI5+/dSl3gXt/T/tPpg0oTXTYj5Yskm1TEG+lX5DmHYaIENeorSWq6KiPNkPeTlkXF36eDFem0HPunYtIHgz2+ABuv6leJWapRdoDK7zMynMmb0EQRa6UWWhUjdShl7Nc2Qlg/qJLe+xPRtQXMCtZ8mO8y8rzfeXRCc0hZmup5RgB"
+      },
+      {
+        "type": "text",
+        "text": "Eight tests still expect the old defaults. I'll check that this is the only reason they fail."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01PUWuwKJfD36tQbCRUaAsHv",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && npx vitest run packages/llm/llm-deepseek packages/llm/llm-pi-ai/tests/adapter.spec.ts 2>&1 | grep -v tsconfig-paths | grep -E '^\\s*[-+] |AssertionError|Error:' | sort | uniq -c | head -20; grep -n -E 'maxRetries: 5|maxDelayMs: 10_?000|DEFAULT_RETRY|retryPolicy\\(' packages/llm/llm-deepseek/tests/adapter.spec.ts packages/llm/llm-deepseek/tests/dynamic-config.spec.ts packages/llm/llm-pi-ai/tests/adapter.spec.ts | head -20",
+          "description": "Show why the remaining tests fail",
+          "timeout": 300000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

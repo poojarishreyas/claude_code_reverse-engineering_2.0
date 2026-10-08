@@ -1,0 +1,32 @@
+{
+  "id": "8709c1c50c0decf53085e23f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS6wcKEAgSGAI4AUIIdGhpbmtpbmcSDPnFi1q3aXZgSv3r8RoMs6tYduyCmjq0i4onIjAMS7AJyBkSjb0IEN1yPli/e3HBKu0jTA4ASDA8kkr/nDftlCGHICe3bMGqjIUOrX4qiAcEze77N4tvsWxlgJZSA3lYWWI29NiINhrkNf0fAyNG+CQAX5v1sk8ywa2WmoPyMdNwspnkW5R7F2mAiMRMQEpmSs6J3UyL8U8pEVgWWUqjWB7GV73oxa2wK09kAFRuZWsRaZXzxvjo8+1Zw+NAtZ3f2xqlKtGBs6PPNcyfUZUXUbDWxPhXWmiQs3T0ivcNMzZqWC7jOGQJ8op2LKFpNNyX+iud4udOf1RFdkkEqWMbulALchPrF4YaAdhXLBDs6IC4tkMQfMWENyGUxUj9jHfpHgZuaeShVJHuxhjseqHg8xGqzG54IrSrVou2p3FiIAB9abIOUWTRe0DjbUj8v7KZ1FN5pNlGTj4OcvkGtpstZn+qWhewmIEV6ul1UAi9HVqNOPOG2Wb5r1Rr2cbId/xt8xgakWdHgPA9NiOzEOml00QgdI3NPVSfyBCanevavFKGY4hmbJ1oQG2qoxTXEk36e1oRgQwzzso8XMQ/K+WVOI4HygM/JL4e9oQkVXmzplvceKnpdOiIdNZoVA9i5bnZThJnTVizbYLtXf8I4Q/SxQ3Nxg3Pu5NtXyywdxzsfTUtrv17qsL7KF7s/kBIooqMkEM445zIW/bPhi/ck8BJzYZ8W5Yd2/ydACoZhbCEf9KOL0tIDRbPFsVlg71NZihf0AHuCvJRDpf1ACXfDgQPGTiCitVV4XfFuMKwB56IAv3gRFWXuIyGEBwNZ38f2RMZgBbzXhGK7DdfBeUsrdLORSSc9HMtIvr3Z8Ii4Tn8CKYHNlHKGFJm1nazcp7M9SYnQZD6y3RCqdMOH+uEOtRufdWhKUk5HuVvnZcTXKs7uA0nXFCu782XzM4m/LSXF9dSFD66EgbXYWpdiSPhtCn2UJdQ3WssNZxX1wvWNCumWfI8W77a3lD9pntgZ2X/SCkln80a4ukQiyQFFIBEnUtvxjj1MjRzxNTtWk2XsdAXSqR02xPXHwyuxLyCqmgIVbbD4bSX09lVWHcaJL6ETUx8CYWmo556VChfZhSXZg/XIukKmfqI/oRx66QwVKFpChFyTNlOyByT2FN0U8ljr1u62EH1L68d1YCpedxbAatNMJEqzEilRnzyfBb5zUxMatfZavwMirRZQG/zp9Of+EqDdK0VsztbbVyGc4qhwlR/yiHzUoV3Bg7UuF24oayioqrj9aoNgW62xO0NNmqlaF+l4XaD5s62wT5oGAE="
+      },
+      {
+        "type": "text",
+        "text": "Defaults changed. Now I'll check for docs or generated schemas that repeat the old numbers, then run the tests."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Po2HkJBobTa7S6j4Cd5h1w",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && git grep -n -E 'maxDelayMs|maxRetries' -- '*.md' '*.json' '*.yaml' ':!**/node_modules/**' | grep -E '10000|10_000|10 ?s|\\b5\\b' | head; npx vitest run packages/llm 2>&1 | grep -v tsconfig-paths | grep -E 'FAIL|✗|×|Test Files|Tests ' | head -20",
+          "description": "Look for stale docs and run all llm package tests",
+          "timeout": 600000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

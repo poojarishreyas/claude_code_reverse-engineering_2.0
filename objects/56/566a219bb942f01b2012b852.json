@@ -1,0 +1,19 @@
+{
+  "id": "566a219bb942f01b2012b852",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PUWuwKJfD36tQbCRUaAsHv",
+        "type": "tool_result",
+        "content": "      6 +     \"name\": \"Lynx\",\n      1 +     \"name\": \"Lynx-V4-Flash\",\n      1 +     \"name\": \"Lynx-V4-Flash-Vision-Exp\",\n      1 +     \"name\": \"Lynx-V4-Pro\",\n      1 +   \"maxRetries\": 10,\n      8 + Received\n      6 -     \"name\": \"deepseek\",\n      1 -     \"name\": \"deepseek-V4-Flash\",\n      1 -     \"name\": \"deepseek-V4-Flash-Vision-Exp\",\n      1 -     \"name\": \"deepseek-V4-Pro\",\n      1 -   \"maxRetries\": 5,\n      8 - Expected\n      6 AssertionError: expected [ { id: 'deepseek-official', …(1) } ] to deeply equal [ { id: 'deepseek-official', …(1) } ]\n      1 AssertionError: expected [ { …(5) }, { …(5) }, { …(4) } ] to deeply equal [ { …(5) }, { …(5) }, { …(4) } ]\n      1 AssertionError: expected { Object (mode, maxRetries, ...) } to match object { mode: 'normal', maxRetries: 5 }\npackages/llm/llm-pi-ai/tests/adapter.spec.ts:474:      maxRetries: 5,",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
