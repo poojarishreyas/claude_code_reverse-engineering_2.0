@@ -1,0 +1,23 @@
+{
+  "id": "80359455e73ab5b8050b48ca",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01UC5AXByp5qfFEKxVCFp253",
+        "name": "Bash",
+        "input": {
+          "command": "f=/c/Users/shrey/AppData/Roaming/npm/node_modules/@anthropic-ai/claude-code/bin/claude.exe; grep -a -o -E '.{0,10}dI=[^;]{0,200}' \"$f\" | head -3; grep -a -o -E '.{0,200}CLAUDE_CODE_MAX_RETRIES\\)[^;]{0,200}' \"$f\" | head -3; grep -a -o -E '.{0,200}Math\\.pow\\(2,[^;]{0,200}' \"$f\" | grep -i -E 'retry|32e3|500' | head -4",
+          "description": "Pull the default retry count and backoff formula from Claude Code",
+          "timeout": 120000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

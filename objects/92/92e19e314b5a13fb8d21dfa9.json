@@ -1,0 +1,19 @@
+{
+  "id": "92e19e314b5a13fb8d21dfa9",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UC5AXByp5qfFEKxVCFp253",
+        "type": "tool_result",
+        "content": "/\\pK�U_-\u001d�dI=���^D\u0010�Ң�\u0005v��\u001f[b�}�o�-O�(\u001d~p�44�5\nI=D.str(),dI=D.int(),fI=D.int(),FI=D.int(),KI=D.int(),WI=D.int({min:1}),vI=D.str(),gI=D.int(),yI=D.int(),YI=D.int(),VI=D.int(),wI=D.int(),XI=D.triBool(),hI=D.bool(),kI=D.triBool(),ZI=D.triBool(),jI=D.triBool(),JI=\nr fI=os(),dI=Fp(),pI=By(),ll=es()\noid 0){let a=e.maxRetries??this.maxRetries;o=this.calculateDefaultRetryTimeoutMillis(r,a)}return await me(o),this.makeRequest(e,r-1,n)}calculateDefaultRetryTimeoutMillis(e,r){let o=r-e,i=Math.min(0.5*Math.pow(2,o),8),c=1-Math.random()*0.25\nletions=new f5e(this),this.messages=new qW(this),this.models=new Rt(this),this.beta=new hS(this)}}qL.Completions=f5e;qL.Messages=qW;qL.Models=Rt;qL.Beta=hS;function KL(e,r,n=32000){let s=Math.min(500*Math.pow(2,e-1),n),o=Math.round(s+Math.random()*0.25*s)\n500,dP=524288000;async function bP(e,n){let r=\"\";for(let s=1;s<=$a;s++){let g=await n(s);if(g.done)return g.value;if(r=g.error||`${e} failed`,bi(`${e} attempt ${s}/${$a} failed: ${r}`),s<$a){let h=t3*Math.pow(2,s-1)\n\"HEAD\")e.headers.set(\"Accept-Encoding\",\"gzip,deflate\");return t(e)}}}function Ws(e,t){return e=Math.ceil(e),t=Math.floor(t),Math.floor(Math.random()*(t-e+1))+e}function Kn(e,t){let r=t.retryDelayInMs*Math.pow(2,e),n=Math.min(t.maxRetryDelayInMs,r)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

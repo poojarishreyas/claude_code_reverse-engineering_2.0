@@ -1,0 +1,28 @@
+{
+  "id": "2630839f82290c3a5b4f7bf7",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSmggKEAgSGAI4AUIIdGhpbmtpbmcSDF/0cw16KJnkY9ocrxoMTSv7l3AVFdJ2SZE/IjCi29a3PCMKjq1LPJtPKyw4UktjepKv5WzcZ7EeFgKNYV7eMoRPVotISHfKlk9T4vkqtwdm+75P0/BJCHVLd+mP7KCznVqro4K9aK3PjSET05d2Huf/Pb1TqBZXp0L7QF3IfoED2eMl3Vuj3iKJrBiq3Z/deKkPr2LdbjNtpQ7vwQxqvN/GID7G9a1NiN7w77UGJS9d7stUZ/uzTEzsOFKgUMadaKYeZCiujUuKRDhpTo1nVct4k1AMmUKAQmW5wJslwO/ynAtN5oCbol4pRDTKPyB2epGM3iV7nLpU8J8rhd6e4Bz6Sw3OYiwtDfMnHhnAIDWCFY3k5fXDTrLTWT7fv8OtdK4LTtBCd05n6Ybge/ldqjK5Y6424LDVPCzTtrft8iuALRtqoQZjZ8DRLRSEvrymw9fr27eX4f7esZ7d0mglqDk7x3ksHLS1C4RDlC0pPWKEtHX95q2LBOh2rt4yEnHrIHnrvE8YqBrDOJSe2X9X5mAYKKXyeKBDUhmSN/2Rw6b03fHtI5oPFhI0NReuHusn89eH1DtOR2DjNYNQ2F3o3n0e6n0cCE9pN2KCaSA685qvmrJn/kkn7LDXaXqwsqYmahcw+Bwx2H2BvhGmi0m7PhXohQLveIKf14g4jnhQtAYaZB8/RJk5PZkZnSkrcDXva3D5nak+qyhK6ePS/GidoOcIiRWkmM0jsCOfE1bHNbTU2nO/6RjIWGN5m0za3heW8A5aphqARN/pNkftmL+VOvr0fZbTZcpTEEZ6EoMnHYYUGdoSb+YBFK8b2/FJXwn+10OzO+J7hKsk2vO+iuTUadH76sema7xSYPHyw46WIrABFmfY7dX9VIBem982b/slIyK0pzJL8/Lh1ubUbWrhq+txrpkTTtH+jRGvxKmnkD+bhn6/X48qJDLMzqpXizkwbmNz2tyxlMNKMFpQ7rGOvzYncGg6MZKHp9ZrrROjigPCOt4pKh96+q11zS1JrOQcr6XIl4j/md52G/uaO45G1bfU5rkUqPXZtBthnNk0is+mYnxMuoHQkM6cqcK58Mfa+5NVTsEl1d5U941CMA7Dcml1ih7WLrUJt6e3LKiw11czUhb+D9z/7e9n44pLxyqQKceAZ0VEBPTreLx2MGAx+JYZyCvXlsK7L9WHjQP24cchwfq7MsAM1oepEN8l1s0W+A5Wh3l6NhWZRbuCYQzUSvf6o/E++UGQbHNiqgB2MNCZLrljIoVrU11oraeUiwvyuo57iD7Rs6mV4F2dHlW/CZdyE++mJS3SlZnkml4WXTUsNwYzQkI0bjxvGH5dNe8nuufu2Bvdzy6BopgwAhnaLgkMGINKpIcYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01GBNxnGZB8yPE5tJinRsQDC",
+        "name": "Bash",
+        "input": {
+          "command": "f=/c/Users/shrey/AppData/Roaming/npm/node_modules/@anthropic-ai/claude-code/bin/claude.exe; grep -a -o -E '.{0,250}KL\\([a-z]+,[^)]*\\).{0,100}' \"$f\" | head -3; echo ===; grep -a -o -E '.{0,120}clamped to.{0,200}' \"$f\" | head -3",
+          "description": "Find Claude Code's default number of retries",
+          "timeout": 120000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "5efa7101dd73a60c58e26d73",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01WwBXcW4i6j1iiMQQJreMr7",
+        "name": "Bash",
+        "input": {
+          "command": "cat /c/Users/shrey/AppData/Roaming/npm/claude; d=/c/Users/shrey/AppData/Roaming/npm/node_modules/@anthropic-ai/claude-code; ls $d $d/bin 2>/dev/null | head; for f in $(find $d -maxdepth 3 -type f \\( -name '*.js' -o -name '*.exe' \\) -size +1M 2>/dev/null); do echo \"== $f\"; grep -a -o -E '.{0,150}CLAUDE_CODE_MAX_RETRIES.{0,150}' \"$f\" | head -3; done",
+          "description": "Locate Claude Code's bundle and search for its retry settings",
+          "timeout": 120000
+        }
+      }
+    ]
+  }
+}
