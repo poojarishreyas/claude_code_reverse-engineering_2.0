@@ -1,0 +1,17 @@
+{
+  "id": "04482a14ef2aeaef7a9f3cf8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "what do you think in which feature the claude code is better than us",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
