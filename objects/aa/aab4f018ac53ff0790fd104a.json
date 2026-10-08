@@ -1,0 +1,19 @@
+{
+  "id": "aab4f018ac53ff0790fd104a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0142djWPVVwrG3JchVu85anS",
+        "type": "tool_result",
+        "content": "== clean-dsh/980b410340.events.jsonl\n0.0s llm/retry 1 548ms SERVER [antigravity/gemini-3.7-flash-high] [504]: Antigravity upstream did not return response headers within 80000ms\n0.6s llm/retry-started 1   \n0.6s llm/retry 2 1078ms SERVER 503: {\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"se\n1.7s llm/retry-started 2   \n1.8s llm/retry 3 2108ms SERVER 503: {\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"se\n3.9s llm/retry-started 3   \n4.1s llm/retry 4 3704ms SERVER 503: {\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"se\n7.8s llm/retry-started 4   \n220.4s turn/end    \n== clean-dsh-first/4b9d8ad6f7.events.jsonl\n0.0s llm/retry 1 473ms SERVER [antigravity/gemini-3.7-flash-high] [504]: Antigravity upstream did not return response headers within 80000ms\n0.5s llm/retry-started 1   \n0.6s llm/retry 2 960ms SERVER 503: {\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"se\n1.6s llm/retry-started 2   \n1.8s llm/retry 3 2065ms SERVER 503: {\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"se\n3.8s llm/retry-started 3   \n4.0s llm/retry 4 3822ms SERVER 503: {\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"se\n7.8s llm/retry-started 4   \n134.7s llm/retry 5 7270ms SERVER [antigravity/gemini-3.7-flash-high] [504]: Antigravity upstream did not return response headers within 80000ms\n142.0s llm/retry-started 5   \n373.2s turn/end    \n== clean-dsh/4b9d8ad6f7.events.jsonl\n0.0s llm/retry 1 473ms SERVER [antigravity/gemini-3.7-flash-high] [504]: Antigravity upstream did not return response headers within 80000ms\n0.5s llm/retry-started 1   \n0.6s llm/retry 2 960ms SERVER 503: {\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"se\n1.6s llm/retry-started 2   \n1.8s llm/retry 3 2065ms SERVER 503: {\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"se\n3.8s llm/retry-started 3   \n4.0s llm/retry 4 3822ms SERVER 503: {\"message\":\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\",\"type\":\"se\n7.8s llm/retry-started 4   \n134.7s llm/retry 5 7270ms SERVER [antigravity/gemini-3.7-flash-high] [504]: Antigravity upstream did not return response headers within 80000ms\n142.0s llm/retry-started 5   \n373.2s turn/end",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

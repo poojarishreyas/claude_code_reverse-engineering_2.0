@@ -1,0 +1,19 @@
+{
+  "id": "1b0574f95cdaef78b839d04a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01T5UD7HcmeYfDqukcPJPTrC",
+        "type": "tool_result",
+        "content": "-160.2s step/start step=47  \"\"\n0.0s llm/retry step=47 1 {\"message\":\"[antigravity/gemini-3.7-flash-high] [504]: Antigravity upstream did not return response headers within 80000ms: https://cloudcode-pa.googleapis.com/\n0.6s llm/retry-started step=47 1 \"\"\n0.6s llm/retry step=47 2 {\"message\":\"503: {\\\"message\\\":\\\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\\\",\\\"type\\\":\\\"service_unavailable\\\",\\\"code\\\":\\\"\n1.7s llm/retry-started step=47 2 \"\"\n1.8s llm/retry step=47 3 {\"message\":\"503: {\\\"message\\\":\\\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\\\",\\\"type\\\":\\\"service_unavailable\\\",\\\"code\\\":\\\"\n3.9s llm/retry-started step=47 3 \"\"\n4.1s llm/retry step=47 4 {\"message\":\"503: {\\\"message\\\":\\\"Service temporarily unavailable: all targets were skipped by pre-dispatch filters\\\",\\\"type\\\":\\\"service_unavailable\\\",\\\"code\\\":\\\"\n7.8s llm/retry-started step=47 4 \"\"\n35.9s assistant/message step=47  \"\"\n35.9s tool/call step=47  \"\"\n35.9s tool/result step=47  \"\"\n35.9s step/end step=47  \"\"\n35.9s step/start step=48  \"\"\n91.4s assistant/message step=48  \"\"\n91.4s tool/call step=48  \"\"\n95.5s tool/result step=48  \"\"\n95.5s step/end step=48  \"\"\n95.5s step/start step=49  \"\"\n220.4s step/end step=49  \"\"\n220.4s turn/end step=  {\"kind\":\"error\",\"error\":{\"message\":\"[antigravity/gemini-3.7-flash-high] [502]: fetch failed (cause: UND_ERR_CONNECT_TIMEOUT: Connect Timeout Error (attempted ad",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

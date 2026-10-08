@@ -1,0 +1,27 @@
+{
+  "id": "951fc4cd99c1bb71a0b92718",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_0142djWPVVwrG3JchVu85anS",
+        "name": "Bash",
+        "input": {
+          "command": "S=\"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad\"; for f in \"$S/clean-dsh/980b410340.events.jsonl\" \"$S/clean-dsh-first/4b9d8ad6f7.events.jsonl\" \"$S/clean-dsh/4b9d8ad6f7.events.jsonl\"; do echo \"== $(basename $(dirname $f))/$(basename $f)\"; [ -f \"$f\" ] || { echo missing; continue; }; node -e \"\nconst ls=require('fs').readFileSync('$f','utf8').split('\\n').filter(Boolean).map(JSON.parse);\nlet t0;\nfor(const e of ls){ if(/retry|turn\\/end|step\\/failed|request-error/.test(e.type) || (e.type==='turn/end')){ t0??=e.time; const d=e.data||{}; console.log(((e.time-t0)/1000).toFixed(1)+'s', e.type, d.retry??'', d.delayMs?Math.round(d.delayMs)+'ms':'', (d.failure?.code||'')+' '+(d.failure?.message||d.error?.message||'').slice(0,110)) } }\"; done",
+          "description": "Show dsh's retry timeline in the runs lost to proxy errors"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
