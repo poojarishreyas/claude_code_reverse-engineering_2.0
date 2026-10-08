@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 49 (11 errored) |
-| tokens | in 270 · out 20,148 · cache read 3,618,726 · cache write 182,984 |
+| requests | 50 (11 errored) |
+| tokens | in 366 · out 20,229 · cache read 3,740,045 · cache write 183,711 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -4079,4 +4079,62 @@ Will this rescue every failure like 4b9d8ad6f7? Probably, but I can't promise it
 Nothing is committed.
 
 _stop `end_turn` · 8.65s (ttft 8.64s) · in 2 · out 727 · cache r120,579/w740_
+
+---
+
+## req-0050 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 77 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_015DQdYzCGLGtmBCrbemjJRC)_
+
+```
+ docs/engine-book/25-failures-and-retry.md    | 6 +++---
+ docs/engine-book/_condensed/05-io-context.md | 2 +-
+ docs/engine-book/_condensed/07-appendices.md | 2 +-
+ docs/engine-book/_notes/config.md            | 4 ++--
+ docs/engine-book/_notes/raw/llm.md           | 2 +-
+ 5 files changed, 8 insertions(+), 8 deletions(-)
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Yes, Claude Code survived the same OmniRoute errors. dsh now retries the same way it does.
+
+**What happened in the two runs:**
+- **dsh (07:38–07:47 UTC):**
+  - It got a 504, then three quick 503s, then two 504s that each took 2–4 minutes.
+  - That used up all 5 retries, so it gave up at 07:47.
+  - The gateway was working again by 07:51: Claude Code's next run started then and succeeded.
+- **Claude Code:**
+  - At 08:00 it got a 504 that took 5 minutes. It retried and succeeded.
+  - At 08:22 it got a 502, then four quick 503s. It kept retrying and succeeded 20 seconds later.
+
+**Claude Code's actual retry settings,** read from the copy installed on this PC: up to 10 retries. The wait starts at 0.5 s, doubles each time, and stops growing at 32 s.
+
+**What I changed:**
+1. **The "400" bug** (from before): a server error whose text contained "400" inside an IPv6 address was treated as "don't retry". It now gets retried.
+2. **Retry settings now match Claude Code:** 10 retries instead of 5, and the longest wait between retries is 32 s instead of 10 s. Together that's about 2.5 minutes of waiting before dsh gives up, instead of about 15 seconds. The change is in `packages/llm/llm/src/retry-policy.ts`, with the matching tests and docs updated.
+
+Will this rescue every failure like 4b9d8ad6f7? Probably, but I can't promise it. dsh needed 3–4 more minutes that time. 5 extra retries would very likely cover that, because each slow 504 itself takes minutes. Only another run that hits gateway errors will prove it.
+
+**Checks:** type-check and lint are clean. 1066 tests pass and 7 fail. Those 7 fail with or without these changes. They expect model names like "deepseek-V4-Pro", but the code now says "Lynx-V4-Pro" after the earlier renaming. I didn't touch them; say if you want them updated.
+
+Nothing is committed.
+
+#### ASSISTANT
+
+We're making dsh survive OmniRoute errors as well as Claude Code does, and dsh now retries the same way Claude Code does, with tests passing. Next, rerun the two failed eval tasks to confirm it helps, or commit if you want.
+
+_stop `end_turn` · 17.94s (ttft 16.81s) · in 96 · out 81 · cache r121,319/w727_
 
