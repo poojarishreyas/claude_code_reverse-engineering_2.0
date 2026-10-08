@@ -1,0 +1,17 @@
+{
+  "id": "9bd0a6722a12f95bd59e58f7",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "create a simple and minimilistric report in desktop folder",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
