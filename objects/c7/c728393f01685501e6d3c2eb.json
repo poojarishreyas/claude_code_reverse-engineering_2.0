@@ -1,0 +1,15 @@
+{
+  "id": "c728393f01685501e6d3c2eb",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01UuHqGSqsb9vZsRhZQN3dKJ",
+        "type": "tool_result",
+        "content": "context_management: {\"edits\":[{\"type\":\"clear_thinking_20251015\",\"keep\":\"all\"}]}\nthinking: {\"type\":\"adaptive\"}\ncleared markers: 2\n{\"type\":\"tool/result\",\"data\":{\"message\":{\"content\":[{\"content\":\"Found 3 files\\npackages\\\\interaction\\\\user-questions\\\\src\\\\projection.ts\\npackages\\\\interaction\\\\user-questions\\\\tests\\\\projection.spec.ts\\npackages\\\\interaction\\\\user-questions\\\\src\\\\index.ts\"}]}\n{\"type\":\"tool/result\",\"data\":{\"message\":{\"content\":[{\"content\":\"Found 5 files\\npackages\\\\interaction\\\\user-questions\\\\src\\\\projection.ts\\npackages\\\\interaction\\\\user-questions\\\\tests\\\\projection.spec.ts\\npackages\\\\interaction\\\\tool-ask-user\\\\README.zh.md\\npack\n{\"type\":\"tool/result\",\"seq\":68,\"time\":1791372168188,\"data\":{\"turn\":1,\"step\":5,\"message\":{\"source\":{\"kind\":\"tool\",\"callId\":\"call_934306\"},\"content\":[{\"type\":\"tool-result\",\"toolCallId\":\"call_934306\",\"content\":[{\"type\":\"text\",\"text\":\"Found 169 matches\\n\\ndocs\\\\config-catalog.zh.md\\nLine 3465: - `inject`: `tools` · `userQuestions`\\n\\ndocs\\\\capability-seams.zh.md\\nLine 159:   svc_userQuestions[\\\"ctx.u",
+        "is_error": false
+      }
+    ]
+  }
+}

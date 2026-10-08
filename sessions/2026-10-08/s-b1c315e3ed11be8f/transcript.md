@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 64 (11 errored) |
-| tokens | in 492 · out 34,380 · cache read 5,433,946 · cache write 327,567 |
+| requests | 65 (11 errored) |
+| tokens | in 588 · out 34,465 · cache read 5,574,105 · cache write 329,095 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -5195,4 +5195,70 @@ I checked this against the run logs and the requests OmniRoute saved, not guesse
 **What would help most:** make dsh's grep return file names by default, like Claude Code, and show matching lines only when asked. That's a small change and directly targets the biggest difference. I haven't made it: following your "only if it actually works" rule, it should be checked with a rerun of a couple of tasks to confirm tokens drop and pass rates hold. Say if you want me to do it.
 
 _stop `end_turn` · 16.88s (ttft 16.15s) · in 2 · out 1,528 · cache r137,958/w2,201_
+
+---
+
+## req-0065 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 103 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01UuHqGSqsb9vZsRhZQN3dKJ)_
+
+```
+context_management: {"edits":[{"type":"clear_thinking_20251015","keep":"all"}]}
+thinking: {"type":"adaptive"}
+cleared markers: 2
+{"type":"tool/result","data":{"message":{"content":[{"content":"Found 3 files\npackages\\interaction\\user-questions\\src\\projection.ts\npackages\\interaction\\user-questions\\tests\\projection.spec.ts\npackages\\interaction\\user-questions\\src\\index.ts"}]}
+{"type":"tool/result","data":{"message":{"content":[{"content":"Found 5 files\npackages\\interaction\\user-questions\\src\\projection.ts\npackages\\interaction\\user-questions\\tests\\projection.spec.ts\npackages\\interaction\\tool-ask-user\\README.zh.md\npack
+{"type":"tool/result","seq":68,"time":1791372168188,"data":{"turn":1,"step":5,"message":{"source":{"kind":"tool","callId":"call_934306"},"content":[{"type":"tool-result","toolCallId":"call_934306","content":[{"type":"text","text":"Found 169 matches\n\ndocs\\config-catalog.zh.md\nLine 3465: - `inject`: `tools` · `userQuestions`\n\ndocs\\capability-seams.zh.md\nLine 159:   svc_userQuestions[\"ctx.u
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+I checked this against the run logs and the requests OmniRoute saved, not guesses. Claude Code uses fewer tokens mainly because its search results are much smaller, and because it takes fewer steps.
+
+**Why it matters so much:** every step sends the whole conversation so far back to the model. Anything big that enters early gets paid for again on every later step. So a 15K-character search result at step 3 of a 40-step run is sent about 37 times.
+
+**1. Search (grep) output is about 10× bigger per call in dsh. This is the biggest cause.**
+- Claude Code's grep returns only file names by default: `Found 3 files` plus 3 paths.
+- dsh's grep returns every matching line, up to 250 of them: `Found 169 matches` plus a line of code for each.
+- Across 5 tasks:
+
+  | | Calls | Output | Per call |
+  |---|---|---|---|
+  | dsh | 19 | 195K characters | about 10K |
+  | Claude Code | 26 | 20K characters | under 1K |
+
+- Both asked similar questions (for example, both searched for `StateDot`). The difference is the default output.
+
+**2. dsh takes more steps:** 240 against 189 on the four tasks both passed. Each extra step resends the whole conversation again.
+
+**3. dsh's shell output is bigger:** 102 shell calls and 250K characters, against 83 calls and 109K for Claude Code.
+
+**Total tool output on 5 tasks:** dsh 869K characters, Claude Code 555K, about 57% more.
+
+**Not the cause:**
+- **Starting prompt:** dsh starts smaller. Its first request is about 15K tokens, against about 30K for Claude Code.
+  - dsh does load AGENTS.md (18K characters), a skills list (7K) and `packages/AGENTS.md` (7K) on every step.
+  - Even so, Claude Code's built-in prompt and tool list are bigger.
+- **The model's thinking:** it's small in both. dsh resends about 2K characters of it, Claude Code about 5K.
+- **File reads:** these are about the same size per read.
+
+**What would help most:** make dsh's grep return file names by default, like Claude Code, and show matching lines only when asked. That's a small change and directly targets the biggest difference. I haven't made it: following your "only if it actually works" rule, it should be checked with a rerun of a couple of tasks to confirm tokens drop and pass rates hold. Say if you want me to do it.
+
+#### ASSISTANT
+
+You want dsh to search for and find files as well as Claude Code at lower cost, and I just found that dsh's grep output is about 10 times bigger. Next, with your go-ahead, I'll make grep return file names by default and rerun a couple of tasks to check.
+
+_stop `end_turn` · 5.47s (ttft 4.27s) · in 96 · out 85 · cache r140,159/w1,528_
 
