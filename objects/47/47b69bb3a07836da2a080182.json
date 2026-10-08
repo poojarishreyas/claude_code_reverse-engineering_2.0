@@ -1,0 +1,15 @@
+{
+  "id": "47b69bb3a07836da2a080182",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Sd6vKs9279y64HQJT4eSGC",
+        "type": "tool_result",
+        "content": "clean-dsh          f04ad05f30 ran steps 38 {\"inputTokens\":209689,\"outputTokens\":8216,\"cacheReadTokens\":1819896}\nclean-dsh          ed34a1d7fe ran steps 55 {\"inputTokens\":291259,\"outputTokens\":23760,\"cacheReadTokens\":4398182}\nclean-dsh          a59beb8ae3 ran steps 49 {\"inputTokens\":280730,\"outputTokens\":36595,\"cacheReadTokens\":3374143}\nclean-dsh          9633724b40 ran steps 98 {\"inputTokens\":462839,\"outputTokens\":40609,\"cacheReadTokens\":9492121}\nclean-dsh          980b410340 error steps 49 {\"inputTokens\":256024,\"outputTokens\":31655,\"cacheReadTokens\":2862786}\nclean-dsh          4b9d8ad6f7 error steps 36 {\"inputTokens\":180804,\"outputTokens\":14654,\"cacheReadTokens\":1690071}\nclean-claude-code  f04ad05f30 ran steps 20 {\"inputTokens\":117951,\"outputTokens\":2730,\"cacheReadTokens\":470014,\"cacheWriteTokens\":0}\nclean-claude-code  ed34a1d7fe ran steps 39 {\"inputTokens\":180849,\"outputTokens\":21921,\"cacheReadTokens\":2001219,\"cacheWriteTokens\":0}\nclean-claude-code  a59beb8ae3 ran steps 51 {\"inputTokens\":264152,\"outputTokens\":41126,\"cacheReadTokens\":2961335,\"cacheWriteTokens\":0}\nclean-claude-code 9633724b40 missing\nclean-claude-code  980b410340 ran steps 42 {\"inputTokens\":237187,\"outputTokens\":35020,\"cacheReadTokens\":2715377,\"cacheWriteTokens\":0}\nclean-claude-code  4b9d8ad6f7 ran steps 27 {\"inputTokens\":172772,\"outputTokens\":8967,\"cacheReadTokens\":668198,\"cacheWriteTokens\":0}",
+        "is_error": false
+      }
+    ]
+  }
+}

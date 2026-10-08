@@ -1,0 +1,19 @@
+{
+  "id": "64e5be32cbce547df42cd76c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011Kv6N1YfSaNrsZ53hbDt7L",
+        "type": "tool_result",
+        "content": "f04ad05f30 clean-dsh          results 37 chars 137607 >8K: 4 todo_write:3x/0K read:11x/66K grep:3x/47K pwsh:17x/23K glob:1x/1K edit:2x/0K\nf04ad05f30 clean-claude-code  results 19 chars 66818 >8K: 3 read:5x/55K grep:5x/1K bash:8x/10K edit:1x/0K\ned34a1d7fe clean-dsh          results 54 chars 225023 >8K: 10 todo_write:3x/0K read:20x/138K glob:1x/2K grep:5x/28K pwsh:22x/56K write:1x/0K edit:2x/0K\ned34a1d7fe clean-claude-code  results 38 chars 144421 >8K: 4 read:18x/113K glob:1x/2K grep:9x/17K bash:8x/12K TaskStop:1x/0K edit:1x/0K\na59beb8ae3 clean-dsh          results 48 chars 193141 >8K: 7 todo_write:3x/0K read:13x/66K pwsh:24x/82K grep:4x/44K write:1x/0K edit:3x/0K\na59beb8ae3 clean-claude-code  results 50 chars 128946 >8K: 3 read:7x/90K bash:36x/38K grep:2x/0K TaskStop:1x/0K edit:4x/1K\n980b410340 clean-dsh          results 48 chars 161682 >8K: 7 todo_write:1x/0K glob:2x/1K read:16x/97K pwsh:24x/44K grep:2x/18K edit:3x/0K\n980b410340 clean-claude-code  results 41 chars 127080 >8K: 6 grep:6x/1K bash:23x/40K read:7x/85K edit:5x/1K\n4b9d8ad6f7 clean-dsh          results 35 chars 150539 >8K: 3 read:10x/42K todo_write:1x/0K glob:1x/5K grep:5x/58K pwsh:15x/45K edit:3x/0K\n4b9d8ad6f7 clean-claude-code  results 26 chars 88188 >8K: 2 read:8x/37K glob:2x/13K grep:4x/1K bash:8x/9K edit:2x/0K TaskOutput:1x/27K TaskStop:1x/0K\n{\"type\":\"tool/call\",\"seq\":23,\"time\":1791372144597,\"data\":{\"turn\":1,\"step\":1,\"callId\":\"call_1279659\",\"name\":\"todo_write\",\"arguments\":\"{\\\"todos\\\":[{\\\"content\\\":\\\"Read projection.spec.ts and relevant user-questions source code\\\",\\\"status\\\":\\\"in_progress\\\"},{\\\"status\\\":\\\"pending\\\",\\\"content\\\":\\\"Investig",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
