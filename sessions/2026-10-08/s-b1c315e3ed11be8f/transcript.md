@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 52 (11 errored) |
-| tokens | in 372 · out 23,846 · cache read 3,984,156 · cache write 187,034 |
+| requests | 53 (11 errored) |
+| tokens | in 468 · out 23,921 · cache read 4,109,525 · cache write 187,408 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -4214,4 +4214,50 @@ It covers:
 I kept it on your PC only and didn't publish it online.
 
 _stop `end_turn` · 5.18s (ttft 5.17s) · in 2 · out 374 · cache r122,065/w3,304_
+
+---
+
+## req-0053 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 81 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_013JksocgcnTbJYWQpincbo8)_
+
+```
+File created successfully at: C:\Users\shrey\Desktop\dsh-vs-claude-code-report.html (file state is current in your context — no need to Read it back)
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+I saved the report as `C:\Users\shrey\Desktop\dsh-vs-claude-code-report.html`. It's a single page that opens in any browser and follows your light or dark mode.
+
+It covers:
+1. **The verdict:** both find files equally well, but Claude Code wins overall.
+2. **A results table** for the 6 tasks, with pass or error and step counts.
+3. **The scores:** finding files is a tie; on steps, cost and surviving gateway errors, Claude Code is ahead.
+4. **Why dsh lost two runs:** the "400" in an IPv6 address, and giving up too soon on the gateway errors.
+5. **What I fixed,** and the test results.
+6. **What's still open:**
+   - the retry fix isn't proven in a real run yet;
+   - dsh still uses more steps and tokens;
+   - nothing is committed;
+   - VS Build Tools is still installed.
+
+I kept it on your PC only and didn't publish it online.
+
+#### ASSISTANT
+
+We're making dsh as good as Claude Code at finding files; I fixed dsh's gateway retries to work like Claude Code's and saved a report on your Desktop. Next, run the eval again to check that the retry fix holds up.
+
+_stop `end_turn` · 3.22s (ttft 2.19s) · in 96 · out 75 · cache r125,369/w374_
 
