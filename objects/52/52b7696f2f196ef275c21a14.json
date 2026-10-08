@@ -1,0 +1,22 @@
+{
+  "id": "52b7696f2f196ef275c21a14",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS+wYKEAgSGAI4AUIIdGhpbmtpbmcSDIGgihekUtkEPvw32RoMi3nOTqBZmxGlGWMZIjBguSi2JKkxVvB9/hkK1CjUzr6D0kpd0qQWEy9ME0grCGbksq8jxBpmNgMt0CWRsdYqmAaFEk1/H5aDDv2xSYdWvOusuDY59kpcSamLPVVlrGaUvSmij0Q7eeTZ7b04VwQpLr9vpCFx/pdGcUDltHD19eYST7vL2Ryv6sbBLaNyKRIaQ4hvwexi5X4Vcx47rv0oAFRfnzuVlrnbpOklN5/OSNAUHBgyvR3IKJQDQ+FSVTfbDe+sk4II+/f8KJqaWDK4/RrDSuRpXXqYidLPvX49Pz+KRe6azpawP3sV6NnAkB5mgD9+Pnkj4sRe/jzRuPw9xPAKFrSXPZhfu3FhA3vLgMYTd4qg6vOvav0VEUxb8HV2t2DGMmS+P5fViw+6veEqalB0yTwCgSwDjUCxGKTJrwWRa+4maj4eVwZgSGLEm5/T4pmJ2lqGg+iPwnL+f5gyaUVZy0PiszVLVO6eIHKZLQX+h5GzvyEDzh5CC6X7+MHlk2CHUwNQNkreUeX2qkMCY0o0pGtwHqLnK6YovZGk9t6yV6VRTaHNUPn22UROxD3fUcruYx8trvihwWV6uB479ij4Tuo1vsd7FKZn6xHkvs8y3EYPOmZwPqh/lRhdBLPoC2x+rm3lul6kN+yoTnJ6M31NDA9B8ehw0fJ89hsiLz/M6M5zw9pqlzb1UIIYBoihec2WSCq7U8ynckNDFIIgk9p3LXv6vTcFTRqaFniJAYz3DeVBWkkLM/i1UpNRiBQaxMHOAWZKt6SXDYr735WHviSgiTHxdqLXFBn+fWo4qx+V1CaWEOEWuGdyJbuG1MQ6cZQH76HQxCjnzW/A52k38zEJvpsXEYlI+EXkGNbAFvX6QbqRflAETkK6bnhUznbWOKaGbZ1up8jSvq7YTk9A0t/CmK5YJWzM5YryxI0yRibnwuL7r7lTGgxVEmy6DqWXVf1Yi4HFtTTR5ONy0bBF6GfvVbtPPqrTi3lzXrhTflzF/GRKCsS9QFrRYijlIJZtsll21moUC2LrMQ7K+xGF1GZ8nlxCsnqYZCettnF0VAq96/DxvNUxKjnhpjEQBb3NKMn695c5rd60zFyau+gGh7kviDp0f3QYpc4+B/fVClrYUTihj3GTKBkYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "I fixed the bug that lost one of the two dsh runs. I did not make the retry window longer, because nothing I have shows that change would help.\n\n**The bug:** when dsh gets an error, it reads the message text to decide whether to try again. It treated any \"400\" anywhere in the text as \"your request was wrong, don't retry\". On task 980b410340, OmniRoute sent a 502 (a temporary gateway error worth retrying), but the error text listed Google IPv6 addresses like `2001:4860:4844:400::`. dsh saw that \"400\", marked the error as not retryable, and stopped without a single retry.\n\n**The fix** (`packages/llm/llm-pi-ai/src/stream.ts`): a number now only counts as a status code if it stands alone. Digits right after `:` or `.` belong to an address or version, so they're ignored. The real error from that run is now classed as a server error and gets retried. Real 400, 401 and 429 errors are classed the same as before. I added that exact error message as a test in `convert.spec.ts`. All 338 tests in the llm-pi-ai and llm-retry packages pass, and type-check and lint are clean.\n\n**The retry window:** on the other lost run (4b9d8ad6f7), dsh did retry 5 times over about 6 minutes. Four quick 503s used up 4 retries in under 8 seconds, then the gateway's 504s took minutes each, and it gave up. More retries spaced further apart might have saved it, but it might not have: the gateway was failing for minutes at a time. So I didn't change the code defaults, which would affect every provider.\n\nYou can try a longer window just for OmniRoute through settings. No code change is needed, and you can delete the lines to undo it. In `~/.dsh/settings.yaml`, under `mylynx:`, you'd add:\n\n```yaml\n      retryPolicy:\n        mode: normal\n        maxRetries: 8\n        backoff:\n          initialDelayMs: 2000\n          maxDelayMs: 30000\n```\n\nThat stretches the retries over about 2–3 minutes of waiting instead of about 15 seconds. Say if you want me to add it. Only the next eval run that hits gateway errors would show whether it helps.\n\nNothing is committed.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

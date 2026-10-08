@@ -1,0 +1,17 @@
+{
+  "id": "d3049ab99c8bf5524b579bfa",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "i need same feature as clude code because caldue code survuved on this omniroute error right?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

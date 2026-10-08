@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 9 |
-| tokens | in 18 · out 6,258 · cache read 702,383 · cache write 29,067 |
+| requests | 11 |
+| tokens | in 24 · out 7,445 · cache read 877,223 · cache write 31,520 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -1178,4 +1178,262 @@ That stretches the retries over about 2–3 minutes of waiting instead of about 
 Nothing is committed.
 
 _stop `end_turn` · 9.17s (ttft 8.93s) · in 2 · out 784 · cache r85,298/w1,716_
+
+---
+
+## req-0010 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 24 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01NA1rbr2CeEvmXbsmi23G5z)_
+
+```
+/** Current bounded transient retry behavior for one provider route. */
+export interface NormalRetryPolicyConfig {
+  /** Retry only configured transient failure codes. */
+  mode: 'normal'
+  /** Maximum eligible retries after the first request (default 5). */
+  maxRetries?: number
+  /** Stable failure codes eligible for this policy. */
+  retryableCodes?: string[]
+  /** Local exponential-backoff and jitter configuration. */
+  backoff?: BackoffConfig
+}
+
+/** Unbounded retry behavior for every model-request failure on one provider route. */
+export interface AlwaysRetryPolicyConfig {
+  /** Retry every model-request failure until success, cancellation, or disposal. */
+  mode: 'always'
+  /** Local exponential-backoff and jitter configuration. */
+  backoff?: BackoffConfig
+}
+
+/** Provider-owned model-request retry policy configuration. */
+export type RetryPolicyConfig = NormalRetryPolicyConfig | AlwaysRetryPolicyConfig
+
+/** Fully resolved backoff shared by both retry modes. */
+export interface ResolvedRetryBackoff {
+  readonly initialDelayMs: number
+  readonly maxDelayMs: number
+  readonly jitterRatio: number
+}
+
+/** Fully resolved bounded transient retry policy. */
+export interface ResolvedNormalRetryPolicy extends ResolvedRetryBackoff {
+  readonly mode: 'normal'
+  readonly maxRetries: number
+  readonly retryableCodes: readonly string[]
+}
+
+/** Fully resolved unbounded retry policy. */
+export interface ResolvedAlwaysRetryPolicy extends ResolvedRetryBackoff {
+  readonly mode: 'always'
+}
+
+/** Immutable provider policy captured when its adapter route is registered. */
+export type ResolvedRetryPolicy = ResolvedNormalRetryPolicy | ResolvedAlwaysRetryPolicy
+
+const backoffSchema: z<BackoffConfig> = z.object({
+  initialDelayMs: z.number().max(MAX_TIMER_DELAY_MS).default(DEFAULT_INITIAL_DELAY_MS),
+  maxDelayMs: z.number().max(MAX_TIMER_DELAY_MS).default(DEFAULT_MAX_DELAY_MS),
+  jitterRatio: z.number().min(0).max(1).default(DEFAULT_JITTER_RATIO),
+})
+
+const normalPolicySchema: z<NormalRetryPolicyConfig> = z.object({
+  mode: z.const('normal').required(),
+  maxRetries: z.number().step(1).min(0).max(Number.MAX_SAFE_INTEGER).default(DEFAULT_MAX_RETRIES),
+  retryableCodes: z.array(z.string()).default([...DEFAULT_RETRYABLE_CODES]),
+  backoff: backoffSchema,
+})
+
+const alwaysPolicySchema: z<AlwaysRetryPolicyConfig> = z.object({
+  mode: z.const('always').required(),
+  backoff: backoffSchema,
+})
+
+/** Cordis schema embedded by each concrete provider configuration. */
+export const RetryPolicySchema: z<RetryPolicyConfig> = z.union([
+ *   config:
+ *     providers:
+ *       # Catalog route: everything but the credential comes from pi-ai.
+ *       openai:
+ *         apiKeyEnv: OPENAI_API_KEY
+ *         retryPolicy:
+ *           mode: normal
+ *           maxRetries: 2
+ *       # Catalog route with the catalog narrowed and one capacity corrected.
+ *       anthropic:
+ *         apiKeyEnv: ANTHROPIC_API_KEY
+ *         models:
+ *           - id: claude-sonnet-4-5
+ *             contextWin
+... [102 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+I fixed the bug that lost one of the two dsh runs. I did not make the retry window longer, because nothing I have shows that change would help.
+
+**The bug:** when dsh gets an error, it reads the message text to decide whether to try again. It treated any "400" anywhere in the text as "your request was wrong, don't retry". On task 980b410340, OmniRoute sent a 502 (a temporary gateway error worth retrying), but the error text listed Google IPv6 addresses like `2001:4860:4844:400::`. dsh saw that "400", marked the error as not retryable, and stopped without a single retry.
+
+**The fix** (`packages/llm/llm-pi-ai/src/stream.ts`): a number now only counts as a status code if it stands alone. Digits right after `:` or `.` belong to an address or version, so they're ignored. The real error from that run is now classed as a server error and gets retried. Real 400, 401 and 429 errors are classed the same as before. I added that exact error message as a test in `convert.spec.ts`. All 338 tests in the llm-pi-ai and llm-retry packages pass, and type-check and lint are clean.
+
+**The retry window:** on the other lost run (4b9d8ad6f7), dsh did retry 5 times over about 6 minutes. Four quick 503s used up 4 retries in under 8 seconds, then the gateway's 504s took minutes each, and it gave up. More retries spaced further apart might have saved it, but it might not have: the gateway was failing for minutes at a time. So I didn't change the code defaults, which would affect every provider.
+
+You can try a longer window just for OmniRoute through settings. No code change is needed, and you can delete the lines to undo it. In `~/.dsh/settings.yaml`, under `mylynx:`, you'd add:
+
+```yaml
+      retryPolicy:
+        mode: normal
+        maxRetries: 8
+        backoff:
+          initialDelayMs: 2000
+          maxDelayMs: 30000
+```
+
+That stretches the retries over about 2–3 minutes of waiting instead of about 15 seconds. Say if you want me to add it. Only the next eval run that hits gateway errors would show whether it helps.
+
+Nothing is committed.
+
+#### USER
+
+i need same feature as clude code because caldue code survuved on this omniroute error right?
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Before I copy Claude Code, I'll check whether it actually hit the same errors during its runs or just ran at a quieter time.
+
+**-> tool_use** `Bash` _(toolu_014K5c3wk4TVkfMkwrmpj6Ux)_
+
+```json
+{
+  "command": "S=C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad; cat $S/om4.cjs; ls $S/clean-claude-code $S/clean-dsh",
+  "description": "Look at the OmniRoute query script and result folders"
+}
+```
+
+_stop `tool_use` · 7.65s (ttft 5.47s) · in 4 · out 698 · cache r87,014/w812_
+
+---
+
+## req-0011 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 26 messages_
+
+#### USER
+
+i need same feature as clude code because caldue code survuved on this omniroute error right?
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Before I copy Claude Code, I'll check whether it actually hit the same errors during its runs or just ran at a quieter time.
+
+**-> tool_use** `Bash` _(toolu_014K5c3wk4TVkfMkwrmpj6Ux)_
+
+```json
+{
+  "command": "S=C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad; cat $S/om4.cjs; ls $S/clean-claude-code $S/clean-dsh",
+  "description": "Look at the OmniRoute query script and result folders"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_014K5c3wk4TVkfMkwrmpj6Ux)_
+
+```
+const { DatabaseSync } = require('node:sqlite')
+const db = new DatabaseSync(require('os').homedir() + '/.omniroute/storage.sqlite', { readOnly: true })
+const since = new Date('2026-10-07T21:00:00+05:30').toISOString()
+console.log(db.prepare(`select status, model, count(*) n, min(timestamp) first, max(timestamp) last from call_logs where timestamp >= ? and path='/v1/messages' group by 1,2 order by first`).all(since))
+const cols = db.prepare(`pragma table_info(call_logs)`).all().map(c => c.name)
+const errCol = cols.find(c => /error|response_body|message/i.test(c))
+console.log('cols:', cols.join(','))
+if (errCol) for (const r of db.prepare(`select status, ${errCol} e from call_logs where timestamp >= ? and status >= 500 order by timestamp desc limit 3`).all(since)) console.log(r.status, String(r.e).slice(0, 300))
+C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-claude-code:
+4b9d8ad6f7.events.jsonl
+4b9d8ad6f7.json
+54fa38795f.events.jsonl
+54fa38795f.json
+9633724b40.events.jsonl
+980b410340.events.jsonl
+980b410340.json
+a59beb8ae3.events.jsonl
+a59beb8ae3.json
+e21ed97f29.events.jsonl
+e21ed97f29.json
+ed34a1d7fe.events.jsonl
+ed34a1d7fe.json
+f04ad05f30.events.jsonl
+f04ad05f30.json
+summary.json
+summary.md
+
+C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad/clean-dsh:
+4b9d8ad6f7.events.jsonl
+4b9d8ad6f7.json
+54fa38795f.events.jsonl
+54fa38795f.json
+9633724b40.events.jsonl
+9633724b40.json
+980b410340.events.jsonl
+980b410340.json
+a59beb8ae3.events.jsonl
+a59beb8ae3.json
+e21ed97f29.events.jsonl
+e21ed97f29.json
+ed34a1d7fe.events.jsonl
+ed34a1d7fe.json
+f04ad05f30.events.jsonl
+f04ad05f30.json
+summary.json
+summary.md
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01JrwqVawT9ADZoMpgFNdMYa)_
+
+```json
+{
+  "command": "S=C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad; cd $S; for a in clean-claude-code clean-dsh; do for t in 980b410340 4b9d8ad6f7 f04ad05f30 ed34a1d7fe a59beb8ae3; do f=$a/$t.events.jsonl; [ -f $f ] && echo \"$a $t first=$(head -c 400 $f | grep -o '\"t[a-z]*\":\"[^\"]*Z\\?\"' | head -1) mtime=$(date -u -r $f +%FT%TZ) lines=$(wc -l <$f)\"; done; done; head -c 300 clean-claude-code/980b410340.events.jsonl; echo; grep -o '\"[a-zA-Z]*At\":\"[^\"]*\"' clean-claude-code/980b410340.json | head",
+  "description": "Get the time window of each run"
+}
+```
+
+_stop `tool_use` · 5.28s (ttft 1.99s) · in 2 · out 489 · cache r87,826/w1,641_
 

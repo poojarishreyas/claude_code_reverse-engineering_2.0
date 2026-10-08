@@ -1,0 +1,23 @@
+{
+  "id": "ffb7b95e774edec528838b29",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSpQoKEAgSGAI4AUIIdGhpbmtpbmcSDGrsCx9uiiIhoVPD6hoM3DY8qMcpXixRzIW8IjA+mFWbpK/HSj3kbgGg5Vo1PnOJxsX2PxjStYrqF08QFJLSqgQS0amGzjLJaMGre4Iqwgl3DYEVkUU2BObjxBLUKLYN72gtUrzA+MGz/9JOfbpwl/yat0rNP8vqdPYS8CpXFPNEsaXwT09DiIdlaOiyKyOnPLImjMQ4FHxWZPprLaT9LKD45EA2H9byzgpkkPSDVvr91taVNIPBkoxL3VL2Fc+FCfZIoEo6mxcpexqqqYYDqiiblSm7Yro++9AHuk7tXGFBC8X05Iv3EtdzBQUoXZ9/hovkYnAoOU32+R+G4f0r+In2r5r5AtLXHhSsyGjKufBxE2/K2qmryRxHIk8nR+YfC5DmmhOX0xYDUGjK/lhnlFh5rEhRhzDcgx0fsPQqIT9UKOcU1GMSVx6Zvqznj9IYZhIUl9bwVZGJwACshgUcKpCcYCjeAM7pi0aWchoJxLbYOHA+cLptDBgkL2MognUqRwalCWOH/sLYzzDZZc10OpftrbuYr2v/0E1+8CEkI3qNEx5VwvPyr38Do7ftQV89rwoNrQiBnGCSSwzcQEDWIKnrarQpUG8vuzZzF28ENjesbWEZDL/oQNECJc5Aq1WWt6OuAhF8QKU6uaOrbd1g+hv4ckb7ZgIJ6vagKXs85f4o5oeCXwSvNQbom0ulQpCwU8EJbLOTGmcRBjNkDHB+eKPtqV1nTQ8H+jP2vI1QR+Bfz0V0VkUv7i649RKQlJKIwhVd152HCZFEjNsN1Edu17W+pruaJrZGxG4FhbAOjaz+JYlXMyIvhQ3QjhabpaTTUivK7WHt/t62/DVNE5JRZpJo0Tf9q1KJSpfYkmOWSUlLgDaUe/i1qZasvFqLQP1lVG61+PnC0UGyZhvb487X1JR7/RCsTE5H6V//GcdGIq+H6lZxaCH447YWdjoND7xp0u7TpSU0OBLUfDdn/jio51KLov7CojwTO46J/6hvMxvR85sU3cwRM410RI2G+iEqLzTzjU54zBUWdfTeuk24/P4LaypGBtozRJCxRpHkxTEnhq/8YMarQMjVX+4B4Idt1mo2Csk3a0OKzNxTp35cFFpM2N8YX4g17rs/jJ7UczcgkMWyL0EiuOeK6fe4WZrb70d2goO5SEZbUqjeVIx7Hp/1m56iwTvIkWkprJj75wij1DmiCR/HWfWv19iXBhnUue1ij/1lLNk0wfwO/uVqU0LBRfOpcNHvq3f0xXHc2DcHWXeOZdKZ7cI/oE6eAwi5D7LXgkqY3ScnaFaqjgphV17gjq1NqNgASKLDx0U3QRqin6WL3mgPTeuUPFqZrcQcLQelSInHBD9wvm6ZFJQRXcP1Ct8Fo4WiMMqKLdt+MDzsx0NMORKmS55Lps9rZUAdgBsxP0lSe9ILku5+KyzpvJQGmLrkYODXzD9ND+Y0qgG9f5rLfE4t27uOqT2+0UrvTYOQ5H7K0X5DatCvdN9WB0HuE2hmUz1aRfzsJFAGQ97qUoW+7gmZIgP5lRLxyrGJg7KspikKDPFGDca6Hzb6LDgLElGS8m59N5cHUm0gPICL7TFrNAkn2txjlX+ExmzmkfCaVJ7IwNJcVeoZy9rtJnsSLS53ZKGgMXMUF6x3aqAD1IAsyscatq2pSmbwfUbbRRTivuLxBnIWIs8yaXfWCk/QmxwxuyUzMSIFBGtriD7MzPQmZpq8PsXfTK5DUC3NmtkYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01NA1rbr2CeEvmXbsmi23G5z",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 35,100p packages/llm/llm/src/retry-policy.ts; sed -n 15,30p packages/llm/llm-pi-ai/src/index.ts",
+          "description": "Read the retry policy config shape"
+        }
+      }
+    ]
+  }
+}
