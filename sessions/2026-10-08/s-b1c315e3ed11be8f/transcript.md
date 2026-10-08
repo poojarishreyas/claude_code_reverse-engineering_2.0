@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 30 |
-| tokens | in 62 · out 17,650 · cache read 2,848,880 · cache write 59,609 |
+| requests | 32 |
+| tokens | in 64 · out 18,044 · cache read 2,966,436 · cache write 59,994 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -3483,4 +3483,133 @@ packages/llm/llm-pi-ai/tests/adapter.spec.ts:474:      maxRetries: 5,
 ```
 
 _stop `tool_use` · 3.75s (ttft 3.08s) · in 2 · out 308 · cache r116,974/w582_
+
+---
+
+## req-0031 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 67 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01132m3qxxYasyBKokEKfkWL)_
+
+```
+      initialDelayMs: 25,
+      maxDelayMs: 100,
+      jitterRatio: 0.2,
+    })
+    expect(ctx.llm.providerRetryPolicy('anthropic')).toMatchObject({
+      mode: 'normal',
+      maxRetries: 5,
+    })
+    await fiber.dispose()
+    expect(ctx.llm.listProviders()).toEqual([])
+  })
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01XGHqmwTbdoXmgEJWwKtX4g)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -i '470,476s/maxRetries: 5,/maxRetries: 10,/' packages/llm/llm-pi-ai/tests/adapter.spec.ts && npx vitest run packages/llm/llm-deepseek/tests/dynamic-config.spec.ts 2>&1 | grep -v tsconfig-paths | grep -E -A25 'FAIL.*re-registers' | grep -E '^\\s*[-+]|spec.ts:[0-9]+' | head -20",
+  "description": "Fix the pi-ai test and inspect the deepseek dynamic-config failure",
+  "timeout": 300000
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01XGHqmwTbdoXmgEJWwKtX4g)_
+
+```
+- Expected
++ Received
+-     "name": "deepseek",
++     "name": "Lynx",
+ ❯ packages/llm/llm-deepseek/tests/dynamic-config.spec.ts:253:37
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01LAb4ixt5J2ojK5NbRRQSJQ)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -rn -E 'maxRetries: ?5\\b|maxDelayMs: ?10_?000' packages/llm/*/tests packages/llm/*/src 2>/dev/null; git stash push -q -- packages/llm/llm/src/retry-policy.ts && npx vitest run packages/llm/llm-deepseek 2>&1 | grep -E 'Tests |FAIL' | head -10; git stash pop -q && git diff --stat packages/llm/llm/src",
+  "description": "Find remaining old-default asserts and test deepseek without my change",
+  "timeout": 300000
+}
+```
+
+_stop `tool_use` · 4.68s (ttft 2.19s) · in 2 · out 394 · cache r117,556/w385_
+
+---
+
+## req-0032 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 69 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01XGHqmwTbdoXmgEJWwKtX4g)_
+
+```
+- Expected
++ Received
+-     "name": "deepseek",
++     "name": "Lynx",
+ ❯ packages/llm/llm-deepseek/tests/dynamic-config.spec.ts:253:37
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01LAb4ixt5J2ojK5NbRRQSJQ)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -rn -E 'maxRetries: ?5\\b|maxDelayMs: ?10_?000' packages/llm/*/tests packages/llm/*/src 2>/dev/null; git stash push -q -- packages/llm/llm/src/retry-policy.ts && npx vitest run packages/llm/llm-deepseek 2>&1 | grep -E 'Tests |FAIL' | head -10; git stash pop -q && git diff --stat packages/llm/llm/src",
+  "description": "Find remaining old-default asserts and test deepseek without my change",
+  "timeout": 300000
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01LAb4ixt5J2ojK5NbRRQSJQ)_
+
+```
+packages/llm/llm-retry/tests/retry.spec.ts:135:      maxDelayMs: 10_000,
+packages/llm/llm-retry/tests/retry.spec.ts:147:      maxDelayMs: 10_000,
+packages/llm/llm/tests/retry-policy.spec.ts:65:      maxRetries: 5,
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > registers the deepseek provider and unregisters on dispose (HMR safety)
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > owns the deepseek provider and advertises the default models
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > uses the default model catalog when apply is called directly
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > falls back to deepseek_API_KEY and deepseek_BASE_URL env vars
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > loads keyless, keeps the catalog browsable, and fails the request actionably
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > defaults to the public base URL without config or env
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/dynamic-config.spec.ts > request-level dynamic configuration > re-registers the route in place when the captured retry policy changes, without an empty-registry window
+      Tests  7 failed | 373 passed (380)
+ packages/llm/llm/src/retry-policy.ts | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+```
 

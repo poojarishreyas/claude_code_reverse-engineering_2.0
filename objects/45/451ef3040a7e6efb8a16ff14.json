@@ -1,0 +1,15 @@
+{
+  "id": "451ef3040a7e6efb8a16ff14",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XGHqmwTbdoXmgEJWwKtX4g",
+        "type": "tool_result",
+        "content": "- Expected\n+ Received\n-     \"name\": \"deepseek\",\n+     \"name\": \"Lynx\",\n ❯ packages/llm/llm-deepseek/tests/dynamic-config.spec.ts:253:37",
+        "is_error": false
+      }
+    ]
+  }
+}
