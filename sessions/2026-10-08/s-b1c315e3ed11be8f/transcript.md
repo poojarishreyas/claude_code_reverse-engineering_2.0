@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 28 |
-| tokens | in 58 · out 16,904 · cache read 2,615,796 · cache write 58,163 |
+| requests | 30 |
+| tokens | in 62 · out 17,650 · cache read 2,848,880 · cache write 59,609 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -3298,4 +3298,189 @@ Eight tests still expect the old defaults. I'll check that this is the only reas
 ```
 
 _stop `tool_use` · 4.63s (ttft 1.83s) · in 2 · out 417 · cache r113,356/w2,754_
+
+---
+
+## req-0029 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 63 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01Po2HkJBobTa7S6j4Cd5h1w)_
+
+```
+.agents/notes/implemented/feature/2026-07-24-provider-retry-policies.md:24:        maxDelayMs: 10000
+.agents/notes/implemented/feature/2026-07-24-provider-retry-policies.md:63:Adapter tests validate nested policies at provider load, prove explicit profile policies reach registration, prove omission resolves to five retries, and retain the serving policy across in-flight route replacement. LLM service tests prove adapter policies are captured and omission uses the shared five-retry behavior. Resolver tests prove always mode ignores retained normal-only fields but returns a pure always policy. Unit tests select policies from the failed request's serving registration, separate provider and changed-policy histories, exercise always mode beyond the normal budget, pin jitter and delay caps, prove downstream recovery ordering, prove cancellation and disposal drain delegated recovery before reaching quiescence, and prove both abort active backoff waits. Request-level coverage compares the complete messages of failed and retried attempts and rejects both provider error text and discarded partial output. A keyless headless `stream-json` snapshot runs failure, retry, and success through the assembled app, pins the complete `llm/retry` record, and rejects any model-message change between attempts. The shipped Web composition snapshot pins omitted DeepSeek and pi-ai policies at five retries, then proves settings can write `{ mode: 'always', maxRetries: 5 }` and obtain a pure always policy. A JSONL test round-trips an always event without `Infinity`; invariant tests bind provider identity to the request header, validate failure and mode-specific timer bounds, and bind retry numbers to provider-policy keys; TUI tests render finite and infinite limits.
+docs/engine-book/25-failures-and-retry.md:106:Defaults (`:14-24`): `maxRetries = 5`, `initialDelayMs = 500`, `maxDelayMs = 10_000`, `jitterRatio = 0.1`, and
+docs/engine-book/25-failures-and-retry.md:192:| `maxRetries` | `5` | `normal` only |
+docs/engine-book/25-failures-and-retry.md:193:| `initialDelayMs` / `maxDelayMs` | `500` / `10_000` | Exponential backoff bounds |
+docs/engine-book/_condensed/05-io-context.md:73:**Policy is pure data** (`retry-policy.ts:14-24`): `maxRetries = 5`, `initialDelayMs = 500`, `maxDelayMs = 10_000`, `jitterRatio = 0.1`, `retryableCodes = [EMPTY_RESPONSE, RATE_LIMIT, SERVER, TIMEOUT, TRANSPORT]`. Note what is **absent**: `AUTH`, `INVALID_REQUEST`, `QUOTA`, `CONTEXT_WINDOW_EXCEEDED` — retrying those unchanged would fail identically. Overflow is retryable only *after something changes the history*, which is why compaction owns that path.
+docs/engine-book/_condensed/07-appendices.md:89:| retry `maxRetries` / delays / jitter | `5` / `500`–`10_000` ms / `0.1` | `retry-policy.ts:14-24` |
+docs/engine-book/_notes/config.md:50:| `maxRetries` | `5` | `llm/src/retry-policy.ts:14-24` | `normal` mode only; `always` mode retries indefinitely. |
+docs/engine-book/_notes/config.md:51:| `initialDelayMs
+... [2,655 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Eight tests still expect the old defaults. I'll check that this is the only reason they fail.
+
+**-> tool_use** `Bash` _(toolu_01PUWuwKJfD36tQbCRUaAsHv)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && npx vitest run packages/llm/llm-deepseek packages/llm/llm-pi-ai/tests/adapter.spec.ts 2>&1 | grep -v tsconfig-paths | grep -E '^\\s*[-+] |AssertionError|Error:' | sort | uniq -c | head -20; grep -n -E 'maxRetries: 5|maxDelayMs: 10_?000|DEFAULT_RETRY|retryPolicy\\(' packages/llm/llm-deepseek/tests/adapter.spec.ts packages/llm/llm-deepseek/tests/dynamic-config.spec.ts packages/llm/llm-pi-ai/tests/adapter.spec.ts | head -20",
+  "description": "Show why the remaining tests fail",
+  "timeout": 300000
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01PUWuwKJfD36tQbCRUaAsHv)_
+
+```
+      6 +     "name": "Lynx",
+      1 +     "name": "Lynx-V4-Flash",
+      1 +     "name": "Lynx-V4-Flash-Vision-Exp",
+      1 +     "name": "Lynx-V4-Pro",
+      1 +   "maxRetries": 10,
+      8 + Received
+      6 -     "name": "deepseek",
+      1 -     "name": "deepseek-V4-Flash",
+      1 -     "name": "deepseek-V4-Flash-Vision-Exp",
+      1 -     "name": "deepseek-V4-Pro",
+      1 -   "maxRetries": 5,
+      8 - Expected
+      6 AssertionError: expected [ { id: 'deepseek-official', …(1) } ] to deeply equal [ { id: 'deepseek-official', …(1) } ]
+      1 AssertionError: expected [ { …(5) }, { …(5) }, { …(4) } ] to deeply equal [ { …(5) }, { …(5) }, { …(4) } ]
+      1 AssertionError: expected { Object (mode, maxRetries, ...) } to match object { mode: 'normal', maxRetries: 5 }
+packages/llm/llm-pi-ai/tests/adapter.spec.ts:474:      maxRetries: 5,
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01132m3qxxYasyBKokEKfkWL)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -n -B3 -A3 'maxRetries' packages/llm/llm-deepseek/tests/dynamic-config.spec.ts | head -30; sed -n 468,478p packages/llm/llm-pi-ai/tests/adapter.spec.ts",
+  "description": "Read the two tests that pin the old retry count"
+}
+```
+
+_stop `tool_use` · 8.92s (ttft 7.30s) · in 2 · out 438 · cache r116,110/w864_
+
+---
+
+## req-0030 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 65 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01PUWuwKJfD36tQbCRUaAsHv)_
+
+```
+      6 +     "name": "Lynx",
+      1 +     "name": "Lynx-V4-Flash",
+      1 +     "name": "Lynx-V4-Flash-Vision-Exp",
+      1 +     "name": "Lynx-V4-Pro",
+      1 +   "maxRetries": 10,
+      8 + Received
+      6 -     "name": "deepseek",
+      1 -     "name": "deepseek-V4-Flash",
+      1 -     "name": "deepseek-V4-Flash-Vision-Exp",
+      1 -     "name": "deepseek-V4-Pro",
+      1 -   "maxRetries": 5,
+      8 - Expected
+      6 AssertionError: expected [ { id: 'deepseek-official', …(1) } ] to deeply equal [ { id: 'deepseek-official', …(1) } ]
+      1 AssertionError: expected [ { …(5) }, { …(5) }, { …(4) } ] to deeply equal [ { …(5) }, { …(5) }, { …(4) } ]
+      1 AssertionError: expected { Object (mode, maxRetries, ...) } to match object { mode: 'normal', maxRetries: 5 }
+packages/llm/llm-pi-ai/tests/adapter.spec.ts:474:      maxRetries: 5,
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01132m3qxxYasyBKokEKfkWL)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -n -B3 -A3 'maxRetries' packages/llm/llm-deepseek/tests/dynamic-config.spec.ts | head -30; sed -n 468,478p packages/llm/llm-pi-ai/tests/adapter.spec.ts",
+  "description": "Read the two tests that pin the old retry count"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01132m3qxxYasyBKokEKfkWL)_
+
+```
+      initialDelayMs: 25,
+      maxDelayMs: 100,
+      jitterRatio: 0.2,
+    })
+    expect(ctx.llm.providerRetryPolicy('anthropic')).toMatchObject({
+      mode: 'normal',
+      maxRetries: 5,
+    })
+    await fiber.dispose()
+    expect(ctx.llm.listProviders()).toEqual([])
+  })
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01XGHqmwTbdoXmgEJWwKtX4g)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -i '470,476s/maxRetries: 5,/maxRetries: 10,/' packages/llm/llm-pi-ai/tests/adapter.spec.ts && npx vitest run packages/llm/llm-deepseek/tests/dynamic-config.spec.ts 2>&1 | grep -v tsconfig-paths | grep -E -A25 'FAIL.*re-registers' | grep -E '^\\s*[-+]|spec.ts:[0-9]+' | head -20",
+  "description": "Fix the pi-ai test and inspect the deepseek dynamic-config failure",
+  "timeout": 300000
+}
+```
+
+_stop `tool_use` · 3.75s (ttft 3.08s) · in 2 · out 308 · cache r116,974/w582_
 

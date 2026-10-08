@@ -1,0 +1,19 @@
+{
+  "id": "b67913b85af2bdd2fd73284f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01132m3qxxYasyBKokEKfkWL",
+        "type": "tool_result",
+        "content": "      initialDelayMs: 25,\n      maxDelayMs: 100,\n      jitterRatio: 0.2,\n    })\n    expect(ctx.llm.providerRetryPolicy('anthropic')).toMatchObject({\n      mode: 'normal',\n      maxRetries: 5,\n    })\n    await fiber.dispose()\n    expect(ctx.llm.listProviders()).toEqual([])\n  })",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

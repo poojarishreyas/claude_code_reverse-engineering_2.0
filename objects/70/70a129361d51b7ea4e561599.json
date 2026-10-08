@@ -1,0 +1,19 @@
+{
+  "id": "70a129361d51b7ea4e561599",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XGHqmwTbdoXmgEJWwKtX4g",
+        "type": "tool_result",
+        "content": "- Expected\n+ Received\n-     \"name\": \"deepseek\",\n+     \"name\": \"Lynx\",\n ❯ packages/llm/llm-deepseek/tests/dynamic-config.spec.ts:253:37",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

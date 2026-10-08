@@ -1,0 +1,32 @@
+{
+  "id": "2fe4052c6f76ed5a428956e9",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQShQkKEAgSGAI4AUIIdGhpbmtpbmcSDPpca/vYVUe6J4ym9RoM4Kz3ICwEvpXaLVo8IjCUnd8k1hX3Xkg3etZAU4TOxDkNt5SaYL+u19RgYBrHqHgmce0QroL1yb0wzvVaiScqoghPtVFk0jJZ9Ms8Hh2A5T3YazaoSJppWD/5oR6eZBWY9qhM9WG/or3dAbuiO5zsVxjz9Uv4mAuzcCLLJjUVSTQo+d/tFrh8FK5IPeH966vLtkRS/UcL3YKqI2/1uVodkus0LjZmm/Bzo7Z0hzoGxaUeMiflZQAjWcQB6InG27JX/jScDYe4uectxflosGzkma5uMEpxsz2923d5xlBqZwyGFnhgR5PGRUeGfqlWaIeZI7TTfSvs3wHGCYxhErekp0RFqkv3XMqOuDNMWBMooraSlnKqoFUnYHeFvcni8ptGdPln7gwGgGnu0f9yiQRp/u0Cq6wI7c+K/+ZCiK4CwtZD00Wi8fdm48uOjdM+eXpUGgJorHl7B1O2Vl/IE/PLqE3AU9Uys8dpsm9B567qQbG2dR4DH4iUBtgh6S4ihS9Vq3IjZ4Uxxkmj0Afx/3aZy67LdZ8vuyOTkyhoREpG++5cpf/b4sbA8An/Bvr4GxLcLGQgxp2Wgy46pc3JdPRBVD64qdlTL6P/8YXvZjrVOKgsEbizKef5aHTJqikd1QOXQHKJ92hOwYRBo6pWgP5DuBOHBrquTpSiuG9jB3ecIL9scc+aJPuI6DAlkCSd6R2volpU4hZMAHM2WrW0/paeoZY/MskOy9+p+yBaHMkdBlfNxuym4XLTQ1QkO6D1Iu50l2LA5XEc2yCVbfyOTmmw3bdQThOfVwpvNXkWPv9Y64elOhOQ6OTWEmrP8CYzACO/J4l64PPCIpHLnHd3x530uvPanO5/W+32hceoEjh6hh12Qrt05KElXJBAB9D7zEtOnc3/bmv9zXEyP6xrNz+Wjl31aZWAWPEj7XDwg1xkgOLMM5GiRFyWe0K3JGPVX+W3RQ2JWRGpB8HtvZinJ4Jr++SJgLZlXjjltonxPuij19e+gRBnXTm9+8WkM8RrdY33QDZGMIQ/Q2UO+NhCchIoPW/CmFveTsstHFw/9SwpBMmaj1cjDRWmV0BLPkg33WxAwMGe9Zh9hzwSUrV1qQ5waR6Nxl7H8c/ct54xjsL2b8OjQ5FkVU2ykBVKthlqUWWlOfRaPwIaq8at0H7BPU2DBLseK4Xsb3ZJ2a3fFoBSjVrAzF61QJISdXmnVbkJztgFkwEyCExfQDaDBCE0tCif4jL2WsAPPbppDpXrNceWEnuDB+XJ36Hrn7DtXBAHdpLic9Dr4DnsSXA1Wz2jWrOYC6Qepfp/DlnDNggsHUySr9a6kGZFByx1V37t7QIJ8DMzXwOvv/Eaka/6wZT+eyhF41R3+fsFYghEoNTIaMsDoLVieyTZKOKpAlTCY3wVLY5dPJ2Sjk2hqMXo10xc9iy5gZc7SMab3gPFWgApCPCYNTBYHM69cR2uUyOc8zKF0+Y0tbxtMvkX+aflkkg8TgIQxMmcmRgB"
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjwgKEQgSGAI4AUIJbmFycmF0aW9uEgxWR3VyaTwnnebJP+UaDHC2QOAzXCZHhnwCDiIwsU4ApRhGWMaSexteLA8mIeeLjfx2c+F3kAB7Mq60GY1BoLWpG1xoFVrkh/CXp73AKqsHEg/mF3VwAjprNvTR38fultUPUU/7zg3UXdsf7/zsUiFtz1P4rKjnakbUHiP2kR1lP4naX9T/ha3VLN5DVH9rYsUmh6WmWFld+XBJLf0ucKiaiX/a13o1XaDjkKaZV5j+Unl5fEgUWgpHBDCHID3mIVfs8tFeP3SFFx3RU4jNaXki/D9rsYkD5KIFnkemsolyhx+kj50hJlwq9JmpgtsSaxJK2SbhBuTrfBe9K0T2QGb+sxjjSLoYsgOK0uDHY81iLCUi4/2uKbbtStmiPXnJ6dkjnjKvvSoe6uJdRg0qNaqkKNrXusE08nxmDsjmLxT9vPq+Y6YnYt1797pB91R15PjoS+bQNA6Q/hvrjB4QrbX3K+PgO5lOAb5DObZt8DSo8zfRuL7NfXtg0VwqBQFiSuwdQTRLoI+kQzrqYjcJuGUjRJZSucd285fY3TE39WwUbCu/FUvuNvtuc4u2oTYhF4j9zJcPuzSydZpVsn/lE+owOzlJC9jx6qDvv1XduYjY4Y54xIrrsgs+UbEuLRI8Fhpss+Aqqn47kLwP45zfyK1yT27XXVSvjNj44rJxYljqmSd4dFkSiyovVG+EdHpiUEMg6OvEBB4Gef+Hkw1cPS5pvSsyBaz/0i2qwLvCJPinGrmLJCaLqkYAy+UeeSRK4y0PjVQLJBWHryd6Lf+s3tXHHjbR7CiNif7CcfMdMJxGuPe5nFgU9UMJHqhEcWeUMudq9XAWrWUictZfImGpNw+zP8fu8VcqYS2YfatojM6smnX8fWgTxFrr+0ELGXyBgB3dEfIh2wekB6KZgxzZRVBKZzmXNftjRa4ziZ7y6xKZc8g8/vnhUSZFFoPt2VtfO40hb1AQs37XEVbd4WsP0xYZ82DwEceBubPATHqeTk3jDAoMHO0UDLa6hjtcq/eddf1OO0/nE4kYOoCKiQ1N+jnaCJiY4xFlrczGFfLLiVEZqHiaY4SsUDOWYSFfwBPqEEEOM6COWlGBDUf1H+gLIn5jCVGk/iBe/ljqZSpFRzz0XQU4tl5trtFMJQLp3XoKunaM9f81jqk4rAw4kS6Md1e9BhaBn76jmGbU6mYvVeYp1twgXJbh5WUe6nSFhXNRPmD00jHBHUjgIP3SSJHB5L4f8UpR2G5l2uxOpLcWQ8USejFzYMUKicJutoKuNY1HQg9ryO9uOSUCQy61LYVR4zHZSglDylHUnNpRbBhnhX93yoG3OXz7MM6W0MwwdSKkB16+6nU693rwKDULGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01132m3qxxYasyBKokEKfkWL",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -n -B3 -A3 'maxRetries' packages/llm/llm-deepseek/tests/dynamic-config.spec.ts | head -30; sed -n 468,478p packages/llm/llm-pi-ai/tests/adapter.spec.ts",
+          "description": "Read the two tests that pin the old retry count"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
