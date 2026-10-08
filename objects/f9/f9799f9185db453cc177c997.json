@@ -1,0 +1,19 @@
+{
+  "id": "f9799f9185db453cc177c997",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Xe5RXMz2wdQYa5RVLpjJVE",
+        "type": "tool_result",
+        "content": "import { EMPTY_RESPONSE_CODE } from './error.ts'\n\nconst DEFAULT_MAX_RETRIES = 10\nconst DEFAULT_INITIAL_DELAY_MS = 500\nconst DEFAULT_MAX_DELAY_MS = 32_000\nconst DEFAULT_JITTER_RATIO = 0.1\nconst DEFAULT_RETRYABLE_CODES = Object.freeze([\n30:  /** Maximum locally scheduled or accepted provider delay in milliseconds (default 32000). */\n40:  /** Maximum eligible retries after the first request (default 10). */\n packages/llm/llm/src/retry-policy.ts        | 8 ++++----\n packages/llm/llm/tests/retry-policy.spec.ts | 8 ++++----\n packages/llm/llm/tests/service.spec.ts      | 2 +-\n 3 files changed, 9 insertions(+), 9 deletions(-)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

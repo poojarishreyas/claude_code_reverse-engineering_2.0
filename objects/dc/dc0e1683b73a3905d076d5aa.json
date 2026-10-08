@@ -1,0 +1,22 @@
+{
+  "id": "dc0e1683b73a3905d076d5aa",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01Xe5RXMz2wdQYa5RVLpjJVE",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && f=packages/llm/llm/src/retry-policy.ts && sed -i 's/^const DEFAULT_MAX_RETRIES = 5$/const DEFAULT_MAX_RETRIES = 10/; s/^const DEFAULT_MAX_DELAY_MS = 10_000$/const DEFAULT_MAX_DELAY_MS = 32_000/; s/provider delay in milliseconds (default 10000)/provider delay in milliseconds (default 32000)/; s/after the first request (default 5)/after the first request (default 10)/' $f && sed -n 12,18p $f && grep -n \"default 32000\\|default 10)\" $f\nt=packages/llm/llm/tests/retry-policy.spec.ts; sed -i '10,25s/maxRetries: 5,/maxRetries: 10,/; s/maxDelayMs: 10_000,/maxDelayMs: 32_000,/' $t; sed -i '215,225s/maxRetries: 5,/maxRetries: 10,/' packages/llm/llm/tests/service.spec.ts; git diff --stat packages/llm/llm",
+          "description": "Raise dsh retry defaults to match Claude Code and update tests"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

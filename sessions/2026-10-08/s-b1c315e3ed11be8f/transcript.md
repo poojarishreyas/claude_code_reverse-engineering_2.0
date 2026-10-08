@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 25 |
-| tokens | in 50 · out 15,038 · cache read 2,169,161 · cache write 52,279 |
+| requests | 27 |
+| tokens | in 56 · out 16,487 · cache read 2,502,440 · cache write 55,409 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -2861,4 +2861,352 @@ uSo=300,eAe=15,
 #### SYSTEM
 
 The user hasn't heard from you in a while — say in a few words what you're doing, then continue.
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01RQm1CzfzmA7gbjvjTyfsPD)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 1,80p packages/llm/llm/tests/retry-policy.spec.ts; sed -n 215,230p packages/llm/llm/tests/service.spec.ts",
+  "description": "Read the tests that assert the retry defaults"
+}
+```
+
+_stop `tool_use` · 7.09s (ttft 5.72s) · in 2 · out 559 · cache r110,226/w295_
+
+---
+
+## req-0026 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 57 messages_
+
+#### SYSTEM
+
+The user hasn't heard from you in a while — say in a few words what you're doing, then continue.
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_01RQm1CzfzmA7gbjvjTyfsPD)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 1,80p packages/llm/llm/tests/retry-policy.spec.ts; sed -n 215,230p packages/llm/llm/tests/service.spec.ts",
+  "description": "Read the tests that assert the retry defaults"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01RQm1CzfzmA7gbjvjTyfsPD)_
+
+```
+import { describe, expect, it } from 'vitest'
+import {
+  resolveRetryPolicy,
+  RetryPolicySchema,
+} from '@deepseek-ai/dsh-llm'
+import type { RetryPolicyConfig } from '@deepseek-ai/dsh-llm'
+import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
+
+describe('provider retry policy', () => {
+  it('resolves immutable normal defaults', () => {
+    const policy = resolveRetryPolicy(undefined, 'provider.retryPolicy')
+
+    expect(policy).toEqual({
+      mode: 'normal',
+      maxRetries: 5,
+      retryableCodes: ['EMPTY_RESPONSE', 'RATE_LIMIT', 'SERVER', 'TIMEOUT', 'TRANSPORT'],
+      initialDelayMs: 500,
+      maxDelayMs: 10_000,
+      jitterRatio: 0.1,
+    })
+    expect(Object.isFrozen(policy)).toBe(true)
+    if (policy.mode !== 'normal') throw new Error('expected normal policy')
+    expect(Object.isFrozen(policy.retryableCodes)).toBe(true)
+  })
+
+  it('resolves and detaches a configured normal policy', () => {
+    const retryableCodes = ['BUSY']
+    const config: RetryPolicyConfig = {
+      mode: 'normal',
+      maxRetries: 4,
+      retryableCodes,
+      backoff: {
+        initialDelayMs: 25,
+        maxDelayMs: 100,
+        jitterRatio: 0,
+      },
+    }
+
+    const policy = resolveRetryPolicy(config, 'provider.retryPolicy')
+    retryableCodes.push('LATE')
+
+    expect(policy).toEqual({
+      mode: 'normal',
+      maxRetries: 4,
+      retryableCodes: ['BUSY'],
+      initialDelayMs: 25,
+      maxDelayMs: 100,
+      jitterRatio: 0,
+    })
+  })
+
+  it('resolves always mode with default backoff', () => {
+    expect(resolveRetryPolicy({ mode: 'always' }, 'provider.retryPolicy')).toEqual({
+      mode: 'always',
+      initialDelayMs: 500,
+      maxDelayMs: 10_000,
+      jitterRatio: 0.1,
+    })
+    expect(RetryPolicySchema).toBeDefined()
+  })
+
+  it('ignores normal-only fields retained after switching to always mode', () => {
+    const layered = {
+      mode: 'always',
+      maxRetries: 5,
+      retryableCodes: ['SERVER'],
+    } as unknown as RetryPolicyConfig
+
+    expect(resolveRetryPolicy(layered, 'provider.retryPolicy')).toEqual({
+      mode: 'always',
+      initialDelayMs: 500,
+      maxDelayMs: 10_000,
+      jitterRatio: 0.1,
+    })
+  })
+
+  it.each([
+    [{ mode: 'normal', maxRetries: -1 }, /maxRetries/],
+    [{ mode: 'normal', maxRetries: 1.5 }, /maxRetries/],
+    [{ mode: 'normal', maxRetries: Number.MAX_SAFE_INTEGER + 1 }, /maxRetries/],
+    const ctx = new Context()
+    await ctx.plugin(LlmRuntime)
+    ctx.llm.registerAdapter(['configured', 'defaulted'], adapter)
+
+    expect(ctx.llm.providerRetryPolicy('configured')).toBe(configured)
+    expect(ctx.llm.providerRetryPolicy('defaulted')).toMatchObject({
+      mode: 'normal',
+      maxRetries: 5,
+    })
+    expect(() => ctx.llm.providerRetryPolicy('missing')).toThrow(
+      expect.objectContaining({ code: 'NO_ADAPTER' }),
+    )
+  })
+
+  it('keeps a prepared registration and retry policy after route replacement', async () => {
+    const oldPolicy = resolveRetryPolicy({ mode: 'always' }, 'old retryPolicy'
+... [1 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01Xe5RXMz2wdQYa5RVLpjJVE)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && f=packages/llm/llm/src/retry-policy.ts && sed -i 's/^const DEFAULT_MAX_RETRIES = 5$/const DEFAULT_MAX_RETRIES = 10/; s/^const DEFAULT_MAX_DELAY_MS = 10_000$/const DEFAULT_MAX_DELAY_MS = 32_000/; s/provider delay in milliseconds (default 10000)/provider delay in milliseconds (default 32000)/; s/after the first request (default 5)/after the first request (default 10)/' $f && sed -n 12,18p $f && grep -n \"default 32000\\|default 10)\" $f\nt=packages/llm/llm/tests/retry-policy.spec.ts; sed -i '10,25s/maxRetries: 5,/maxRetries: 10,/; s/maxDelayMs: 10_000,/maxDelayMs: 32_000,/' $t; sed -i '215,225s/maxRetries: 5,/maxRetries: 10,/' packages/llm/llm/tests/service.spec.ts; git diff --stat packages/llm/llm",
+  "description": "Raise dsh retry defaults to match Claude Code and update tests"
+}
+```
+
+_stop `tool_use` · 5.22s (ttft 4.62s) · in 2 · out 492 · cache r110,521/w2,011_
+
+---
+
+## req-0027 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 59 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01RQm1CzfzmA7gbjvjTyfsPD)_
+
+```
+import { describe, expect, it } from 'vitest'
+import {
+  resolveRetryPolicy,
+  RetryPolicySchema,
+} from '@deepseek-ai/dsh-llm'
+import type { RetryPolicyConfig } from '@deepseek-ai/dsh-llm'
+import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
+
+describe('provider retry policy', () => {
+  it('resolves immutable normal defaults', () => {
+    const policy = resolveRetryPolicy(undefined, 'provider.retryPolicy')
+
+    expect(policy).toEqual({
+      mode: 'normal',
+      maxRetries: 5,
+      retryableCodes: ['EMPTY_RESPONSE', 'RATE_LIMIT', 'SERVER', 'TIMEOUT', 'TRANSPORT'],
+      initialDelayMs: 500,
+      maxDelayMs: 10_000,
+      jitterRatio: 0.1,
+    })
+    expect(Object.isFrozen(policy)).toBe(true)
+    if (policy.mode !== 'normal') throw new Error('expected normal policy')
+    expect(Object.isFrozen(policy.retryableCodes)).toBe(true)
+  })
+
+  it('resolves and detaches a configured normal policy', () => {
+    const retryableCodes = ['BUSY']
+    const config: RetryPolicyConfig = {
+      mode: 'normal',
+      maxRetries: 4,
+      retryableCodes,
+      backoff: {
+        initialDelayMs: 25,
+        maxDelayMs: 100,
+        jitterRatio: 0,
+      },
+    }
+
+    const policy = resolveRetryPolicy(config, 'provider.retryPolicy')
+    retryableCodes.push('LATE')
+
+    expect(policy).toEqual({
+      mode: 'normal',
+      maxRetries: 4,
+      retryableCodes: ['BUSY'],
+      initialDelayMs: 25,
+      maxDelayMs: 100,
+      jitterRatio: 0,
+    })
+  })
+
+  it('resolves always mode with default backoff', () => {
+    expect(resolveRetryPolicy({ mode: 'always' }, 'provider.retryPolicy')).toEqual({
+      mode: 'always',
+      initialDelayMs: 500,
+      maxDelayMs: 10_000,
+      jitterRatio: 0.1,
+    })
+    expect(RetryPolicySchema).toBeDefined()
+  })
+
+  it('ignores normal-only fields retained after switching to always mode', () => {
+    const layered = {
+      mode: 'always',
+      maxRetries: 5,
+      retryableCodes: ['SERVER'],
+    } as unknown as RetryPolicyConfig
+
+    expect(resolveRetryPolicy(layered, 'provider.retryPolicy')).toEqual({
+      mode: 'always',
+      initialDelayMs: 500,
+      maxDelayMs: 10_000,
+      jitterRatio: 0.1,
+    })
+  })
+
+  it.each([
+    [{ mode: 'normal', maxRetries: -1 }, /maxRetries/],
+    [{ mode: 'normal', maxRetries: 1.5 }, /maxRetries/],
+    [{ mode: 'normal', maxRetries: Number.MAX_SAFE_INTEGER + 1 }, /maxRetries/],
+    const ctx = new Context()
+    await ctx.plugin(LlmRuntime)
+    ctx.llm.registerAdapter(['configured', 'defaulted'], adapter)
+
+    expect(ctx.llm.providerRetryPolicy('configured')).toBe(configured)
+    expect(ctx.llm.providerRetryPolicy('defaulted')).toMatchObject({
+      mode: 'normal',
+      maxRetries: 5,
+    })
+    expect(() => ctx.llm.providerRetryPolicy('missing')).toThrow(
+      expect.objectContaining({ code: 'NO_ADAPTER' }),
+    )
+  })
+
+  it('keeps a prepared registration and retry policy after route replacement', async () => {
+    const oldPolicy = resolveRetryPolicy({ mode: 'always' }, 'old retryPolicy'
+... [1 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01Xe5RXMz2wdQYa5RVLpjJVE)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && f=packages/llm/llm/src/retry-policy.ts && sed -i 's/^const DEFAULT_MAX_RETRIES = 5$/const DEFAULT_MAX_RETRIES = 10/; s/^const DEFAULT_MAX_DELAY_MS = 10_000$/const DEFAULT_MAX_DELAY_MS = 32_000/; s/provider delay in milliseconds (default 10000)/provider delay in milliseconds (default 32000)/; s/after the first request (default 5)/after the first request (default 10)/' $f && sed -n 12,18p $f && grep -n \"default 32000\\|default 10)\" $f\nt=packages/llm/llm/tests/retry-policy.spec.ts; sed -i '10,25s/maxRetries: 5,/maxRetries: 10,/; s/maxDelayMs: 10_000,/maxDelayMs: 32_000,/' $t; sed -i '215,225s/maxRetries: 5,/maxRetries: 10,/' packages/llm/llm/tests/service.spec.ts; git diff --stat packages/llm/llm",
+  "description": "Raise dsh retry defaults to match Claude Code and update tests"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01Xe5RXMz2wdQYa5RVLpjJVE)_
+
+```
+import { EMPTY_RESPONSE_CODE } from './error.ts'
+
+const DEFAULT_MAX_RETRIES = 10
+const DEFAULT_INITIAL_DELAY_MS = 500
+const DEFAULT_MAX_DELAY_MS = 32_000
+const DEFAULT_JITTER_RATIO = 0.1
+const DEFAULT_RETRYABLE_CODES = Object.freeze([
+30:  /** Maximum locally scheduled or accepted provider delay in milliseconds (default 32000). */
+40:  /** Maximum eligible retries after the first request (default 10). */
+ packages/llm/llm/src/retry-policy.ts        | 8 ++++----
+ packages/llm/llm/tests/retry-policy.spec.ts | 8 ++++----
+ packages/llm/llm/tests/service.spec.ts      | 2 +-
+ 3 files changed, 9 insertions(+), 9 deletions(-)
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Defaults changed. Now I'll check for docs or generated schemas that repeat the old numbers, then run the tests.
+
+**-> tool_use** `Bash` _(toolu_01Po2HkJBobTa7S6j4Cd5h1w)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && git grep -n -E 'maxDelayMs|maxRetries' -- '*.md' '*.json' '*.yaml' ':!**/node_modules/**' | grep -E '10000|10_000|10 ?s|\\b5\\b' | head; npx vitest run packages/llm 2>&1 | grep -v tsconfig-paths | grep -E 'FAIL|✗|×|Test Files|Tests ' | head -20",
+  "description": "Look for stale docs and run all llm package tests",
+  "timeout": 600000
+}
+```
+
+_stop `tool_use` · 4.78s (ttft 2.36s) · in 2 · out 398 · cache r112,532/w824_
 
