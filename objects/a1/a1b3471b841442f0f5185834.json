@@ -1,0 +1,19 @@
+{
+  "id": "a1b3471b841442f0f5185834",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_015DQdYzCGLGtmBCrbemjJRC",
+        "type": "tool_result",
+        "content": " docs/engine-book/25-failures-and-retry.md    | 6 +++---\n docs/engine-book/_condensed/05-io-context.md | 2 +-\n docs/engine-book/_condensed/07-appendices.md | 2 +-\n docs/engine-book/_notes/config.md            | 4 ++--\n docs/engine-book/_notes/raw/llm.md           | 2 +-\n 5 files changed, 8 insertions(+), 8 deletions(-)",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

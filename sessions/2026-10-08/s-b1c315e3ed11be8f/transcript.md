@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 47 (11 errored) |
-| tokens | in 264 · out 18,851 · cache read 3,498,147 · cache write 61,665 |
+| requests | 49 (11 errored) |
+| tokens | in 270 · out 20,148 · cache read 3,618,726 · cache write 182,984 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -3954,4 +3954,129 @@ _[no new input since the previous request]_
 Goal: make dsh find files better and cheaper than Claude Code. I fixed the retry bug (tested, not committed). Next, if you agree, I'll add a longer OmniRoute retry window to your settings.
 
 _stop `end_turn` · 17.63s (ttft 16.50s) · in 96 · out 71 · cache r87,798/w0_
+
+---
+
+## req-0048 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 73 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01Tk8iMDwJMX5EZhxvu4DfBW)_
+
+```
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > registers the deepseek provider and unregisters on dispose (HMR safety)
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > owns the deepseek provider and advertises the default models
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > uses the default model catalog when apply is called directly
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > falls back to deepseek_API_KEY and deepseek_BASE_URL env vars
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > loads keyless, keeps the catalog browsable, and fails the request actionably
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > defaults to the public base URL without config or env
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/dynamic-config.spec.ts > request-level dynamic configuration > re-registers the route in place when the captured retry policy changes, without an empty-registry window
+ Test Files  2 failed | 44 passed (46)
+      Tests  7 failed | 1066 passed (1073)
+tsc-ok
+lint-ok
+```
+
+continue
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Only the 7 failures that were already there remain. Last step: the repo's docs still list the old numbers (5 retries / 10 000 ms), so I'll update them.
+
+**-> tool_use** `Bash` _(toolu_015DQdYzCGLGtmBCrbemjJRC)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/Elemental_harness && files=\"docs/engine-book/25-failures-and-retry.md docs/engine-book/_condensed/05-io-context.md docs/engine-book/_condensed/07-appendices.md docs/engine-book/_notes/config.md docs/engine-book/_notes/raw/llm.md\" && sed -i 's/`maxRetries = 5`/`maxRetries = 10`/g; s/`maxDelayMs = 10_000`/`maxDelayMs = 32_000`/g; s/| `maxRetries` | `5` |/| `maxRetries` | `10` |/; s/| `500` \\/ `10_000` |/| `500` \\/ `32_000` |/; s/| `5` \\/ `500`–`10_000` ms/| `10` \\/ `500`–`32_000` ms/' $files && git diff --stat $files && git grep -n -E '10_000|maxRetries = 5|`5`' -- $files | grep -iE 'retr|delay' ",
+  "description": "Update the retry defaults in the docs"
+}
+```
+
+_stop `tool_use` · 7.72s (ttft 3.99s) · in 4 · out 570 · cache r0/w120,579_
+
+---
+
+## req-0049 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 75 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01Tk8iMDwJMX5EZhxvu4DfBW)_
+
+```
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > registers the deepseek provider and unregisters on dispose (HMR safety)
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > owns the deepseek provider and advertises the default models
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > uses the default model catalog when apply is called directly
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > falls back to deepseek_API_KEY and deepseek_BASE_URL env vars
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > loads keyless, keeps the catalog browsable, and fails the request actionably
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > defaults to the public base URL without config or env
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/dynamic-config.spec.ts > request-level dynamic configuration > re-registers the route in place when the captured retry policy changes, without an empty-registry window
+ Test Files  2 failed | 44 passed (46)
+      Tests  7 failed | 1066 passed (1073)
+tsc-ok
+lint-ok
+```
+
+continue
+
+#### USER
+
+**<- tool_result** _(toolu_015DQdYzCGLGtmBCrbemjJRC)_
+
+```
+ docs/engine-book/25-failures-and-retry.md    | 6 +++---
+ docs/engine-book/_condensed/05-io-context.md | 2 +-
+ docs/engine-book/_condensed/07-appendices.md | 2 +-
+ docs/engine-book/_notes/config.md            | 4 ++--
+ docs/engine-book/_notes/raw/llm.md           | 2 +-
+ 5 files changed, 8 insertions(+), 8 deletions(-)
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Yes, Claude Code survived the same OmniRoute errors. dsh now retries the same way it does.
+
+**What happened in the two runs:**
+- **dsh (07:38–07:47 UTC):**
+  - It got a 504, then three quick 503s, then two 504s that each took 2–4 minutes.
+  - That used up all 5 retries, so it gave up at 07:47.
+  - The gateway was working again by 07:51: Claude Code's next run started then and succeeded.
+- **Claude Code:**
+  - At 08:00 it got a 504 that took 5 minutes. It retried and succeeded.
+  - At 08:22 it got a 502, then four quick 503s. It kept retrying and succeeded 20 seconds later.
+
+**Claude Code's actual retry settings,** read from the copy installed on this PC: up to 10 retries. The wait starts at 0.5 s, doubles each time, and stops growing at 32 s.
+
+**What I changed:**
+1. **The "400" bug** (from before): a server error whose text contained "400" inside an IPv6 address was treated as "don't retry". It now gets retried.
+2. **Retry settings now match Claude Code:** 10 retries instead of 5, and the longest wait between retries is 32 s instead of 10 s. Together that's about 2.5 minutes of waiting before dsh gives up, instead of about 15 seconds. The change is in `packages/llm/llm/src/retry-policy.ts`, with the matching tests and docs updated.
+
+Will this rescue every failure like 4b9d8ad6f7? Probably, but I can't promise it. dsh needed 3–4 more minutes that time. 5 extra retries would very likely cover that, because each slow 504 itself takes minutes. Only another run that hits gateway errors will prove it.
+
+**Checks:** type-check and lint are clean. 1066 tests pass and 7 fail. Those 7 fail with or without these changes. They expect model names like "deepseek-V4-Pro", but the code now says "Lynx-V4-Pro" after the earlier renaming. I didn't touch them; say if you want them updated.
+
+Nothing is committed.
+
+_stop `end_turn` · 8.65s (ttft 8.64s) · in 2 · out 727 · cache r120,579/w740_
 
