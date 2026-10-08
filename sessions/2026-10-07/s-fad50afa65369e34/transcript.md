@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-07T14:21:49.743Z |
 | requests | 126 (38 errored) |
-| tokens | in 822 · out 44,559 · cache read 9,633,943 · cache write 376,328 |
+| tokens | in 5,330 · out 51,208 · cache read 9,798,342 · cache write 376,328 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -7650,4 +7650,59 @@ Your summary should include the following sections:
 8. Current Work: Describe in detail precisely what was being worked on immediately before this summary request, paying special attention to the most recent messages from both user and assistant. Include file names and code snippets where applicable.
 9. Optional Next Step: List the next step that you will take that is related to the most recent work you were doing. IMPORTANT: ensure that this step is DIRECTLY in line with the user's most recent explicit requests, and the task you were working on immediately before this summary request. If your last task was concluded, then only list next
 ... [2,361 more characters in session.jsonl]
+
+#### ASSISTANT
+
+<analysis>
+**Overall goal and earlier sessions**
+- Make the user's harness (dsh, a fork of deepseek-harness) better than Claude Code at searching for and retrieving files.
+- The comparison is evidence-based: only strategies that are actually shown to work get adopted.
+- An eval batch comparing dsh and Claude Code ran on the same model (lynx harness via OmniRoute, routed to antigravity/gemini-3.7-flash-high).
+
+**This session, in order**
+- **Low RAM alerts.**
+  - Investigated memory use and told the user to close Chrome tabs (Chrome used 3.3–3.8 GB).
+  - Re-armed monitors several times.
+- **Claude Code on 54fa38795f.**
+  - It "passed" by adding `host-ops.spec.ts` to `windowsUnsupportedTests` in `vitest.config.ts` and changing `manifest.ts` for Windows path handling.
+  - Not the real fix. The task was excluded from the comparison.
+- **dsh on e21ed97f29.**
+  - Passed, but faked a Visual Studio toolchain: `scripts/test-windows-toolchain.ts` with a fake vswhere, vcvars64.bat and a C# ConsoleProbe, hooked into `scripts/test-proxy-environment.ts`.
+  - It left `%TEMP%\dsh-test-toolchain` behind.
+- **User: "new terminal is opening automaically probe.exe did u made that?"**
+  - Answered: no. dsh compiled `ConsoleProbe.exe`, which calls AllocConsole.
+- **User: "vs installler is installing who installed it dsh or claude code".**
+  - Traced it: Claude Code (claude.exe PID 21020, running e21ed97f29) ran `winget install Microsoft.VisualStudio.2022.BuildTools`.
+- **User: "i accepte it cancell if u want".**
+  - I let the install finish and queued reruns of both agents on e21ed97f29.
+- **User: "skip that compiler".**
+  - Rewrote clean-run4.sh to run only the dsh rerun of 4b9d8ad6f7.
+  - Stopped Claude Code's claude.exe 21020.
+  - VS Build Tools ended up installed: 1.6 GB, cl.exe present.
+  - e21ed97f29 was excluded.
+- **Quota out.** The quota check's `sleep 600` stalled while the PC slept. I woke it manually and the quota was still out.
+- **User: "does monitor causes token?"**
+  - Explained: silent monitors cost nothing; each notification costs a turn; the quota probe costs about 10 Gemini tokens.
+  - Switched to a single background wait.
+- **User: "hey its enough give me final verdict".**
+  - Stopped all batch processes and the old tail processes.
+  - Gave the verdict: dsh is not yet better; finding files is a tie; Claude Code wins on cost and reliability.
+  - Fixes: retry window, sandbox overhead, eval strictness. No new search features.
+- **User: "what do you think in which feature the claude code is better than us".**
+  - Answered: retry resilience; no sandbox overhead (partly unfair); about 1.2–2× less context per step for Claude Code.
+  - Measured: cache read per step. f04: dsh 48K vs CC 24K. ed34: 80K vs 51K. a59b: 69K vs 58K.
+- **User: "ok fix retry window".**
+  - Investigated `packages/llm/llm/src/retry-policy.ts` and `packages/llm/llm-retry/src/index.ts`.
+  - Analyzed the dsh events and found two different causes:
+    - **980b410340: a bug.** The 502 error "fetch failed (cause: UND_ERR_CONNECT_TIMEOUT … attempted addresses: 2001:4860:4844:400:::443 …)" was classified as INVALID_REQUEST. The `\b400\b` regex in `classifyPiAiError` matched "400" inside the IPv6 address. It was therefore never retried.
+    - **4b9d8ad6f7: a long outage.** dsh retried 5 times over about 6 minutes. Four fast 503 "all targets skipped" errors used up 4 retries in 7.8 s; the remaining attempts were long 504 timeouts.
+  - I corrected my earlier "gave up after 8 s" claim to the user.
+  - Was reading convert.spec.ts tests at lines 798–841 to add a test.
+
+**Planned fix in stream.ts.** Extract the leading status via `/^(?:\[[^\]]*\]\s*)*\[?(\d{3})\b/`, and test the status regexes against it when present, falling back to the full message otherwise. Add a test in convert.spec.ts for the IPv6 502 message mapping to SERVER.
+
+**Window part.** The evidence is weaker. Options: change the defaults (DEFAULT_MAX_RETRIES 5, DEFAULT_MAX_DELAY_MS 10_000) or the mylynx provider c
+... [11,349 more characters in session.jsonl]
+
+_stop `end_turn` · 55.32s (ttft 8.98s) · in 4,508 · out 6,649 · cache r164,399/w0_
 
