@@ -1,0 +1,27 @@
+{
+  "id": "2d730d6a731f6198bf214217",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS3QcKEAgSGAI4AUIIdGhpbmtpbmcSDL89Hj8Q97HWfU2Q5RoM6PRBU4HL5DiVzXMDIjA88DER3q67QDB6N1rO/0uwxuE+Rc8ScbL5zVfHO2H4FXTrm94AmGcBgADxukjhUJcq+gaJVgZvJ+GHWQ3sxWH1L2BAPScuUh1wmaUguODfdR3SATBVt++4ZfLVHBdxQCN53qYaRJPB1AM+Y+zc91F30Y39ohuYffLxLHw8JMaYkK7lZDNzlJPoG2Iquwjio4tjzwnzc2Km20ssRvgv9rvl/dWyr0NG9mYZncld3LEsPea3a9OLSZMxZa/r7olHmSLK9v+V9PJKGlbKvCryVlJGya6lyG5XDc7KqtEu/wyZBJP6r7EabQw2uctTLNfn6RDvzyJVsJCZTvq6xC+S02jk/Uk3FbrYJ0syVcTFZi2d8HhRsW+oSDdXCoAPYz1Rk1YcN/uBlo62dz1JoFeDyy6PWGwN0A7jgFFnThZ3vJRYcSvBeh2oBWD7esngHPlc0yqd0BZrmdAJ/Q4bHRrbfL4dLVDRcD5/yLRXogH6HNalGdjyfTFgm6ZdrxzQCU58+alvR3bHkhGiKZK9i+DFYfmYb5bN0reLATpmb4uKf2VfJlNUh4PSnhwANTQAAeqzz9Bip5q0zaGuxNUMxnA2iP/d1+uEFa4QlbUSg6+qKslsd3HmQyJR5YcFl694zckKpgUtw6EeKUA7Ie5Tt/RLDBWd7Hj7d3zZuBUXVlq+D3i4RPDPz8dGohNsEnf9jma1/7h2IS/lGQfICYILHbyn+rSzJrZpNu1ocUjI87UbfuvX+NEnfnV2zpjY7fGs/Rx+IWXy3W9oxVtnsMkRAvFcX/QV7zo7+gN1LFBNnxTBmmtwb3bl/pn+8qvtsPVYnOIEZqGPOAJ1xw0k/ZKjt+YWtYKnvqLMD9+U7l/HTkizIIczHclKsi0fJMFVxP8CVRLED78M6aOZPC6WYefnBGIPz4QQE1q9uuOScLL9Mo2yRDJjppCkT25nhh/cGaTejrf+N3muLt4c6v4eBOhXVfKVaxX2439UGT3IKKuRGWnu7YzkBb8i242jRvNeodNtfxauk1z6cW7BN1IE51uoxhhqrTXeHlQDxlqINDJBsnr+e2+2oDv3JJwH/yr4/KVSRfqW2xgp6iLwUB/lKbMulehyLIuJ2N6a1cyJn4jo0ZwBEx3qk4ITRzmZWHvRbGkzFIigxJSaFd3CPsaCyDa6Gr//Q8DV5/D055pA2IxQjcdye6fLHVkKu+NZFegWuE7pDPKCGHAuFrDacDqe3tNMWSDK8+yrJOLoEo9e8012eusl6xgB"
+      },
+      {
+        "type": "text",
+        "text": "Those 7 deepseek failures happen with or without my change, because of the earlier \"deepseek → Lynx\" renaming. Next I'll check the last two spots that mention 10 000, then run the full set."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_018KVvM9jyhwZ5n9653GqPgm",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 128,150p packages/llm/llm-retry/tests/retry.spec.ts",
+          "description": "Read the retry executor test that uses 10000"
+        }
+      }
+    ]
+  }
+}

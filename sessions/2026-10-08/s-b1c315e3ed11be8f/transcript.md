@@ -5,7 +5,7 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 35 |
+| requests | 37 (1 errored) |
 | tokens | in 168 · out 18,780 · cache read 3,410,349 · cache write 61,665 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
@@ -3783,4 +3783,69 @@ Those values are set explicitly by the test, so the change doesn't affect them. 
 ```
 
 _stop `tool_use` · 44.65s (ttft 42.23s) · in 2 · out 352 · cache r119,089/w523_
+
+---
+
+## req-0036 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 73 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_018KVvM9jyhwZ5n9653GqPgm)_
+
+```
+  const { backoff, ...policy } = overrides
+  return {
+    mode: 'normal',
+    maxRetries: 2,
+    ...policy,
+    backoff: {
+      initialDelayMs: 500,
+      maxDelayMs: 10_000,
+      jitterRatio: 0,
+      ...backoff,
+    },
+  }
+}
+
+function alwaysConfig(backoff: BackoffConfig = {}): AlwaysRetryPolicyConfig {
+  return {
+    mode: 'always',
+    backoff: {
+      initialDelayMs: 500,
+      maxDelayMs: 10_000,
+      jitterRatio: 0,
+      ...backoff,
+    },
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01Tk8iMDwJMX5EZhxvu4DfBW)_
+
+```
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > registers the deepseek provider and unregisters on dispose (HMR safety)
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > owns the deepseek provider and advertises the default models
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > uses the default model catalog when apply is called directly
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > falls back to deepseek_API_KEY and deepseek_BASE_URL env vars
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > loads keyless, keeps the catalog browsable, and fails the request actionably
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/adapter.spec.ts > plugin registration and config > defaults to the public base URL without config or env
+ FAIL  |thread-safe| packages/llm/llm-deepseek/tests/dynamic-config.spec.ts > request-level dynamic configuration > re-registers the route in place when the captured retry policy changes, without an empty-registry window
+ Test Files  2 failed | 44 passed (46)
+      Tests  7 failed | 1066 passed (1073)
+tsc-ok
+lint-ok
+```
+
+> **Error** (connect) — fetch failed
+
+---
+
+## req-0037 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 73 messages_
+
+_[no new input since the previous request]_
 
