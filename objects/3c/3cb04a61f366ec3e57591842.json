@@ -1,0 +1,17 @@
+{
+  "id": "3cb04a61f366ec3e57591842",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "hey its enough give me final verdict",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
