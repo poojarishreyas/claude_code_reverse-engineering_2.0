@@ -1,0 +1,15 @@
+{
+  "id": "374d29b02b30d0f622cd5889",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01RSiG1D1UQLPc4P37uGs2pR",
+        "type": "tool_result",
+        "content": "== keys schemaVersion,summary,requestBody,responseBody,error | body keys model,messages,stream,stream_options,store,max_completion_tokens,tools\nmessages 40 | system 2 | tools 29881 25 tools\ntool:text=114K  user:text=36K  system:text=4K  assistant:tool_calls=3K  assistant:reasoning_content=2K  assistant:text=0K\n== keys schemaVersion,summary,requestBody,responseBody,error | body keys model,messages,system,tools,metadata,max_tokens,thinking,context_management,output_config,stream\nmessages 41 | system 6165 | tools 50524 23 tools\nuser:tool_result=97K  system:text=9K  assistant:thinking=5K  user:text=5K  assistant:tool_use=2K",
+        "is_error": false
+      }
+    ]
+  }
+}
