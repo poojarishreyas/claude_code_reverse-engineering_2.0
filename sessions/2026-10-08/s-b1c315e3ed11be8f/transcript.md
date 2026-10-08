@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 32 |
-| tokens | in 66 · out 18,052 · cache read 3,084,377 · cache write 61,138 |
+| requests | 33 |
+| tokens | in 162 · out 18,135 · cache read 3,172,175 · cache write 61,138 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -3640,4 +3640,20 @@ packages/llm/llm/tests/retry-policy.spec.ts:65:      maxRetries: 5,
 ```
 
 _stop `null` · 78.11s (ttft 8.02s) · in 2 · out 8 · cache r117,941/w1,144_
+
+---
+
+## req-0033 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 24 messages_
+
+#### USER
+
+The user stepped away and is coming back. Recap in under 40 words, 1-2 plain sentences, no markdown. Lead with the overall goal and current task, then the one next action. Skip root-cause narrative, fix internals, secondary to-dos, and em-dash tangents.
+
+#### ASSISTANT
+
+You're making dsh better than Claude Code at finding files, and I fixed the bug that stopped dsh retrying some gateway errors (tests pass, not committed). Next, you decide whether I add the longer OmniRoute retry setting to your settings file.
+
+_stop `end_turn` · 6.22s (ttft 5.04s) · in 96 · out 83 · cache r87,798/w0_
 
