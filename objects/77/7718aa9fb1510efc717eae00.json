@@ -1,0 +1,21 @@
+{
+  "id": "7718aa9fb1510efc717eae00",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "<tool_use_error>Task bl416zni4 is not running (status: killed)</tool_use_error>",
+        "is_error": true,
+        "tool_use_id": "toolu_01WqC2pPaagWx7VSdDcYS9x1"
+      },
+      {
+        "tool_use_id": "toolu_01C6MdufAJH5fPBp2v36wR82",
+        "type": "tool_result",
+        "content": "Command running in background with ID: bielu09cx. Output is being written to: C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-Elemental-harness\\48fd0b89-0bb7-4d72-841b-60770e4d02b7\\tasks\\bielu09cx.output. You will be notified when it completes. To check interim output, use Read on that file path.",
+        "is_error": false
+      }
+    ]
+  }
+}
