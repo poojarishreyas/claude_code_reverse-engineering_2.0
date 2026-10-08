@@ -1,0 +1,15 @@
+{
+  "id": "7a59cecd3670ca6c09fc974b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_015mtnVUqKDmsdVSHn1h3t7G",
+        "type": "tool_result",
+        "content": "07:41:08 /v1/chat/completions 504 152s\n07:41:08 /v1/chat/completions 504 152s\n07:41:08 /v1/chat/completions 503 0s\n07:41:10 /v1/chat/completions 503 0s\n07:41:12 /v1/chat/completions 503 0s\n07:43:22 /v1/chat/completions 504 127s\n07:43:22 /v1/chat/completions 504 127s\n07:47:21 /v1/chat/completions 504 231s\n07:47:21 /v1/chat/completions 504 231s\n07:51:22 /v1/messages 200 26s\n07:52:04 /v1/messages 200 42s\n07:53:30 /v1/messages 200 86s\n07:54:15 /api/providers/test 200 0s\n07:54:16 /api/providers/test 200 1s\n07:54:17 /api/providers/test 200 2s\n07:54:20 /api/providers/test 200 5s\n07:54:56 /v1/messages 200 83s\n08:00:06 /v1/messages 499 310s\n08:00:06 /v1/messages 504 310s\n08:00:42 /v1/messages 200 36s",
+        "is_error": false
+      }
+    ]
+  }
+}

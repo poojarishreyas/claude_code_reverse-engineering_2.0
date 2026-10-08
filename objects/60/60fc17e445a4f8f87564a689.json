@@ -1,0 +1,19 @@
+{
+  "id": "60fc17e445a4f8f87564a689",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_018MkXztjipUmEJZZupuNYuA",
+        "type": "tool_result",
+        "content": "/c/Users/shrey/AppData/Roaming/npm/claude\n-rwxr-xr-x 1 shrey 197609 308 Sep 25 01:48 /c/Users/shrey/AppData/Roaming/npm/claude\nfile: /c/Users/shrey/AppData/Roaming/npm/claude",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

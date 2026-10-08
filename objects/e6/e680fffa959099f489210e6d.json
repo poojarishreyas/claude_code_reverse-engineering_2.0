@@ -1,0 +1,28 @@
+{
+  "id": "e680fffa959099f489210e6d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS4AcKEAgSGAI4AUIIdGhpbmtpbmcSDL0VLIArBe1+JSNkZRoMKayzSPqkPVSSFWmjIjDFq2riF4YgJA9mJOulxQmFmUkittj4wDDx2mr5UXz+NIT7h5rqb8mNB1cqtcvBxYkq/QbmgS1DqDcDhWWHTT0wrK6Gsy7tDxzQ9wd8iRII1KOaqBos+ddf2A9LUVzzQLUx3h6xB8LNBrHfuSgVRr4QXhMz5ZonT2nGLskdvF8hzSAce7Vse8M6/aN5CAHPY7x2ykY61/2r6MI8abiBk/LmIW9+m48p+p9o/85O4x7X1vhwI5xYZ32PtZEeT6ggSGgHNXrF+RlrOKj0KgKtkbIUZ7yNXYnJlcn+2fzsiqqxaS/NDz/8WOypnabaWQFwBI0O9OBHFlvsco6SkSDd2h/pJgXiRVip6creACMHeSndMDYQDsYQZQ893VyA8wOOdfcVlRlKxpYDLFCJJy9A0TDGafwmmnf+s/LtXY3gYRn06N3FkWHAHric9VN19LbshgClyR5r0OmI+KJ5WWObqBkLA+uTXaJY20BPOH82bzgzfcj+diocslIanBA0crJg0gdPFh4ipqGwUUghEUADRO47icVrEPdY52sFiL2UfpzodVAVrYTG4hQ6hJiQMt/3FzTtMRmqmh4r8OTknjUk1HNKPoQ2OP0CAep8a0ewIKA9VFm+wmgGLrWbkzpZAruWdzJDkXzX3pHxr9hJjmN9vJoIHuZYxiVPYHq+cb3uyXl+abnUt34rY+bxeH/Dy0/dU7PHLrd8J9B4OhQouFaBTnDYenhvI/JbuPA3AJTwHGm53GIDIhstS+PELPPCLbBU0Z72GOLTVmZe0oeooFLI6bbK889tN42zRy6xZB5sy91QbsOoJuHH8CFnzaC/c1WoZtRsoyxudSCffQZ++NdTO5j9YMoqpAu5ygkLuWsvil12o3ZgjUzMT8I2HT3FY2BTY+ZzX5E3bD7DfWx5PRtWQ3CttjFaQh2x1BYEEzqqpFw9+MmBd3/chsXqazdJyqR+BEObkcxX/teT6Lt4i0b55gwd+Kiblk96IQqz2x/0gKlhyBXTAdD3JO5bLbmQrzeCG925O0XAWWAaQBdx4UKc4hB9XePozVsAfa4FGR2k+h+6gDCEiUd4xDKdN26LNMQi+NcFW8BrydJUFZABt7oUEH2xufOQxgXq1FYRAHYqQhOkstRD7Gsus02ZyufC9m6act3/U6bqEYJY2cOwrOF6iybUfgsvB7T4eVukd8qTukWIaAR+45v6t0CxiNYvig7P9YsA6teVL7dwhy8oz51N2QCFBBc/bNd12CMhW775EEe98BgB"
+      },
+      {
+        "type": "text",
+        "text": "I'll check Claude Code's real retry settings in the copy installed here instead of going from memory."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_018MkXztjipUmEJZZupuNYuA",
+        "name": "Bash",
+        "input": {
+          "command": "p=$(command -v claude); echo $p; ls -la \"$p\" 2>/dev/null | head -2; f=$(ls -d \"$(dirname \"$p\")\"/node_modules/@anthropic-ai/claude-code/cli.js 2>/dev/null || true); [ -z \"$f\" ] && f=$(readlink -f \"$p\"); echo \"file: $f\"; grep -a -o -E '.{0,120}CLAUDE_CODE_MAX_RETRIES.{0,120}' \"$f\" | head -3; grep -a -o -E '.{0,80}32000.{0,80}' \"$f\" | grep -i -E 'pow|retry|delay' | head -3",
+          "description": "Read Claude Code's retry count and max delay from its install",
+          "timeout": 60000
+        }
+      }
+    ]
+  }
+}
