@@ -1,0 +1,33 @@
+{
+  "id": "04089ffb22dd66915f9c2c6e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQStwgKEQgSGAI4AUIJbmFycmF0aW9uEgwBJzH1ynZxx+5cro8aDNPlKQGEppb/I99mYyIwdNbQbWSmyb0PE8VqITeP3uJ8kgOmEbUThbepTEz/6V/w0Z/mSZqwwZqNEYbQj1teKtMHMtZAW3u9aEpBMAvJvmf3fQ6SNQC3Tui6GQLst2UR4gZXSb3jdcWoThXFXQoSPAiarmiMjoBLVChPzVJgHROpFcN3Pc6DjnLnIqv+42wZKy+0IdOjKdvWwFS92+RIxSZyh2f+yJDdMKsWrpK8ksCj5ilDYPvOJpmHP3rHUQtEPW8rrQ3rpaUB8cT4cs552VRkOdUr07FBmdelE975TePhCvXGsF67gbOx+Jh/hKaivUiWc8zSPnyK3OWCaoH7/jDfjiI621Cg/ueIQ9SQzrTxlnPjFr+9FJshskux/Gz5wJn8cseIKL9xDiovp/RAyxv3eVARrNS8p7u5Dp1hYzYhYjlx7ob88bkkx5/rscrEVnaStJxX7RRJs6cFoZX+oPNnMrSKcOjxiEF89lGsnipZ8zwwvu5wBdQDSOIcDLshNtwuDsG1DaB7i45tgFa03AkQYa4l8qhvOZderpjSRS7BY4buvDvfg5vbw3v/8yjZWC89DdYw8w/0EJhCyZghM+80+97WSgOxPJpvkhiU6CynzAVGhIeFrsP2tgiRe2V4qjvfz98PdRZW7xOBg3zx7gROWGojYWVKkhEQvgEUXULVDPXE+z7B5zEJuPDgHAiplrP9c5KJLzlRNtONOOn78hdCeOkVks2TV0zc3+TTASmYJbjZFKYawq/ZfR6T23OGeEHdeeDxlQBwODTjcxvOYB5oLle+MT0pMeOHphwS6OAHoFUM/Knxj+PayiNhKhlcuB12QReKv0O8CftvLNpKrWIofr7C3bTyRkJ1fuLEFoD75dLSMxPHQx6vSVBNTCkgRw98dCCmwBBEAdZUoUeNO8eYmN0lGdKhVrDdHbUw41fYMdJtGT7jS+ggFzzg+fyKz0F7hTML4gsQANenB/1B1zEVdtGsHVTM9WfCWd4MRkUSxl7rmPejPqAJAwYliQmBaglkIv6XA+FJnsn/W0+dsAZiZuOsgsrwDDJ1LHVfLBDlkmQeoT38byjZWav3+cnrApWMPzJrimoao/PlvUCOcDWYn4Zhdy0+gejRwj1rmO9acrCyxh8Rj3+W5y4F2UTV+32AWM5ZXnr/CE5y87BvRnPEXrwGcDTLirvvKH3gpjjBoyZCnGZT2I1Utxilhvk1IfRGSGeYP9xcYNBfT4uS8FJSAdkM1BA/EvF+ZzlBhQglDxX9VIvom3X/0EaDKWrwM6GNhQavQEMHDt58fsoesDJMDAcgn9cPla4H+5iVL80phiNquY6/4WVKIvu2zW9rhyxu+9YbPcQAwfQXnCLX9AaXUPvwR5G65bWuc6yo78icZe3YjRgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01KDkGvGncxVh66djaMmRiJf",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && S=/c/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-AIRcoin/7bdab590-950d-4a28-977e-e281d88afb67/scratchpad; cat > $S/bus_smoke.py <<'EOF'\nimport sys, collections\nsys.path.insert(0, \".\")\nimport minerd.mqtt as m\nfrom minerd.contracts import errors\nsent = []\nclass FakeBus:\n    def __init__(self, *a): pass\n    def start(self): return self\n    def stop(self): pass\n    def publish(self, t, doc, qos=0, retain=False): sent.append((t, doc, qos, retain))\nimport mock.c1_vision as c1, mock.c2_emitter as c2\nc1.Bus = c2.Bus = FakeBus\nwhich = sys.argv[1]\nsys.argv = [which] + sys.argv[2:]\n(c1 if which == \"c1\" else c2).main()\ntarget = {\"vision\": \"c1-vision-event\", \"telemetry\": \"c2-telemetry\", \"epoch\": \"c2-epoch\"}\nbad = 0; count = collections.Counter()\nfor t, doc, qos, retain in sent:\n    kind = t.split(\"/\")[-1]; count[(kind, qos, retain)] += 1\n    e = errors(target[kind], doc)\n    if e: bad += 1; print(\"INVALID\", t, e[:2])\nprint(dict(count), \"invalid:\", bad)\nprint(\"epoch statuses:\", [d[\"attestation\"][\"status\"] for t, d, *_ in sent if t.endswith(\"/epoch\")])\nEOF\npython $S/bus_smoke.py c1 --count 3 --drop 2 --unknown 50 2>&1 | tail -3; python $S/bus_smoke.py c2 --duration 72 --drop 4 --fake 9 --scenario rush_hour 2>&1 | tail -6",
+          "description": "Run C1/C2 emitters with a recording bus and validate output",
+          "timeout": 180000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

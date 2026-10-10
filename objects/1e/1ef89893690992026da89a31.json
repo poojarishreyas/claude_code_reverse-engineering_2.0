@@ -1,0 +1,15 @@
+{
+  "id": "1ef89893690992026da89a31",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01KDkGvGncxVh66djaMmRiJf",
+        "type": "tool_result",
+        "content": "publishing C1 to miner/miner-001/vision on localhost:1883 (Ctrl+C to stop)\r\n{('vision', 0, False): 3} invalid: 0\r\nepoch statuses: []\r\nWARNING minerd.catalogue: catalogue 0.1.0 is draft: 17 null coefficients filled from coefficients-v0.json\r\nWARNING minerd.config: using the demo device key for miner-001 from C:\\Users\\shrey\\Desktop\\AIRcoin\\chain-market\\contracts\\seed-data.json\r\nINFO mock.c2: epoch 29860978 accepted: 0.015073502 AIR\r\npublishing C2 to miner/miner-001/telemetry and miner/miner-001/epoch on localhost:1883 (Ctrl+C to stop)\r\n{('telemetry', 0, False): 73, ('epoch', 1, True): 3} invalid: 0\r\nepoch statuses: ['pending', 'submitted', 'accepted']",
+        "is_error": false
+      }
+    ]
+  }
+}
