@@ -1,0 +1,17 @@
+{
+  "id": "49e448605b3cf189e081a84c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "ok go with phase 1",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
