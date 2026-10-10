@@ -1,0 +1,15 @@
+{
+  "id": "6c6cfee920aa3cdd41da14bf",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01SmxUtTxGR2DjxpApdkpuGV",
+        "type": "tool_result",
+        "content": "{\r\n \"v\": 1,\r\n \"miner_id\": \"miner-001\",\r\n \"ts\": 1791600002000,\r\n \"scenario\": \"rush_hour\",\r\n \"sensors_simulated\": true,\r\n \"aqi\": 194.0,\r\n \"sensors\": {\r\n  \"pm25_ugm3\": 88.2,\r\n  \"pm10_ugm3\": 151.0,\r\n  \"co2_ppm\": 525.2,\r\n  \"voc_index\": 178,\r\n  \"no2_ppb\": 55.4,\r\n  \"so2_ppb\": 9.3,\r\n  \"co_ppm\": 1.84,\r\n  \"temp_c\": 30.0,\r\n  \"humidity_pct\": 47.5,\r\n  \"pressure_hpa\": 912.2\r\n },\r\n \"gps\": {\r\n  \"lat\": 12.9716,\r\n  \"lon\": 77.5946,\r\n  \"fix\": \"fallback\",\r\n  \"ts\": 1791600002000\r\n },\r\n \"plants\": [\r\n  {\r\n   \"tag_id\": 0,\r\n   \"species\": \"snake_plant\",\r\n   \"status\": \"present\",\r\n   \"leaf_area_cm2\": 308.4,\r\n   \"alive_score\": 0.865,\r\n   \"species_conf\": 0.939,\r\n   \"rate_air_per_h\": 0.063443\r\n  },\r\n  {\r\n   \"tag_id\": 1,\r\n   \"species\": \"peace_lily\",\r\n   \"status\": \"present\",\r\n   \"leaf_area_cm2\": 318.2,\r\n   \"alive_score\": 0.848,\r\n   \"species_conf\": 0.935,\r\n   \"rate_air_per_h\": 0.048988\r\n  }\r\n ],\r\n \"current_epoch\": {\r\n  \"epoch\": 29860000,\r\n  \"start_ms\": 1791600000000,\r\n  \"end_ms\": 1791600060000,\r\n  \"running_air\": 0.001559\r\n },\r\n \"flags\": []\r\n}\r\n{\r\n \"plants\": [\r\n  {\r\n   \"tag_id\": 0,\r\n   \"species\": \"snake_plant\",\r\n   \"status\": \"present\",\r\n   \"leaf_area_cm2\": 310.0,\r\n   \"health\": 0.86,\r\n   \"removed_mg\": {\r\n    \"pm25\": 0.00052,\r\n    \"pm10\": 0.00071,\r\n    \"voc\": 0.0021,\r\n    \"co2\": 0.31\r\n   },\r\n   \"air\": 0.001538\r\n  }\r\n ],\r\n \"by_pollutant_mg\": {\r\n  \"pm25\": 0.00936,\r\n  \"pm10\": 0.01278,\r\n  \"voc\": 0.0378,\r\n  \"co2\": 5.58\r\n },\r\n \"total_air\": 0.027684,\r\n \"attestation\": {\r\n  \"status\": \"accepted\",\r\n  \"evidence_hash\": \"0xc0bd49585d03da599e97092962060e592dd9b0dcab23229260bd38c599b9f431\",\r\n  \"amount\": \"27684000000000000\",\r\n  \"tx_hash\": \"0x0a797b3c574efa1b50a3ac271bf9a621b3fa8b7a416038902e034af50d5d8e8c\"\r\n },\r\n \"flags\": [\r\n  {\r\n   \"code\": \"plant_missing\",\r\n   \"severity\": \"warn\",\r\n   \"ts\": 1791799254000,\r\n   \"tag_id\": 7,\r\n   \"message\": \"Tag 7 unseen for 15 s\"\r\n  },\r\n  {\r\n   \"code\": \"low_liveness\",\r\n   \"severity\": \"critical\",\r\n   \"ts\": 1791799231000,\r\n   \"tag_id\": 12,\r\n   \"message\": \"alive_score 0.12 (possible fake plant)\"\r\n  }\r\n ]\r\n}",
+        "is_error": false
+      }
+    ]
+  }
+}
