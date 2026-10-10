@@ -5,8 +5,8 @@
 | session | `s-b1c315e3ed11be8f` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
-| requests | 74 (11 errored) |
-| tokens | in 606 · out 40,781 · cache read 6,779,938 · cache write 489,922 |
+| requests | 76 (12 errored) |
+| tokens | in 702 · out 40,854 · cache read 6,940,765 · cache write 491,482 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -6043,4 +6043,87 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\AppModelUnlock" /v Al
 ```
 
 _stop `end_turn` · 16.72s (ttft 14.16s) · in 2 · out 1,560 · cache r159,714/w1,113_
+
+---
+
+## req-0075 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 122 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_0169So9cujqqkmJrTzfCU2H9)_
+
+```
+--- call "command":"reg query \
+"content":"Exit code 1\nERROR: The system was unable to find the specified registry key or value.
+--- call "command":"reg add \
+"content":"Exit code 1\nERROR: Invalid syntax.\r\nType \
+--- call "command":"reg add \
+"content":"Exit code 1\nERROR: Invalid syntax.\r\nType \
+--- call "command":"MSYS_NO_PATHCONV=1 reg.exe add \
+"content":"The operation completed successfully.
+--- call "command":"MSYS_NO_PATHCONV=1 reg.exe add \
+"content":"Exit code 1\nERROR: Access is denied.
+--- call "command":"powershell.exe -NoProfile -Command \
+"content":"AllowDevelopmentWithoutDevLicense : 1\r\nPSPath                            : Microsoft.PowerShell.Core\\Registry::HKEY_CURRENT_USER\\Software\\Microsoft\\Window
+--- call 
+0
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+In these eval runs Claude Code had **no guardrails at all**, because our eval turned them off. It launches Claude Code with `--permission-mode bypassPermissions` (`scripts/eval/claude-code.ts:37`). That mode runs every command without asking. In headless `-p` mode nobody is there to answer a prompt, so the eval switched prompts off.
+
+**What Claude Code did with no guardrails:**
+- **e21ed97f29:** installed Visual Studio Build Tools (about 1.6 GB) and the VS Locator tool system-wide with `winget`.
+- **54fa38795f:** tried to turn on Windows Developer Mode in the registry.
+  - The setting under your user account (HKCU) worked: `AllowDevelopmentWithoutDevLicense = 1`. It is still set now, and the run showed it didn't exist before.
+  - The machine-wide setting (HKLM) was blocked by Windows ("Access is denied").
+- **54fa38795f:** it also edited `vitest.config.ts`, the test setup, rather than only the code.
+
+**What dsh did:**
+- No installs and no registry changes.
+- Outside the workspace, it only looked around: it listed `Program Files` while searching for Visual Studio.
+- Inside the workspace, it took hacky shortcuts. It wrote temporary scripts that patch Node's process functions so the tests would run on Windows. It deleted most of them, but left 3 behind in 9633724b40.
+- Neither agent edited the test files themselves.
+
+To be fair to both: dsh never *tried* an install, so these runs don't show whether its guardrails would have stopped one. Claude Code only did these things because we switched its guardrails off. In normal use it would have asked you before running `winget` or `reg add`.
+
+**Claude Code's normal guardrails:**
+- **Permission modes:** by default it asks before shell commands and file edits. Other modes allow edits automatically, only plan, or use auto mode, where a safety checker reviews each action.
+- **Allow and deny rules:** for example, always block `Bash(winget:*)`.
+- **Hooks:** your own scripts that can check or block any tool call.
+- **Sandboxing** for shell commands, where supported.
+
+**My suggestion for the eval:** keep headless mode, but block system-changing commands for both agents. For Claude Code that means deny rules such as `--disallowedTools "Bash(winget:*)" "Bash(reg:*)"`, plus a matching block for dsh. Without that, an agent can change your PC in the middle of a run, as happened twice here.
+
+The Developer Mode setting is probably harmless: under your user account it likely does nothing, because Developer Mode is normally set machine-wide. You may still want it gone. I can delete it with this command, but only if you say so:
+```
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\AppModelUnlock" /v AllowDevelopmentWithoutDevLicense /f
+```
+
+> **Error** (connect) — This operation was aborted
+
+---
+
+## req-0076 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 122 messages_
+
+_[no new input since the previous request]_
+
+#### ASSISTANT
+
+We're making dsh beat Claude Code at finding files, and just compared both agents' safety guardrails in the eval. Next, I can delete the Developer Mode registry setting Claude Code left on your PC, if you say so.
+
+_stop `end_turn` · 2.65s (ttft 1.65s) · in 96 · out 73 · cache r160,827/w1,560_
 
