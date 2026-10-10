@@ -1,0 +1,27 @@
+{
+  "id": "73a9d1958baf0c6f55ee29a8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSzgoKEAgSGAI4AUIIdGhpbmtpbmcSDNzOGDWUIFHBfX0YmRoMFydqIyZhuJ7NTDI3IjAh4Fh51Xlkk5OOMrLH6MZibXd+pn16d2eLgpwObTum1hQo/bKAaiIqFD4R8/h1rRIq6wmBE9v9Kqxh9yyT9zNWJzZ9CHA/r3+2ueOSOScVyHR7x6xmG/zPXvh7UJeH0q2OfiPeng8hloU3IjUrxevKOH4Xs1bxmd8h2ocHXixTWUy1pg2c2OJ49ql0cC30D/c7RDLBscTKRFhfcH9DMi5hj5WwOidPK5TvFb1LD/ZQOWos2YDbb5CRGBrgQsgi6+iFjsdKV/qwJeEmkKovO6nsnrM3gwR18a/7dhTYRlXqAUTNCjfF9C8km2AHWFjo5P0tOxpb41UfGwJ8+FV5/5VAbAEs+nz8P5SqX4eKwYMeOawR6GfWx2k2gO7sUFEUhykjh12cU4OMxnWLSs8WOci/cYzXTuuRkyPIYyobUqkvZ0nwrjEkB/6FvKV+J+E3u99oGzbSeeNKhcqZEEsTRRmwKQmJVzCyo48OdO/MFLYJ0t6HESUoCSrVNth8bHf+0O22lGx7ZT45OTKUiVbtKuNjYWN1rscMySSykS6Gm22rZeCQid6Ja/qr9/z+eSf8OBj6JF9e6/Bv0gNj/9Ql3hDSQ793K/C7BaZTQ7kQnRdIv1HADMONnmtcU4ISLqDVFpFWJBB7Nh7ywJtrt2PKX8fH41yjPGg936GgNKTtZjKJSOoqoV54+GPNCBFkZg/q5UrR6fbTdZ15LSTOrjlt4/F/1HQ5yXg2hm1U5vHoacwQEOSPDkZNMb4aMp/TITf8Yy4ghQRwc0FaiTypuF3nq/vWPRmuxaA4xa5wFe0n+T/AACi6qXNEaD6sOc4rdHowcrgJkTHpmic+g1cDFuUis3zJ1IwcJJ8Y979G/H+g/7mxKTh9MSN58L9/D/6Y8MqcgXOuncPmDbQDVoBx6vqDwwr7h0UYR6yFgc1g0YfbO49g0/TTE33KsKluQE+MeiSXHp++1KR3Ki9DshzwcKy4vDb3BjJeVtGKgaLFAX0Z8dJlla9W9NQ6j88hFX5bIP7BlBzJ0+h4g9JcM+YO3KJBE5UpUV2xSi/V8GwyqTBQlXRe9TF5WSD8oNAX7yiL2qQd+1EODCvd13AbKPms/LBu+oMOjcV1rGx96U1eguKoOQh1ttET0rDoYoRKXF2Ekgmn/KNgXOXFEfmZdOgo1sdGTSTIx6D9ir5CELTr4e/X/laWSrMD+7SlHMFwDgI/41H51Gx2Rt4HZBRI8HpkZheUX0itb25oQNUiQxqCd88g9y6jLZPfsHhvq0qQCuDB/yOlxxSV0uHfJXfPKW54kmXpIHqM+yeXHkpDNI0Pjaq+Vm8AUpXTuZ/ClVg4t2fhkuPtbk64oLU/+uidwT6+2K1neL6faLaJEQij5hmOxigrF6ItnAu6seSy21shCSKrNfAbTiX3Fmd8nQbAssex04A13WnbJicH5YJGBGrON/DjREGfwbOQ80x2R7xqw8PGjlHnAdhqDB/q7uBYZoB/Et4mZ8HfDwMR271/ZcSKaq9+6MlZl6/UWP+3hb5V9nb1DT2d3SqCrzQX9JHpunePvCeZ/BCbsicpJ6hvnNEy+3iDhSlYK18rxyp8APcMdxeoZwhwJBvnei6wbA2+K8WD3Gfct41PIPotaPMVLdg9q9j/aL12fnUQMpdRPvQeqALXvntQdLSp4CmKAN/YcfZb7h3s6cO9I+7McFMJkzZY0w20pY9pWIiR9vK+8drR0BXawqN2gHvIb8WSaazBX2pIf7ohTBgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01SPE7Vszmc7Ucrhpx57WWGz",
+        "name": "Bash",
+        "input": {
+          "command": "node -e '\nconst j=require(require(\"os\").homedir()+\"/.omniroute/call_logs/2026-10-07/2026-10-07T12-03-39.123Z_40a5b4fc-a321-4655-8389-d2c6a5ce6871.json\").requestBody\nconst t=(Array.isArray(j.system)?j.system.map(p=>p.text).join(\"\\n\"):String(j.system))\nfor (const l of t.split(\"\\n\")) if (/malicious|refuse|secur|harm|credential/i.test(l)) console.log(\"> \"+l.slice(0,400))'",
+          "description": "Search Claude Code's real system prompt for safety rules"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

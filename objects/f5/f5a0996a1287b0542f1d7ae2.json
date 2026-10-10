@@ -1,0 +1,27 @@
+{
+  "id": "f5a0996a1287b0542f1d7ae2",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSvQcKEAgSGAI4AUIIdGhpbmtpbmcSDEn5FE9HWRm403INRxoMqz4+MjCKQZFThd8gIjBIqGucoDuLVNatN1BLKMQUy5LNJOj1U16ULqHkgJyVijGCrpKLzuc2Y/GunfxEmf8q2gYfo3fyYYEWs4otlJFg0rnKV1IBB8+m3p45ghT2oa37F1FqH1jWo5w9JHTjXGaN8XDNtqz4sZb7i83Ry2wDE+VpqvCA8UDnEPDoAXlc/sTJUJYxHCijdglQp+bFeWdUWnDgfmcOmt3C/2oE6g8pJrjr9rH5PVFRxqeQl8ESn6lvKsIW5RolFOR3UgeBvKQiMEYrNVLiHA0BdxmJEoaDZk4XvrbydHsyuE6O3AR4Tg05D+Yye1scVHZFssjtnhCApdsS2gwlNcRdoFng3f/c54GE3ETlCCfD4hinnpIcyOVUGQ+5PJhWfckalH0v/imdgriMAzPCKRkA+e7zYFh5AJujpXOGdrmzZJHkIbbZZDijRgxoEtole1lm1apMd/+qTI1Vwrnt4vQp/HKNDWjIGL5JzXS7Dzqu1uzTVL7NSPpcZBgUTczyh9Ebgf1RtfHufn2jgzZxOsn6oR6HXgaftIrlNqZq1fnSgoykQOros2GCqsod2xHyahT6EPuKCRWHYwKklPGIJYO1IY5MnipluGAPOu7KrA9mGxUJRUrNcRGnPFFixp1QuN2NcuPjc/SVsnC7AEVxavgVeP3TxXgDQyyNPpC5mlBWJuApH1MKhYtrNqu7OM3N5zAew/l08WahXirqWVautIFdiuSZzsTeoy7jnbVCkWAWwJNNPsgMh7BsgEx4EjDlH4LxdlWrBRvOKrg+n1IQqdur4p/c/mB/F5qZbL5VsYPRKkXFvPAdQwz2/7Dr2wIiNigwvn0/6dBuJCOJ/NNTmW5llGTpJW2jM/wTmp9mmQO2b/SjkIoh9y59QVquJxr0517CLWO7yui9F+fSThM5tY2mIH0u+FK8hSRBjG5/gQe4p2CTRoo8gqWZdsnvXd2Dg9KD7ygrUtP/xDlFJtAa/ZO2kFJoHzycjOqaYBKCziFb1KWnEBMcAxde9+CwEUmA59ItBHKLAekNaDhKDEkTvl4vjp6aI63YPw99cOsiy5FisMAZINgnuBYs3We+uOWplpNmcqfSBL0m7SE7nmCEvUlAzaqeaoTCWNEUnS3YxA83Nhc+7o4l9DRkr+BUHsbsBJdEri5BFChB0aMqSRX9z/XIyiwtZ2url1Ve/OOkZeE1h0SrnY8kY9xhNtwo7wIE66TZBBAYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "\"refuse\" shows up all over the code, so that search tells me nothing. I'll read the actual system prompt dsh sent to the model instead."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01XeG2B4kyfLkT7GgDCFHfaY",
+        "name": "Bash",
+        "input": {
+          "command": "node -e '\nconst j=require(require(\"os\").homedir()+\"/.omniroute/call_logs/2026-10-07/2026-10-07T11-05-46.472Z_02b0eff8-8c7e-45d0-aae1-dc7f4e9ab166.json\").requestBody\nconst s=j.messages[0].content; const t=typeof s===\"string\"?s:s.map(p=>p.text).join(\"\"); console.log(t)' | grep -n -i -E 'malicious|harm|ethic|secur|refuse|attack|illegal|safety|danger|destructive|credential' ; echo \"---matches above (empty = none)\"",
+          "description": "Search dsh's real system prompt for any safety rules"
+        }
+      }
+    ]
+  }
+}
