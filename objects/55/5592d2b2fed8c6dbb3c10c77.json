@@ -1,0 +1,17 @@
+{
+  "id": "5592d2b2fed8c6dbb3c10c77",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "no i men any prompt that says to do unethical things taht gurdrail",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

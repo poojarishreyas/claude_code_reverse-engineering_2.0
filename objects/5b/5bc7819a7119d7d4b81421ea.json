@@ -1,0 +1,33 @@
+{
+  "id": "5bc7819a7119d7d4b81421ea",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "text",
+        "text": "You mean refusing harmful requests, like \"write malware\" or \"hack this account\". I'll check whether dsh's system prompt has anything like that before comparing."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Uv9Wx3uEhVfdjPMLP5RMnC",
+        "name": "Grep",
+        "input": {
+          "pattern": "(?i)malicious|refuse|unethical|harmful|destructive techniques|security testing|usage polic",
+          "path": "C:\\Users\\shrey\\Desktop\\Elemental_harness\\packages",
+          "glob": "**/src/**/*.{ts,md,txt}",
+          "output_mode": "files_with_matches"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
