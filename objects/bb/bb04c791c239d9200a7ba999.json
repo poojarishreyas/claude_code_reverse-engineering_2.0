@@ -1,0 +1,15 @@
+{
+  "id": "bb04c791c239d9200a7ba999",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012vcmPhYxBtheTWbPhjDYzS",
+        "type": "tool_result",
+        "content": "https://github.com/prabhu-omkar/AIRcoin/pull/3",
+        "is_error": false
+      }
+    ]
+  }
+}

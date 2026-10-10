@@ -1,0 +1,27 @@
+{
+  "id": "2e60b3eab638e0aea2caf146",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSuggKEAgSGAI4AUIIdGhpbmtpbmcSDIXzdspOWs4sQyS14BoMTrT9qqVgKuu51Nd3IjDmqrhrmEMznqpk6sFhh903CEjkbmE32OSoE0K3pRghwUQSe31UsPdeGG7kXu8RHHQq1we2R+2wlkAVGYN8i9nO/UI8TUpe55wcXBeNasAfsEsGNoirUKZIM6yeCObD7+FPgNKVeg8XekjX2o1y+2N1ldvdmOM1z6cnnjYf5YwxIDtl1ngdUuRFIDEZ7lYLaFlrF5lGBysctDQG7NrgbvHFaTtOXp/Ye9vog4mFBiSMYuWaP2+47Lq9FhHKbG1UdG+TVJxfpsUqV9Fi4BSxNXqIfrM/Pe6NyXBqPwCXK+Z7sOYBNChFNAEwhOQtS6QaZbp+TX7m6VQdDVmEn3FNpDn6f4zgsy21f8x1kFzDcwlD1awMHMHlerO4KyoV7MGwJQLA4tNaSnOFXDfw3m81k4ObdlbevNRq0EduYMy77Suv+/CGQOLtK8LXivk5L+HfwDtK/Oh7Y4k47D4YTbpMhWpvVXQxUPtEh70E/UvWztBDC+GJTDfCOhcRJN1ufyNQUis/yA8ecol+jMhRkwSQorFqCuR6RBIm+Bc0S35YcLowttmP7u/xblcpnBlno+ph1vLj9znYE0C1hA6sy5BTUahgpf8SxPY/uXya6wNgX4a6QGpm2GkngaaVFedV8chZj3QxAN/p1MII6BQQeOWS9gnstSRxocssbxIeSEUe/KhJy5izrXmZe0aAA2uYX85TtRwf7Ksubq9nPxMAZVWqxcBsA17EPLW5TxSkU/cVJ+j8+2WmydsSHIgU40/WEesQr2S4I7KOxOlJ6F8js/nOaGfNklhwgvy+6OnKMwDL56zsZq4eti9OYL57+CbbdNdg2/AHYE9bux+VihrlJuSRWJMevU15ax6w73KGEp78sPTaCASzxTb8WoSnf0edTryMgw+Mmylc3QwIcaR+Gw0371yQUioLLcHLxlvA0OJp2Z9Erl21e85VPWft2jkw3fyYfRTERcAunZOrRLVSMOyxSDrElQ7Xba3BdTLsPUeypn75/JZd3epXQ/RKsX3vEy8leuXYA7mHyuZQUoeD4BRaEH32B5C7oRYBDL/4A4vM5mwuVDZDeqxYNeH1xS0r0jK6IKb1fERX+uX9gGMt5U/G/5JD3TeQVB+CLcpvrvtMM1WJXKgqvylOyVh3WJWwkvQ2Ro2/o6mtq4W89WDRt8BMBkHHnsuMNFX9gX/6/VOXr92Gc2lGIF7vJSggWZxhjLNWIbXd0+j9x+Vb+OAlH1Ux7Yl3KbgnBOT1JqT2U0wPTJHywL3oxYO/nDcldfUlmgvNbx1YUrbCUjxg/CbFFfywQhzVL1Q1dsxBt2B4yvOxkpASOb/ChMbfIqbJD3i5bAY1MY0sNQOcR5/XLs0sTZBhgIbzD19nM+dAgImZehgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_019RUZL9RgJ1StaADTBXMRfV",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && git status -sb && git diff --stat && git diff -- chain-market/README.md chain-market/indexer/package.json chain-market/web/src | head -250; wc -l PRD.md chain-market/indexer/src/db.test.ts chain-market/indexer/indexer-store.json",
+          "description": "Review uncommitted work not in the PR"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

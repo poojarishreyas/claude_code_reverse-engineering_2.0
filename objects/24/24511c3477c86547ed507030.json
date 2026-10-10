@@ -1,0 +1,17 @@
+{
+  "id": "24511c3477c86547ed507030",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "is alll phase 2 ,phas 3 and umshankars half part evrything s pushed and raised?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
