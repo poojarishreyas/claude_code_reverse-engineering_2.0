@@ -1,0 +1,17 @@
+{
+  "id": "acd9043b1e21a6ee6c2e4dc0",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "**Omkar** is building the digital twin. It's part of Workstream A (vision and digital twin), in the `vision-twin/` folder.\n\nPer PRD §7.1, the twin is a web app with:\n- **3D miner model:** built in Blender (case, Pi, camera, GPS module, sensor boards, wiring) and shown with react-three-fiber. You click it to explode the parts, and each part shows its live reading.\n- **20-slot plant grid:** mirrors the physical rig. Green means healthy, grey missing, red suspect.\n- **Live camera panel:** the annotated feed plus an NDVI view, where living leaves glow and the plastic plant stays dark.\n- **Sensor gauges and AQI chart:** fed by Shreyas's C2 telemetry.\n- **Mint ticker and wallet balance:** fed by Umashankar's C4.\n- **Anti-cheat event log and a GPS pin on a map.**\n\nHe also owns the physical rig, the stickers and the vision pipeline that sends C1 to Shreyas. In the demo he runs steps 1–5.\n\nUmashankar's admin portal is meant to reuse Omkar's twin panels for its single-miner view, so those panels need to work outside the twin as well.\n\n**Where it stands:** `vision-twin/` contains only a `README.md`, so no twin code yet. Umashankar's C4 mock (port 3004) is ready for it to build against. Shreyas's C2 mock doesn't exist yet, so the twin's sensor gauges have no feed to test with.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

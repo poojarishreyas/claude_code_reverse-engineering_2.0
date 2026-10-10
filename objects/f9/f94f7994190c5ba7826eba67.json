@@ -1,0 +1,23 @@
+{
+  "id": "f94f7994190c5ba7826eba67",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQStwYKEAgSGAI4AUIIdGhpbmtpbmcSDJGnx+YEQGiOV5LaGRoMB8KOyKFkFnv8k0WZIjAmmXFBh8ER8esgmiIffrkezHLKrB2MvpHzI51EpKscQdzEOnr2TwnqrHkFs/5aERwq1AX6YYEnHHLYba0ZdXCb7S5q2c4VGm/pziJg01SatXwgceIGkWnQFjd5a0GkTOqCpk5/e8qXyrrp+r1VIg4d3zhfJ55ZP1wu3HyiKZhpKLzyF9/4qemPgQPfrf+YyOxe1VA8NqeOb2fVzzoVJFojRQAJB5Y10Tyi0xyLX/cuaDN5bgjxoXS9Cx1cLWNXk/5IpVDoF2YeeALj5K8xgBFh/8Oy0MDoWoSWpLqykI0JaSrecupqmUEP+odEYNbLTYWmhcCL6hOA86mWc8fhmSEeOUUREjccjdUp26mY4qtpCwYaLXDCwFGPXsxAVmtBJLMzmvEgJX/Xf+ufjJeTRLXiDTqft8UyYZbsda2kukxayUL1EKgxkVsFT9DmBAe0qQ2fKOImValU+5NHOGQ2JCHcIQDX7bpowJxftFS76a1J+3cmnq4yIvi9vhUIPdByH/QoaxpVIjJpDJyOShzxBiuuzk8kczi8wV3j3hDTiwROXc2/D/GkLh3B6DTsho46r5s8tS5sINv5m8QJkxIrvPfW3G+ca77gyMssiscZQJMcX/jE8fEWEv8mU78VgfG8pMsArxBCjMwEHPT6UaCRBxYrrkhVhOCj+qQIYqGi6nx5DvIJYFBG9HEU18rznqOiNBmOgT7/Y5P4To1LfdfKAqSBqhDV0RSQn/R+6UgIXH1Qv0Li4TUXHpdkXR0XmhKV5gLeAzYLR/LpcCA8uC+ONt+K5osPa4+hJ0O0gf0RezsgjIPgShi70qk+2VCNgniTn3WP4IzbdyqzN/WU+iM38ml9DHL+lkZFsgXTzi5icgVkC8AgE9pqY4RVl0TW4UTF1it0D+fkz/6GO93nvBFURALAoYJXfOMD9HLblCCDXoRDoZ/Bsm89FADPAO40H8mNzjaqAiYEksYOFa4vZdC0BuGRHGFgH7g8scyIMf6zguO5RnjS2jmMmXdCK0yN6sh+CuzbT8GHYvz7GAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01JBjjHerjuLnkqg6mWK14ay",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && find vision-twin -type f | head",
+          "description": "List files in vision-twin folder"
+        }
+      }
+    ]
+  }
+}

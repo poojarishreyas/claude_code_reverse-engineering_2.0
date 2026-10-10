@@ -1,0 +1,17 @@
+{
+  "id": "bf81a5b4ffbbd713b0cd5764",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "is umashankars task is complpeted 100%?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
