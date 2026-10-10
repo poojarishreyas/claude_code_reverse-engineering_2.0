@@ -1,0 +1,19 @@
+{
+  "id": "f6ef0b9f21ecafe43377b3a1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01V4tRfxJjq9ANgs4go9vt9Y",
+        "type": "tool_result",
+        "content": "4: * For each task mined from a repository's bug-fix history: prepare a workspace\n6: * headless through the shipped base profile with the failing output as its\n37:import { difficultyTags, mineTasks, prepareWorkspace, readTestSources, removeWorkspace, taskPrompt } from './tasks.ts'\n81:function runTests(workspace: string, files: readonly string[]): Promise<Command> {\n83:  return exec('npx', ['vitest', 'run', '--maxWorkers=1', ...files], workspace, process.env, 15 * 60_000)\n148:  const workspace = join(tmpdir(), `dsh-eval-${task.id}`)\n151:  await rm(workspace, { recursive: true, force: true })\n154:    await prepareWorkspace(options.repo, task, workspace)\n156:    const install = await exec(installCommand, installArgs, workspace, process.env, 30 * 60_000)\n162:    const baseline = await runTests(workspace, task.testFiles)\n170:      ? await runClaudeCode(prompt, workspace, options.model, options.claudeEnv ?? process.env)\n171:      : await runHarness(prompt, workspace, home, options)\n173:    const metrics = computeMetrics(run.events, { workspace, sourceFiles: task.sourceFiles, testFiles: task.testFiles }, run.usage)\n179:    const after = await runTests(workspace, task.testFiles)\n193:    // An agent's leftover process can hold the workspace open (EBUSY on Windows);\n196:      await removeWorkspace(workspace).catch((error: unknown) => {\n197:        process.stdout.write(`eval: ${task.id} workspace not removed: ${error instanceof Error ? error.message : String(error)}\\n`)\n215:async function runHarness(prompt: string, workspace: string, home: string, { homeFrom, provider, model }: RunOptions): Promise<AgentRun> {\n237:  const agent = await exec(launch.command, launch.args, workspace, { ...process.env, ...launch.env }, 60 * 60_000)\n243:async function runClaudeCode(prompt: string, workspace: string, model: string | undefined, env: NodeJS.ProcessEnv): Promise<AgentRun> {",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

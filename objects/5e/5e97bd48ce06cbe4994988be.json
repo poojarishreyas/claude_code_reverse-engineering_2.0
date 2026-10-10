@@ -1,0 +1,15 @@
+{
+  "id": "5e97bd48ce06cbe4994988be",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_016oP3cY4QB76Ds1WYXQngka",
+        "type": "tool_result",
+        "content": "  Bash: 'bash',\n  PowerShell: 'pwsh',\n}\n\n/**\n * Command-line arguments for one headless Claude Code run.\n * Only project settings load and no MCP servers, so the user's hooks,\n * plugins, and servers do not change the result; there is no sandbox, so the\n * run is confined only by its working directory being a throwaway workspace.\n * @param prompt - the task prompt, identical to the harness agent's.\n * @param model - model alias or id; Claude Code's default when undefined.\n * @returns the arguments after the `claude` executable.\n */\nexport function claudeCodeArgs(prompt: string, model?: string): string[] {\n  return [\n    '-p', prompt,\n    '--output-format', 'stream-json', '--verbose',\n    '--permission-mode', 'bypassPermissions',\n    '--setting-sources', 'project',\n    '--strict-mcp-config',\n    '--no-session-persistence',\n    ...model === undefined ? [] : ['--model', model],\n  ]\n}\n\n/** An Anthropic-compatible endpoint Claude Code is pointed at instead of its own login. */\nexport interface ClaudeCodeProvider {\n  /** Base URL; a trailing `/v1` is dropped because Claude Code appends `/v1/messages`. */\n  readonly baseURL: string\n  readonly apiKey: string\n}",
+        "is_error": false
+      }
+    ]
+  }
+}

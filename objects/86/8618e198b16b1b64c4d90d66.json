@@ -1,0 +1,23 @@
+{
+  "id": "8618e198b16b1b64c4d90d66",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS8gcKEAgSGAI4AUIIdGhpbmtpbmcSDEKxhXr5Iicz4ldmkRoMB+GEWgUE0Hs4jaYBIjDh6EO46QtBF5dtHxC7RKV3yng67KOGChxX/QJnhUwCmZSxGICpAXHFW/dX62PHdjIqjwcfat+jvNtGZy6OEA9A71f3sX9BDR9u6OLopiX5nsz2cR5W23ZouLIwQRHYbkHlXt2u4C+94cxEhpKS90U1SGPsfWEV9iZmVukwZrBOw1brBKl2fg5LCgjxdr16yIXhoCAJ0z27Sg3/CLjzzdoxQp6ilbViKwN8NlTqubP8czM5jgGTAbJxwTqRg2L4QWGdHjn/rXMC13X0rFL+kip4oFIs/EQWZW2NjqPZPxM7dCJMBnqrEI05aaZCmCgpIFN/+4Cp4OVr2b7Nv7tbt7oLPps1f2RSNtYXCEEBXq2+VnFc4QnFWTK90eDf2BfJLS6kW2yK+Hl+IAp1yzkMHPUbe6h7t6wqRK0wghKoDmihXOSHPr7w4bATVpyDApOEoToAmBDMwcz7gholsgx5eCUY5EjbTWoH75g5fk8UcAs55dXhtpqpWLWzSheO0J+l6xm0c228EZo+UGPkiTl+yn1AqXcb6y7RembKzTQYMdZOZlYIXe1NiqtYVqggnWtUBp58XROFqxPigNfh+QKXMl8lySfITO6FiX+BX5y/CeMYPxC4Mi9eoHnQftIZnxwA+GPaB6s5Py/LZupVUUDf1AF8GU8n241bA9w5g8VeALeJhfkUNqnEK/v6AgMjoNalRgne/+p+MXfeAMd2mlojFMdH3bVzfE8C224tvkzkYgD27Y0bukxIToqzPRXFAjnROT5COQEoxLVYoDR1ANc7X3V3ayVU8Q93YYI2ja7htcx2MEs4Mzs/MSxP+td0ZZiu6RbQmpW4L0lg9CACIywg0+Ljp64k6xPhtbkHG3N31j5P+41Twm9nAE/D8mMcgyQfgfzWyqIZbZu8NOS+X2ZGUydq7buDDhU5VEWn16+ZSjoHwEg6+vtyJoPRG7RIfyeGpuFmeMPoQOyPtf5jJyFYgkDknXkOlV/VlJ8oeZyoD/kfUor+XigODozD9tCWPNAuqesn4TqOGg1Faan+LimjPt6mKC2yf2guRKGDrIF80lShbbRGADogrMNfa5e8racCEdbRbAEP/bGxuaFspPNml8SOLxDKuTl1M/4JIOaFK1pk9GNA0OJnIrRuJ2PpfU72XjvKvCGriNfpDvSVVGU8HNO0px7y1JpeJqw1WhattD5/Wr0XbXLNiSeOzlRNsR1/Lz/IfMtvDul5T1TaJaJ1lGHCEzB90t0kJok/k7KqeSoLQAMEUwQqqpaxnSMnxzQBWHQGShgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01V4tRfxJjq9ANgs4go9vt9Y",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && grep -n -iE \"headless|stream-json|policy|approv|permission|filePolicy|workspace\" scripts/eval/run-eval.ts | head -20",
+          "description": "Find how dsh is launched and with which policy"
+        }
+      }
+    ]
+  }
+}

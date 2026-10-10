@@ -1,0 +1,19 @@
+{
+  "id": "f02b6a8e37cc752d9e20d21a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012wn1x8tTRPVjJQbneaRCa7",
+        "type": "tool_result",
+        "content": "async function runHarness(prompt: string, workspace: string, home: string, { homeFrom, provider, model }: RunOptions): Promise<AgentRun> {\n  await mkdir(home, { recursive: true })\n  if (homeFrom !== undefined) {\n    for (const file of HOME_FILES) {\n      await copyFile(join(homeFrom, file), join(home, file)).catch((error: unknown) => {\n        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error\n      })\n    }\n  }\n  const launch = resolveExampleLaunch({\n    srcBin: DRIVER,\n    libBin: DRIVER,\n    mode: 'src',\n    tsconfigPath: TSCONFIG,\n    configArgs: [JSON.stringify([OVERLAY]), prompt],\n    env: {\n      DSH_HOME: home,\n      DSH_TELEMETRY_DISABLED: '1',\n      ...provider === undefined ? {} : { DSH_EVAL_PROVIDER: provider },\n      ...model === undefined ? {} : { DSH_EVAL_MODEL: model },\n    },\n  })\n  const agent = await exec(launch.command, launch.args, workspace, { ...process.env, ...launch.env }, 60 * 60_000)\n  const parsed = parseDriverOutput(agent.stdout)\n  const error = turnErrorOf(parsed.events)\n  return { code: agent.code, stderr: agent.stderr, ...parsed, ...error === undefined ? {} : { error } }\nclean-dsh          f04ad05f30 editedTests false extraEdits []\nclean-dsh          ed34a1d7fe editedTests false extraEdits [\"scripts/win-pipe-shim.cjs\"]\nclean-dsh          a59beb8ae3 editedTests false extraEdits [\"scripts/patch-exec.cjs\"]\nclean-dsh          9633724b40 editedTests false extraEdits [\"run-profile-spec.mjs\",\"temp-setup.mjs\",\"temp-verify.mjs\"]\nclean-dsh          980b410340 editedTests false extraEdits []\nclean-dsh          4b9d8ad6f7 editedTests false extraEdits []\nclean-claude-code  f04ad05f30 editedTests false extraEdits []\nclean-claude-code  ed34a1d7fe editedTests false extraEdits []\nclean-claude-code  a59beb8ae3 editedTests false extraEdits []\nclean-claude-code  980b410340 editedTests false extraEdits []\nclean-claude-code  4b9d8ad6f7 editedTests false extraEdits []",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
