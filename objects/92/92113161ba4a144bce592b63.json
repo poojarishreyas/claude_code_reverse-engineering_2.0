@@ -1,0 +1,19 @@
+{
+  "id": "92113161ba4a144bce592b63",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_011aXJqnSiadQKgg2rSXckR6",
+        "type": "tool_result",
+        "content": "/usr/bin/bash: line 1: pdfinfo: command not found\n905 /c/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-AIRcoin/7bdab590-950d-4a28-977e-e281d88afb67/scratchpad/prd.txt\n/usr/bin/bash: line 1: pdfimages: command not found",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
