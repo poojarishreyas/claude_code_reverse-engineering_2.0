@@ -1,0 +1,25 @@
+{
+  "id": "d686d4a9b9633e8bb2d73292",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012ywDzKaBfcqhEqAKnDnSXE",
+        "type": "tool_result",
+        "content": "File created successfully at: C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\minerd\\mockrun.py (file state is current in your context — no need to Read it back)"
+      },
+      {
+        "tool_use_id": "toolu_01TW5SjrGApxHvQrmPtjSh5h",
+        "type": "tool_result",
+        "content": "File created successfully at: C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\minerd\\cli.py (file state is current in your context — no need to Read it back)"
+      },
+      {
+        "tool_use_id": "toolu_01JAwMmUXzZGGpB6MhRfvjHJ",
+        "type": "tool_result",
+        "content": "WARNING minerd.catalogue: catalogue 0.1.0 is draft: 17 null values filled from C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\config\\coefficients-v0.json (base_rates_mg_per_m2_h.pm25, base_rates_mg_per_m2_h.pm10, base_rates_mg_per_m2_h.no2, base_rates_mg_per_m2_h.so2, base_rates_mg_per_m2_h.voc, base_rates_mg_per_m2_h.co2, base_rates_mg_per_m2_h.co, pollutants.pm25.ref_concentration, pollutants.pm10.ref_concentration, pollutants.no2.ref_concentration, pollutants.so2.ref_concentration, pollutants.voc.ref_concentration, pollutants.co2.ref_concentration, pollutants.co.ref_concentration, concentration_factor_cap, caps.per_plant_air_per_epoch, caps.per_miner_air_per_epoch)\r\nWARNING minerd.config: using the demo device key for miner-001 from C:\\Users\\shrey\\Desktop\\AIRcoin\\chain-market\\contracts\\seed-data.json\r\n{\r\n  \"catalogue_version\": \"0.1.0\",\r\n  \"catalogue_status\": \"draft\",\r\n  \"calibration_hash\": \"0x9b0f1688fe8a5ef18c631ca1c6a37b075d5733a985b8e0a89506f3585624d35d\",\r\n  \"overlaid_from_coefficients_v0\": [\r\n    \"base_rates_mg_per_m2_h.pm25\",\r\n    \"base_rates_mg_per_m2_h.pm10\",\r\n    \"base_rates_mg_per_m2_h.no2\",\r\n    \"base_rates_mg_per_m2_h.so2\",\r\n    \"base_rates_mg_per_m2_h.voc\",\r\n    \"base_rates_mg_per_m2_h.co2\",\r\n    \"base_rates_mg_per_m2_h.co\",\r\n    \"pollutants.pm25.ref_concentration\",\r\n    \"pollutants.pm10.ref_concentration\",\r\n    \"pollutants.no2.ref_concentration\",\r\n    \"pollutants.so2.ref_concentration\",\r\n    \"pollutants.voc.ref_concentration\",\r\n    \"pollutants.co2.ref_concentration\",\r\n    \"pollutants.co.ref_concentration\",\r\n    \"concentration_factor_cap\",\r\n    \"caps.per_plant_air_per_epoch\",\r\n    \"caps.per_miner_air_per_epoch\"\r\n  ],\r\n  \"miner_id\": \"miner-001\",\r\n  \"device_address\": \"0x61D11eC15342C7ea815362684375244da20112C6\",\r\n  \"registered_device_address\": \"0x61D11eC15342C7ea815362684375244da20112C6\",\r\n  \"sticker_set_hash\": \"0x275968f225ff5beab3eb38415d20f03a79a91f856ebde75ca5ea8ac3c2f9fac9\"\r\n}\r\nWARNING minerd.catalogue: catalogue 0.1.0 is draft: 17 null values filled from C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\config\\coefficients-v0.json (base_rates_mg_per_m2_h.pm25, base_rates_mg_per_m2_h.pm10, base_rates_mg_per_m2_h.no2, base_rates_mg_per_m2_h.so2, base_rates_mg_per_m2_h.voc, base_rates_mg_per_m2_h.co2, base_rates_mg_per_m2_h.co, pollutants.pm25.ref_concentration, pollutants.pm10.ref_concentration, pollutants.no2.ref_concentration, pollutants.so2.ref_concentration, pollutants.voc.ref_concentration, pollutants.co2.ref_concentration, pollutants.co.ref_concentration, concentration_factor_cap, caps.per_plant_air_per_epoch, caps.per_miner_air_per_epoch)\r\nWARNING minerd.config: using the demo device key for miner-001 from C:\\Users\\shrey\\Desktop\\AIRcoin\\chain-market\\contracts\\seed-data.json\r\nepoch 29860972 [festival_smog, AQI 405.0]: 0.052139360 AIR from 20/20 plants, amount 52139360000000000, signed by 0x61D11eC15342C7ea815362684375244da20112C6\r\nc3-attestation schema: ok\r\nok   out/att.json: evidence_hash matches, signed by 0x61D11eC15342C7ea815362684375244da20112C6\r\nok   out/att.json\r\nok   out/epoch.json",
+        "is_error": false
+      }
+    ]
+  }
+}
