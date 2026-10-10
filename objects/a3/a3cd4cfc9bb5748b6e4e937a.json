@@ -1,0 +1,15 @@
+{
+  "id": "a3cd4cfc9bb5748b6e4e937a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01YYXzhUov8QRV6xqtT9gHsz",
+        "type": "tool_result",
+        "content": "155:        now = msg[\"ts\"]  # replay on the message's own clock",
+        "is_error": false
+      }
+    ]
+  }
+}
