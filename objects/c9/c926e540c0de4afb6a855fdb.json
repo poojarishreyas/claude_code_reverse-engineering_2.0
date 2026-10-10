@@ -1,0 +1,27 @@
+{
+  "id": "c926e540c0de4afb6a855fdb",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSxAcKEAgSGAI4AUIIdGhpbmtpbmcSDBzJVOhkgnGmDegc8xoMZ3PlKflxQvEwIyvIIjCtFQMjVpLNC29uSvTndvSv4czmX3Qe6eMVh/KM65e5PxqKYdCovnNckxFbyavs9ZUq4Qam4LPAKeEP/BMmrxnoKYX0E5A1Y99/Ocwb1yYw7leHQz9O53zJKyo4oWjMXSqJpf+lUIAivWQji31ApqspCIw+OOd+hQbSkUW4fGJTvfXip0DT4T9uPfL+tPRl9IWZZOWZJf5h/LvR7efZaMGkpfnnHp/MfTQTN/EgsWi7CXdKDRGzbk2bKwZmaWU0rypLKZuTY5Oc51SWUMxwNq50EZJp3ey/YPwi3d5TP46zeOovWJkCIQrnuE1P0B5fdgcB5In2Zhyp1xAjMIWIcd+1Y3tHF3oFyfMzAgy9bv+aZLbn1+hS80n2Mzf2205X9TGk/Rj1njr186kycvI1oc2kPdE500d1bi/vyqHgKb2Dk6/6zE5aI/fXCWYqoBPRdfWcgvg6NXT+QSYy6FtNa/lOSTBDabl3MBw19dH5pPBiKMny98PqhCVmsxOLA610o9P21pz4A+Nf8fEL9MSPxfk382Rp5ZIfJmnYuD2cfe2TRaNxYSgsF9p41D3PaTm8cMD3hqvckLi4lqh9tadK/f3IDP7RGgnGXpB35wgm/B9KW2Qb9uYLIc6Niw8pHepH9wEPNiX4P4rS4ZPcX3AZ2140NFf6U8uOtLrKiN3uQTmr9CxVIbmyAhyHld/ymAEJl5ftqBO+je0xorI/fk/tcfSy828+1iVwAGUAHoLyHuJcdb8Vd4yYRzAfw+iKYWl7B9jr/P/r5UlBY5WheGNeGZZn08HRPu1TnVzxoP3abhDYGTBj5B5iPjkZ7pGm0M/pmAtgTKNzdvoIQ4Ir7ybu8AYZ0yVdXiB9wWuXzvZWbSCVUWn2xKo6Ogy30winXMVqMIh+08qvR9aFRhEuuuBLEeAvDxl0BrxKC0cD8OQoMJWu6Ph9mOeDd2ySvS5ZTgFg+PvYJeA/xfSxYQNSOV15zSvLyjQ71xb0g7QTOH2D1OJXtvxQYFVwD9lehzeFOwFh+SJ0yVOTuNCDRv5VPmlG2CjAuYG5SjpeoCnVC7Dx38eJwqy+AmWCUUBw4ZRu30fW3zZybJUfAszcQMleY2P1ZQe8l6KTGbacHVZrNewk4oIvVbamV2VE9rAJK5YitzjGuE8u7TMu35DCKLglxb46ndRjF1bUII2fdOo3vUUeJTf+1Kk0I3tidAL6lD9BPkO1wtK0JvURGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01YUvHCGQ9HaGWhvvmBmd1ZM",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && git show HEAD -- contracts-schema/ | head -150; grep -rniE \"agree|approv|sign-?off\" miner-core/docs/catalogue-v0-proposal.md docs/omkar-handoff.md | head -20",
+          "description": "Review frozen contracts-schema changes in the commit"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
