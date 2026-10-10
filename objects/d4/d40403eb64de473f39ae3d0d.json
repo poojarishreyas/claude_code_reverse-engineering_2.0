@@ -1,0 +1,17 @@
+{
+  "id": "d40403eb64de473f39ae3d0d",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "The date has changed. Today's date is now 2026-10-11. No need to announce the new date — the user's own clock shows it.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

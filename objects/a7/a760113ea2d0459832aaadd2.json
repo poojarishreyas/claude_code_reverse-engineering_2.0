@@ -1,0 +1,8 @@
+{
+  "id": "a760113ea2d0459832aaadd2",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": "The date has changed. Today's date is now 2026-10-11. No need to announce the new date — the user's own clock shows it."
+  }
+}
