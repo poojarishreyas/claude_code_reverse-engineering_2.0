@@ -1,0 +1,15 @@
+{
+  "id": "92478cb71482fbfc9735e795",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01SWN4KpDyQvq2dLoACWEqPN",
+        "type": "tool_result",
+        "content": "2-byte 0x0d5181b92fd8277864b288aa9d87059747e3afef6305b4bb1c5d91141c067bbb\r\n32-byte 0x275968f225ff5beab3eb38415d20f03a79a91f856ebde75ca5ea8ac3c2f9fac9\r\n../chain-market/contracts/scripts/seed.ts:38:  const stickerSetHash1 = ethers.keccak256(\n../chain-market/contracts/scripts/seed.ts:49:    stickerSetHash1,\n../chain-market/contracts/scripts/seed.ts:61:  const stickerSetHash2 = ethers.keccak256(\n../chain-market/contracts/scripts/seed.ts:72:    stickerSetHash2,\n../chain-market/contracts/src/MinerRegistry.sol:24:        bytes32 stickerSetHash;    // keccak256(abi.encodePacked(sorted uint16[]))\n../chain-market/contracts/src/MinerRegistry.sol:43:        bytes32 stickerSetHash,\n../chain-market/contracts/src/MinerRegistry.sol:60:     * @param stickerSetHash keccak256(abi.encodePacked(uint16[] sorted sticker IDs))\n../chain-market/contracts/src/MinerRegistry.sol:67:        bytes32 stickerSetHash,\n../chain-market/contracts/src/MinerRegistry.sol:77:            stickerSetHash: stickerSetHash,\n../chain-market/contracts/src/MinerRegistry.sol:85:        emit MinerRegistered(minerId, deviceAddr, owner, stickerSetHash, geohash);",
+        "is_error": false
+      }
+    ]
+  }
+}

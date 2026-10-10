@@ -1,0 +1,22 @@
+{
+  "id": "99a7b477d42882d634a538ee",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01X7ftAbA8G4dR8hYFRvYqqQ",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && sed -n 36,46p chain-market/contracts/scripts/seed.ts",
+          "description": "See how seed.ts computes sticker set hash"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
