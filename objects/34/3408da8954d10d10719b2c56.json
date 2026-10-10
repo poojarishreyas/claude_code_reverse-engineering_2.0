@@ -1,0 +1,14 @@
+{
+  "id": "3408da8954d10d10719b2c56",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01ByhyYV7w3qT8xtnnhHgfC9",
+        "type": "tool_result",
+        "content": "File created successfully at: C:\\Users\\shrey\\AppData\\Local\\Temp\\claude\\C--Users-shrey-Desktop-AIRcoin\\0d0dad47-2f4d-4c0a-be62-f14b74d6e237\\scratchpad\\pr-body.md (file state is current in your context — no need to Read it back)"
+      }
+    ]
+  }
+}
