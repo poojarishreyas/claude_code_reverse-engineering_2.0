@@ -1,0 +1,27 @@
+{
+  "id": "c3386581196f51e3d0125ee3",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS0wcKEAgSGAI4AUIIdGhpbmtpbmcSDNet22O7pJjUyL0FfRoMN8hyg15UL49SlVILIjDM7ta2GDBlwExOZlK57R5rEhT39wV9HEOQRAL8yWRcf3r2gT+zqNbLs5BE6dXgJrYq8AYq6m2ywIL2gR1nxsksizrOi7qFpf7thKhGVyCBPpdrJxK1RhvtvkBlTP/y08DjZeYXeEYg/M5SO9BU1UsPmXoq+aWN4S9OwloovH+8N6HNs9MdeeOaOGWejFevdazD/X9wOsKbDRHy+IyqHEH7xXcvWgngFx2s3tMckJ/6R7gBBMz1DkPtzlyTCjHvZse/QB5jdfJ6pgO4B1gYOtmAZazsslVKm6cbBgnS4fJJi6ankZUwp9JFPtdfuCGF4nmqKALQMV9LejWG68uGPIK0Bqk/tJvLJwOSo5ZbBUpjgvHMckRqdUItKXj6dy3ISEQS96AopiIy75FRIQwVDyvlJZSlwRVCydnlPEy2jIMwtnqUklaB77f7ICW9lk6WVGpvXnUsz1M0AJPft2Afe2YMWtM+fHpfr++QXqEk3HudaklDBhXfXoVhT2NiYfBY4uXIgNs3zLdA8hBE+gg8rqDYxnJNShYxht13XdX5iG1oOP9vF+KGMspLNYHV3prUi0tttGbQvvV7CtT1FHG4/6rQr1Wbdn3Ldi5l7NtZPZUw1hx5/Ute+6fexIgvyFSAXE4oKXS/fLDZeb0wB8SzSQklovwPYvjOGk+L36kwPjlEaEoYkcUvb+cA/2yORwkl2zluFqPOMMvPLoctO9bpDu60waOTOkSCjTa+9SecHmYQ/vcxMW/gFue2F8Nk16F1Ox8MqzJ+ebM75YkGNkyW+aQgjE0dM4XUY/VFfbhrjWbwU3evUDSuEUEyMYKKvRkhAw86p+n1IyK8KthvuOIITm9VeYLQxiUI+4zVVN5vTBv80ALtCQUW0mr1/KmsczQmKVtLKoeKHUWm8MeMLO+Op7GSH1okEKxqt1UmkHApv1PqXgHlhvWBkoYieifNbxBhYAUS9C4xiBPE4Z6CMscykaPBmHhsJQoh4lM+bFQ4U2eBfhG2XZ5Iy1xKzHH/zm6hj97E2eH6N7wlNh/CFe5bgalIfmKN3c4Wq+9u7QphMoUiqpaGir6lEvNydTNtMxKM17l+YVjwUCgDGRF8giYzdNBWvTdgZ6C5j6MqKBSGt4NmCwHEfkD8KwGJLwfiyXvS+FlReceSL00mUN64FEr/nNATph1MFlTNaorVHHnF9GuN+Qp7muIswwG5ASCRLvahZG+R6Sz7I28FcNgGkl13x3hkL7kGGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_011YsEjj7rML4FthAiRU1HPp",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/contracts-schema && grep -n -i -A40 \"^## Signing\\|^### Signing\" README.md | head -70; grep -n \"calibration_hash\\|sticker_set_hash\\|JCS\" README.md",
+          "description": "Read signing section of contracts README"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

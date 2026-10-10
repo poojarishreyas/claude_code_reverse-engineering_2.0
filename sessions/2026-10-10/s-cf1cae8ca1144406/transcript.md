@@ -5,8 +5,8 @@
 | session | `s-cf1cae8ca1144406` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-10T18:10:19.530Z |
-| requests | 22 (11 errored) |
-| tokens | in 20 · out 6,974 · cache read 831,795 · cache write 41,549 |
+| requests | 23 (11 errored) |
+| tokens | in 22 · out 7,208 · cache read 931,290 · cache write 47,972 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -1999,4 +1999,103 @@ _max_tokens 128,000 · streaming · 31 messages_
 
 # Environment update
  - Primary working directory: C:\Users\shrey\Desktop\AIRcoin\contracts-schema\schemas (was C:\Users\shrey\Desktop\AIRcoin\contracts-schema)
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_011YsEjj7rML4FthAiRU1HPp)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/AIRcoin/contracts-schema && grep -n -i -A40 \"^## Signing\\|^### Signing\" README.md | head -70; grep -n \"calibration_hash\\|sticker_set_hash\\|JCS\" README.md",
+  "description": "Read signing section of contracts README"
+}
+```
+
+_stop `tool_use` · 5.42s (ttft 4.53s) · in 2 · out 234 · cache r99,495/w6,423_
+
+---
+
+## req-0023 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 34 messages_
+
+#### SYSTEM
+
+# Environment update
+ - Primary working directory: C:\Users\shrey\Desktop\AIRcoin\contracts-schema\schemas (was C:\Users\shrey\Desktop\AIRcoin\contracts-schema)
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_011YsEjj7rML4FthAiRU1HPp)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/AIRcoin/contracts-schema && grep -n -i -A40 \"^## Signing\\|^### Signing\" README.md | head -70; grep -n \"calibration_hash\\|sticker_set_hash\\|JCS\" README.md",
+  "description": "Read signing section of contracts README"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_011YsEjj7rML4FthAiRU1HPp)_
+
+````
+62:## Signing (C3)
+63-
+64-1. **Canonical JSON** = [RFC 8785 (JCS)](https://www.rfc-editor.org/rfc/rfc8785) — Python `rfc8785`, JS `canonicalize`. This avoids Python/JS float formatting differences.
+65-2. **`calibration_hash`** = `keccak256(JCS(data/species-catalogue.json))`.
+66-3. **`evidence_hash`** = `keccak256(JCS(attestation without amount, evidence_hash and signature))`. Every other field (miner, epoch, times, GPS, sensors, plants, frame hashes, flags, calibration hash) is covered.
+67-4. **digest** = `keccak256(abi.encodePacked(bytes32 keccak256(utf8(miner_id)), uint64 epoch, uint256 amount, bytes32 evidence_hash))`.
+68-5. **`signature`** = EIP-191 `personal_sign(digest)` with the device key (`eth_account` `encode_defunct(primitive=digest)`; ethers `signMessage(getBytes(digest))`).
+69-
+70-The validator recomputes `evidence_hash`, then checks that `ecrecover(toEthSignedMessageHash(digest), signature)` equals the registry's `device_address`. `MintController.mintForEpoch(minerId, epoch, amount, evidenceHash, sig)` repeats the signature check on-chain. Changing any field breaks either the evidence hash or the signature.
+71-
+72-`sticker_set_hash` = `keccak256(abi.encodePacked(uint16[] sticker_ids sorted ascending))`.
+73-
+74-## Validator rejection codes (C3)
+75-
+76-`malformed`, `bad_signature`, `unknown_miner`, `miner_inactive`, `sticker_not_registered`, `sticker_claimed_by_other_miner`, `gps_outside_geofence`, `amount_over_cap`, `epoch_already_minted`, `epoch_not_closed`, `evidence_hash_mismatch`, `calibration_mismatch`, `chain_error`. HTTP 200 for `accepted`/`pending`, 409 for `epoch_already_minted`, 422 for other rejections. The miner treats any 4xx as final and retries 5xx and network errors from its offline queue.
+77-
+78-## Validating
+79-
+80-```bash
+81-pip install "jsonschema>=4.18"
+82-python contracts-schema/scripts/validate.py                       # everything
+83-python contracts-schema/scripts/validate.py c1-vision-event my.json   # your own payloads
+84-```
+85-
+86-Targets: `c1-vision-event`, `c2-telemetry`, `c2-epoch`, `c3-attestation`, `c3-attestation-response`, `c4-miner`, `c4-balance`, `c4-mint-list`, `c4-error`, `c4-chain-event`, `registry`, `species-catalogue`.
+87-
+88-The schemas are plain JSON Schema 2020-12, so any validator works: `jsonschema` (Python), `ajv` (Node, use `ajv/dist/2020`), or pydantic/zod models generated from them. Hashes and signatures in `examples/` are shape-correct placeholders, not real signatures.
+89-
+90-## Species catalogue status
+91-
+92-`data/species-catalogue.json` is **draft v0.1.0**:
+93-
+94-- Species, scientific names, placement, main targets and evidence come straight from PRD 2.3. Pollutant weights and damage costs come from PRD 2.6.
+95-- `multipliers` are a mechanical first pass: a pollutant named in the species' main targets is `high`, everything else `low`. **Shreyas to review on Day 1.**
+96-- `base_rates_mg_per_m2_h`, `ref_concentration`, `concentration_factor_cap` and `caps` are `null` until Shrey
+... [1,137 more characters in session.jsonl]
+````
+
+#### SYSTEM
+
+# Environment update
+ - Primary working directory: C:\Users\shrey\Desktop\AIRcoin\contracts-schema (was C:\Users\shrey\Desktop\AIRcoin\contracts-schema\schemas)
 

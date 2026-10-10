@@ -1,0 +1,23 @@
+{
+  "id": "8e5202246c6d382eb3f8cb8f",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQStgcKEAgSGAI4AUIIdGhpbmtpbmcSDL+r2x50fu55rUUwZhoM6EYwKV108sKofuvgIjDz6sNfj/6b0bkGCDHRhdU4GbGfvKgIWkIzd/0ljH9bE5B80nmWOHCufN0IztayAQ0q0wbSAHlfT7l6qgcq1uHXJv7RvCNLJPTWTKzgL7nvqs6AT9WvRe11QwK7Ys5ujP3EhY3JTq4vC0akBZrlvyF0iODRiRMK14+BatopQAesNkrcq2vSvJ9j+/MHeRgW/p7TnyePUTnSDim4kXGv4lUIaWMzAr8uA38pFS66hpeCeI+62HEBhVNf75KoZfL9NRGHF4qG3ZceEfDoLe9AjfHHN44n62DxxZfeSM2ymDTTM4CqvSeDXwBIvgpXsiLCjFLwRYKkgXesF7cE43xymyUYlRM+JbUNJoB90XFlk0ge4SIn92eglGwO8Q4EnOzbtHqCNVLyG4qWiTRKqa76C/uN1sRoYILfXV2WtgmlTqi6oqMjPiNb10smEDuzQzNPM3+Lq9eYFacIVlk0CeI1JwwVw1bxoF/6CmCqtI/FALk4tWy0mVQjI+59JAmnpqpE2IberYTTs/8X9edFF+p0IZH1+gzvPkiUKb4F9MpysHFlcN7XroDduRts2MVYX+K2OG53+RdOtQT/iYpnGZ/jlNTh6mZ/vw+McQvjdGKFhsqz5dxPsxkPzOjv1YB8S+3Jf8BZlx+R8nlDujiqwRGM7kCDM1KV9zSMItkQmKRsxi3IUypvQoOp4Qac4Q0ZYC3Xd3RFeIqhs4GsF0AMuAlCLyTlVLhf6egFLHntzgx9KjNIfM9Mg1iLfeog4MKFp2O6/qNgsUiThobWMyD2riSB22ViOOToXBmUzPUh6ChzAARlXtHKr5EeYtDb3xXMGZs63K2paOoihZbsl6C97qHR9Nvrex5GRJOZJj8d/281MVsvqNFHXddzxxdJnHNPGEPvT2CT63QrHMFYhYGtZfhaIRe1/9uOt4PUMsrYAXMFiBUUzXCs/fSLHTrx2c/HrUIgZhVZQahwv/6B+4ynsP0P78Yni95EkAxS3g4T7WN9ER+/RtN2STAHzfYefxPhH/AN5JdhHhvnrlp7ZEkXJbkK1G5jhdjlk2rNYoWk8uPLfhjHtyibWmckQQFo7Rkrl4zepj3aoi1JTW9ambdm+4ropo0G10njWSUmnb2xpuBfK+X2RwivVKrteFUgHm/SOuVdDBB4XTMfnvK4v9nM5SAlF72a9vCPAorWNOYAFcwqdcBEq5X6n36eChgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01WGbP9yq5RLAv3jVCMN8hSv",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/contracts-schema/schemas && python - <<'EOF'\nimport json\nfor f in ['common','c2-telemetry','c2-epoch','c3-attestation']:\n    d=json.load(open(f+'.schema.json'))\n    print('==',f)\n    s=json.dumps(d)\n    print(s[:4500])\n    print()\nEOF",
+          "description": "Dump schema contents compactly"
+        }
+      }
+    ]
+  }
+}
