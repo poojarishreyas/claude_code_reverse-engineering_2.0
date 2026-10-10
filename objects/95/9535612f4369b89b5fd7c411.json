@@ -1,0 +1,23 @@
+{
+  "id": "9535612f4369b89b5fd7c411",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS4wcKEAgSGAI4AUIIdGhpbmtpbmcSDCNshXRGYyYCX9KVUxoMPXTW/8xJoedMTkEyIjDigIS8r15CKFJsXVokWiu1n8Yixce330VXv6+fsCVH6+ZBnqiX9evQ0rwuqWM9P8gqgAel2iU8L7Towdsqf9NAQCAAh2SnnnlH1u96sTCh/W87aizrlCAfKtYhErhxzPf73T1pmUcmzxqR1mfIaKXsfzX7XSZVnG2Xwusnb3yvlSRlFWG1lqWSyzPFGw6s+E1uBjQkklfT9VdOGAT2eI/QC6uG5ukaDdTAw2MBABm1IvdzM9ZqYtTcRYjW8oInY12rgWmXq21n26AUr7L1xCz5I5PkGcgq5jAIzM63xKRfYO42xOvzf9aZY/BytJtuRoQfUlPaRQZeuDKe6wz+X3y1wXKXLEtbdAMzJOSFFQ5Ur9OmgzdGBjDLeo2i6s3/U9N7tM5M/oL0ZtgjUllREc5gWDVIUhM74glQMhilfkfegWXiGB31ubff20KKKtCkhAteLYLTNu1vpmFoyKTRSsu9my5ZlB2ZvA7peeMptkSyIQvPZ7JcoXNikfybwXEQIkAfQoXDqLMZnjjMPNs33ovMre+Tu2+nR8XjQA/IFAkH4zTlDhJ4DCzs/6X/xEy3mQ9Iekg3CIray8JI2kvm552LR+v6v+vNOya6aLsrHJ6zv8AYEkD4hqgFR5g2k5bqEwqBQIlH+pJMqKWdzC1YphDi7G6e2mrmanVS66JvMytEcXZncxr6e+ycVcqnpuMN6MzC3YYLHY7DW1IEVl33Utl4YHNa7Qg7KG2e2Ex6r2Ga0A1KA2XRyjEoUezMcjnfRp29gl+hUol6d/QhneTA/QTggAvd64XlhbTGMAMI9oqD/tuZQKIhRCxNGlo7VM0pJgCLQi0DN9ABQ9YEKBrJbnSaWBVDXuKW/5J19LCuPkb22bDicMWw2FCVXLMNvcPIRyT0yQLuDnEwl5hNFEYHmMXSsyQ7VeJmHMGgGet0mZd4XZqPWDILFSy3OcPAq4pyYOo/iUR1Ix1atHF64r2sbTfqndhH2LxORouWAhcz2uYOA6ERhZSg2WXVLeloWm7w7UrpO3ToyhH7+PYIKEhVZFdvdakDyzJ9Nst+4KmNTDc0eiQ/uESAtEGqvQt+oxfg0WJ0kseGh8EyzrKXMRLrmPusW6IzgUGJh9rnITSfe+MyQ+u5hOHPPT7Pf6V6nmPNsbz56ptofxK46IphRBqAEqJtQ9Gvu6fgvLJ4DO6OSxPm6w+TvPCKrPwre/wk2WNibMaRj2Sp0LQS7/elEt3sJv54q7St6XoSPDq4Q3Y91o1/b+x97BgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_015SJWNXYsErJQwwzrGnrSNu",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && find contracts-schema infra -type f | grep -v node_modules && cat miner-core/README.md && cat docker-compose.yml .gitignore && ls .github -R",
+          "description": "List schema files and read miner-core README"
+        }
+      }
+    ]
+  }
+}

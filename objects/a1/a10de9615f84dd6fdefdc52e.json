@@ -1,0 +1,18 @@
+{
+  "id": "a10de9615f84dd6fdefdc52e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01XbCMSAjYudwHY5Hv1yWUtp",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/contracts-schema && cat README.md | sed -n 1,61p && cat schemas/common.schema.json",
+          "description": "Read contracts README and common schema"
+        }
+      }
+    ]
+  }
+}

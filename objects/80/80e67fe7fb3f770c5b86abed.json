@@ -1,0 +1,22 @@
+{
+  "id": "80e67fe7fb3f770c5b86abed",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_018ghY36p7eik2Lx24RcXMKQ",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/contracts-schema && cat schemas/c1-vision-event.schema.json schemas/c2-telemetry.schema.json schemas/c2-epoch.schema.json schemas/c3-attestation.schema.json schemas/c3-attestation-response.schema.json",
+          "description": "Read C1, C2 and C3 schemas"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
