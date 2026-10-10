@@ -1,0 +1,15 @@
+{
+  "id": "f0be81e2a920ddc4908d7e34",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017W5y6NTcRwmEHvbEcBJ93e",
+        "type": "tool_result",
+        "content": "37:  const stickerIds1 = Array.from({ length: 20 }, (_, i) => i);  // 0-19\n38:  const stickerSetHash1 = ethers.keccak256(\n40:      stickerIds1.map(() => \"uint16\"),\n41:      stickerIds1\n49:    stickerSetHash1,\n57:  // --- Register demo miner-002 (virtual, for sticker-reuse test) ---\n60:  const stickerIds2 = Array.from({ length: 20 }, (_, i) => i + 20);  // 20-39\n61:  const stickerSetHash2 = ethers.keccak256(\n63:      stickerIds2.map(() => \"uint16\"),\n64:      stickerIds2\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] 0x75280c76d5d8759f198065a7da510ff8c8e147a070c6485c523414f9cddda5e0\r\n\n\ndef sticker_set_hash(sticker_ids: list[int]) -> str:\n    # 2 bytes per id, as chain-market's seed.ts registers it (solidityPacked(uint16, uint16, ...)).\n    # Strict abi.encodePacked(uint16[]) would pad to 32 bytes; raised with the team.\n    return hex32(keccak(b\"\".join(i.to_bytes(2, \"big\") for i in sorted(sticker_ids))))\n\n\nclass Signer:",
+        "is_error": false
+      }
+    ]
+  }
+}
