@@ -1,0 +1,17 @@
+{
+  "id": "2c76414a9b8327cc2573d019",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "youu make it omkar didnt built yet so tell omkar what to build you assuume what comes from data and bulild even omkar will also use claude code",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
