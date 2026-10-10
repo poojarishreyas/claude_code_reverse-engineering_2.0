@@ -1,0 +1,17 @@
+{
+  "id": "dae7012885730bef1c1c0db2",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\Desktop\\AIRcoin\\chain-market (was C:\\Users\\shrey\\Desktop\\AIRcoin\\contracts-schema)",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

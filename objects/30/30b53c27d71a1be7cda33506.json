@@ -1,0 +1,23 @@
+{
+  "id": "30b53c27d71a1be7cda33506",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSzAsKEAgSGAI4AUIIdGhpbmtpbmcSDMxiNQgh2Ds4M+RPXxoMPHoOlyBbezDSUxBNIjDJxzK6s/g+Sp45iV7yUX1gKL0bygf6ICjvZoMyULbbyqfzRpuaim4pZ+0P3BvIFaIq6Qqgxi6XYfbTR7x9m4lvcbXK1o8h6qKVZmVdrsj/nf+iTXfJUQiicmN3H4G3vVL2Tm7v+L2CvytRehTEpr57dviJ4CqwCk6SO9EIkSMnAJAOO3rwK7kcIu5C3OzerrKtoyfKqDeM99iV7cdUrqQRKUsUH3njdvrfYOsRCozMjNsg4jZqpA4mesib1SkoQ2wpIBSf9xbEhfcoy7YurF0mTgibcmoQcunn3VUxlcP1a0YtqE4rcELunmYp85VhbAS1mp29cnSQk1MQxjbZkJsBaOEyRawdxy2WqVOjfDe2m43MITceVUEW9yD9olS/TgjDerfFMEmTapFRBIAeRrVsY8aQwiNMed7ElGNpccWANK1vcjvtDIzkL7skCT76iw/5x4rl5AWnTzhIc4ePnRQzFaJupzpbZl4ptv5BDU9Jyyqs41SSbrAhc0yQftEY9aO82jvTGTvWazqn1ao+P5PIRJUxJeDA5jhjqB8ehdn9zcM9Be7eqWGOTPxH/xN5uQp30bAqixEJD7OEXIVWDOOESxrBb0vQjtmPLJE9+ptP/h2u8ftr2TUh5/6KrPM5RPzzMbiPCWsMGFEQddSfsZvQwK1AB1yw2LQGrRB+10bFpsoJ/Ydw4REf48jtDhxfoLwZqK6wdbNtme4ph87XqkqzEN7mmb8mPl7hsw8T9YgshXirswj/VXDlCrP/HtNAM6r7EI+pab78Hs2K32XPHW0nwjQEBflp+jtD9rJLUlPwwNzQbppDH6RLqWq+AuG5xKGvrtWg/nWTjIDKnaSN8JjP06krVsuwbjB3K/uarOk+KMsPe6TMwRUkhPRmvS8CQXW/S0Q3gDlvX6dvL3bKJun6jfOl+salqvyCFnkekHDi2FBFe/ykYKiBZGk69jVsJt+5yfkwB1zBqeZnHP1Boo/G78kM8IMsbbh1GNCKvhUFtLhI/Up51il9f1r7dCkAU9G2W/t9D3CFEWgXlHjlaxiLGcC0kAMvbHX2nlCeIdXmnKexJZ9224vSn2Ac+/XZdpPgTG24A4T+KaP7y+6AK9+ld21R2OTgNX19XB2j/5nvjr84wrSYS3aLOjKDIIoEdPuLpTYQMW/dXEmTGDsej4Ry70K6xs4dOxS+D5Lo7AAjx+8l8bVFYGFvA586/hpj/hou9HX1/Wvxjjg4xLjgP5bDypRGHByEXc9e6Oshtt6WgtPLeS4Z+Gg+DE88q1pSRd7cc44k/MQraN3Q7GknZ2+J5FAJZgeLZN4An3Jk+E1d4ghuKDYPDLuCHDvZMcnHo1qqa3hquCM4D9tB+JT0Y4KAKjXaJ0lQF//df9liVT9p5E3xfTgK+z+Th4WT0mjxsvlnFmsXy9tjAARY1pFv7YNOUncTDj6J9o292UFqTF4YRxLVGTbvOEI7qJN4crtbwUfktK7hjkBXLucr4A+enTvbsIg/VM7X+WQt8AEY78Dk5JMS2UMAInyHPVyM9IQzgMoOhR/RWd7HHjv2PzJoWYx8MhWdZKU3A/tA06P1rlgU/eCzqpI71ydADblPR9AHye08qznhd/GXvbFDa67LWmCotE6Iq5VAwPsDwRJ4YSf6hxt4Tg+m3mAp6bD07qEJuCc6SMj9YDkF64edYvD6qe/6CEJT2KKTTPXtDtv0CG4dT64BrzTYwEl4KUQ6szFwYfnPCFedB6FaFj1VU+4eU/Uv+CgjX7AEagpenmZRLGOSrPNLqJWmT2Pwl6h4x4hVNRWng9ClNPN6hVDcM0SwSdakTYobg39qjYE9Hcn+i7NeiEpFBhBlY/NBTpqXcVblXet5esvhSEAc/4r70ZJDjJaf8oi3zSmop4+ttFcsFG92BOGyp2kRrdJwlXMrIxgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_0187uQhVshSwQvaX3K2bVFyy",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/chain-market && ls; ls validator validator/src; grep -n \"attestations\\|listen\\|PORT\\|amount\\|cap\\|status(\\|reason_code\" validator/src/*.ts | head -50; cat validator/package.json | head -30",
+          "description": "Check validator endpoint and amount handling"
+        }
+      }
+    ]
+  }
+}
