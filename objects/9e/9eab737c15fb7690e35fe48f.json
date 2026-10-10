@@ -1,0 +1,15 @@
+{
+  "id": "9eab737c15fb7690e35fe48f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0181zSaAwfFy7LX6Sr6tMUcT",
+        "type": "tool_result",
+        "content": "8712:+  \"private\": true,\n8877:+  console.log(\"  Device private key:\", deviceWallet1.privateKey);\n8933:+        devicePrivateKey: deviceWallet1.privateKey,\n8942:+        devicePrivateKey: deviceWallet2.privateKey,\n8991:+      \"minerId\": \"0x226311f2f84bfb6a985ff8ef0697c6df762c3cfd8b3d3909407839da53a47bb9\",\n8993:+      \"devicePrivateKey\": \"0xa67e62e6da1252eebac6d9b8639b187c6390200619cb3fabb8d14cbe8a1d97da\",\n9021:+      \"minerId\": \"0xb037bbdad89c6b86ba68b8745efe5346227fa60f565eed2a4b55f42856a61c3f\",\n9023:+      \"devicePrivateKey\": \"0xe814d6b4f7d5eadb6490f9e443529d0108f116c72d0a1c41b4c5798168ad774d\",\n11863:+  \"private\": true,\n11940:+  private events: EventRecord[] = [];\n11941:+  private mints: MintRecord[] = [];\n11942:+  private trades: TradeRecord[] = [];\n11943:+  private burns: BurnRecord[] = [];\n11944:+  private dbPath: string;\n11951:+  private load() {\n11969:+  private save() {\n12171:+  private provider: ethers.JsonRpcProvider;\n12172:+  private db: IndexerDb;\n12173:+  private airToken: ethers.Contract;\n12174:+  private tinrToken: ethers.Contract;\n12175:+  private mintController: ethers.Contract;\n12176:+  private marketplace: ethers.Contract;\n12177:+  private complianceRegistry: ethers.Contract;\n12178:+  private minerRegistry: ethers.Contract;\n12179:+  private wsClients: Set<{\n12183:+  private minerIdMap: Map<string, string> = new Map(); // bytes32 → string miner_id\n12184:+  private deployments: Record<string, string>;\n12240:+  private attachListeners() {\n12364:+  private storeEvent(event: C4Event) {\n12375:+  private storeMint(event: C4Event) {",
+        "is_error": false
+      }
+    ]
+  }
+}

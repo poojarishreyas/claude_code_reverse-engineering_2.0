@@ -1,0 +1,27 @@
+{
+  "id": "f0a1505696b1b49e7d314a25",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSzwkKEAgSGAI4AUIIdGhpbmtpbmcSDGbIPmO4YwMdC3ttIhoM7WNIXcVBolr2MpVCIjDDm7YR5eea79xCrLj7K2MatsndF1JRicwVgKrO3+9mQNIS88MX8kAg+dmVhfgD7pAq7AgQF1KSEtQb3sH2n62mbA/inJAN1INGVR+XGXB8Fxjd6N1UiIDRzIOI3SFNUDt0XIquU0r8EHjd2t8/1R3FH6N6wFAyv5yPZFNFRZS3S8RG+hLvUKN3fZN1t/86PESHmRdK9/P7zCrwl5GHdWITisqy7dJg2vVUFUmgidxiVIErVpLmcL7SSxuWMohFZB/CiG0DWgoitbIu5M2feS2yXYo8BC6y4j4rsYSLfNoXk0ZBozug0avmmx4c4x9NDgoU260QmTSzLgY/Qrvvxb1fczor6HKmsR5nPMPHwy+qi+HkBiK1HmLVWLnnIOICPnHK9Tqvy6cOb8F35FhOyg+CwYWzjgF0ifXG/CA9R2p0evDcHRpslnKXRoFKPEmghppZpEKC0qB+5ssnkVV/vMVgFUE87omjE4aUXfxpu8WMxNfegXH4HVbpREhQRyULU1DMVg398yvMh2R1RIdFAdynqUcCnluUDY3tIxYPv9sniLPluIZf3NkwM7igG/UkGela8thiI9AjMOxcW3bUkHnkkJo39lSlmJd8uZNcVqTuQJndbT6el4nxsPVWLpTVMf1q7CtdgkHrfoBJIB9y8cxO1AJSweg9w6+/++rzgKEQM+N6MugPtjaXzLAWzuNyNiDV5gpwle84HTRqJ1SP6Hdwib4QYJ5MpgQClPPkUHrsNxHNcwKX4pNDjBXZXJyZlERNVos9YcCGU7jk/inKoGgcGSn0UdSJeU817v+NoFyCi42CyfKU82KI058L+2lr0O2mJV51T5eknfbucZ95amjhzEm5Vb2YgofwDWSXjKCzHZ+0LmrrLWBTJ0+g0kWt2vZudFRu6RV/rdmdtm7GTn7nc2tmpu1qIYXOPdYzeBWRrOcUKJNQ2CHxVfrxHj+0UzChH0277y50VdBDK6wTVQGNKLsAHkgkewkuO1HI1JTf3oiRWhW2hx/Pacl4Zns/spb5TMKNeVdcbmTVJOmGlBBPGGEQEUXbXYjtfDVBJldj3qopF1WEtMI3K30BHV+ZkHSwPtCbcNu1NAb1ubLWrjOuBgpTfMzSBWpjthY29ay3HO1VD8b3gwtOqUDcX/0bvgBTNJkTkwIQkT01oa6IGXQL4om8kZ34Fmj7urJLLb8J0ukwhyA2HZnnnRdHWFUtQ3TKEtU8G8RfbMgaZNYE5gDBcS8pAM5SXb7RWaW/YdZsFtTTDRzDPQGomCGCcaHDtqtRZOO3HamuuqM9qLnr1FfYLyfME3Gqio/BYSXwqi1JAtTK0j32CbkHfRD9CQ1STj84qkYGE03nMoJA1AgnFrlBAQkxyr1NTX+Tug855etSsZZNGgGp4FeW5wjRBb+4vQVdPCasU/0xzLgA+xsPtK4ZIazJ4OKQXWITZEgmT+C7TFBEQpIk+vJCHJ8peRnUeT5HMu1xODvemLe7u2yL7ktbymARPWLuAoNtdoizNgjVaYQ9IfCNK7mV4p7NkYSYIiK8agoznOttYBoi8pROF7KYCI35Do4f7d6iwMMTn8s8GAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_019cBHJUa6hCLBJYSsG7wtxw",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && gh pr diff 2 --repo prabhu-omkar/AIRcoin | awk '/^diff --git a\\/chain-market\\/contracts\\/(hardhat.config.ts|deployments.json)/{p=1} /^diff --git/ && !/hardhat.config.ts|deployments.json/{p=0} p' | head -60",
+          "description": "Show hardhat config and deployments from PR"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
