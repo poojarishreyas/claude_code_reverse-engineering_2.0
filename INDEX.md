@@ -1,10 +1,10 @@
 # Session index
 
-_59 captured sessions, newest first. Updated 2026-10-10T21:17:51.853Z._
+_59 captured sessions, newest first. Updated 2026-10-10T21:18:26.336Z._
 
 | updated | session | model | reqs | in | out | cache read | title |
 | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| 2026-10-10 21:17 | [`s-73ca49a3e1255e36`](sessions/2026-10-10/s-73ca49a3e1255e36/transcript.md) | claude-opus-5-5 | 6 | 12 | 2,539 | 356,849 | • The verified PR boundary is ready: 44 miner tests, 23 contract tests, 5 live integration |
+| 2026-10-10 21:18 | [`s-73ca49a3e1255e36`](sessions/2026-10-10/s-73ca49a3e1255e36/transcript.md) | claude-opus-5-5 | 8 | 18 | 3,113 | 506,213 | • The verified PR boundary is ready: 44 miner tests, 23 contract tests, 5 live integration |
 | 2026-10-10 21:16 | [`s-566a336c10f5b2d3`](sessions/2026-10-10/s-566a336c10f5b2d3/transcript.md) | claude-opus-5-5 | 1 | 2,467 | 24 | 0 | • The verified PR boundary is ready: 44 miner tests, 23 contract tests, 5 live integration |
 | 2026-10-10 21:16 | [`s-277d9545ac40f58b`](sessions/2026-09-24/s-277d9545ac40f58b/transcript.md) | claude-opus-5-5 | 11 | 0 | 0 | 0 | quota |
 | 2026-10-10 21:16 | [`misc-2026-10-10`](sessions/2026-10-10/misc-2026-10-10/transcript.md) | - | 3 | 0 | 0 | 0 | Ancillary requests |
@@ -64,4 +64,4 @@ _59 captured sessions, newest first. Updated 2026-10-10T21:17:51.853Z._
 | 2026-09-24 16:54 | [`s-b8e7b2ce4410210f`](sessions/2026-09-24/s-b8e7b2ce4410210f/transcript.md) | claude-opus-5-5 | 1 | 1,168 | 16 | 0 | url to acess wbpge Write the title in the predominant language of the session — a stray wo |
 | 2026-09-24 16:53 | [`misc-2026-09-24`](sessions/2026-09-24/misc-2026-09-24/transcript.md) | - | 2 | 0 | 0 | 0 | Ancillary requests |
 
-**Totals** — 1,136 requests · 784,769 input · 604,008 output · 105,011,154 cache read
+**Totals** — 1,138 requests · 784,775 input · 604,582 output · 105,160,518 cache read
