@@ -1,0 +1,17 @@
+{
+  "id": "9fab9a96f30a44f322acda1b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "did u did phase 2?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
