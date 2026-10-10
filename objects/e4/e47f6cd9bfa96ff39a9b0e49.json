@@ -1,0 +1,20 @@
+{
+  "id": "e47f6cd9bfa96ff39a9b0e49",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_014d3LkbB2Yakqy38AVjmsXK",
+        "name": "EnterPlanMode",
+        "input": {}
+      }
+    ]
+  }
+}

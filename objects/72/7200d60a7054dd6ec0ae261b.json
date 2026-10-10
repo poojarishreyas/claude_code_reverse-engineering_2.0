@@ -1,0 +1,17 @@
+{
+  "id": "7200d60a7054dd6ec0ae261b",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "ok lets build shreyas part what is shreyas supose to do",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

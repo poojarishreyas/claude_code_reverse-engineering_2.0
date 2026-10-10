@@ -1,0 +1,23 @@
+{
+  "id": "438db1ad962ce02def38f7a7",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSlQcKEAgSGAI4AUIIdGhpbmtpbmcSDC+Kdn9TNK8RWEYu2BoMExHn1AZFfMQaU8flIjBunuEMiwpCCXFiap0IDO3FpO6py6u+6W/rOMdFhSzVV8GvaL0vDUfVotOKEcJmL10qsgY3dvbPRWIY8hchDK4bbuKEwOSrWz6FTO3rLadjoNvJrhTEXIvfinvDWr/R5AJDqpadpOeLIldWrvuM3lLrrxrivtLpBRWWR9d7hachzkJQjPR3cW+B2sNjhKrxyW6c/kzs6g6MJlMBl6Sn/m7cy1UgyOWgkOYmshc/MoGV167OfmxSw5nvVZj8kMfnd2WYsig//3sod3FHkg5Tj+CaNcwKuZ7WgoikuWYaGsIRqx5p1v37LuF0NEGn2EuHeCR8a0bGNdkpz7o45rZJ4orkzoSW3klGoilSMPlGbSBF81grGqPR+KZ3kyy/BZkuLyh7eJ12nF5KXWlqA5VmyVoNA4vp2aocKOUyxTzInpbT8Jf/2lw5yCTFAsZPsnU4tyxgECmtLKu7Wwy5iV9dyI1D8zare/KAu4mkc/E6JfIQNdXiDf+II1l/chkpVT+ixI4bnvKVc3l6OwcwsA83yiOxevH9+TrmIyqgQE1zPmivZ2CIjFkAJ3MQM31Bzei04G7SKy1+IXtvKBB4RBUZ/ySiolhnt3FYUU/xwBhywt1jmFfxSgyzk5Brts84v8i6nNfaUEDNA09RNUpVijQkZElNfjVOSdT9MZxI5H1cBofHyrxy/LM7uKgHoHQvav3dazeH2ee5Lu6pvoqJgt6qvReChGOF62N3VnbWsiqaP1UZ/ma3rCFXuHcdnucR6nwh+FwI8pDlxQFMkkAeSNorCCl6ck2p+UMbM5tGTV64l3xWR09B1zrzAibQ7rlhJX/cnGAvRcB4/nwm7Q7ft9Xs3nrsPpwUmeg2hrxjypgqhzfYH2K6lhVE1L3L4giZt8f9h0oA/RyVdHZxID0qXyY/Ei9K7LijrHLIV8Frp4t+PXjI0zepMCTKRZl4vjrbxQKdDmzEd6f6Lpej7Ns6721nR4fXALJtFy/L/hFv3Q4ShUdbE/LQtzwZB4YP1OWP1fhfwDJN7T/McBXX4BTUpkOGhPPyqFnLAZIAmYPGmmYa+JONxz0DSzhfyO9VV9wLEBAZtvMKpYDB5929cdRsjCEqz9n1b4Wq6um4lL3UABhBN7Jl50U0SRbVU5y97WZM1gKNpGCkIB3cTxgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_013dQ3KycKomFbsn37QQx9kB",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && git status --short | head",
+          "description": "Check working tree after test run"
+        }
+      }
+    ]
+  }
+}
