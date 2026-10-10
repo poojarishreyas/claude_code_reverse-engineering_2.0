@@ -1,0 +1,17 @@
+{
+  "id": "1d539382e0e1749e38b7b13b",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\Desktop\\AIRcoin (was C:\\Users\\shrey\\Desktop\\AIRcoin\\contracts-schema)\n\nThe user hasn't heard from you in a while — say in a few words what you're doing, then continue.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
