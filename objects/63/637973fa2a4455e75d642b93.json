@@ -1,0 +1,17 @@
+{
+  "id": "637973fa2a4455e75d642b93",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Shreyas owns **Workstream B, the miner core and PoUW engine**, in the `miner-core/` folder. His job is to turn what the camera sees and what the sensors read into a signed claim of pollution removed. That claim is the \"useful work\" behind every AIRcoin mint, so he sits between Omkar's vision and Umashankar's chain.\n\n**Interfaces:**\n- **Consumes C1:** plant states from Omkar's vision, over MQTT.\n- **Produces C2:** telemetry every second and an epoch summary per epoch. The twin and the admin portal display these.\n- **Produces C3:** the signed attestation sent to Umashankar's validator.\n\n**What he builds (PRD §8.1):**\n1. Sensor layer and simulator: simulated PM, gas, CO₂, NO₂, temperature and humidity, with scenarios such as clean morning, rush hour, festival smog and rain.\n2. GPS service: the real GPS module, with a fixed demo location when there's no signal indoors.\n3. Vision subscriber: keeps the latest state of all 20 plants from C1.\n4. Species catalogue numbers: he sets the multipliers (High 1.5 / Medium 1.0 / Low 0.5), base rates and caps. Changes still need all three to agree.\n5. Estimation engine: `R = k × leaf area × health × f(concentration) × Δt` per plant, weighted into AIR. Missing or suspect plants count zero.\n6. Epoch manager: 60 s epochs for the demo.\n7. Attestation signer: builds the evidence hash and signs with the device's secp256k1 key.\n8. Uplink: retries, plus an offline queue so no epoch is lost when Wi-Fi drops.\n9. Device-side anti-cheat flags: unknown sticker, species mismatch, low liveness, GPS more than 50 m off, frozen camera, too many new plants at once, clock drift.\n10. Scenario controller: a web panel to change the AQI scenario or simulate moving the miner during the demo.\n11. Calibration protocol: a one-page write-up for judges on how the numbers would be measured for real.\n\nHe also runs the MQTT broker, and on the Pi everything runs as a systemd service.\n\n**In the demo** he owns step 3 (switching to festival smog raises the mint rate) and the \"how we calculate\" explanation. He's also part of steps 4 and 5 (plant removed, fake plant).\n\n**Where it stands:** `miner-core/` contains only a `README.md`, so no code yet. Umashankar's validator is already waiting for C3, so the next step is Shreyas's Phase 1 target: one command that turns mock C1 data plus simulated sensors into a signed attestation the validator accepts.\n\nThe git user on this machine is Shreyas. If you're him, I can start building that Phase 1 miner core.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

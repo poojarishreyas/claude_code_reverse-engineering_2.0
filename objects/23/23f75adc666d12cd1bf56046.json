@@ -1,0 +1,19 @@
+{
+  "id": "23f75adc666d12cd1bf56046",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PZ31SZ1Agsih1b51ND2SJw",
+        "type": "tool_result",
+        "content": "web/src/components/portals/CitizenPortal.tsx:144:      {/* Main Grid: Node Telemetry & Quick Action */}\nweb/src/components/portals/CitizenPortal.tsx:174:                <div className=\"text-[10px] uppercase text-zinc-400\">Telemetry Stream</div>\nweb/src/components/portals/CitizenPortal.tsx:175:                <div className=\"text-emerald-400\">C2 MQTT 1.0 msg/s</div>",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "d91a7ff409a2c8780f485b97",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSqggKEAgSGAI4AUIIdGhpbmtpbmcSDBgABjPm/MXLsF6tBxoM+pI4tg3wCEcxoK4aIjCPoaCnxD3wmTOszqfxU45gW4Ek3kYbvdzQbxHj2Sw5GkgkTzNAregQ+OUnf9DB85YqxweuIzMjEi87XRlY9idGGTXzxJjcTU2HViEbxk3PTMeXyW6HjVA8F3oWJglAeUwnmiLl4h6fv17Hp6RbcfFmDQO3hPYi4ApFeugZ+ZJUdBq+ltHWZzwHWusQR4ktWvMDdpb2ahwyNJ7IZ2OHAoo0qtuZ9Yr0lCQRsUWZ0LRKC/vLusd6+w+2ZV4SOt76E2k1zaznr/lQ2aaXH18Vgr++/CMkS45uUwMLd/Nw76M+fgZaWx/90kGQyUAyc3tRlA5S7EU3g4vajxLlNkhnOwFj/KORi0d3gzgA6gy80XGT1vVlpWC+EOLfVyFWmGdAnwnAwWdn/hxiTy7hnnwn+IVUjeZEYKdfCDZjL7c9tpDtVQlZZReaAdRZX+zj/SC8m2QURSMWO0HqQOz2PUWJvtzjaU5sYrKskeJ+S+k7wsO4KNZdFiiZdeOwqx+oHBIxZxw19nL9V0o7BcfhhDPhGZgS3nDbxW2aRus7HXP7Y8kyLxPTBKhn27heKUq/efGVz++HhGfTe0uVv0Zib60lrKVC/sOlOVA48ff/VKCNxnsqcw7EIDmvmq7iMfV+W8Wuabd2mQOzsmw/okWH1Gxv3Tk99W5JEExS+in3ICIRu+/Ugvr7rvQEPJY8CkXWCImSGzuDwqwR4x9/nncAAED/OFarha4ik3uWnlTToTUoNKjHDZIQeYcVcwJCeB7GrZwFU7MEEN9sdO8Otp5d+npjtiauDmePGo42MgLR8YiV3VDofyBCdcfnIkTrwXGhg6r2AYCeoT1haln2EUqQhtGwL4d96SPtV+CLmT2cM/izDnkngLPO220KhDMuBCB3uGKfuGAWLZq1Dx3B3M83jrySbEWfU8JIkHpK6KbcQhN05wSPNN78MxDoGrh4ioPEuBqhRq46J2J9zFZ+Yekie7jhGmpG+znUkBc3JTq5ApmSbzSWei5OcaomoOoBM3FguD/oIEP8dxLtjFb6d6gMWo8s07Zx7jjZWdUwtnvGg+FioWTGOTBlsHMkryUhS5QaUF9+at39hUqvRE/enzajolRFQq9pxUlHfSSrTvDbA8iIjQmzSWUjmGPrWUmx67+Ry1fh6xDs/sl2hoNDcy3FWt38a33wANjrWox7rR2APn2Am5GYCcvafcRtV5zXdoC0z+0LBOBFu1pqIsqmrwjs4YqTj1TxfTIOvnbOe9zoc9sB5vzzoOJq8yBa+4+YFGnVrh2MVGyMuPATIQ45T9IDo+vz2DExoq5DaNe3LaVVHZgX0cItmkKlTgEk7GRIg7O6LUfQVi6OfPZa/l8WYUuQGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01G3yRXLkMSXUgf4jtYyGHAp",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/chain-market && grep -rlniE 'mqtt|telemetry|estimat|leaf_area|alive_score|scenario|signMessage|aqi' --include=*.ts --include=*.tsx . | grep -v node_modules; echo ----; sed -n 1,80p web/src/components/portals/SimulatorView.tsx",
+          "description": "Search chain-market for miner-core functionality"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

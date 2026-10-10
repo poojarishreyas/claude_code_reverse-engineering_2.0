@@ -1,0 +1,17 @@
+{
+  "id": "6c8028a96546410d260cc66e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "did umashankar did shreyas part?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
