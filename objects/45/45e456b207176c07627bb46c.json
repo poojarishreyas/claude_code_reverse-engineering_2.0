@@ -1,0 +1,19 @@
+{
+  "id": "45e456b207176c07627bb46c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01E298NzUoQgjbLwZXVw8ALJ",
+        "type": "tool_result",
+        "content": "miner-core/README.md",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

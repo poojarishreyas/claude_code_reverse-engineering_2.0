@@ -1,0 +1,27 @@
+{
+  "id": "f8fb002cb8800c2ee90e0e0d",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSgAgKEAgSGAI4AUIIdGhpbmtpbmcSDM3Znc/wh+G+fQC/ExoMdpDAylRinghhkGDAIjBcxuIJcd5/eU8VQ/eZVAgFcVSAoQcMZQjXQXolHN5GF/Gy49iT7k0lORhSwufXTQIqnQfG+zFtTBQRWI7v5MDaPfEERSpZKgzY3EG14WvEX+JCL0msAUizKRdJcvoZvsndmxuvkIVFWh8ga0iKkDVSm0+puZ40sDNOxQ4PzzICXKfTbAYS3F8CYrrQiMhrVxKb7jGZiDgt8xNEqRq5lPVI1mTyc+eQzPARD+2ohAl6MquE1W3VvwelceD+1JRBmgvqkPCN91pLteMFSnK5z0VB8Jwl8hOLjfEdPzf/bBPfMBBXsruCi+K0QJCClrRVUawwksErj7qWXwl0DvMLCHKvHGRBXW3iOzBQ96oHcOtEwNI8GJEcAXetiVafeVPgs5Lp2LdA9ze0YMDL203NY13Ymz569vQ3zMqlvjF6MCvyy4fQc+HvfYszqRWXb6OcjTSzifAfoK8LB38kuvhg16oqUxi2jnCPNwz/dUEIc1nOiO2yzSXhDu2Mh6RqcLiTzR0OC32EbRS/lISjCW6K4t53LucQcWoYh6MCNhUpBLSUPuU1At02p4rY66HAJJu8KWFAAqxILsVl/SNcbNSTn/fxmDyfs56zG3lbtfC+YqnLT5UCLyIRBdmPKJWlm9D6w+qYGXa7fFs6JoBLlEG3biuA5+H88dqiNGlgy3jaeXKgo+A7Tjr/BEThxD6Mm5F16J16pnPHapV2n3Vw6b+T9kNwsD5IEZn/Mr+MDYDI79xs4aaJBfynRhlrY6DVKjbsGOMdwezuH7sx8UZdVDkRFoB2xFgzuECW6vfs1316EnM/mULgjyFYKiyi/3HpoA6AgE7IfwdCDYbT4ZJ8/BNG9D3EphLLCzzaJFapDZsspTrjvwpQ6uFcIsPAXJzowxVAL05p+n+4UhvIe/Y9R63qe/WXvZcNzlVu5VksLSGICm2N40/Kdxe2VL6UNC7JBaOimMrJo5rszy7jihvy0C5QPIZcRq7EjBcO7PwnK2EbFsj0rRNp8JkZsbzOsAoKFf3yG4ojVpApNXZ3jgn1OMk9M5iT/Bmn3u0S7vy0SCx9LTXACXH4v0Zp5p1tMDGGV6CnGZ0wXr9nTFDshiGTbzCpwRL5gQMKX8g8hT99iJQ8XZH316Sfw8pbCzngE4+TIic/gKDq+1Nc8ePReAziQq3Vi1OyEh7Gu2SVyCbX9cBi9iz3GPe0uEgzxXeYWjmocm5BAlZKYdbL8v7mv+rwqYPkfHoY9FHsKANn/Q25PJmvhb613D28LFeTEhwUJ1JmkfdGyOBMUcYqJpkgAJfxK8wkj745GAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01E298NzUoQgjbLwZXVw8ALJ",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && find miner-core -type f | head -30",
+          "description": "List files in miner-core folder"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "fa42875a1b072cb09fb95088",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_0156rWVZXpPNtbWYiaV8a1KA",
+        "type": "tool_result",
+        "content": "validator/src/server.ts:91:      reason_code: \"chain_error\",\nvalidator/src/validator.ts:42:  calibration_hash: string;\nvalidator/src/validator.ts:51:  status: \"accepted\" | \"pending\" | \"rejected\";\nvalidator/src/validator.ts:68:  | \"epoch_not_closed\"\nvalidator/src/validator.ts:69:  | \"evidence_hash_mismatch\"\nvalidator/src/validator.ts:70:  | \"calibration_mismatch\"\nvalidator/src/validator.ts:71:  | \"chain_error\";\nvalidator/src/validator.ts:318:      return this.reject(minerId, epoch, \"chain_error\", `Chain error: ${msg}`);",
+        "is_error": false
+      }
+    ]
+  }
+}

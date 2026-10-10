@@ -1,0 +1,17 @@
+{
+  "id": "e475ad3fa7e6dfb5e52cd699",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "what is shreyas role here?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
