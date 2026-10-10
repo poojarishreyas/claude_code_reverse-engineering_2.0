@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-10T17:31:34.253Z |
 | requests | 36 (1 errored) |
-| tokens | in 82 · out 31,035 · cache read 3,787,416 · cache write 147,766 |
+| tokens | in 84 · out 32,048 · cache read 3,935,182 · cache write 148,001 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -3422,4 +3422,52 @@ No human input has been received since the last genuine user message in this con
 ```
 ?? PRD.md
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+No, it isn't. His README ticks every box for all three phases, but the code supports a different picture. **Phase 1 is done. Phases 2 and 3 are partly done, and several features are only placeholder screens.**
+
+I ran his contract tests: **23 of 23 pass.**
+
+**Done and real:**
+- All six contracts, with the on-chain rules for minting, signature checks, marketplace escrow and compliance burns. These are covered by the passing tests.
+- Validator checks: sticker belongs to the miner, sticker claimed by another miner, GPS geofence, per-epoch cap, already-minted epoch, and the device signature (built per the spec).
+- Indexer with the C4 REST endpoints (`/v1/miners/{id}`, `/balance`, `/mints`) and a WebSocket event stream.
+- C4 mock emitter for Omkar.
+- Demo wallets, marketplace buy/sell, company burn and the burn certificate in the web app.
+
+**Not done, or only on screen:**
+
+| PRD item | What the code actually does |
+|----------|-----------------------------|
+| Deploy on Polygon Amoy | No Amoy network in the Hardhat config; local chain only. The UI labels chain 31337 as "Polygon Amoy", which is misleading. |
+| Validator recomputes evidence and calibration hashes | Not implemented. Those two rejection codes can never fire. |
+| Citizen applies for a miner | The form only shows a "submitted" message and saves nothing. The admin's pending applications are hardcoded. |
+| Admin approves → `registerMiner` | It calls the contract, but with a random device address, so the approved miner could never sign a valid proof. |
+| Admin sets obligations | Only shows a message. `setObligation` is never called. |
+| Admin suspends a miner | Changes the screen only, not the contract. |
+| Admin sees live sensors (C2) | No MQTT client anywhere; the "C2 MQTT 1.0 msg/s" text is just a label. |
+| MetaMask support | None. |
+| QR send/receive in the wallet | None. |
+| Price and volume chart | None. |
+| Explorer links | None. Explorer view and MetaMask are the agreed drop-first items, so that's acceptable. |
+| First mint from a live camera proof | Can't have happened yet: Shreyas's and Omkar's code doesn't exist. |
+
+The core chain work is solid. Before Gate 2, the things that matter most:
+1. Deploy to Amoy.
+2. Recompute the evidence hash in the validator. Without it, a signed proof isn't tied to the plants, GPS or sensor data it reports.
+3. Make the admin's approve, obligation and suspend actions call the contracts for real.
+4. Connect C2 over MQTT, once Shreyas has a C2 mock.
+
+His README checklist should also be corrected so the team's gate reviews reflect reality. I can write this up as a note to send him.
+
+_stop `end_turn` · 12.96s (ttft 10.55s) · in 2 · out 1,013 · cache r147,766/w235_
 
