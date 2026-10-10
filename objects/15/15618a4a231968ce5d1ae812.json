@@ -1,0 +1,15 @@
+{
+  "id": "15618a4a231968ce5d1ae812",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Cr2Asx25hqrtc5t6K1Vkrn",
+        "type": "tool_result",
+        "content": "mock-emitter.ts\nimport express from \"express\";\r\nimport cors from \"cors\";\r\nimport http from \"http\";\r\nimport { WebSocketServer, WebSocket } from \"ws\";\r\nimport path from \"path\";\r\nimport fs from \"fs\";\r\n\r\nconst PORT = parseInt(process.env.PORT || \"3004\", 10);\r\n\r\nconst app = express();\r\napp.use(cors());\r\napp.use(express.json());\r\n\r\n// Load mock examples from contracts-schema\r\nconst examplesDir = path.join(__dirname, \"..\", \"..\", \"..\", \"contracts-schema\", \"examples\", \"valid\");\r\n\r\nfunction loadExample(filename: string) {\r\n  const filePath = path.join(examplesDir, filename);\r\n  if (fs.existsSync(filePath)) {\r\n    return JSON.parse(fs.readFileSync(filePath, \"utf-8\"));\r\n  }\r\n  return null;\r\n}\r\n\r\nconst minerExample = loadExample(\"c4-miner.json\");\r\n8:const PORT = parseInt(process.env.PORT || \"3004\", 10);\n120:server.listen(PORT, () => {\n121:  console.log(`[Mock Emitter] Running on http://localhost:${PORT}`);\n122:  console.log(`[Mock Emitter] WebSocket: ws://localhost:${PORT}/v1/events`);\n/** @type {import('tailwindcss').Config} */\nexport default {\n  darkMode: [\"class\"],\n  content: [\"./index.html\", \"./src/**/*.{ts,tsx,js,jsx}\"],\n  theme: {\n    extend: {\n      colors: {\n        border: \"hsl(var(--border))\",\n        input: \"hsl(var(--input))\",\n        ring: \"hsl(var(--ring))\",\n        background: \"hsl(var(--background))\",\n        foreground: \"hsl(var(--foreground))\",\n        primary: {\n          DEFAULT: \"hsl(var(--primary))\",\n          foreground: \"hsl(var(--primary-foreground))\",\n        },\n        secondary: {\n          DEFAULT: \"hsl(var(--secondary))\",\n          foreground: \"hsl(var(--secondary-foreground))\",\n        },\n        destructive: {\n          DEFAULT: \"hsl(var(--destructive))\",\n          foreground: \"hsl(var(--destructive-foreground))\",\n        },\n        muted: {\n          DEFAULT: \"hsl(var(--muted))\",\n          foreground: \"hsl(var(--muted-foreground))\",\n        },\n        accent: {\n          DEFAULT: \"hsl(var(--accent))\",\n          foreground: \"hsl(var(--accent-foreground))\",\n        },\n        popover: {\n          DEFAULT: \"hsl(var(--popover))\",\n          foreground: \"hsl(var(--popover-foreground))\",\n        },\n        card: {\n          DEFAULT: \"hsl(var(--card))\",\n          foreground: \"hsl(var(--card-foreground))\",\n        },",
+        "is_error": false
+      }
+    ]
+  }
+}

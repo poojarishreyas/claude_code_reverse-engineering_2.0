@@ -1,0 +1,19 @@
+{
+  "id": "dbdf1fa4a60f48d71a233457",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01A4DDaDrdLJs7jfMJf3L72z",
+        "type": "tool_result",
+        "content": "6:  :root {\n7:    --background: 0 0% 0%;\n8:    --foreground: 240 5% 96%;\n10:    --card: 240 10% 3.9%;\n11:    --card-foreground: 240 5% 96%;\n13:    --popover: 240 10% 3.9%;\n14:    --popover-foreground: 240 5% 96%;\n16:    --primary: 0 0% 98%;\n17:    --primary-foreground: 240 6% 10%;\n19:    --secondary: 240 4% 12%;\n20:    --secondary-foreground: 0 0% 98%;\n22:    --muted: 240 4% 12%;\n23:    --muted-foreground: 240 5% 60%;\n25:    --accent: 240 4% 14%;\n26:    --accent-foreground: 0 0% 98%;\n28:    --destructive: 0 62% 30%;\n29:    --destructive-foreground: 0 0% 98%;\n31:    --border: 240 4% 14%;\n32:    --input: 240 4% 14%;\n33:    --ring: 240 5% 65%;\n35:    --radius: 0.375rem;\n34:app.get(\"/v1/miners/:miner_id\", (req, res) => {\n47:app.get(\"/v1/miners/:miner_id/balance\", (req, res) => {\n59:app.get(\"/v1/miners/:miner_id/mints\", (req, res) => {\n63:app.get(\"/health\", (_req, res) => {\n79:    ws.send(JSON.stringify(mintEventExample));\n93:setInterval(() => {",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
