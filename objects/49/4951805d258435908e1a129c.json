@@ -1,0 +1,15 @@
+{
+  "id": "4951805d258435908e1a129c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Fh9eAb4q6oTyKZh4JMpkBd",
+        "type": "tool_result",
+        "content": "<stdin>:31: SyntaxWarning: \"\\|\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\|\"? A raw string is also an option.\r\n77:- [x] One command produces a valid signed attestation from mock inputs\n78:- [x] Changing the scenario changes the estimate in the expected direction\n79:- [x] Tampering with any field makes the signature check fail\n80:- [x] Mock C2 and C3 emitters shipped; draft species list and coefficient table v0 with sources (v0 awaiting team agreement)\n83:- [ ] Live epochs every 60 s with no manual step for 30 minutes\n M miner-core/README.md\n?? PRD.md\n?? miner-core/.env.example\n?? miner-core/.gitignore\n?? miner-core/config/\n?? miner-core/controller/\n?? miner-core/docs/\n?? miner-core/minerd/\n?? miner-core/mock/\n?? miner-core/pyproject.toml\n?? miner-core/requirements.txt\n?? miner-core/simulator/\n?? miner-core/tests/",
+        "is_error": false
+      }
+    ]
+  }
+}

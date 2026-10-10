@@ -5,8 +5,8 @@
 | session | `s-13dc6269e9274308` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-10T18:55:50.367Z |
-| requests | 13 |
-| tokens | in 24 · out 16,622 · cache read 1,155,215 · cache write 57,835 |
+| requests | 15 |
+| tokens | in 28 · out 18,397 · cache read 1,391,426 · cache write 64,273 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -2126,5 +2126,169 @@ Also owns the numbers in `contracts-schema/data/species-catalogue.json` (multipl
 
 ```
 File created successfully at: C:\Users\shrey\Desktop\AIRcoin\miner-core\docs\catalogue-v0-proposal.md (file state is current in your context — no need to Read it back)
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Now the README: a "how to run Phase 1" section and the checklist ticks.
+
+**-> tool_use** `Bash` _(toolu_01Fh9eAb4q6oTyKZh4JMpkBd)_
+
+````json
+{
+  "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && python - <<'EOF'\np='README.md'\ns=open(p,encoding='utf-8').read()\nstart=s.index('## Running locally'); end=s.index('## Phase checklist')\nnew='''## Running locally (Phase 1: against mocks)\n\n```bash\npip install -r miner-core/requirements.txt\ncd miner-core\ncp .env.example .env               # optional; defaults work for miner-001\npython -m pytest                   # signing, tamper, schema, estimator, tracker tests\n```\n\n**One command, one signed attestation** (synthetic 60 s epoch, mock plants, simulated sensors):\n\n```bash\npython -m minerd attest --mock --scenario festival_smog --out out/att.json --epoch-out out/epoch.json\npython -m minerd verify out/att.json                                   # evidence_hash + signer check\npython ../contracts-schema/scripts/validate.py c3-attestation out/att.json\npython -m minerd attest --mock --drop 3 --fake 12 --out out/faults.json  # tag 3 missing, 12 plastic: both earn 0\npython -m minerd hashes                                                # calibration_hash, device address\n```\n\nScenarios: `rain_washout` < `clean_morning` < `rush_hour` < `festival_smog` (AQI ~19 / 48 / 189 / 400).\n\n**Mock emitters for the other workstreams** (MQTT ones need `docker compose up -d mqtt` from the repo root):\n\n| Command | For | What it does |\n|---------|-----|--------------|\n| `python -m mock.c1_vision [--drop 3 --fake 12 --swap 5:neem --unknown 42 --frozen]` | miner-core itself | Stand-in for vision-twin: 20 plants on `miner/{id}/vision` at 1 Hz |\n| `python -m mock.c2_emitter [--scenario rush_hour --cycle 3 --reject-every 5]` | vision-twin, chain-market | Real pipeline on mock inputs: telemetry 1/s, retained epoch messages going pending → submitted → accepted. **Never calls the validator**; tx_hash is fake |\n| `python -m mock.c3_emitter [--post http://localhost:3001] [--tamper amount\\\\|epoch\\\\|plant\\\\|gps\\\\|signature]` | chain-market | Prints or POST
+... [1,213 more characters in session.jsonl]
+````
+
+_stop `tool_use` · 14.21s (ttft 3.97s) · in 2 · out 1,413 · cache r115,781/w4,649_
+
+---
+
+## req-0014 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 36 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_016wx72E7doyffes2Hx8rfHf)_
+
+```
+File created successfully at: C:\Users\shrey\Desktop\AIRcoin\miner-core\docs\catalogue-v0-proposal.md (file state is current in your context — no need to Read it back)
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Now the README: a "how to run Phase 1" section and the checklist ticks.
+
+**-> tool_use** `Bash` _(toolu_01Fh9eAb4q6oTyKZh4JMpkBd)_
+
+````json
+{
+  "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && python - <<'EOF'\np='README.md'\ns=open(p,encoding='utf-8').read()\nstart=s.index('## Running locally'); end=s.index('## Phase checklist')\nnew='''## Running locally (Phase 1: against mocks)\n\n```bash\npip install -r miner-core/requirements.txt\ncd miner-core\ncp .env.example .env               # optional; defaults work for miner-001\npython -m pytest                   # signing, tamper, schema, estimator, tracker tests\n```\n\n**One command, one signed attestation** (synthetic 60 s epoch, mock plants, simulated sensors):\n\n```bash\npython -m minerd attest --mock --scenario festival_smog --out out/att.json --epoch-out out/epoch.json\npython -m minerd verify out/att.json                                   # evidence_hash + signer check\npython ../contracts-schema/scripts/validate.py c3-attestation out/att.json\npython -m minerd attest --mock --drop 3 --fake 12 --out out/faults.json  # tag 3 missing, 12 plastic: both earn 0\npython -m minerd hashes                                                # calibration_hash, device address\n```\n\nScenarios: `rain_washout` < `clean_morning` < `rush_hour` < `festival_smog` (AQI ~19 / 48 / 189 / 400).\n\n**Mock emitters for the other workstreams** (MQTT ones need `docker compose up -d mqtt` from the repo root):\n\n| Command | For | What it does |\n|---------|-----|--------------|\n| `python -m mock.c1_vision [--drop 3 --fake 12 --swap 5:neem --unknown 42 --frozen]` | miner-core itself | Stand-in for vision-twin: 20 plants on `miner/{id}/vision` at 1 Hz |\n| `python -m mock.c2_emitter [--scenario rush_hour --cycle 3 --reject-every 5]` | vision-twin, chain-market | Real pipeline on mock inputs: telemetry 1/s, retained epoch messages going pending → submitted → accepted. **Never calls the validator**; tx_hash is fake |\n| `python -m mock.c3_emitter [--post http://localhost:3001] [--tamper amount\\\\|epoch\\\\|plant\\\\|gps\\\\|signature]` | chain-market | Prints or POST
+... [1,213 more characters in session.jsonl]
+````
+
+#### USER
+
+**<- tool_result** _(toolu_01Fh9eAb4q6oTyKZh4JMpkBd)_
+
+```
+<stdin>:31: SyntaxWarning: "\|" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\|"? A raw string is also an option.
+77:- [x] One command produces a valid signed attestation from mock inputs
+78:- [x] Changing the scenario changes the estimate in the expected direction
+79:- [x] Tampering with any field makes the signature check fail
+80:- [x] Mock C2 and C3 emitters shipped; draft species list and coefficient table v0 with sources (v0 awaiting team agreement)
+83:- [ ] Live epochs every 60 s with no manual step for 30 minutes
+ M miner-core/README.md
+?? PRD.md
+?? miner-core/.env.example
+?? miner-core/.gitignore
+?? miner-core/config/
+?? miner-core/controller/
+?? miner-core/docs/
+?? miner-core/minerd/
+?? miner-core/mock/
+?? miner-core/pyproject.toml
+?? miner-core/requirements.txt
+?? miner-core/simulator/
+?? miner-core/tests/
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_012ZNN2xgaN49gMh5kxjjxZF)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && grep -n \"tamper amount\" README.md; python ../contracts-schema/scripts/validate.py 2>&1 | tail -2; git -C .. diff --stat -- contracts-schema chain-market vision-twin",
+  "description": "Check README escape and confirm no edits outside miner-core"
+}
+```
+
+_stop `tool_use` · 5.30s (ttft 3.70s) · in 2 · out 362 · cache r120,430/w1,789_
+
+---
+
+## req-0015 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 38 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01Fh9eAb4q6oTyKZh4JMpkBd)_
+
+```
+<stdin>:31: SyntaxWarning: "\|" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\|"? A raw string is also an option.
+77:- [x] One command produces a valid signed attestation from mock inputs
+78:- [x] Changing the scenario changes the estimate in the expected direction
+79:- [x] Tampering with any field makes the signature check fail
+80:- [x] Mock C2 and C3 emitters shipped; draft species list and coefficient table v0 with sources (v0 awaiting team agreement)
+83:- [ ] Live epochs every 60 s with no manual step for 30 minutes
+ M miner-core/README.md
+?? PRD.md
+?? miner-core/.env.example
+?? miner-core/.gitignore
+?? miner-core/config/
+?? miner-core/controller/
+?? miner-core/docs/
+?? miner-core/minerd/
+?? miner-core/mock/
+?? miner-core/pyproject.toml
+?? miner-core/requirements.txt
+?? miner-core/simulator/
+?? miner-core/tests/
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Bash` _(toolu_012ZNN2xgaN49gMh5kxjjxZF)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && grep -n \"tamper amount\" README.md; python ../contracts-schema/scripts/validate.py 2>&1 | tail -2; git -C .. diff --stat -- contracts-schema chain-market vision-twin",
+  "description": "Check README escape and confirm no edits outside miner-core"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_012ZNN2xgaN49gMh5kxjjxZF)_
+
+```
+70:| `python -m mock.c3_emitter [--post http://localhost:3001] [--tamper amount\|epoch\|plant\|gps\|signature]` | chain-market | Prints or POSTs a signed attestation for the last closed epoch |
+
+21/21 checks passed
 ```
 

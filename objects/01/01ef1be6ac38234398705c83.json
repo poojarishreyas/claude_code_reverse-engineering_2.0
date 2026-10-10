@@ -1,0 +1,19 @@
+{
+  "id": "01ef1be6ac38234398705c83",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012ZNN2xgaN49gMh5kxjjxZF",
+        "type": "tool_result",
+        "content": "70:| `python -m mock.c3_emitter [--post http://localhost:3001] [--tamper amount\\|epoch\\|plant\\|gps\\|signature]` | chain-market | Prints or POSTs a signed attestation for the last closed epoch |\n\r\n21/21 checks passed",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

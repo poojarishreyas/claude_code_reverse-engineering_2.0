@@ -1,0 +1,27 @@
+{
+  "id": "015e3eb7695e5e12ee217bdd",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1QYKEAgSGAI4AUIIdGhpbmtpbmcSDG+DUmXxi/8PsL8ivxoMQGzt0A8k9WVHeR6QIjBGquj+fUMSYG1QBzgSiY3YSkAGOd+dT6HVSOlpYSshdLukuoOPucSLbBcmJNV/DYoq8gUPuOZr+dgT7ew7bvtHow7fFYxUgAKIA61rl9GUDDH0cf63/Dch/Y7Kwgj/FyqrNsSzcfufwhJL8MIJZhhEMlCkKjaVAYGYcSx7Adnr3mQQ7JtiS1EiQpxXGCSW2/Idrz7FlHVl2dIV5YtcGzfPEDwPpTZmVnmlIpCtZsnvKQAysCgtjM3UAWRpC+xGUGUg/dOKxROlKIS0Elu2wBbnxtr3E8+IDdv8VLadAWUkfrzV0O4Tkak5hOlCJoGco1LcimzAn8wcQqQHvwW07EKalHHmio/dHEfYA9nkRQWLBornLLn+8o6zoEVBHCvThVuwVDww0FnzzJ+wCF9/QuWCFrVTiDwfPCDYwcPXJbgf8ogsmbn5WaCh6fHAqggJAuZdUJN/7x+EeUp52Ukwm7KNi8MMFbwzaqHNhwmTowRTK9CnFz4L6MyPiIVSNlCgoR2g3sD2wtsg9cdBrRSUv70fetuQVQA4WJ+p7Fud5S7hmv4aMhEe4c5jjzxgwhiHzNAhhRMErPSThHjJVzOsJeuq8K4wdbgf+eHUUXd1ZrdtPuHSFSAw+JxSpJranNLeueyuChUQK7eTR/5revROL85/qHArLZDoohmkdYzWW/CInYXNqW0FxYluG81QOopi+dqyYEQmsp5/NUe+Q9UBd0q/PVlzU1HyvpuHsUCLSpQDtL/NekI2EHIMNPkp6osIBt4Cn9E92QJhpT2ex0OczuncG9Cafugh6ykTIyuTKesktlkl2cs64PGDvx/Lgec5qYgYtzz8eQppRLfQ1PsUb5KqTST3Bbc8QSGllu4CR2xn/nZK3jzZKw54Ja5yNsHf1L6hevgqtBJ4qxXoPL7VQCzhe62yJ18fQbFmbY/zybc1ROgV16nS54sWUut4E9DvmEzFdXUtxskBxYZSu7Gfq9zP+JojbJai+T/dbAn61HULg3tKQ/RiGlDmUrDdJ46TSk2+HF8qSdvcsOzjAScxunEWhoViY454umTfpLjOTE5of1Be1uz8GAE="
+      },
+      {
+        "type": "text",
+        "text": "Now the README: a \"how to run Phase 1\" section and the checklist ticks."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Fh9eAb4q6oTyKZh4JMpkBd",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && python - <<'EOF'\np='README.md'\ns=open(p,encoding='utf-8').read()\nstart=s.index('## Running locally'); end=s.index('## Phase checklist')\nnew='''## Running locally (Phase 1: against mocks)\n\n```bash\npip install -r miner-core/requirements.txt\ncd miner-core\ncp .env.example .env               # optional; defaults work for miner-001\npython -m pytest                   # signing, tamper, schema, estimator, tracker tests\n```\n\n**One command, one signed attestation** (synthetic 60 s epoch, mock plants, simulated sensors):\n\n```bash\npython -m minerd attest --mock --scenario festival_smog --out out/att.json --epoch-out out/epoch.json\npython -m minerd verify out/att.json                                   # evidence_hash + signer check\npython ../contracts-schema/scripts/validate.py c3-attestation out/att.json\npython -m minerd attest --mock --drop 3 --fake 12 --out out/faults.json  # tag 3 missing, 12 plastic: both earn 0\npython -m minerd hashes                                                # calibration_hash, device address\n```\n\nScenarios: `rain_washout` < `clean_morning` < `rush_hour` < `festival_smog` (AQI ~19 / 48 / 189 / 400).\n\n**Mock emitters for the other workstreams** (MQTT ones need `docker compose up -d mqtt` from the repo root):\n\n| Command | For | What it does |\n|---------|-----|--------------|\n| `python -m mock.c1_vision [--drop 3 --fake 12 --swap 5:neem --unknown 42 --frozen]` | miner-core itself | Stand-in for vision-twin: 20 plants on `miner/{id}/vision` at 1 Hz |\n| `python -m mock.c2_emitter [--scenario rush_hour --cycle 3 --reject-every 5]` | vision-twin, chain-market | Real pipeline on mock inputs: telemetry 1/s, retained epoch messages going pending → submitted → accepted. **Never calls the validator**; tx_hash is fake |\n| `python -m mock.c3_emitter [--post http://localhost:3001] [--tamper amount\\\\|epoch\\\\|plant\\\\|gps\\\\|signature]` | chain-market | Prints or POSTs a signed attestation for the last closed epoch |\n\nThe species catalogue is still draft 0.1.0 with null coefficients; `config/coefficients-v0.json` fills them and the miner logs a warning. Proposal for the team: [`docs/catalogue-v0-proposal.md`](docs/catalogue-v0-proposal.md).\n\n'''\ns=s[:start]+new+s[end:]\ns=s.replace('- [ ] One command produces a valid signed attestation from mock inputs','- [x] One command produces a valid signed attestation from mock inputs')\ns=s.replace('- [ ] Changing the scenario changes the estimate in the expected direction','- [x] Changing the scenario changes the estimate in the expected direction')\ns=s.replace('- [ ] Tampering with any field makes the signature check fail','- [x] Tampering with any field makes the signature check fail')\ns=s.replace('- [ ] Mock C2 and C3 emitters shipped; draft species list and coefficient table v0 with sources','- [x] Mock C2 and C3 emitters shipped; draft species list and coefficient table v0 with sources (v0 awaiting team agreement)')\nopen(p,'w',encoding='utf-8').write(s)\nEOF\ngrep -n \"\\[x\\]\\|\\[ \\]\" README.md | head -5; git -C .. status --short",
+          "description": "Update README run section and Phase 1 checklist"
+        }
+      }
+    ]
+  }
+}
