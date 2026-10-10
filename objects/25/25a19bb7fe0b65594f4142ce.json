@@ -1,0 +1,15 @@
+{
+  "id": "25a19bb7fe0b65594f4142ce",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_013dQ3KycKomFbsn37QQx9kB",
+        "type": "tool_result",
+        "content": "?? PRD.md",
+        "is_error": false
+      }
+    ]
+  }
+}

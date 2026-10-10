@@ -1,0 +1,28 @@
+{
+  "id": "b7a96b03566eea6cd0595b29",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSvwcKEAgSGAI4AUIIdGhpbmtpbmcSDA64HtD4jXeOm3EpfhoMI9/23zsi2As76Po1IjDhXCboNOhbMldxAlgZSLiKyMOP6oL1cZh5bGYnSc/EMdWOHU664ErngXnpKxCNvEUq3AY9bbqBDhWqTbhxIusO7Ney7gdIUTUizPzaT7Z66Qj5agO7oF1+9nSE8KWxiACiq64muboKlmqFW/+QQwc6f7qLenPKYKfXd2T1qYKIA0vzjHFAYiMR/KC6LSNQB+7lvXc0TShHehGPXBE+w9I6Fe7XtjwUnWxFPKLCXg5dV68OFTG80iFmEvOwQuknzIyK6ztmHsQM2Milvf0TTbFFEdXBDfGXCb2JTH4u/nHOtZAeU7yT5rreq1W+yaLcRgS0Tm+Ke8Qz7L4ywgh+OJa6FyHetgCv2csTqP8Ewc06XAmFBz2MJEGp+xAzUBu6nCtB5jHhJ09bdoIQTdHqDmlGAMLPXG6rEddWUD4GgcfX81yEN9pexgAOdT1iTGj+2D+xZw24oLuBStJJt7exogkruY7SEL1VESLXydoQQdecBk0+PUOqKlf2awfFqAFkq7keoDstK/SR506+DKKqHlpvkl/mFf0Q6ulHElpqomliXniuolkjrsHxSgEqzrfCX+B+yTihWKCkSkExxkGm5hRa3mXfSZczEZyjzzqf5Vo7bzp0X5MahV9yRTmvUcVFZSfTY9PJ+ImQpjUj751ul36f2Z9Q7UEbcJRA1alZMWljCYBp5KieN9sVICKVi/ApgrnzVqopwijgIrBFDN1KL42/EJAT4rIUf8uCX+ZR7ukGFYQkdZqwWV8XTcQLoCLhTJrlUqfcYp2TX0lxNXtCh25clceKvyQW3QbchHPund58v3+rjQME7aEYEhh1rABjN06xfsEs0n+g5/Gf1ogWSOpAfcrHPtt9B3aEUVRfkd6YI1+aw70PjJK/bO6jdbSmMUrJKBAGjSW1B1rsMkXzFSf15J0ssNw6lfFfHGO1kxvyRzliFtU7Xd+gYmStKQrmJX9Hi5J4KdHToqhdfzFTdqKV2jlcMIcoRNOS2ivYW8B2UPPtytVic2x4Zc7Ns1WU61Ef0yLBWnLTOQ8jsL47FTWOA0fXGYaorLB7BVfc1596ZwRbvlZLjmJBi+vcYPUQBASKh5nu50k0UsuhuhMhpc3wSWGDEH7Y4duiEd+6jmINHppRAturOQRn2OatP4te/5vDn6AQWbI7n3JR/0kL/cq2zO5UKq06UIKW+7FriwpQCmEz3+W3ItaV8M0+CC0YeBgB"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01NANzwAWfHGgy8m7GHgMRye",
+        "name": "Bash",
+        "input": {
+          "command": "until [ -s \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-AIRcoin/7bdab590-950d-4a28-977e-e281d88afb67/tasks/bofld0ead.output\" ]; do sleep 2; done; cat \"C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-AIRcoin/7bdab590-950d-4a28-977e-e281d88afb67/tasks/bofld0ead.output\"",
+          "description": "Wait for contract test results",
+          "timeout": 400000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

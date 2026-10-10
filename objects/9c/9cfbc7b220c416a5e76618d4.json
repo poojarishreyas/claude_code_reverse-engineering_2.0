@@ -1,0 +1,15 @@
+{
+  "id": "9cfbc7b220c416a5e76618d4",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01NANzwAWfHGgy8m7GHgMRye",
+        "type": "tool_result",
+        "content": "      ✔ rejects inactive miner\n    Marketplace\n      ✔ seller can list AIR\n      ✔ buyer can buy a listing\n      ✔ seller can cancel listing\n      ✔ buyer cannot self-buy\n    ComplianceRegistry\n      ✔ regulator sets obligation\n      ✔ company burns for compliance\n      ✔ tracks compliance status\n      ✔ rejects burn without obligation\n\n\n  23 passing (12s)\n\n\n[exited with code 0]",
+        "is_error": false
+      }
+    ]
+  }
+}
