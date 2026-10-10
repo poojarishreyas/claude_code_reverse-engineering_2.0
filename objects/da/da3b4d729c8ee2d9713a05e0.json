@@ -1,0 +1,11 @@
+{
+  "id": "da3b4d729c8ee2d9713a05e0",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": "Today's date is 2026-10-11.",
+    "output_config": {
+      "effort": "high"
+    }
+  }
+}

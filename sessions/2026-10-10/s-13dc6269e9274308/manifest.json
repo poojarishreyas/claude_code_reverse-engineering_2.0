@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "s-13dc6269e9274308",
+  "title": "This session is being continued from a previous conversation that ran out of context. The summary below covers the ea...",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-opus-5-5",
+  "credential": "e40c4deaa1d5",
+  "startedAt": "2026-10-10T18:55:50.367Z",
+  "updatedAt": "2026-10-10T18:56:03.574Z",
+  "durationMs": 13207,
+  "requests": 2,
+  "errors": 0,
+  "events": 10,
+  "usage": {
+    "input": 4,
+    "output": 920,
+    "cacheRead": 143882,
+    "cacheCreation": 31925
+  },
+  "messageIds": [
+    "13dc6269e927430858b4e018",
+    "da3b4d729c8ee2d9713a05e0",
+    "9d9f500e057c8ce8ae2ca5b1",
+    "8e542850353d4c6cb6c047ae",
+    "e58291e6a84c039725f3b14d",
+    "4a68bf8faba6914812ffa415",
+    "20583a6f3b4be9c3e6173141",
+    "d94c3cb6c0c2aafa1f503e7d",
+    "964becc8cbd4f3aa0af972a3",
+    "c4d6b1ff9c0e980c087ca062"
+  ]
+}
