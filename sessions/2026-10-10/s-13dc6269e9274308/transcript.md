@@ -5,8 +5,8 @@
 | session | `s-13dc6269e9274308` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-10T18:55:50.367Z |
-| requests | 12 |
-| tokens | in 22 · out 12,045 · cache read 1,043,763 · cache write 53,506 |
+| requests | 13 |
+| tokens | in 24 · out 16,622 · cache read 1,155,215 · cache write 57,835 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -2012,5 +2012,119 @@ Also owns the numbers in `contracts-schema/data/species-catalogue.json` (multipl
 10. **Telemetry:** publishes C2 every second and every epoch.
 11. **Device-side anti-ch
 ... [5,037 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Write` _(toolu_016wx72E7doyffes2Hx8rfHf)_
+
+````json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\docs\\catalogue-v0-proposal.md",
+  "content": "# Proposal: coefficient table v0 for the species catalogue\n\n**From:** Shreyas (Workstream B) · **For:** team sync, agreement from Omkar, Shreyas and Umashankar\n**Affects:** `contracts-schema/data/species-catalogue.json` (frozen, so this needs all three to agree)\n\n## Problem\n\nThe catalogue is draft `0.1.0`. Its species list and multiplier levels are filled in, but every number the estimator needs to produce an amount is `null`:\n\n- `base_rates_mg_per_m2_h` (all 7 pollutants)\n- `pollutants.*.ref_concentration` (all 7)\n- `concentration_factor_cap`\n- `caps.per_plant_air_per_epoch` and `caps.per_miner_air_per_epoch`\n\nThat is 17 values. Until they are set, the miner cannot compute an amount from the catalogue alone.\n\n**Workaround in miner-core:** `miner-core/config/coefficients-v0.json` fills these 17 nulls and nothing else. If the catalogue gains a value, the catalogue wins. The miner logs a warning while the overlay is in use.\n\n`calibration_hash` is still keccak256(JCS(catalogue as on disk)). So when the catalogue changes, the hash changes and the overlay is deleted. Nothing else needs to move.\n\n## Proposed values\n\nThe estimator for plant *i* and pollutant *p* over one sample of length Δt:\n\n```\nR = k[s][p] × leaf_area_m2 × health × min(C / C_ref, factor_cap) × Δt_h       (mg)\nk[s][p] = base_rate[p] × multiplier_levels[level]     (high 1.5 · medium 1.0 · low 0.5)\nAIR = Σ_p weight[p] × R\n```\n\n### Base rates (mg removed per m² leaf per hour at C = C_ref, for a \"medium\" species)\n\nFor PM and the gases, the base rate is a dry-deposition flux, `F = v_d × C_ref`, where `v_d` is the deposition velocity to leaf surfaces. Urban-forest models (Nowak et al., i-Tree Eco) use the same approach. Published `v_d` values span an order of magnitude with wind, leaf texture and particle size. We picked mid-range values, not best-case ones.\n\n| Pol
+... [4,578 more characters in session.jsonl]
+````
+
+_stop `tool_use` · 44.21s (ttft 17.47s) · in 2 · out 4,577 · cache r111,452/w4,329_
+
+---
+
+## req-0013 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 34 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_018HpXwN6QduGxjauY6Vk51c)_
+
+```
+{
+  "description": "Coefficient table v0 (literature-seeded estimates). Fills ONLY the values that are still null in contracts-schema/data/species-catalogue.json (draft 0.1.0). Proposed for adoption into the catalogue: see miner-core/docs/catalogue-v0-proposal.md. Delete this file once the catalogue carries these numbers.",
+  "for_catalogue_version": "0.1.0",
+  "base_rates_mg_per_m2_h": {
+    "pm25": 0.25,
+    "pm10": 1.0,
+    "no2": 0.17,
+    "so2": 0.47,
+    "voc": 0.5,
+    "co2": 300.0,
+    "co": 0.04
+  },
+  "ref_concentration": {
+    "pm25": 35,
+    "pm10": 50,
+    "no2": 25,
+    "so2": 10,
+    "voc": 100,
+    "co2": 420,
+    "co": 1
+  },
+  "concentration_factor_cap": 5,
+  "caps": {
+    "per_plant_air_per_epoch": 0.01,
+    "per_miner_air_per_epoch": 0.2
+  }
+}
+# miner-core · Workstream B · Miner core and PoUW engine
+
+**Owner:** Shreyas
+**Mission:** turn what the miner sees and senses into a trustworthy, signed claim of pollution removed. This is the "useful work" in Proof of Useful Work.
+
+| Produces | Consumes |
+|----------|----------|
+| **C2** telemetry → MQTT `miner/{miner_id}/telemetry` (1/s) and epoch summaries → `miner/{miner_id}/epoch` (retained) | **C1** `miner/{miner_id}/vision` from vision-twin |
+| **C3** signed attestations → `POST /v1/attestations` on chain-market's validator | |
+
+Also owns the numbers in `contracts-schema/data/species-catalogue.json` (multipliers, base rates, reference concentrations, caps). Schemas and signing rules: [`../contracts-schema`](../contracts-schema/README.md). Do not change them on your own.
+
+## Scope
+
+1. **Sensor layer:** one driver interface per sensor (PM, gas/VOC, CO₂, NO₂, temp/humidity). All air sensors simulated; real PMS5003 / MQ-135 / SCD40 / BME280 drivers can drop in later.
+2. **Sensor simulator:** daily curves + noise, correlated values (PM10 tracks PM2.5, humidity affects PM). Scenarios: clean morning (AQI ~50), rush hour (~180), festival smog (~400), rain washout. Switchable live.
+3. **GPS service:** real module via gpsd / pynmea2; falls back to a fixed demo location (`fix: "fallback"`).
+4. **Vision subscriber:** consumes C1 and keeps the latest state of each of the 20 plants.
+5. **Species catalogue and calibration table:** versioned; its keccak256 goes into every attestation as `calibration_hash`.
+6. **Estimation engine:** `R_i,p = k_s(i),p × A_i × H_i × f(C_p / C_p,ref) × Δt`, then `AIR = Σ_p w_p Σ_i R_i,p`. Caps per plant and per epoch. Missing plants count zero; suspect plants count zero and raise a flag.
+7. **Epoch manager:** 60 s epochs in real time for the demo (`epoch = floor(start_ms / 60000)`).
+8. **Attestation signer:** builds the C3 payload, computes `evidence_hash`, signs with the device key (secp256k1). Key generated on first boot and registered with chain-market's registry.
+9. **Uplink:** posts C3 with retry and an offline queue so no epoch is lost if Wi-Fi drops.
+10. **Telemetry:** publishes C2 every second and every epoch.
+11. **Device-side anti-ch
+... [5,037 more characters in session.jsonl]
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+**-> tool_use** `Write` _(toolu_016wx72E7doyffes2Hx8rfHf)_
+
+````json
+{
+  "file_path": "C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\docs\\catalogue-v0-proposal.md",
+  "content": "# Proposal: coefficient table v0 for the species catalogue\n\n**From:** Shreyas (Workstream B) · **For:** team sync, agreement from Omkar, Shreyas and Umashankar\n**Affects:** `contracts-schema/data/species-catalogue.json` (frozen, so this needs all three to agree)\n\n## Problem\n\nThe catalogue is draft `0.1.0`. Its species list and multiplier levels are filled in, but every number the estimator needs to produce an amount is `null`:\n\n- `base_rates_mg_per_m2_h` (all 7 pollutants)\n- `pollutants.*.ref_concentration` (all 7)\n- `concentration_factor_cap`\n- `caps.per_plant_air_per_epoch` and `caps.per_miner_air_per_epoch`\n\nThat is 17 values. Until they are set, the miner cannot compute an amount from the catalogue alone.\n\n**Workaround in miner-core:** `miner-core/config/coefficients-v0.json` fills these 17 nulls and nothing else. If the catalogue gains a value, the catalogue wins. The miner logs a warning while the overlay is in use.\n\n`calibration_hash` is still keccak256(JCS(catalogue as on disk)). So when the catalogue changes, the hash changes and the overlay is deleted. Nothing else needs to move.\n\n## Proposed values\n\nThe estimator for plant *i* and pollutant *p* over one sample of length Δt:\n\n```\nR = k[s][p] × leaf_area_m2 × health × min(C / C_ref, factor_cap) × Δt_h       (mg)\nk[s][p] = base_rate[p] × multiplier_levels[level]     (high 1.5 · medium 1.0 · low 0.5)\nAIR = Σ_p weight[p] × R\n```\n\n### Base rates (mg removed per m² leaf per hour at C = C_ref, for a \"medium\" species)\n\nFor PM and the gases, the base rate is a dry-deposition flux, `F = v_d × C_ref`, where `v_d` is the deposition velocity to leaf surfaces. Urban-forest models (Nowak et al., i-Tree Eco) use the same approach. Published `v_d` values span an order of magnitude with wind, leaf texture and particle size. We picked mid-range values, not best-case ones.\n\n| Pol
+... [4,578 more characters in session.jsonl]
+````
+
+#### USER
+
+**<- tool_result** _(toolu_016wx72E7doyffes2Hx8rfHf)_
+
+```
+File created successfully at: C:\Users\shrey\Desktop\AIRcoin\miner-core\docs\catalogue-v0-proposal.md (file state is current in your context — no need to Read it back)
 ```
 
