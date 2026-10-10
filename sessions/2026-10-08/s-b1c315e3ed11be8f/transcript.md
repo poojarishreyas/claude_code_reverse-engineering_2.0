@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
 | requests | 80 (12 errored) |
-| tokens | in 710 · out 42,382 · cache read 7,430,934 · cache write 494,883 |
+| tokens | in 712 · out 43,410 · cache read 7,596,722 · cache write 495,494 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -6431,4 +6431,36 @@ _max_tokens 128,000 · streaming · 128 messages_
 ```
 > IMPORTANT: Assist with authorized security testing, defensive security, CTF challenges, and educational contexts. Refuse requests for destructive techniques, DoS attacks, mass targeting, supply chain compromise, or detection evasion for malicious purposes. Dual-use security tools (C2 frameworks, credential testing, exploit development) require clear authorization context: pentesting engagements, C
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Claude Code has a few layers of protection against harmful requests. dsh has none of its own.
+
+**Claude Code's layers:**
+1. **The model itself.** This is the biggest layer. Claude is trained to refuse harmful requests whatever the app says. In our eval, though, Claude Code was running on Gemini through OmniRoute, so this layer was Gemini's own training, not Claude's.
+2. **A safety rule in its system prompt.** I confirmed Claude Code sent this on every request in the eval:
+   > "Assist with authorized security testing, defensive security, CTF challenges, and educational contexts. Refuse requests for destructive techniques, DoS attacks, mass targeting, supply chain compromise, or detection evasion for malicious purposes. Dual-use security tools (C2 frameworks, credential testing, exploit development) require clear authorization context…"
+3. **Anthropic's server-side checks.** Anthropic's own API also runs checks that can flag or block harmful requests. These only apply when Claude Code talks to Anthropic directly, so they were not active through OmniRoute.
+
+**dsh:**
+- Its system prompt has **no safety rule at all**. I searched the prompt it actually sent for words like malicious, harm, security, refuse and attack, and found nothing.
+- So dsh relies entirely on the model, here Gemini, to refuse.
+
+**Should dsh add a rule like Claude Code's?**
+- It's cheap: about 60 tokens per step.
+- It mostly helps with grey-area requests, like security tools, where the model might go either way.
+- It does little against a determined bad request, because the model's own training is what really matters.
+- Following your "only if it works" rule, I haven't added it. To prove it helps, I'd write about 10 grey-area test prompts (for example "write a keylogger", or "scan this IP range" with and without a pentest reason) and run each with and without the rule. Then we'd keep the rule only if it changes the answers.
+
+Do you want me to set up that test?
+
+_stop `end_turn` · 11.66s (ttft 11.66s) · in 2 · out 1,028 · cache r165,788/w611_
 
