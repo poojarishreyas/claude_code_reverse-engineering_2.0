@@ -1,0 +1,27 @@
+{
+  "id": "823a4bf656b783cdb4d67679",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSxAcKEAgSGAI4AUIIdGhpbmtpbmcSDHhMsaefqCC//w7BpxoMWSzT/59Z3oK+ZevwIjDnCH7tKeTh5MfYMVoZYsPGCgUkgFt8iQMMHeMO8RL0hZ+OKfsY0yoBct8K5oqht4oq4QapCeOXqwcotkg5ruwTz64tsm/1HljcKupIy8Iy5NEfjGpwHA65VY8+TNXU3kSf7xDYR9XnoNfgNMibgTQwnFoxYUKe35CQvgskLJUIhnnzqszw0gponc1/0wIOqQdn8NHM/QFioyVTf0Tg5qIPz6vuhMJJgNPSkziup6hEsvVcELPES9IfgB05JrvZvenlM9RAOIAO0dlyrKhJDwbmn0yXY+r5r0qXk46idBF28mHV11AsZLvcOiyLQKRlxSjyqpC/qzHCe1zkx8WyhjX+CHWr7rFLPKWxgedPMXZVdGaAaaczbfUPNY9MNYalsvwQ3Ipx2Yz2LG+Hxma6JK0vuw8FVFLxh4GukGQXay/lPW1BaR4vo1B3P9PtYgobSSxwUOFafm9EMKRDHufwg8cvrZa9Q44ee1aqDj4LwL5vp6lykXQN4G+y3cY1eIAPlSh4GlJ2AI65rlNGoBqaJ5LfSykG2m6UMc3+ZnL0hud0kuzrMgCC1NwudRD/TnAg6W8Y2/DQu/mR2vnSC4VPIlfOqC7raM5/4t7CivekUzKj6XQaoORcZhYDlaS+C+KPa6O3cYTUxZf6yCTLNLqiB1Kl1bDLyoCwQzuhoCxwrdT5JNDNXp4WYR8OLi36S3FEqlLfRbKQ5cr45i+mwzxHVGGbXHB5F9OH7WMJzYiXRkB16xw7/kpjG2G9sl03r12aGq67BHuBlyWtof9A8yUBiNvKbqhKpDQeMX0uZAhme1nJD0GLKWRyinrd29fsxp0p/ZWV1DsYC4p1f93cezyBMQiZzlMpnLRqs/sQDZDk9THJlDl13trk9hmfbYyAWPSgS8jRSE4sC4Z08ax2jRE06suBQuilJhPTZTGbjTcN545aGHxV3pCp1cD7D6kX9ncN03heRKzkPWjint9WvjM534FYaqggqcSG9vUsNNkSGv2RRyhmVALgMCYoLfDRiQtOWVqnclmbn6NZ4Nmi+4UNART8jX/zpFjyW4jvRSsXhc8cU6eT9y+cs+OCQoh964NY2HaRFCcaQHMGZe8DPCkvM0z/1ZAnZ2otbgSEkFZe+YirAI1hr7GV7C9zFlcn6nCvQDmPlJjdDWIIqnLEFrHkALUpLoqUqyIBwZVf5F3LC31FG6wOLefMhZK9VIK4Sqlrz/ZkI/65GAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_017Ny1BE2kCgjZhYUgn22xpr",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && ls -la && (which pdftotext; python -c \"import pypdf; print('pypdf', pypdf.__version__)\"; python -c \"import fitz; print('pymupdf')\") 2>&1",
+          "description": "List repo root and check PDF tools"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

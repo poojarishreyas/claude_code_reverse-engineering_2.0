@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "s-3850fb30be087d43",
+  "title": "make the prd.pdf to md Write the title in the predominant language of the session — a stray word or code token in ano...",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-opus-5-5",
+  "credential": "e40c4deaa1d5",
+  "startedAt": "2026-10-10T17:31:33.904Z",
+  "updatedAt": "2026-10-10T17:31:36.468Z",
+  "durationMs": 2564,
+  "requests": 1,
+  "errors": 0,
+  "events": 6,
+  "usage": {
+    "input": 1170,
+    "output": 23,
+    "cacheRead": 0,
+    "cacheCreation": 0
+  },
+  "messageIds": [
+    "3850fb30be087d4349346502"
+  ]
+}

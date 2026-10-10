@@ -1,0 +1,19 @@
+{
+  "id": "daa7c7f12b40c5a9dd385a1c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_017Ny1BE2kCgjZhYUgn22xpr",
+        "type": "tool_result",
+        "content": "total 1017\ndrwxr-xr-x 1 shrey 197609      0 Oct 10 23:00 .\ndrwxr-xr-x 1 shrey 197609      0 Oct 10 23:00 ..\ndrwxr-xr-x 1 shrey 197609      0 Oct 10 23:00 .git\ndrwxr-xr-x 1 shrey 197609      0 Oct 10 23:00 .github\n-rw-r--r-- 1 shrey 197609    366 Oct 10 23:00 .gitignore\n-rw-r--r-- 1 shrey 197609 992206 Oct 10 23:00 AIRcoin — Product Requirements Document.pdf\n-rw-r--r-- 1 shrey 197609   4585 Oct 10 23:00 CLAUDE.md\n-rw-r--r-- 1 shrey 197609   1020 Oct 10 23:00 README.md\ndrwxr-xr-x 1 shrey 197609      0 Oct 10 23:00 chain-market\ndrwxr-xr-x 1 shrey 197609      0 Oct 10 23:00 contracts-schema\n-rw-r--r-- 1 shrey 197609    757 Oct 10 23:00 docker-compose.yml\ndrwxr-xr-x 1 shrey 197609      0 Oct 10 23:00 infra\ndrwxr-xr-x 1 shrey 197609      0 Oct 10 23:00 miner-core\ndrwxr-xr-x 1 shrey 197609      0 Oct 10 23:00 vision-twin\n/mingw64/bin/pdftotext\npypdf 6.16.2\r\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\r\npymupdf",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "s-41886b560a0f8ed9",
+  "title": "make the prd.pdf to md",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-opus-5-5",
+  "credential": "e40c4deaa1d5",
+  "startedAt": "2026-10-10T17:31:34.253Z",
+  "updatedAt": "2026-10-10T17:31:42.441Z",
+  "durationMs": 8188,
+  "requests": 1,
+  "errors": 0,
+  "events": 6,
+  "usage": {
+    "input": 2,
+    "output": 291,
+    "cacheRead": 0,
+    "cacheCreation": 65652
+  },
+  "messageIds": [
+    "41886b560a0f8ed9f55d9875",
+    "87cb8595d6c5cb9eaf0fbfd6"
+  ]
+}
