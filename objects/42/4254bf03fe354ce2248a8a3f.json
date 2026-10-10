@@ -1,0 +1,15 @@
+{
+  "id": "4254bf03fe354ce2248a8a3f",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019cBHJUa6hCLBJYSsG7wtxw",
+        "type": "tool_result",
+        "content": "diff --git a/chain-market/contracts/deployments.json b/chain-market/contracts/deployments.json\nnew file mode 100644\nindex 0000000..b74ed4c\n--- /dev/null\n+++ b/chain-market/contracts/deployments.json\n@@ -0,0 +1,11 @@\n+{\n+  \"chainId\": 31337,\n+  \"deployer\": \"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266\",\n+  \"AIRToken\": \"0x5FbDB2315678afecb367f032d93F642f64180aa3\",\n+  \"TestINR\": \"0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512\",\n+  \"MinerRegistry\": \"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\",\n+  \"MintController\": \"0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9\",\n+  \"Marketplace\": \"0x5FC8d32690cc91D4c39d9d3abcBD16989F875707\",\n+  \"ComplianceRegistry\": \"0x0165878A594ca255338adfa4d48449f69242Eb8F\",\n+  \"deployedAt\": \"2026-10-10T14:27:36.646Z\"\n+}\n\\ No newline at end of file\ndiff --git a/chain-market/contracts/hardhat.config.ts b/chain-market/contracts/hardhat.config.ts\nnew file mode 100644\nindex 0000000..246a27e\n--- /dev/null\n+++ b/chain-market/contracts/hardhat.config.ts\n@@ -0,0 +1,30 @@\n+import { HardhatUserConfig } from \"hardhat/config\";\n+import \"@nomicfoundation/hardhat-toolbox\";\n+\n+const config: HardhatUserConfig = {\n+  solidity: {\n+    version: \"0.8.24\",\n+    settings: {\n+      optimizer: { enabled: true, runs: 200 },\n+      evmVersion: \"cancun\",\n+    },\n+  },\n+  networks: {\n+    hardhat: {\n+      chainId: 31337,\n+      mining: { auto: true, interval: 1000 },\n+    },\n+    localhost: {\n+      url: \"http://127.0.0.1:8545\",\n+      chainId: 31337,\n+    },\n+  },\n+  paths: {\n+    sources: \"./src\",\n+    tests: \"./test\",\n+    cache: \"./cache\",\n+    artifacts: \"./artifacts\",\n+  },\n+};\n+\n+export default config;",
+        "is_error": false
+      }
+    ]
+  }
+}
