@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-10T17:31:34.253Z |
 | requests | 23 (1 errored) |
-| tokens | in 48 · out 24,793 · cache read 1,957,278 · cache write 135,818 |
+| tokens | in 50 · out 25,899 · cache read 2,093,096 · cache write 136,283 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -2242,4 +2242,35 @@ validator/src/validator.ts:70:  | "calibration_mismatch"
 validator/src/validator.ts:71:  | "chain_error";
 validator/src/validator.ts:318:      return this.reject(minerId, epoch, "chain_error", `Chain error: ${msg}`);
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Umashankar built all of Workstream C, the whole chain side. PR #2 adds 67 files, all in `chain-market/`:
+
+| Part | What it does |
+|------|--------------|
+| **Smart contracts** (`contracts/`) | Six Solidity contracts, with 23 Hardhat tests according to the PR. `AIRToken` is the ERC-20, and only the mint controller can mint. `TestINR` is the mock rupee coin, with a faucet. `MinerRegistry` registers, suspends and revokes miners. `MintController` mints at most once per miner per epoch, up to a per-epoch cap, after checking the device signature on-chain. `Marketplace` holds AIR in escrow and sells it for tINR. `ComplianceRegistry` records company obligations and burns. There are also deploy and seed scripts for a local Hardhat chain. |
+| **Validator** (`validator/`) | Serves `POST /v1/attestations` (C3). It rejects bad attestations with the agreed reason codes: malformed, unknown or inactive miner, epoch already minted, sticker problems, GPS outside the geofence, amount over cap, bad signature. Attestations that pass are sent to `mintForEpoch` on-chain. |
+| **Indexer** (`indexer/`) | Watches contract events and serves C4: REST balances and mint history, plus a WebSocket stream of `mint`, `transfer`, `trade` and `burn` events. |
+| **C4 mock** (`mock/`) | A stand-in C4 server on port 3004, so Omkar's twin can be built without the real chain running. |
+| **Web app** (`web/`) | React + shadcn UI with three portals (citizen, company, government admin), built-in demo wallets, the marketplace, burn certificates, an event stream and an attestation simulator. |
+
+**What matters for your miner code:** the validator builds the signed digest exactly as `contracts-schema/README.md#signing-c3` defines it, `keccak256(abi.encodePacked(minerIdHash, uint64 epoch, uint256 amount, evidence_hash))` with EIP-191 signing. The contract repeats that check on-chain. So if your miner signs per the spec, its attestations should be accepted.
+
+**Gaps worth raising with him:**
+- **Evidence hash isn't checked.** The spec says the validator recomputes `evidence_hash` from the payload (JCS + keccak). His code never does, so `evidence_hash_mismatch` can never fire. As it stands, the signature proves the amount and epoch, but nothing ties them to the plants, GPS or sensor data in the payload.
+- **Calibration hash isn't checked either,** so `calibration_mismatch` can't fire.
+- **His README ticks every Phase 2 and 3 item,** including "first AIRcoin minted from camera proof". That can't be true yet, because there's no live miner-core or vision connected. Everything so far only runs on a local chain.
+
+This is his folder, so I haven't changed anything. Raise these at the sync, or I can draft a short note for you to send him.
+
+_stop `end_turn` · 13.10s (ttft 10.84s) · in 2 · out 1,106 · cache r135,818/w465_
 
