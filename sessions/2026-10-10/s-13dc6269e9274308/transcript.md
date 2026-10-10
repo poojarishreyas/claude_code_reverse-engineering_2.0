@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-10T18:55:50.367Z |
 | requests | 32 |
-| tokens | in 762 · out 36,968 · cache read 3,790,379 · cache write 100,253 |
+| tokens | in 764 · out 37,836 · cache read 3,948,578 · cache write 100,802 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -4176,4 +4176,36 @@ I'm on the last step: writing the brief for Omkar. Everything else for this requ
 Once the brief is written I'll report back.
 
 _stop `end_turn` · 13.04s (ttft 12.04s) · in 700 · out 905 · cache r152,629/w0_
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+I wrote a brief for Omkar at `miner-core/docs/handoff-vision-twin.md`, with a prompt at the end he can paste into his own Claude Code. I kept it in your folder because the repo rules don't let me edit `vision-twin/`. He just needs to pull the repo; nothing is committed yet.
+
+**What the brief tells Omkar:**
+- **What miner-core needs from his camera feed (C1):** each field, and how miner-core turns it into money. My mock had to assume these behaviours, so the brief makes them explicit:
+  - Send all 20 tags in every message, including ones he can't see.
+  - `species` is the plant enrolled for that tag and never changes. A swapped plant shows up as low `species_conf` instead.
+  - A plant counts as suspect and earns nothing if `species_conf` is below 0.5 or `alive_score` is below 0.3.
+  - Payout is directly proportional to `leaf_area_cm2`, so he must smooth it.
+  - `frame_hash` must change every frame; 5 identical hashes in a row means a frozen camera.
+  - Timestamps must be within 5 s of the miner's clock.
+- **The anti-cheat demo cases:** a table of the physical action, the C1 he should send, and what miner-core does (removed plant, plastic plant, swapped plant, unknown sticker, frozen camera).
+- **What his twin receives:** real sample telemetry and epoch messages from my code, and Umashankar's API on port 3002 (mock on 3004). It also covers the commands to run all the mocks, and the shared dark theme and fonts so it looks like the wallet and marketplace.
+- **Phase 1 build order**, with a "done when" test for his C1.
+
+I also added `python -m minerd c1check` to miner-core so Omkar can test his output against the real miner code, from a recording file or live over MQTT (`--mqtt`). For each plant it prints status, confidence, liveness, leaf area, AIR per hour and whether it gets paid, plus the anti-cheat flags and any schema errors.
+
+I tested it on the contracts example and on a 90 s recording with plant 7 removed and plant 12 fake. It showed 18/20 paid, with the right flags on 7 and 12. All 34 tests still pass, and the README links the brief and the new command.
+
+I can also publish the brief as a shareable web page if you'd rather send Omkar a link.
+
+_stop `end_turn` · 10.30s (ttft 9.79s) · in 2 · out 868 · cache r158,199/w549_
 
