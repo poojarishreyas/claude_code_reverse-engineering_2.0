@@ -1,0 +1,15 @@
+{
+  "id": "f4cd7884a968996cc803a1da",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01D7eew2ftUygjTPNpBHuntG",
+        "type": "tool_result",
+        "content": "ok   invalid examples\\invalid\\c4-chain-event.burn-with-trade-data.json\r\nok   invalid examples\\invalid\\registry.sticker-reused.json\r\nok   valid   data\\species-catalogue.json\r\n\r\n21/21 checks passed\r\nERROR tests/test_recorded_fallback.py::test_recorded_fallback_is_valid_c2 - P...\r\nERROR tests/test_uplink.py::test_network_failure_stays_queued - PermissionErr...\r\nERROR tests/test_uplink.py::test_success_is_removed_from_pending_count - Perm...\r\nERROR tests/test_uplink.py::test_epoch_messages_rebuild_persisted_final_status\r\n40 passed, 1 warning, 4 errors in 3.73s",
+        "is_error": false
+      }
+    ]
+  }
+}

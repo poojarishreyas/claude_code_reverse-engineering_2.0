@@ -1,0 +1,19 @@
+{
+  "id": "268a5a31f3d0a04ad6aeda23",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_019WqYz3YQJuB3vVzSxGiebo",
+        "type": "tool_result",
+        "content": "..\\..\\..\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\_pytest\\tmpdir.py:300: in tmp_path\n    path = _mk_tmp(request, tmp_path_factory)\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\_pytest\\tmpdir.py:287: in _mk_tmp\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\_pytest\\tmpdir.py:136: in mktemp\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\_pytest\\tmpdir.py:117: in _ensure_relative_to_basetemp\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\_pytest\\tmpdir.py:213: in getbasetemp\nE       PermissionError: [WinError 5] Access is denied: 'C:\\\\Users\\\\shrey\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-shrey'\n..\\..\\..\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\_pytest\\pathlib.py:175: PermissionError",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

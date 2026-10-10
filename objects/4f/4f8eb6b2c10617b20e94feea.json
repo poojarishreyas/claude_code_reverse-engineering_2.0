@@ -1,0 +1,19 @@
+{
+  "id": "4f8eb6b2c10617b20e94feea",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01VTed12LHSEJqGWc1mQLz3c",
+        "type": "tool_result",
+        "content": "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\r\n44 passed, 1 warning in 2.78s",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
