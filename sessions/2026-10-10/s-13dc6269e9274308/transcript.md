@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-10T18:55:50.367Z |
 | requests | 15 |
-| tokens | in 28 · out 18,397 · cache read 1,391,426 · cache write 64,273 |
+| tokens | in 30 · out 19,588 · cache read 1,513,645 · cache write 64,732 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -2291,4 +2291,39 @@ _max_tokens 128,000 · streaming · 38 messages_
 
 21/21 checks passed
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Phase 1 of miner-core is done, and every Phase 1 checklist item is ticked in the README. All 34 tests pass and `validate.py` passes 21/21. The C1/C2 mocks are tested without a real broker, the C3 POST has never reached a running validator, and the coefficient table still needs the team to agree. Nothing outside `miner-core/` was changed, and nothing is committed.
+
+**Checklist status:**
+- **One command makes a valid signed attestation:** `python -m minerd attest --mock --scenario festival_smog --out out/att.json` produces one that passes the C3 schema check and `verify`. It is signed by the registered device address `0x61D1…12C6`.
+- **Scenario moves the estimate the right way:** AIR per epoch rises with pollution: rain_washout 0.007 → clean_morning 0.012 → rush_hour 0.031 → festival_smog 0.052. All stay under the caps (0.01 per plant, 0.2 per miner, and the validator's 1 AIR).
+- **Tampering fails the check:** changing the amount, epoch, a plant's AIR, GPS, a signature byte, sensors, frame hashes, flags, calibration hash or species all fail `verify`. So does a signature from a different key.
+- **Mock emitters:**
+  - `mock/c1_vision.py` stands in for Omkar's camera feed. It can simulate a removed plant, a fake plant, a swapped species, an unknown sticker, a frozen camera, and a burst of new plants.
+  - `mock/c2_emitter.py` sends telemetry every second and the epoch message as it moves pending → submitted → accepted. It never calls the validator, and its transaction hash is fake.
+  - `mock/c3_emitter.py` prints a signed attestation or POSTs it to the validator, with a `--tamper` option.
+- **Coefficient table v0:** the numbers are in `config/coefficients-v0.json`. Sources and reasoning are in `docs/catalogue-v0-proposal.md`.
+
+**Not tested:**
+- Docker and mosquitto aren't installed, so there was no MQTT broker. I tested the C1/C2 mocks by recording what they publish over a 70 s real-time run instead. All 76 C2 messages and the C1 frames passed their schemas.
+- The validator wasn't running, so the C3 POST only got "connection refused". The attestation it would send verifies locally.
+
+**To raise at the team sync:**
+1. **Empty catalogue coefficients:** the species catalogue in `contracts-schema/` has 17 empty (null) coefficients. miner-core fills them from its own file for now and logs a warning. The team needs to agree on values, then freeze the catalogue at the Phase 2 gate.
+2. **`sticker_set_hash` ambiguity:** Umashankar's `seed.ts` hashes the sticker IDs at 2 bytes each, giving `0x0d51…`. The registry example in `contracts-schema/` has `0x7528…`, which matches neither encoding. miner-core uses the 2-byte form so it agrees with what's deployed on chain. The schema description and example should be fixed together.
+3. **Validator hash checks:** Umashankar's validator doesn't recompute `evidence_hash` or `calibration_hash`, so a "calibration mismatch" rejection can never actually fire. That's his call.
+
+Phase 2 (the live daemon on Omkar's real camera feed, the offline queue, and an end-to-end mint) waits for Gate 1.
+
+_stop `end_turn` · 12.52s (ttft 9.06s) · in 2 · out 1,191 · cache r122,219/w459_
 
