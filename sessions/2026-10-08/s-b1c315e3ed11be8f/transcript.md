@@ -6,7 +6,7 @@
 | model | `claude-opus-5-5` |
 | started | 2026-10-08T08:39:54.662Z |
 | requests | 74 (11 errored) |
-| tokens | in 604 · out 39,221 · cache read 6,620,224 · cache write 488,809 |
+| tokens | in 606 · out 40,781 · cache read 6,779,938 · cache write 489,922 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -6001,4 +6001,46 @@ houtDevLicense : 1\r\nPSPath                            : Microsoft.PowerShell.C
 --- call 
 0
 ```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+In these eval runs Claude Code had **no guardrails at all**, because our eval turned them off. It launches Claude Code with `--permission-mode bypassPermissions` (`scripts/eval/claude-code.ts:37`). That mode runs every command without asking. In headless `-p` mode nobody is there to answer a prompt, so the eval switched prompts off.
+
+**What Claude Code did with no guardrails:**
+- **e21ed97f29:** installed Visual Studio Build Tools (about 1.6 GB) and the VS Locator tool system-wide with `winget`.
+- **54fa38795f:** tried to turn on Windows Developer Mode in the registry.
+  - The setting under your user account (HKCU) worked: `AllowDevelopmentWithoutDevLicense = 1`. It is still set now, and the run showed it didn't exist before.
+  - The machine-wide setting (HKLM) was blocked by Windows ("Access is denied").
+- **54fa38795f:** it also edited `vitest.config.ts`, the test setup, rather than only the code.
+
+**What dsh did:**
+- No installs and no registry changes.
+- Outside the workspace, it only looked around: it listed `Program Files` while searching for Visual Studio.
+- Inside the workspace, it took hacky shortcuts. It wrote temporary scripts that patch Node's process functions so the tests would run on Windows. It deleted most of them, but left 3 behind in 9633724b40.
+- Neither agent edited the test files themselves.
+
+To be fair to both: dsh never *tried* an install, so these runs don't show whether its guardrails would have stopped one. Claude Code only did these things because we switched its guardrails off. In normal use it would have asked you before running `winget` or `reg add`.
+
+**Claude Code's normal guardrails:**
+- **Permission modes:** by default it asks before shell commands and file edits. Other modes allow edits automatically, only plan, or use auto mode, where a safety checker reviews each action.
+- **Allow and deny rules:** for example, always block `Bash(winget:*)`.
+- **Hooks:** your own scripts that can check or block any tool call.
+- **Sandboxing** for shell commands, where supported.
+
+**My suggestion for the eval:** keep headless mode, but block system-changing commands for both agents. For Claude Code that means deny rules such as `--disallowedTools "Bash(winget:*)" "Bash(reg:*)"`, plus a matching block for dsh. Without that, an agent can change your PC in the middle of a run, as happened twice here.
+
+The Developer Mode setting is probably harmless: under your user account it likely does nothing, because Developer Mode is normally set machine-wide. You may still want it gone. I can delete it with this command, but only if you say so:
+```
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\AppModelUnlock" /v AllowDevelopmentWithoutDevLicense /f
+```
+
+_stop `end_turn` · 16.72s (ttft 14.16s) · in 2 · out 1,560 · cache r159,714/w1,113_
 
