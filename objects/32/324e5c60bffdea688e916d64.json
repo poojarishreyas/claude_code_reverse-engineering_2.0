@@ -1,0 +1,17 @@
+{
+  "id": "324e5c60bffdea688e916d64",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "who is building digital twin of the miner?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

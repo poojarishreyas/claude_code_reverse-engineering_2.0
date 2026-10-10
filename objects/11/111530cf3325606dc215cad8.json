@@ -1,0 +1,15 @@
+{
+  "id": "111530cf3325606dc215cad8",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01JBjjHerjuLnkqg6mWK14ay",
+        "type": "tool_result",
+        "content": "vision-twin/README.md",
+        "is_error": false
+      }
+    ]
+  }
+}
