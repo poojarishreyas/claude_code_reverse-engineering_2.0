@@ -1,9 +1,13 @@
 # Session index
 
-_57 captured sessions, newest first. Updated 2026-10-10T19:41:06.292Z._
+_59 captured sessions, newest first. Updated 2026-10-10T21:17:00.132Z._
 
 | updated | session | model | reqs | in | out | cache read | title |
 | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
+| 2026-10-10 21:16 | [`s-73ca49a3e1255e36`](sessions/2026-10-10/s-73ca49a3e1255e36/transcript.md) | claude-opus-5-5 | 1 | 0 | 0 | 0 | • The verified PR boundary is ready: 44 miner tests, 23 contract tests, 5 live integration |
+| 2026-10-10 21:16 | [`s-566a336c10f5b2d3`](sessions/2026-10-10/s-566a336c10f5b2d3/transcript.md) | claude-opus-5-5 | 1 | 2,467 | 24 | 0 | • The verified PR boundary is ready: 44 miner tests, 23 contract tests, 5 live integration |
+| 2026-10-10 21:16 | [`s-277d9545ac40f58b`](sessions/2026-09-24/s-277d9545ac40f58b/transcript.md) | claude-opus-5-5 | 11 | 0 | 0 | 0 | quota |
+| 2026-10-10 21:16 | [`misc-2026-10-10`](sessions/2026-10-10/misc-2026-10-10/transcript.md) | - | 3 | 0 | 0 | 0 | Ancillary requests |
 | 2026-10-10 19:39 | [`s-13dc6269e9274308`](sessions/2026-10-10/s-13dc6269e9274308/transcript.md) | claude-opus-5-5 | 33 | 768 | 38,971 | 4,107,326 | This session is being continued from a previous conversation that ran out of context. The  |
 | 2026-10-10 18:55 | [`s-cf1cae8ca1144406`](sessions/2026-10-10/s-cf1cae8ca1144406/transcript.md) | claude-opus-5-5 | 43 | 3,518 | 65,507 | 3,811,751 | This session is being continued from a previous conversation that ran out of context. The  |
 | 2026-10-10 18:15 | [`s-823364eb81feb99b`](sessions/2026-10-10/s-823364eb81feb99b/transcript.md) | claude-opus-5-5 | 1 | 755 | 19 | 0 | # Plan: build Workstream B, `miner-core/` (Shreyas) ## Context The user wants to build Shr |
@@ -11,8 +15,6 @@ _57 captured sessions, newest first. Updated 2026-10-10T19:41:06.292Z._
 | 2026-10-10 18:10 | [`s-c6b5b2ed45b2eb51`](sessions/2026-10-10/s-c6b5b2ed45b2eb51/transcript.md) | claude-opus-5-5 | 1 | 0 | 0 | 0 | # AIRcoin — Product Requirements Document Oct 10, 2026 · @omkar > Markdown conversion of ` |
 | 2026-10-10 18:10 | [`s-41886b560a0f8ed9`](sessions/2026-10-10/s-41886b560a0f8ed9/transcript.md) | claude-opus-5-5 | 42 | 8,788 | 38,678 | 4,859,562 | make the prd.pdf to md |
 | 2026-10-10 17:31 | [`s-3850fb30be087d43`](sessions/2026-10-10/s-3850fb30be087d43/transcript.md) | claude-opus-5-5 | 1 | 1,170 | 23 | 0 | make the prd.pdf to md Write the title in the predominant language of the session — a stra |
-| 2026-10-10 17:31 | [`s-277d9545ac40f58b`](sessions/2026-09-24/s-277d9545ac40f58b/transcript.md) | claude-opus-5-5 | 10 | 0 | 0 | 0 | quota |
-| 2026-10-10 17:31 | [`misc-2026-10-10`](sessions/2026-10-10/misc-2026-10-10/transcript.md) | - | 2 | 0 | 0 | 0 | Ancillary requests |
 | 2026-10-10 09:52 | [`s-b1c315e3ed11be8f`](sessions/2026-10-08/s-b1c315e3ed11be8f/transcript.md) | claude-opus-5-5 | 81 | 808 | 43,486 | 7,763,121 | This session is being continued from a previous conversation that ran out of context. The  |
 | 2026-10-08 08:39 | [`s-98e6c8d8062c4a98`](sessions/2026-10-07/s-98e6c8d8062c4a98/transcript.md) | claude-opus-5-5 | 2 | 0 | 0 | 0 | /** * File-finding evaluation runner. * * For each task mined from a repository's bug-fix  |
 | 2026-10-08 08:39 | [`s-029ad50047a1f638`](sessions/2026-10-08/s-029ad50047a1f638/transcript.md) | claude-opus-5-5 | 1 | 0 | 0 | 0 | /** * pi-ai assistant event translation into the Harness streaming protocol. * * pi-ai too |
@@ -62,4 +64,4 @@ _57 captured sessions, newest first. Updated 2026-10-10T19:41:06.292Z._
 | 2026-09-24 16:54 | [`s-b8e7b2ce4410210f`](sessions/2026-09-24/s-b8e7b2ce4410210f/transcript.md) | claude-opus-5-5 | 1 | 1,168 | 16 | 0 | url to acess wbpge Write the title in the predominant language of the session — a stray wo |
 | 2026-09-24 16:53 | [`misc-2026-09-24`](sessions/2026-09-24/misc-2026-09-24/transcript.md) | - | 2 | 0 | 0 | 0 | Ancillary requests |
 
-**Totals** — 1,127 requests · 782,290 input · 601,445 output · 104,654,305 cache read
+**Totals** — 1,131 requests · 784,757 input · 601,469 output · 104,654,305 cache read

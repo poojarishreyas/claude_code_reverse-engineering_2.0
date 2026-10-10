@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "s-73ca49a3e1255e36",
+  "title": "• The verified PR boundary is ready: 44 miner tests, 23 contract tests, 5 live integration tests, and a two-hour acce...",
+  "source": "claude-cli/2.1.282 (external, cli)",
+  "model": "claude-opus-5-5",
+  "credential": "e40c4deaa1d5",
+  "startedAt": "2026-10-10T21:16:54.684Z",
+  "updatedAt": "2026-10-10T21:17:02.698Z",
+  "durationMs": 8014,
+  "requests": 1,
+  "errors": 0,
+  "events": 6,
+  "usage": {
+    "input": 2,
+    "output": 414,
+    "cacheRead": 0,
+    "cacheCreation": 67212
+  },
+  "messageIds": [
+    "73ca49a3e1255e360bb27aa5",
+    "f5d99dec9c5db717733a1c68"
+  ]
+}
