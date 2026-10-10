@@ -1,0 +1,19 @@
+{
+  "id": "83e1d4d08d5186b8a1613811",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01PCCMheswYmHjNSBNUBmrC6",
+        "type": "tool_result",
+        "content": "..................................                                       [100%]\r\n34 passed in 1.72s",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

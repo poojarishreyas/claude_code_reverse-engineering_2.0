@@ -1,0 +1,15 @@
+{
+  "id": "6b5484b36b6e339de0f7abb1",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01TjSCMVk9AshpVmpGBk9RN4",
+        "type": "tool_result",
+        "content": " 18  bougainvillea           present    0.91   0.86     436.0    0.1869  yes\r\n 19  yellow_oleander         present    0.91   0.86     443.0    0.1899  yes\r\n  7  (never reported)        -                                           NO\r\n\r\nflags raised: low_liveness(12)\r\nB would pay 18/20 registered plants (rush_hour sensors, simulated); schema-valid: yes\r\n90 messages, 0 rejected\r\n\r\ntag  species                 status     conf  alive  leaf cm2     AIR/h  paid\r\n  0  snake_plant             present    0.93   0.86     311.0    0.0662  yes\r\n  1  peace_lily              present    0.90   0.88     316.7    0.0527  yes\r\n  2  bamboo_palm             present    0.91   0.87     324.8    0.0536  yes\r\n  3  red_edged_dracaena      present    0.87   0.83     331.9    0.0524  yes\r\n  4  janet_craig_dracaena    present    0.90   0.88     337.3    0.0565  yes\r\n  5  english_ivy             present    0.90   0.85     346.7    0.0563  yes\r\n  6  chinese_evergreen       present    0.93   0.90     354.5    0.0607  yes\r\n  7  florists_chrysanthemum  removed    0.91   0.00       0.0    0.0000  NO\r\n  8  weeping_fig             present    0.93   0.87     363.8    0.0603  yes\r\n  9  money_plant             present    0.89   0.86     373.6    0.0611  yes\r\n 10  spider_plant            present    0.92   0.86     380.1    0.0619  yes\r\n 11  aloe_vera               present    0.92   0.88     387.3    0.0841  yes\r\n 12  areca_palm              suspect    0.92   0.12     393.6    0.0000  NO\r\n 13  boston_fern             present    0.89   0.86     399.7    0.0654  yes\r\n 14  tulsi                   present    0.90   0.84     406.3    0.1611  yes\r\n 15  hibiscus                present    0.93   0.88     414.9    0.1827  yes\r\n 16  neem                    present    0.92   0.85     420.9    0.1795  yes\r\n 17  shisham                 present    0.91   0.87     430.4    0.1876  yes\r\n 18  bougainvillea           present    0.92   0.89     435.2    0.1940  yes\r\n 19  yellow_oleander         present    0.93   0.93     445.2    0.2076  yes\r\n\r\nflags raised: low_liveness(12), plant_missing(7), plant_removed(7)\r\nB would pay 18/20 registered plants (rush_hour sensors, simulated); schema-valid: yes",
+        "is_error": false
+      }
+    ]
+  }
+}
