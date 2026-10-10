@@ -1,0 +1,27 @@
+{
+  "id": "e7f176661331d994151e3b24",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_0169So9cujqqkmJrTzfCU2H9",
+        "name": "Bash",
+        "input": {
+          "command": "S=C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad; cd $S; f=clean-claude-code/54fa38795f.events.jsonl; for i in $(grep -n -i 'AppModelUnlock' $f | cut -d: -f1); do echo \"--- call $(sed -n \"${i}p\" $f | grep -o '\"command\":\"[^\"]\\{0,90\\}')\"; sed -n \"$((i+1))p\" $f | grep -o '\"content\":\"[^\"]\\{0,160\\}' | head -1; done; grep -c -i 'reg add\\|reg.exe add' clean-dsh/54fa38795f.events.jsonl",
+          "description": "Show each registry command and its result in order"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

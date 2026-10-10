@@ -1,0 +1,23 @@
+{
+  "id": "25e3387e20d7f91aff4d2156",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01XkS27wKSVfUGbuJ8xbGToG",
+        "name": "Bash",
+        "input": {
+          "command": "S=C:/Users/shrey/AppData/Local/Temp/claude/C--Users-shrey-Desktop-Elemental-harness/48fd0b89-0bb7-4d72-841b-60770e4d02b7/scratchpad; cd $S; grep -n 'reg add' clean-claude-code/54fa38795f.events.jsonl | cut -c1-500; n=$(grep -n 'reg add' clean-claude-code/54fa38795f.events.jsonl | cut -d: -f1 | tr '\\n' ' '); for i in $n; do sed -n \"$((i+1))p\" clean-claude-code/54fa38795f.events.jsonl | cut -c1-300; done; reg query 'HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock' 2>&1 | head",
+          "description": "See what registry change Claude Code made and if it is still set"
+        }
+      }
+    ]
+  }
+}

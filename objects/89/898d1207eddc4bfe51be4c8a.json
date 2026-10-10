@@ -1,0 +1,15 @@
+{
+  "id": "898d1207eddc4bfe51be4c8a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01XkS27wKSVfUGbuJ8xbGToG",
+        "type": "tool_result",
+        "content": "107:{\"type\":\"tool/call\",\"data\":{\"name\":\"bash\",\"arguments\":{\"command\":\"reg add \\\"HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\AppModelUnlock\\\" /t REG_DWORD /f /v \\\"AllowDevelopmentWithoutDevLicense\\\" /d 1\",\"description\":\"Enable Developer Mode in HKCU\"}}}\n110:{\"type\":\"tool/call\",\"data\":{\"name\":\"bash\",\"arguments\":{\"command\":\"reg add \\\"HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\AppModelUnlock\\\" /v \\\"AllowDevelopmentWithoutDevLicense\\\" /t REG_DWORD /d 1 /f\",\"description\":\"Add AllowDevelopmentWithoutDevLicense in HKCU\"}}}\n{\"type\":\"tool/result\",\"data\":{\"message\":{\"content\":[{\"content\":\"Exit code 1\\nERROR: Invalid syntax.\\r\\nType \\\"REG ADD /?\\\" for usage.\"}]}}}\n{\"type\":\"tool/result\",\"data\":{\"message\":{\"content\":[{\"content\":\"Exit code 1\\nERROR: Invalid syntax.\\r\\nType \\\"REG ADD /?\\\" for usage.\"}]}}}\n\r\nHKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\r\n    AllowDevelopmentWithoutDevLicense    REG_DWORD    0x1",
+        "is_error": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "963b8dd28cc2c0c730cf42bc",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01DUZhsLoB1QPDt9dGyEo2qA",
+        "type": "tool_result",
+        "content": "clean-claude-code/54fa38795f.events.jsonl\nclean-dsh/54fa38795f.events.jsonl\ngem-dsh/54fa38795f.events.jsonl\n{\"type\":\"tool/call\",\"data\":{\"name\":\"bash\",\"arguments\":{\"command\":\"reg query \\\"HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\AppModelUnlock\\\"\",\"description\":\"Query AppModelUnlock in HKCU\"}}}\n{\"type\":\"tool/call\",\"data\":{\"name\":\"bash\",\"arguments\":{\"command\":\"MSYS_NO_PATHCONV=1 reg.exe add \\\"HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\AppModelUnlock\\\" /v \\\"AllowDevelopmentWithoutDevLicense\\\" /t REG_DWORD /d 1 /f\",\"description\":\"Enable Developer mode in HKCU with MSYS_NO_PATHCONV\"}}}\n{\"type\":\"tool/call\",\"data\":{\"name\":\"bash\",\"arguments\":{\"command\":\"MSYS_NO_PATHCONV=1 reg.exe add \\\"HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\AppModelUnlock\\\" /v \\\"AllowDevelopmentWithoutDevLicense\\\" /t REG_DWORD /d 1 /f\",\"description\":\"Enable Developer mode in HKLM\"}}}\n{\"type\":\"tool/call\",\"data\":{\"name\":\"bash\",\"arguments\":{\"command\":\"powershell.exe -NoProfile -Command \\\"Get-ItemProperty -Path 'HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\AppModelUnlock' -ErrorAction SilentlyContinue; Get-ItemProperty -Path 'HKCU:\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\AppModelUnlock' -ErrorAction SilentlyContinue\\\"\",\"description\":\"Check AppModelUnlock in re\nhoutDevLicense : 1\\r\\nPSPath                            : Microsoft.PowerShell.Core\\\\Registry::HKEY_CURRENT_USER\\\\Software\\\\Microsoft\\\\Windows\\\\Cu\\r\\n                                    rrentVersion\\\\AppModelUnlock\\r\\nPSParentPath                      : Microsoft.PowerShell.Core\\\\Registry::HKEY_CURRENT_USER\\\\Software\\\\Microsoft\\\\Windows\\\\Cu\\r\\n                                    rrentVersion\\r\\nPS\n./clean-claude-code/54fa38795f.events.jsonl",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
