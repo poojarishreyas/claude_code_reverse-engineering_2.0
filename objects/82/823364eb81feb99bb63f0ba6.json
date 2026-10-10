@@ -1,0 +1,13 @@
+{
+  "id": "823364eb81feb99bb63f0ba6",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "<conversation>\n# Plan: build Workstream B, `miner-core/` (Shreyas)\n\n## Context\nThe user wants to build Shreyas's part of AIRcoin. Workstream B is the \"miner brain\". It:\n- reads sensors (simulated), GPS and C1 vision events;\n- estimates the pollution each tagged plant removes, using the species catalogue;\n- closes a 60 s epoch, signs a C3 attestation and posts it to the validator;\n- publishes C2 telemetry (1/s) and the epoch summary (retained) for the twin and the wallet.\n\n`miner-core/` currently holds only a README. Umashankar's validator (`chain-market/validator`, port 3001) is already merged. It checks the signature with the spec digest, the stickers, the geofence and a per-epoch cap of 1 AIR. It does not recompute evidence_hash or calibration_hash. The demo device key for miner-001 is in `chain-market/contracts/seed-data.json`.\n\nConstraints:\n- Only `miner-core/` is edited.\n- `contracts-schema/` is frozen: we read it, never edit it.\n\n## Blocker to raise, not fix\n`contracts-schema/data/species-catal\n</conversation>"
+      }
+    ]
+  }
+}

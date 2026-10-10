@@ -1,0 +1,27 @@
+{
+  "id": "36fc033fa91d35b3dceffa20",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSrwcKEAgSGAI4AUIIdGhpbmtpbmcSDL05PgJoZELYnLdz5hoMjIZj8Ede2UsrGk8bIjCMS1m8pTuy/+236tWNnSxrVw4lcprmtyLJFlQXrXruaYdC0mzEdFiavOgir9zrV6IqzAY1+wvhHA5fZVaxoHcvIfHvfatY86eX11ys3U2ob2aaQV5qFUOsm+sD3qEc7yzpMegRL3z1BQsaJ+wZJmZsO/gYGFpqNGgdwqLixHKeigWo62HrjNZ5YJE+g1d0XeCYvAnwxd7raWGKpRPa/PjivAWa1mgvAKpCyq1kAvc6UMrpkV7+PYcJzdfZ0YujReHcZiUrX/gHlaSQwUcIgtQtjWIxKqP07Hv8C5evOenwit2mi52pvKUaCpNg4/PNESeENjqCqSJlWDTTIORqTsQUwC8HdwBGGarB9xOWfIHWImaQubugnhCsQjGnm/CILRRlichiortBUa4WXcVpEQ6JW90a2XVffM7w0ad6ww/OsUGPa6AbvzyPeNihQv1ZAp7j90KaMrYsKOW+qxERJEGmdYpOG8kAJYXrfO2uVcXlFvTThi/7taHqqFcXPv8D3qZ56XH0ehShQ7II7PYh7yWkCozA2Cd2NoPv+63w8Ly+DyYuNukvdgz7GWs5XxH8kvlqEzHfsu0PJ193/fMHkEHxm+FrNfWhKtyk1X8z+YuR6z1goRyHQZNGjPhbCh471O+F4bcjzi5aNmvPAMsSmDuIB2MtSYmyxlWO90VCjfM+BOyIFvFabRZqVlZvXRSVU10jncWSb75FCWcUhy5/jspAPatiIkuuaLEDCzeXq/vPGh8f2E6ZI1fEHNuEeXLAiDqgxxvWIKYJTk2r+1yrd6hhSdyphaCdR1z1S402W3UlPTqMAcYYEOa7xocfMIrJ2Ly2asdTVCnz234iQMbRHqLQzmjDI0NZmhE5Kc5HZG7833JTJSHei8WxHJ5O7sGScVdmGyluSnyB74hEFF9IMSbIj5krrs0Ba3b98eTHTAAgE1N6ZkzLqMWw/BF8zk7kRzSPDQSYyA22A23fAirWEt1MQOvlAueNK87JGEU+vdOBGpgjTja0rCq3jjBEUpV50+Nhbz0WPm9KzKz1+cmCRlgC5GldIgCKdHc6jsaJP/9na9JEyzhRp0J4/c0/pK1lxla7lG0JbIN0DgcthRfwPkjeXraW3z+r4Wj0IlHBKkNlByPl/BLt5eGuH9DrbcP1gplsSRBQpvY6EOBa9p67hDTzVRyDbbLgTB6vzjXsPIfeGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01BgnJ2ZBbB4CaGfykJfqbhk",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && sed -n 1,68p chain-market/validator/src/server.ts; grep -n \"registry\\|seed\" chain-market/validator/src/validator.ts | head; ls chain-market/scripts chain-market/mock; cat chain-market/package.json",
+          "description": "See which registry the validator loads"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

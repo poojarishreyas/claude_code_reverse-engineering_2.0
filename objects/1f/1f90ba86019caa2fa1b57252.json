@@ -1,0 +1,19 @@
+{
+  "id": "1f90ba86019caa2fa1b57252",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01Jg9K9fiYChXa2ZG7MrKpUs",
+        "name": "ExitPlanMode",
+        "input": {},
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

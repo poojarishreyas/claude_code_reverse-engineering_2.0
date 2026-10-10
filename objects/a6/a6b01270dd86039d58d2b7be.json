@@ -1,0 +1,15 @@
+{
+  "id": "a6b01270dd86039d58d2b7be",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01Jg9K9fiYChXa2ZG7MrKpUs",
+        "name": "ExitPlanMode",
+        "input": {}
+      }
+    ]
+  }
+}
