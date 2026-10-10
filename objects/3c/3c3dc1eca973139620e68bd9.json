@@ -1,0 +1,17 @@
+{
+  "id": "3c3dc1eca973139620e68bd9",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core (was C:\\Users\\shrey\\Desktop\\AIRcoin)\n\nNote: C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\tests\\test_signing.py changed on disk since you last read it. That's usually deliberate, so take it as the current state rather than reverting it; if the change looks wrong, say so rather than undoing it yourself — otherwise no need to call it out. Here are the relevant changes (shown with line numbers):\n46\t    from eth_account import Account\n47\t    from minerd.signer import Signer\n48\t    other = Signer(Account.create().key.hex()).sign({k: v for k, v in attestation.items()\n49\t                                                     if k not in (\"evidence_hash\", \"signature\")})\n50\t    assert verify(other, device_address) == [\"bad_signature\"]\n51\t\n52\t\n53\tdef test_sticker_set_hash_matches_chain_seed():\n54\t    # chain-market/contracts/scripts/seed.ts: keccak256(solidityPacked(uint16[] ...)) of tags 0..19\n55\t    assert sticker_set_hash(list(range(20))).startswith(\"0x0d5181b9\")\n\nNote: C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\tests\\test_tracker.py changed on disk since you last read it. That's usually deliberate, so take it as the current state rather than reverting it; if the change looks wrong, say so rather than undoing it yourself — otherwise no need to call it out. Here are the relevant changes (shown with line numbers):\n1\tfrom minerd.tracker import Tracker\n2\tfrom simulator.plants import MockVision\n3\t\n4\tTAGS = list(range(20))  # registry miner-001: tags 0..19\n5\tT0 = 1_791_600_000_000\n6\t\n7\t\n8\tdef feed(tracker, vision, start_s, end_s):\n9\t    for s in range(start_s, end_s):\n10\t        t = T0 + s * 1000\n11\t        tracker.ingest(vision.message(t), t)\n12\t\n...\n34\t    assert status(tracker, 1, 13) == \"missing\"\n35\t    assert status(tracker, 1, 63) == \"removed\"\n36\t\n37\t\n38\tdef test_fake_and_swapped_plants_are_suspect():\n39\t    tracker, vision = Tracker(TAGS), MockVision(\"miner-001\", TAGS, seed=1)\n40\t    feed(tracker, vision, 0, 5)\n41\t    vision.faults.fake = {12}\n42\t    other = \"neem\" if vision.message(T0)[\"plants\"][7][\"species\"] != \"neem\" else \"tulsi\"\n43\t    vision.faults.swapped = {7: other}\n44\t    feed(tracker, vision, 5, 10)\n45\t    assert status(tracker, 12, 9) == \"suspect\"\n46\t    assert status(tracker, 7, 9) == \"suspect\"\n47\t    codes = {(f[\"code\"], f.get(\"tag_id\")) for f in tracker.active_flags()}\n48\t    assert (\"low_liveness\", 12) in codes and (\"species_mismatch\", 7) in codes\n49\t\n50\t",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "5d685a1e2d0d159579e67c15",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01VLmyH9eTAWpMEA8EVxoddr",
+        "type": "tool_result",
+        "content": "..................................                                       [100%]\r\n34 passed in 1.89s",
+        "is_error": false
+      }
+    ]
+  }
+}
