@@ -1,0 +1,17 @@
+{
+  "id": "4ed71aadcd230b79ca05db4a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "what umashankar did?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

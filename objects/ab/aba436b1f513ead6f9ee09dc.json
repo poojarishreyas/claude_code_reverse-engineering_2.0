@@ -1,0 +1,27 @@
+{
+  "id": "aba436b1f513ead6f9ee09dc",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSmwgKEAgSGAI4AUIIdGhpbmtpbmcSDDVPqY1z9SVKyhaWkxoMVswQIeub49ze6J50IjCB/ZN8adYWkVbwO+TyoVZUN99+EkmNzajB3bq5ZMTx2mzAklPv02P5xp8B5y5+kIoquAewTZ8DvmPdpnH4j1oIds1FXyux7s5IgdyLCtu/Tu+JFDETeMtUcRle1ORW5w00ifhbOOKiKO787amzTp6pqt0MNjYT5AWI5zGpQkAtIAMMLAZRItY7BKOCU0+slUpP+ltJa893+k1XX42m8lR8p+fW4lML21giOvaYlxzHgR+eCzHyR06p8T4ZvOLgiMzlDIho5q+lmiv5YMnfMElOUyFqnDmFpvf/d1kX7avpU2T1H/pxvRFnGpAkwCgJqoKVHmFknmQwZkFEafaTr/a+dJ9IHgKsLgsqLyWAGRVxE2N+e1+FluKK4zQPzR6/9BvWUomhtOS8K76WfTRWw+U5m/cBM7sdCChD8KTQrnm2FWN3fBB3NipPZkTFiJE/ueYv5yUQRwUyVrzc7HRsBFUlAvpizZFFdItQH3aOVDyHrU1VWHdr1ao2yA6WI3B1DZlOTKP3dAiHTDJ9J0e7PVvn76rCQKzJqRK1T9LGlPq7mi9ILwO3thx5esQOdc9I2CCBeSNrWZsuxtVAUf16ZLlJnNNrhg8MBZ2NMQTqYLVmyxkRZMahffeG71ixJDc/kcPgPjupsuyhdp74TjIklMtZzk1P3HQUQduKz18sozWGG9liavZrDTAnY9fFDBea029MsUH7nB6cBbPNbLu0g7I/yHEn3BCxT4IP/vYHJn0gq1FFmKJCnAKtgs8i0C/2wVFMbFq7XLWzHkZxQ4DPVCTxKpXzj25sDfBpDaCVJBccHZcCZnPvzTyCJ/jq0dJg1FSSRwwszWo/Ux57L29yi/wsoI0/6AtpwfGrrizvbq5zwKrkHrrPyTBXpKx1qNE9Oz0Qst7KeZpQnb+GRrSaf1GStbpGyGlJVUYWo4oLflkpjssTdglTiMwZSc/X1INLaj5hELmTD7zSXHjKVhu2kbhXQOMbd6OEUF6KEL6o70JQ1KhK+JbOVws/ZPHQn+9pJGFZTvwy0kpCQqmI94sxtWg4deHMob/9iP5Q55S2F3NuEuVnCiINWFnMYKx8D32VyDk7x0EH/qn/hdW/WmJnlwvUroEURLDNDgh7mpEPCEMGztOPTn7J5DRC/BSQO801ti3ppSryoVVmT1tyN5QXui4FLIEpt+XTYrVDDd3VT+k37TTJT64xF8yNyJZaEC+/RTrXea6uF3O/SdJ28sNQwJKaES87pfDr6vs8ePgnq91E1aErk7/sXyXk8uKMr/cVKL6ZJhy74ih4Khj4gFbiHL0lDTyJWFhclFFDqSmnvN38ULGxxABzyvZ6fxGQGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01SSrXdnsD2ekCfT9Ep3xanF",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && grep -n -A25 -i '^#\\+ .*signing' contracts-schema/README.md | head -45; echo ----; sed -n 240,300p chain-market/validator/src/validator.ts; echo ----; sed -n 80,95p chain-market/contracts/src/MintController.sol; grep -rn 'rejection_reason_code' -A14 contracts-schema/schemas/common.schema.json | head -20",
+          "description": "Compare validator signing with C3 signing spec"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

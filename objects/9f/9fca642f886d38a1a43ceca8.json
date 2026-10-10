@@ -1,0 +1,8 @@
+{
+  "id": "9fca642f886d38a1a43ceca8",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\Desktop\\AIRcoin\\chain-market (was C:\\Users\\shrey\\Desktop\\AIRcoin)"
+  }
+}
