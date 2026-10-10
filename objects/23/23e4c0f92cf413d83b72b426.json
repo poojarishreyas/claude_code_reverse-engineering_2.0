@@ -1,0 +1,15 @@
+{
+  "id": "23e4c0f92cf413d83b72b426",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_013F7PjSuwT82npNSEPRhvXG",
+        "type": "tool_result",
+        "content": "epoch 29860000 [clean_morning, AQI 47.8]: 0.011499188 AIR from 20/20 plants, amount 11499188000000000, signed by 0x61D11eC15342C7ea815362684375244da20112C6\nepoch 29860000 [rush_hour, AQI 188.9]: 0.031189107 AIR from 20/20 plants, amount 31189107000000000, signed by 0x61D11eC15342C7ea815362684375244da20112C6\nepoch 29860000 [festival_smog, AQI 399.8]: 0.051887321 AIR from 20/20 plants, amount 51887321000000000, signed by 0x61D11eC15342C7ea815362684375244da20112C6\nepoch 29860000 [rain_washout, AQI 19.0]: 0.006516671 AIR from 20/20 plants, amount 6516671000000000, signed by 0x61D11eC15342C7ea815362684375244da20112C6\nepoch 29860000 [festival_smog, AQI 399.8]: 0.048398357 AIR from 18/20 plants, amount 48398357000000000, signed by 0x61D11eC15342C7ea815362684375244da20112C6\n[(2, 'present', 0.001392765), (3, 'missing', 0.0), (12, 'suspect', 0.0)]\r\n[('low_liveness', 12), ('plant_missing', 3)]",
+        "is_error": false
+      }
+    ]
+  }
+}
