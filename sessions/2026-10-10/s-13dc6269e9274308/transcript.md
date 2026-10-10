@@ -5,8 +5,8 @@
 | session | `s-13dc6269e9274308` |
 | model | `claude-opus-5-5` |
 | started | 2026-10-10T18:55:50.367Z |
-| requests | 2 |
-| tokens | in 4 · out 920 · cache read 143,882 · cache write 31,925 |
+| requests | 5 |
+| tokens | in 8 · out 1,453 · cache read 324,065 · cache write 34,995 |
 
 > Generated from `session.jsonl`. Delete this file and it regenerates.
 
@@ -630,4 +630,337 @@ You can do much of your work through the Bash tool when it is the simpler route:
 ```
 
 _stop `tool_use` · 3.37s (ttft 2.81s) · in 2 · out 170 · cache r85,936/w3,935_
+
+---
+
+## req-0003 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 10 messages_
+
+#### SYSTEM
+
+# Environment update
+ - Primary working directory: C:\Users\shrey\Desktop\AIRcoin\contracts-schema (was C:\Users\shrey\Desktop\AIRcoin\miner-core)
+
+While auto mode is active:
+
+You can do much of your work through the Bash tool when it is the simpler route: read files with cat, head, or sed -n, search with grep and find, and make small, mechanical file changes with sed, heredocs, or short scripts instead of the dedicated Read, Edit, or Write tools. The choice is yours: prefer Edit or Write when a shell edit would be fragile, such as exact or multi-line replacements, or sed/awk flags that differ between GNU and BSD/macOS.
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01WFHKqRX8wboDF5tL8A9S4u)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/AIRcoin/contracts-schema && python -c \"\nimport json\nd=json.load(open('schemas/common.schema.json'))['\\$defs']\nprint(d['attestation_status']); print(d['rejection_reason_code'])\"",
+  "description": "Show attestation status and reason code enums"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01WFHKqRX8wboDF5tL8A9S4u)_
+
+```
+{'description': "Lifecycle of one epoch's attestation as seen by the miner. queued = waiting in the offline queue.", 'type': 'string', 'enum': ['pending', 'queued', 'submitted', 'accepted', 'rejected']}
+{'description': 'Why the validator rejected an attestation (PRD 9.2 #1).', 'type': 'string', 'enum': ['malformed', 'bad_signature', 'unknown_miner', 'miner_inactive', 'sticker_not_registered', 'sticker_claimed_by_other_miner', 'gps_outside_geofence', 'amount_over_cap', 'epoch_already_minted', 'epoch_not_closed', 'evidence_hash_mismatch', 'calibration_mismatch', 'chain_error']}
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Mocks conform. Now the test suite — checking the APIs it'll exercise.
+
+**-> tool_use** `Bash` _(toolu_01Rd6rmwLbEEP7iXsSjnjUNm)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && sed -n 1,74p minerd/epoch.py; sed -n 1,60p minerd/mockrun.py; grep -n \"def \\|MISSING\\|REMOVED\\|_MS\\b\\|= [0-9_]*  *#\" minerd/tracker.py | head -40; grep -n \"def \" minerd/signer.py minerd/contracts.py",
+  "description": "Read epoch, mockrun, tracker and signer APIs"
+}
+```
+
+_stop `tool_use` · 4.86s (ttft 3.06s) · in 2 · out 338 · cache r89,871/w441_
+
+---
+
+## req-0004 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 13 messages_
+
+#### USER
+
+**<- tool_result** _(toolu_01WFHKqRX8wboDF5tL8A9S4u)_
+
+```
+{'description': "Lifecycle of one epoch's attestation as seen by the miner. queued = waiting in the offline queue.", 'type': 'string', 'enum': ['pending', 'queued', 'submitted', 'accepted', 'rejected']}
+{'description': 'Why the validator rejected an attestation (PRD 9.2 #1).', 'type': 'string', 'enum': ['malformed', 'bad_signature', 'unknown_miner', 'miner_inactive', 'sticker_not_registered', 'sticker_claimed_by_other_miner', 'gps_outside_geofence', 'amount_over_cap', 'epoch_already_minted', 'epoch_not_closed', 'evidence_hash_mismatch', 'calibration_mismatch', 'chain_error']}
+```
+
+#### ASSISTANT
+
+<details><summary>thinking</summary>
+
+```
+
+```
+
+</details>
+
+Mocks conform. Now the test suite — checking the APIs it'll exercise.
+
+**-> tool_use** `Bash` _(toolu_01Rd6rmwLbEEP7iXsSjnjUNm)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && sed -n 1,74p minerd/epoch.py; sed -n 1,60p minerd/mockrun.py; grep -n \"def \\|MISSING\\|REMOVED\\|_MS\\b\\|= [0-9_]*  *#\" minerd/tracker.py | head -40; grep -n \"def \" minerd/signer.py minerd/contracts.py",
+  "description": "Read epoch, mockrun, tracker and signer APIs"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01Rd6rmwLbEEP7iXsSjnjUNm)_
+
+```
+"""Epoch accumulator: integrates 1 Hz samples into one epoch's C2 summary and C3 payload."""
+
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+from decimal import Decimal
+
+from .catalogue import Catalogue
+from .config import EPOCH_MS
+from .estimator import air_of
+
+AIR_DECIMALS = 18
+_MG_PLACES = 9
+_SENSOR_KEYS = ("pm25_ugm3", "pm10_ugm3", "co2_ppm", "voc_index", "no2_ppb", "so2_ppb", "co_ppm",
+                "temp_c", "humidity_pct", "pressure_hpa")
+
+
+def epoch_of(ts_ms: int) -> int:
+    return ts_ms // EPOCH_MS
+
+
+def epoch_window(epoch: int) -> tuple[int, int]:
+    start = epoch * EPOCH_MS
+    return start, start + EPOCH_MS
+
+
+@dataclass
+class _PlantAcc:
+    species: str
+    status: str = "present"
+    removed: dict[str, float] = field(default_factory=dict)
+    leaf_sum: float = 0.0
+    health_sum: float = 0.0
+    present_samples: int = 0
+    last_leaf: float = 0.0
+
+
+@dataclass
+class EpochResult:
+    miner_id: str
+    epoch: int
+    start_ms: int
+    end_ms: int
+    scenario: str | None
+    gps: dict
+    sensor_summary: dict
+    plants: list[dict]
+    by_pollutant_mg: dict[str, float]
+    total_air: Decimal
+    frame_hashes: list[str]
+    flags: list[dict]
+
+    @property
+    def amount(self) -> str:
+        return str(int(self.total_air * 10**AIR_DECIMALS))
+
+    def c3_unsigned(self, calibration_hash: str) -> dict:
+        """C3 attestation body without evidence_hash and signature (see signer.Signer.sign)."""
+        att = {
+            "v": 1,
+            "miner_id": self.miner_id,
+            "epoch": self.epoch,
+            "start": self.start_ms,
+            "end": self.end_ms,
+            "gps": self.gps,
+            "sensor_summary": self.sensor_summary,
+            "plants": self.plants,
+            "frame_hashes": self.frame_hashes,
+            "flags": self.flags,
+            "amount": self.amount,
+            "calibration_hash": calibration_hash,
+        }
+        return att
+
+"""Build an engine from config and run whole epochs on a synthetic clock with mock vision."""
+
+from __future__ import annotations
+
+from .catalogue import Catalogue
+from .config import EPOCH_MS, Config
+from .engine import Engine
+from .epoch import EpochResult
+from .gps import FallbackGps
+from simulator.plants import MockVision
+from simulator.scenarios import SensorSimulator
+
+
+def build_engine(cfg: Config, scenario: str, seed: int | None = None) -> tuple[Engine, MockVision]:
+    reg = cfg.registration()
+    cat = Catalogue.load(cfg.catalogue_path, cfg.overlay_path)
+    engine = Engine(reg, cat, SensorSimulator(scenario, seed=seed), FallbackGps(reg.lat, reg.lon))
+    vision = MockVision(reg.miner_id, reg.sticker_ids, seed=seed)
+    return engine, vision
+
+
+def run_epoch(engine: Engine, vision: MockVision | None, epoch: int, tick_ms: int = 1000) -> EpochResult:
+    """Feed one full epoch (vision + 1 Hz ticks), then close it."""
+    start = epoch * EPOCH_MS
+    for t in range(start, start + EPOCH_MS, tick_ms):
+        if vision is not None:
+  
+... [1,921 more characters in session.jsonl]
+```
+
+#### SYSTEM
+
+# Environment update
+ - Primary working directory: C:\Users\shrey\Desktop\AIRcoin\miner-core (was C:\Users\shrey\Desktop\AIRcoin\contracts-schema)
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01VViAG7cafmaHaFR7ghQMqE)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && sed -n 40,160p minerd/tracker.py; grep -n \"faults\\|def message\" -n simulator/plants.py | head; grep -n \"c2-\\|c3-\\|targets\\|TARGETS\" ../contracts-schema/scripts/validate.py | head",
+  "description": "Read tracker internals and validator targets"
+}
+```
+
+_stop `tool_use` · 3.48s (ttft 2.98s) · in 2 · out 195 · cache r90,312/w2,629_
+
+---
+
+## req-0005 — claude-opus-5-5
+
+_max_tokens 128,000 · streaming · 15 messages_
+
+#### SYSTEM
+
+# Environment update
+ - Primary working directory: C:\Users\shrey\Desktop\AIRcoin\miner-core (was C:\Users\shrey\Desktop\AIRcoin\contracts-schema)
+
+#### ASSISTANT
+
+**-> tool_use** `Bash` _(toolu_01VViAG7cafmaHaFR7ghQMqE)_
+
+```json
+{
+  "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && sed -n 40,160p minerd/tracker.py; grep -n \"faults\\|def message\" -n simulator/plants.py | head; grep -n \"c2-\\|c3-\\|targets\\|TARGETS\" ../contracts-schema/scripts/validate.py | head",
+  "description": "Read tracker internals and validator targets"
+}
+```
+
+#### USER
+
+**<- tool_result** _(toolu_01VViAG7cafmaHaFR7ghQMqE)_
+
+```
+    return f
+
+
+@dataclass
+class PlantState:
+    tag_id: int
+    species: str
+    species_conf: float = 0.0
+    leaf_area_cm2: float = 0.0
+    alive_score: float = 0.0
+    vision_status: str = "present"
+    last_seen_ts: int = 0
+    first_seen_ts: int = 0
+    locked_species: str | None = None
+    status: str = "present"
+
+
+@dataclass
+class Tracker:
+    sticker_ids: list[int]
+    plants: dict[int, PlantState] = field(default_factory=dict)
+    active: dict[tuple, dict] = field(default_factory=dict)  # (code, tag) -> flag, currently true
+    raised: list[dict] = field(default_factory=list)         # every flag raised since last drain
+    started_ts: int | None = None
+    _last_frame: str | None = None
+    _same_frames: int = 0
+    _new_tag_ts: list[int] = field(default_factory=list)
+
+    # -- flags ---------------------------------------------------------------------------
+    def raise_flag(self, code: str, ts: int, message: str, tag_id: int | None = None) -> None:
+        key = (code, tag_id)
+        if key not in self.active:
+            f = flag(code, ts, message, tag_id)
+            self.active[key] = f
+            self.raised.append(f)
+
+    def clear_flag(self, code: str, tag_id: int | None = None) -> None:
+        self.active.pop((code, tag_id), None)
+
+    def drain_raised(self) -> list[dict]:
+        out, self.raised = self.raised, []
+        return out
+
+    def active_flags(self) -> list[dict]:
+        return sorted(self.active.values(), key=lambda f: (f["ts"], f["code"]))
+
+    # -- C1 ingest -----------------------------------------------------------------------
+    def ingest(self, msg: dict, now_ms: int) -> None:
+        ts = msg["ts"]
+        if self.started_ts is None:
+            self.started_ts = now_ms
+
+        if abs(ts - now_ms) > CLOCK_DRIFT_MS:
+            self.raise_flag("clock_drift", now_ms, f"vision ts {ts - now_ms:+d} ms from miner clock")
+        else:
+            self.clear_flag("clock_drift")
+
+        if msg["frame_hash"] == self._last_frame:
+            self._same_frames += 1
+        else:
+            self._last_frame, self._same_frames = msg["frame_hash"], 1
+        if self._same_frames >= FROZEN_FRAMES:
+            self.raise_flag("frozen_camera", now_ms, f"{self._same_frames} identical frames in a row")
+        else:
+            self.clear_flag("frozen_camera")
+        frozen = self._same_frames >= FROZEN_FRAMES
+
+        registered = set(self.sticker_ids)
+        unknown = set(msg.get("unknown_tag_ids", []))
+        for p in msg["plants"]:
+            tag = p["tag_id"]
+            if tag not in registered:
+                unknown.add(tag)
+                continue
+            if p["status"] in ("missing", "removed"):  # vision lost it; keep last good readings
+                st = self.plants.get(tag)
+                if st:
+                    st.vision_status = p["status"]
+                continue
+            st = self.plants.get(tag)
+            if st is None:
+                st = self.plants[tag] = PlantState(tag_id=t
+... [3,231 more characters in session.jsonl]
+```
 

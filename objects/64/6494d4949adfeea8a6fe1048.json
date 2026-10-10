@@ -1,0 +1,17 @@
+{
+  "id": "6494d4949adfeea8a6fe1048",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core (was C:\\Users\\shrey\\Desktop\\AIRcoin\\contracts-schema)",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

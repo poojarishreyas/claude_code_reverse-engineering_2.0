@@ -1,0 +1,15 @@
+{
+  "id": "077c61b3b38809c91bd17fd3",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01WFHKqRX8wboDF5tL8A9S4u",
+        "type": "tool_result",
+        "content": "{'description': \"Lifecycle of one epoch's attestation as seen by the miner. queued = waiting in the offline queue.\", 'type': 'string', 'enum': ['pending', 'queued', 'submitted', 'accepted', 'rejected']}\r\n{'description': 'Why the validator rejected an attestation (PRD 9.2 #1).', 'type': 'string', 'enum': ['malformed', 'bad_signature', 'unknown_miner', 'miner_inactive', 'sticker_not_registered', 'sticker_claimed_by_other_miner', 'gps_outside_geofence', 'amount_over_cap', 'epoch_already_minted', 'epoch_not_closed', 'evidence_hash_mismatch', 'calibration_mismatch', 'chain_error']}",
+        "is_error": false
+      }
+    ]
+  }
+}

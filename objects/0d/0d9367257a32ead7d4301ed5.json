@@ -1,0 +1,31 @@
+{
+  "id": "0d9367257a32ead7d4301ed5",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSqQcKEAgSGAI4AUIIdGhpbmtpbmcSDAgntLYC5117KNK/UBoMPhqYpKqoUzHyGMMeIjAdu4BAi56oPuM1HJjU2rbEAgp074v5205588IZtWKtMx7PxwWm0rn9UiJWoQjGp10qxgaphLXqPn+87HrY08wwxbUgwGG/C26Ky4XoqJ5kzZZzI2JcN7LLFnthWabne8G2+dBht5JB+Wdbd1od0TNRv3iAj3WD3yxKrwhx61eVaS/mtf7NBJNH0D79s7KoXxmP2YZKH5XmrRQuoYwEV6I6JFZHTn1AphwfCTBkNfx7QBf6Jkbx5Y224PJL5a2dVj/A43/ncK70PpR5H5tt1SM2P15PVkO0onewZnc7YezXvju4T37MJJAlEPZOIkXf55gAf3w20WuqZaMRYz82F9p+JdsMgpi/VJT+HZXTAI7VgdhmX9vIZ/d3/MTxK60l97fK9i/eO+HAJW8YeK89wS+S+sODMuqHVv2qs3gWjvYv8W+mSg9ShKPB2woJVqqvnanWHfEucO406L/mfJzDVqXznwbiWWXGRRXWVWw99kXx4x7OmDEXWyF+BsoFbqFb4rxKZXk8nb/p5qLoGrdO+05lMA3GeeOvnJ3xU5I5pRDKieXqXef4BZdULiAlsVkxs9nCNR/zDQIb0QLaEUyZ7a6gEdDOJBk2hwK3wuE7n30B3QJxvxB+0U/5gN6Stm0ZmUEwmtRaBX0++79+yzS2/hfAytwAp3z1EiDQBxCSd4nUmyMTmgxEBIYpYKC8DSVp6NqBa3E3LvYDXGPb7hloqDX+oEpZVoL0iGPj7WMWt+5Tuc1pE3Kd8JCQG5kRIaAFEVReAl0F4U/ooRV+K02EFeMm/d+1ufUte/PbpRBJOPGtsB3wbju/JLOzj4bk2aNkZ45bYNcl+9gCD1TIa3Ry1U2cV56G73zRmeqAwVOu3r2eOiiow9Gh1sm1X5u9o8/8TaXhHf1mJx5iIbRzpaet877N4adxkxkJdkUT69QiTt94XHZR7BAZnjdtyZ4lPR6djk24e4tPkZWfc+9dcAHX1IrUAilCzad2eujGtF5vWTaNCeqiCP7U4WGY1zRRIhUEx2KXe9psWtOGi10AnjOMwdq2SMXryzefRRSyfDT/gPJjW4fIbqWD9uqx9DcmoNXIp8QUXF+84zJS0b6sscqxtis/pL5ByteJnCFH2vFIk3pO5vizm+vwht5NgJyYz1slk+lg5nguwWbq5LsPWBYnQNs3b8ou+8sI32XMGAE="
+      },
+      {
+        "type": "text",
+        "text": "Mocks conform. Now the test suite — checking the APIs it'll exercise."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01Rd6rmwLbEEP7iXsSjnjUNm",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && sed -n 1,74p minerd/epoch.py; sed -n 1,60p minerd/mockrun.py; grep -n \"def \\|MISSING\\|REMOVED\\|_MS\\b\\|= [0-9_]*  *#\" minerd/tracker.py | head -40; grep -n \"def \" minerd/signer.py minerd/contracts.py",
+          "description": "Read epoch, mockrun, tracker and signer APIs"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

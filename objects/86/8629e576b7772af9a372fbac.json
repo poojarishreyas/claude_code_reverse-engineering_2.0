@@ -1,0 +1,18 @@
+{
+  "id": "8629e576b7772af9a372fbac",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_01WFHKqRX8wboDF5tL8A9S4u",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/contracts-schema && python -c \"\nimport json\nd=json.load(open('schemas/common.schema.json'))['\\$defs']\nprint(d['attestation_status']); print(d['rejection_reason_code'])\"",
+          "description": "Show attestation status and reason code enums"
+        }
+      }
+    ]
+  }
+}
