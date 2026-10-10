@@ -1,0 +1,18 @@
+{
+  "id": "7e881d9f8ff3a133a9d62ac0",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_0116NABMEHiJyUyBKrNfvAXA",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && gh pr create -R prabhu-omkar/AIRcoin --base main --head poojarishreyas:feat/miner-validator-omkar-handoff --title \"feat: complete miner-validator integration and Omkar handoff\" --body \"$(cat <<'EOF'\n## Summary\n- **miner-core (Workstream B):** full `minerd` daemon. It tracks plants from C1 vision, runs the PoUW estimator and builds epochs, publishes C2 telemetry and epochs over MQTT, and sends secp256k1-signed C3 attestations with a persistent retry queue. It also includes GPS, the controller app, mock emitters (C1/C2/C3), a simulator, a recorded C2 fallback and a systemd unit.\n- **contracts-schema:** species catalogue moved from draft `0.1.0` to **frozen `1.0.0`**. Base rates, reference concentrations, the concentration-factor cap and the per-plant/per-miner caps are now filled in from literature estimates (rationale in `miner-core/docs/catalogue-v0-proposal.md`).\n- **chain-market/validator:** validator and server changes so it accepts live attestations from the miner. The `seed.ts` changes support the demo.\n- **Docs/scripts:** `docs/demo-runbook.md`, `docs/omkar-handoff.md`, `miner-core/docs/handoff-vision-twin.md`, and `scripts/demo.ps1` plus `scripts/failure-test.ps1`.\n\n## Reviewer notes\n- This PR touches the frozen `contracts-schema/` and also `chain-market/`. @prabhu-omkar and Umashankar, please review those parts.\n- **Omkar:** start with `docs/omkar-handoff.md` and `miner-core/docs/handoff-vision-twin.md`.\n\n## Test plan\n- [x] `python contracts-schema/scripts/validate.py`: 21/21 checks pass\n- [x] `miner-core` pytest: 44 passed\n- [x] Contract tests: 23 passed\n- [x] Live chain integration tests: 5 passed\n- [x] Two-hour accelerated soak: 120 consecutive epochs, 0 misses\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\nEOF\n)\" 2>&1 | tail -3",
+          "description": "Open PR against upstream main"
+        }
+      }
+    ]
+  }
+}
