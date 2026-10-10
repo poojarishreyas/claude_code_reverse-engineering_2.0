@@ -1,0 +1,19 @@
+{
+  "id": "059834e6a525f1b68e901721",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01H2zSuAr31fCEGhNfHT1RcK",
+        "type": "tool_result",
+        "content": "27: * plugins, and servers do not change the result; there is no sandbox, so the\n35:    '-p', prompt,\n37:    '--permission-mode', 'bypassPermissions',",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

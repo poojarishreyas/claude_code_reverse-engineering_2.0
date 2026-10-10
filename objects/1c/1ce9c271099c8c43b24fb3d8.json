@@ -1,0 +1,22 @@
+{
+  "id": "1ce9c271099c8c43b24fb3d8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "tool_use",
+        "id": "toolu_016oP3cY4QB76Ds1WYXQngka",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/Elemental_harness && sed -n 20,50p scripts/eval/claude-code.ts; grep -n -iE \"dsh.*(args|spawn)|'--[a-z-]+'\" scripts/eval/run-eval.ts | head -20",
+          "description": "Read how both agents are launched in the eval"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
