@@ -1,0 +1,17 @@
+{
+  "id": "52cbbfefa5aa5692cc4c67da",
+  "kind": "message",
+  "value": {
+    "role": "system",
+    "content": [
+      {
+        "type": "text",
+        "text": "# Environment update\n - Primary working directory: C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\minerd (was C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core)\n\nNote: C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\minerd\\tracker.py changed on disk since you last read it. That's usually deliberate, so take it as the current state rather than reverting it; if the change looks wrong, say so rather than undoing it yourself — otherwise no need to call it out. The changes are not shown here; use Read if you need the current content.",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

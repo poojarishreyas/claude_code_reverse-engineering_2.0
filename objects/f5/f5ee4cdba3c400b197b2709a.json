@@ -1,0 +1,15 @@
+{
+  "id": "f5ee4cdba3c400b197b2709a",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Cr5ayPHskuRTg7xYYRPv4Z",
+        "type": "tool_result",
+        "content": "69:    def raise_flag(self, code: str, ts: int, message: str, tag_id: int | None = None) -> None:\n76:    def clear_flag(self, code: str, tag_id: int | None = None) -> None:\n93:            self.raise_flag(\"clock_drift\", now_ms, f\"vision ts {ts - now_ms:+d} ms from miner clock\")\n95:            self.clear_flag(\"clock_drift\")\n102:            self.raise_flag(\"frozen_camera\", now_ms, f\"{self._same_frames} identical frames in a row\")",
+        "is_error": false
+      }
+    ]
+  }
+}
