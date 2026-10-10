@@ -1,0 +1,15 @@
+{
+  "id": "cfa6d5d263d2d7e736af06ed",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_014idXGBzYhmoReCnSxxbVxP",
+        "type": "tool_result",
+        "content": "SEVERITY = {\n    \"unknown_sticker\": \"warn\",\n    \"species_mismatch\": \"warn\",\n    \"low_liveness\": \"critical\",\n    \"plant_missing\": \"warn\",\n    \"plant_removed\": \"warn\",\n    \"gps_out_of_geofence\": \"critical\",\n    \"frozen_camera\": \"critical\",\n    \"too_many_new_plants\": \"warn\",\n    \"clock_drift\": \"warn\",\n}\n['miner_id', 'label', 'device_address', 'device_public_key', 'owner_wallet', 'sticker_ids', 'sticker_set_hash', 'location', 'status', 'registered_at', 'registration_tx', 'virtual']",
+        "is_error": false
+      }
+    ]
+  }
+}
