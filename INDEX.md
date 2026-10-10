@@ -1,10 +1,10 @@
 # Session index
 
-_53 captured sessions, newest first. Updated 2026-10-10T18:00:42.215Z._
+_53 captured sessions, newest first. Updated 2026-10-10T18:01:00.430Z._
 
 | updated | session | model | reqs | in | out | cache read | title |
 | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| 2026-10-10 18:00 | [`s-41886b560a0f8ed9`](sessions/2026-10-10/s-41886b560a0f8ed9/transcript.md) | claude-opus-5-5 | 34 | 78 | 30,527 | 3,494,685 | make the prd.pdf to md |
+| 2026-10-10 18:00 | [`s-41886b560a0f8ed9`](sessions/2026-10-10/s-41886b560a0f8ed9/transcript.md) | claude-opus-5-5 | 34 | 80 | 30,879 | 3,640,530 | make the prd.pdf to md |
 | 2026-10-10 17:31 | [`s-5c84ecb1a32aad29`](sessions/2026-10-10/s-5c84ecb1a32aad29/transcript.md) | claude-opus-5-5 | 1 | 0 | 0 | 0 | AIRcoin -- Product Requirements Document AIRcoin -- Product Requirements Document Oct 10,  |
 | 2026-10-10 17:31 | [`s-3850fb30be087d43`](sessions/2026-10-10/s-3850fb30be087d43/transcript.md) | claude-opus-5-5 | 1 | 1,170 | 23 | 0 | make the prd.pdf to md Write the title in the predominant language of the session — a stra |
 | 2026-10-10 17:31 | [`s-277d9545ac40f58b`](sessions/2026-09-24/s-277d9545ac40f58b/transcript.md) | claude-opus-5-5 | 10 | 0 | 0 | 0 | quota |
@@ -58,4 +58,4 @@ _53 captured sessions, newest first. Updated 2026-10-10T18:00:42.215Z._
 | 2026-09-24 16:54 | [`s-b8e7b2ce4410210f`](sessions/2026-09-24/s-b8e7b2ce4410210f/transcript.md) | claude-opus-5-5 | 1 | 1,168 | 16 | 0 | url to acess wbpge Write the title in the predominant language of the session — a stray wo |
 | 2026-09-24 16:53 | [`misc-2026-09-24`](sessions/2026-09-24/misc-2026-09-24/transcript.md) | - | 2 | 0 | 0 | 0 | Ancillary requests |
 
-**Totals** — 1,040 requests · 768,539 input · 488,797 output · 95,370,351 cache read
+**Totals** — 1,040 requests · 768,541 input · 489,149 output · 95,516,196 cache read
