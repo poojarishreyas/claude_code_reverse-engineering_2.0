@@ -1,0 +1,17 @@
+{
+  "id": "bed14206c399f838077fd64d",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "wait befor that dont u need phase scope?",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

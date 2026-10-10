@@ -1,0 +1,17 @@
+{
+  "id": "c54e1a1d81ac625903df7d18",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "do you need c1 and c2 for to complete all 3 phases",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
