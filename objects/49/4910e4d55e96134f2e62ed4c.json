@@ -1,0 +1,19 @@
+{
+  "id": "4910e4d55e96134f2e62ed4c",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01Ny1SwhKckb9igEc3mPaAjF",
+        "type": "tool_result",
+        "content": "    ]);\n\n    setPendingApps(pendingApps.filter((a) => a.id !== app.id));\n    showToast(`Approved ${app.id} as ${newMinerId}`, \"success\");\n  };\n\n  const handleToggleSuspend = (minerId: string) => {\n    setMiners(\n      miners.map((m) =>\n        m.id === minerId\n          ? { ...m, status: m.status === \"active\" ? \"suspended\" : \"active\" }\n          : m\n      )\n    );\n    showToast(`Updated status for ${minerId}`, \"info\");\n  };\n\n  const handleSetObligation = (e: React.FormEvent) => {\n    e.preventDefault();\n    showToast(`Statutory quota set: ${obligAmount} AIR for ${obligPeriod}`, \"success\");\n  };\n\n  return (\n    <div className=\"mx-auto max-w-6xl space-y-6 p-6\">\n      {/* 4 Clean Stats */}\n      <div className=\"grid grid-cols-4 gap-4\">\n        <Card>\n          <CardContent className=\"p-4\">\n            <div className=\"text-[11px] font-mono uppercase text-zinc-400\">Authority</div>\n            <div className=\"font-medium text-sm text-zinc-100 mt-1\">CPCB Regulatory Admin</div>\n            <div className=\"text-[11px] text-zinc-400 font-mono mt-0.5\">Fleet Oversight</div>\n          </CardContent>\n        </Card>\n\n        <Card>\n          <CardContent className=\"p-4\">\n5:import { MintItem, MinerApplication } from \"../../types\";\n60:  const [showApplyModal, setShowApplyModal] = useState(false);\n62:  const [applyLocation, setApplyLocation] = useState(\"Koramangala 4th Block, Bangalore\");\n93:  const handleApply = (e: React.FormEvent) => {\n95:    setShowApplyModal(false);\n96:    showToast(`Application submitted to regulator`, \"success\");\n181:        {/* Rig Application Card */}\n191:              Apply to provision additional camera rigs with tamper-evident ArUco stickers verified by CPCB.\n196:              onClick={() => setShowApplyModal(true)}\n200:              Apply for Hardware Rig\n126:    const mockDeviceAddress = \"0x\" + Array.from({ length: 40 }, () => Math.floor(Math.random() * 16).toString(16)).join(\"\");",
+        "is_error": false,
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

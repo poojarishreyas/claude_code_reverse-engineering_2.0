@@ -1,0 +1,15 @@
+{
+  "id": "7bd34c2ed81592c14a468a04",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_013hkr1GeJmk2pYbmUZRiyKL",
+        "type": "tool_result",
+        "content": "    // 5. Check stickers belong to this miner\n    if (attestation.plants) {\n      for (const plant of attestation.plants) {\n        if (!miner.sticker_ids.includes(plant.tag_id)) {\n          // Check if another miner owns this sticker\n          for (const [otherId, otherMiner] of this.miners.entries()) {\n            if (otherId !== minerId && otherMiner.sticker_ids.includes(plant.tag_id)) {\n              return this.reject(\n                minerId,\n                epoch,\n                \"sticker_claimed_by_other_miner\",\n                `Sticker ${plant.tag_id} is registered to ${otherId}`\n              );\n            }\n          }\n          return this.reject(\n            minerId,\n            epoch,\n            \"sticker_not_registered\",\n            `Sticker ${plant.tag_id} not registered to ${minerId}`\n          );\n        }\n      }\n    }\n\n    // 6. GPS geofence check\n    if (attestation.gps) {\n      const dist = this.haversineDistance(\n        miner.lat,\n        miner.lon,\n        attestation.gps.lat,\n        attestation.gps.lon\n      );\n      if (dist > miner.geofence_m) {\n        return this.reject(\n          minerId,\n          epoch,\n          \"gps_outside_geofence\",\n          `GPS ${dist.toFixed(0)}m from registered location (max ${miner.geofence_m}m)`\n        );\n      }\n    }\n\n----\n----\n----\nweb/src/components/portals/AdminPortal.tsx:156:  const handleToggleSuspend = (minerId: string) => {\nweb/src/components/portals/AdminPortal.tsx:160:          ? { ...m, status: m.status === \"active\" ? \"suspended\" : \"active\" }\nweb/src/components/portals/AdminPortal.tsx:167:  const handleSetObligation = (e: React.FormEvent) => {\nweb/src/components/portals/AdminPortal.tsx:295:                    onClick={() => handleToggleSuspend(m.id)}\nweb/src/components/portals/AdminPortal.tsx:298:                    {m.status === \"active\" ? \"Suspend\" : \"Reactivate\"}\nweb/src/components/portals/AdminPortal.tsx:309:            <form onSubmit={handleSetObligation} className=\"pt-3 border-t border-zinc-800/80 space-y-2\">",
+        "is_error": false
+      }
+    ]
+  }
+}
