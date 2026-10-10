@@ -1,0 +1,15 @@
+{
+  "id": "f3f160141d98e61d83e51496",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_012jE9RKMdoZ2vAwV8At4rQU",
+        "type": "tool_result",
+        "content": "60:python -m minerd c1check recording.jsonl   # or --mqtt: run vision-twin's C1 through the tracker, show what gets paid\n63:What vision-twin must send and what its twin receives: [`docs/handoff-vision-twin.md`](docs/handoff-vision-twin.md).",
+        "is_error": false
+      }
+    ]
+  }
+}

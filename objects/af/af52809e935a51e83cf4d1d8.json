@@ -1,0 +1,27 @@
+{
+  "id": "af52809e935a51e83cf4d1d8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS1QYKEAgSGAI4AUIIdGhpbmtpbmcSDG0Vev7Bai+4xiYkJBoMniIcf/YLyxg03C9oIjDSpzPbUSAUK8Tmy7ny6Gh9x3V43p0pGTxTMGG4U6iGYronUjjNIoczOYOCYp/17AMq8gXO67Qo4s2kEh4yf0pRJBvQ98SYlTlw1No4Q3MYIGdPBns7gNieM7FqTWAN6QJwokYU1qkZGrB5aWQouqtqZk92JIRSnP+VXwgQd75ATe8OULRnV6TNUYemW7UQLDSRusqROihwBmiR2FhVTb+zyrPb+K5HhNYPyaRpyDj/X3UEccm+1geV/d6Da0a21eXq0P/kdWE6xAh50ZRs3isU/7HRYzUkgfPV4YRr+B+rXajGfLOGBLIGSGd0zNaJUuI5L0w6LH1JT8hidWosAq0AXef5RTHG0VzosuiClGNdmYZjtxiO6F8o5s17TS0Y/atV4LoIhxkfp5yXFnkU8M4kfgDWhXdSJgh7ZipopJj1XW9NhBtbidGQ2hibuuv1SXZOmBbC7L4B2GhnDxmZaNNxw44bsX1VfMXaUc89NkcMF5araPSWGA9kKbHEqNfppVV5LnMWl7ILgfAsxZtvBTxjwQtBHmcZMFIP67VM2MWdLG+r4wPnSMD/z8qMkNGYJXymWlZ9ykFmp+VRSwKCwWrcE0dYOG8ndw5ODr1h0u/VQwCsHw9VrdnLjeVE2VBnVZol3QIxMrRUJNDjEhX3R1Stq8O/4ykfcANK2f2pYcQ8NL0MQdSF3NYEOq1uvuy6bCmv/jfy3x38/rx1xqTQjb3nePh3hw4YSAVo+fhwoEuaSLbQDFoL0MR4mZRtjzIf3jqqxH6k49GlTpIArlP/Mt8fGTv044qgn2sYp3Rgewy9lIccO+gXfN7mFcY9+mnJARaQlaHW6/UpRn/LD+UW/a/1y446DE2eWOFeAoxXwRB1zRvVh9dpIoeofqimEpZvinp1tJG0YJNMEsECSRBbluhjwXGhdmaW8LosPvxY1BiTVdz66fOe2jFn3H8V2qY6gZ0lyvoSfWFtgJzjMizjzfTz+Qp9X205+09O75zUDBotdCVl0gy9Rw5Lin4lMeBmIV41lX+4mtcXu8iQgzDtmblFki84fJpOC/KBJ6TIzvqLo9E8LDmlGAE="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_012jE9RKMdoZ2vAwV8At4rQU",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && python - <<'EOF'\np='README.md'\ns=open(p,encoding='utf-8').read()\ns=s.replace('''python -m minerd hashes                                                # calibration_hash, device address\n```''','''python -m minerd hashes                                                # calibration_hash, device address\npython -m minerd c1check recording.jsonl   # or --mqtt: run vision-twin's C1 through the tracker, show what gets paid\n```\n\nWhat vision-twin must send and what its twin receives: [`docs/handoff-vision-twin.md`](docs/handoff-vision-twin.md).''')\nopen(p,'w',encoding='utf-8').write(s)\nEOF\ngrep -n \"c1check\\|handoff\" README.md",
+          "description": "Link handoff doc and c1check from README"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
