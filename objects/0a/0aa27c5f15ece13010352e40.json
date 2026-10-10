@@ -1,0 +1,19 @@
+{
+  "id": "0aa27c5f15ece13010352e40",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "type": "tool_result",
+        "content": "Exit code 1\nTraceback (most recent call last):\r\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\r\n  File \"<frozen runpy>\", line 88, in _run_code\r\n  File \"C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\minerd\\__main__.py\", line 3, in <module>\r\n    from .cli import main\r\n  File \"C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\minerd\\cli.py\", line 121\r\n    if text.startswith(\"{\") and \"\r\n                                ^\r\nSyntaxError: unterminated string literal (detected at line 121)",
+        "is_error": true,
+        "tool_use_id": "toolu_015RCL4ogtAXrLUrDK1XJBqg",
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
