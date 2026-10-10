@@ -1,0 +1,32 @@
+{
+  "id": "5a07dc62cee4a92f7911994e",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQStgcKEAgSGAI4AUIIdGhpbmtpbmcSDPUtbzPGWSattTxtIxoMsCACSbQGkxmUvTFPIjBq8uBAu5IVOmuuKoqKXtLYUv6GrKxEnt+gHi+BZHIaleo0GWVcXwY8MZFqkYK4a/sq0wZ5VNYEB9ixt93dwvAAqBWJL6wWtXv4qY1sdhXacyXT+FLHNNFbV9CZwoKGhKRBf8108Vr7Xoc0gJ3eP8d9ylVC+dnoLdrFD6BMLivw3uWYX+7iptE9pHKdlLa/59K7BqFJcbaYJ2sLaysrJEX49Eaq2D4jL0eqHVynVrBJ32n4N2JQtCQyaDcsvvDr1tkfNASmZHiSVJfB/yz12uYC2i9OFOkO0MgDlttBq+z/NYZXyUD8/zUJNbK4SE+7owbr4zmFN1/6nkcxjtp2SIh24C4kg7EjVeTM8o5q61NcLsoxDC9POzh50aRu445Mjb2//AQ5YbWfmf8haFPpCu7XJTlbuxlEOcuuE6XksbIuInCh2ilYGktVpcOhY0B8k7JyVNlOx6/p0HbFvGNMu8+601ofm6B7/SJiygTbtdJyRQHnZHzBv8B+w3SVmAmyllDjDTOKPPKyWBVNvAeliQURJOhd1oudcD7bBWpFSoMUv+KxDQkTEgmMQAUtwqtMwXSS6TQVFb+AxvsgsFSxv2A1peARxe7tMjxObBhaeWu69sYn6J8RKpeDp6BP6iq068+dIXIzDh5ANEbFyqfsvafVVU5pVCTt8SKVg+6KtL/cDOKpeJWA77h72Lxvc0p979MI9C6k+gpHlUg/czWJNGTpuhE+6Q3FEGuldzDTCuly5Z1NmzhT/sQ/HJ7p+FI6mAW02R/fErwNclCjASvyqPsUonluEPPkaL3T43Ew42h+/7PqHQvMGcxqNFUt6vOBaAfawzD0VOeDGKV9OQmZzMsSPH5tEScKdpsdN1qes1XZeFKE2/43naKYvKoUYSFPjoEbHHbSQX4tkO6tMQn+nJCBib3PmwYA0HmADWpF2jFmpMLCH31VgDL8lkw23Iyzkcz7TA3fUPQphheUYuXRRh2v59Ojv/7qN+7GRLnpGyasElwz1oakVp/JPcl6uFFkA2hLgUHuP0aK4ljovxGeDtoCuYYm9oMDlLToD/62ZC+noHcA0+Y06te8zdFzzXArAk4Xhl+BM9BJQ9kkffChF1XdiDf47W5i8sQGzurtiOGM+InNJp7PTITpXjASw+U5UceyNOJFTRu0WgAnu2remsqMxh55UvhsEWTwG+V0uEcTRJqsDqVX5hgB"
+      },
+      {
+        "type": "text",
+        "text": "Tidying the awkward imports in `test_estimate.py` before running."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01SkKAhTmQZ3SqjBGANES8MZ",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin/miner-core && python - <<'EOF'\np='tests/test_estimate.py'\ns=open(p).read()\ns=s.replace('from tests.conftest import run\\n','from minerd.mockrun import build_engine, run_epoch\\nfrom tests.conftest import EPOCH, run\\n')\ns=s.replace('__import__(\"minerd.mockrun\", fromlist=[\"build_engine\"]).build_engine','build_engine')\ns=s.replace('    from minerd.mockrun import run_epoch\\n    from tests.conftest import EPOCH\\n','')\nopen(p,'w').write(s)\nEOF\ntouch tests/__init__.py; python -m pytest -q 2>&1 | tail -40",
+          "description": "Clean imports and run the test suite",
+          "timeout": 300000
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

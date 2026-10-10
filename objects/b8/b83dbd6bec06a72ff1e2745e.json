@@ -1,0 +1,15 @@
+{
+  "id": "b83dbd6bec06a72ff1e2745e",
+  "kind": "message",
+  "value": {
+    "role": "user",
+    "content": [
+      {
+        "tool_use_id": "toolu_01SkKAhTmQZ3SqjBGANES8MZ",
+        "type": "tool_result",
+        "content": ".........F..................F.....                                       [100%]\r\n================================== FAILURES ===================================\r\n______________________ test_removed_plant_earns_nothing _______________________\r\n\r\ncfg = Config(miner_id='miner-001', mqtt_host='localhost', mqtt_port=1883, validator_url='http://localhost:3001', controller_...hain-market/contracts/seed-data.json'), var_dir=WindowsPath('C:/Users/shrey/Desktop/AIRcoin/miner-core/var'), extra={})\r\n\r\n    def test_removed_plant_earns_nothing(cfg):\r\n        engine, vision = build_engine(cfg, \"rush_hour\", seed=1)\r\n        vision.faults.dropped = {5: EPOCH * 60_000}\r\n        run_epoch(engine, vision, EPOCH)  # missing during this epoch, removed by the end of the next\r\n        result = run_epoch(engine, vision, EPOCH + 1)\r\n>       p = by_tag(result)[5]\r\n            ^^^^^^^^^^^^^^^^^\r\nE       KeyError: 5\r\n\r\ntests\\test_estimate.py:48: KeyError\r\n------------------------------ Captured log call ------------------------------\r\nWARNING  minerd.catalogue:catalogue.py:92 catalogue 0.1.0 is draft: 17 null coefficients filled from coefficients-v0.json\r\n__________________ test_sticker_set_hash_matches_chain_seed ___________________\r\n\r\n    def test_sticker_set_hash_matches_chain_seed():\r\n        # chain-market/contracts/scripts/seed.ts: keccak256(solidityPacked(uint16[] ...)) of tags 1..20\r\n>       assert sticker_set_hash(list(range(1, 21))).startswith(\"0x0d5181b9\")\r\nE       AssertionError: assert False\r\nE        +  where False = <built-in method startswith of str object at 0x0000021CEBDD5290>('0x0d5181b9')\r\nE        +    where <built-in method startswith of str object at 0x0000021CEBDD5290> = '0xaf678840b4d4cc73b4300b51d0711917f3073f8eee6bdb802ea952bc6f9434c0'.startswith\r\nE        +      where '0xaf678840b4d4cc73b4300b51d0711917f3073f8eee6bdb802ea952bc6f9434c0' = sticker_set_hash([1, 2, 3, 4, 5, 6, ...])\r\nE        +        where [1, 2, 3, 4, 5, 6, ...] = list(range(1, 21))\r\nE        +          where range(1, 21) = range(1, 21)\r\n\r\ntests\\test_signing.py:55: AssertionError\r\n=========================== short test summary info ===========================\r\nFAILED tests/test_estimate.py::test_removed_plant_earns_nothing - KeyError: 5\r\nFAILED tests/test_signing.py::test_sticker_set_hash_matches_chain_seed - Asse...\r\n2 failed, 32 passed in 1.63s",
+        "is_error": false
+      }
+    ]
+  }
+}
