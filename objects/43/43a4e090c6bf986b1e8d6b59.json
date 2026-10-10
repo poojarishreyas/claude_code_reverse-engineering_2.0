@@ -1,0 +1,35 @@
+{
+  "id": "43a4e090c6bf986b1e8d6b59",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Now the engine that ties the pieces together, plus the contract-validation helper."
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01S7BFoC5K6WUicTyHGZAmdm",
+        "name": "Write",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\minerd\\engine.py",
+          "content": "\"\"\"The miner pipeline, clock-driven: sensors + GPS + tracked plants -> telemetry and closed epochs.\n\nThe engine never reads the wall clock itself; callers pass now_ms. The mock CLI drives it with\na synthetic clock (an epoch in milliseconds), the emitters and the Phase 2 daemon at 1 Hz.\n\"\"\"\n\nfrom __future__ import annotations\n\nfrom .catalogue import Catalogue\nfrom .config import Registration\nfrom .epoch import EpochAccumulator, EpochResult, epoch_of\nfrom .estimator import removal_rates_mg_per_h\nfrom .gps import FallbackGps, haversine_m\nfrom .tracker import Tracker\nfrom simulator.scenarios import SensorSimulator, aqi as compute_aqi\n\nMAX_TICK_S = 5.0\n\n\nclass Engine:\n    def __init__(self, reg: Registration, cat: Catalogue, sensors: SensorSimulator, gps: FallbackGps,\n                 sensors_simulated: bool = True):\n        self.reg, self.cat, self.sensors, self.gps = reg, cat, sensors, gps\n        self.sensors_simulated = sensors_simulated\n        self.tracker = Tracker(sticker_ids=reg.sticker_ids)\n        self.acc: EpochAccumulator | None = None\n        self._last_tick: int | None = None\n        self._pending_frames: list[str] = []\n\n    @property\n    def miner_id(self) -> str:\n        return self.reg.miner_id\n\n    def ingest_vision(self, msg: dict, now_ms: int) -> None:\n        if msg.get(\"miner_id\") != self.miner_id:\n            return\n        self.tracker.ingest(msg, now_ms)\n        self._pending_frames.append(msg[\"frame_hash\"])\n\n    def close_current(self) -> EpochResult | None:\n        if self.acc is None:\n            return None\n        result = self.acc.close(self.tracker.active_flags())\n        self.acc = None\n        return result\n\n    def tick(self, now_ms: int) -> tuple[dict, EpochResult | None]:\n        \"\"\"Advance to now_ms: close the epoch if its window has passed, then take one sample.\"\"\"\n        closed = None\n        if self.acc is not None and now_ms >= self.acc.end_ms:\n            closed = self.close_current()\n        if self.acc is None:\n            self.acc = EpochAccumulator(self.miner_id, epoch_of(now_ms), self.cat)\n        acc = self.acc\n\n        dt_s = 1.0 if self._last_tick is None else min(MAX_TICK_S, max(0.0, (now_ms - self._last_tick) / 1000))\n        self._last_tick = now_ms\n        for h in self._pending_frames:\n            acc.add_frame(h)\n        self._pending_frames.clear()\n\n        sensors = self.sensors.read(now_ms)\n        air_quality = compute_aqi(sensors)\n        gps = self.gps.read(now_ms)\n        dist = haversine_m(self.reg.lat, self.reg.lon, gps[\"lat\"], gps[\"lon\"])\n        if dist > self.reg.geofence_m:\n            self.tracker.raise_flag(\"gps_out_of_geofence\", now_ms,\n                                    f\"GPS {dist:.0f} m from registered spot (max {self.reg.geofence_m:.0f} m)\")\n        else:\n            self.tracker.clear_flag(\"gps_out_of_geofence\")\n\n        plants = self.tracker.snapshot(now_ms)\n        rates = {}\n        rows = []\n        for st in plants:\n            r = (removal_rates_mg_per_h(self.cat, st.species, st.leaf_area_cm2, st.alive_score, sensors)\n                 if st.status == \"present\" else {})\n            if r:\n                rates[st.tag_id] = r\n            row = {\n                \"tag_id\": st.tag_id,\n                \"species\": st.species,\n                \"status\": st.status,\n                \"leaf_area_cm2\": st.leaf_area_cm2 if st.status in (\"present\", \"suspect\") else 0.0,\n                \"alive_score\": st.alive_score if st.status in (\"present\", \"suspect\") else 0.0,\n                \"species_conf\": st.species_conf,\n                \"rate_air_per_h\": round(sum(self.cat.weights[p] * v for p, v in r.items()), 6),\n            }\n            rows.append(row)\n\n        acc.add_sample(sensors, air_quality, gps, plants, rates, dt_s, self.sensors.scenario)\n        acc.add_flags(self.tracker.drain_raised())\n\n        telemetry = {\n            \"v\": 1,\n            \"miner_id\": self.miner_id,\n            \"ts\": now_ms,\n            \"scenario\": self.sensors.scenario,\n            \"sensors_simulated\": self.sensors_simulated,\n            \"aqi\": air_quality,\n            \"sensors\": sensors,\n            \"gps\": gps,\n            \"plants\": rows[:20],\n            \"current_epoch\": {\n                \"epoch\": acc.epoch,\n                \"start_ms\": acc.start_ms,\n                \"end_ms\": acc.end_ms,\n                \"running_air\": round(min(acc.running_air, self.cat.per_miner_cap), 6),\n            },\n            \"flags\": self.tracker.active_flags(),\n        }\n        return telemetry, closed\n"
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01VAZLwagxCPfYQeU8MuW7B4",
+        "name": "Write",
+        "input": {
+          "file_path": "C:\\Users\\shrey\\Desktop\\AIRcoin\\miner-core\\minerd\\contracts.py",
+          "content": "\"\"\"Validate payloads with contracts-schema/scripts/validate.py (the shared source of truth).\"\"\"\n\nfrom __future__ import annotations\n\nimport importlib.util\nfrom functools import lru_cache\n\nfrom .config import CONTRACTS\n\n\n@lru_cache(maxsize=1)\ndef _validate_module():\n    spec = importlib.util.spec_from_file_location(\"aircoin_validate\", CONTRACTS / \"scripts\" / \"validate.py\")\n    mod = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(mod)\n    return mod, mod.load_registry()\n\n\ndef errors(target: str, doc: dict) -> list[str]:\n    \"\"\"Schema + semantic errors for doc against a validate.py target (e.g. \"c3-attestation\").\"\"\"\n    mod, registry = _validate_module()\n    errs = [\n        f\"{'/'.join(map(str, e.absolute_path)) or '<root>'}: {e.message}\"\n        for e in mod.validator_for(registry, target).iter_errors(doc)\n    ]\n    return errs or mod.semantic_errors(target, doc)\n"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}
