@@ -1,0 +1,32 @@
+{
+  "id": "d3faee80e19e243e36143e98",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSnAkKEAgSGAI4AUIIdGhpbmtpbmcSDKigrdg+Ph6uZJmxIBoMOLiQM4GmTwEKiNFfIjDIbcDAy0nQ3FylARjGkQQ6++KRlatbrui3pmekl11f4QLxt6ZynE5ccBRA/MfxPTAquQi8E+EG9Cb8Wn4oTKh7SSohUfxbMA7mikmgXFYhPGbzpjdBJ2TFXjwouHsZDz0V3PwOh1U1h8o6mioPAvgxt4VWG3Z3PMnzCof2dbGbaInYPDgAgMqa6UL00ULb+X2Df2H527VQ8g5uuSEj2wv5IHwdJnDYKNBpJM3IYjWQdd4/tfTnlK2fruNc2K9NuFtiQi8DCZhkbDxB7GO6pfhIrjSH7NyEaZRgDgXmMfFfQwOOQqI0GdCospd/vTj2yZj/nl27eUVoTKi1b5GMw9PXtomo/jOSmYRp4346bZrOum4KrSUV8MnHHPy20r4i5yxiXcVtuU4I1F/It6j1H0eFGB0eCQGFfk8XC3lKm/5YY7OyB413WwIDJbL/wmq7Pc7mw5tLintcwBXejLJYFdafCKEWqONHc/Lfb9t5F8zDNiUb4D9zv0JY5BUjsCqUMWfHLL7TcBHbAweNFsa0xFvQSwlpCbNWbu5/oKYVbk5wmuoidipL2lr+ffUQUyEGv4qaAlqe50wK4/O+8QS6Nf9nwGVaxiQQIgow/DA+iBEH70veBhPgUNm4A5JkQ4HA8KQBe7oqQ3hJ/R4yi83s8mO+sFLDU99HwUURGzeWTS/wPyB/BQ4sDEMBA32F66Bj+qpsHcsPfPuIzoeCYCvKFCPksfuBQsmlQHcCjCJPAu3D2EHMyRPoMXFfRnMDiRD84MQ9jsL7sROm/OAMYlfyeHB9NmMzK6y87BY/kp/XLAy1BKpdpbvRt/vFT4bNAI+ZrdgVD0vM0bCjfaKw+xEf9v+dTL0YvaoSwumkpCyKMVYMqwvu06SpfB/yJbwLb/wWHUUwlcq5eTMWouSNAvbsbStFB5JNBPy4Ng5UOQJ1dle2kHGvT1tttX8a08HmYN3LG+9b2ad5YJbas7G5qj+j/BDFNLlXNheZ8tudL+Cf6TSJP+PhtLmlmSufh5NWRwfrMbv2ZY3tm1uIruZ1O9UaNKULlqiCvZIYQokGeFrTfzuvlhhLBfjnVrMVIQWYLrm7PgVyTxNVbSqlZi2vjWHV3WjFq1c5tv/YYtjwP4CdWm5IYAk7hioaAbC6QKE214ZRplL9tuwfUOHnsAiSq0+XmmNYWk7tjUhDAOytLf5uMRJv9vJf657KbSFZIbS0kEsSyHqhhpDlC0qDNFZSYKO8rfcKjMs+jauHjuM7TAQFKDNSp5rYZAH6IaxRRX9rKmc6vM7n+KTJmjuUQ75vFKu8vF85hqiOaQWUjKmA6uXnKsrAJDsZT3n86h/uJwDd+AZ/0fLxhO369wIuJVByUjOhokqF0D34k5YJM5vtKeTu6TOZVsQX7ZbVHGJzmxHVFarnM/iMkeTl4hafotO86ZgZblg/GLHjh5FTrvn2v4x/WFwKlo2NmG8kKzz7enZ5/GQHw1lZk1QXJVK/jU5XnDHTOJ0SJG2hqOg+NCJjJjaSGAE="
+      },
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQStwcKEQgSGAI4AUIJbmFycmF0aW9uEgzddGVMK015FU8wJqEaDI4eL+ZsUu/gWNP3SiIwCBAHftdjYipShNIQ8eEHMzDOudXK7yFR9dz2ee1xEakxv0Q5IWH8cW59hu4CpF5UKtMGXrU8+37aYJn14ll8MCW2Pv2cuvBwmHK8VgT0FKBWRtGHGV+2VFVv23W0IOYK3SJjrBjoqO78XwQXy0vS4XWGK7Q/xY8Z+Ovca8c1MJRdx6SXe9nAUYDYAX67zO7JKHiv+zU5zRdM2vi0ogMquITaOZ42V+uHnu2brjTgxCl8CwjtfjnpJ9nbzdOdH3jRyI8ijdSJF8qi71zHoPd2T9plZdgQk929g1NAQfmG2gPAV7QlVcq6WD0o/3QETJR1BXgaaUTZcgiK+zZICQuQVhLFbGDwtddZTOeMekcFB5x1nc8BF2VZ4wmHW/kuEDySKxsuw4bF2ziF62dOg84Yi4svgZwNREzqcfni1N7WCmMya+QCTWjsrEjbLjr2z7sQE1IROAa7na1h1LDx4jBF23WuAqk5foEbAUW/FSONLDzbolV9yPX6bwcrtP47Sb5hPmzqIeKT1gdpOY3UZSPPlovgobNPD4BEcpGpzGim/GsR0mf+Y0JOJ1/QY/ilQk87KyupnUxAaGqF9OOQKGiO8st7lUuuNi8aS97ehw9ARZ2pbzD+urMbLRCG+/d2r133OQGPVohoC6PZgC/htibi3n06K0G6KrSpruEyCOO1rQ1tunSNqnHsPt6/fQ6WN/Ger2OOkkb1jBD4EU2+G8ZNg2f5zlz10t58jltFfH3BYLoOBuWO8hykjtSIfvdazzT3Pxu2UiEIj6LUPYtMg6pVQoydoZEKP/N1A6a+nijF+ULp8PG1yLkDqCkc4JmZNRiYbRmPPBwALHEikClHAMMbspj0l3gFvCZAsBHQ1J1EmiXsjmtFzR0PJzJ99tkURLXSKfkYm3Gn3VES/C1QW9VFRwMqgkDtd2QRberF+d1Esqgn+9QjmybfOzWZgGkdoRlbFox6KDvD8cYMmXTiNWTQJMHPIZNMsokT0/dFphzyl5/rWQxzMIkS6HPrB1TQdDqtOBt92VCXrmmH7sGt/OQGiCxw5Po9zTuxDm6zqx24jsfAx+PDzd57ARBOrMa4oJxLtfACpk1myOadNcCVDliUpNdcYyKNnbyhaP0MQ5WSwIIl4Mfy06O8hOj+b+8UHuVBvj0KVJGyI4bM4JB+4TqHgx/7YpbNmu8Ksvps4lbaOQFwpEdrowkYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_0181zSaAwfFy7LX6Sr6tMUcT",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && gh pr diff 2 --repo prabhu-omkar/AIRcoin -- 2>/dev/null | grep -v package-lock | grep -nEi '0x[0-9a-f]{64}|private_?key|mnemonic|PRIVATE' | head -30",
+          "description": "Scan PR diff for private keys or mnemonics"
+        },
+        "cache_control": {
+          "type": "ephemeral",
+          "ttl": "1h"
+        }
+      }
+    ]
+  }
+}

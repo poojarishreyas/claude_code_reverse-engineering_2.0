@@ -1,0 +1,23 @@
+{
+  "id": "23010a7855ada860d2c2e4b8",
+  "kind": "message",
+  "value": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS0gcKEAgSGAI4AUIIdGhpbmtpbmcSDC03ix3E+AewSOmkIBoM/yXN6jRtkHlgreXBIjBsB5Z0D+LHPRGJjbAjIzk9Cm3+NxUK1BampHvjfk17zmRMUWAYbJ4iD3AcQNX9vhMq7wZqMFKMqW0a74tPPxZ5TsS7zGIdG+83VKkc8BSLeYL1Bu573yqmP7y1fXxaOh1/Ti5hVQfpiAJRdZS7yelo3raZSK6kRI0tWifRPCLCsabeUDqtuuo0rhBAVHtP+YhOVk0qkXxenH0Bue/zgK/B++6//MwgUCtllmBS0BkjH7aiSwuECIwn8km3NR8Iq3VRU0o2cViT1Lj1hU1KJaNGgY8a4sQa++1HOrvddcplir+j0a1ppssFd/wCpZsSL5rtURj/QsXc8HagNiH4aGKlYa0OFbWA0n4gHCD6I3tKfoRlvNn4NNPnXsUiWQcMGZmgbF1J8FTnIejsa5SKp93VDOPmQbboYrbx2XP/9c6EPkbdmmpz2o7j+h6UuNJOyov8AVISSzCXBLWViiieeOlylzSpIoL5ispW0tBk2dhkK7i8FpNX+HcQsHh3csScNF5DBjj/+UNspsGGe7PSjHWgkfZnz241EBu+IEJ9VyOx6sFI+7hj/6ItAYI4PFJYtXfeN315LUpeJFQlomiSloD7cdKCBScW1V6MXLfaL/ZGm7gTYlLDVoZw5MnegREUqRAmtk61ScbE8tAUMhJGh8QSf9k32FYBRPECgL8MJlfiFH7h1bJZwmfhBAsRDPUGNwrBzAvVo5ZZsW4U55pzAklW2YFVFsh7zc0ZNsdDKjGJBYOQ1/SzfAVFbvP0lOE+UEOCPAsMGtHAEqkKQ/jrkLaYbmjA89o1Fqm2nYfsEZYoa7Sp+9PbSKYNYBQPdfKVqHAEQuzTN5eIoT7o/3/1M5A6FWzgNQuyYQz0QVcT6nZfIAuerBGmHHeRbATRhHy6SMx3dlMkror065RmZ19WuBOWD/dEXOOxR257EfKeCrpkmAVEstgV8Q7M9v5S1ynzpO6pj/87eSjok/opKdYnB1ZVZZKyyqRKWSGGX+TVZjpqgmyc0Dgf3GtWQLz+07yNW3CYdNIgLHg8s6EQ/hUiaULpxaeTZ/74nPJ4AcTfWt5GCjs6k1TQDstLndEZ2wHXNkNaUOAWygh3IFwKr4oh4TgDnMZD7CzN7w9Df52JDrWyr/tD6k956IG6ZUvMH3gRvoVT1PdlHVh5pVj+PM/zWnlyV+SBWr1bKQ5KHaZdt/3+0ekOQNP5rZA3y1J82y153lKV1vBzsRsZpfE4e9lv77G0CokYAQ=="
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_01X77nXywdTZP7n7skQfHosp",
+        "name": "Bash",
+        "input": {
+          "command": "cd /c/Users/shrey/Desktop/AIRcoin && gh pr view 2 --repo prabhu-omkar/AIRcoin --json number,title,state,author,baseRefName,headRefName,mergeable,mergeStateStatus,body,files,reviewDecision,statusCheckRollup 2>&1",
+          "description": "Show details of PR #2"
+        }
+      }
+    ]
+  }
+}
